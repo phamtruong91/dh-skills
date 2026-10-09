@@ -1,0 +1,170 @@
+---
+name: press-kit-su-kien
+description: Soạn bộ press kit sự kiện: thông cáo báo chí, fact sheet, tiểu sử diễn giả, ảnh, thông tin liên hệ báo chí. Dùng trước và trong các sự kiện lớn của trường.
+---
+
+# Skill: Press kit sự kiện
+
+## Khi nào dùng
+Khi tổ chức sự kiện cần mời báo chí đưa tin: lễ khai giảng, kỷ niệm thành lập, hội thảo lớn,
+ký kết hợp tác, ngày hội tuyển sinh...
+
+## Đầu vào (Input)
+
+| Trường | Mô tả | Bắt buộc |
+|---|---|---|
+| `ten_su_kien` | Tên sự kiện | Có |
+| `thoi_gian_dia_diem` | Thời gian, địa điểm tổ chức | Có |
+| `noi_dung_chinh` | Các điểm nhấn của sự kiện (diễn giả, nội dung, con số nổi bật) | Có |
+| `dien_gia` | Danh sách diễn giả/khách mời chính + tiểu sử ngắn | Không |
+| `so_lieu` | Số liệu bắt buộc có nguồn (quy mô, thành tựu...) | Không |
+| `lien_he_bao_chi` | Đầu mối báo chí của trường (tên, điện thoại, email) | Có |
+
+## Quy trình
+
+**Bước 1. Kiểm định và chuẩn hóa thông tin đầu vào**
+- Làm gì: gom toàn bộ các trường input; lập bảng đối chiếu từng số liệu trong `so_lieu` và `noi_dung_chinh` với nguồn kèm theo; kiểm tra `lien_he_bao_chi` đủ tên – điện thoại – email; đối chiếu `thoi_gian_dia_diem` với giấy mời/thông báo chính thức của sự kiện.
+- Dùng input: `ten_su_kien`, `thoi_gian_dia_diem`, `noi_dung_chinh`, `dien_gia`, `so_lieu`, `lien_he_bao_chi`.
+- Vai trò: Chuyên viên Phòng Truyền thông – Tuyển sinh · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch, lập bảng biểu, định dạng · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: số liệu không có nguồn được đưa vào danh sách "chờ xác nhận", tuyệt đối không đưa vào thông cáo; thời gian/địa điểm sai dù một chi tiết cũng gây sự cố với báo chí.
+- → Kết quả bước: Bảng kiểm định dữ liệu (OK / thiếu nguồn / cần xác nhận) + bộ dữ liệu sạch đã chuẩn hóa.
+
+**Bước 2. Soạn thông cáo báo chí theo tháp ngược**
+- Làm gì: viết tiêu đề 1 dòng chứa tin mới nhất; đoạn mở 2–3 câu trả lời 5W1H; thân bài triển khai các điểm nhấn từ `noi_dung_chinh`, chèn trích dẫn lãnh đạo; đoạn nền 2–3 câu giới thiệu trường; khối liên hệ báo chí ở cuối.
+- Dùng input: toàn bộ trường input + bộ dữ liệu sạch (Bước 1).
+- Vai trò: Chuyên viên Phòng Truyền thông – Tuyển sinh · AI hỗ trợ: soạn dự thảo · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: mỗi con số trong bài phải gắn với nguồn đã kiểm định ở Bước 1; trích dẫn phải được người phát ngôn đọc và xác nhận nguyên văn trước khi đưa vào; tránh tính từ tuyệt đối ("hàng đầu", "duy nhất") nếu không chứng minh được.
+- → Kết quả bước: Dự thảo thông cáo báo chí (mỗi số liệu có đánh dấu nguồn).
+
+**Bước 3. Lập fact sheet 1 trang**
+- Làm gì: rút gọn dự thảo thông cáo thành bảng 1 trang: tên sự kiện, thời gian, địa điểm, quy mô, diễn giả chính, 3–5 con số nổi bật kèm ghi chú nguồn từng số.
+- Dùng input: `ten_su_kien`, `thoi_gian_dia_diem`, `dien_gia`, `so_lieu` + dự thảo thông cáo (Bước 2).
+- Vai trò: Chuyên viên Phòng Truyền thông – Tuyển sinh · AI hỗ trợ: soạn dự thảo · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: fact sheet không được chứa số liệu nào không có trong thông cáo; mọi con số phải khớp tuyệt đối giữa hai tài liệu.
+- → Kết quả bước: Fact sheet 1 trang (dự thảo).
+
+**Bước 4. Chuẩn bị tiểu sử diễn giả và danh mục ảnh**
+- Làm gì: viết tiểu sử 3–5 dòng/người từ `dien_gia` (học vị, chức danh, lĩnh vực); lập danh mục ảnh cần có (chân dung diễn giả, toàn cảnh sự kiện, ảnh điểm nhấn) kèm ghi chú bản quyền và sự đồng ý sử dụng.
+- Dùng input: `dien_gia` + dự thảo thông cáo (Bước 2).
+- Vai trò: Chuyên viên Phòng Truyền thông – Tuyển sinh · AI hỗ trợ: soạn dự thảo · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: học vị, chức danh phải đúng quyết định bổ nhiệm; chỉ dùng ảnh rõ nguồn và đã được đồng ý bằng văn bản.
+- → Kết quả bước: Tiểu sử diễn giả (3–5 dòng/người) + danh mục ảnh kèm ghi chú bản quyền.
+
+**Bước 5. Kiểm tra chéo và xin xác nhận**
+- Làm gì: đối chiếu 3 chiều — thông cáo ↔ fact sheet ↔ nguồn gốc — cho từng số liệu; gửi trích dẫn cho người phát ngôn xác nhận nguyên văn; kiểm tra lại thông tin liên hệ báo chí.
+- Dùng input: bán thành phẩm Bước 2–4 + `so_lieu` gốc.
+- Vai trò: Trưởng phòng Truyền thông – Tuyển sinh · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch · ⏱ ~1–2 giờ (ước tính)
+- Lưu ý nghiệp vụ: quy tắc "3 nguồn khớp nhau" cho con số nhạy cảm (quy mô, kinh phí); một lỗi số liệu nhỏ trên báo chí tốn rất nhiều công đính chính.
+- → Kết quả bước: Bộ press kit đã xác nhận (có xác nhận trích dẫn của người phát ngôn) + biên bản kiểm tra.
+
+**Bước 6. Đóng gói và lập checklist phát hành**
+- Làm gì: gom thông cáo + fact sheet + tiểu sử diễn giả + danh mục ảnh thành một bộ; lập checklist phát hành: gửi trước sự kiện bao lâu, danh sách báo/nhà báo nhận, kênh gửi (email), người gửi.
+- Dùng input: bộ press kit đã xác nhận (Bước 5).
+- Vai trò: Chuyên viên Phòng Truyền thông – Tuyển sinh · AI hỗ trợ: chuẩn bị bản phát hành · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: gửi trước sự kiện 3–5 ngày cho báo in, 1–2 ngày cho báo điện tử; người gửi phải đúng là đầu mối báo chí đã nêu trong thông cáo.
+- → Kết quả bước: Bộ press kit hoàn chỉnh + checklist phát hành.
+
+## Luồng quy trình (Workflow)
+
+```mermaid
+flowchart TD
+    A[/"Thông tin sự kiện + diễn giả"/] --> B["Bước 1. Kiểm định và chuẩn hóa thông tin đầu vào"]
+    B --> C["Bước 2. Soạn thông cáo báo chí theo tháp ngược"]
+    C --> D["Bước 3. Lập fact sheet 1 trang"]
+    D --> E["Bước 4. Chuẩn bị tiểu sử diễn giả + danh mục ảnh"]
+    E --> F["Bước 5. Kiểm tra chéo và xin xác nhận"]
+    F --> G{"Số liệu có nguồn, trích dẫn được xác nhận?"}
+    G -->|Chưa| H["Bổ sung nguồn / xin xác nhận"]
+    H --> F
+    G -->|Đạt| I["Bước 6. Đóng gói và lập checklist phát hành"]
+    I --> HG["👤 Trưởng phòng → Lãnh đạo trường duyệt"]
+    HG --> J[["Bộ press kit hoàn chỉnh"]]
+```
+
+## Đầu ra (Output)
+- Thông cáo báo chí hoàn chỉnh.
+- Fact sheet 1 trang + danh mục ảnh + thông tin liên hệ.
+
+**Cấu trúc output chuẩn** (khung mẫu cố định của sản phẩm chính — Thông cáo báo chí):
+1. Tiêu đề (1 dòng, chứa tin mới nhất của sự kiện).
+2. Đoạn mở đầu (5W1H: ai – việc gì – khi nào – ở đâu – vì sao), 2–3 câu.
+3. Thân bài (điểm nhấn sự kiện, trích dẫn lãnh đạo, số liệu có ghi nguồn).
+4. Thông tin nền về trường (2–3 câu).
+5. Khối liên hệ báo chí (tên, chức danh, điện thoại, email).
+- Tài liệu kèm bắt buộc: Fact sheet 1 trang (tên sự kiện, thời gian, địa điểm, quy mô, diễn giả, con số nổi bật kèm nguồn) + Tiểu sử diễn giả (3–5 dòng/người) + Danh mục ảnh (kèm ghi chú bản quyền).
+
+## Checklist nghiệm thu
+
+- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề (1 dòng, chứa tin mới nhất của sự…; Đoạn mở đầu (5W1H; Thân bài (điểm nhấn sự kiện, trích dẫn lãnh…; Thông tin nền về trường (2; Khối liên hệ báo chí (tên, chức danh, điện…
+- [ ] Có đầy đủ sản phẩm: Thông cáo báo chí hoàn chỉnh
+- [ ] Có đầy đủ sản phẩm: Fact sheet 1 trang + danh mục ảnh + thông tin liên hệ
+- [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
+- [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
+- [ ] Đúng thể thức, định dạng văn bản theo quy định hiện hành
+- [ ] Căn cứ pháp lý nêu đầy đủ, còn hiệu lực tại thời điểm lập
+- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/ký duyệt trước khi phát hành
+- [ ] Số liệu không có nguồn được đưa vào danh sách "chờ xác nhận", tuyệt đối không đưa vào thông cáo
+- [ ] Mỗi con số trong bài phải gắn với nguồn đã kiểm định ở Bước 1
+
+> Tiêu chí đạt: tất cả các ô đều được đánh dấu.
+
+## Ví dụ mô phỏng (dữ liệu giả lập)
+
+> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
+
+### Input mẫu
+
+| Trường | Giá trị |
+|---|---|
+| `ten_su_kien` | Lễ kỷ niệm 20 năm thành lập Trường Đại học A |
+| `thoi_gian_dia_diem` | 08h00, ngày 15/11/2026, Hội trường lớn |
+| `noi_dung_chinh` | 20 năm đào tạo 45.000 cử nhân (giả lập); công bố quỹ học bổng 5 tỉ đồng (giả lập); ký kết 10 doanh nghiệp (giả lập) |
+| `dien_gia` | PGS.TS. Trần Văn B — Phó Hiệu trưởng (phát biểu khai mạc) |
+| `lien_he_bao_chi` | ThS. Vũ Văn B — Phòng Truyền thông và Tuyển sinh, 0901.xxx.xxx (giả lập) |
+
+### Output mẫu
+
+```
+THÔNG CÁO BÁO CHÍ
+Trường Đại học A kỷ niệm 20 năm thành lập, công bố quỹ học bổng 5 tỉ đồng
+
+Thành phố C, ngày 15/11/2026 — Sáng nay, Trường Đại học A long trọng tổ chức
+Lễ kỷ niệm 20 năm thành lập (2006–2026) với sự tham dự của hơn 1.000 đại biểu
+(số liệu giả lập).
+
+Phát biểu tại buổi lễ, PGS.TS. Trần Văn B — Phó Hiệu trưởng Nhà trường nhấn
+mạnh: "20 năm qua, A đã đào tạo 45.000 cử nhân (số liệu giả lập). Chúng
+tôi cam kết tiếp tục đầu tư cho chất lượng đào tạo và người học."
+
+Điểm nhấn của buổi lễ là việc Nhà trường công bố quỹ học bổng 5 tỉ đồng
+(số liệu giả lập) dành cho sinh viên xuất sắc và sinh viên có hoàn cảnh khó khăn
+năm học 2026–2027, cùng lễ ký kết hợp tác với 10 doanh nghiệp (số liệu giả lập).
+
+THÔNG TIN VỀ TRƯỜNG ĐẠI HỌC A:
+Trường Đại học A (thành lập năm 2006) là trường đại học ứng dụng tại
+thành phố C, hiện đào tạo 12.000 sinh viên (số liệu giả lập) với định hướng gắn đào
+tạo với nhu cầu doanh nghiệp.
+
+---
+THÔNG TIN LIÊN HỆ BÁO CHÍ:
+ThS. Vũ Văn B — Phòng Truyền thông và Tuyển sinh
+Điện thoại: 0901.xxx.xxx (giả lập) | Email: truyenthong@dha.edu.vn (giả lập)
+
+FACT SHEET (1 trang): tên sự kiện, thời gian, địa điểm, quy mô 1.000 đại biểu
+(giả lập), diễn giả chính, 3 con số nổi bật — kèm ghi chú nguồn từng số liệu.
+```
+
+## Human gate (người kiểm duyệt)
+- Trưởng phòng duyệt thông cáo và fact sheet.
+- Lãnh đạo trường duyệt trước khi phát hành cho báo chí.
+- Người phát ngôn xác nhận mọi trích dẫn mang tên mình.
+
+## Giới hạn (guardrails)
+- Không phát hành press kit khi chưa được lãnh đạo duyệt.
+- Không đưa số liệu chưa có nguồn xác thực.
+- Không dùng ảnh không rõ bản quyền hoặc chưa được đồng ý.
+- Không tự gửi thông cáo cho báo chí.
+
+## Căn cứ & lưu ý
+- Thông cáo báo chí viết theo cấu trúc tháp ngược (quan trọng nhất lên đầu).
+- Không dùng tên thật của trường/cá nhân khi mô phỏng.

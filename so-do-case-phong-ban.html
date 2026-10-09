@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sơ đồ Use Case — Phòng ban & Nghiệp vụ trường Đại học</title>
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --ax-vb: #2563eb; --ax-vb-bg: rgba(37,99,235,.12);
+    --ax-nc: #9333ea; --ax-nc-bg: rgba(147,51,234,.12);
+    --ax-bc: #15803d; --ax-bc-bg: rgba(21,128,61,.12);
+    --ax-qt: #c2410c; --ax-qt-bg: rgba(194,65,12,.12);
+  }
+  html[data-theme="dark"] {
+    --ax-vb: #7aa5ff; --ax-vb-bg: rgba(122,165,255,.14);
+    --ax-nc: #c084fc; --ax-nc-bg: rgba(192,132,252,.14);
+    --ax-bc: #4ade80; --ax-bc-bg: rgba(74,222,128,.14);
+    --ax-qt: #fb923c; --ax-qt-bg: rgba(251,146,60,.14);
+  }
+  body {
+    margin: 0; padding: 16px;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--hatch-widget-bg); color: var(--hatch-widget-text);
+    font-size: 14px; line-height: 1.5;
+  }
+  h2 { margin: 0 0 4px; font-size: 19px; }
+  .sub { color: var(--hatch-widget-muted); margin: 0 0 12px; font-size: 13px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .ax { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px;
+        font-size: 12px; font-weight: 600; border: 1px solid; cursor: default; }
+  .ax .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .ax-vb { color: var(--ax-vb); border-color: var(--ax-vb); background: var(--ax-vb-bg); }
+  .ax-vb .dot { background: var(--ax-vb); }
+  .ax-nc { color: var(--ax-nc); border-color: var(--ax-nc); background: var(--ax-nc-bg); }
+  .ax-nc .dot { background: var(--ax-nc); }
+  .ax-bc { color: var(--ax-bc); border-color: var(--ax-bc); background: var(--ax-bc-bg); }
+  .ax-bc .dot { background: var(--ax-bc); }
+  .ax-qt { color: var(--ax-qt); border-color: var(--ax-qt); background: var(--ax-qt-bg); }
+  .ax-qt .dot { background: var(--ax-qt); }
+
+  .org { background: var(--hatch-widget-surface); border: 1px solid var(--hatch-widget-border);
+         border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+  .org-row { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+  .org-node { padding: 8px 14px; border-radius: 10px; font-weight: 700; font-size: 13px;
+              background: var(--hatch-widget-surface-muted); border: 1px solid var(--hatch-widget-border); }
+  .org-node.top { background: var(--hatch-widget-accent); color: var(--hatch-widget-on-accent); border: none; }
+  .org-arrow { color: var(--hatch-widget-muted); font-size: 18px; }
+  .org-depts { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 10px 0; }
+  .dept-chip { padding: 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+               background: var(--hatch-widget-surface-muted); border: 1px solid var(--hatch-widget-border);
+               cursor: pointer; color: var(--hatch-widget-text); }
+  .dept-chip:hover { border-color: var(--hatch-widget-accent); color: var(--hatch-widget-accent); }
+  .dept-chip.active { background: var(--hatch-widget-accent); color: var(--hatch-widget-on-accent); border-color: var(--hatch-widget-accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+  .card { background: var(--hatch-widget-surface); border: 1px solid var(--hatch-widget-border);
+          border-radius: 12px; padding: 12px; cursor: pointer; }
+  .card:hover { border-color: var(--hatch-widget-accent); }
+  .card h3 { margin: 0 0 6px; font-size: 14px; }
+  .card .count { font-size: 12px; color: var(--hatch-widget-muted); margin-bottom: 8px; }
+  .bars { display: flex; gap: 4px; height: 8px; margin-bottom: 8px; }
+  .bars span { border-radius: 4px; }
+  .card .tops { font-size: 12px; color: var(--hatch-widget-muted); }
+
+  .detail { background: var(--hatch-widget-surface); border: 1px solid var(--hatch-widget-border);
+            border-radius: 12px; padding: 14px; }
+  .detail-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+  .detail-head h3 { margin: 0; font-size: 16px; }
+  .back { padding: 6px 12px; border-radius: 8px; border: 1px solid var(--hatch-widget-border);
+          background: var(--hatch-widget-surface-muted); color: var(--hatch-widget-text);
+          cursor: pointer; font-size: 13px; font-weight: 600; }
+  .back:hover { border-color: var(--hatch-widget-accent); color: var(--hatch-widget-accent); }
+  svg.uc { width: 100%; height: auto; display: block; }
+  .uc-list { margin-top: 10px; display: grid; gap: 8px; }
+  .uc-item { border: 1px solid var(--hatch-widget-border); border-radius: 10px; padding: 10px 12px;
+             background: var(--hatch-widget-bg); }
+  .uc-item .row1 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .uc-item .nm { font-weight: 700; font-size: 13.5px; }
+  .uc-item .out { font-size: 12.5px; color: var(--hatch-widget-muted); margin-top: 4px; }
+  .badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+
+  .skillmap { margin-top: 14px; background: var(--hatch-widget-surface); border: 1px solid var(--hatch-widget-border);
+              border-radius: 12px; padding: 14px; }
+  .skillmap h3 { margin: 0 0 8px; font-size: 15px; }
+  .skillmap ul { margin: 0; padding-left: 18px; font-size: 13px; }
+  .skillmap li { margin-bottom: 6px; }
+  .note { font-size: 12px; color: var(--hatch-widget-muted); margin-top: 10px; }
+</style>
+</head>
+<body>
+<div>
+  <h2>Sơ đồ Use Case — Phòng ban &amp; Nghiệp vụ trường Đại học Việt Nam</h2>
+  <p class="sub">Bấm vào từng phòng ban để xem sơ đồ use case (actor → nghiệp vụ) và văn bản / báo cáo đầu ra của từng nghiệp vụ. Màu sắc thể hiện trục Skill có thể đóng gói.</p>
+
+  <div class="legend">
+    <span class="ax ax-vb"><span class="dot"></span>Văn bản hành chính</span>
+    <span class="ax ax-nc"><span class="dot"></span>Nghiên cứu khoa học</span>
+    <span class="ax ax-bc"><span class="dot"></span>Báo cáo</span>
+    <span class="ax ax-qt"><span class="dot"></span>Quy trình nghiệp vụ</span>
+  </div>
+
+  <div class="org">
+    <div class="org-row">
+      <span class="org-node top">Hội đồng trường</span>
+      <span class="org-arrow">→</span>
+      <span class="org-node top">Ban Giám hiệu<br><span style="font-weight:400;font-size:11px">Hiệu trưởng + các Phó Hiệu trưởng</span></span>
+    </div>
+    <div class="org-row" style="margin:6px 0"><span class="org-arrow" style="transform:rotate(90deg)">→</span></div>
+    <div class="org-depts" id="deptChips"></div>
+    <div class="org-row" style="margin:6px 0"><span class="org-arrow" style="transform:rotate(90deg)">→</span></div>
+    <div class="org-row">
+      <span class="org-node">Các Khoa / Bộ môn <span style="font-weight:400;font-size:11px">(đơn vị đào tạo trực tiếp)</span></span>
+    </div>
+  </div>
+
+  <div id="main"></div>
+
+  <div class="skillmap">
+    <h3>Bản đồ đóng gói Skill (4 trục)</h3>
+    <ul>
+      <li><b>Trục Văn bản</b> — 1 Skill lõi về thể thức &amp; văn phong (NĐ 30/2020), tái dùng cho mọi quyết định, tờ trình, kế hoạch, biên bản, thông báo.</li>
+      <li><b>Trục Nghiên cứu</b> — thuyết minh đề tài, báo cáo nghiệm thu, đề cương luận văn/luận án, bài báo khoa học, kỷ yếu hội thảo, hồ sơ sáng kiến &amp; SHTT.</li>
+      <li><b>Trục Báo cáo</b> — báo cáo tự đánh giá, 3 công khai, KHCN, đào tạo, CTSV, tài chính, kiểm định, thanh tra.</li>
+      <li><b>Trục Quy trình</b> — checklist từng quy trình: tuyển dụng, bổ nhiệm, mở ngành, tổ chức thi, mua sắm đấu thầu, quản lý văn bản đi/đến.</li>
+    </ul>
+    <p class="note">Tên phòng ban có thể gộp/tách khác nhau giữa các trường, nhưng nghiệp vụ lõi giống nhau ~90% — Skill đóng gói theo nghiệp vụ sẽ dùng chung được.</p>
+  </div>
+</div>
+
+<script>
+var AX = {
+  vb: {label: "Văn bản", cls: "ax-vb"},
+  nc: {label: "Nghiên cứu", cls: "ax-nc"},
+  bc: {label: "Báo cáo", cls: "ax-bc"},
+  qt: {label: "Quy trình", cls: "ax-qt"}
+};
+var AXC = {vb:"#2563eb", nc:"#9333ea", bc:"#15803d", qt:"#c2410c"};
+
+var DEPTS = [
+ {id:"hcth", name:"Phòng Hành chính – Tổng hợp", ucs:[
+   {n:"Quản lý văn bản đi / đến", out:"Sổ đăng ký công văn, phiếu trình ký, bản lưu văn bản", ax:"qt"},
+   {n:"Soạn thảo văn bản quản lý", out:"Quyết định, quy chế, quy định, tờ trình ban hành", ax:"vb"},
+   {n:"Lịch & chương trình công tác", out:"Lịch công tác tuần, kế hoạch tháng / quý / năm", ax:"vb"},
+   {n:"Tổ chức hội nghị, sự kiện", out:"Kế hoạch tổ chức, kịch bản chương trình, biên bản cuộc họp", ax:"vb"},
+   {n:"Quản lý con dấu, giấy tờ", out:"Giấy giới thiệu, giấy đi đường, sổ quản lý con dấu", ax:"qt"},
+   {n:"Báo cáo công tác văn phòng", out:"Báo cáo tổng kết định kỳ", ax:"bc"}]},
+ {id:"tccb", name:"Phòng Tổ chức – Cán bộ", ucs:[
+   {n:"Tuyển dụng viên chức", out:"Kế hoạch, thông báo tuyển dụng, biên bản xét tuyển, quyết định tuyển dụng, hợp đồng làm việc", ax:"qt"},
+   {n:"Bổ nhiệm / miễn nhiệm / điều động", out:"Tờ trình, biên bản lấy phiếu tín nhiệm, quyết định bổ nhiệm / miễn nhiệm / điều động", ax:"qt"},
+   {n:"Đánh giá, xếp loại hằng năm", out:"Phiếu đánh giá viên chức, báo cáo tổng hợp kết quả", ax:"bc"},
+   {n:"Nâng lương, phụ cấp, chuyển ngạch", out:"Quyết định nâng lương, quyết định phụ cấp", ax:"vb"},
+   {n:"Đào tạo, bồi dưỡng cán bộ", out:"Kế hoạch bồi dưỡng năm, quyết định cử đi đào tạo", ax:"vb"},
+   {n:"Xét công nhận GS / PGS", out:"Hồ sơ minh chứng, báo cáo thẩm định", ax:"nc"},
+   {n:"Thi đua – khen thưởng – kỷ luật", out:"Hồ sơ đề nghị, quyết định khen thưởng / kỷ luật, báo cáo tổng kết thi đua", ax:"bc"}]},
+ {id:"pdt", name:"Phòng Đào tạo", ucs:[
+   {n:"Tuyển sinh hằng năm", out:"Đề án tuyển sinh, thông báo tuyển sinh, báo cáo kết quả gửi Bộ GD&ĐT", ax:"bc"},
+   {n:"Mở ngành đào tạo mới", out:"Đề án mở ngành (đội ngũ, CSVC, chương trình), quyết định cho phép đào tạo", ax:"vb"},
+   {n:"Xây dựng / điều chỉnh CTĐT", out:"Khung chương trình, ma trận chuẩn đầu ra CLO–PLO, quyết định ban hành CTĐT", ax:"vb"},
+   {n:"Quản lý học phần", out:"Đề cương chi tiết học phần", ax:"vb"},
+   {n:"Tổ chức giảng dạy", out:"Kế hoạch năm học, thời khóa biểu, phân công giảng dạy", ax:"vb"},
+   {n:"Quản lý học vụ", out:"Quyết định cảnh báo học vụ / thôi học / bảo lưu, quyết định công nhận tốt nghiệp", ax:"qt"},
+   {n:"Quản lý văn bằng, chứng chỉ", out:"Phôi bằng, sổ cấp văn bằng", ax:"qt"}]},
+ {id:"sdh", name:"Phòng Đào tạo Sau đại học", ucs:[
+   {n:"Tuyển sinh SĐH", out:"Thông báo tuyển sinh thạc sĩ / tiến sĩ, quyết định trúng tuyển", ax:"vb"},
+   {n:"Quản lý học viên / NCS", out:"Kế hoạch đào tạo, hồ sơ theo dõi tiến độ luận văn / luận án", ax:"qt"},
+   {n:"Tổ chức bảo vệ luận văn / luận án", out:"Quyết định thành lập hội đồng, biên bản bảo vệ", ax:"vb"},
+   {n:"Báo cáo đào tạo SĐH", out:"Báo cáo đào tạo sau đại học hằng năm", ax:"bc"}]},
+ {id:"ktdbcl", name:"Phòng Khảo thí & Đảm bảo chất lượng", ucs:[
+   {n:"Xây dựng ngân hàng đề thi", out:"Kho câu hỏi thi, quy trình thu thập – phản biện – phê duyệt đề", ax:"qt"},
+   {n:"Tổ chức thi", out:"Lịch thi, quyết định phân công coi / chấm thi, biên bản phòng thi, bảng điểm", ax:"qt"},
+   {n:"Phúc khảo bài thi", out:"Đơn phúc khảo, quyết định kết quả phúc khảo", ax:"vb"},
+   {n:"Tự đánh giá", out:"Kế hoạch thu thập minh chứng theo bộ tiêu chí, báo cáo tự đánh giá", ax:"bc"},
+   {n:"Kiểm định chất lượng", out:"Hồ sơ đăng ký kiểm định, kế hoạch đón đoàn đánh giá ngoài, kế hoạch cải tiến", ax:"bc"},
+   {n:"Khảo sát các bên liên quan", out:"Phiếu khảo sát SV / giảng viên / cựu SV / nhà tuyển dụng, báo cáo phân tích", ax:"nc"}]},
+ {id:"khcn", name:"Phòng KHCN & Hợp tác quốc tế", ucs:[
+   {n:"Quản lý đề tài NCKH", out:"Thuyết minh đề tài, hợp đồng thực hiện, báo cáo tiến độ, báo cáo nghiệm thu, hồ sơ thanh quyết toán", ax:"nc"},
+   {n:"Sáng kiến kinh nghiệm", out:"Hồ sơ đề nghị công nhận sáng kiến", ax:"nc"},
+   {n:"Sở hữu trí tuệ", out:"Hồ sơ đăng ký sáng chế / giải pháp hữu ích", ax:"nc"},
+   {n:"Tạp chí khoa học", out:"Quy trình bình duyệt bài, kế hoạch xuất bản", ax:"nc"},
+   {n:"Hội thảo khoa học", out:"Kế hoạch tổ chức, thư mời, kỷ yếu hội thảo", ax:"nc"},
+   {n:"Hợp tác quốc tế", out:"MOU / MOA song ngữ, kế hoạch đoàn ra / vào, báo cáo kết quả đoàn", ax:"vb"},
+   {n:"Báo cáo KHCN & HTQT", out:"Báo cáo khoa học công nghệ & hợp tác quốc tế hằng năm", ax:"bc"}]},
+ {id:"ctsv", name:"Phòng Công tác sinh viên", ucs:[
+   {n:"Học bổng, miễn giảm học phí", out:"Thông báo, danh sách đề nghị, quyết định cấp học bổng", ax:"vb"},
+   {n:"Đánh giá rèn luyện", out:"Phiếu đánh giá rèn luyện, bảng tổng hợp toàn trường", ax:"bc"},
+   {n:"Khen thưởng / kỷ luật SV", out:"Biên bản vi phạm, quyết định khen thưởng / kỷ luật", ax:"vb"},
+   {n:"Quản lý ký túc xá", out:"Đơn xin ở nội trú, quyết định bố trí chỗ ở, nội quy KTX", ax:"qt"},
+   {n:"Tuần sinh hoạt công dân", out:"Kế hoạch, nội dung tuyên truyền đầu khóa", ax:"vb"},
+   {n:"Hỗ trợ việc làm SV", out:"Kế hoạch ngày hội việc làm, báo cáo khảo sát việc làm SV tốt nghiệp", ax:"bc"}]},
+ {id:"tckt", name:"Phòng Tài chính – Kế toán", ucs:[
+   {n:"Thu học phí, lệ phí", out:"Thông báo mức thu, biên lai, báo cáo tình hình thu", ax:"bc"},
+   {n:"Dự toán – quyết toán", out:"Dự toán ngân sách năm, báo cáo quyết toán", ax:"bc"},
+   {n:"Chi thanh toán", out:"Chứng từ thanh toán lương, học bổng, đề tài, mua sắm", ax:"qt"},
+   {n:"Báo cáo tài chính", out:"Báo cáo tài chính, báo cáo công khai tài chính", ax:"bc"}]},
+ {id:"qttb", name:"Phòng Quản trị – Thiết bị", ucs:[
+   {n:"Mua sắm, đấu thầu", out:"Kế hoạch mua sắm, hồ sơ mời thầu / chào hàng, hợp đồng, biên bản nghiệm thu bàn giao", ax:"qt"},
+   {n:"Quản lý tài sản", out:"Sổ tài sản cố định, biên bản kiểm kê", ax:"bc"},
+   {n:"Bảo trì cơ sở vật chất", out:"Kế hoạch bảo trì, sửa chữa", ax:"vb"},
+   {n:"Quản lý phòng học, PTN", out:"Lịch sử dụng phòng, nội quy phòng học / thí nghiệm", ax:"qt"}]},
+ {id:"ttpc", name:"Phòng Thanh tra & Pháp chế", ucs:[
+   {n:"Thanh tra nội bộ", out:"Kế hoạch thanh tra năm, kết luận thanh tra đào tạo / tuyển sinh / thi cử", ax:"bc"},
+   {n:"Giải quyết KNTC", out:"Đơn thư khiếu nại / tố cáo, quyết định giải quyết", ax:"vb"},
+   {n:"Thẩm định pháp lý văn bản", out:"Ý kiến pháp lý đối với dự thảo văn bản, kế hoạch phổ biến pháp luật", ax:"vb"}]},
+ {id:"cntt", name:"Trung tâm CNTT / Chuyển đổi số", ucs:[
+   {n:"Hạ tầng & phần mềm", out:"Kế hoạch phát triển hệ thống (SIS, LMS, tuyển sinh trực tuyến), quy định sử dụng", ax:"vb"},
+   {n:"An toàn thông tin & dữ liệu", out:"Quy chế an toàn thông tin, báo cáo hiện trạng chuyển đổi số", ax:"bc"}]},
+ {id:"tv", name:"Thư viện – Trung tâm học liệu", ucs:[
+   {n:"Bổ sung & số hóa học liệu", out:"Kế hoạch bổ sung học liệu, cơ sở dữ liệu tài liệu số", ax:"qt"},
+   {n:"Phục vụ bạn đọc", out:"Báo cáo công tác phục vụ bạn đọc", ax:"bc"}]},
+ {id:"khoa", name:"Khoa / Bộ môn", ucs:[
+   {n:"Giảng dạy", out:"Phân công giảng dạy, giáo trình / bài giảng, đề cương chi tiết học phần", ax:"vb"},
+   {n:"Nghiên cứu khoa học", out:"Đăng ký đề tài cấp khoa / trường, bài báo khoa học", ax:"nc"},
+   {n:"Quản lý sinh viên", out:"Phân công cố vấn học tập, hồ sơ theo dõi SV", ax:"qt"},
+   {n:"Báo cáo năm học", out:"Báo cáo tổng kết năm học của khoa", ax:"bc"}]}
+];
+
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function badge(ax){ var a=AX[ax]; return '<span class="badge '+a.cls+'">'+a.label+'</span>'; }
+function getDept(id){ for (var i=0;i<DEPTS.length;i++) if (DEPTS[i].id===id) return DEPTS[i]; return null; }
+
+function axisCounts(d){
+  var c={vb:0,nc:0,bc:0,qt:0};
+  d.ucs.forEach(function(u){ c[u.ax]++; });
+  return c;
+}
+
+function renderChips(activeId){
+  var el = document.getElementById('deptChips');
+  var html = '';
+  DEPTS.forEach(function(d){
+    html += '<button class="dept-chip'+(d.id===activeId?' active':'')+'" data-dept="'+d.id+'">'+esc(d.name)+'</button>';
+  });
+  el.innerHTML = html;
+  var btns = el.querySelectorAll('button');
+  for (var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', function(){ setDept(this.getAttribute('data-dept')); });
+  }
+}
+
+function renderOverview(){
+  var html = '<div class="grid">';
+  DEPTS.forEach(function(d){
+    var c = axisCounts(d);
+    var total = d.ucs.length;
+    var bars = '';
+    ['vb','nc','bc','qt'].forEach(function(k){
+      if (c[k]>0) bars += '<span style="flex:'+c[k]+';background:'+AXC[k]+'" title="'+AX[k].label+': '+c[k]+'"></span>';
+    });
+    var tops = d.ucs.slice(0,3).map(function(u){return esc(u.n);}).join(' · ');
+    html += '<div class="card" data-dept="'+d.id+'">'
+      + '<h3>'+esc(d.name)+'</h3>'
+      + '<div class="count">'+total+' nghiệp vụ</div>'
+      + '<div class="bars">'+bars+'</div>'
+      + '<div class="tops">'+tops+(total>3?' …':'')+'</div>'
+      + '</div>';
+  });
+  html += '</div>';
+  var main = document.getElementById('main');
+  main.innerHTML = html;
+  var cards = main.querySelectorAll('.card');
+  for (var i=0;i<cards.length;i++){
+    cards[i].addEventListener('click', function(){ setDept(this.getAttribute('data-dept')); });
+  }
+}
+
+function ucSVG(d){
+  var W=760, rowH=64, topPad=46, botPad=26;
+  var H = topPad + d.ucs.length*rowH + botPad;
+  var actorX=70, actorY=H/2, cx=470;
+  var s = '<svg class="uc" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Sơ đồ use case '+esc(d.name)+'">';
+  s += '<rect x="168" y="8" width="'+(W-176)+'" height="'+(H-16)+'" rx="12" fill="none" stroke="var(--hatch-widget-border)" stroke-dasharray="6 4"/>';
+  s += '<text x="'+(W-8)+'" y="30" text-anchor="end" font-size="12" fill="var(--hatch-widget-muted)" font-weight="700">Hệ thống quản trị trường ĐH</text>';
+  // actor
+  s += '<g>';
+  s += '<circle cx="'+actorX+'" cy="'+(actorY-34)+'" r="13" fill="none" stroke="var(--hatch-widget-text)" stroke-width="2"/>';
+  s += '<line x1="'+actorX+'" y1="'+(actorY-21)+'" x2="'+actorX+'" y2="'+(actorY+14)+'" stroke="var(--hatch-widget-text)" stroke-width="2"/>';
+  s += '<line x1="'+(actorX-16)+'" y1="'+(actorY-8)+'" x2="'+(actorX+16)+'" y2="'+(actorY-8)+'" stroke="var(--hatch-widget-text)" stroke-width="2"/>';
+  s += '<line x1="'+actorX+'" y1="'+(actorY+14)+'" x2="'+(actorX-13)+'" y2="'+(actorY+38)+'" stroke="var(--hatch-widget-text)" stroke-width="2"/>';
+  s += '<line x1="'+actorX+'" y1="'+(actorY+14)+'" x2="'+(actorX+13)+'" y2="'+(actorY+38)+'" stroke="var(--hatch-widget-text)" stroke-width="2"/>';
+  s += '<text x="'+actorX+'" y="'+(actorY+58)+'" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--hatch-widget-text)">'+esc(d.name)+'</text>';
+  s += '<text x="'+actorX+'" y="'+(actorY-52)+'" text-anchor="middle" font-size="10" fill="var(--hatch-widget-muted)">&lt;&lt;actor&gt;&gt;</text>';
+  s += '</g>';
+  // use cases
+  d.ucs.forEach(function(u,i){
+    var cy = topPad + i*rowH + rowH/2;
+    var label = u.n.length>36 ? u.n.slice(0,35)+"…" : u.n;
+    var rx = Math.max(78, Math.min(250, 14 + label.length*6.4));
+    var col = AXC[u.ax];
+    s += '<line x1="'+(actorX+16)+'" y1="'+actorY+'" x2="'+(cx-rx)+'" y2="'+cy+'" stroke="var(--hatch-widget-muted)" stroke-width="1.4"/>';
+    s += '<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+rx+'" ry="23" fill="var(--hatch-widget-surface)" stroke="'+col+'" stroke-width="2"/>';
+    s += '<text x="'+cx+'" y="'+(cy+4.5)+'" text-anchor="middle" font-size="12" fill="var(--hatch-widget-text)">'+esc(label)+'</text>';
+  });
+  s += '</svg>';
+  return s;
+}
+
+function renderDetail(d){
+  var html = '<div class="detail">'
+    + '<div class="detail-head"><button class="back" id="backBtn">← Tổng quan</button>'
+    + '<h3>'+esc(d.name)+'</h3>'
+    + '<span style="font-size:12px;color:var(--hatch-widget-muted)">'+d.ucs.length+' nghiệp vụ (use case)</span></div>'
+    + ucSVG(d)
+    + '<div class="uc-list">';
+  d.ucs.forEach(function(u){
+    html += '<div class="uc-item"><div class="row1">'+badge(u.ax)+'<span class="nm">'+esc(u.n)+'</span></div>'
+      + '<div class="out">Đầu ra: '+esc(u.out)+'</div></div>';
+  });
+  html += '</div></div>';
+  document.getElementById('main').innerHTML = html;
+  document.getElementById('backBtn').addEventListener('click', function(){ setDept('overview'); });
+}
+
+function render(state){
+  var id = (state && state.dept) ? state.dept : 'overview';
+  renderChips(id === 'overview' ? null : id);
+  if (id === 'overview') renderOverview();
+  else { var d = getDept(id); if (d) renderDetail(d); else renderOverview(); }
+}
+
+function setDept(id){
+  var st = window.hatchWidget.getState({dept:'overview'});
+  st.dept = id;
+  window.hatchWidget.setState(st);
+  render(st);
+}
+
+(function init(){
+  var st = window.hatchWidget.getState({dept:'overview'});
+  render(st);
+  window.addEventListener('hatch-widget-state', function(e){ render(e.detail.state); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+---
+name: phieu-danh-gia-ren-luyen
+description: Lập phiếu đánh giá kết quả rèn luyện của sinh viên theo Thông tư 16/2015/TT-BGDĐT kèm hướng dẫn chấm điểm chi tiết. Dùng khi Phòng Công tác sinh viên cần triển khai đánh giá rèn luyện cuối mỗi học kỳ: phát phiếu cho sinh viên tự đánh giá, lớp họp bình xét, cố vấn học tập và hội đồng khoa chấm điểm.
+---
+
+# Skill: Lập phiếu đánh giá kết quả rèn luyện sinh viên + hướng dẫn chấm
+
+## Khi nào dùng
+Cuối mỗi học kỳ, khi cần tổ chức đánh giá kết quả rèn luyện của sinh viên: sinh viên tự đánh giá,
+tập thể lớp bình xét, cố vấn học tập nhận xét, hội đồng đánh giá cấp khoa chấm điểm và xếp loại,
+làm căn cứ xét học bổng, khen thưởng, kỷ luật và đánh giá toàn diện sinh viên.
+
+## Đầu vào (Input)
+
+| Trường | Mô tả | Bắt buộc |
+|---|---|---|
+| `hoc_ky` | Học kỳ đánh giá (ví dụ: Học kỳ 1) | Có |
+| `nam_hoc` | Năm học đánh giá (ví dụ: 2026–2027) | Có |
+| `don_vi` | Khoa / lớp áp dụng phiếu | Không (mặc định: toàn trường, theo mẫu chung) |
+| `tieu_chi_bo_sung` | Tiêu chí đặc thù của trường/khoa bổ sung trong khung điểm cho phép | Không |
+
+## Quy trình
+
+**Bước 1. Áp dụng khung 5 nhóm tiêu chí, thang điểm 100**
+- Làm gì: lấy khung chuẩn Thông tư 16/2015/TT-BGDĐT: Nhóm 1 Ý thức học tập (tối đa 30 điểm: thái độ học tập 15, hoạt động học thuật/NCKH 10, vượt khó 5); Nhóm 2 Chấp hành nội quy, quy chế (tối đa 25 điểm: văn bản chỉ đạo 5, nội quy trường 15, an ninh trật tự/ATGT 5); Nhóm 3 Hoạt động chính trị – xã hội – văn hóa – thể thao, phòng chống tội phạm/tệ nạn (tối đa 20 điểm: tham gia hoạt động 10, tuyên truyền phòng chống 5, công ích/tình nguyện 5); Nhóm 4 Phẩm chất công dân, quan hệ cộng đồng (tối đa 15 điểm: mỗi tiêu chí 5); Nhóm 5 Công tác cán bộ lớp/đoàn thể, thành tích đặc biệt (tối đa 10 điểm: tham gia 6, kỹ năng/thành tích 4); cộng tiêu chí đặc thù của trường/khoa từ `tieu_chi_bo_sung` trong phạm vi điểm tối đa cho phép của từng nhóm.
+- Dùng input: `tieu_chi_bo_sung`.
+- Vai trò: Trưởng Phòng Công tác sinh viên · AI hỗ trợ: dựng khung 5 nhóm tiêu chí · ⏱ ~1–2 giờ (ước tính)
+- Lưu ý nghiệp vụ: khung 5 nhóm và tổng thang điểm 100 là khung chuẩn của Thông tư — trường chỉ được cụ thể hóa tiêu chí chi tiết trong phạm vi điểm tối đa từng nhóm, tuyệt đối không thay đổi tổng thang điểm và các mức xếp loại; tiêu chí bổ sung không được vượt điểm tối đa của nhóm.
+- → Kết quả bước: khung tiêu chí chấm chính thức (5 nhóm, tiêu chí chi tiết và điểm tối đa từng tiêu chí).
+
+**Bước 2. Áp dụng mức xếp loại và quy định trừ điểm khi vi phạm kỷ luật**
+- Làm gì: chốt 6 mức xếp loại theo tổng điểm tối đa 100: Xuất sắc (90–100), Tốt (80–<90), Khá (65–<80), Trung bình (50–<65), Yếu (35–<50), Kém (<35); chốt quy tắc xử lý vi phạm kỷ luật: khiển trách trừ 25 điểm tổng; cảnh cáo trở lên xếp loại tối đa Trung bình; đình chỉ học tập có thời hạn xếp loại Kém trong thời gian bị đình chỉ; buộc thôi học đánh giá 0 điểm.
+- Dùng input: (khung chuẩn Thông tư 16/2015/TT-BGDĐT).
+- Vai trò: Chuyên viên Phòng Công tác sinh viên · AI hỗ trợ: áp dụng mức xếp loại và quy tắc trừ điểm theo Thông tư 16 · ⏱ ~30 phút (ước tính)
+- Lưu ý nghiệp vụ: quy tắc trừ điểm/hạ xếp loại áp dụng sau khi đã cộng điểm 5 nhóm — không trừ trực tiếp vào điểm từng tiêu chí; sinh viên bị kỷ luật trong học kỳ đánh giá mới áp dụng, không truy cứu học kỳ trước.
+- → Kết quả bước: bảng mức xếp loại + bảng quy tắc trừ điểm/hạ xếp loại khi vi phạm kỷ luật.
+
+**Bước 3. Thiết kế phiếu đánh giá**
+- Làm gì: dựng phiếu gồm: tiêu đề cơ quan (trường, khoa), tên phiếu, `hoc_ky`, `nam_hoc`; thông tin sinh viên (họ và tên, mã SV, lớp, khoa); bảng 5 nhóm tiêu chí từ Bước 1 với cột điểm tối đa và 4 cột chấm (SV tự chấm / Lớp chấm / Cố vấn / Hội đồng khoa); dòng tổng điểm; dòng xếp loại; khối chữ ký các bên (sinh viên – cố vấn học tập – chủ tịch hội đồng khoa, ký và đóng dấu).
+- Dùng input: `hoc_ky`, `nam_hoc`, `don_vi`, kết quả Bước 1.
+- Vai trò: Chuyên viên Phòng Công tác sinh viên · AI hỗ trợ: thiết kế mẫu phiếu đánh giá hoàn chỉnh · ⏱ ~1 giờ (ước tính)
+- Lưu ý nghiệp vụ: 4 cột chấm phải tách bạch thành 4 cột riêng — gộp cột sẽ không phân biệt được điểm các cấp; phiếu phải có đủ 3 chữ ký (thiếu chữ ký hội đồng khoa thì phiếu chưa có giá trị chính thức).
+- → Kết quả bước: mẫu phiếu đánh giá hoàn chỉnh (chưa điền điểm).
+
+**Bước 4. Soạn hướng dẫn chấm điểm chi tiết**
+- Làm gì: viết hướng dẫn phát hành kèm phiếu: nguyên tắc chấm (thang điểm 100, điểm mỗi tiêu chí không vượt điểm tối đa, tổng điểm làm tròn số nguyên); trình tự 4 cấp (SV tự đánh giá → lớp bình xét công khai, biểu quyết đa số → cố vấn nhận xét, ký xác nhận → hội đồng khoa quyết định điểm chính thức); mức xếp loại; xử lý vi phạm kỷ luật; thời hạn thực hiện; quy định lưu trữ.
+- Dùng input: kết quả Bước 1, Bước 2.
+- Vai trò: Chuyên viên Phòng Công tác sinh viên · AI hỗ trợ: soạn dự thảo hướng dẫn · ⏱ ~1–2 giờ (ước tính)
+- Lưu ý nghiệp vụ: thời hạn phải ghi cụ thể (lớp hoàn thành bình xét trong 2 tuần đầu học kỳ kế tiếp; khoa gửi kết quả về Phòng CTSV trước ngày 15 của tháng đầu học kỳ kế tiếp) — không ghi chung chung "đúng thời hạn quy định".
+- → Kết quả bước: bản hướng dẫn chấm điểm chi tiết (phát hành kèm phiếu).
+
+**Bước 5. Tổ chức quy trình chấm theo 4 cấp**
+- Làm gì: triển khai chấm theo đúng trình tự: (1) sinh viên tự đánh giá, ghi điểm từng tiêu chí vào phiếu, ký xác nhận; (2) tập thể lớp họp bình xét công khai (lớp trưởng chủ trì, cố vấn học tập dự), thảo luận và thống nhất điểm từng sinh viên theo đa số, thư ký ghi biên bản; (3) cố vấn học tập nhận xét, ký xác nhận vào phiếu; (4) Hội đồng đánh giá kết quả rèn luyện cấp khoa họp, xem xét, quyết định điểm chính thức và xếp loại; Phòng Công tác sinh viên tổng hợp toàn trường.
+- Dùng input: mẫu phiếu (Bước 3) + hướng dẫn chấm (Bước 4).
+- Vai trò: Tập thể lớp, Hội đồng khoa · AI hỗ trợ: chuẩn bị hồ sơ trình ký, nhắc lịch và theo dõi tiến độ · ⏱ ~2–3 tuần (ước tính)
+- Lưu ý nghiệp vụ: bình xét lớp phải công khai và có biên bản — chấm "ngầm" không qua họp lớp là sai quy trình; điểm hội đồng khoa là điểm chính thức cuối cùng, các cấp trước chỉ có tính chất đề xuất.
+- → Kết quả bước: kết quả chấm 4 cấp hoàn tất (phiếu đã ký đủ, biên bản bình xét lớp, quyết định của hội đồng khoa).
+
+**Bước 6. Kiểm tra và xuất bản bộ phiếu**
+- Làm gì: kiểm tra phiếu đầy đủ thông tin sinh viên, đủ 5 nhóm tiêu chí, đủ 4 cột chấm, có dòng tổng điểm và xếp loại, đủ chữ ký các bên; đính kèm hướng dẫn chấm điểm chi tiết để phát hành cùng phiếu.
+- Dùng input: kết quả Bước 3, Bước 4.
+- Vai trò: Chuyên viên Phòng Công tác sinh viên · AI hỗ trợ: kiểm tra tính đầy đủ của phiếu · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: kiểm tra tổng điểm các cột bằng công thức — sai một phép cộng sẽ sai xếp loại; phiếu mẫu phát hành phải là phiếu trắng (chưa điền điểm minh họa của sinh viên cụ thể).
+- → Kết quả bước: bộ phiếu đánh giá + hướng dẫn chấm hoàn chỉnh, sẵn sàng phát hành.
+
+## Luồng quy trình (Workflow)
+```mermaid
+flowchart TD
+    IN[/"Khung 5 nhóm tiêu chí Thông tư 16"/]
+    A["Áp dụng khung tiêu chí, thang điểm, mức xếp loại"]
+    B["Thiết kế phiếu đánh giá 4 cột chấm"]
+    C["Soạn hướng dẫn chấm điểm chi tiết"]
+    D["Tổ chức chấm theo 4 cấp: SV, lớp, cố vấn"]
+    E{"Có vi phạm kỷ luật?"}
+    F["Trừ điểm hoặc hạ xếp loại theo quy định"]
+    G["👤 Hội đồng khoa quyết định điểm chính thức"]
+    OUT[/"Phiếu đánh giá và hướng dẫn chấm"/]
+    IN --> A --> B --> C --> D --> E
+    E -->|Có| F --> G
+    E -->|Không| G
+    G --> OUT
+```
+
+## Đầu ra (Output)
+- Phiếu đánh giá kết quả rèn luyện sinh viên hoàn chỉnh (mẫu phiếu).
+- Hướng dẫn chấm điểm chi tiết: 5 nhóm tiêu chí, thang điểm 100, mức xếp loại,
+  quy định trừ điểm khi vi phạm kỷ luật, quy trình chấm 4 cấp.
+
+**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Phiếu đánh giá kết quả
+rèn luyện sinh viên, các phần bắt buộc theo đúng thứ tự:
+1. Tiêu đề cơ quan (trường, khoa) + tên phiếu + học kỳ, năm học.
+2. Thông tin sinh viên: họ và tên, mã SV, lớp, khoa.
+3. Bảng đánh giá: STT | Nội dung đánh giá | Điểm tối đa | 4 cột chấm (SV tự chấm / Lớp chấm / Cố vấn / Hội đồng khoa); đủ 5 nhóm tiêu chí theo Thông tư 16; dòng tổng điểm cuối bảng.
+4. Xếp loại (căn cứ tổng điểm của Hội đồng khoa, đối chiếu bảng mức xếp loại).
+5. Khối chữ ký: sinh viên (ký, ghi rõ họ tên) – cố vấn học tập (ký, ghi rõ họ tên) – chủ tịch hội đồng khoa (ký, đóng dấu).
+6. Hướng dẫn chấm điểm chi tiết (phát hành kèm phiếu): nguyên tắc chấm, trình tự chấm 4 cấp, bảng mức xếp loại, quy tắc trừ điểm/hạ xếp loại khi vi phạm kỷ luật, thời hạn thực hiện, quy định lưu trữ.
+
+## Checklist nghiệm thu
+
+- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề + học kỳ, năm học; thông tin sinh viên; bảng đánh giá (đủ 5 nhóm tiêu chí, điểm tối đa, 4 cột chấm riêng, dòng tổng điểm); xếp loại; khối chữ ký 3 bên; hướng dẫn chấm điểm chi tiết.
+- [ ] Khung 5 nhóm tiêu chí, thang điểm 100 và 6 mức xếp loại đúng Thông tư 16/2015/TT-BGDĐT; không thay đổi tổng thang điểm và mức xếp loại.
+- [ ] Tiêu chí bổ sung của trường/khoa không vượt điểm tối đa của nhóm.
+- [ ] Quy tắc trừ điểm/hạ xếp loại khi vi phạm kỷ luật áp dụng sau khi cộng điểm 5 nhóm và chỉ cho học kỳ bị kỷ luật.
+- [ ] Không bịa đặt điểm minh họa của sinh viên cụ thể — phiếu mẫu phát hành là phiếu trắng.
+- [ ] Đủ 3 chữ ký (sinh viên, cố vấn học tập, chủ tịch hội đồng khoa ký và đóng dấu); thời hạn thực hiện ghi cụ thể.
+- [ ] Đã qua Human gate: Hội đồng cấp khoa quyết định điểm chính thức (điểm các cấp trước chỉ mang tính đề xuất).
+
+Tiêu chí đạt = tất cả các ô được đánh dấu.
+
+## Ví dụ mô phỏng (dữ liệu giả lập)
+
+> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**,
+> không liên quan tổ chức/cá nhân có thật.
+
+### Input mẫu
+
+| Trường | Giá trị |
+|---|---|
+| `hoc_ky` | Học kỳ 1 |
+| `nam_hoc` | 2026–2027 |
+| `don_vi` | Khoa Kinh tế, Trường Đại học A |
+
+### Output mẫu — Phiếu đánh giá
+
+```
+TRƯỜNG ĐẠI HỌC A
+KHOA KINH TẾ
+
+              PHIẾU ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CỦA SINH VIÊN
+                    Học kỳ 1, năm học 2026–2027
+
+Họ và tên: Nguyễn Thị Hồng Nhung          Mã SV: 202301001
+Lớp: KT23A                                Khoa: Kinh tế
+```
+
+| STT | Nội dung đánh giá | Điểm tối đa | SV tự chấm | Lớp chấm | Cố vấn | Hội đồng khoa |
+|---|---|---|---|---|---|---|
+| **1** | **Ý thức học tập** | **30** | **26** | **26** | **26** | **26** |
+| 1.1 | Ý thức, thái độ trong học tập (chuyên cần, trung thực thi cử...) | 15 | 13 | 13 | 13 | 13 |
+| 1.2 | Tham gia CLB học thuật, NCKH, kỳ thi học thuật | 10 | 8 | 8 | 8 | 8 |
+| 1.3 | Tinh thần vượt khó, phấn đấu vươn lên trong học tập | 5 | 5 | 5 | 5 | 5 |
+| **2** | **Ý thức chấp hành nội quy, quy chế** | **25** | **23** | **23** | **23** | **23** |
+| 2.1 | Chấp hành văn bản chỉ đạo của ngành, cấp trên | 5 | 5 | 5 | 5 | 5 |
+| 2.2 | Chấp hành nội quy, quy chế của nhà trường | 15 | 13 | 13 | 13 | 13 |
+| 2.3 | Chấp hành quy định về an ninh trật tự, an toàn giao thông | 5 | 5 | 5 | 5 | 5 |
+| **3** | **Hoạt động chính trị – xã hội – văn hóa – thể thao; phòng, chống tội phạm, tệ nạn xã hội** | **20** | **15** | **14** | **14** | **14** |
+| 3.1 | Tham gia hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao | 10 | 8 | 7 | 7 | 7 |
+| 3.2 | Tham gia tuyên truyền, phòng, chống tội phạm, tệ nạn xã hội | 5 | 4 | 4 | 4 | 4 |
+| 3.3 | Tham gia hoạt động công ích, tình nguyện, công tác xã hội | 5 | 3 | 3 | 3 | 3 |
+| **4** | **Phẩm chất công dân, quan hệ cộng đồng** | **15** | **14** | **14** | **14** | **14** |
+| 4.1 | Chấp hành, tuyên truyền chủ trương Đảng, chính sách, pháp luật | 5 | 5 | 5 | 5 | 5 |
+| 4.2 | Chia sẻ, giúp đỡ bạn bè; quan hệ cộng đồng tốt | 5 | 5 | 5 | 5 | 5 |
+| 4.3 | Lễ phép, giữ vệ sinh môi trường, nếp sống văn minh | 5 | 4 | 4 | 4 | 4 |
+| **5** | **Công tác cán bộ lớp, đoàn thể / thành tích đặc biệt** | **10** | **6** | **6** | **6** | **6** |
+| 5.1 | Tham gia công tác cán bộ lớp, đoàn thể, tổ chức trong trường | 6 | 4 | 4 | 4 | 4 |
+| 5.2 | Kỹ năng tổ chức, quản lý; thành tích đặc biệt được khen thưởng | 4 | 2 | 2 | 2 | 2 |
+| | **TỔNG ĐIỂM** | **100** | **84** | **83** | **83** | **83** |
+
+**Xếp loại: Tốt** (83 điểm — mức Tốt: từ 80 đến dưới 90 điểm) *(dữ liệu giả lập)*
+
+```
+Xác nhận của sinh viên          Cố vấn học tập           TM. Hội đồng khoa
+    (ký, ghi rõ họ tên)          (ký, ghi rõ họ tên)        CHỦ TỊCH HỘI ĐỒNG
+                                                                  (ký, đóng dấu)
+
+Nguyễn Thị Hồng Nhung           Bùi Thị C               PGS.TS. Đặng Văn C
+```
+
+### Output mẫu — Hướng dẫn chấm điểm (tóm tắt phát hành kèm phiếu)
+
+1. **Nguyên tắc chấm**: chấm theo thang điểm 100 với 5 nhóm tiêu chí nêu trên; điểm mỗi tiêu
+   chí không vượt điểm tối đa; tổng điểm làm tròn đến số nguyên.
+2. **Trình tự**: sinh viên tự đánh giá → lớp họp bình xét công khai, biểu quyết theo đa số →
+   cố vấn học tập nhận xét, ký xác nhận → Hội đồng cấp khoa quyết định điểm chính thức.
+3. **Xếp loại**: Xuất sắc (90–100); Tốt (80–<90); Khá (65–<80); Trung bình (50–<65);
+   Yếu (35–<50); Kém (<35).
+4. **Vi phạm kỷ luật trong học kỳ**: khiển trách trừ 25 điểm; cảnh cáo trở lên xếp loại tối đa
+   Trung bình; đình chỉ học tập xếp loại Kém; buộc thôi học đánh giá 0 điểm.
+5. **Thời hạn**: lớp hoàn thành bình xét trong 2 tuần đầu của học kỳ kế tiếp; khoa gửi kết quả
+   về Phòng Công tác sinh viên trước ngày 15 của tháng đầu học kỳ kế tiếp.
+6. **Lưu trữ**: phiếu đánh giá lưu tại khoa 01 năm học; bảng tổng hợp toàn khoa lưu tại
+   Phòng Công tác sinh viên.
+
+## Căn cứ & lưu ý
+- Thông tư 16/2015/TT-BGDĐT ngày 12/08/2015 của Bộ Giáo dục và Đào tạo quy định về đánh giá
+  kết quả rèn luyện của người học được đào tạo trình độ đại học hệ chính quy.
+- Khung 5 nhóm tiêu chí và thang điểm 100 nêu trên là khung chuẩn của Thông tư; trường chỉ
+  được cụ thể hóa tiêu chí chi tiết trong phạm vi điểm tối đa của từng nhóm, không thay đổi
+  tổng thang điểm và các mức xếp loại.
+- Kết quả rèn luyện là căn cứ xét học bổng, khen thưởng, kỷ luật và đánh giá sinh viên
+  toàn diện; sinh viên xếp loại Kém hoặc Yếu 2 học kỳ liên tiếp được xem xét theo quy chế.
+- Không dùng tên thật của trường/cá nhân khi mô phỏng.
