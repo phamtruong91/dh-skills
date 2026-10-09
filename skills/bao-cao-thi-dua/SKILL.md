@@ -5,6 +5,11 @@ description: "Soạn dự thảo báo cáo tổng kết công tác thi đua, khe
 
 # Báo cáo tổng kết công tác thi đua, khen thưởng
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Khi nào dùng
 
 Tổng hợp kết quả thi đua, khen thưởng đã có quyết định hoặc hồ sơ xác nhận trong kỳ. Chuẩn bị dự thảo báo cáo và bảng đối chiếu để cán bộ phụ trách kiểm tra trước trình lãnh đạo.
@@ -24,7 +29,7 @@ Tổng hợp kết quả thi đua, khen thưởng đã có quyết định hoặ
 
 ## Kiểm soát áp dụng và phê duyệt
 
-Xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet` trong phạm vi nghiệp vụ. Kiểm tra văn bản gốc, hiệu lực và điều khoản áp dụng; thiếu căn cứ ghi [CẦN XÁC MINH]. Không suy ra văn bản còn hiệu lực chỉ từ ngày cập nhật skill.
+Xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet` trong phạm vi nghiệp vụ. Kiểm tra văn bản gốc, hiệu lực và điều khoản áp dụng; thiếu căn cứ ghi nhận nội bộ [CẦN XÁC MINH], để trống phần tương ứng trong file giao. Không suy ra văn bản còn hiệu lực chỉ từ ngày cập nhật skill.
 
 ## Quy trình
 
@@ -33,7 +38,7 @@ Xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lie
 3. Tổng hợp số lượng theo loại danh hiệu, hình thức khen thưởng và đơn vị; giữ tách biệt tập thể/cá nhân và đã được tặng/đang đề nghị. Tránh đếm trùng người hay hồ sơ; không cộng các đại lượng khác đơn vị tính.
 4. Chỉ tính biến động so với kỳ trước khi có dữ liệu cùng phạm vi. Nếu mẫu số bằng 0 hoặc không có dữ liệu, ghi không tính được; không tự đặt tỷ lệ tăng/giảm.
 5. Soạn báo cáo gồm kết quả đã xác nhận, vấn đề đối chiếu còn mở và nhiệm vụ kỳ tới đã được cung cấp. Chỉ trình bày nhận xét từ `nhan_xet_da_duyet`, ghi rõ nguồn; không suy đoán nguyên nhân hay thành tích cá nhân.
-6. Kiểm tra mỗi số liệu và phát biểu có nguồn truy nguyên. Xuất **DỰ THẢO – CHỜ KIỂM DUYỆT**, bảng đối chiếu và danh sách thiếu dữ liệu. Cán bộ phụ trách xác nhận nội dung; người có thẩm quyền quyết định ký/phát hành.
+6. Kiểm tra mỗi số liệu và phát biểu có nguồn truy nguyên. Xuất báo cáo hoàn chỉnh về bố cục, để trống dữ liệu thiếu; bảng đối chiếu và vấn đề cần xác nhận chỉ dùng nội bộ. Cán bộ phụ trách xác nhận nội dung; người có thẩm quyền quyết định ký/phát hành.
 
 ## Luồng quy trình
 
@@ -50,10 +55,7 @@ flowchart TD
 
 ## Đầu ra
 
-1. Dự thảo báo cáo: kỳ và phạm vi; kết quả được xác nhận; vấn đề còn mở; phương hướng đã được cung cấp; thông tin trình ký chưa cấp số chính thức.
-2. Bảng thống kê và bảng truy nguyên tới quyết định/hồ sơ.
-3. Danh sách dữ liệu chưa được cung cấp hoặc chưa được xác nhận.
-4. Checklist kiểm tra và người kiểm duyệt dự kiến.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
 ## Giới hạn và human gate
 
@@ -61,7 +63,7 @@ Chỉ hỗ trợ tổng hợp và biên tập thông tin đã được xác nh�
 
 Không tự thêm thành tích, tỷ lệ, số phiên họp, quyết định hay nhận xét tuân thủ pháp luật. Không tự gửi báo cáo, công bố, ký hoặc đánh dấu đã duyệt. Hạn chế dữ liệu cá nhân theo mục đích và phân quyền; dùng số liệu tổng hợp khi đủ đáp ứng báo cáo. Kiểm tra Luật 91/2025/QH15 và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
 - [ ] Kỳ, phạm vi và thời điểm chốt thống nhất.
 - [ ] Mọi số liệu có quyết định/hồ sơ và người xác nhận.
@@ -71,22 +73,16 @@ Không tự thêm thành tích, tỷ lệ, số phiên họp, quyết định ha
 - [ ] Những điểm chưa xác minh được ghi riêng.
 - [ ] Cán bộ kiểm tra và người có thẩm quyền duyệt trước phát hành.
 
-## Ví dụ mô phỏng
-
-Dữ liệu giả lập: quyết định đã được xác nhận ghi 18 tập thể và 96 cá nhân nhận Giấy khen; 2 hồ sơ Bằng khen đang đề nghị. Không cung cấp số liệu kỳ trước.
-
-Đầu ra: “Trong kỳ, theo quyết định được cung cấp, có 18 tập thể và 96 cá nhân nhận Giấy khen. Có 2 hồ sơ Bằng khen đang đề nghị; chưa tính là đã được tặng. Chưa có số liệu kỳ trước để tính biến động.” Kèm nguồn cho từng con số; không thêm số phiên họp, thành tích hoặc tỷ lệ.
-
 ## Căn cứ cần đối chiếu
 
 Luật Thi đua, khen thưởng và văn bản hướng dẫn đang áp dụng; quy chế nội bộ; quyết định và hồ sơ kỳ báo cáo. Thể thức văn bản đối chiếu Nghị định 30/2020/NĐ-CP. Bản skill chưa xác minh toàn văn mọi căn cứ chuyên ngành; cán bộ phụ trách phải chọn điều khoản hiện hành trước thực thi.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.1`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-thi-dua`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-thi-dua`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.1: giới hạn ở tổng hợp dữ liệu đã được xác nhận; bỏ ví dụ có số liệu tự sinh và nhận xét cá nhân. Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -5,16 +5,18 @@ description: "Theo dõi thay đổi văn bản pháp quy: so sánh điều kho�
 
 # Theo dõi thay đổi văn bản pháp quy
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi có văn bản pháp quy mới ban hành thay thế/sửa đổi/bổ sung văn bản đang áp dụng
@@ -100,23 +102,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> HG --> H
 ```
 
-## Đầu ra (Output)
-- Change brief: tóm tắt thay đổi chính (1 trang).
-- Bảng so sánh điều khoản cũ/mới.
-- Ma trận nghĩa vụ thay đổi.
-- Checklist cập nhật nội bộ.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Change brief — báo cáo so sánh thay đổi):
-1. Tiêu đề (tên văn bản mới, văn bản được thay thế, ngày hiệu lực).
-2. Tóm tắt thay đổi chính (1 trang: bao nhiêu nội dung sửa đổi / bãi bỏ / bổ sung).
-3. Bảng so sánh điều khoản cũ/mới (nội dung | bản cũ | bản mới | đánh dấu).
-4. Ma trận nghĩa vụ thay đổi (thay đổi | đơn vị phải làm gì khác | thời hạn).
-5. Đánh giá tác động (quy trình / biểu mẫu / phần mềm bị ảnh hưởng, mức tác động).
-6. Checklist cập nhật nội bộ (việc cần sửa | đơn vị chủ trì | deadline).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 6 phần theo Cấu trúc output chuẩn: tiêu đề, tóm tắt thay đổi, bảng so sánh, ma trận nghĩa vụ, đánh giá tác động, checklist cập nhật.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Mỗi điều khoản dẫn chiếu số/ký hiệu, ngày ban hành và ngày hiệu lực của văn bản mới; không dùng văn bản hết hiệu lực làm căn cứ mà không ghi chú rõ.
 - [ ] Bảng so sánh gắn nhãn đúng: nội dung chỉ đổi diễn đạt mà không đổi nghĩa vụ → GIỮ NGUYÊN (ghi chú diễn đạt mới), không gắn nhầm SỬA ĐỔI.
 - [ ] Ma trận nghĩa vụ cụ thể đến mức đơn vị biết phải làm gì ("sửa quy trình X", "bổ sung biểu mẫu Y"); thời hạn không muộn hơn ngày văn bản mới có hiệu lực.
@@ -126,56 +118,6 @@ flowchart TD
 - [ ] Đã qua Human gate: pháp chế/nghiệp vụ duyệt change brief và ma trận nghĩa vụ; thủ trưởng đơn vị duyệt checklist thuộc phạm vi đơn vị mình.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên văn bản, nội dung dưới đây đều là **giả lập**, không trích văn bản thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `van_ban_cu` | Quy chế đào tạo trình độ đại học (ban hành 2022, giả lập): Điều 5 — sinh viên được nghỉ tối đa 1 học kỳ liên tiếp |
-| `van_ban_moi` | Quy chế đào tạo trình độ đại học (ban hành 2026, giả lập, hiệu lực 01/09/2026): Điều 5 — sinh viên được nghỉ tối đa 2 học kỳ liên tiếp; bổ sung Điều 5a về bảo lưu kết quả học trực tuyến |
-| `linh_vuc` | Đào tạo |
-| `van_ban_noi_bo_lien_quan` | Quy trình xét bảo lưu của Phòng Đào tạo; mẫu đơn xin nghỉ học |
-
-### Output mẫu
-
-```
-CHANGE BRIEF — Quy chế đào tạo 2026 thay thế bản 2022 (giả lập)
-
-1. Tiêu đề
-Quy chế đào tạo trình độ đại học (ban hành 2026, hiệu lực 01/09/2026)
-thay thế Quy chế đào tạo trình độ đại học (ban hành 2022).
-
-2. Tóm tắt thay đổi chính
-01 nội dung SỬA ĐỔI (thời gian nghỉ tối đa: 1 → 2 học kỳ liên tiếp);
-01 nội dung BỔ SUNG MỚI (Điều 5a về bảo lưu kết quả học trực tuyến);
-không có nội dung bị bãi bỏ.
-
-3. So sánh điều khoản
-| Nội dung | Bản 2022 | Bản 2026 | Đánh dấu |
-|---|---|---|---|
-| Thời gian nghỉ tối đa | 1 học kỳ liên tiếp (Điều 5) | 2 học kỳ liên tiếp (Điều 5) | SỬA ĐỔI |
-| Bảo lưu kết quả học trực tuyến | Không có | Điều 5a mới | BỔ SUNG MỚI |
-
-4. Ma trận nghĩa vụ thay đổi
-| Thay đổi | Đơn vị phải làm gì khác | Thời hạn |
-|---|---|---|
-| Nghỉ tối đa 2 học kỳ | Phòng Đào tạo: sửa quy trình xét bảo lưu, mẫu đơn | Trước 01/09/2026 |
-| Điều 5a mới | Các khoa: hướng dẫn SV; CNTT: cập nhật phần mềm quản lý | Trước 01/09/2026 |
-
-5. Đánh giá tác động
-- Quy trình xét bảo lưu (Phòng Đào tạo): phải sửa ngay.
-- Mẫu đơn xin nghỉ học/bảo lưu: phải sửa ngay.
-- Phần mềm quản lý đào tạo (Trung tâm CNTT): sửa trong kỳ (giới hạn số học kỳ nghỉ).
-
-6. Checklist cập nhật
-[ ] Quy trình xét bảo lưu — Phòng Đào tạo — trước 01/09/2026
-[ ] Mẫu đơn xin nghỉ học/bảo lưu — Phòng Đào tạo — trước 01/09/2026
-[ ] Phần mềm quản lý đào tạo — Trung tâm CNTT — trước 01/09/2026
-```
 
 ## Human gate (người kiểm duyệt)
 - **Pháp chế / cán bộ phụ trách nghiệp vụ** duyệt change brief và ma trận nghĩa vụ
@@ -194,10 +136,10 @@ không có nội dung bị bãi bỏ.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/theo-doi-thay-doi-van-ban-phap-quy`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/theo-doi-thay-doi-van-ban-phap-quy`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

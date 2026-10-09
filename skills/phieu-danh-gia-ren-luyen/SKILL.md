@@ -5,16 +5,18 @@ description: "Lập phiếu đánh giá kết quả rèn luyện của sinh viê
 
 # Lập phiếu đánh giá kết quả rèn luyện sinh viên + hướng dẫn chấm
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Cuối mỗi học kỳ, khi cần tổ chức đánh giá kết quả rèn luyện của sinh viên: sinh viên tự đánh giá,
@@ -92,23 +94,13 @@ flowchart TD
     G --> OUT
 ```
 
-## Đầu ra (Output)
-- Phiếu đánh giá kết quả rèn luyện sinh viên hoàn chỉnh (mẫu phiếu).
-- Hướng dẫn chấm điểm chi tiết: 5 nhóm tiêu chí, thang điểm 100, mức xếp loại,
-  quy định trừ điểm khi vi phạm kỷ luật, quy trình chấm 4 cấp.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Phiếu đánh giá kết quả
-rèn luyện sinh viên, các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề cơ quan (trường, khoa) + tên phiếu + học kỳ, năm học.
-2. Thông tin sinh viên: họ và tên, mã SV, lớp, khoa.
-3. Bảng đánh giá: STT | Nội dung đánh giá | Điểm tối đa | 4 cột chấm (SV tự chấm / Lớp chấm / Cố vấn / Hội đồng khoa); đủ 5 nhóm tiêu chí theo Thông tư 16; dòng tổng điểm cuối bảng.
-4. Xếp loại (căn cứ tổng điểm của Hội đồng khoa, đối chiếu bảng mức xếp loại).
-5. Khối chữ ký: sinh viên (ký, ghi rõ họ tên) – cố vấn học tập (ký, ghi rõ họ tên) – chủ tịch hội đồng khoa (ký, đóng dấu).
-6. Hướng dẫn chấm điểm chi tiết (phát hành kèm phiếu): nguyên tắc chấm, trình tự chấm 4 cấp, bảng mức xếp loại, quy tắc trừ điểm/hạ xếp loại khi vi phạm kỷ luật, thời hạn thực hiện, quy định lưu trữ.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề + học kỳ, năm học; thông tin sinh viên; bảng đánh giá (đủ 5 nhóm tiêu chí, điểm tối đa, 4 cột chấm riêng, dòng tổng điểm); xếp loại; khối chữ ký 3 bên; hướng dẫn chấm điểm chi tiết.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Khung 5 nhóm tiêu chí, thang điểm 100 và 6 mức xếp loại đúng Thông tư 16/2015/TT-BGDĐT; không thay đổi tổng thang điểm và mức xếp loại.
 - [ ] Tiêu chí bổ sung của trường/khoa không vượt điểm tối đa của nhóm.
 - [ ] Quy tắc trừ điểm/hạ xếp loại khi vi phạm kỷ luật áp dụng sau khi cộng điểm 5 nhóm và chỉ cho học kỳ bị kỷ luật.
@@ -117,80 +109,6 @@ rèn luyện sinh viên, các phần bắt buộc theo đúng thứ tự:
 - [ ] Đã qua Human gate: Hội đồng cấp khoa quyết định điểm chính thức (điểm các cấp trước chỉ mang tính đề xuất).
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**,
-> không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `hoc_ky` | Học kỳ 1 |
-| `nam_hoc` | 2026–2027 |
-| `don_vi` | Khoa Kinh tế, Trường Đại học A |
-
-### Output mẫu — Phiếu đánh giá
-
-```
-TRƯỜNG ĐẠI HỌC A
-KHOA KINH TẾ
-
-              PHIẾU ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN CỦA SINH VIÊN
-                    Học kỳ 1, năm học 2026–2027
-
-Họ và tên: Nguyễn Thị Hồng Nhung          Mã SV: 202301001
-Lớp: KT23A                                Khoa: Kinh tế
-```
-
-| STT | Nội dung đánh giá | Điểm tối đa | SV tự chấm | Lớp chấm | Cố vấn | Hội đồng khoa |
-|---|---|---|---|---|---|---|
-| **1** | **Ý thức học tập** | **30** | **26** | **26** | **26** | **26** |
-| 1.1 | Ý thức, thái độ trong học tập (chuyên cần, trung thực thi cử...) | 15 | 13 | 13 | 13 | 13 |
-| 1.2 | Tham gia CLB học thuật, NCKH, kỳ thi học thuật | 10 | 8 | 8 | 8 | 8 |
-| 1.3 | Tinh thần vượt khó, phấn đấu vươn lên trong học tập | 5 | 5 | 5 | 5 | 5 |
-| **2** | **Ý thức chấp hành nội quy, quy chế** | **25** | **23** | **23** | **23** | **23** |
-| 2.1 | Chấp hành văn bản chỉ đạo của ngành, cấp trên | 5 | 5 | 5 | 5 | 5 |
-| 2.2 | Chấp hành nội quy, quy chế của nhà trường | 15 | 13 | 13 | 13 | 13 |
-| 2.3 | Chấp hành quy định về an ninh trật tự, an toàn giao thông | 5 | 5 | 5 | 5 | 5 |
-| **3** | **Hoạt động chính trị – xã hội – văn hóa – thể thao; phòng, chống tội phạm, tệ nạn xã hội** | **20** | **15** | **14** | **14** | **14** |
-| 3.1 | Tham gia hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao | 10 | 8 | 7 | 7 | 7 |
-| 3.2 | Tham gia tuyên truyền, phòng, chống tội phạm, tệ nạn xã hội | 5 | 4 | 4 | 4 | 4 |
-| 3.3 | Tham gia hoạt động công ích, tình nguyện, công tác xã hội | 5 | 3 | 3 | 3 | 3 |
-| **4** | **Phẩm chất công dân, quan hệ cộng đồng** | **15** | **14** | **14** | **14** | **14** |
-| 4.1 | Chấp hành, tuyên truyền chủ trương Đảng, chính sách, pháp luật | 5 | 5 | 5 | 5 | 5 |
-| 4.2 | Chia sẻ, giúp đỡ bạn bè; quan hệ cộng đồng tốt | 5 | 5 | 5 | 5 | 5 |
-| 4.3 | Lễ phép, giữ vệ sinh môi trường, nếp sống văn minh | 5 | 4 | 4 | 4 | 4 |
-| **5** | **Công tác cán bộ lớp, đoàn thể / thành tích đặc biệt** | **10** | **6** | **6** | **6** | **6** |
-| 5.1 | Tham gia công tác cán bộ lớp, đoàn thể, tổ chức trong trường | 6 | 4 | 4 | 4 | 4 |
-| 5.2 | Kỹ năng tổ chức, quản lý; thành tích đặc biệt được khen thưởng | 4 | 2 | 2 | 2 | 2 |
-| | **TỔNG ĐIỂM** | **100** | **84** | **83** | **83** | **83** |
-
-**Xếp loại: Tốt** (83 điểm — mức Tốt: từ 80 đến dưới 90 điểm) *(dữ liệu giả lập)*
-
-```
-Xác nhận của sinh viên          Cố vấn học tập           TM. Hội đồng khoa
-    (ký, ghi rõ họ tên)          (ký, ghi rõ họ tên)        CHỦ TỊCH HỘI ĐỒNG
-                                                                  (ký, đóng dấu)
-
-Nguyễn Thị Hồng Nhung           Bùi Thị C               PGS.TS. Đặng Văn C
-```
-
-### Output mẫu — Hướng dẫn chấm điểm (tóm tắt phát hành kèm phiếu)
-
-1. **Nguyên tắc chấm**: chấm theo thang điểm 100 với 5 nhóm tiêu chí nêu trên; điểm mỗi tiêu
-   chí không vượt điểm tối đa; tổng điểm làm tròn đến số nguyên.
-2. **Trình tự**: sinh viên tự đánh giá → lớp họp bình xét công khai, biểu quyết theo đa số →
-   cố vấn học tập nhận xét, ký xác nhận → Hội đồng cấp khoa quyết định điểm chính thức.
-3. **Xếp loại**: Xuất sắc (90–100); Tốt (80–<90); Khá (65–<80); Trung bình (50–<65);
-   Yếu (35–<50); Kém (<35).
-4. **Vi phạm kỷ luật trong học kỳ**: khiển trách trừ 25 điểm; cảnh cáo trở lên xếp loại tối đa
-   Trung bình; đình chỉ học tập xếp loại Kém; buộc thôi học đánh giá 0 điểm.
-5. **Thời hạn**: lớp hoàn thành bình xét trong 2 tuần đầu của học kỳ kế tiếp; khoa gửi kết quả
-   về Phòng Công tác sinh viên trước ngày 15 của tháng đầu học kỳ kế tiếp.
-6. **Lưu trữ**: phiếu đánh giá lưu tại khoa 01 năm học; bảng tổng hợp toàn khoa lưu tại
-   Phòng Công tác sinh viên.
 
 ## Căn cứ & lưu ý
 - Thông tư 16/2015/TT-BGDĐT ngày 12/08/2015 của Bộ Giáo dục và Đào tạo quy định về đánh giá
@@ -204,10 +122,10 @@ Nguyễn Thị Hồng Nhung           Bùi Thị C               PGS.TS. Đặng
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/phieu-danh-gia-ren-luyen`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/phieu-danh-gia-ren-luyen`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -5,16 +5,18 @@ description: "Lập bảng phân công giảng dạy học kỳ cho giảng viê
 
 # Phân công giảng dạy học kỳ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi bắt đầu mỗi học kỳ, khoa/bộ môn cần phân công giảng viên phụ trách các học phần,
@@ -83,21 +85,13 @@ flowchart TD
     E --> HG --> F --> O
 ```
 
-## Đầu ra (Output)
-- Bảng phân công giảng dạy học kỳ hoàn chỉnh.
-- Bảng tổng hợp giờ giảng / giờ vượt định mức theo giảng viên.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Bảng phân công giảng dạy học kỳ):
-1. Tiêu đề hành chính: tên trường – khoa, tên bộ môn.
-2. Tên văn bản: "BẢNG PHÂN CÔNG GIẢNG DẠY" + học kỳ, năm học.
-3. Bảng phân công chi tiết: các cột STT | Giảng viên | Học phần phụ trách (mã – tên HP) | Lớp | Số giờ (lý thuyết/thực hành) | Ghi chú (giảng viên chính/trợ giảng/thỉnh giảng).
-4. Bảng tổng hợp giờ giảng: các cột Giảng viên | Định mức (giờ/năm) | Thực hiện học kỳ này | Lũy kế dự kiến cả năm | Giờ vượt định mức.
-5. Ghi chú về giờ vượt định mức và căn cứ thanh toán.
-6. Ngày lập văn bản + chữ ký Trưởng bộ môn và Trưởng khoa.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần của "Cấu trúc output chuẩn": bảng phân công chi tiết + bảng tổng hợp giờ giảng/giờ vượt định mức.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Học phần, lớp, số giờ trong bảng phân công khớp với Input (`danh_muc_hoc_phan`, `danh_sach_giang_vien`).
 - [ ] Mọi giờ trong bảng khối lượng đều có giảng viên nhận; không có giờ "vô chủ".
 - [ ] Không phân công vượt quá 150% định mức nếu chưa có thỏa thuận bằng văn bản với giảng viên.
@@ -110,56 +104,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `hoc_ky` | Học kỳ 1, năm học 2026–2027 |
-| `danh_muc_hoc_phan` | 08 học phần, 22 lớp (xem bảng mẫu) |
-| `danh_sach_giang_vien` | 06 giảng viên Bộ môn Khoa học máy tính |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A – KHOA CÔNG NGHỆ THÔNG TIN
-BỘ MÔN KHOA HỌC MÁY TÍNH
-
-BẢNG PHÂN CÔNG GIẢNG DẠY
-Học kỳ 1, năm học 2026–2027
-
-| STT | Giảng viên | Học phần phụ trách | Lớp | Số giờ (LT/TH) | Ghi chú |
-|---|---|---|---|---|---|
-| 1 | TS. Phạm Văn B | CNTT101 – Nhập môn lập trình | K5A, K5B | 90 (45/45) | GV chính |
-| 2 | TS. Phạm Văn B | CNTT305 – Trí tuệ nhân tạo | K3A | 45 (30/15) | GV chính |
-| 3 | ThS. Bùi Thị B | CNTT101 – Nhập môn lập trình | K5C | 45 (22/23) | GV chính |
-| 4 | ThS. Bùi Thị B | CNTT210 – Cơ sở dữ liệu | K4A, K4B | 90 (45/45) | GV chính |
-| 5 | TS. Đỗ Thị C | CNTT305 – Trí tuệ nhân tạo | K3B | 45 (30/15) | GV chính |
-| 6 | ThS. Trần Văn D | CNTT210 – Cơ sở dữ liệu | K4C | 45 (22/23) | Trợ giảng |
-| 7 | ThS. Đặng Văn B | CNTT150 – Tin học đại cương | K6A–K6D | 120 (60/60) | Thỉnh giảng |
-
-TỔNG HỢP GIỜ GIẢNG (giờ chuẩn)
-
-| Giảng viên | Định mức (giờ/năm) | Thực hiện HK1 | Lũy kế dự kiến cả năm | Vượt định mức |
-|---|---|---|---|---|
-| TS. Phạm Văn B | 270 | 135 | 270 | 0 |
-| ThS. Bùi Thị B | 270 | 135 | 280 | +10 |
-| TS. Đỗ Thị C | 270 | 45 | 180 | 0 |
-| ThS. Trần Văn D | 270 | 45 | 200 | 0 |
-| ThS. Trần Văn D | 270 | 45 | 200 | 0 |
-
-Ghi chú: giờ vượt định mức của ThS. Bùi Thị B (+10 giờ) được thanh toán
-theo quy chế chi tiêu nội bộ.
-
-Thành phố C, ngày 09 tháng 10 năm 2026
-
-Trưởng bộ môn              Trưởng khoa
-(ký, họ tên)               (ký, họ tên)
-```
-
 ## Căn cứ & lưu ý
 - Quy định về chế độ làm việc của giảng viên (Thông tư 20/2020/TT-BGDĐT); quy chế chi
   tiêu nội bộ của Trường Đại học A (giả lập).
@@ -169,10 +113,10 @@ Trưởng bộ môn              Trưởng khoa
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/phan-cong-giang-day`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/phan-cong-giang-day`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

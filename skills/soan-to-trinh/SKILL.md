@@ -5,16 +5,18 @@ description: "Soạn tờ trình xin chủ trương, phê duyệt của Ban Giá
 
 # Soạn tờ trình
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi một đơn vị/cá nhân cần trình lãnh đạo xem xét, quyết định một chủ trương, kế hoạch, dự án,
@@ -97,94 +99,23 @@ flowchart TD
     HG --> OUT[["Tờ trình trình ký"]]
 ```
 
-## Đầu ra (Output)
-- Tờ trình hoàn chỉnh (markdown), sẵn sàng trình ký.
-- Ghi chú các tài liệu cần đính kèm.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của tờ trình — các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tên trường + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-2. Tên đơn vị trình + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"
-3. Số, ký hiệu tờ trình (ký hiệu "TTr"); địa danh, ngày tháng năm
-4. Tên loại "TỜ TRÌNH" (in hoa, căn giữa) + tên tờ trình
-5. Dòng "Kính gửi" + cấp phê duyệt
-6. Phần mở đầu: lý do, sự cần thiết của việc đề xuất
-7. Chuỗi căn cứ pháp lý và thực tiễn, sắp xếp từ văn bản có hiệu lực cao xuống thấp, kết bằng mệnh đề "Xét..."
-8. Nội dung đề xuất: đánh số 1., 2., 3..., có số liệu cụ thể (kinh phí/nhân sự/thời gian)
-9. Kiến nghị: 1–2 câu dứt khoát nêu điều mong lãnh đạo phê duyệt, kết bằng "./."
-10. Nơi nhận; danh mục tài liệu kèm theo
-11. Khối chữ ký: chức danh người đứng đầu đơn vị trình + họ tên
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tên trường + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"; Tên đơn vị trình + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"; Số, ký hiệu tờ trình (ký hiệu "TTr"); địa danh, ngày tháng năm; Tên loại "TỜ TRÌNH" (in hoa, căn giữa) + tên tờ trình; … (đủ 11 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Tờ trình là văn bản nội bộ xin ý kiến quyết định — ngôn ngữ trang t…
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Mỗi căn cứ phải ghi đủ tên văn bản, số/ký hiệu, ngày ban hành
 - [ ] Đề xuất xin kinh phí phải có dự toán chi tiết ở tài liệu kèm theo, không dồn hết số liệu vào thân tờ trình
 - [ ] Tránh đề xuất chung chung kiểu "tổ chức hiệu quả" mà thiếu chỉ tiêu đo được
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_to_trinh` | Tờ trình về việc phê duyệt Kế hoạch tuyển sinh đại học chính quy năm 2027 |
-| `kinh_gui` | Ban Giám hiệu Trường Đại học A |
-| `don_vi_trinh` | Phòng Đào tạo |
-| `can_cu` | Quy chế tuyển sinh của Bộ GD&ĐT; Nghị quyết Hội đồng trường về chỉ tiêu đào tạo; kết quả tuyển sinh năm 2026 |
-| `noi_dung_de_xuat` | 1. Tổng chỉ tiêu: 2.500 (tăng 200 so với 2026). 2. Giữ 03 phương thức: xét điểm thi TN THPT, xét học bạ, xét tuyển thẳng. 3. Thời gian: theo lịch chung của Bộ. |
-| `kien_nghi` | Kính đề nghị Ban Giám hiệu phê duyệt Kế hoạch để Phòng Đào tạo triển khai. |
-| `tai_lieu_kem_theo` | Dự thảo Kế hoạch tuyển sinh 2027; bảng chỉ tiêu chi tiết theo ngành |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG ĐÀO TẠO                            Độc lập – Tự do – Hạnh phúc
-      Số: 56/TTr-ĐHA-ĐT
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                          TỜ TRÌNH
-     Về việc phê duyệt Kế hoạch tuyển sinh đại học chính quy năm 2027
-
-Kính gửi: Ban Giám hiệu Trường Đại học A
-
-Nhằm chủ động triển khai công tác tuyển sinh đại học chính quy năm 2027 đúng
-tiến độ và chỉ tiêu được giao, Phòng Đào tạo kính trình Ban Giám hiệu xem xét,
-phê duyệt Kế hoạch tuyển sinh với các căn cứ và nội dung như sau:
-
-Căn cứ Quy chế tuyển sinh trình độ đại học của Bộ Giáo dục và Đào tạo;
-Căn cứ Nghị quyết của Hội đồng trường về chỉ tiêu đào tạo năm 2027;
-Xét kết quả tuyển sinh năm 2026 và nhu cầu thực tế của Nhà trường,
-
-Phòng Đào tạo kính trình Ban Giám hiệu xem xét, phê duyệt Kế hoạch tuyển sinh
-đại học chính quy năm 2027 với các nội dung chính như sau:
-
-1. Tổng chỉ tiêu tuyển sinh: 2.500 chỉ tiêu (tăng 200 chỉ tiêu so với năm 2026),
-phân bổ chi tiết theo từng ngành tại bảng kèm theo.
-
-2. Phương thức tuyển sinh: giữ nguyên 03 phương thức gồm xét điểm thi tốt nghiệp
-THPT, xét kết quả học bạ THPT và xét tuyển thẳng theo quy định.
-
-3. Thời gian tổ chức: thực hiện theo lịch trình chung của Bộ Giáo dục và Đào tạo.
-
-Kính đề nghị Ban Giám hiệu phê duyệt Kế hoạch để Phòng Đào tạo triển khai thực hiện./.
-
-Nơi nhận:                                          TRƯỞNG PHÒNG
-- Ban Giám hiệu;                                       [CHỜ KÝ]
-- Lưu: VT, ĐT.
-Tài liệu kèm theo:                               ThS. Đỗ Thị A
-- Dự thảo Kế hoạch tuyển sinh 2027;
-- Bảng chỉ tiêu chi tiết theo ngành.
-```
 
 ## Căn cứ & lưu ý
 - Tờ trình là văn bản nội bộ xin ý kiến quyết định — ngôn ngữ trang trọng, kiến nghị dứt khoát.
@@ -192,10 +123,10 @@ Tài liệu kèm theo:                               ThS. Đỗ Thị A
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-to-trinh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-to-trinh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

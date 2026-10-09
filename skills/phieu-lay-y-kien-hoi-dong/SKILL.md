@@ -5,16 +5,18 @@ description: "Soạn phiếu lấy ý kiến thành viên Hội đồng Khoa h�
 
 # Phiếu lấy ý kiến hội đồng
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần xin ý kiến Hội đồng KH&ĐT bằng văn bản (không họp tập trung): các nội dung phát sinh
@@ -87,22 +89,13 @@ flowchart TD
     H --> I --> HG --> J
 ```
 
-## Đầu ra (Output)
-- Phiếu lấy ý kiến (mẫu hoàn chỉnh).
-- Bảng tổng hợp kết quả + báo cáo trình Chủ tịch hội đồng.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — phiếu lấy ý kiến:
-1. Tên cơ quan (HỘI ĐỒNG KHOA HỌC VÀ ĐÀO TẠO) và tên trường.
-2. Tiêu đề "PHIẾU LẤY Ý KIẾN THÀNH VIÊN HỘI ĐỒNG" + hình thức/đợt lấy ý kiến.
-3. Kính gửi: thành viên Hội đồng.
-4. Từng nội dung xin ý kiến (đánh số, tách riêng, trình bày ngắn gọn) + các ô lựa chọn (Đồng ý / Không đồng ý / Ý kiến khác + dòng ghi ý kiến).
-5. Danh mục tài liệu kèm theo.
-6. Hạn trả lời + nơi gửi lại phiếu.
-7. Họ tên và chữ ký thành viên.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo Cấu trúc output chuẩn: tên cơ quan + trường, tiêu đề + hình thức/đợt, kính gửi, từng nội dung + ô lựa chọn, danh mục tài liệu kèm, hạn trả lời + nơi gửi, họ tên + chữ ký.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Mỗi nội dung chỉ hỏi một vấn đề, không gộp nhiều câu hỏi vào một ô; nội dung quy chế bắt buộc phải họp không dùng phiếu lấy ý kiến thay phiên họp.
 - [ ] Phiếu gửi đúng toàn bộ thành viên kèm đầy đủ tài liệu (bản giấy hoặc điện tử theo quy chế); lưu bằng chứng đã gửi để xác định phiếu gửi trễ hạn.
 - [ ] Chỉ tổng hợp phiếu hợp lệ (có chữ ký thành viên, gửi trong hạn, ý kiến ghi rõ ràng); phiếu không hợp lệ loại khỏi tổng hợp và ghi rõ lý do.
@@ -112,51 +105,6 @@ flowchart TD
 - [ ] Đã qua Human gate: Chủ tịch quyết định áp dụng hình thức lấy ý kiến bằng văn bản (chỉ nội dung quy chế cho phép); thư ký tổng hợp trung thực.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `noi_dung_xin_y_kien` | 1. Điều chỉnh tên đề tài NCKH cấp trường "Ứng dụng AI trong dạy học" thành "Ứng dụng AI trong dạy học trực tuyến" (theo đề nghị của chủ nhiệm đề tài). 2. Bổ sung 01 thành viên Hội đồng nghiệm thu đề tài ĐHA.KHCN.2026.05. |
-| `tai_lieu_kem` | Tờ trình của chủ nhiệm đề tài; dự thảo quyết định kiện toàn hội đồng nghiệm thu |
-| `thanh_vien` | 15 thành viên Hội đồng KH&ĐT |
-| `han_tra_loi` | Trước 17h00 ngày 20/10/2026 |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-HỘI ĐỒNG KHOA HỌC VÀ ĐÀO TẠO
-
-                    PHIẾU LẤY Ý KIẾN THÀNH VIÊN HỘI ĐỒNG
-                    (bằng văn bản — đợt tháng 10/2026)
-
-Kính gửi: Thành viên Hội đồng Khoa học và Đào tạo
-
-Nội dung 1: Điều chỉnh tên đề tài NCKH cấp trường từ "Ứng dụng AI trong dạy học"
-thành "Ứng dụng AI trong dạy học trực tuyến".
-   ☐ Đồng ý    ☐ Không đồng ý    ☐ Ý kiến khác: ...............................
-
-Nội dung 2: Bổ sung 01 thành viên Hội đồng nghiệm thu đề tài ĐHA.KHCN.2026.05
-(TS. Ngô Văn C).
-   ☐ Đồng ý    ☐ Không đồng ý    ☐ Ý kiến khác: ...............................
-
-Tài liệu kèm theo: Tờ trình của chủ nhiệm đề tài; dự thảo quyết định kiện toàn.
-Đề nghị gửi lại phiếu trước 17h00 ngày 20/10/2026 cho Thư ký Hội đồng.
-
-Họ tên thành viên: ...........................   Chữ ký: .....................
-
----
-BẢNG TỔNG HỢP KẾT QUẢ (ngày 21/10/2026)
-- Phiếu phát ra: 15; thu về: 14 (01 vắng do công tác).
-- Nội dung 1: 14/14 đồng ý.
-- Nội dung 2: 13 đồng ý, 01 ý kiến khác (đề nghị bổ sung thêm 01 chuyên gia ngoài trường).
-Kết luận: cả 02 nội dung được đa số tán thành; nội dung 2 tiếp thu ý kiến bổ sung chuyên gia.
-```
 
 ## Human gate (người kiểm duyệt)
 - **Chủ tịch hội đồng** quyết định áp dụng hình thức lấy ý kiến bằng văn bản (chỉ cho nội dung
@@ -176,10 +124,10 @@ Kết luận: cả 02 nội dung được đa số tán thành; nội dung 2 ti�
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/phieu-lay-y-kien-hoi-dong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/phieu-lay-y-kien-hoi-dong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

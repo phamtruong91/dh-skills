@@ -5,16 +5,18 @@ description: "Xây dựng mẫu sổ đăng ký văn bản đi / văn bản đ�
 
 # Quản lý sổ văn bản đi / đến
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi lập sổ theo dõi văn bản đi, văn bản đến của trường / đơn vị; khi xây dựng hoặc
@@ -108,63 +110,23 @@ flowchart TD
     HG --> OUT[["Sổ văn bản cập nhật, hồ sơ lưu trữ"]]
 ```
 
-## Đầu ra (Output)
-- Mẫu sổ văn bản đi / văn bản đến (bảng).
-- Quy trình xử lý văn bản đến và phát hành văn bản đi.
-- Bảng theo dõi tiến độ xử lý văn bản đến.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sổ đăng ký văn bản, theo đúng thứ tự:
-1. Tiêu đề sổ: "SỔ ĐĂNG KÝ VĂN BẢN ĐẾN/ĐI NĂM ..." + tên đơn vị quản lý sổ;
-2. Bảng đăng ký — các cột bắt buộc theo đúng thứ tự:
-   - Sổ văn bản đến: STT đến | Số, ký hiệu | Ngày văn bản | Cơ quan ban hành | Trích yếu nội dung | Ngày đến | Chuyển xử lý | Hạn xử lý | Ghi chú;
-   - Sổ văn bản đi: STT đi | Số, ký hiệu | Ngày ban hành | Trích yếu nội dung | Nơi nhận | Người ký | Ghi chú;
-3. Bảng theo dõi tiến độ xử lý (văn bản đến): STT đến | Đơn vị xử lý | Tình trạng | Quá hạn?
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tiêu đề sổ: "SỔ ĐĂNG KÝ VĂN BẢN ĐẾN/ĐI NĂM ..." + tên đơn vị quản l…; Bảng đăng ký — các cột bắt buộc theo đúng thứ tự:; Bảng theo dõi tiến độ xử lý (văn bản đến): STT đến | Đơn vị xử lý |…
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Nghị định 30/2020/NĐ-CP về công tác văn thư.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Sổ phải mở từ đầu năm, không bỏ trống số thứ tự
 - [ ] Sổ điện tử phải sao lưu định kỳ, tránh mất dữ liệu
 - [ ] Trích yếu phải ngắn gọn, nêu đúng việc cần xử lý
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_so` | Sổ văn bản đến |
-| `don_vi` | Văn phòng – Phòng Hành chính – Tổng hợp, Trường Đại học A |
-| `nam` | 2026 |
-
-### Output mẫu
-
-```
-SỔ ĐĂNG KÝ VĂN BẢN ĐẾN NĂM 2026
-Đơn vị: Văn phòng – Phòng Hành chính – Tổng hợp, Trường Đại học A
-(Dữ liệu giả lập)
-
-| STT đến | Số, ký hiệu | Ngày VB | Cơ quan ban hành | Trích yếu nội dung | Ngày đến | Chuyển xử lý | Hạn XL | Ghi chú |
-|---------|-------------|---------|------------------|--------------------|----------|--------------|--------|---------|
-| 125 | 45/CV-SK | 02/10/2026 | Học viện B (giả lập) | Phối hợp tổ chức Hội thảo KH sinh viên 2026 | 05/10/2026 | P. KHCN | 15/10/2026 | Đã phúc đáp CV 182 |
-| 126 | 312/TB-BGDĐT | 06/10/2026 | Bộ GD&ĐT | Hướng dẫn báo cáo 3 công khai năm học | 07/10/2026 | P. HCTH chủ trì | 30/10/2026 | Đang thực hiện |
-| 127 | 78/CV-SGD | 08/10/2026 | Sở GD&ĐT tỉnh A | Mời dự Hội nghị tổng kết | 09/10/2026 | BGH | — | Đã chuyển |
-
-BẢNG THEO DÕI TIẾN ĐỘ XỬ LÝ (trích)
-| STT đến | Đơn vị xử lý | Tình trạng | Quá hạn? |
-|---------|--------------|------------|----------|
-| 125 | P. KHCN | Hoàn thành (đã phúc đáp) | Không |
-| 126 | P. HCTH | Đang thực hiện | Không |
-```
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư.
@@ -173,10 +135,10 @@ BẢNG THEO DÕI TIẾN ĐỘ XỬ LÝ (trích)
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/so-van-ban-di-den`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/so-van-ban-di-den`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

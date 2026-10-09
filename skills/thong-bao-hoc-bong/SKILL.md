@@ -5,16 +5,18 @@ description: "Soạn thông báo học bổng của trường đại học đún
 
 # Soạn thông báo học bổng
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần ban hành thông báo công khai về một chương trình học bổng: học bổng khuyến khích học tập
@@ -97,25 +99,13 @@ flowchart TD
     E -->|Có| OUT
 ```
 
-## Đầu ra (Output)
-- Văn bản thông báo học bổng hoàn chỉnh.
-- Checklist kiểm tra (đủ 6 mục nội dung, thể thức, nơi nhận).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Thông báo học bổng,
-các phần bắt buộc theo đúng thứ tự:
-1. Quốc hiệu – Tiêu ngữ; tên cơ quan, đơn vị ban hành; số, ký hiệu văn bản; địa danh, ngày tháng năm.
-2. Tiêu đề "THÔNG BÁO" + trích yếu (V/v xét học bổng...).
-3. Căn cứ ban hành (quyết định phê duyệt / văn bản tài trợ / văn bản quy phạm).
-4. Nội dung 6 mục bắt buộc:
-   (1) Đối tượng; (2) Điều kiện xét; (3) Mức học bổng và số suất;
-   (4) Hồ sơ đăng ký; (5) Thời hạn và nơi nộp hồ sơ; (6) Thông tin liên hệ giải đáp.
-5. Câu kết (đề nghị các khoa thông báo đến sinh viên).
-6. Nơi nhận (các khoa, website trường, bảng tin sinh viên, lưu hồ sơ).
-7. Khối chữ ký theo thẩm quyền (Trưởng phòng CTSV thừa ủy quyền / Phó Hiệu trưởng).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": quốc hiệu – tiêu ngữ và thông tin văn bản; tiêu đề "THÔNG BÁO" + trích yếu; căn cứ ban hành; 6 mục nội dung bắt buộc; câu kết; nơi nhận; khối chữ ký theo thẩm quyền.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Đủ 6 mục nội dung: đối tượng; điều kiện xét; mức học bổng và số suất; hồ sơ đăng ký; thời hạn và nơi nộp hồ sơ; thông tin liên hệ giải đáp.
 - [ ] Số liệu/nội dung khớp Input và văn bản căn cứ: mức tiền, số suất, ngày tháng; không thêm điều kiện ngoài căn cứ.
 - [ ] Không bịa đặt số hiệu, ngày ban hành của văn bản căn cứ, tên đơn vị tài trợ, điều kiện xét.
@@ -125,91 +115,6 @@ các phần bắt buộc theo đúng thứ tự:
 - [ ] Đã qua Human gate: Trưởng phòng CTSV (thừa ủy quyền) hoặc Phó Hiệu trưởng ký duyệt.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, đơn vị tài trợ, số liệu dưới đây đều là **giả lập**,
-> không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_hoc_bong` | Học bổng khuyến khích học tập học kỳ 1, năm học 2026–2027 |
-| `loai_hoc_bong` | Khuyến khích học tập |
-| `doi_tuong` | Sinh viên hệ chính quy các khóa 2023, 2024, 2025 của Trường |
-| `dieu_kien` | - Điểm trung bình học kỳ 1 đạt từ 7,0 trở lên; - Điểm rèn luyện học kỳ 1 đạt từ 70 trở lên (loại Khá trở lên); - Không bị kỷ luật từ mức khiển trách trở lên trong học kỳ xét; - Không nợ học phí học kỳ 1 |
-| `muc_hoc_bong` | Loại Xuất sắc: 8.000.000 đồng/suất (điểm TB ≥ 9,0); Loại Giỏi: 5.000.000 đồng/suất (điểm TB từ 8,0 đến dưới 9,0); Loại Khá: 3.000.000 đồng/suất (điểm TB từ 7,0 đến dưới 8,0) |
-| `ho_so` | 1. Đơn đề nghị xét học bổng (theo mẫu); 2. Bảng điểm học kỳ 1 (Phòng Đào tạo cấp); 3. Bản sao giấy khen, chứng nhận thành tích (nếu có) |
-| `thoi_han` | Từ ngày 15/10/2026 đến hết ngày 30/10/2026 (giờ hành chính) |
-| `noi_nop` | Phòng Công tác sinh viên, tầng 2 nhà A, Trường Đại học A (nộp trực tiếp) |
-| `can_cu` | Quyết định số 120/QĐ-ĐHA ngày 01/09/2026 của Hiệu trưởng về việc ban hành Quy chế học bổng sinh viên |
-| `lien_he` | Bà Bùi Thị C, Phòng CTSV, điện thoại 0243xxxxxx, email ctsv@dha.edu.vn (giả lập) |
-| `nguoi_ky` | Trưởng phòng Công tác sinh viên (thừa ủy quyền) |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG CÔNG TÁC SINH VIÊN                 Độc lập – Tự do – Hạnh phúc
-      Số: 45/TB-ĐHA-CTSV
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                                THÔNG BÁO
-   V/v xét học bổng khuyến khích học tập học kỳ 1, năm học 2026–2027
-
-Căn cứ Quyết định số 120/QĐ-ĐHA ngày 01/09/2026 của Hiệu trưởng Trường Đại học
-A về việc ban hành Quy chế học bổng sinh viên, Phòng Công tác sinh viên
-thông báo về việc xét học bổng khuyến khích học tập học kỳ 1, năm học 2026–2027
-như sau:
-
-1. Đối tượng
-Sinh viên hệ chính quy các khóa 2023, 2024, 2025 của Trường Đại học A.
-
-2. Điều kiện xét
-- Điểm trung bình học kỳ 1, năm học 2026–2027 đạt từ 7,0 trở lên;
-- Điểm rèn luyện học kỳ 1 đạt từ 70 trở lên (xếp loại Khá trở lên);
-- Không bị kỷ luật từ mức khiển trách trở lên trong học kỳ xét;
-- Không nợ học phí học kỳ 1, năm học 2026–2027.
-
-3. Mức học bổng
-
-| Loại học bổng | Điều kiện điểm trung bình | Mức học bổng |
-|---|---|---|
-| Xuất sắc | Từ 9,0 trở lên | 8.000.000 đồng/suất |
-| Giỏi | Từ 8,0 đến dưới 9,0 | 5.000.000 đồng/suất |
-| Khá | Từ 7,0 đến dưới 8,0 | 3.000.000 đồng/suất |
-
-4. Hồ sơ đăng ký
-1. Đơn đề nghị xét học bổng (theo mẫu của Phòng Công tác sinh viên);
-2. Bảng điểm học kỳ 1 do Phòng Đào tạo cấp;
-3. Bản sao giấy khen, giấy chứng nhận thành tích (nếu có).
-
-5. Thời hạn và nơi nộp hồ sơ
-- Thời hạn: từ ngày 15/10/2026 đến hết ngày 30/10/2026 (giờ hành chính).
-- Nơi nộp: Phòng Công tác sinh viên, tầng 2 nhà A, Trường Đại học A
-(nộp trực tiếp).
-
-6. Thông tin liên hệ
-Bà Bùi Thị C, Phòng Công tác sinh viên; điện thoại: 0243xxxxxx;
-email: ctsv@dha.edu.vn.
-
-Đề nghị các khoa thông báo đến toàn thể sinh viên để đăng ký kịp thời./.
-
-Nơi nhận:                                      TL. HIỆU TRƯỞNG
-- Các khoa (để thông báo);                    TRƯỞNG PHÒNG CTSV
-- Website Trường (đăng tin);
-- Lưu: VT, CTSV.                                   [CHỜ KÝ]
-
-                                              Nguyễn Văn Thành
-```
-
-### Checklist kiểm tra (output kèm theo)
-- [x] Thể thức thông báo theo Nghị định 30/2020/NĐ-CP
-- [x] Đủ 6 mục nội dung: đối tượng, điều kiện, mức học bổng, hồ sơ, thời hạn – nơi nộp, liên hệ
-- [x] Căn cứ ban hành rõ ràng
-- [x] Số liệu (mức tiền, ngày tháng) nhất quán
-- [x] Nơi nhận đầy đủ (khoa, website, lưu)
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức thông báo).
@@ -222,10 +127,10 @@ Nơi nhận:                                      TL. HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thong-bao-hoc-bong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thong-bao-hoc-bong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

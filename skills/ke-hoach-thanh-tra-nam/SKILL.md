@@ -5,16 +5,18 @@ description: "Lập kế hoạch thanh tra nội bộ năm của trường đạ
 
 # Lập kế hoạch thanh tra nội bộ năm
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần xây dựng kế hoạch thanh tra nội bộ hằng năm của trường: đầu năm học/năm tài chính,
@@ -102,22 +104,13 @@ flowchart TD
 ```
 ```
 
-## Đầu ra (Output)
-- Kế hoạch thanh tra nội bộ năm hoàn chỉnh (markdown, sẵn sàng trình ký).
-- Bảng tổng hợp các cuộc thanh tra: nội dung, đối tượng, thời gian, đoàn thanh tra.
-- Ghi chú các cuộc thanh tra đột xuất có thể phát sinh trong năm.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** Kế hoạch thanh tra nội bộ năm gồm các phần bắt buộc theo đúng thứ tự sau:
-1. Phần đầu: quốc hiệu – tiêu ngữ, tên đơn vị lập (Phòng Thanh tra & Pháp chế), số/ký hiệu, địa danh – ngày tháng, tên văn bản "KẾ HOẠCH Thanh tra nội bộ năm ...".
-2. I. Mục đích, yêu cầu (mục đích + yêu cầu).
-3. II. Nội dung thanh tra: bảng STT – Nội dung thanh tra – Đối tượng – Thời gian – Đoàn thanh tra.
-4. III. Phương pháp thanh tra.
-5. IV. Tổ chức thực hiện: trách nhiệm Phòng Thanh tra & Pháp chế, trách nhiệm đơn vị được thanh tra, điều khoản thanh tra đột xuất.
-6. Phần cuối: nơi nhận, chữ ký Hiệu trưởng.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần đầu; I. Mục đích, yêu cầu (mục đích + yêu cầu).; II. Nội dung thanh tra; III. Phương pháp thanh tra.; IV. Tổ chức thực hiện; Phần cuối
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Kế hoạch thanh tra nội bộ năm hoàn chỉnh (markdown, sẵn sàng trình ký)
 - [ ] Có đầy đủ sản phẩm: Bảng tổng hợp các cuộc thanh tra: nội dung, đối tượng, thời gian, đoàn thanh tra
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -130,87 +123,6 @@ flowchart TD
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_ke_hoach` | 2027 |
-| `linh_vuc` | Tuyển sinh; thi cử; quản lý văn bằng chứng chỉ; kinh phí NCKH; quản lý sinh viên nội trú |
-| `doi_tuong` | Phòng Tuyển sinh; Khoa Công nghệ thông tin; Phòng Đào tạo; Phòng KHCN; Ký túc xá sinh viên |
-| `thoi_gian` | Quý I; tháng 4; tháng 6; tháng 9; tháng 11 năm 2027 |
-| `doan_thanh_tra` | Mỗi đoàn 03 người: 01 Trưởng đoàn (Phòng Thanh tra & Pháp chế) + 02 thành viên chuyên môn |
-| `muc_dich_yeu_cau` | Phòng ngừa, phát hiện và xử lý vi phạm; nâng cao kỷ cương trong quản lý đào tạo và tài chính |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG THANH TRA & PHÁP CHẾ               Độc lập – Tự do – Hạnh phúc
-      Số: 12/KH-ĐHA-TTPC
-                                                 Thành phố C, ngày 15 tháng 01 năm 2027
-
-KẾ HOẠCH
-Thanh tra nội bộ năm 2027
-
-I. MỤC ĐÍCH, YÊU CẦU
-
-1. Mục đích
-- Phòng ngừa, phát hiện và xử lý kịp thời các vi phạm trong quản lý đào tạo,
-tuyển sinh, thi cử và tài chính của Nhà trường.
-- Nâng cao ý thức chấp hành pháp luật, quy chế, quy định nội bộ của các đơn vị,
-cá nhân; góp phần bảo đảm chất lượng đào tạo.
-
-2. Yêu cầu
-- Thanh tra đúng nội dung, đối tượng, thời gian theo kế hoạch; không làm ảnh hưởng
-đến hoạt động bình thường của đơn vị được thanh tra.
-- Kết luận thanh tra khách quan, trung thực; kiến nghị xử lý đúng quy định.
-
-II. NỘI DUNG THANH TRA
-
-| STT | Nội dung thanh tra | Đối tượng | Thời gian | Đoàn thanh tra |
-|---|---|---|---|---|
-| 1 | Công tác tuyển sinh đại học năm 2026 | Phòng Tuyển sinh | Quý I/2027 | Đ/c Nguyễn Văn Hùng (Trưởng đoàn); 02 thành viên |
-| 2 | Công tác tổ chức thi kết thúc học phần | Khoa Công nghệ thông tin | Tháng 4/2027 | Đ/c Lê Thị C (Trưởng đoàn); 02 thành viên |
-| 3 | Quản lý và cấp phát văn bằng, chứng chỉ | Phòng Đào tạo | Tháng 6/2027 | Đ/c Nguyễn Văn Hùng (Trưởng đoàn); 02 thành viên |
-| 4 | Quản lý, sử dụng kinh phí NCKH cấp trường | Phòng KHCN | Tháng 9/2027 | Đ/c Lê Thị C (Trưởng đoàn); 02 thành viên |
-| 5 | Công tác quản lý sinh viên nội trú | Ký túc xá sinh viên | Tháng 11/2027 | Đ/c Trần Văn Đức (Trưởng đoàn); 02 thành viên |
-
-III. PHƯƠNG PHÁP THANH TRA
-- Kiểm tra hồ sơ, sổ sách, chứng từ liên quan.
-- Đối chiếu số liệu giữa các nguồn.
-- Làm việc trực tiếp, phỏng vấn cán bộ, giảng viên, sinh viên liên quan.
-- Khảo sát, lấy ý kiến các bên liên quan khi cần thiết.
-
-IV. TỔ CHỨC THỰC HIỆN
-
-1. Phòng Thanh tra & Pháp chế chủ trì, phối hợp với các đơn vị liên quan tổ chức
-thực hiện kế hoạch; báo cáo Hiệu trưởng kết quả từng cuộc thanh tra.
-
-2. Thủ trưởng các đơn vị được thanh tra có trách nhiệm chuẩn bị hồ sơ, tài liệu và
-tạo điều kiện để Đoàn thanh tra hoàn thành nhiệm vụ.
-
-3. Ngoài các cuộc thanh tra theo kế hoạch, Hiệu trưởng có thể quyết định thanh tra
-đột xuất khi phát hiện dấu hiệu vi phạm hoặc khi có đơn thư khiếu nại, tố cáo.
-
-Nơi nhận:                                           HIỆU TRƯỞNG
-- Các đơn vị được thanh tra;
-- Lưu: VT, TTPC.                                        [CHỜ KÝ]
-
-                                                 PGS.TS. Trần Văn B
-```
-
-### Checklist kiểm tra kế hoạch (output kèm theo)
-- [x] Mục đích, yêu cầu rõ ràng
-- [x] Đủ các lĩnh vực trọng yếu (tuyển sinh, thi cử, tài chính)
-- [x] Mỗi cuộc có đối tượng, thời gian, đoàn thanh tra cụ thể
-- [x] Thời gian không trùng kỳ thi, mùa tuyển sinh
-- [x] Điều khoản thanh tra đột xuất
-- [x] Thẩm quyền ký (Hiệu trưởng) phù hợp
-
 ## Căn cứ & lưu ý
 - Luật Thanh tra 2022 (Luật số 11/2022/QH15).
 - Nghị định 43/2023/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thanh tra.
@@ -222,10 +134,10 @@ trong năm; điều chỉnh kế hoạch giữa năm phải trình Hiệu trư�
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-thanh-tra-nam`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-thanh-tra-nam`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

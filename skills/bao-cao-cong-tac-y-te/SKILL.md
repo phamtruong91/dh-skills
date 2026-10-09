@@ -5,16 +5,18 @@ description: "Soạn báo cáo công tác y tế định kỳ (học kỳ/năm h
 
 # Soạn báo cáo công tác y tế
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Trạm Y tế cần báo cáo định kỳ (học kỳ, năm học) hoặc đột xuất (có dịch bệnh, sự cố y tế)
@@ -118,28 +120,13 @@ flowchart TD
     E -->|Có| F --> HG --> O
 ```
 
-## Đầu ra (Output)
-- Báo cáo công tác y tế hoàn chỉnh (markdown) kèm các bảng số liệu tổng hợp.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của báo cáo, các phần theo đúng thứ tự:
-1. Quốc hiệu – tiêu ngữ (căn giữa, phía phải).
-2. Tên đơn vị ban hành + số văn bản (phía trái).
-3. Địa danh, ngày/tháng/năm ban hành (phía phải).
-4. Tên loại văn bản "BÁO CÁO" + trích yếu nội dung (căn giữa).
-5. Kính gửi: Ban Giám hiệu (và các đơn vị liên quan).
-6. Đoạn mở đầu: kỳ báo cáo, phạm vi, nguồn số liệu.
-7. I. Kết quả thực hiện: 4 mảng — khám sức khỏe/khám chữa bệnh ban đầu;
-   phòng chống dịch bệnh; vệ sinh môi trường; BHYT (kèm bảng số liệu tổng hợp,
-   ẩn danh).
-8. II. Tồn tại, kiến nghị: tồn tại có số liệu + nguyên nhân; kiến nghị cụ thể
-   có mức ưu tiên.
-9. Đoạn kết: kính trình Ban Giám hiệu xem xét.
-10. Chữ ký: Trưởng Trạm Y tế (kèm "[CHỜ KÝ]" khi là bản mô phỏng).
-11. Nơi nhận + nơi lưu hồ sơ.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 11 phần theo "Cấu trúc output chuẩn": quốc hiệu – tiêu ngữ, tên đơn vị + số văn bản, địa danh ngày tháng, "BÁO CÁO" + trích yếu, kính gửi, đoạn mở đầu, I. Kết quả thực hiện (4 mảng), II. Tồn tại kiến nghị, đoạn kết, chữ ký Trưởng Trạm, nơi nhận + lưu hồ sơ.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu trong output khớp với Input đã cho (số lượt khám, số ca dịch, kết quả kiểm tra vệ sinh, tỷ lệ BHYT).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn; không tự chẩn đoán nguyên nhân bệnh.
 - [ ] Đúng thể thức văn bản hành chính: quốc hiệu, số văn bản, kính gửi, chữ ký, nơi nhận.
@@ -150,59 +137,6 @@ flowchart TD
 - [ ] Số liệu giữa các bảng và phần đánh giá nhất quán, tổng các thành phần khớp tổng đã nêu.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ky_bao_cao` | Học kỳ I, năm học 2026–2027 |
-| `so_lieu_kham` | 3.850 lượt khám sức khỏe tân sinh viên; 620 lượt khám bệnh ban đầu |
-| `so_lieu_dich` | 12 ca sốt xuất huyết (đã khỏi), 0 ca lây lan trong KTX |
-| `so_lieu_vsmt` | 2 đợt kiểm tra căn tin: 2/2 đạt; kiểm tra nguồn nước: đạt |
-| `so_lieu_bhyt` | CBVC 100%, sinh viên 97,5% |
-| `ton_tai_kien_nghi` | Thiếu 01 y sĩ; đề nghị bổ sung tủ thuốc cấp cứu tại khu giảng đường C |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-TRẠM Y TẾ                                 Độc lập – Tự do – Hạnh phúc
-      Số: 28/BC-ĐHA-TYT
-                                                 Thành phố C, ngày 10 tháng 1 năm 2027
-
-                          BÁO CÁO
-              Công tác y tế học kỳ I, năm học 2026–2027
-
-Kính gửi: Ban Giám hiệu Trường Đại học A
-
-Trạm Y tế báo cáo kết quả công tác y tế học kỳ I, năm học 2026–2027 như sau:
-
-I. KẾT QUẢ THỰC HIỆN
-1. Khám sức khỏe, khám chữa bệnh ban đầu:
-   - Khám sức khỏe cho 3.850 tân sinh viên, đạt 100% kế hoạch;
-   - Khám bệnh ban đầu 620 lượt, chuyển tuyến trên 18 trường hợp.
-2. Phòng chống dịch bệnh: ghi nhận 12 ca sốt xuất huyết (đều đã khỏi bệnh),
-   không có lây lan trong ký túc xá; đã phun khử khuẩn 2 đợt.
-3. Vệ sinh môi trường: kiểm tra VSATTP căn tin 2 đợt (2/2 đạt yêu cầu);
-   kiểm tra chất lượng nguồn nước: đạt.
-4. BHYT: CBVC tham gia 100%; sinh viên tham gia 97,5%.
-
-II. TỒN TẠI, KIẾN NGHỊ
-- Tồn tại: Trạm hiện thiếu 01 y sĩ so với định biên.
-- Kiến nghị: bổ sung 01 y sĩ; trang bị thêm 01 tủ thuốc cấp cứu đặt tại
-khu giảng đường C.
-
-Trên đây là báo cáo công tác y tế học kỳ I, kính trình Ban Giám hiệu xem xét./.
-
-Nơi nhận:                                          TRƯỞNG TRẠM Y TẾ
-- Ban Giám hiệu;                                        [CHỜ KÝ]
-- Phòng CTSV (p/h);
-- Lưu: VT, TYT.                                   BS. Hoàng Thị B
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng Trạm Y tế kiểm tra số liệu và ký báo cáo.
@@ -221,10 +155,10 @@ Nơi nhận:                                          TRƯỞNG TRẠM Y TẾ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-cong-tac-y-te`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-cong-tac-y-te`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -5,16 +5,18 @@ description: "Lập checklist chứng từ thanh toán cho từng loại chi c�
 
 # Lập checklist chứng từ thanh toán
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi kiểm tra, đối chiếu bộ chứng từ của một khoản chi trước khi trình ký thanh toán:
@@ -175,23 +177,13 @@ flowchart TD
     HG --> J[["Kết luận đủ điều kiện trình ký thanh toán"]]
 ```
 
-## Đầu ra (Output)
-- Bảng checklist chứng từ đầy đủ cho loại chi được yêu cầu, gồm các cột: TT, Chứng từ bắt
-  buộc, Đơn vị lập, Tình trạng (Đủ/Thiếu), Ghi chú kiểm soát.
-- Kết luận kiểm soát: đủ điều kiện trình ký thanh toán hay phải bổ sung.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của bảng checklist, các phần theo đúng thứ
-tự xuất hiện:
-1. Tiêu đề checklist (loại chi, nội dung chi, số tiền, đơn vị đề nghị);
-2. Bảng checklist (cột: TT, chứng từ bắt buộc, đơn vị lập, Đủ/Thiếu, ghi chú kiểm soát);
-3. Kết luận kiểm soát (đủ điều kiện trình ký thanh toán, hoặc chưa đủ điều kiện kèm danh
-   mục chứng từ cụ thể cần bổ sung/điều chỉnh);
-4. (Phụ lục) Bảng checklist tương tự cho các loại chi còn lại theo danh mục chứng từ
-   tại mục Quy trình.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề checklist (loại chi, nội dung chi,…; Bảng checklist (cột; Kết luận kiểm soát (đủ điều kiện trình ký…; (Phụ lục) Bảng checklist tương tự cho các…
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Bảng checklist chứng từ đầy đủ cho loại chi được yêu cầu, gồm các cột: TT, Chứng từ bắt
 - [ ] Có đầy đủ sản phẩm: Kết luận kiểm soát: đủ điều kiện trình ký thanh toán hay phải bổ sung
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -203,48 +195,6 @@ tự xuất hiện:
 - [ ] Danh mục chứng từ của từng loại chi là cố định theo quy định — không
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_chi` | (d) mua sắm tài sản – thiết bị |
-| `noi_dung_chi` | Thanh toán đợt 2 (70%) hợp đồng mua 10 máy chiếu phục vụ giảng dạy |
-| `so_tien` | 385.000.000 đồng |
-| `chung_tu_hien_co` | Tờ trình; quyết định phê duyệt kế hoạch; quyết định phê duyệt KQLCNT; hợp đồng; hóa đơn GTGT; biên bản nghiệm thu đợt 2 |
-| `don_vi_de_nghi` | Phòng Quản trị – Thiết bị |
-
-### Output mẫu
-
-**CHECKLIST CHỨNG TỪ THANH TOÁN**
-Loại chi: (d) Mua sắm tài sản – thiết bị
-Nội dung: Thanh toán đợt 2 (70%) hợp đồng mua 10 máy chiếu phục vụ giảng dạy
-Số tiền: 385.000.000 đồng — Đơn vị đề nghị: Phòng Quản trị – Thiết bị
-
-| TT | Chứng từ bắt buộc | Đơn vị lập | Đủ/Thiếu | Ghi chú kiểm soát |
-|----|-------------------|------------|----------|-------------------|
-| 1 | Tờ trình đề nghị mua sắm | Phòng QTTB | Đủ | Đã phê duyệt |
-| 2 | Quyết định phê duyệt kế hoạch mua sắm | Hiệu trưởng | Đủ | Số 155/QĐ-ĐHA |
-| 3 | Quyết định phê duyệt kết quả lựa chọn nhà thầu | Hiệu trưởng | Đủ | Hình thức: chào hàng cạnh tranh |
-| 4 | Hợp đồng mua bán | Phòng QTTB + nhà thầu | Đủ | Điều khoản thanh toán đợt 2: 70% sau nghiệm thu |
-| 5 | Hóa đơn GTGT | Nhà thầu | Đủ | Kiểm tra MST, số tiền khớp hợp đồng |
-| 6 | Biên bản giao nhận hàng hóa | Phòng QTTB + nhà thầu | **Thiếu** | Yêu cầu bổ sung |
-| 7 | Biên bản nghiệm thu, bàn giao đưa vào sử dụng | Hội đồng nghiệm thu | Đủ | 10/10 máy đạt yêu cầu kỹ thuật |
-| 8 | Phiếu nhập kho | Thủ kho | **Thiếu** | Yêu cầu bổ sung (thiết bị qua kho trước khi cấp phát) |
-| 9 | Biên bản thanh lý hợp đồng | — | Thiếu (chưa đến hạn) | Chỉ yêu cầu khi thanh toán đợt cuối |
-| 10 | Chứng từ bảo hành | Nhà thầu | Đủ | Bảo hành 24 tháng |
-
-**Kết luận kiểm soát**: Chưa đủ điều kiện trình ký thanh toán. Đề nghị Phòng Quản trị –
-Thiết bị bổ sung: (1) Biên bản giao nhận hàng hóa; (2) Phiếu nhập kho. Sau khi bổ sung
-đầy đủ, Phòng Tài chính – Kế toán sẽ trình ký thanh toán đợt 2 theo hợp đồng.
-
-*(Bảng checklist tương tự được lập cho 5 loại chi còn lại: (a) lương–phụ cấp,
-(b) học bổng–hỗ trợ SV, (c) đề tài NCKH, (e) công tác phí, (f) tiếp khách–hội nghị —
-theo danh mục chứng từ tại mục Quy trình.)*
 
 ## Căn cứ & lưu ý
 - Luật Kế toán 2015: mọi nghiệp vụ kinh tế, tài chính phát sinh đều phải lập chứng từ
@@ -259,10 +209,10 @@ theo danh mục chứng từ tại mục Quy trình.)*
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/checklist-chung-tu-thanh-toan`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/checklist-chung-tu-thanh-toan`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

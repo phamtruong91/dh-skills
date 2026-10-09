@@ -5,16 +5,18 @@ description: "Quản trị dự án (PMO) cho Viện Đổi mới sáng tạo v�
 
 # Quản trị dự án (PMO)
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Viện ĐMST & CGCN (hoặc đơn vị tương đương) cần quản trị một dự án: theo dõi tiến độ các gói
@@ -126,24 +128,13 @@ flowchart TD
     J --> K[/Bộ hồ sơ PMO kỳ báo cáo/]
 ```
 
-## Đầu ra (Output)
-- Bảng tracker tiến độ (markdown).
-- Issue log và Risk log.
-- Bảng lessons learned.
-- Dashboard tóm tắt 1 trang.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (bộ hồ sơ PMO của một kỳ báo cáo — các phần theo đúng thứ tự):
-1. Bảng tracker tiến độ: gói việc, mốc, người phụ trách, % kế hoạch, % thực tế, trạng thái.
-2. Issue log: mã, vấn đề, mức độ, người xử lý, hạn xử lý, trạng thái.
-3. Risk log: mã, rủi ro, xác suất, mức tác động, biện pháp giảm thiểu, người theo dõi.
-4. Bảng lessons learned: tình huống → nguyên nhân → bài học → khuyến nghị (chỉ khi đến
-   mốc lớn hoặc kết thúc dự án).
-5. Dashboard tóm tắt 1 trang: tiến độ tổng thể, top 3 vấn đề, top 3 rủi ro, quyết định
-   cần lãnh đạo viện (nội dung, phương án đề xuất, hạn quyết định).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": bảng tracker tiến độ, issue log, risk log, bảng lessons learned (khi đến mốc lớn), dashboard tóm tắt 1 trang.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu trong tracker, issue log, risk log khớp với Input (workplan, tiến độ theo kỳ) đã cho.
 - [ ] Không bịa đặt số liệu tiến độ, minh chứng, biên bản không có thật.
 - [ ] Trạng thái gói việc (đúng tiến độ / chậm / nguy cơ chậm / hoàn thành) dựa trên số liệu, không "làm đẹp".
@@ -153,53 +144,6 @@ flowchart TD
 - [ ] Đã qua Human gate: chủ nhiệm dự án xác nhận số liệu, viện trưởng duyệt dashboard.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, tổ chức, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_du_an` | Nền tảng số hóa di sản văn hóa (mã ĐHA-DMST-2026-03) |
-| `chu_du_an` | TS. Trần Văn D |
-| `muc_tieu` | Số hóa 500 hiện vật, xây dựng cổng tra cứu trực tuyến trong 12 tháng |
-| `workplan` | WP1 Khảo sát & thiết kế (T1–T3, ThS. Bùi Thị A); WP2 Số hóa hiện vật (T4–T9, TS. Trần Văn D); WP3 Cổng tra cứu (T7–T11, KS. Ngô Văn C); WP4 Nghiệm thu & bàn giao (T12) |
-| `ngan_sach` | 1.200 triệu đồng |
-| `ky_bao_co` | Tháng |
-
-### Output mẫu
-
-**TRACKER TIẾN ĐỘ — ĐHA-DMST-2026-03 (cập nhật hết tháng 6/2026)**
-
-| Gói việc | Mốc | Phụ trách | % HT | Trạng thái |
-|---|---|---|---|---|
-| WP1 Khảo sát & thiết kế | T3 | ThS. Bùi Thị A | 100% | Hoàn thành |
-| WP2 Số hóa hiện vật | T9 | TS. Trần Văn D | 45% | Đúng tiến độ |
-| WP3 Cổng tra cứu | T11 | KS. Ngô Văn C | 20% | Có nguy cơ chậm |
-| WP4 Nghiệm thu & bàn giao | T12 | TS. Trần Văn D | 0% | Chưa tới hạn |
-
-**ISSUE LOG**
-
-| # | Vấn đề | Mức độ | Người xử lý | Hạn | Trạng thái |
-|---|---|---|---|---|---|
-| I-01 | Máy scan 3D hỏng, chờ linh kiện thay thế | Nghiêm trọng | KS. Ngô Văn C | 15/07/2026 | Đang xử lý |
-| I-02 | Thiếu 02 cộng tác viên nhập liệu | Trung bình | ThS. Bùi Thị A | 30/06/2026 | Đã đóng |
-
-**RISK LOG**
-
-| # | Rủi ro | Xác suất | Tác động | Giảm thiểu | Theo dõi |
-|---|---|---|---|---|---|
-| R-01 | Chậm tiến độ WP3 do phụ thuộc API đơn vị đối tác | Trung bình | Cao | Ký biên bản phối hợp, có phương án dự phòng | TS. Trần Văn D |
-
-**LESSONS LEARNED (giữa kỳ)**
-
-| Tình huống | Bài học | Khuyến nghị |
-|---|---|---|
-| Máy scan hỏng làm gián đoạn WP2 | Cần hợp đồng bảo trì thiết bị ngay từ đầu dự án | Đưa chi phí bảo trì vào dự toán mọi dự án có thiết bị |
-
-**DASHBOARD TÓM TẮT** — Viện ĐMST & CGCN, Trường Đại học A: Tiến độ tổng thể 41% (đúng kế hoạch). Cần quyết định: phê duyệt mua linh kiện máy scan 3D (120 triệu đồng) trước 10/07/2026.
 
 ## Human gate (người kiểm duyệt)
 - **Chủ nhiệm dự án** xác nhận tính chính xác của trạng thái tiến độ, issue, risk trước mỗi kỳ báo cáo.
@@ -217,10 +161,10 @@ Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/pmo-quan-tri-du-an`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/pmo-quan-tri-du-an`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -5,16 +5,18 @@ description: "Soạn kế hoạch y tế học đường của Trạm Y tế tr�
 
 # Soạn kế hoạch y tế học đường
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Trạm Y tế lập kế hoạch công tác năm học (khám sức khỏe đầu năm, tiêm chủng, phòng chống dịch,
@@ -122,27 +124,13 @@ flowchart TD
     K --> L[/Kế hoạch y tế học đường/]
 ```
 
-## Đầu ra (Output)
-- Kế hoạch y tế học đường hoàn chỉnh (markdown), sẵn sàng trình ký.
-- Bảng tiến độ + dự toán kinh phí kèm theo.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch, các phần theo đúng thứ tự:
-1. Quốc hiệu – tiêu ngữ (căn giữa, phía phải).
-2. Tên đơn vị ban hành + số văn bản (phía trái).
-3. Địa danh, ngày/tháng/năm ban hành (phía phải).
-4. Tên loại văn bản "KẾ HOẠCH" + trích yếu nội dung (căn giữa).
-5. Phần căn cứ: văn bản quy phạm về y tế trường học; tình hình thực tế (quy mô CBVC/SV).
-6. I. Mục tiêu: chỉ tiêu đo được của năm học (tỷ lệ khám, mục tiêu phòng dịch).
-7. II. Nội dung và tiến độ: từng việc theo mảng — thời gian, đơn vị chủ trì/phối hợp,
-   kinh phí từng việc.
-8. III. Tổ chức thực hiện: trách nhiệm của Trạm Y tế và các đơn vị phối hợp;
-   tổng kinh phí và nguồn kinh phí.
-9. Chữ ký: Trưởng Trạm Y tế (kèm "[CHỜ KÝ]" khi là bản mô phỏng).
-10. Nơi nhận + nơi lưu hồ sơ.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 10 phần theo "Cấu trúc output chuẩn": quốc hiệu – tiêu ngữ, tên đơn vị + số văn bản, địa danh ngày ban hành, tên loại văn bản + trích yếu, phần căn cứ, mục tiêu, nội dung và tiến độ, tổ chức thực hiện, chữ ký, nơi nhận + lưu hồ sơ.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: quy mô CBVC/SV, nguồn lực, đơn vị phối hợp.
 - [ ] Không bịa đặt số liệu dịch bệnh, kinh phí hay năng lực nhân sự; đơn giá trong dự toán ghi rõ là dự toán.
 - [ ] Mỗi việc gắn với quy định y tế trường học tương ứng; kế hoạch đột xuất ghi rõ phạm vi áp dụng và cơ chế quay lại kế hoạch thường kỳ.
@@ -153,64 +141,6 @@ flowchart TD
 - [ ] Đã qua Human gate: trưởng trạm y tế duyệt chuyên môn, ban giám hiệu phê duyệt kế hoạch và kinh phí.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_hoc` | 2026–2027 |
-| `quy_mo` | 420 CBVC, 12.500 sinh viên |
-| `noi_dung_chinh` | 1. Khám sức khỏe tân sinh viên (tháng 9). 2. Tiêm nhắc vắc-xin cúm cho CBVC (tháng 10). 3. Phun khử khuẩn KTX, giảng đường mỗi học kỳ. 4. Kiểm tra VSATTP căn tin 2 lần/năm. 5. Truyền thông phòng chống sốt xuất huyết. |
-| `nguon_luc` | 01 bác sĩ, 03 y sĩ; kinh phí 180 triệu đồng |
-| `phoi_hop` | Phòng CTSV, Ban Quản lý KTX, Phòng Quản trị – Thiết bị, Đoàn Thanh niên |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-TRẠM Y TẾ                                 Độc lập – Tự do – Hạnh phúc
-      Số: 12/KH-ĐHA-TYT
-                                                 Thành phố C, ngày 15 tháng 8 năm 2026
-
-                          KẾ HOẠCH
-              Công tác y tế học đường năm học 2026–2027
-
-Căn cứ quy định về y tế trường học của Bộ Y tế và Bộ Giáo dục và Đào tạo;
-Xét tình hình thực tế công tác chăm sóc sức khỏe tại Trường Đại học A
-(quy mô 420 CBVC và 12.500 sinh viên),
-
-Trạm Y tế xây dựng Kế hoạch công tác y tế học đường năm học 2026–2027 như sau:
-
-I. MỤC TIÊU
-- 100% tân sinh viên được khám sức khỏe đầu năm;
-- Không để dịch bệnh lây lan trong trường; xử lý kịp thời mọi sự cố y tế.
-
-II. NỘI DUNG VÀ TIẾN ĐỘ
-
-1. Khám sức khỏe tân sinh viên (tháng 9/2026): Trạm Y tế chủ trì, phối hợp
-Phòng CTSV; kinh phí 60 triệu đồng.
-2. Tiêm nhắc vắc-xin cúm cho CBVC (tháng 10/2026): đăng ký tự nguyện; kinh phí
-40 triệu đồng.
-3. Phun khử khuẩn KTX, giảng đường (cuối mỗi học kỳ): phối hợp Ban Quản lý KTX,
-Phòng Quản trị – Thiết bị; kinh phí 30 triệu đồng.
-4. Kiểm tra VSATTP căn tin, nguồn nước (2 lần/năm): phối hợp Phòng Quản trị;
-kinh phí 20 triệu đồng.
-5. Truyền thông phòng chống sốt xuất huyết (tháng 8–11/2026): tờ rơi, loa phát
-thanh, phối hợp Đoàn Thanh niên; kinh phí 30 triệu đồng.
-
-III. TỔ CHỨC THỰC HIỆN
-Trạm Y tế chịu trách nhiệm triển khai; các đơn vị phối hợp theo phân công trên.
-Tổng kinh phí: 180 triệu đồng (từ nguồn chi thường xuyên).
-
-Nơi nhận:                                          TRƯỞNG TRẠM Y TẾ
-- Ban Giám hiệu (b/c);                                 [CHỜ KÝ]
-- Các đơn vị phối hợp;
-- Lưu: VT, TYT.                                   BS. Hoàng Thị B
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng Trạm Y tế duyệt nội dung chuyên môn trước khi trình.
@@ -229,10 +159,10 @@ Nơi nhận:                                          TRƯỞNG TRẠM Y TẾ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-y-te-hoc-duong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-y-te-hoc-duong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

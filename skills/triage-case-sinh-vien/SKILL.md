@@ -5,16 +5,18 @@ description: "Phân loại case sinh viên tiếp nhận qua phiếu/email: tóm
 
 # Phân loại case sinh viên (triage)
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi đơn vị tiếp nhận phản ánh/khiếu nại/đề nghị của sinh viên qua phiếu, email, form trực tuyến:
@@ -89,24 +91,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> G --> HG --> H
 ```
 
-## Đầu ra (Output)
-- Case brief (tóm tắt + phân loại + ưu tiên + SLA).
-- Phiếu định tuyến (đơn vị xử lý, đầu mối, hạn).
-- Dự thảo phản hồi sinh viên (CHƯA GỬI).
-- Log theo dõi case.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Case brief):
-1. Mã case + kênh tiếp nhận + thời gian tiếp nhận.
-2. Tóm tắt case: ai — việc gì — xảy ra khi nào — mong muốn gì (tối đa 5 dòng).
-3. Phân loại nghiệp vụ + căn cứ điều khoản.
-4. Mức độ ưu tiên + SLA (hạn chót phản hồi).
-5. Định tuyến: đơn vị xử lý, đầu mối chính, đơn vị phối hợp.
-6. Dự thảo phản hồi (đính kèm, CHƯA GỬI).
-7. Log theo dõi (trạng thái: chờ cán bộ xác nhận).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Case brief đầy đủ 7 phần theo Cấu trúc output chuẩn: mã case + kênh + thời gian tiếp nhận; tóm tắt (≤ 5 dòng); phân loại + căn cứ điều khoản; ưu tiên + SLA (hạn chót); định tuyến; dự thảo phản hồi đính kèm (chưa gửi); log theo dõi.
+- [ ] Case brief đầy đủ 7 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: mã case + kênh + thời gian tiếp nhận; tóm tắt (≤ 5 dòng); phân loại + căn cứ điều khoản; ưu tiên + SLA (hạn chót); định tuyến; dự thảo phản hồi đính kèm (chưa gửi); log theo dõi.
 - [ ] Tóm tắt giữ nguyên ý sinh viên; nội dung mơ hồ ghi "cần làm rõ thêm", không suy đoán động cơ hay hoàn cảnh.
 - [ ] Mỗi case có MỘT đầu mối chính duy nhất; case vượt thẩm quyền hoặc nhạy cảm (kỷ luật, pháp lý) đã định tuyến thẳng lên lãnh đạo đơn vị.
 - [ ] Mức Khẩn có căn cứ rõ ràng, không lạm dụng; hạn SLA tính theo ngày làm việc (trừ ngày nghỉ/lễ).
@@ -115,32 +106,6 @@ flowchart TD
 - [ ] Đã qua Human gate: cán bộ thụ lý đã xác nhận phân loại, ưu tiên và đơn vị xử lý; cán bộ là người duy nhất liên hệ và gửi phản hồi cho sinh viên.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-> Ví dụ: Phòng CTSV tiếp nhận — áp dụng tương tự cho mọi đơn vị.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `kenh_tiep_nhan` | Email |
-| `noi_dung_case` | "Em là SV năm 3, em thấy điểm rèn luyện học kỳ 1 của em bị 65 trong khi em tham gia đầy đủ hoạt động lớp. Em đề nghị kiểm tra lại." |
-| `thong_tin_sv` | SV2024 000 0000, Phạm Văn B (giả lập), Khoa CNTT, K2023 |
-| `quy_dinh_lien_quan` | Quy định đánh giá rèn luyện: SV được quyền khiếu nại trong 7 ngày từ khi công bố; Phòng CTSV chủ trì, khoa phối hợp; SLA phản hồi 3 ngày làm việc |
-
-### Output mẫu
-
-**CASE BRIEF**
-**1. Mã case + kênh + thời gian tiếp nhận:** CASE-2026-0847 | Kênh: Email | Tiếp nhận: 09/10/2026.
-**2. Tóm tắt:** SV Phạm Văn B (SV2024 000 0000, K2023, Khoa CNTT) khiếu nại điểm rèn luyện HK1 (65đ), cho rằng đã tham gia đầy đủ hoạt động lớp; đề nghị kiểm tra lại.
-**3. Phân loại:** Khiếu nại điểm rèn luyện — căn cứ Quy định đánh giá rèn luyện: SV được khiếu nại trong 7 ngày từ khi công bố (còn trong hạn); lịch sử: không có case trước đây.
-**4. Ưu tiên + SLA:** Cao (liên quan quyền lợi xét học bổng sắp tới) — SLA phản hồi trong 3 ngày làm việc → hạn chót 15/10/2026.
-**5. Định tuyến:** Phòng CTSV (đầu mối: ThS. Đỗ Thị A) + Khoa CNTT phối hợp đối chiếu.
-**6. Dự thảo phản hồi (CHƯA GỬI):**
-"Kính gửi em Phạm Văn B, Phòng Công tác sinh viên đã tiếp nhận phản ánh của em về điểm rèn luyện học kỳ 1. Đơn vị đang phối hợp với Khoa CNTT kiểm tra lại và sẽ phản hồi em trước ngày 15/10/2026..."
-**7. Log theo dõi:** CASE-2026-0847 | Email | 09/10/2026 | Khiếu nại điểm rèn luyện | Ưu tiên: Cao | Xử lý: Phòng CTSV | Trạng thái: chờ cán bộ xác nhận.
 
 ## Human gate (người kiểm duyệt)
 1. **Cán bộ thụ lý**: xác nhận phân loại, mức độ ưu tiên và đơn vị xử lý trước khi chuyển đi.
@@ -163,10 +128,10 @@ flowchart TD
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/triage-case-sinh-vien`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/triage-case-sinh-vien`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

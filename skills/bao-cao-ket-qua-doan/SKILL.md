@@ -5,16 +5,18 @@ description: "Soạn báo cáo kết quả đoàn công tác (đoàn ra đi nư�
 
 # Báo cáo kết quả đoàn công tác
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần tổng hợp, báo cáo Ban Giám hiệu về kết quả một đoàn công tác đã hoàn thành:
@@ -93,25 +95,12 @@ flowchart TD
     HG --> Z[["Xuất bản báo cáo gửi Ban Giám hiệu"]]
 ```
 
-## Đầu ra (Output)
-- Báo cáo kết quả đoàn công tác hoàn chỉnh.
-- Phụ lục kèm theo (văn bản ký kết, ảnh tư liệu – nếu có).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Báo cáo kết quả đoàn công tác,
-các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề cơ quan ban hành + tên báo cáo (kết quả đoàn nào, đối tác, quốc gia).
-2. Kính gửi (Hiệu trưởng).
-3. Phần mở đầu: căn cứ kế hoạch đã được phê duyệt, thời gian và đối tác của đoàn.
-4. I. Diễn biến (theo trình tự thời gian: thời gian – địa điểm – thành phần hai bên – nội dung trao đổi).
-5. II. Kết quả đạt được (liệt kê cụ thể, có số liệu; phân biệt hoàn thành / đang đàm phán).
-6. III. Thỏa thuận với đối tác (thỏa thuận – trách nhiệm – thời hạn thực hiện mỗi bên).
-7. IV. Kiến nghị (nội dung – đơn vị chủ trì – đơn vị phối hợp – thời hạn).
-8. Phần kết: trình Hiệu trưởng xem xét, cho ý kiến chỉ đạo.
-9. Địa danh, ngày tháng năm; chức danh, chữ ký, họ tên người ký.
-10. Phụ lục kèm theo (văn bản ký kết, ảnh tư liệu, danh sách — nếu có).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề, kính gửi, mở đầu, I. Diễn biến, II. Kết quả, III. Thỏa thuận, IV. Kiến nghị, phần kết, chữ ký, phụ lục.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: thời gian, địa điểm, thành phần hai bên, kết quả, thỏa thuận, kiến nghị.
 - [ ] Không bịa đặt kết quả, số liệu, thỏa thuận; không ghi kết quả "dự kiến" thành "đã đạt".
 - [ ] Đúng thể thức báo cáo hành chính; mỗi kiến nghị ghi rõ đơn vị chủ trì duy nhất, đơn vị phối hợp, thời hạn.
@@ -123,85 +112,6 @@ các phần bắt buộc theo đúng thứ tự:
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_doan` | Đoàn vào |
-| `ten_doan` | Đoàn Trường Đại học C thăm và làm việc |
-| `thoi_gian` | 18/11/2026 – 20/11/2026 |
-| `thanh_phan` | Đoàn khách 04 người do GS. Willem Janssen (Hiệu trưởng) làm trưởng đoàn; phía Trường do PGS.TS. Trần Văn B (Phó Hiệu trưởng) làm trưởng đoàn đón tiếp |
-| `dien_bien` | Ngày 18/11: đón sân bay, chào xã giao Ban Giám hiệu, tham quan Lab AI. Ngày 19/11: hội đàm chính thức, lễ ký MOU, tọa đàm với 80 GV-SV Khoa CNTT. Ngày 20/11: tham quan Khu CNC Hòa Lạc, tiễn đoàn |
-| `ket_qua` | Ký MOU hợp tác 5 năm; thống nhất 10 suất trao đổi sinh viên/năm; đối tác cam kết 05 suất học bổng bán phần thạc sĩ; thống nhất đồng tổ chức hội thảo quốc tế năm 2027 |
-| `kien_nghi` | 1. Phòng KHCN&HTQT xây dựng kế hoạch triển khai MOU trong tháng 12/2026. 2. Khoa CNTT tuyển chọn sinh viên trao đổi đợt 1 (hạn 02/2027). 3. Giao Phòng Đào tạo phối hợp công nhận tín chỉ sinh viên trao đổi |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-PHÒNG KHCN & HTQT
-
-BÁO CÁO
-Kết quả đón tiếp đoàn Trường Đại học C
-
-Kính gửi: Hiệu trưởng Trường Đại học A
-
-Thực hiện Kế hoạch đón tiếp đã được phê duyệt, Phòng KHCN&HTQT báo cáo kết
-quả đón đoàn Trường Đại học Khoa học Ứng dụng C (Vương quốc Hà Lan)
-sang thăm và làm việc tại Trường từ ngày 18/11/2026 đến ngày 20/11/2026
-như sau:
-
-I. DIỄN BIẾN
-1. Ngày 18/11/2026: Đoàn đến Sân bay quốc tế Nội Bài lúc 10h30, được đón
-tiếp trọng thị. Buổi chiều, đoàn chào xã giao Ban Giám hiệu và tham quan
-phòng Lab AI, Trung tâm dữ liệu của Khoa Công nghệ thông tin.
-2. Ngày 19/11/2026: Hai bên tiến hành hội đàm chính thức về các nội dung
-hợp tác; tổ chức Lễ ký kết Biên bản ghi nhớ hợp tác (MOU). Buổi chiều, đoàn
-dự tọa đàm "AI trong giáo dục đại học" với 80 giảng viên, sinh viên Khoa CNTT.
-3. Ngày 20/11/2026: Đoàn tham quan thực tế tại Khu Công nghệ cao Hòa Lạc;
-buổi chiều tổng kết chuyến thăm, trao quà lưu niệm và tiễn đoàn tại sân bay.
-
-II. KẾT QUẢ ĐẠT ĐƯỢC
-1. Hai bên đã ký kết Biên bản ghi nhớ hợp tác (MOU) thời hạn 05 năm về đào
-tạo và nghiên cứu khoa học trong lĩnh vực công nghệ thông tin và trí tuệ
-nhân tạo.
-2. Thống nhất chỉ tiêu trao đổi sinh viên: 10 suất/năm theo hình thức học
-tập 01 học kỳ tại trường đối tác, được công nhận tín chỉ tương đương.
-3. Phía đối tác cam kết dành 05 suất học bổng bán phần (50% học phí) chương
-trình thạc sĩ cho sinh viên tốt nghiệp Trường Đại học A, áp dụng từ
-năm học 2027–2028.
-4. Hai bên thống nhất đồng tổ chức Hội thảo khoa học quốc tế về AI trong
-giáo dục vào quý III/2027 tại thành phố C.
-
-III. THỎA THUẬN VỚI ĐỐI TÁC
-- Trường Đại học A cử đầu mối (Phòng KHCN&HTQT) triển khai các nội
-dung MOU, báo cáo tiến độ 06 tháng/lần.
-- Trường Đại học C gửi quy định chi tiết về học bổng và tiếp nhận
-sinh viên trao đổi trước ngày 31/01/2027.
-
-IV. KIẾN NGHỊ
-1. Giao Phòng KHCN&HTQT xây dựng Kế hoạch triển khai MOU, trình Hiệu trưởng
-trong tháng 12/2026.
-2. Giao Khoa Công nghệ thông tin chủ trì tuyển chọn sinh viên tham gia
-chương trình trao đổi đợt 1, hoàn thành trước tháng 02/2027.
-3. Giao Phòng Đào tạo phối hợp xây dựng cơ chế công nhận tín chỉ đối với
-sinh viên tham gia trao đổi, trình phê duyệt trong quý I/2027.
-
-Trên đây là báo cáo kết quả đón tiếp đoàn, kính trình Hiệu trưởng xem xét,
-cho ý kiến chỉ đạo./.
-
-                                                Thành phố C, ngày 24 tháng 11 năm 2026
-                                                TRƯỞNG PHÒNG KHCN&HTQT
-
-                                                TS. Nguyễn Thị A
-
-Phụ lục: 01 Biên bản ghi nhớ hợp tác (MOU) đã ký; ảnh tư liệu chuyến thăm.
-```
-
 ## Căn cứ & lưu ý
 - Quy chế quản lý đoàn ra, đoàn vào của Trường Đại học A: đoàn phải báo cáo
   kết quả trong vòng 07 ngày làm việc sau khi kết thúc.
@@ -211,10 +121,10 @@ Phụ lục: 01 Biên bản ghi nhớ hợp tác (MOU) đã ký; ảnh tư liệ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-ket-qua-doan`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-ket-qua-doan`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

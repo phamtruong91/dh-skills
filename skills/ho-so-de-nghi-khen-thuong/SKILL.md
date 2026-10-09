@@ -5,16 +5,18 @@ description: "Soạn bộ hồ sơ đề nghị khen thưởng các cấp (tờ 
 
 # Hồ sơ đề nghị khen thưởng các cấp
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần đề nghị khen thưởng cho cá nhân hoặc tập thể: Huân chương, Bằng khen của Thủ tướng,
@@ -148,136 +150,21 @@ flowchart TD
     HG --> OUT[["Hồ sơ đề nghị khen thưởng hoàn chỉnh"]]
 ```
 
-## Đầu ra (Output)
-- Tờ trình đề nghị khen thưởng hoàn chỉnh.
-- Báo cáo thành tích cá nhân/tập thể hoàn chỉnh.
-- Danh sách trích ngang đề nghị khen thưởng.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** (Tờ trình đề nghị khen thưởng — sản phẩm chính, theo thể thức NĐ 30/2020)
-1. Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc lập – Tự do – Hạnh phúc").
-2. Tên cơ quan ban hành (Trường Đại học A).
-3. Số, ký hiệu tờ trình.
-4. Địa danh, ngày tháng năm ban hành.
-5. Tên loại văn bản "TỜ TRÌNH" + trích yếu ("Về việc đề nghị tặng...").
-6. Kính gửi (cấp có thẩm quyền xét tặng).
-7. Phần căn cứ: Luật Thi đua, khen thưởng; quy định của cấp trình; kết quả bình xét của
-Hội đồng Thi đua – Khen thưởng trường (ngày họp).
-8. Nội dung đề nghị: hình thức khen đề nghị tặng cho ai (họ tên/tên tập thể, chức vụ, đơn
-vị), tóm tắt thành tích; nêu rõ có danh sách trích ngang và báo cáo thành tích kèm theo.
-9. Câu kết ("Kính trình ... xem xét, quyết định./.").
-10. Nơi nhận (cấp trình; lưu VT, TCCB).
-11. Chữ ký (Hiệu trưởng + họ tên).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc l…; Tên cơ quan ban hành (Trường Đại học A).; Số, ký hiệu tờ trình.; Địa danh, ngày tháng năm ban hành.; … (đủ 11 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Luật Thi đua, khen thưởng và các văn bản hướng dẫn thi hành.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Trích yếu phải nêu đúng hình thức khen đề nghị
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `doi_tuong` | Cá nhân |
-| `ho_ten_tap_the` | Trần Văn D |
-| `chuc_vu_don_vi` | Phó Hiệu trưởng Trường Đại học A |
-| `hinh_thuc_khen` | Bằng khen của Bộ trưởng Bộ Giáo dục và Đào tạo |
-| `cap_trinh` | Bộ Giáo dục và Đào tạo |
-| `thanh_tich` | Giai đoạn 2021–2026: chủ trì 03 đề tài cấp Bộ nghiệm thu xuất sắc; 25 bài báo khoa học (12 quốc tế); hướng dẫn 05 NCS bảo vệ thành công; 5 năm liên tục hoàn thành xuất sắc nhiệm vụ, đạt danh hiệu CSTĐ cơ sở |
-| `thoi_gian_xet` | 2021–2026 |
-| `can_cu` | Luật Thi đua, khen thưởng; tiêu chuẩn Bằng khen Bộ trưởng |
-| `nguoi_ky` | Hiệu trưởng |
-
-### Output mẫu
-
-**1. TỜ TRÌNH**
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                             Độc lập – Tự do – Hạnh phúc
-      Số: 68/TTr-ĐHA-TCCB
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                         TỜ TRÌNH
-         Về việc đề nghị tặng Bằng khen của Bộ trưởng
-                Bộ Giáo dục và Đào tạo
-
-Kính gửi: Bộ trưởng Bộ Giáo dục và Đào tạo
-
-Căn cứ Luật Thi đua, khen thưởng;
-Căn cứ quy định về công tác thi đua, khen thưởng của Bộ Giáo dục và Đào tạo;
-Căn cứ kết quả bình xét của Hội đồng Thi đua – Khen thưởng Trường Đại học A
-tại phiên họp ngày 05/10/2026,
-
-Trường Đại học A trân trọng đề nghị Bộ trưởng Bộ Giáo dục và Đào tạo xem xét,
-tặng Bằng khen cho 01 cá nhân có thành tích xuất sắc trong công tác giai đoạn 2021–2026
-(có danh sách trích ngang và báo cáo thành tích kèm theo):
-
-Ông Trần Văn D – Phó Hiệu trưởng Trường Đại học A.
-
-Kính trình Bộ trưởng xem xét, quyết định./.
-
-Nơi nhận:                                                      HIỆU TRƯỞNG
-- Như trên;
-- Lưu: VT, TCCB.                                                   [CHỜ KÝ]
-```
-
-**2. BÁO CÁO THÀNH TÍCH CÁ NHÂN**
-
-```
-CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-Độc lập – Tự do – Hạnh phúc
-
-                 BÁO CÁO THÀNH TÍCH
-Đề nghị tặng Bằng khen của Bộ trưởng Bộ Giáo dục và Đào tạo
-
-I. SƠ LƯỢC LÝ LỊCH
-- Họ và tên: Trần Văn D. Chức vụ: Phó Hiệu trưởng.
-- Đơn vị công tác: Trường Đại học A.
-- Trình độ: Tiến sĩ.
-
-II. THÀNH TÍCH ĐẠT ĐƯỢC (giai đoạn 2021–2026)
-1. Chủ trì 03 đề tài nghiên cứu khoa học cấp Bộ, nghiệm thu loại xuất sắc.
-2. Công bố 25 bài báo khoa học, trong đó 12 bài trên tạp chí quốc tế uy tín.
-3. Hướng dẫn thành công 05 nghiên cứu sinh bảo vệ luận án tiến sĩ.
-4. 05 năm liên tục (2021–2025) hoàn thành xuất sắc nhiệm vụ, đạt danh hiệu
-   Chiến sĩ thi đua cơ sở.
-
-III. CÁC DANH HIỆU, HÌNH THỨC KHEN THƯỞNG ĐÃ ĐƯỢC TẶNG
-- Chiến sĩ thi đua cơ sở các năm 2021, 2022, 2023, 2024, 2025.
-- Giấy khen của Hiệu trưởng năm 2022.
-
-Tôi cam đoan những nội dung báo cáo trên là đúng sự thật; nếu sai, tôi xin chịu
-trách nhiệm trước pháp luật.
-
-                                              Thành phố C, ngày 09 tháng 10 năm 2026
-                                                   Người báo cáo
-                                                      [CHỜ KÝ]
-
-                                                  Trần Văn D
-
-XÁC NHẬN CỦA THỦ TRƯỞNG ĐƠN VỊ
-(Ý kiến xác nhận tính chính xác của báo cáo thành tích)
-
-                                                      HIỆU TRƯỞNG
-                                                         (đã ký, đóng dấu)
-```
-
-**3. DANH SÁCH TRÍCH NGANG**
-
-| TT | Họ tên | Chức vụ, đơn vị | Tóm tắt thành tích | Hình thức đề nghị |
-|----|--------|-----------------|--------------------|-------------------|
-| 1 | Trần Văn D | Phó Hiệu trưởng, Trường ĐH A | 03 đề tài cấp Bộ XS; 25 bài báo (12 QT); 05 NCS; 5 năm HTXS nhiệm vụ | Bằng khen Bộ trưởng |
 
 ## Căn cứ & lưu ý
 - Luật Thi đua, khen thưởng và các văn bản hướng dẫn thi hành.
@@ -290,10 +177,10 @@ học hàm, học vị trong báo cáo thành tích).
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-de-nghi-khen-thuong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-de-nghi-khen-thuong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

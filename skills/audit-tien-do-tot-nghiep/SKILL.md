@@ -5,16 +5,18 @@ description: "Audit tiến độ tốt nghiệp cho sinh viên bằng cách đ�
 
 # Audit tiến độ tốt nghiệp
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Cuối mỗi học kỳ hoặc trước đợt xét tốt nghiệp, khi cần rà soát nhanh sinh viên đã đủ điều kiện
@@ -69,7 +71,7 @@ cố vấn học tập — không phụ thuộc tên đơn vị.
 - → Kết quả bước: Danh sách thiếu + gợi ý học phần bổ sung.
 
 **Bước 6. Xuất báo cáo audit và lập exception list**
-- Làm gì: Gộp kết quả các bước thành báo cáo audit từng sinh viên theo Cấu trúc output chuẩn, ghi rõ `phien_ban_quy_tac` áp dụng và kết luận "đạt/chưa đạt THEO QUY TẮC"; tách các trường hợp đặc biệt (bảo lưu, chuyển ngành, miễn trừ) vào exception list để hội đồng xem xét thủ công.
+- Làm gì: Gộp kết quả các bước thành báo cáo audit từng sinh viên theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md, ghi rõ `phien_ban_quy_tac` áp dụng và kết luận "đạt/chưa đạt THEO QUY TẮC"; tách các trường hợp đặc biệt (bảo lưu, chuyển ngành, miễn trừ) vào exception list để hội đồng xem xét thủ công.
 - Dùng input: `phien_ban_quy_tac` (kết quả các bước 1–5).
 - Vai trò: Chuyên viên Phòng Đào tạo · AI hỗ trợ: xuất báo cáo audit + exception list theo cấu trúc chuẩn để trình hội đồng xét tốt nghiệp · ⏱ ~15–25 phút + ~1–2 giờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: không bao giờ kết luận "đủ điều kiện tốt nghiệp" thay hội đồng — chỉ nêu trạng thái theo quy tắc; exception list ghi rõ lý do cần xem xét thủ công.
@@ -93,22 +95,13 @@ flowchart TD
     H --> HG --> I
 ```
 
-## Đầu ra (Output)
-- Báo cáo audit từng sinh viên: trạng thái (đạt/chưa đạt theo quy tắc), chi tiết thiếu, gợi ý bổ sung.
-- Bảng tổng hợp theo khóa/ngành: tỷ lệ đạt, các khối kiến thức thường thiếu.
-- Exception list: trường hợp cần hội đồng xem xét thủ công.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Báo cáo audit từng sinh viên):
-1. Thông tin sinh viên + ngành + phiên bản quy tắc áp dụng.
-2. Đối chiếu từng khối kiến thức: tín chỉ tích lũy/yêu cầu — trạng thái ĐẠT/CHƯA ĐẠT.
-3. Điều kiện bổ sung: GPA, chứng chỉ, học phí — trạng thái từng điều kiện.
-4. Kết luận theo quy tắc: đạt/chưa đạt THEO QUY TẮC phiên bản X (không thay hội đồng kết luận).
-5. Học phần còn thiếu + gợi ý học phần bổ sung.
-6. Chuyển hội đồng xem xét: có/không + lý do.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Báo cáo audit đầy đủ 6 phần theo Cấu trúc output chuẩn: thông tin SV + ngành + phiên bản quy tắc áp dụng; đối chiếu từng khối; điều kiện bổ sung; kết luận theo quy tắc; học phần thiếu + gợi ý; chuyển hội đồng (có/không + lý do).
+- [ ] Báo cáo audit đầy đủ 6 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: thông tin SV + ngành + phiên bản quy tắc áp dụng; đối chiếu từng khối; điều kiện bổ sung; kết luận theo quy tắc; học phần thiếu + gợi ý; chuyển hội đồng (có/không + lý do).
 - [ ] Phiên bản quy tắc áp dụng được ghi rõ trong báo cáo để truy vết.
 - [ ] Số liệu trong output khớp với bảng điểm Input; tính toán đúng thang quy chế (thang 4 hay thang 10).
 - [ ] Chỉ áp quy tắc tương đương có trong bảng chính thức — không tự suy "môn này giống môn kia"; mọi lần quy đổi có nhật ký truy vết.
@@ -118,45 +111,6 @@ flowchart TD
 - [ ] Đã qua Human gate: chuyên viên Phòng Đào tạo đã kiểm tra báo cáo audit và danh sách ngoại lệ trước khi trình.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `bang_diem` | SV-0847: 38 học phần, 118/130 tín chỉ; GPA 2.87; thiếu chứng chỉ ngoại ngữ |
-| `khung_ctdt` | Ngành Công nghệ thông tin: 130 tín chỉ (Đại cương 32, Cơ sở ngành 40, Chuyên ngành 46, Tự chọn 12); GPA ≥ 2.0; chứng chỉ ngoại ngữ B1 |
-| `dieu_kien_bo_sung` | Chứng chỉ ngoại ngữ B1; không nợ học phí |
-| `quy_tac_tuong_duong` | HP "Lập trình Python" tương đương "Nhập môn lập trình" (cũ) |
-| `phien_ban_quy_tac` | Quy tắc audit v2026.1 |
-
-### Output mẫu
-
-```
-BÁO CÁO AUDIT TIẾN ĐỘ TỐT NGHIỆP (giả lập)
-1. Thông tin: Sinh viên SV-0847 | Ngành: Công nghệ thông tin | Quy tắc áp dụng: v2026.1
-
-2. Đối chiếu từng khối kiến thức:
-   - Khối Đại cương: 32/32 tín chỉ — ĐẠT
-   - Khối Cơ sở ngành: 40/40 tín chỉ — ĐẠT
-   - Khối Chuyên ngành: 46/46 tín chỉ — ĐẠT
-   - Khối Tự chọn: 0/12 tín chỉ — CHƯA ĐẠT (thiếu 12 tín chỉ)
-
-3. Điều kiện bổ sung:
-   - GPA tích lũy: 2.87 (yêu cầu ≥ 2.0) — ĐẠT
-   - Chứng chỉ ngoại ngữ B1: CHƯA CÓ — CHƯA ĐẠT
-   - Học phí: không nợ — ĐẠT
-
-4. KẾT LUẬN THEO QUY TẮC v2026.1: CHƯA ĐẠT (chưa đủ điều kiện tốt nghiệp theo quy tắc).
-
-5. Học phần còn thiếu + gợi ý: thiếu 12 tín chỉ tự chọn — đăng ký 4 học phần tự chọn
-   trong học kỳ tới; hoàn thành chứng chỉ ngoại ngữ B1.
-
-6. Chuyển hội đồng xem xét: KHÔNG (không thuộc trường hợp ngoại lệ).
-```
 
 ## Human gate (người kiểm duyệt)
 - **Chuyên viên Phòng Đào tạo** kiểm tra báo cáo audit và danh sách ngoại lệ trước khi trình.
@@ -175,10 +129,10 @@ BÁO CÁO AUDIT TIẾN ĐỘ TỐT NGHIỆP (giả lập)
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/audit-tien-do-tot-nghiep`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/audit-tien-do-tot-nghiep`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

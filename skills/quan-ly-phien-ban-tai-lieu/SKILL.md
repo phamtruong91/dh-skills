@@ -5,16 +5,18 @@ description: "Kiểm kê thư mục tài liệu ở chế độ CHỈ ĐỌC: l�
 
 # Quản lý file & phiên bản (chỉ đọc)
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi thư mục tài liệu của đơn vị trở nên lộn xộn (nhiều bản "final", "final2", "mới nhất"...),
@@ -68,7 +70,7 @@ AI chỉ phân tích và đề xuất, con người thực hiện thay đổi th
 - → Kết quả bước: Missing list theo nhóm tài liệu.
 
 **Bước 6. Xuất báo cáo và hướng dẫn thực hiện thủ công**
-- Làm gì: Gộp inventory, version map, naming plan, taxonomy, missing list thành báo cáo quản lý phiên bản theo Cấu trúc output chuẩn; viết checklist hướng dẫn từng bước để chủ sở hữu tự thực hiện (xác nhận bản mới nhất → đổi tên → sắp xếp thư mục), ghi rõ AI không thực hiện bất kỳ thao tác nào trên file.
+- Làm gì: Gộp inventory, version map, naming plan, taxonomy, missing list thành báo cáo quản lý phiên bản theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md; viết checklist hướng dẫn từng bước để chủ sở hữu tự thực hiện (xác nhận bản mới nhất → đổi tên → sắp xếp thư mục), ghi rõ AI không thực hiện bất kỳ thao tác nào trên file.
 - Dùng input: (kết quả các bước 1–5).
 - Vai trò: Chủ sở hữu thư mục · AI hỗ trợ: xuất báo cáo quản lý phiên bản + checklist hướng dẫn thực hiện thủ công chi tiết · ⏱ ~15–25 phút (ước tính)
 - Lưu ý nghiệp vụ: hướng dẫn phải chi tiết đến mức người không rành công nghệ cũng làm được; nhấn mạnh sao lưu (backup) trước khi đổi tên/di chuyển; chế độ CHỈ ĐỌC là tuyệt đối.
@@ -88,24 +90,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> G --> HG --> H
 ```
 
-## Đầu ra (Output)
-- File index (danh mục toàn bộ file).
-- Version map (nhóm phiên bản, bản mới nhất dự kiến).
-- Naming plan (quy tắc đặt tên + taxonomy đề xuất).
-- Missing list (tài liệu thiếu).
-- Hướng dẫn thực hiện thủ công.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Báo cáo quản lý phiên bản):
-1. Thông tin đợt kiểm kê: phạm vi thư mục, thời gian kiểm kê, tổng số file.
-2. File index: danh mục toàn bộ file (tên, thư mục, ngày sửa, dung lượng, loại tài liệu).
-3. Version map: các nhóm phiên bản, bản mới nhất dự kiến của từng nhóm + mức tin cậy.
-4. Naming plan + taxonomy đề xuất: mẫu tên file chuẩn, bảng chuyển đổi tên cũ → tên mới, sơ đồ thư mục đề xuất.
-5. Missing list: tài liệu còn thiếu theo nhóm, ghi rõ thiếu số/ký hiệu nào.
-6. Hướng dẫn thực hiện thủ công: checklist từng bước cho chủ sở hữu (xác nhận bản mới nhất → đổi tên → sắp xếp thư mục).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Báo cáo đầy đủ 6 phần theo Cấu trúc output chuẩn: thông tin đợt kiểm kê (phạm vi, thời gian, tổng số file); file index; version map + mức tin cậy; naming plan + taxonomy đề xuất; missing list; hướng dẫn thực hiện thủ công.
+- [ ] Báo cáo đầy đủ 6 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: thông tin đợt kiểm kê (phạm vi, thời gian, tổng số file); file index; version map + mức tin cậy; naming plan + taxonomy đề xuất; missing list; hướng dẫn thực hiện thủ công.
 - [ ] Version map nhóm đúng các phiên bản của cùng một tài liệu; bản mới nhất ghi "dự kiến, cần chủ sở hữu xác nhận", kèm mức tin cậy.
 - [ ] Naming plan có mẫu tên file chuẩn (ngày ở đầu, không dấu, không khoảng trắng) + bảng chuyển đổi tên cũ → tên mới cho từng nhóm.
 - [ ] Missing list chỉ liệt kê khi có căn cứ (danh mục bắt buộc trong chính sách lưu trữ); phân biệt "thiếu thật" với "đặt tên khác nên chưa nhận ra".
@@ -114,36 +105,6 @@ flowchart TD
 - [ ] Đã qua Human gate: chủ sở hữu thư mục đã duyệt toàn bộ version map và naming plan trước khi làm bất kỳ thay đổi nào.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-> Ví dụ: thư mục văn bản của một phòng ban — áp dụng tương tự cho mọi đơn vị.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `mo_ta_thu_muc` | Thư mục "VanBan2026" của Phòng Đào tạo: 48 file docx, không có thư mục con |
-| `danh_sach_file` | `TB_nghi Tet_final.docx` (05/01/2026), `TB_nghi Tet_final_sua.docx` (06/01/2026), `TB_nghi Tet_chot.docx` (07/01/2026), `QD_12.docx`... |
-| `quy_tac_hien_tai` | Không có quy tắc chính thức |
-
-### Output mẫu
-
-**1. Thông tin đợt kiểm kê:** Thư mục "VanBan2026" của Phòng Đào tạo (giả lập) — kiểm kê ngày 09/10/2026 — tổng 48 file docx, không có thư mục con.
-
-**2. File index (trích):** `TB_nghi Tet_final.docx` (05/01/2026) | `TB_nghi Tet_final_sua.docx` (06/01/2026) | `TB_nghi Tet_chot.docx` (07/01/2026) | `QD_12.docx`...
-
-**3. Version map (trích):**
-| Nhóm | Các phiên bản | Bản mới nhất (dự kiến) |
-|---|---|---|
-| Thông báo nghỉ Tết | `TB_nghi Tet_final` (05/01) → `..._sua` (06/01) → `..._chot` (07/01) | `TB_nghi Tet_chot.docx` (07/01/2026) — cần chủ sở hữu xác nhận |
-
-**4. Naming plan + taxonomy đề xuất:** mẫu tên `20260107_TB_03-TB-ĐHA-ĐT_Nghi-Tet_v1.docx`; bảng chuyển đổi tên cũ → tên mới cho từng nhóm; taxonomy: `/VanBan2026/DaBanHanh/`, `/VanBan2026/DuThao/`, `/VanBan2026/ThamKhao/`.
-
-**5. Missing list (trích):** thiếu văn bản số 04-TB-ĐHA-ĐT (có trong sổ văn bản đi nhưng không thấy file).
-
-**6. Hướng dẫn thủ công:** B1. Chủ sở hữu xác nhận bản mới nhất từng nhóm. B2. Đổi tên theo mẫu... (AI không thực hiện — chế độ chỉ đọc).
 
 ## Human gate (người kiểm duyệt)
 1. **Chủ sở hữu thư mục** (trưởng đơn vị hoặc người được phân công): duyệt toàn bộ version map,
@@ -166,10 +127,10 @@ flowchart TD
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quan-ly-phien-ban-tai-lieu`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quan-ly-phien-ban-tai-lieu`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

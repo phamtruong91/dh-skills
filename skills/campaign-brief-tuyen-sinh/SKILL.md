@@ -5,16 +5,18 @@ description: "Soạn brief chiến dịch tuyển sinh: mục tiêu, đối tư�
 
 # Campaign brief tuyển sinh
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Trước mỗi đợt chiến dịch tuyển sinh (mở đợt, cao điểm, xét tuyển bổ sung...), khi cần một bản
@@ -99,23 +101,13 @@ flowchart TD
     HG --> I[["Campaign brief + bảng theo dõi KPI"]]
 ```
 
-## Đầu ra (Output)
-- Campaign brief hoàn chỉnh (markdown): mục tiêu, đối tượng, thông điệp, kênh, ngân sách, timeline, KPI.
-- Bảng theo dõi KPI hằng tuần (mẫu).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (khung mẫu cố định của sản phẩm chính — Campaign brief):
-1. Tiêu đề (tên chiến dịch + thời gian chạy).
-2. Mục tiêu SMART (con số + thời hạn đo).
-3. Đối tượng (bảng chân dung: nhóm – đặc điểm – kênh hay dùng – mối quan tâm).
-4. Thông điệp (1 chính + 2–3 phụ, kèm bằng chứng/số liệu).
-5. Kênh và ngân sách (bảng: kênh – số tiền – vai trò trong phễu).
-6. Timeline (4 pha: chuẩn bị – chạy – cao điểm – tổng kết; mốc – công việc – phụ trách – bàn giao).
-7. KPI (KPI tổng, KPI từng kênh, tần suất báo cáo).
-- Phụ lục: Mẫu bảng theo dõi KPI hằng tuần.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề (tên chiến dịch + thời gian chạy).; Mục tiêu SMART (con số + thời hạn đo).; Đối tượng (bảng chân dung; Thông điệp (1 chính + 2; Kênh và ngân sách (bảng; Timeline (4 pha; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Campaign brief hoàn chỉnh (markdown): mục tiêu, đối tượng, thông điệp, kênh, ngân sách,…
 - [ ] Có đầy đủ sản phẩm: Bảng theo dõi KPI hằng tuần (mẫu)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -127,45 +119,6 @@ flowchart TD
 - [ ] Chân dung càng cụ thể thì chọn kênh và thông điệp càng trúng
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_chien_dich` | Cao điểm tư vấn tuyển sinh đợt 1/2027 |
-| `thoi_gian` | 01/03/2027 – 30/06/2027 |
-| `muc_tieu` | 3.000 hồ sơ đăng ký (giả lập) |
-| `doi_tuong` | Học sinh lớp 12 khu vực phía Bắc, phụ huynh |
-| `thong_diep` | Chính: "A — Nơi tri thức gặp tương lai"; Phụ: học bổng, việc làm sau tốt nghiệp |
-| `kenh` | Fanpage ads, TikTok, ngày hội tư vấn, website |
-| `ngan_sach` | 350 triệu đồng (giả lập) |
-| `kpi` | 5.000 lead; tỉ lệ lead→hồ sơ 60% |
-
-### Output mẫu
-
-```
-CAMPAIGN BRIEF — Cao điểm tư vấn tuyển sinh đợt 1/2027
-Thời gian chạy: 01/03/2027 – 30/06/2027
-Trường Đại học A (dữ liệu giả lập)
-
-1. MỤC TIÊU: 3.000 hồ sơ đăng ký (giả lập).
-2. ĐỐI TƯỢNG: Học sinh lớp 12 khu vực phía Bắc và phụ huynh.
-3. THÔNG ĐIỆP:
-   - Chính: "A — Nơi tri thức gặp tương lai"
-   - Phụ: học bổng đa dạng; 95% SV có việc làm sau 6 tháng (giả lập).
-4. KÊNH & NGÂN SÁCH (giả lập):
-   - Fanpage ads: 150 trđ | TikTok: 80 trđ | Ngày hội tư vấn: 70 trđ | Website/SEO: 50 trđ
-5. TIMELINE:
-   - T3: chuẩn bị nội dung, landing page | T4–T5: chạy cao điểm | T6: đẩy hồ sơ + tổng kết
-6. KPI: 5.000 lead; tỉ lệ lead → hồ sơ ≥ 60%; báo cáo hằng tuần cho Trưởng phòng.
-
-PHỤ LỤC: Mẫu bảng theo dõi KPI hằng tuần (Tuần | KPI kế hoạch | Thực tế |
-Chênh lệch | Hành động) — ngưỡng cảnh báo: đạt < 70% kế hoạch tuần → họp rà soát.
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng phòng duyệt brief trước khi trình.
@@ -185,10 +138,10 @@ Chênh lệch | Hành động) — ngưỡng cảnh báo: đạt < 70% kế ho�
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/campaign-brief-tuyen-sinh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/campaign-brief-tuyen-sinh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

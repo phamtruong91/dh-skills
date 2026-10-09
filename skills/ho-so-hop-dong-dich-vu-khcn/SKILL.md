@@ -5,16 +5,18 @@ description: "Soạn trọn bộ hồ sơ hợp đồng dịch vụ khoa học c
 
 # Hồ sơ hợp đồng dịch vụ KHCN
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi trung tâm/viện/phòng KHCN của trường cung cấp dịch vụ cho tổ chức, doanh nghiệp bên ngoài:
@@ -120,24 +122,13 @@ flowchart TD
     K --> L[/Hồ sơ hợp đồng và biên bản hoàn chỉnh/]
 ```
 
-## Đầu ra (Output)
-- Báo giá dịch vụ.
-- Hợp đồng dịch vụ KHCN hoàn chỉnh.
-- Biên bản nghiệm thu dịch vụ + biên bản thanh lý hợp đồng.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (bộ hồ sơ hợp đồng dịch vụ KHCN — các phần theo đúng thứ tự):
-1. Bảng báo giá dịch vụ: hạng mục công việc, đơn vị tính, số lượng, đơn giá, thành tiền,
-   tổng giá trị (ghi rõ đã/chưa VAT), xác nhận của khách hàng.
-2. Hợp đồng dịch vụ KHCN: đầy đủ điều khoản (đối tượng, phạm vi, sản phẩm bàn giao, giá
-   trị, tiến độ, thanh toán, nghiệm thu, bảo mật, phạt vi phạm, chấm dứt), hai bên ký,
-   đóng dấu.
-3. Biên bản bàn giao từng phần (nếu hợp đồng chia nhiều đợt).
-4. Biên bản nghiệm thu dịch vụ: đối chiếu từng hạng mục đạt/không đạt, hai bên ký.
-5. Biên bản thanh lý hợp đồng + hồ sơ quyết toán (đối chiếu giá trị, hóa đơn).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 5 phần theo "Cấu trúc output chuẩn": bảng báo giá, hợp đồng, biên bản bàn giao từng phần (nếu có), biên bản nghiệm thu, biên bản thanh lý + quyết toán.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu (giá trị, tiến độ) khớp với Input (báo giá, phạm vi công việc) đã cho.
 - [ ] Không bịa đặt chữ ký, biên bản nghiệm thu hay xác nhận thanh toán không có thật.
 - [ ] Báo giá chốt bằng văn bản của khách hàng; ghi rõ đã/chưa bao gồm VAT.
@@ -148,85 +139,6 @@ flowchart TD
 - [ ] Đã qua Human gate: phòng KHCN thẩm định pháp lý, lãnh đạo trường ký hợp đồng, hội đồng hai bên ký biên bản nghiệm thu.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, tổ chức, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_dich_vu` | Phân tích chất lượng nước thải công nghiệp |
-| `khach_hang` | Công ty TNHH B Xanh (giả lập) — ĐC: KCN A; ĐD: Ông Đặng Văn C |
-| `don_vi_thuc_hien` | Trung tâm Phân tích – Môi trường, Trường Đại học A |
-| `pham_vi_cong_viec` | Phân tích 12 chỉ tiêu/mẫu × 20 mẫu; báo cáo kết quả có đóng dấu |
-| `don_gia` | 1.200.000 đ/mẫu × 20 mẫu = 24.000.000 đ (chưa VAT) |
-| `thoi_gian` | 15 ngày kể từ ngày nhận mẫu và tạm ứng |
-
-### Output mẫu
-
-**1. BẢNG BÁO GIÁ** (đã được khách hàng xác nhận)
-
-```
-BÁO GIÁ DỊCH VỤ PHÂN TÍCH CHẤT LƯỢNG NƯỚC THẢI CÔNG NGHIỆP
-Đơn vị báo giá: Trung tâm Phân tích – Môi trường, Trường Đại học A
-
-| Hạng mục | Đơn vị tính | Số lượng | Đơn giá (đ) | Thành tiền (đ) |
-|---|---|---|---|---|
-| Phân tích 12 chỉ tiêu/mẫu nước thải | mẫu | 20 | 1.200.000 | 24.000.000 |
-| TỔNG CỘNG (chưa VAT) | | | | 24.000.000 |
-
-Khách hàng xác nhận: Công ty TNHH B Xanh (giả lập) — Ông Đặng Văn C [CHỜ KÝ]
-```
-
-**2. HỢP ĐỒNG DỊCH VỤ KHCN** (trích các điều khoản chính)
-
-```
-CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-Độc lập – Tự do – Hạnh phúc
---------------
-HỢP ĐỒNG DỊCH VỤ KHOA HỌC CÔNG NGHỆ
-Số: 12/HĐDV-ĐHA/2026
-
-Hôm nay, ngày 09 tháng 10 năm 2026, tại Trường Đại học A, chúng tôi gồm:
-
-BÊN A (Bên cung cấp dịch vụ): TRƯỜNG ĐẠI HỌC A
-Đại diện: Trung tâm Phân tích – Môi trường — Giám đốc: TS. Đỗ Thị A
-BÊN B (Bên thuê dịch vụ): CÔNG TY TNHH SAO KHUÊ XANH (giả lập)
-Đại diện: Ông Đặng Văn C — Chức vụ: Giám đốc
-
-Điều 1. Đối tượng và phạm vi: Bên A thực hiện phân tích 12 chỉ tiêu/mẫu cho
-20 mẫu nước thải do Bên B cung cấp; bàn giao báo cáo kết quả có đóng dấu.
-Điều 2. Giá trị hợp đồng: 24.000.000 đồng (chưa bao gồm VAT).
-Điều 3. Tiến độ: 15 ngày làm việc kể từ ngày Bên A nhận đủ mẫu và tạm ứng.
-Điều 4. Thanh toán: tạm ứng 30% sau khi ký; 70% còn lại sau nghiệm thu 07 ngày.
-Điều 5. Nghiệm thu: hội đồng 2 bên nghiệm thu sản phẩm theo Điều 1; lập biên bản.
-Điều 6. Bảo mật: Bên A cam kết bảo mật số liệu mẫu phân tích của Bên B.
-Điều 7. Phạt vi phạm: chậm tiến độ quá 05 ngày phạt 0,5%/ngày trên giá trị chậm.
-
-ĐẠI DIỆN BÊN A                          ĐẠI DIỆN BÊN B
-(đã ký, đóng dấu)                        (đã ký, đóng dấu)
-```
-
-**3. BIÊN BẢN NGHIỆM THU DỊCH VỤ** (trích)
-
-```
-BIÊN BẢN NGHIỆM THU DỊCH VỤ — Hợp đồng số 12/HĐDV-ĐHA/2026
-Ngày nghiệm thu: 24/10/2026. Hội đồng: đại diện Bên A (TS. Đỗ Thị A)
-và Bên B (Ông Đặng Văn C).
-Kết quả: 20/20 mẫu đã phân tích đủ 12 chỉ tiêu; báo cáo kết quả có đóng dấu
-đã bàn giao đủ. Kết luận: ĐẠT — đủ điều kiện thanh toán 70% còn lại.
-```
-
-**4. BIÊN BẢN THANH LÝ HỢP ĐỒNG** (trích)
-
-```
-BIÊN BẢN THANH LÝ HỢP ĐỒNG số 12/HĐDV-ĐHA/2026
-- Giá trị hợp đồng: 24.000.000 đồng (chưa VAT); đã tạm ứng 7.200.000 đồng.
-- Bên B đã thanh toán nốt 16.800.000 đồng ngày 31/10/2026 (hóa đơn số 0001234).
-- Hai bên thống nhất thanh lý hợp đồng, không còn nghĩa vụ tồn đọng.
-```
 
 ## Human gate
 - **Lãnh đạo đơn vị thực hiện** thẩm định phạm vi công việc và báo giá trước khi trình.
@@ -245,10 +157,10 @@ BIÊN BẢN THANH LÝ HỢP ĐỒNG số 12/HĐDV-ĐHA/2026
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-hop-dong-dich-vu-khcn`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-hop-dong-dich-vu-khcn`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

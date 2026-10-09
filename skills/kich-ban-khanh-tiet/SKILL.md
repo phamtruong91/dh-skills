@@ -5,16 +5,18 @@ description: "Xây dựng kịch bản lễ tân, khánh tiết cho sự kiện 
 
 # Xây dựng kịch bản lễ tân, khánh tiết
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi tổ chức các sự kiện cần lễ tân, khánh tiết: lễ khai giảng / bế giảng, lễ kỷ niệm,
@@ -90,92 +92,23 @@ flowchart TD
     F --> OUT[["Kịch bản khánh tiết hoàn thành"]]
 ```
 
-## Đầu ra (Output)
-- Kịch bản chi tiết theo timeline (giờ – nội dung – người thực hiện).
-- Bảng phân công hậu cần.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kịch bản khánh tiết, theo đúng thứ tự:
-1. Tiêu đề: tên kịch bản + tên sự kiện + đơn vị tổ chức;
-2. Bảng timeline chương trình: Giờ | Nội dung | Người thực hiện (theo đúng trình tự: đón tiếp – ổn định – khai mạc – nội dung chính – nghi thức đặc biệt – bế mạc);
-3. Kịch bản lời dẫn MC theo từng mục timeline (tuyên bố lý do, giới thiệu đại biểu theo thứ tự chức vụ, lời dẫn nghi thức, lời bế mạc);
-4. Bảng phân công hậu cần: hạng mục – người/tổ phụ trách – thời hạn chuẩn bị;
-5. Lưu ý điều hành: kiểm tra kỹ thuật trước giờ G, sơ đồ chỗ ngồi, xử lý tình huống phát sinh.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tiêu đề: tên kịch bản + tên sự kiện + đơn vị tổ chức; Bảng timeline chương trình: Giờ | Nội dung | Người thực hiện (theo…; Kịch bản lời dẫn MC theo từng mục timeline (tuyên bố lý do, giới th…; Bảng phân công hậu cần: hạng mục – người/tổ phụ trách – thời hạn ch…; Lưu ý điều hành: kiểm tra kỹ thuật trước giờ G, sơ đồ chỗ ngồi, xử…
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Kế hoạch tổ chức sự kiện đã được phê duyệt
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Giờ đón tiếp phải sớm hơn giờ khai mạc đủ để ổn định tổ chức
 - [ ] Họ tên, chức danh đại biểu phải kiểm tra chính xác
 - [ ] Mỗi hạng mục chỉ một đầu mối chịu trách nhiệm, tránh chồng chéo
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_su_kien` | Lễ khai giảng năm học 2026–2027 |
-| `thoi_gian` | 08h00 ngày 05/10/2026 |
-| `dia_diem` | Hội trường A, Trường Đại học A |
-| `dai_bieu` | Lãnh đạo Bộ GD&ĐT; Ban Giám hiệu; 300 CBVC; 800 tân sinh viên |
-| `chuong_trinh` | Văn nghệ; tuyên bố lý do; diễn văn khai giảng; phát biểu lãnh đạo; đánh trống khai giảng; trao học bổng tân SV thủ khoa |
-| `mc` | ThS. Vũ Thị D |
-| `yeu_cau_dac_biet` | Nghi thức đánh trống khai giảng; trao 05 suất học bổng thủ khoa |
-
-### Output mẫu
-
-```
-KỊCH BẢN LỄ TÂN, KHÁNH TIẾT
-Lễ khai giảng năm học 2026–2027 – Trường Đại học A
-(Dữ liệu giả lập)
-
-I. TIMELINE CHƯƠNG TRÌNH
-| Giờ | Nội dung | Thực hiện |
-|-----|----------|-----------|
-| 07h15 | Đón tiếp đại biểu, hướng dẫn ổn định chỗ ngồi | Tổ Lễ tân (06 người) |
-| 08h00 | Tuyên bố lý do, giới thiệu đại biểu | MC: ThS. Vũ Thị D |
-| 08h10 | Văn nghệ chào mừng (02 tiết mục) | CLB Văn nghệ SV |
-| 08h25 | Diễn văn khai giảng năm học mới | PGS.TS. Phạm Văn A – Hiệu trưởng |
-| 08h40 | Phát biểu của lãnh đạo Bộ GD&ĐT | Đại diện Bộ GD&ĐT |
-| 08h55 | Nghi thức đánh trống khai giảng | Hiệu trưởng |
-| 09h05 | Trao 05 suất học bổng tân sinh viên thủ khoa | BGH + Phòng CTSV |
-| 09h20 | Bế mạc, chụp ảnh lưu niệm, tiễn đại biểu | Tổ Lễ tân |
-
-II. LỜI DẪN MC (trích)
-- Khai mạc: "Kính thưa quý vị đại biểu, các thầy cô giáo cùng toàn thể các em
-  tân sinh viên! Hôm nay, trong không khí hân hoan của ngày hội toàn dân đưa
-  trẻ đến trường, Trường Đại học A long trọng tổ chức Lễ khai giảng
-  năm học 2026–2027..."
-- Giới thiệu đại biểu (theo thứ tự chức vụ từ cao xuống thấp): đại diện lãnh
-  đạo Bộ GD&ĐT; Ban Giám hiệu Nhà trường; đại diện các cơ quan, đơn vị...
-- Nghi thức đánh trống: "Xin trân trọng kính mời PGS.TS. Phạm Văn A –
-  Hiệu trưởng Nhà trường lên thực hiện nghi thức đánh trống khai giảng
-  năm học mới!"
-- Bế mạc: "Buổi lễ đến đây kết thúc. Xin trân trọng cảm ơn quý vị đại biểu;
-  kính mời quý vị cùng chụp ảnh lưu niệm."
-
-III. PHÂN CÔNG HẬU CẦN
-- Âm thanh, ánh sáng, màn LED: Tổ Kỹ thuật (Ông Trần Văn Nam) – xong trước 07h00.
-- Backdrop, bandroll, hoa tươi: Tổ Khánh tiết – xong trước 17h00 ngày 04/10.
-- Sơ đồ chỗ ngồi đại biểu: in và đặt trước 01 ngày.
-- Y tế thường trực: Phòng Y tế (01 bác sĩ, 01 điều dưỡng).
-- An ninh, giữ xe: Tổ Bảo vệ.
-- Chụp ảnh, quay phim: Tổ Truyền thông.
-
-IV. LƯU Ý ĐIỀU HÀNH
-- Kiểm tra âm thanh, trình chiếu trước 07h00; chạy thử nghi thức đánh trống.
-- Đại biểu cấp trên ngồi hàng đầu theo sơ đồ đã duyệt.
-- MC giữ nhịp chương trình; mỗi phát biểu không quá 10 phút.
-```
 
 ## Căn cứ & lưu ý
 - Kế hoạch tổ chức sự kiện đã được phê duyệt; phối hợp với đơn vị chủ trì nội dung.
@@ -184,10 +117,10 @@ IV. LƯU Ý ĐIỀU HÀNH
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/kich-ban-khanh-tiet`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/kich-ban-khanh-tiet`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

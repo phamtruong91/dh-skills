@@ -1,20 +1,22 @@
 ---
 name: "ho-so-dang-ky-shtt"
-description: "Soạn hồ sơ đăng ký sáng chế / giải pháp hữu ích tại Cục Sở hữu trí tuệ: tờ khai, bản mô tả, yêu cầu bảo hộ, bản tóm tắt, hình vẽ minh họa; kèm checklist đánh giá tính mới và trình độ sáng tạo. Dùng khi giảng viên, nhóm nghiên cứu muốn bảo hộ kết quả nghiên cứu."
+description: "Soạn hồ sơ đăng ký sáng chế / giải pháp hữu ích tại Cục Sở hữu trí tuệ: tờ khai, bản mô tả, yêu cầu bảo hộ, bản tóm tắt, hình vẽ minh họa; đối chiếu tính mới và trình độ sáng tạo trong quá trình chuẩn bị. Dùng khi giảng viên, nhóm nghiên cứu muốn bảo hộ kết quả nghiên cứu."
 ---
 
 # Hồ sơ đăng ký sáng chế / giải pháp hữu ích
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi giảng viên, nghiên cứu sinh, nhóm nghiên cứu của trường có kết quả nghiên cứu
@@ -112,33 +114,12 @@ flowchart TD
     H --> Z[["Xuất bản hồ sơ hoàn chỉnh"]]
 ```
 
-## Đầu ra (Output)
-- Tờ khai đăng ký sáng chế/giải pháp hữu ích (mẫu điền sẵn).
-- Bản mô tả giải pháp kỹ thuật (đủ 6 phần chuẩn).
-- Yêu cầu bảo hộ (điểm độc lập + điểm phụ thuộc).
-- Bản tóm tắt + danh mục hình vẽ.
-- Checklist hồ sơ + cảnh báo rủi ro về tính mới (nếu có công bố trước).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của bộ hồ sơ đăng ký (4 tài liệu), các phần bắt buộc theo đúng thứ tự xuất hiện:
-- Tài liệu 1 – Tờ khai đăng ký:
-  1. Tiêu đề "TỜ KHAI ĐĂNG KÝ SÁNG CHẾ" hoặc "TỜ KHAI ĐĂNG KÝ GIẢI PHÁP HỮU ÍCH"
-  2. Thông tin chủ đơn (tên tổ chức, địa chỉ)
-  3. Thông tin tác giả (họ tên, địa chỉ)
-  4. Tên giải pháp + loại đơn đăng ký
-  5. Danh mục tài liệu kèm theo
-  6. Kê khai phí, lệ phí + chữ ký chủ đơn (ký, đóng dấu nếu là tổ chức)
-- Tài liệu 2 – Bản mô tả (đủ 6 phần theo đúng thứ tự):
-  1. Tên giải pháp
-  2. Lĩnh vực kỹ thuật
-  3. Tình trạng kỹ thuật đã biết
-  4. Bản chất kỹ thuật (nêu rõ điểm mới so với kỹ thuật đã biết)
-  5. Ví dụ thực hiện tốt nhất
-  6. Hiệu quả đạt được
-- Tài liệu 3 – Yêu cầu bảo hộ: các điểm yêu cầu đánh số (01 điểm độc lập + các điểm phụ thuộc)
-- Tài liệu 4 – Bản tóm tắt (không quá 150 từ) + danh mục hình vẽ (đánh số hình, chú thích chi tiết, ký hiệu thống nhất với bản mô tả)
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
-- [ ] Đủ 4 tài liệu theo "Cấu trúc output chuẩn": tờ khai, bản mô tả, yêu cầu bảo hộ, tóm tắt + danh mục hình vẽ.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung các tài liệu khớp với Input (tên giải pháp, tác giả, chủ đơn, số liệu kỹ thuật).
 - [ ] Không bịa đặt số liệu, thông số kỹ thuật, minh chứng, trích dẫn.
 - [ ] Bản mô tả đủ 6 phần theo đúng thứ tự chuẩn; bản tóm tắt không quá 150 từ.
@@ -149,85 +130,6 @@ flowchart TD
 - [ ] Đã rà soát tính mới: cảnh báo công bố trước ngày nộp đơn (nếu có) đã được ghi rõ.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, giải pháp, số liệu dưới đây đều là **giả lập**,
-> không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_don` | Giải pháp hữu ích |
-| `ten_giai_phap` | Thiết bị sấy nông sản bằng năng lượng mặt trời kết hợp đối lưu cưỡng bức |
-| `tac_gia` | PGS.TS. Trần Văn B; ThS. Đỗ Thị D |
-| `chu_don` | Trường Đại học A, số 123 đường B, thành phố C |
-| `linh_vuc_ky_thuat` | Thiết bị sấy nông sản, năng lượng tái tạo |
-| `tinh_trang_ky_thuat` | Các thiết bị sấy năng lượng mặt trời hiện có phụ thuộc hoàn toàn vào nắng, thời gian sấy kéo dài 2–3 ngày, chất lượng không đồng đều khi trời âm u |
-| `ban_chat_giai_phap` | Bổ sung quạt đối lưu cưỡng bức dùng điện mặt trời và van điều tiết ẩm tự động; điểm mới: cụm van điều tiết độ ẩm hoạt động độc lập với cường độ nắng |
-| `hieu_qua` | Rút ngắn thời gian sấy còn 8–10 giờ, độ ẩm sản phẩm đồng đều ±2%, tiết kiệm 40% diện tích phơi so với phơi nắng truyền thống |
-| `vi_du_thuc_hien` | Buồng sấy 2m×1,5m×1,8m, 4 khay inox, quạt 12V–30W, tấm pin 150W, van điều tiết ẩm theo ngưỡng 65% |
-| `hinh_ve` | Hình 1: sơ đồ tổng thể thiết bị; Hình 2: cụm van điều tiết ẩm; Hình 3: sơ đồ luồng khí |
-| `cong_bo_truoc` | Chưa công bố ở bất kỳ hình thức nào |
-
-### Output mẫu
-
-```
-TỜ KHAI ĐĂNG KÝ GIẢI PHÁP HỮU ÍCH
-Chủ đơn: Trường Đại học A
-Địa chỉ: Số 123 đường B, thành phố C
-Tác giả: PGS.TS. Trần Văn B; ThS. Đỗ Thị D
-Tên giải pháp: Thiết bị sấy nông sản bằng năng lượng mặt trời
-kết hợp đối lưu cưỡng bức
-Tài liệu kèm theo: Bản mô tả (05 trang); Yêu cầu bảo hộ (02 trang);
-Bản tóm tắt; Hình vẽ (03 hình); Chứng từ nộp phí, lệ phí.
-
-BẢN MÔ TẢ
-1. Tên giải pháp: Thiết bị sấy nông sản bằng năng lượng mặt trời
-kết hợp đối lưu cưỡng bức.
-2. Lĩnh vực kỹ thuật: sáng chế đề cập đến thiết bị sấy nông sản sử
-dụng năng lượng tái tạo.
-3. Tình trạng kỹ thuật: các thiết bị sấy năng lượng mặt trời hiện có
-phụ thuộc hoàn toàn vào nắng; thời gian sấy kéo dài 2–3 ngày; chất lượng
-không đồng đều khi trời âm u.
-4. Bản chất kỹ thuật: giải pháp bổ sung quạt đối lưu cưỡng bức dùng điện
-mặt trời và van điều tiết ẩm tự động. Điểm mới: cụm van điều tiết độ ẩm
-hoạt động độc lập với cường độ nắng, duy trì độ ẩm buồng sấy dưới ngưỡng
-65% trong mọi điều kiện thời tiết.
-5. Ví dụ thực hiện tốt nhất: buồng sấy 2m×1,5m×1,8m, 4 khay inox, quạt
-12V–30W, tấm pin năng lượng mặt trời 150W, van điều tiết ẩm theo ngưỡng 65%.
-6. Hiệu quả: rút ngắn thời gian sấy còn 8–10 giờ; độ ẩm sản phẩm đồng đều
-±2%; tiết kiệm 40% diện tích so với phơi nắng truyền thống.
-
-YÊU CẦU BẢO HỘ
-1. Thiết bị sấy nông sản bằng năng lượng mặt trời kết hợp đối lưu cưỡng
-bức, bao gồm buồng sấy, quạt đối lưu dùng điện mặt trời và cụm van điều
-tiết ẩm tự động, trong đó cụm van hoạt động độc lập với cường độ nắng.
-2. Thiết bị theo điểm 1, trong đó van điều tiết duy trì độ ẩm buồng sấy
-dưới ngưỡng 65%.
-
-BẢN TÓM TẮT (112 từ)
-Thiết bị sấy nông sản bằng năng lượng mặt trời kết hợp đối lưu cưỡng bức
-gồm buồng sấy, quạt đối lưu dùng điện mặt trời và cụm van điều tiết ẩm tự
-động hoạt động độc lập với cường độ nắng. Thiết bị rút ngắn thời gian sấy
-còn 8–10 giờ, độ ẩm sản phẩm đồng đều ±2%, tiết kiệm 40% diện tích so với
-phơi nắng truyền thống.
-
-DANH MỤC HÌNH VẼ
-- Hình 1: Sơ đồ tổng thể thiết bị (1-buồng sấy, 2-khay, 3-quạt, 4-tấm pin)
-- Hình 2: Cụm van điều tiết ẩm (5-van, 6-cảm biến ẩm)
-- Hình 3: Sơ đồ luồng khí đối lưu trong buồng sấy
-```
-
-### Checklist hồ sơ (output kèm theo)
-- [x] Tờ khai đăng ký (02 bản, có chữ ký chủ đơn)
-- [x] Bản mô tả (đủ 6 phần chuẩn)
-- [x] Yêu cầu bảo hộ (01 điểm độc lập + 01 điểm phụ thuộc)
-- [x] Bản tóm tắt (112 từ, dưới 150 từ)
-- [x] Hình vẽ (03 hình, ký hiệu thống nhất với bản mô tả)
-- [x] Chứng từ nộp phí, lệ phí
-- [x] Rà soát tính mới: chưa công bố dưới mọi hình thức — ĐẠT
 
 ## Căn cứ & lưu ý
 - Luật Sở hữu trí tuệ 2005 (sửa đổi, bổ sung 2009, 2019, 2022) và Nghị định
@@ -241,10 +143,10 @@ DANH MỤC HÌNH VẼ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-dang-ky-shtt`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-dang-ky-shtt`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

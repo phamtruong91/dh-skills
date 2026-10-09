@@ -5,16 +5,18 @@ description: "Soạn báo cáo tổng kết năm học của khoa/bộ môn trư
 
 # Báo cáo tổng kết năm học của khoa
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi kết thúc năm học, khoa cần tổng hợp toàn bộ hoạt động (đào tạo, NCKH, CTSV,
@@ -122,28 +124,13 @@ flowchart TD
     HG --> H[/"Báo cáo tổng kết năm học của khoa"/]
 ```
 
-## Đầu ra (Output)
-- Báo cáo tổng kết năm học của khoa hoàn chỉnh.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Báo cáo tổng kết năm học của khoa) — các
-phần bắt buộc theo đúng thứ tự:
-1. Tên trường (dòng trên), tên khoa (dòng dưới).
-2. Số ký hiệu văn bản.
-3. Địa danh, ngày tháng năm ban hành.
-4. Tiêu đề: BÁO CÁO / Tổng kết năm học ...
-5. Phần I. KHÁI QUÁT (quy mô đào tạo, đội ngũ đầu năm).
-6. Phần II. CÔNG TÁC ĐÀO TẠO (tuyển sinh, giảng dạy, tốt nghiệp, kiểm định CTĐT).
-7. Phần III. NGHIÊN CỨU KHOA HỌC (đề tài, bài báo, hội thảo, giáo trình).
-8. Phần IV. CÔNG TÁC SINH VIÊN (học bổng, rèn luyện, kỷ luật, việc làm).
-9. Phần V. ĐỘI NGŨ VÀ CƠ SỞ VẬT CHẤT.
-10. Phần VI. ĐÁNH GIÁ CHUNG VÀ PHƯƠNG HƯỚNG (ưu điểm – tồn tại – phương hướng
-    năm học tới).
-11. Nơi nhận – Lưu.
-12. Chữ ký Trưởng khoa (họ tên, học hàm/học vị).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 12 phần của "Cấu trúc output chuẩn": từ tiêu đề hành chính đến chữ ký Trưởng khoa.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu trong văn bản khớp 100% với bảng biểu; tổng các bộ phận khớp với tổng toàn khoa.
 - [ ] Số liệu khớp với số liệu đã báo cáo của các phòng chức năng (Đào tạo, KHCN, CTSV...).
 - [ ] Không bịa đặt số liệu; số liệu thiếu được ghi rõ "chưa có số liệu" thay vì tự điền.
@@ -154,69 +141,6 @@ phần bắt buộc theo đúng thứ tự:
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `khoa` | Khoa Công nghệ thông tin |
-| `nam_hoc` | 2026–2027 |
-| `so_lieu_dao_tao` | 03 ngành; 1.850 SV; tỷ lệ tốt nghiệp đúng hạn 72% |
-| `so_lieu_nckh` | 06 đề tài (02 cấp bộ, 04 cấp trường); 18 bài báo (08 quốc tế); 01 hội thảo cấp trường |
-| `so_lieu_doi_ngu` | 42 GV (12 TS, 28 ThS, 02 cử nhân); tuyển mới 03 TS |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-KHOA CÔNG NGHỆ THÔNG TIN
-      Số: 32/BC-ĐHA-CNTT
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-BÁO CÁO
-Tổng kết năm học 2026–2027
-
-I. KHÁI QUÁT
-Khoa đào tạo 03 ngành (CNTT, Kỹ thuật phần mềm, Trí tuệ nhân tạo) với 1.850 sinh viên;
-đội ngũ 42 giảng viên (12 tiến sĩ, 28 thạc sĩ, 02 cử nhân).
-
-II. CÔNG TÁC ĐÀO TẠO
-- Tuyển sinh: đạt 105% chỉ tiêu (630/600).
-- Tốt nghiệp: 420 SV, tỷ lệ tốt nghiệp đúng hạn 72% (+4% so với năm trước).
-- Hoàn thành báo cáo tự đánh giá CTĐT ngành CNTT; 01 CTĐT được công nhận kiểm định.
-- 100% học phần có đề cương chi tiết; ngân hàng đề thi cập nhật 25% câu hỏi mới.
-
-III. NGHIÊN CỨU KHOA HỌC
-- 06 đề tài (02 cấp bộ, 04 cấp trường), 100% nghiệm thu đạt.
-- 18 bài báo khoa học (08 quốc tế, 10 trong nước).
-- Tổ chức 01 hội thảo khoa học cấp trường với 45 báo cáo.
-- Nghiệm thu 02 giáo trình.
-
-IV. CÔNG TÁC SINH VIÊN
-- 185 SV đạt học bổng khuyến khích học tập; 0 trường hợp kỷ luật từ cảnh cáo trở lên.
-- 81% SV tốt nghiệp có việc làm trong 6 tháng.
-
-V. ĐỘI NGŨ VÀ CƠ SỞ VẬT CHẤT
-- Tuyển mới 03 tiến sĩ; 04 giảng viên đang học nghiên cứu sinh.
-- Đưa vào sử dụng 01 phòng thí nghiệm AI (30 máy trạm).
-
-VI. ĐÁNH GIÁ CHUNG VÀ PHƯƠNG HƯỚNG
-1. Ưu điểm: tuyển sinh vượt chỉ tiêu; NCKH tăng trưởng (bài báo quốc tế +3).
-2. Tồn tại: tỷ lệ giảng viên tiến sĩ mới đạt 28,6%; tỷ lệ tốt nghiệp đúng hạn
-   chưa đạt mục tiêu 75%.
-3. Phương hướng 2027–2028: tuyển thêm 02 TS; tăng cường cố vấn học tập;
-   hoàn thành tự đánh giá CTĐT ngành Kỹ thuật phần mềm.
-
-Nơi nhận:                                        TRƯỞNG KHOA
-- Ban Giám hiệu (báo cáo);                            [CHỜ KÝ]
-- Lưu: VT khoa.
-
-                                              TS. Phạm Văn B
-```
-
 ## Căn cứ & lưu ý
 - Quy chế tổ chức và hoạt động của Trường Đại học A (giả lập).
 - Báo cáo khoa là đầu vào cho báo cáo tổng kết năm học toàn trường và báo cáo 3 công khai.
@@ -225,10 +149,10 @@ Nơi nhận:                                        TRƯỞNG KHOA
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-tong-ket-khoa`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-tong-ket-khoa`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

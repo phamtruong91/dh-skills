@@ -5,16 +5,18 @@ description: "Soạn quyết định cử cán bộ, viên chức, giảng viên
 
 # Quyết định cử cán bộ đi đào tạo / tập huấn
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần cử cán bộ, viên chức, giảng viên đi học: đào tạo sau đại học, bồi dưỡng nghiệp vụ,
@@ -128,105 +130,22 @@ flowchart TD
     HG --> OUT[["Quyết định cử đi học"]]
 ```
 
-## Đầu ra (Output)
-- Quyết định cử cán bộ đi đào tạo / tập huấn hoàn chỉnh.
-- Ghi chú các giấy tờ kèm theo cần chuẩn bị (công văn triệu tập, tờ trình đơn vị...).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** (Quyết định cử cán bộ đi đào tạo / tập huấn — theo thể thức NĐ 30/2020)
-1. Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc lập – Tự do – Hạnh phúc").
-2. Tên cơ quan ban hành (Trường Đại học A).
-3. Số, ký hiệu văn bản.
-4. Địa danh, ngày tháng năm ban hành.
-5. Tên loại văn bản "QUYẾT ĐỊNH" + trích yếu ("Về việc cử cán bộ đi bồi dưỡng, tập huấn").
-6. Chức danh người ký (HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A).
-7. Phần căn cứ: mỗi căn cứ một dòng bắt đầu bằng "Căn cứ" (thành lập trường → quy chế
-trường → kế hoạch bồi dưỡng năm → công văn triệu tập → xét đề nghị của P. TCCB).
-8. Cụm "QUYẾT ĐỊNH:" và các Điều: Điều 1 (cử ai — họ tên, chức vụ, đơn vị — đi học khóa gì,
-đơn vị tổ chức nào, thời gian nào, địa điểm nào); Điều 2 (chế độ được hưởng; kinh phí: số
-tiền bằng số + bằng chữ, nguồn chi); Điều 3 (trách nhiệm thi hành của P. TCCB, P. Tài chính –
-Kế toán, đơn vị quản lý, cá nhân được cử).
-9. Nơi nhận (như Điều 3; lưu VT, TCCB).
-10. Chữ ký (chức danh người ký + họ tên).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc l…; Tên cơ quan ban hành (Trường Đại học A).; Số, ký hiệu văn bản.; Địa danh, ngày tháng năm ban hành.; … (đủ 10 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản).
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Chức danh trong quyết định phải là chức danh hiện tại (kiểm tra quyết
 - [ ] Điều 1 phải đầy đủ 5 yếu tố (ai – học gì – ai tổ chức – khi nào – ở đâu);
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ho_ten` | Đỗ Thị A |
-| `chuc_vu` | Giảng viên |
-| `don_vi` | Khoa Công nghệ thông tin |
-| `khoa_hoc` | Khóa bồi dưỡng "Ứng dụng trí tuệ nhân tạo trong giảng dạy đại học" |
-| `don_vi_to_chuc` | Học viện Công nghệ Bưu chính Viễn thông |
-| `thoi_gian` | Từ ngày 20/10/2026 đến ngày 25/10/2026 |
-| `dia_diem` | thành phố C |
-| `kinh_phi` | 8.500.000 đồng từ nguồn thu sự nghiệp (học phí, công tác phí, lưu trú theo quy định) |
-| `can_cu` | Kế hoạch bồi dưỡng năm 2026 (QĐ 95/QĐ-ĐHA-TCCB); Công văn triệu tập số 210/CV-HV ngày 01/10/2026 |
-| `nguoi_ky` | Hiệu trưởng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                             Độc lập – Tự do – Hạnh phúc
-      Số: 156/QĐ-ĐHA-TCCB
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                            QUYẾT ĐỊNH
-            Về việc cử cán bộ đi bồi dưỡng, tập huấn
-
-                                    HIỆU TRƯỞNG
-                          TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Quyết định số 12/QĐ-BGDĐT ngày 05/01/2020 của Bộ trưởng Bộ Giáo dục và Đào tạo
-về việc thành lập Trường Đại học A;
-Căn cứ Quy chế tổ chức và hoạt động của Trường Đại học A;
-Căn cứ Kế hoạch đào tạo, bồi dưỡng cán bộ, viên chức năm 2026 ban hành kèm theo
-Quyết định số 95/QĐ-ĐHA-TCCB ngày 09/10/2026 của Hiệu trưởng;
-Căn cứ Công văn số 210/CV-HV ngày 01/10/2026 của Học viện Công nghệ Bưu chính
-Viễn thông về việc triệu tập bồi dưỡng;
-Xét đề nghị của Trưởng phòng Tổ chức – Cán bộ,
-
-                                 QUYẾT ĐỊNH:
-
-Điều 1. Cử bà Đỗ Thị A, Giảng viên Khoa Công nghệ thông tin, đi bồi dưỡng
-khóa học "Ứng dụng trí tuệ nhân tạo trong giảng dạy đại học" do Học viện Công nghệ
-Bưu chính Viễn thông tổ chức, từ ngày 20/10/2026 đến ngày 25/10/2026, tại thành phố C.
-
-Điều 2. Bà Đỗ Thị A được hưởng chế độ theo quy định hiện hành. Kinh phí:
-8.500.000 đồng (Tám triệu năm trăm nghìn đồng) chi từ nguồn thu sự nghiệp của
-Nhà trường (học phí, công tác phí, tiền lưu trú).
-
-Điều 3. Trưởng phòng Tổ chức – Cán bộ, Trưởng phòng Tài chính – Kế toán, Trưởng khoa
-Công nghệ thông tin và bà Đỗ Thị A chịu trách nhiệm thi hành Quyết định này./.
-
-Nơi nhận:                                                      HIỆU TRƯỞNG
-- Như Điều 3;
-- Lưu: VT, TCCB.                                                   [CHỜ KÝ]
-
-                                                              TS. Trần Văn D
-```
-
-### Giấy tờ kèm theo cần chuẩn bị
-- [ ] Công văn triệu tập của đơn vị tổ chức (bản sao)
-- [ ] Tờ trình/đề nghị của đơn vị quản lý cán bộ
-- [ ] Kế hoạch bồi dưỡng năm đã phê duyệt (trích lục phần liên quan)
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản).
@@ -236,10 +155,10 @@ Nơi nhận:                                                      HIỆU TRƯỞ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-cu-di-hoc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-cu-di-hoc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

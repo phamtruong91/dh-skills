@@ -5,16 +5,18 @@ description: "Quy trình biên tập và xuất bản ấn phẩm của trườn
 
 # Biên tập & xuất bản ấn phẩm
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi trường (qua Nhà xuất bản hoặc ban biên tập) xuất bản giáo trình, sách chuyên khảo, kỷ yếu
@@ -94,20 +96,13 @@ flowchart TD
     B -->|Có| C --> D --> E --> HG --> F --> G --> O
 ```
 
-## Đầu ra (Output)
-- Bảng theo dõi tiến độ biên tập – xuất bản ấn phẩm.
-- Quyết định xuất bản + kế hoạch phát hành.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Kế hoạch biên tập – xuất bản ấn phẩm):
-1. Tiêu đề: "KẾ HOẠCH BIÊN TẬP – XUẤT BẢN" + tên ấn phẩm.
-2. Thông tin ấn phẩm: tác giả/chủ biên và đơn vị; bản thảo (số trang, số chương); số lượng in dự kiến; mục đích xuất bản (thương mại / nội bộ / lưu hành nội bộ).
-3. Bảng tiến độ các giai đoạn — các cột: Giai đoạn | Nội dung công việc | Thời hạn | Đơn vị/Người phụ trách — theo đúng thứ tự: thẩm định chuyên môn → biên tập nội dung → biên tập ngôn ngữ – kỹ thuật → chế bản và duyệt bông → thủ tục xuất bản (đăng ký KHXB, lưu chiểu, ISBN) → in → phát hành.
-4. Kinh phí dự kiến: tổng số và cơ cấu theo hạng mục (thẩm định, biên tập, chế bản, in, phát hành).
-5. Phương án phát hành: số lượng phân bổ theo từng kênh (thư viện, nhà sách, lưu trữ nội bộ).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 5 phần theo "Cấu trúc output chuẩn": tiêu đề, thông tin ấn phẩm, bảng tiến độ các giai đoạn, kinh phí dự kiến, phương án phát hành.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: tên ấn phẩm, tác giả, số trang, số lượng in, mục đích xuất bản, thời hạn.
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Bảng tiến độ đúng định dạng (Giai đoạn | Nội dung công việc | Thời hạn | Đơn vị/Người phụ trách) và đúng thứ tự các giai đoạn.
@@ -118,37 +113,6 @@ flowchart TD
 - [ ] Mọi thay đổi nội dung chuyên môn có chữ ký xác nhận của tác giả/chủ biên; chốt nguyên tắc không sửa nội dung sau duyệt bông.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, ấn phẩm, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_an_pham` | Giáo trình Nhập môn Trí tuệ nhân tạo |
-| `tac_gia` | PGS.TS. Trần Văn B (chủ biên), Khoa CNTT — Trường Đại học A |
-| `ban_thao` | 280 trang, 10 chương |
-| `so_luong_in` | 1.000 bản |
-| `muc_dich` | Xuất bản thương mại (phục vụ đào tạo) |
-
-### Output mẫu
-
-```
-KẾ HOẠCH BIÊN TẬP – XUẤT BẢN: Giáo trình Nhập môn Trí tuệ nhân tạo
-Thông tin ấn phẩm: PGS.TS. Trần Văn B (chủ biên), Khoa CNTT — Trường Đại học
-A; bản thảo 280 trang, 10 chương; in 1.000 bản; xuất bản thương mại.
-| Giai đoạn | Nội dung | Thời hạn | Phụ trách |
-|---|---|---|---|
-| 1 | Thẩm định chuyên môn (02 phản biện độc lập) | 30/11/2026 | HĐ thẩm định |
-| 2 | Biên tập nội dung + trao đổi tác giả | 20/12/2026 | Biên tập viên |
-| 3 | Chế bản, thiết kế bìa; tác giả duyệt bông | 15/01/2027 | Phòng chế bản |
-| 4 | Đăng ký KHXB, nộp lưu chiểu, nhận ISBN | 30/01/2027 | Phòng hành chính XB |
-| 5 | In 1.000 bản, kiểm tra chất lượng | 20/02/2027 | Nhà in (đấu thầu) |
-| 6 | Phát hành: thư viện (200), nhà sách (700), lưu (100) | 01/03/2027 | Phòng phát hành |
-Kinh phí dự kiến: 180 triệu đồng (giả lập).
-```
 
 ## Human gate
 - **Hội đồng thẩm định** quyết định bản thảo có đủ điều kiện xuất bản.
@@ -165,10 +129,10 @@ Kinh phí dự kiến: 180 triệu đồng (giả lập).
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-tap-xuat-ban-an-pham`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-tap-xuat-ban-an-pham`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

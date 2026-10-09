@@ -5,16 +5,18 @@ description: "Soạn báo cáo tổng kết công tác thư viện trường đ�
 
 # Báo cáo công tác thư viện
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi kết thúc năm học / năm công tác, thư viện cần tổng hợp hoạt động phục vụ
@@ -115,25 +117,13 @@ flowchart TD
     H --> I[/Báo cáo công tác thư viện/]
 ```
 
-## Đầu ra (Output)
-- Báo cáo công tác thư viện hoàn chỉnh.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của báo cáo, các phần theo đúng thứ tự:
-1. Quốc hiệu – tiêu ngữ (căn giữa, phía phải).
-2. Tên đơn vị ban hành + số văn bản (phía trái).
-3. Địa danh, ngày/tháng/năm ban hành (phía phải).
-4. Tên loại văn bản "BÁO CÁO" + trích yếu nội dung (căn giữa).
-5. Kính gửi: đơn vị nhận báo cáo.
-6. Đoạn mở đầu: căn cứ lập báo cáo, phạm vi năm báo cáo, nguồn số liệu.
-7. Nội dung chính theo 5 mục: I. Vốn tài liệu; II. Phục vụ bạn đọc;
-   III. Số hóa và cơ sở dữ liệu; IV. Hỗ trợ đào tạo – NCKH;
-   V. Đánh giá chung và phương hướng (ưu điểm, tồn tại, phương hướng năm tới).
-8. Chữ ký: chức danh + họ tên người ký (kèm "[CHỜ KÝ]" khi là bản mô phỏng).
-9. Nơi nhận + nơi lưu hồ sơ.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 9 phần theo "Cấu trúc output chuẩn": quốc hiệu – tiêu ngữ, tên đơn vị + số văn bản, địa danh ngày ban hành, tên loại văn bản + trích yếu, kính gửi, mở đầu, nội dung 5 mục, chữ ký, nơi nhận + lưu hồ sơ.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu vốn tài liệu, bạn đọc, lượt mượn/truy cập khớp với Input và số liệu hệ thống ILS; phân biệt đúng "đầu sách" và "bản sách".
 - [ ] Không bịa đặt số liệu truy cập CSDL, hoạt động hay minh chứng không có thật; hoạt động không có minh chứng không đưa vào báo cáo kiểm định.
 - [ ] Công thức đối chiếu đúng: đầu sách đầu năm + bổ sung − thanh lý = đầu sách cuối năm; mức tăng/giảm tính so với cùng kỳ.
@@ -145,70 +135,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_bao_cao` | Năm học 2026–2027 |
-| `so_lieu_von_tai_lieu` | 85.000 đầu sách (tăng 4.200); 12 CSDL điện tử; 3.500 tài liệu số hóa (tăng 500) |
-| `so_lieu_phuc_vu` | 9.800 bạn đọc; 62.000 lượt mượn; 145.000 lượt truy cập CSDL |
-| `hoat_dong_noi_bat` | 08 lớp tập huấn kỹ năng tra cứu; Tuần lễ sách và văn hóa đọc |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-THƯ VIỆN                                        Độc lập – Tự do – Hạnh phúc
-      Số: 15/BC-ĐHA-TV
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-BÁO CÁO
-Công tác thư viện năm học 2026–2027
-
-Kính gửi: Ban Giám hiệu Trường Đại học A
-
-Căn cứ kế hoạch công tác năm học 2026–2027 và số liệu tổng hợp từ hệ thống
-quản lý thư viện, Thư viện báo cáo kết quả công tác thư viện năm học 2026–2027
-như sau:
-
-I. VỐN TÀI LIỆU
-- Tổng vốn tài liệu: 85.000 đầu sách (tăng 4.200 đầu so với năm trước, +5,2%).
-- Cơ sở dữ liệu điện tử: 12 CSDL (10 quốc tế, 02 trong nước).
-- Tài liệu số hóa: 3.500 tài liệu (tăng 500 luận văn, luận án trong năm).
-- 100% học phần có ít nhất 01 giáo trình/tài liệu tham khảo chính.
-
-II. PHỤC VỤ BẠN ĐỌC
-- Số bạn đọc đăng ký: 9.800 (SV: 9.200; GV/CB: 600).
-- Lượt mượn/trả tài liệu in: 62.000 lượt (+8% so với năm trước).
-- Lượt truy cập CSDL điện tử: 145.000 lượt (+22%).
-- Lượt sử dụng không gian học tập: 88.000 lượt.
-
-III. SỐ HÓA VÀ CƠ SỞ DỮ LIỆU
-- Hoàn thành số hóa 500 luận văn, luận án bảo vệ năm 2024–2026.
-- Bổ sung 03 CSDL tạp chí quốc tế mới theo đề xuất của các khoa.
-
-IV. HỖ TRỢ ĐÀO TẠO – NCKH
-- Tổ chức 08 lớp tập huấn kỹ năng tra cứu, trích dẫn tài liệu cho 1.600 SV năm nhất.
-- Phối hợp tổ chức Tuần lễ sách và văn hóa đọc, thu hút 3.000 lượt tham gia.
-
-V. ĐÁNH GIÁ CHUNG VÀ PHƯƠNG HƯỚNG
-1. Ưu điểm: vốn tài liệu tăng trưởng tốt; truy cập số tăng mạnh (+22%).
-2. Tồn tại: diện tích kho sách gần đầy (đạt 90% công suất); một số CSDL ít được
-   khai thác (dưới 1.000 lượt/năm).
-3. Phương hướng 2027–2028: mở rộng kho số; thanh lý tài liệu lạc hậu; tăng cường
-   hướng dẫn khai thác CSDL cho giảng viên.
-
-Nơi nhận:                                        GIÁM ĐỐC THƯ VIỆN
-- Ban Giám hiệu (báo cáo);                            [CHỜ KÝ]
-- Lưu: VT, TV.
-
-                                                  ThS. Hoàng Thị D
-```
-
 ## Căn cứ & lưu ý
 - Quy định về công tác thư viện trường đại học; bộ tiêu chuẩn kiểm định CSGD
   (tiêu chí về thư viện, học liệu).
@@ -218,10 +144,10 @@ Nơi nhận:                                        GIÁM ĐỐC THƯ VIỆN
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-cong-tac-thu-vien`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-cong-tac-thu-vien`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

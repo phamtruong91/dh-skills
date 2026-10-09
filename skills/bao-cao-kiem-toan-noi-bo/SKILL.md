@@ -5,16 +5,18 @@ description: "Soạn báo cáo kết quả kiểm toán nội bộ của trườ
 
 # Soạn báo cáo kiểm toán nội bộ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Sau khi kết thúc mỗi cuộc kiểm toán nội bộ, đoàn kiểm toán cần lập báo cáo kết quả để trình
@@ -102,24 +104,13 @@ flowchart TD
 ```
 ```
 
-## Đầu ra (Output)
-- Báo cáo kiểm toán nội bộ hoàn chỉnh (markdown).
-- Bảng theo dõi thực hiện kiến nghị (kiến nghị – đơn vị – thời hạn – trạng thái).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** Báo cáo kiểm toán nội bộ gồm các phần bắt buộc theo đúng thứ tự sau:
-1. Phần đầu: quốc hiệu – tiêu ngữ, tên ban, số/ký hiệu, địa danh – ngày tháng, tên văn bản "BÁO CÁO" + trích yếu (kết quả kiểm toán ...); dòng "Kính gửi: ...".
-2. Phần mở đầu: căn cứ thực hiện (kế hoạch kiểm toán năm), phạm vi cuộc kiểm toán.
-3. I. Tóm tắt (số phát hiện theo mức rủi ro, thái độ của đơn vị được kiểm toán).
-4. II. Phát hiện chi tiết (từng phát hiện: mức rủi ro, mô tả, bằng chứng, căn cứ vi phạm).
-5. III. Đánh giá rủi ro (đánh giá tổng thể của cuộc kiểm toán).
-6. IV. Kiến nghị (từng kiến nghị: nội dung, đơn vị thực hiện, thời hạn).
-7. V. Theo dõi thực hiện.
-8. Phần cuối: nơi nhận, chữ ký Trưởng đoàn kiểm toán.
-9. Phụ lục: bảng theo dõi thực hiện kiến nghị.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần đầu; Phần mở đầu; I. Tóm tắt (số phát hiện theo mức rủi ro,…; II. Phát hiện chi tiết (từng phát hiện; III. Đánh giá rủi ro (đánh giá tổng thể của…; IV. Kiến nghị (từng kiến nghị; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Báo cáo kiểm toán nội bộ hoàn chỉnh (markdown)
 - [ ] Có đầy đủ sản phẩm: Bảng theo dõi thực hiện kiến nghị (kiến nghị – đơn vị – thời hạn – trạng thái)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -131,79 +122,6 @@ flowchart TD
 - [ ] Tiêu chí xếp mức phải nhất quán trong toàn báo cáo
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_cuoc_kiem_toan` | Kiểm toán thu, quản lý và sử dụng học phí năm 2026 |
-| `don_vi_duoc_kiem_toan` | Phòng Tài chính – Kế toán |
-| `thoi_ky_kiem_toan` | 01/2026–12/2026 |
-| `phat_hien` | 1. 03 khoản thu học phí chưa xuất biên lai kịp thời (bằng chứng: biên bản kiểm tra ngày 10/3/2027) — rủi ro trung bình. 2. Chênh lệch 12,5 triệu đồng giữa sổ thu và chứng từ nộp ngân sách chưa được giải trình (bằng chứng: bảng đối chiếu số 04) — rủi ro cao. |
-| `kien_nghi` | 1. Hoàn thiện xuất biên lai cho 03 khoản thu trong 15 ngày (Phòng TCKT). 2. Đối chiếu, giải trình chênh lệch 12,5 triệu đồng trong 30 ngày (Phòng TCKT). 3. Rà soát quy trình thu – nộp, bổ sung bước đối chiếu hằng tháng (Phòng TCKT, hoàn thành Quý II/2027). |
-| `y_kien_don_vi` | Phòng TCKT thống nhất với phát hiện, cam kết khắc phục đúng hạn. |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-BAN THANH TRA, PHÁP CHẾ                                Độc lập – Tự do – Hạnh phúc
-VÀ KIỂM TOÁN NỘI BỘ
-      Số: 08/BC-ĐHA-TTPCKTNB
-                                                 Thành phố C, ngày 28 tháng 3 năm 2027
-
-                    BÁO CÁO
-     Kết quả kiểm toán thu, quản lý và sử dụng học phí năm 2026
-
-Kính gửi: Hiệu trưởng Trường Đại học A
-
-Thực hiện Kế hoạch kiểm toán nội bộ năm 2027, Đoàn kiểm toán đã tiến hành kiểm toán
-công tác thu, quản lý và sử dụng học phí năm 2026 tại Phòng Tài chính – Kế toán.
-Kết quả như sau:
-
-I. TÓM TẮT
-Đoàn kiểm toán ghi nhận 02 phát hiện, trong đó 01 phát hiện rủi ro cao và
-01 phát hiện rủi ro trung bình. Đơn vị được kiểm toán thống nhất với các phát hiện.
-
-II. PHÁT HIỆN CHI TIẾT
-1. [Rủi ro trung bình] 03 khoản thu học phí chưa được xuất biên lai kịp thời
-   (Bằng chứng: Biên bản kiểm tra ngày 10/3/2027). Căn cứ: Quy trình thu học phí
-   của Trường quy định xuất biên lai trong ngày thu.
-2. [Rủi ro cao] Chênh lệch 12,5 triệu đồng giữa sổ thu và chứng từ nộp ngân sách
-   chưa được giải trình (Bằng chứng: Bảng đối chiếu số 04 ngày 12/3/2027).
-
-III. ĐÁNH GIÁ RỦI RO
-Tồn tại rủi ro thất thoát và sai sót trong khâu đối chiếu thu – nộp; cần chấn chỉnh
-kịp thời để bảo đảm tính đầy đủ, chính xác của công tác thu học phí.
-
-IV. KIẾN NGHỊ
-1. Phòng Tài chính – Kế toán hoàn thiện xuất biên lai cho 03 khoản thu trong
-   15 ngày kể từ ngày nhận báo cáo.
-2. Phòng Tài chính – Kế toán đối chiếu, giải trình chênh lệch 12,5 triệu đồng
-   trong 30 ngày; báo cáo kết quả về Ban.
-3. Phòng Tài chính – Kế toán rà soát, bổ sung bước đối chiếu thu – nộp hằng tháng
-   vào quy trình, hoàn thành trong Quý II/2027.
-
-V. THEO DÕI THỰC HIỆN
-Ban sẽ theo dõi việc thực hiện các kiến nghị và báo cáo Hiệu trưởng khi hết thời hạn.
-
-Nơi nhận:                                          TRƯỞNG ĐOÀN KIỂM TOÁN
-- Hiệu trưởng (để b/c);                                   [CHỜ KÝ]
-- Phòng TCKT (để thực hiện);
-- Lưu: VT, TTPCKTNB.
-                                                     Ông Trần Văn D
-
-Phụ lục: Bảng theo dõi thực hiện kiến nghị
-| STT | Kiến nghị | Đơn vị thực hiện | Thời hạn | Trạng thái |
-|-----|-----------|------------------|----------|------------|
-| 1 | Hoàn thiện biên lai 03 khoản thu | Phòng TCKT | 15 ngày | Chưa thực hiện |
-| 2 | Giải trình chênh lệch 12,5 triệu đồng | Phòng TCKT | 30 ngày | Chưa thực hiện |
-| 3 | Bổ sung bước đối chiếu hằng tháng | Phòng TCKT | Quý II/2027 | Chưa thực hiện |
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng đoàn kiểm toán chịu trách nhiệm về tính chính xác của phát hiện và bằng chứng.
@@ -222,10 +140,10 @@ Phụ lục: Bảng theo dõi thực hiện kiến nghị
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-kiem-toan-noi-bo`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-kiem-toan-noi-bo`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

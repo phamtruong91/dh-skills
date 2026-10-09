@@ -5,16 +5,18 @@ description: "Trợ lý giảng dạy: dự thảo lesson plan, gợi ý học l
 
 # Trợ lý giảng dạy
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi chuẩn bị bài giảng, xây dựng tiêu chí đánh giá (rubric), hoặc soạn nhận xét phản hồi
@@ -102,23 +104,13 @@ flowchart TD
     G --> HG --> H
 ```
 
-## Đầu ra (Output)
-- Lesson plan chi tiết theo khung giờ.
-- Gợi ý học liệu và câu hỏi.
-- Rubric đánh giá.
-- Dự thảo feedback từng bài (nếu có).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Lesson plan):
-1. Tiêu đề buổi học (học phần, chủ đề, thời lượng, đối tượng sinh viên).
-2. Mục tiêu buổi học (gắn với chuẩn đầu ra của đề cương).
-3. Tiến trình theo khung giờ (mở đầu → triển khai → thực hành → tổng kết; mỗi phần:
-   nội dung + thời lượng + câu hỏi gợi mở).
-4. Học liệu đề xuất (ví dụ, case study, tài liệu đọc thêm).
-5. Ghi chú duyệt (trạng thái dự thảo — giảng viên duyệt trước khi dùng).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 5 phần theo Cấu trúc output chuẩn: tiêu đề buổi học, mục tiêu, tiến trình khung giờ, học liệu đề xuất, ghi chú duyệt.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Mục tiêu buổi học gắn đúng chuẩn đầu ra trong `de_cuong_hoc_phan`.
 - [ ] Tiến trình khung giờ khớp tổng `thoi_luong`; nội dung, ví dụ, mức độ phù hợp `trinh_do_sinh_vien`; câu hỏi gợi mở bám mục tiêu buổi học.
 - [ ] Rubric đủ 4 mức độ với mô tả hành vi quan sát được (không từ mơ hồ như "khá tốt"); thang điểm thống nhất quy chế đào tạo.
@@ -128,56 +120,6 @@ flowchart TD
 - [ ] Đã qua Human gate: giảng viên duyệt toàn bộ (lesson plan, học liệu, rubric, feedback) trước khi sử dụng.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên học phần, nội dung dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `de_cuong_hoc_phan` | Nhập môn Trí tuệ nhân tạo — CĐR: giải thích được khái niệm học máy cơ bản |
-| `chu_de_buoi_hoc` | Học máy có giám sát: hồi quy tuyến tính |
-| `trinh_do_sinh_vien` | Năm 2, đã học Toán cao cấp và Lập trình Python |
-| `thoi_luong` | 90 phút |
-
-### Output mẫu
-
-```
-LESSON PLAN (dự thảo — giảng viên duyệt trước khi dùng)
-
-1. Tiêu đề buổi học
-Học phần: Nhập môn Trí tuệ nhân tạo | Chủ đề: Hồi quy tuyến tính
-Thời lượng: 90 phút | Đối tượng: sinh viên năm 2, đã học Toán cao cấp và Python (giả lập)
-
-2. Mục tiêu buổi học
-Giải thích được mô hình hồi quy tuyến tính, hàm mất mát và ý tưởng tối ưu
-(gắn chuẩn đầu ra: giải thích được khái niệm học máy cơ bản).
-
-3. Tiến trình theo khung giờ
-- Mở đầu (10'): đặt vấn đề — dự đoán điểm thi từ số giờ học (ví dụ gần gũi).
-  Câu hỏi gợi mở: "Với dữ liệu điểm thi các khóa trước, làm sao dự đoán điểm của bạn?"
-- Lý thuyết (25'): mô hình y = ax + b; hàm mất mát; ý tưởng tối ưu.
-  Câu hỏi gợi mở: "Đường thẳng nào 'gần' các điểm dữ liệu nhất và đo bằng gì?"
-- Thực hành (40'): SV chạy code Python với bộ dữ liệu giả lập, vẽ đường hồi quy.
-  Câu hỏi gợi mở: "Thay đổi a, b thì đường hồi quy và sai số thay đổi ra sao?"
-- Tổng kết (15'): kiểm tra nhanh 3 câu hỏi; giao bài tập về nhà.
-
-4. Học liệu đề xuất
-- Ví dụ minh họa: bộ dữ liệu điểm thi – giờ học (giả lập, dùng chung cả buổi).
-- Case study: dự đoán giá nhà từ diện tích (mức năm 2).
-- Tài liệu đọc thêm: chương hồi quy trong giáo trình học máy của học phần.
-
-5. Ghi chú duyệt
-DỰ THẢO — giảng viên duyệt nội dung chuyên môn và câu hỏi trước khi dùng.
-
-RUBRIC (bài thực hành — dự thảo):
-| Tiêu chí | Xuất sắc (9-10) | Tốt (7-8) | Đạt (5-6) | Chưa đạt (<5) |
-|---|---|---|---|---|
-| Hiểu mô hình | Giải thích được mọi thành phần | Giải thích được phần lớn | Hiểu cơ bản | Chưa hiểu |
-| Code chạy đúng | Chạy đúng, tối ưu | Chạy đúng | Chạy có lỗi nhỏ | Không chạy |
-```
 
 ## Human gate (người kiểm duyệt)
 - **Giảng viên phụ trách học phần duyệt TOÀN BỘ** (lesson plan, học liệu, rubric, feedback)
@@ -197,10 +139,10 @@ RUBRIC (bài thực hành — dự thảo):
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/tro-ly-giang-day`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/tro-ly-giang-day`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

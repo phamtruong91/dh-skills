@@ -5,16 +5,18 @@ description: "Soạn quy chế an toàn thông tin mạng của trường đại
 
 # Quy chế an toàn thông tin mạng
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần ban hành hoặc sửa đổi quy chế quản lý an toàn thông tin cho các hệ thống
@@ -74,23 +76,13 @@ flowchart TD
     HG --> H[["Quy chế ATTT + quyết định ban hành"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản quy chế an toàn thông tin mạng hoàn chỉnh (chương/điều).
-- Quyết định ban hành quy chế.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (khung mẫu cố định của sản phẩm chính — Quy chế ATTT mạng):
-1. Tiêu đề quy chế + dòng ban hành (kèm theo Quyết định số... ngày... của Hiệu trưởng).
-2. Chương I. Quy định chung (phạm vi điều chỉnh, đối tượng áp dụng, nguyên tắc, giải thích từ ngữ).
-3. Chương II. Quản lý tài khoản và phân quyền (cấp phát, mật khẩu, phân quyền tối thiểu, thu hồi).
-4. Chương III. Bảo vệ dữ liệu (phân loại, sao lưu, mã hóa, bảo vệ dữ liệu cá nhân).
-5. Chương IV. Sử dụng hệ thống (thiết bị đầu cuối, mạng wifi, thư điện tử, phần mềm).
-6. Chương V. Ứng phó sự cố (phát hiện, báo cáo, xử lý, khắc phục, báo cáo cơ quan chức năng).
-7. Chương VI. Trách nhiệm và xử lý vi phạm + Điều khoản thi hành (hiệu lực, trách nhiệm phổ biến).
-- Kèm theo: Quyết định ban hành quy chế.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề quy chế + dòng ban hành (kèm theo…; Chương I. Quy định chung (phạm vi điều…; Chương II. Quản lý tài khoản và phân quyền…; Chương III. Bảo vệ dữ liệu (phân loại, sao…; Chương IV. Sử dụng hệ thống (thiết bị đầu…; Chương V. Ứng phó sự cố (phát hiện, báo cáo,…; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Văn bản quy chế an toàn thông tin mạng hoàn chỉnh (chương/điều)
 - [ ] Có đầy đủ sản phẩm: Quyết định ban hành quy chế
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -103,92 +95,6 @@ flowchart TD
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `pham_vi` | Toàn trường |
-| `cac_he_thong` | SIS, LMS, email @dha.edu.vn, website, wifi nội bộ |
-| `cap_do_att` | Cấp độ 3 |
-
-### Output mẫu (trích các điều chính)
-
-```
-QUY CHẾ AN TOÀN THÔNG TIN MẠNG
-(Ban hành kèm theo Quyết định số 156/QĐ-ĐHA ngày 09/10/2026
- của Hiệu trưởng Trường Đại học A)
-
-Chương I. QUY ĐỊNH CHUNG
-
-Điều 1. Phạm vi điều chỉnh
-Quy chế này quy định việc bảo đảm an toàn thông tin mạng đối với các hệ thống:
-quản lý đào tạo (SIS), học trực tuyến (LMS), thư điện tử, website và mạng wifi
-nội bộ của Trường Đại học A.
-
-Điều 2. Đối tượng áp dụng
-Cán bộ, giảng viên, sinh viên, học viên và các tổ chức, cá nhân sử dụng hệ thống
-CNTT của Trường.
-
-Chương II. QUẢN LÝ TÀI KHOẢN VÀ PHÂN QUYỀN
-
-Điều 3. Cấp phát và quản lý tài khoản
-1. Mỗi cá nhân được cấp 01 tài khoản định danh duy nhất; nghiêm cấm dùng chung
-   hoặc cho mượn tài khoản.
-2. Mật khẩu tối thiểu 08 ký tự, gồm chữ hoa, chữ thường, số và ký tự đặc biệt;
-   bắt buộc thay đổi 90 ngày/lần.
-3. Tài khoản của người nghỉ việc, tốt nghiệp được thu hồi trong 07 ngày làm việc.
-
-Điều 4. Phân quyền truy cập
-1. Phân quyền theo nguyên tắc "tối thiểu cần thiết" gắn với vai trò công việc.
-2. Dữ liệu điểm thi, đề thi chỉ cán bộ Phòng Khảo thí & ĐBCL được truy cập.
-
-Chương III. BẢO VỆ DỮ LIỆU
-
-Điều 5. Sao lưu dữ liệu
-1. Dữ liệu hệ thống SIS, LMS được sao lưu tự động hằng ngày, lưu trữ 02 bản
-   tại 02 vị trí vật lý khác nhau.
-2. Kiểm tra khả năng khôi phục dữ liệu 06 tháng/lần.
-
-Điều 6. Bảo vệ dữ liệu cá nhân
-Dữ liệu điểm thi, hồ sơ sinh viên, thông tin cán bộ được mã hóa khi lưu trữ
-và truyền tải; chỉ sử dụng đúng mục đích công vụ.
-
-Chương IV. SỬ DỤNG HỆ THỐNG
-
-Điều 7. Thiết bị đầu cuối và mạng nội bộ
-1. Cán bộ, giảng viên cài đặt phần mềm diệt virus do Trung tâm CNTT cấp phép;
-   không cài đặt phần mềm không rõ nguồn gốc trên máy tính của Trường.
-2. Mạng wifi nội bộ chia 02 vùng: vùng cán bộ (xác thực bằng tài khoản cá nhân)
-   và vùng khách (đăng ký theo phiên).
-
-Điều 8. Thư điện tử công vụ
-1. Sử dụng email @dha.edu.vn cho mọi giao dịch công vụ; không chuyển tiếp
-   tài liệu mật ra email cá nhân.
-
-Chương V. ỨNG PHÓ SỰ CỐ
-
-Điều 9. Quy trình ứng phó
-1. Khi phát hiện sự cố (tấn công mạng, rò rỉ dữ liệu, mã độc), cá nhân báo ngay
-   cho Trung tâm CNTT qua đường dây nóng trong 01 giờ.
-2. Trung tâm CNTT cô lập hệ thống bị ảnh hưởng, đánh giá mức độ, khắc phục và
-   báo cáo Ban Giám hiệu trong 24 giờ.
-3. Sự cố nghiêm trọng được báo cáo cơ quan chức năng theo quy định.
-
-Chương VI. TRÁCH NHIỆM, XỬ LÝ VI PHẠM VÀ ĐIỀU KHOẢN THI HÀNH
-
-Điều 10. Cá nhân vi phạm quy chế tùy mức độ bị nhắc nhở, kỷ luật theo quy định
-của Trường và pháp luật về an toàn thông tin mạng.
-
-Điều 11. Hiệu lực và trách nhiệm phổ biến
-1. Quy chế này có hiệu lực kể từ ngày ký Quyết định ban hành.
-2. Trung tâm CNTT chủ trì phổ biến, tập huấn quy chế đến toàn thể cán bộ, giảng viên,
-   sinh viên trong 30 ngày kể từ ngày ban hành.
-```
-
 ## Căn cứ & lưu ý
 - Luật An toàn thông tin mạng 2015; Nghị định 85/2016/NĐ-CP về bảo đảm ATTT theo cấp độ.
 - Luật Bảo vệ dữ liệu cá nhân 2025 (hiệu lực từ 2026) — dữ liệu sinh viên/cán bộ là
@@ -199,10 +105,10 @@ của Trường và pháp luật về an toàn thông tin mạng.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quy-che-an-toan-thong-tin`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quy-che-an-toan-thong-tin`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

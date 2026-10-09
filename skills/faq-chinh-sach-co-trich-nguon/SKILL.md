@@ -5,16 +5,18 @@ description: "Xây dựng bộ hỏi đáp chính sách từ văn bản quy đ�
 
 # Hỏi đáp chính sách có trích nguồn
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần xây dựng hoặc vận hành kênh hỏi đáp (FAQ, chatbot, tư vấn viên) về các chính sách,
@@ -97,21 +99,13 @@ flowchart TD
     HG2 --> G
 ```
 
-## Đầu ra (Output)
-- Bộ câu hỏi – trả lời (mỗi câu có trích nguồn + ngày hiệu lực).
-- Bảng log nguồn và trạng thái hiệu lực văn bản.
-- Danh sách câu hỏi ngoài phạm vi (để bổ sung hoặc chuyển đơn vị xử lý).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Bộ FAQ):
-1. Tiêu đề: FAQ + chủ đề + đối tượng + phiên bản/ngày cập nhật + corpus văn bản áp dụng.
-2. Danh sách Hỏi – Đáp: mỗi mục gồm câu hỏi, câu trả lời, trích nguồn (tên văn bản + điều/khoản + ngày hiệu lực).
-3. Nhóm câu hỏi chưa có quy định / ngoài phạm vi (cách xử lý + đơn vị liên hệ).
-4. Bảng log nguồn: câu hỏi ↔ điều khoản ↔ văn bản ↔ trạng thái hiệu lực.
-5. Ghi chú: văn bản hết hiệu lực đã loại khỏi corpus trả lời hiện hành.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Bộ FAQ đầy đủ 5 phần theo Cấu trúc output chuẩn: tiêu đề + chủ đề + đối tượng + phiên bản/ngày cập nhật + corpus văn bản áp dụng; danh sách Hỏi–Đáp; nhóm câu hỏi chưa có quy định/ngoài phạm vi; bảng log nguồn; ghi chú văn bản hết hiệu lực đã loại khỏi corpus.
+- [ ] Bộ FAQ đầy đủ 5 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: tiêu đề + chủ đề + đối tượng + phiên bản/ngày cập nhật + corpus văn bản áp dụng; danh sách Hỏi–Đáp; nhóm câu hỏi chưa có quy định/ngoài phạm vi; bảng log nguồn; ghi chú văn bản hết hiệu lực đã loại khỏi corpus.
 - [ ] Mỗi câu trả lời có trích dẫn đủ 3 yếu tố: tên văn bản + điều/khoản + ngày hiệu lực (thiếu 1 yếu tố là chưa đạt).
 - [ ] Corpus văn bản nguồn còn hiệu lực, đã được đơn vị nghiệp vụ duyệt; văn bản hết hiệu lực không dùng để trả lời tình huống hiện hành.
 - [ ] Câu hỏi không có nguồn được trả lời "Hiện chưa có quy định về nội dung này" kèm hướng dẫn liên hệ đơn vị phụ trách — không "lấp" ý, không dùng "chắc là...".
@@ -120,39 +114,6 @@ flowchart TD
 - [ ] Đã qua Human gate: đơn vị nghiệp vụ đã duyệt corpus và từng câu trả lời trước khi công bố.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-> Ví dụ: FAQ học bổng — áp dụng tương tự cho mọi chính sách.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `van_ban_nguon` | Quy định học bổng Trường Đại học A, QĐ 120/QĐ-ĐHA ngày 01/09/2026, hiệu lực từ 01/09/2026 |
-| `chu_de` | Học bổng khuyến khích học tập |
-| `doi_tuong` | Sinh viên |
-
-### Output mẫu
-
-**FAQ — Học bổng khuyến khích học tập** (đối tượng: sinh viên; corpus: Quy định học bổng QĐ 120/QĐ-ĐHA ngày 01/09/2026; cập nhật: 09/10/2026)
-
-**Hỏi:** Điều kiện để được xét học bổng khuyến khích học tập là gì?
-**Đáp:** Sinh viên cần đồng thời: (1) điểm trung bình học kỳ từ 8.0 trở lên; (2) điểm rèn luyện từ 80 trở lên;
-(3) không có học phần nào dưới 5.0 trong học kỳ xét.
-*(Nguồn: Điều 4, Quy định học bổng QĐ 120/QĐ-ĐHA ngày 01/09/2026 — hiệu lực từ 01/09/2026)*
-
-**Hỏi:** Sinh viên năm nhất có được xét học bổng không?
-**Đáp:** Hiện quy định chưa đề cập đối tượng sinh viên năm nhất học kỳ 1 (chưa có kết quả học tập).
-Đề nghị liên hệ Phòng Công tác sinh viên để được hướng dẫn.
-*(Không có nguồn điều chỉnh — không suy đoán)*
-
-**Bảng log nguồn:**
-| Câu hỏi | Điều khoản | Văn bản | Trạng thái hiệu lực |
-|---|---|---|---|
-| Điều kiện xét học bổng | Điều 4 | QĐ 120/QĐ-ĐHA ngày 01/09/2026 | Còn hiệu lực (từ 01/09/2026) |
-| SV năm nhất có được xét không | — | — | Chưa có quy định — chuyển Phòng CTSV |
 
 ## Human gate (người kiểm duyệt)
 1. **Đơn vị nghiệp vụ** (đơn vị ban hành/sở hữu chính sách): duyệt **corpus** — danh mục văn bản nguồn
@@ -174,10 +135,10 @@ flowchart TD
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/faq-chinh-sach-co-trich-nguon`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/faq-chinh-sach-co-trich-nguon`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

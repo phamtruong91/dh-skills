@@ -5,16 +5,18 @@ description: "Tổng hợp báo cáo tổng kết năm học toàn trường đ�
 
 # Soạn báo cáo tổng kết năm học toàn trường
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi tổng hợp báo cáo tổng kết năm học để trình Hội nghị cán bộ viên chức, báo cáo
@@ -127,27 +129,13 @@ flowchart TD
     H --> I[/"Báo cáo tổng kết, phụ lục số liệu"/]
 ```
 
-## Đầu ra (Output)
-- Báo cáo tổng kết năm học toàn trường.
-- Phụ lục số liệu tổng hợp theo mảng.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Báo cáo tổng kết năm học toàn trường) —
-các phần bắt buộc theo đúng thứ tự:
-1. Quốc hiệu – Tiêu ngữ (CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM / Độc lập – Tự do –
-   Hạnh phúc).
-2. Tên trường (dòng trên), địa danh + ngày tháng năm (dòng dưới, căn phải).
-3. Tiêu đề: BÁO CÁO TỔNG KẾT NĂM HỌC ...
-4. Phần I. KẾT QUẢ THỰC HIỆN CÁC MẶT CÔNG TÁC (6 mảng: đào tạo; KHCN & HTQT; CTSV;
-   tổ chức cán bộ; tài chính – CSVC; đảm bảo chất lượng).
-5. Phần II. TỒN TẠI, HẠN CHẾ (kèm nguyên nhân).
-6. Phần III. PHƯƠNG HƯỚNG NĂM HỌC TỚI (nhiệm vụ trọng tâm, chỉ tiêu, giải pháp).
-7. Nơi nhận – Lưu.
-8. Chữ ký Hiệu trưởng (họ tên, học hàm/học vị).
-9. Phụ lục: bảng số liệu tổng hợp theo mảng (đính kèm).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần của "Cấu trúc output chuẩn": quốc hiệu, tên trường, tiêu đề, Phần I/II/III, nơi nhận, chữ ký Hiệu trưởng, phụ lục số liệu.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Phần I có đủ 6 mảng công tác; số liệu trong văn bản khớp 100% với phụ lục số liệu theo mảng.
 - [ ] Số liệu khớp với báo cáo các đơn vị đã nộp; chênh lệch chưa giải trình được đã loại khỏi báo cáo.
 - [ ] Không bịa đặt số liệu, minh chứng; số liệu thiếu được ghi rõ "chưa có số liệu".
@@ -158,60 +146,6 @@ các phần bắt buộc theo đúng thứ tự:
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_hoc` | 2025–2026 |
-| `bao_cao_don_vi` | Đào tạo: tuyển sinh đạt 102% chỉ tiêu (2.550/2.500); tốt nghiệp 1.980 SV. KHCN: 45 đề tài (12 cấp Bộ), 120 bài báo. CTSV: 320 suất học bổng. TCCB: tuyển 28 VC, bổ nhiệm 6. TCKT: thu 210 tỷ. QTTB: hoàn thành 90% KH sửa chữa. ĐBCL: đạt kiểm định 4 CTĐT. |
-
-### Output mẫu (trích)
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                             Độc lập – Tự do – Hạnh phúc
-                                                    Thành phố C, ngày 25 tháng 08 năm 2026
-
-BÁO CÁO TỔNG KẾT NĂM HỌC 2025–2026
-(Dữ liệu giả lập)
-
-I. KẾT QUẢ THỰC HIỆN CÁC MẶT CÔNG TÁC
-1. Công tác đào tạo
-- Tuyển sinh đạt 102% chỉ tiêu (2.550/2.500 thí sinh nhập học).
-- Công nhận tốt nghiệp 1.980 sinh viên; tỷ lệ tốt nghiệp đúng hạn 78%.
-2. Khoa học công nghệ và hợp tác quốc tế
-- Triển khai 45 đề tài NCKH (12 đề tài cấp Bộ), nghiệm thu 40 đề tài.
-- Công bố 120 bài báo khoa học (35 bài quốc tế).
-- Ký mới 06 thỏa thuận hợp tác quốc tế.
-3. Công tác sinh viên
-- Cấp 320 suất học bổng khuyến khích học tập; hỗ trợ 150 SV khó khăn.
-4. Tổ chức cán bộ
-- Tuyển dụng 28 viên chức; bổ nhiệm, bổ nhiệm lại 06 cán bộ quản lý.
-5. Tài chính – cơ sở vật chất
-- Tổng thu 210 tỷ đồng, đảm bảo chi thường xuyên và đầu tư phát triển.
-- Hoàn thành 90% kế hoạch sửa chữa CSVC.
-6. Đảm bảo chất lượng
-- 04 chương trình đào tạo đạt kiểm định chất lượng.
-
-II. TỒN TẠI, HẠN CHẾ
-- Tiến độ một số đề tài NCKH còn chậm so với kế hoạch.
-- 10% kế hoạch sửa chữa CSVC chưa hoàn thành do vướng thủ tục.
-
-III. PHƯƠNG HƯỚNG NĂM HỌC 2026–2027
-1. Tuyển sinh đạt tối thiểu 100% chỉ tiêu; mở 02 ngành đào tạo mới.
-2. Đẩy mạnh công bố quốc tế, phấn đấu 45 bài.
-3. Hoàn thành kiểm định 06 chương trình đào tạo.
-
-Nơi nhận:                                      HIỆU TRƯỞNG
-- Cơ quan chủ quản (b/c);                         [CHỜ KÝ]
-- Các đơn vị trong trường;
-- Lưu: VT, HCTH.                         PGS.TS. Phạm Văn A
-```
-
 ## Căn cứ & lưu ý
 - Quy chế tổ chức và hoạt động của trường; yêu cầu báo cáo của cơ quan chủ quản.
 - Số liệu các đơn vị phải được đối chiếu, thống nhất trước khi đưa vào báo cáo chung.
@@ -219,10 +153,10 @@ Nơi nhận:                                      HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-tong-ket-nam-truong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-tong-ket-nam-truong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

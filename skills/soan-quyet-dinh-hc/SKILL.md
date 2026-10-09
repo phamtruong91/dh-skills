@@ -5,16 +5,18 @@ description: "Soạn quyết định hành chính của trường đại học �
 
 # Soạn quyết định hành chính
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi ban hành quyết định: thành lập / giải thể đơn vị, ban hành quy chế – quy định,
@@ -75,7 +77,7 @@ Khi ban hành quyết định: thành lập / giải thể đơn vị, ban hành
 - → Kết quả bước: Checklist kiểm tra đã đánh dấu + danh sách lỗi cần sửa (nếu có), trả về bước tương ứng để chỉnh.
 
 **Bước 7. Trình ký ban hành quyết định**
-- Làm gì: Ghép toàn bộ thành quyết định hoàn chỉnh ở định dạng markdown; đính kèm checklist kiểm tra; trình người có thẩm quyền ký ban hành (human gate); sau khi ký, chuyển văn thư đóng dấu, đăng ký vào sổ văn bản đi và phát hành.
+- Làm gì: Ghép toàn bộ thành quyết định hoàn chỉnh ở định dạng markdown; thực hiện đối chiếu nội bộ, không xuất kèm checklist; trình người có thẩm quyền ký ban hành (human gate); sau khi ký, chuyển văn thư đóng dấu, đăng ký vào sổ văn bản đi và phát hành.
 - Dùng input: toàn bộ.
 - Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Quyết định chỉ có hiệu lực sau khi ký và đóng dấu; không phát hành bản chưa ký.
@@ -97,97 +99,23 @@ flowchart TD
     HG --> OUT[["Quyết định hành chính"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản quyết định hoàn chỉnh.
-- Checklist kiểm tra thể thức.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của quyết định hành chính — các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tên trường + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"
-2. Số, ký hiệu quyết định (ký hiệu "QĐ"); địa danh, ngày tháng năm
-3. Tên loại "QUYẾT ĐỊNH" (in hoa, căn giữa) + trích yếu "Về việc ..."
-4. Dòng thẩm quyền ban hành (in hoa, căn giữa): "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A" hoặc "HỘI ĐỒNG TRƯỜNG TRƯỜNG ĐẠI HỌC A"
-5. Chuỗi căn cứ: mỗi căn cứ một dòng bắt đầu bằng "Căn cứ", sắp xếp từ văn bản có hiệu lực cao xuống thấp, kết bằng mệnh đề "Xét..."
-6. Dòng "QUYẾT ĐỊNH:" rồi các điều khoản: Điều 1 — nội dung quyết định; Điều 2 — hiệu lực thi hành; Điều cuối — trách nhiệm thi hành (thêm điều về cơ cấu tổ chức/con dấu/tài khoản với quyết định thành lập)
-7. Điều cuối cùng kết bằng "./."
-8. Nơi nhận (dòng đầu "- Như Điều [trách nhiệm thi hành];")
-9. Khối chữ ký: chức danh người có thẩm quyền + họ tên (bản chính đóng dấu)
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tên trường + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" + Tiêu…; Số, ký hiệu quyết định (ký hiệu "QĐ"); địa danh, ngày tháng năm; Tên loại "QUYẾT ĐỊNH" (in hoa, căn giữa) + trích yếu "Về việc ..."; Dòng thẩm quyền ban hành (in hoa, căn giữa): "HIỆU TRƯỞNG TRƯỜNG ĐẠ…; … (đủ 9 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Nghị định 30/2020/NĐ-CP về công tác văn thư.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Khi `nguoi_ky` là Phó Hiệu trưởng, kiểm tra quyết định ủy quyền còn hiệu lực
 - [ ] Câu chữ điều khoản phải chặt chẽ, không mơ hồ vì quyết định là văn bản có hiệu lực pháp lý
 - [ ] Nơi nhận phải bao gồm tất cả đơn vị/cá nhân được nêu trong điều trách nhiệm thi hành
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_quyet_dinh` | Thành lập |
-| `can_cu` | Luật GDĐH 2012 (sửa đổi 2018); Quy chế tổ chức và hoạt động Trường ĐH A; Tờ trình số 45/TTr-KHCN ngày 01/10/2026 của Phòng KHCN&HTQT |
-| `noi_dung` | Điều 1: Thành lập Ban Tổ chức Hội thảo khoa học sinh viên toàn trường năm 2026 gồm 09 thành viên (danh sách kèm theo), Trưởng ban là TS. Đỗ Thị A. Điều 2: QĐ có hiệu lực kể từ ngày ký; Ban tự giải thể sau khi hoàn thành nhiệm vụ. Điều 3: Các phòng ban, khoa liên quan chịu trách nhiệm thi hành. |
-| `nguoi_ky` | Hiệu trưởng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                              Độc lập – Tự do – Hạnh phúc
-      Số: 210/QĐ-ĐHA
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-QUYẾT ĐỊNH
-Về việc thành lập Ban Tổ chức Hội thảo khoa học sinh viên toàn trường năm 2026
-(Dữ liệu giả lập)
-
-HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Luật Giáo dục đại học ngày 18 tháng 6 năm 2012 và Luật sửa đổi, bổ sung
-một số điều của Luật Giáo dục đại học ngày 19 tháng 11 năm 2018;
-Căn cứ Quy chế tổ chức và hoạt động của Trường Đại học A;
-Xét đề nghị của Trưởng phòng Khoa học công nghệ và Hợp tác quốc tế tại Tờ trình
-số 45/TTr-KHCN ngày 01 tháng 10 năm 2026,
-
-QUYẾT ĐỊNH:
-
-Điều 1. Thành lập Ban Tổ chức Hội thảo khoa học sinh viên toàn trường năm 2026
-gồm 09 thành viên (có danh sách kèm theo). Trưởng ban: TS. Đỗ Thị A –
-Trưởng phòng Khoa học công nghệ và Hợp tác quốc tế.
-
-Điều 2. Ban Tổ chức có nhiệm vụ xây dựng kế hoạch, tổ chức thực hiện Hội thảo
-theo quy định; tự giải thể sau khi hoàn thành nhiệm vụ.
-
-Điều 3. Quyết định này có hiệu lực kể từ ngày ký.
-
-Điều 4. Trưởng các phòng: Hành chính – Tổng hợp, Khoa học công nghệ và Hợp tác
-quốc tế, Tài chính – Kế toán; Trưởng các khoa và các thành viên có tên trong
-danh sách chịu trách nhiệm thi hành Quyết định này./.
-
-Nơi nhận:                                          HIỆU TRƯỞNG
-- Như Điều 4;                                         [CHỜ KÝ]
-- Lưu: VT, HCTH, KHCN.
-
-                                              PGS.TS. Phạm Văn A
-```
-
-### Checklist kiểm tra thể thức (output kèm theo)
-- [x] Quốc hiệu – Tiêu ngữ, tên cơ quan ban hành
-- [x] Số, ký hiệu; địa danh, ngày tháng năm
-- [x] Tên loại văn bản + trích yếu
-- [x] Căn cứ pháp lý đầy đủ, sắp xếp đúng thứ tự hiệu lực
-- [x] Các điều đánh số thứ tự, nội dung rõ ràng
-- [x] Thẩm quyền ký phù hợp; nơi nhận đầy đủ
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư.
@@ -196,10 +124,10 @@ Nơi nhận:                                          HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-quyet-dinh-hc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-quyet-dinh-hc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

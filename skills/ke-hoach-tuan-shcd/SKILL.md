@@ -5,16 +5,18 @@ description: "Lập kế hoạch Tuần sinh hoạt công dân cho sinh viên đ
 
 # Kế hoạch Tuần sinh hoạt công dân
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi đầu khóa học / đầu năm học cần tổ chức "Tuần sinh hoạt công dân" cho sinh viên mới
@@ -113,28 +115,13 @@ flowchart TD
     F --> OUT[["Kế hoạch hoàn chỉnh + bảng lịch chi tiết"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản kế hoạch Tuần sinh hoạt công dân hoàn chỉnh (căn cứ, mục đích – yêu cầu,
-  thời gian – địa điểm, nội dung, tổ chức thực hiện, kinh phí).
-- Bảng lịch chi tiết từng buổi: ngày, giờ, nội dung/chủ đề, báo cáo viên, đối tượng,
-  địa điểm, hình thức.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của Kế hoạch Tuần sinh hoạt công dân:
-1. Tiêu đề hành chính: Quốc hiệu – Tiêu ngữ; tên đơn vị; số, ký hiệu; địa danh, ngày tháng
-   năm.
-2. Tên kế hoạch: "KẾ HOẠCH" + "Tổ chức Tuần sinh hoạt công dân cho ..." (`doi_tuong`, năm học).
-3. I. Căn cứ (quy chế công tác sinh viên, kế hoạch năm học).
-4. II. Mục đích – yêu cầu (từng điểm: mục tiêu, yêu cầu 100% tham dự, tính điểm rèn luyện).
-5. III. Thời gian – địa điểm – đối tượng (`thoi_gian`, `dia_diem`, `doi_tuong`, `so_luong_sv`).
-6. IV. Nội dung chi tiết (khung 5 buổi; chi tiết xem bảng lịch kèm theo).
-7. V. Tổ chức thực hiện (phân công từng đơn vị: Phòng CTSV, Phòng Đào tạo, Đoàn – Hội SV,
-   các Khoa, Phòng Quản trị – Thiết bị).
-8. VI. Kinh phí (dự kiến theo hạng mục + nguồn kinh phí).
-9. Nơi nhận + chữ ký.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 9 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính; tên kế hoạch; I. Căn cứ; II. Mục đích – yêu cầu; III. Thời gian – địa điểm – đối tượng; IV. Nội dung chi tiết; V. Tổ chức thực hiện; VI. Kinh phí; Nơi nhận + chữ ký.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Kèm bảng lịch chi tiết đủ 5 buổi: ngày, giờ, nội dung/chủ đề, báo cáo viên, đối tượng, địa điểm, hình thức.
 - [ ] Đối tượng, số lượng sinh viên, thời gian, địa điểm trong output khớp với Input đã cho.
 - [ ] Không bịa đặt số liệu, tên báo cáo viên, trích dẫn quy chế.
@@ -146,86 +133,6 @@ flowchart TD
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `doi_tuong` | Tân sinh viên khóa K15 (niên khóa 2026–2030) |
-| `so_luong_sv` | 1.850 sinh viên |
-| `thoi_gian` | 14/9/2026 – 18/9/2026 (5 ngày, sáng 8h00–11h00) |
-| `dia_diem` | Hội trường A (600 chỗ) + 3 giảng đường B1, B2, B3 (chia ca theo khoa) |
-| `diem_danh` | Quét mã QR đầu giờ và cuối giờ |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG CÔNG TÁC SINH VIÊN                Độc lập – Tự do – Hạnh phúc
-       Số: 28/KH-ĐHA-CTSV
-                                                 Thành phố C, ngày 01 tháng 9 năm 2026
-
-KẾ HOẠCH
-Tổ chức Tuần sinh hoạt công dân cho tân sinh viên khóa K15, năm học 2026–2027
-
-I. CĂN CỨ
-- Quy chế công tác sinh viên của Trường Đại học A;
-- Kế hoạch năm học 2026–2027 của Nhà trường.
-
-II. MỤC ĐÍCH – YÊU CẦU
-1. Giúp tân sinh viên nắm vững nội quy, quy chế đào tạo, chế độ chính sách,
-quy định pháp luật và kỹ năng học tập bậc đại học.
-2. 100% tân sinh viên tham dự đủ các buổi; kết quả học tập tuần sinh hoạt
-công dân được tính vào điểm rèn luyện học kỳ I năm học 2026–2027.
-3. Tổ chức nghiêm túc, thiết thực, tránh hình thức.
-
-III. THỜI GIAN – ĐỊA ĐIỂM – ĐỐI TƯỢNG
-- Thời gian: từ ngày 14/9/2026 đến ngày 18/9/2026 (buổi sáng 8h00–11h00).
-- Địa điểm: Hội trường A và các giảng đường B1, B2, B3 (chia theo khoa).
-- Đối tượng: 1.850 tân sinh viên khóa K15.
-
-IV. NỘI DUNG CHI TIẾT
-(xem Bảng lịch chi tiết từng buổi dưới đây)
-
-V. TỔ CHỨC THỰC HIỆN
-1. Phòng Công tác sinh viên: đầu mối xây dựng nội dung, điều phối báo cáo
-viên, điểm danh, chấm bài thu hoạch, tổng hợp kết quả.
-2. Phòng Đào tạo: chuẩn bị nội dung quy chế đào tạo, cử báo cáo viên.
-3. Đoàn Thanh niên – Hội Sinh viên: tổ chức buổi sinh hoạt Đoàn – Hội,
-giới thiệu câu lạc bộ, đội, nhóm.
-4. Các Khoa: thông báo, đôn đốc sinh viên tham dự đầy đủ, cử cán bộ quản
-lý sinh viên theo dõi từng buổi.
-5. Phòng Quản trị – Thiết bị: chuẩn bị hội trường, âm thanh, ánh sáng,
-máy chiếu.
-
-VI. KINH PHÍ
-- Dự kiến 45.000.000 đồng (tài liệu, nước uống, thù lao báo cáo viên,
-trang trí hội trường), trích từ kinh phí hoạt động CTSV năm 2026.
-
-Nơi nhận:                                    KT. HIỆU TRƯỞNG
-- Ban Giám hiệu (b/c);                       PHÓ HIỆU TRƯỞNG
-- Các Khoa, Phòng, Đoàn – Hội SV;
-- Lưu: VT, CTSV.                                 [CHỜ KÝ]
-
-                                         TS. Vũ Thị Lan
-```
-
-### Bảng lịch chi tiết từng buổi
-
-| Buổi / Ngày | Nội dung / Chủ đề | Báo cáo viên | Đối tượng | Địa điểm | Hình thức |
-|---|---|---|---|---|---|
-| Buổi 1 – 14/9 | Khai mạc; Nội quy – Quy chế đào tạo tín chỉ, thi – kiểm tra, học phí | TS. Vũ Thị Lan (Phó Hiệu trưởng); Trưởng phòng Đào tạo | Toàn khóa K15 | Hội trường A + B1, B2, B3 | Trực tiếp, phát tài liệu |
-| Buổi 2 – 15/9 | Đánh giá rèn luyện; học bổng khuyến khích – tài trợ – chính sách; BHYT, KTX | Trưởng phòng CTSV; Trưởng phòng Tài chính | Toàn khóa K15 | Hội trường A + B1, B2, B3 | Trực tiếp + hỏi đáp |
-| Buổi 3 – 16/9 | An ninh – pháp luật; phòng chống ma túy, tệ nạn xã hội; ATGT; PCCC; an toàn không gian mạng | Đại diện Công an quận; cán bộ Cảnh sát giao thông; giảng viên Khoa Luật | Toàn khóa K15 | Hội trường A + B1, B2, B3 | Trực tiếp, chiếu clip tình huống |
-| Buổi 4 – 17/9 | Kỹ năng học đại học: phương pháp học, quản lý thời gian, thuyết trình, làm việc nhóm; giao lưu cựu sinh viên | Giảng viên kỹ năng mềm; 02 cựu sinh viên tiêu biểu | Toàn khóa K15 | Hội trường A + B1, B2, B3 | Trực tiếp, giao lưu |
-| Buổi 5 – 18/9 | Sinh hoạt Đoàn – Hội: giới thiệu tổ chức, CLB – đội – nhóm; đăng ký tham gia; tổng kết, phát động thi đua | Bí thư Đoàn trường; Chủ tịch Hội Sinh viên | Toàn khóa K15 | Sân trường + Hội trường A | Trực tiếp, gian hàng CLB |
-
-*Ghi chú: cuối tuần sinh viên làm bài trắc nghiệm 20 câu (đạt ≥ 14/20 được tính
-hoàn thành); điểm danh bằng quét mã QR đầu giờ và cuối giờ mỗi buổi.*
-
 ## Căn cứ & lưu ý
 - Quy chế công tác sinh viên của trường; kế hoạch năm học của Nhà trường.
 - Kết quả Tuần sinh hoạt công dân là một tiêu chí trong đánh giá kết quả rèn luyện
@@ -236,10 +143,10 @@ hoàn thành); điểm danh bằng quét mã QR đầu giờ và cuối giờ m�
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-tuan-shcd`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-tuan-shcd`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

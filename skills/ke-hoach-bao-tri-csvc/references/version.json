@@ -1,14 +1,18 @@
 {
   "name": "ke-hoach-bao-tri-csvc",
-  "version": "1.1.0",
-  "updated_at": "2026-10-09",
-  "source_repository": "https://github.com/phamtruong91/dh-skills",
-  "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+  "version": "1.2.1",
+  "updated_at": "2026-10-10",
+  "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+  "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
   "maintainer": {
     "github": "phamtruong91",
     "name": "Phạm Văn Trường"
   },
   "legal_review_status": "requires-applicability-and-fulltext-check",
   "approval_owner": null,
-  "legal_updates": []
+  "legal_updates": [],
+  "output_profile": "hanh-chinh",
+  "output_reference": "references/quy-cach-dau-ra.md",
+  "missing_data_policy": "preserve-template-fill-spaces",
+  "qa_attachments": false
 }

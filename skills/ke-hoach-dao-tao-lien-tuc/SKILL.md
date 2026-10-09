@@ -5,16 +5,18 @@ description: "Lập kế hoạch đào tạo liên tục năm của Trung tâm �
 
 # Kế hoạch đào tạo liên tục
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Trung tâm Đào tạo liên tục / Trường bồi dưỡng cần lập kế hoạch năm: mở mới, duy trì hay
@@ -90,22 +92,13 @@ flowchart TD
     E -->|Có| HG --> O
 ```
 
-## Đầu ra (Output)
-- Quyết định ban hành + Kế hoạch đào tạo liên tục năm (danh mục khóa, lịch khai giảng, dự toán).
-- Phụ lục: kết quả khảo sát nhu cầu, phân công chuẩn bị.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Kế hoạch đào tạo liên tục năm):
-1. Tiêu đề hành chính: tên trường + tên trung tâm, quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM / Độc lập – Tự do – Hạnh phúc", số hiệu văn bản, địa danh và ngày ban hành.
-2. Tên văn bản: "KẾ HOẠCH — Đào tạo liên tục năm [năm]".
-3. Phần I — Căn cứ và mục tiêu: căn cứ kết quả khảo sát nhu cầu (thời điểm, quy mô); mục tiêu số học viên và doanh thu.
-4. Phần II — Danh mục khóa học: bảng gồm các cột STT | Tên khóa học | Thời lượng | Hình thức | Học phí | Số lớp | Khai giảng dự kiến.
-5. Phần III — Dự toán thu – chi: tổng thu dự kiến; tổng chi dự kiến (cơ cấu theo nhóm: giảng viên, học liệu, hậu cần, marketing, quản lý); chênh lệch dự kiến.
-6. Phần IV — Tổ chức thực hiện: đơn vị chủ trì, đơn vị phối hợp.
-7. Nơi nhận + chữ ký Giám đốc Trung tâm.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên văn bản, Phần I — Căn cứ và mục tiêu, Phần II — Danh mục khóa học (bảng), Phần III — Dự toán thu – chi, Phần IV — Tổ chức thực hiện, nơi nhận + chữ ký.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: năm kế hoạch, kết quả khảo sát nhu cầu, danh mục khóa, nguồn lực, mục tiêu tài chính.
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Bảng danh mục mỗi khóa đủ 7 trường thông tin: tên khóa, mục tiêu/đối tượng, chuẩn đầu ra, thời lượng, hình thức, học phí dự kiến, số lớp dự kiến.
@@ -116,57 +109,6 @@ flowchart TD
 - [ ] Không có khóa trùng chủ đề chưa gộp; khóa theo đơn đặt hàng ghi rõ điều kiện mở lớp (số học viên tối thiểu theo hợp đồng).
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_ke_hoach` | 2027 |
-| `ket_qua_khao_sat` | 320 người đi làm quan tâm AI ứng dụng; 12 doanh nghiệp cần đào tạo kỹ năng số cho nhân sự |
-| `danh_muc_khoa` | 1. "Ứng dụng AI trong công việc văn phòng" — 24 giờ, trực tiếp + trực tuyến, 2.500.000đ, 6 lớp. 2. "Kỹ năng số cho doanh nghiệp" — 16 giờ, theo đơn đặt hàng, 1.800.000đ, 4 lớp. 3. "Bồi dưỡng nghiệp vụ kế toán" — 40 giờ, trực tiếp, 3.200.000đ, 3 lớp. |
-| `nguon_luc` | 08 giảng viên cơ hữu, 04 phòng học, 01 phòng lab máy tính |
-| `muc_tieu_tai_chinh` | Doanh thu 2,4 tỷ đồng; 900 học viên |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-TRUNG TÂM ĐÀO TẠO LIÊN TỤC               Độc lập – Tự do – Hạnh phúc
-      Số: 12/KH-ĐHA-ĐTLT
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                         KẾ HOẠCH
-              Đào tạo liên tục năm 2027
-
-I. CĂN CỨ VÀ MỤC TIÊU
-- Căn cứ kết quả khảo sát nhu cầu tháng 9/2026 (320 cá nhân, 12 doanh nghiệp).
-- Mục tiêu: 900 học viên, doanh thu 2,4 tỷ đồng.
-
-II. DANH MỤC KHÓA HỌC
-
-| STT | Tên khóa học | Thời lượng | Hình thức | Học phí (đ) | Số lớp | Khai giảng dự kiến |
-|-----|--------------|------------|-----------|-------------|--------|--------------------|
-| 1 | Ứng dụng AI trong công việc văn phòng | 24 giờ | Trực tiếp + trực tuyến | 2.500.000 | 6 | Quý I–II/2027 |
-| 2 | Kỹ năng số cho doanh nghiệp | 16 giờ | Theo đơn đặt hàng | 1.800.000 | 4 | Theo hợp đồng |
-| 3 | Bồi dưỡng nghiệp vụ kế toán | 40 giờ | Trực tiếp | 3.200.000 | 3 | Quý II–III/2027 |
-
-III. DỰ TOÁN THU – CHI
-- Tổng thu dự kiến: 2.400.000.000 đồng.
-- Tổng chi dự kiến: 1.680.000.000 đồng (giảng viên 45%, học liệu 10%, hậu cần 15%, marketing 15%, quản lý 15%).
-- Chênh lệch dự kiến: 720.000.000 đồng.
-
-IV. TỔ CHỨC THỰC HIỆN
-Trung tâm Đào tạo liên tục chủ trì, phối hợp các khoa chuyên môn và Phòng Tài chính – Kế toán triển khai./.
-
-Nơi nhận:                                          GIÁM ĐỐC TRUNG TÂM
-- Ban Giám hiệu (b/c);                                [CHỜ KÝ]
-- Các khoa; Phòng TCKT;
-- Lưu: VT, ĐTLT.                                TS. Nguyễn Văn B
-```
 
 ## Human gate
 - Giám đốc Trung tâm duyệt danh mục khóa và dự toán; Ban Giám hiệu/Hiệu trưởng phê duyệt kế hoạch năm.
@@ -183,10 +125,10 @@ Nơi nhận:                                          GIÁM ĐỐC TRUNG TÂM
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-dao-tao-lien-tuc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-dao-tao-lien-tuc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

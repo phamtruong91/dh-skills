@@ -5,16 +5,18 @@ description: "Soạn báo cáo tổng hợp của Phân hiệu / Cơ sở đào 
 
 # Soạn báo cáo tổng hợp phân hiệu
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Phân hiệu cần báo cáo định kỳ (học kỳ, năm học) hoặc đột xuất gửi Ban Giám hiệu trường mẹ,
@@ -92,21 +94,13 @@ flowchart TD
     E -->|Có| HG --> O
 ```
 
-## Đầu ra (Output)
-- Báo cáo tổng hợp của phân hiệu (markdown) kèm các bảng số liệu.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Báo cáo tổng hợp của phân hiệu):
-1. Tiêu đề hành chính: tên trường + tên phân hiệu, quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM / Độc lập – Tự do – Hạnh phúc", số hiệu văn bản, địa danh và ngày ban hành.
-2. Tên văn bản: "BÁO CÁO — Tổng kết hoạt động [kỳ báo cáo] của Phân hiệu".
-3. Kính gửi: Ban Giám hiệu trường mẹ.
-4. Phần mở đầu: phạm vi kỳ báo cáo.
-5. Các phần theo 5 mảng — I. Đào tạo, II. Công tác sinh viên, III. Khoa học công nghệ, IV. Tài chính, V. Cơ sở vật chất — mỗi mảng trình bày: số liệu kết quả + so sánh với kế hoạch/cùng kỳ (nếu có).
-6. Phần VI — Tồn tại, kiến nghị: tồn tại + nguyên nhân; kiến nghị cụ thể, có địa chỉ (nêu rõ đơn vị của trường mẹ có thẩm quyền giải quyết).
-7. Lời kết + Nơi nhận + chữ ký Giám đốc phân hiệu.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên văn bản, kính gửi, phần mở đầu, các phần theo 5 mảng (đào tạo – CTSV – KHCN – tài chính – CSVC), Phần VI — Tồn tại kiến nghị, lời kết + nơi nhận + chữ ký.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu trong output khớp với Input đã cho (5 mảng số liệu và tồn tại/kiến nghị).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn; không tự "chế" số cho khớp khi phát hiện mâu thuẫn.
 - [ ] Đúng thể thức văn bản hành chính; số liệu các mảng quy về cùng kỳ báo cáo.
@@ -117,63 +111,6 @@ flowchart TD
 - [ ] Kiến nghị vượt phân cấp viết dưới dạng trình xin ý kiến ("đề nghị", "kính mong"), không viết như "đã quyết định".
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ky_bao_cao` | Năm học 2026–2027 |
-| `so_lieu_dao_tao` | Tuyển sinh đạt 1.020/1.000 chỉ tiêu; 1.850 SV đang học; 420 SV tốt nghiệp |
-| `so_lieu_ctsv` | 180 suất học bổng; 95% SV xếp loại rèn luyện khá trở lên |
-| `so_lieu_khcn` | 6 đề tài cấp trường, 9 bài báo |
-| `so_lieu_tai_chinh` | Thu 18,5 tỷ, chi 17,2 tỷ đồng (trong phân cấp) |
-| `so_lieu_csvc` | Hoàn thành nâng cấp 2 phòng thực hành; bảo trì định kỳ đầy đủ |
-| `ton_tai_kien_nghi` | Thiếu 8 giảng viên cơ hữu; đề nghị trường mẹ hỗ trợ tuyển dụng và cử giảng viên thỉnh giảng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÂN HIỆU TẠI ĐỒNG NAI                    Độc lập – Tự do – Hạnh phúc
-      Số: 35/BC-ĐHA-PHDN
-                                                 Đồng Nai, ngày 15 tháng 7 năm 2027
-
-                          BÁO CÁO
-          Tổng kết hoạt động năm học 2026–2027 của Phân hiệu
-
-Kính gửi: Ban Giám hiệu Trường Đại học A
-
-Phân hiệu báo cáo tổng kết hoạt động năm học 2026–2027 như sau:
-
-I. ĐÀO TẠO
-- Tuyển sinh đạt 1.020/1.000 chỉ tiêu (102%); 1.850 sinh viên đang học;
-  420 sinh viên tốt nghiệp.
-II. CÔNG TÁC SINH VIÊN
-- Cấp 180 suất học bổng; 95% sinh viên xếp loại rèn luyện khá trở lên.
-III. KHOA HỌC CÔNG NGHỆ
-- 6 đề tài cấp trường, 9 bài báo khoa học.
-IV. TÀI CHÍNH (trong phân cấp)
-- Thu 18,5 tỷ đồng; chi 17,2 tỷ đồng.
-V. CƠ SỞ VẬT CHẤT
-- Hoàn thành nâng cấp 2 phòng thực hành; bảo trì định kỳ đầy đủ.
-
-VI. TỒN TẠI, KIẾN NGHỊ
-- Tồn tại: thiếu 8 giảng viên cơ hữu so với nhu cầu.
-- Nguyên nhân: chỉ tiêu tuyển dụng năm chưa được phê duyệt kịp; nguồn giảng viên
-thỉnh giảng tại địa phương hạn chế.
-- Kiến nghị: trường mẹ hỗ trợ tuyển dụng và cử giảng viên thỉnh giảng
-trong năm học tới.
-
-Trên đây là báo cáo của Phân hiệu, kính trình Ban Giám hiệu xem xét./.
-
-Nơi nhận:                                          GIÁM ĐỐC PHÂN HIỆU
-- Ban Giám hiệu;                                        [CHỜ KÝ]
-- Lưu: VT, PHDN.                                  TS. Phạm Văn D
-```
 
 ## Human gate (người kiểm duyệt)
 - Các tổ/bộ phận của phân hiệu xác nhận số liệu mảng mình phụ trách.
@@ -191,10 +128,10 @@ Nơi nhận:                                          GIÁM ĐỐC PHÂN HIỆU
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-tong-hop-phan-hieu`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-tong-hop-phan-hieu`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

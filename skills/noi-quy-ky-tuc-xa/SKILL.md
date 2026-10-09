@@ -5,16 +5,18 @@ description: "Soạn nội quy ký túc xá hoàn chỉnh theo chương/điều 
 
 # Soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Ban quản lý ký túc xá (thuộc Phòng Công tác sinh viên) cần:
@@ -125,32 +127,13 @@ flowchart TD
     HG --> OUT[["Nội quy + quy trình xét duyệt + mẫu đơn"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản nội quy ký túc xá hoàn chỉnh theo chương/điều.
-- Quy trình xét duyệt chỗ ở (đối tượng ưu tiên, hồ sơ, thời gian, các bước thực hiện).
-- Mẫu đơn xin ở ký túc xá.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của ba sản phẩm:
-A. Quyết định ban hành kèm Nội quy:
-1. Thể thức quyết định ban hành: Quốc hiệu – Tiêu ngữ; số, ký hiệu; địa danh, ngày tháng
-   năm; "QUYẾT ĐỊNH" + tên ("Ban hành Nội quy ..."); chức danh người ký (HIỆU TRƯỞNG...);
-   các căn cứ; Điều 1 (ban hành kèm theo), Điều 2 (hiệu lực), Điều 3 (trách nhiệm thi hành);
-   nơi nhận; chữ ký.
-2. Nội quy kèm theo: tên nội quy + căn cứ ban hành; Chương I. Quy định chung (Điều 1 – phạm
-   vi, đối tượng áp dụng; Điều 2 – nguyên tắc chung); Chương II. Quyền và nghĩa vụ của sinh
-   viên nội trú; Chương III. Giờ giấc sinh hoạt, an ninh trật tự; Chương IV. Vệ sinh môi
-   trường, bảo vệ tài sản; Chương V. Khen thưởng và xử lý vi phạm; Chương VI. Điều khoản thi
-   hành.
-B. Quy trình xét duyệt chỗ ở — 5 bước cố định: Bước 1. Thông báo tiếp nhận; Bước 2. Nộp hồ
-   sơ; Bước 3. Xét duyệt (theo thứ tự ưu tiên); Bước 4. Công bố kết quả và giải quyết khiếu
-   nại; Bước 5. Ký hợp đồng nội trú và bàn giao phòng.
-C. Mẫu đơn xin ở KTX: Quốc hiệu – Tiêu ngữ; tên đơn "ĐƠN XIN Ở KÝ TÚC XÁ"; Kính gửi; thông
-   tin người làm đơn; đối tượng ưu tiên + giấy tờ chứng minh kèm theo; cam kết chấp hành nội
-   quy; địa danh, ngày tháng; chữ ký người làm đơn.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ ba sản phẩm theo "Cấu trúc output chuẩn": (A) quyết định ban hành + nội quy đủ 6 chương (I. Quy định chung; II. Quyền và nghĩa vụ của sinh viên nội trú; III. Giờ giấc sinh hoạt, an ninh trật tự; IV. Vệ sinh môi trường, bảo vệ tài sản; V. Khen thưởng và xử lý vi phạm; VI. Điều khoản thi hành); (B) quy trình xét duyệt chỗ ở đủ 5 bước với thời hạn cụ thể tính bằng ngày làm việc; (C) mẫu đơn xin ở KTX đủ các mục (thông tin người làm đơn, đối tượng ưu tiên + giấy tờ chứng minh, cam kết, chữ ký).
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Tên KTX, sức chứa, đối tượng ưu tiên, giờ giấc, mức phí trong output khớp với Input đã cho.
 - [ ] Không bịa đặt số liệu, mức phí, tên thành viên Hội đồng xét duyệt.
 - [ ] Đúng thể thức: quyết định có căn cứ, Điều 1–3, nơi nhận, chữ ký; nội quy cấu trúc chương/điều, mỗi điều một nội dung, diễn đạt rõ ràng, không chồng chéo.
@@ -161,179 +144,6 @@ C. Mẫu đơn xin ở KTX: Quốc hiệu – Tiêu ngữ; tên đơn "ĐƠN XIN
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_ktx` | Ký túc xá A (2 tòa nhà A, B) |
-| `suc_chua` | 3.250 chỗ ở |
-| `doi_tuong_uu_tien` | Diện chính sách; dân tộc thiểu số vùng khó khăn; mồ côi; hoàn cảnh khó khăn; sinh viên năm thứ nhất |
-| `gio_giac` | Mở cổng 05h30 – đóng cổng 23h00; giờ tự học 19h30 – 22h00; tắt đèn 23h00 |
-| `muc_phi` | 350.000 đồng/sinh viên/tháng (giả lập) |
-
-### Output mẫu
-
-#### 1. Nội quy ký túc xá
-
-```
-TRƯỜNG ĐẠI HỌC A               CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                                Độc lập – Tự do – Hạnh phúc
-      Số: 88/QĐ-ĐHA
-                                                 Thành phố C, ngày 15 tháng 8 năm 2026
-
-                          QUYẾT ĐỊNH
-        Ban hành Nội quy Ký túc xá A
-              (Nội dung dưới đây là dữ liệu giả lập)
-
-                         HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Quy chế công tác sinh viên đối với chương trình đào tạo đại học hệ chính quy;
-Căn cứ nhu cầu quản lý sinh viên nội trú của Nhà trường;
-
-                                QUYẾT ĐỊNH:
-
-Điều 1. Ban hành kèm theo Quyết định này Nội quy Ký túc xá A.
-Điều 2. Quyết định này có hiệu lực kể từ ngày ký.
-Điều 3. Trưởng phòng Công tác sinh viên, Trưởng ban Quản lý ký túc xá và sinh viên
-nội trú chịu trách nhiệm thi hành Quyết định này./.
-
-Nơi nhận:                                          HIỆU TRƯỞNG
-- Như Điều 3;                                          [CHỜ KÝ]
-- Lưu: VT, CTSV.
-
-                                    PGS.TS. Trần Văn B
-                          (Tên cá nhân trong ví dụ là giả lập)
-
-------------------------------------------------------------------
-
-              NỘI QUY KÝ TÚC XÁ A
- (Ban hành kèm theo Quyết định số 88/QĐ-ĐHA ngày 15/8/2026)
-
-Chương I. QUY ĐỊNH CHUNG
-
-Điều 1. Phạm vi và đối tượng áp dụng
-1. Nội quy này quy định việc quản lý, sử dụng Ký túc xá A (tòa nhà A, B;
-   sức chứa 3.250 chỗ ở).
-2. Áp dụng đối với sinh viên nội trú, khách đến liên hệ công tác và cán bộ quản lý
-   ký túc xá.
-
-Điều 2. Nguyên tắc chung
-Sinh viên nội trú có trách nhiệm chấp hành nội quy, giữ gìn an ninh trật tự, vệ sinh
-môi trường, bảo vệ tài sản chung và xây dựng nếp sống văn minh trong ký túc xá.
-
-Chương II. QUYỀN VÀ NGHĨA VỤ CỦA SINH VIÊN NỘI TRÚ
-
-Điều 3. Quyền của sinh viên nội trú
-1. Được bố trí chỗ ở theo hợp đồng nội trú đã ký; được sử dụng các trang thiết bị,
-   tiện ích phục vụ sinh hoạt trong ký túc xá.
-2. Được tham gia các hoạt động văn hóa, thể thao do Ban quản lý ký túc xá tổ chức.
-3. Được kiến nghị, phản ánh với Ban quản lý về điều kiện ăn ở, sinh hoạt.
-
-Điều 4. Nghĩa vụ của sinh viên nội trú
-1. Chấp hành nghiêm nội quy ký túc xá, nội quy phòng ở và sự quản lý của Ban quản lý.
-2. Đóng phí nội trú đầy đủ, đúng thời hạn: 350.000 đồng/sinh viên/tháng (giả lập).
-3. Giữ gìn tài sản được bàn giao; bồi thường thiệt hại do mình gây ra.
-4. Không tự ý đổi phòng, chuyển nhượng chỗ ở cho người khác khi chưa được phép.
-
-Chương III. GIỜ GIẤC SINH HOẠT, AN NINH TRẬT TỰ
-
-Điều 5. Giờ giấc sinh hoạt
-1. Cổng ký túc xá mở từ 05 giờ 30 đến 23 giờ 00 hằng ngày.
-2. Giờ tự học tập trung: từ 19 giờ 30 đến 22 giờ 00; tắt đèn đi ngủ lúc 23 giờ 00.
-3. Sinh viên về muộn sau 23 giờ 00 phải đăng ký với bảo vệ trực và ghi rõ lý do.
-
-Điều 6. An ninh trật tự
-1. Không đưa người lạ vào ký túc xá khi chưa đăng ký với Ban quản lý; khách đến
-   thăm chỉ được tiếp tại phòng khách đến 21 giờ 30.
-2. Nghiêm cấm: cờ bạc, rượu bia say xỉn gây mất trật tự, tàng trữ vũ khí, chất cháy nổ,
-   chất ma túy và các tệ nạn xã hội khác trong ký túc xá.
-3. Không nuôi động vật trong phòng ở; không nấu ăn bằng bếp gas, bếp điện công suất
-   lớn trong phòng ở.
-
-Chương IV. VỆ SINH MÔI TRƯỜNG, BẢO VỆ TÀI SẢN
-
-Điều 7. Vệ sinh môi trường
-1. Sinh viên có trách nhiệm giữ vệ sinh phòng ở, hành lang, khu vệ sinh chung;
-   thực hiện trực nhật theo phân công của phòng.
-2. Không vứt rác bừa bãi; đổ rác đúng nơi, đúng giờ quy định.
-
-Điều 8. Bảo vệ, sử dụng tài sản
-1. Sử dụng đúng mục đích, giữ gìn trang thiết bị trong phòng ở và khu vực chung.
-2. Mọi hư hỏng phải báo ngay cho Ban quản lý để sửa chữa; sinh viên làm hư hỏng
-   tài sản phải bồi thường theo giá trị thiệt hại thực tế.
-
-Chương V. KHEN THƯỞNG VÀ XỬ LÝ VI PHẠM
-
-Điều 9. Khen thưởng
-Tập thể phòng, cá nhân sinh viên nội trú có thành tích trong giữ gìn an ninh trật tự,
-vệ sinh, xây dựng nếp sống văn minh được Ban quản lý đề nghị Nhà trường khen thưởng.
-
-Điều 10. Xử lý vi phạm
-1. Vi phạm lần đầu, mức độ nhẹ: nhắc nhở, phê bình trước phòng ở.
-2. Vi phạm nhiều lần hoặc mức độ nghiêm trọng: cảnh cáo, lập biên bản, thông báo
-   về khoa và gia đình sinh viên.
-3. Vi phạm nghiêm trọng (tàng trữ chất cấm, đánh nhau gây thương tích, trộm cắp...):
-   buộc thôi ở ký túc xá, đồng thời xử lý kỷ luật theo Quy chế công tác sinh viên.
-
-Chương VI. ĐIỀU KHOẢN THI HÀNH
-
-Điều 11. Điều khoản thi hành
-1. Nội quy này có hiệu lực kể từ ngày ký Quyết định ban hành.
-2. Mọi trường hợp chưa được quy định trong Nội quy do Ban quản lý ký túc xá đề xuất,
-   Trưởng phòng Công tác sinh viên trình Hiệu trưởng quyết định.
-```
-
-#### 2. Quy trình xét duyệt chỗ ở ký túc xá
-
-**Bước 1. Thông báo tiếp nhận** (trước mỗi học kỳ ít nhất 20 ngày): Ban quản lý KTX thông báo số lượng chỗ trống, đối tượng, hồ sơ và thời hạn nộp đơn trên cổng thông tin sinh viên.
-
-**Bước 2. Nộp hồ sơ**: sinh viên nộp đơn xin ở KTX (theo mẫu thống nhất) kèm giấy tờ chứng minh đối tượng ưu tiên (nếu có) tại Văn phòng Ban quản lý KTX hoặc qua cổng đăng ký trực tuyến.
-
-**Bước 3. Xét duyệt** (trong 05 ngày làm việc kể từ hết hạn nộp hồ sơ): Hội đồng xét duyệt (Trưởng phòng CTSV, Trưởng ban Quản lý KTX, đại diện Đoàn Thanh niên) xét theo thứ tự ưu tiên:
-1. Sinh viên diện chính sách, con liệt sĩ, con thương binh;
-2. Sinh viên dân tộc thiểu số vùng đặc biệt khó khăn;
-3. Sinh viên mồ côi cả cha lẫn mẹ;
-4. Sinh viên có hoàn cảnh gia đình khó khăn (có xác nhận địa phương);
-5. Sinh viên năm thứ nhất có hộ khẩu xa trường;
-6. Các trường hợp còn lại xét theo thời gian nộp hồ sơ.
-
-**Bước 4. Công bố kết quả**: niêm yết danh sách tại KTX và cổng thông tin sinh viên trong 03 ngày làm việc; giải quyết khiếu nại (nếu có) trong 05 ngày làm việc.
-
-**Bước 5. Ký hợp đồng nội trú và bàn giao phòng**: sinh viên trúng tuyển ký hợp đồng nội trú, nộp phí học kỳ, nhận phòng theo biên bản bàn giao tài sản.
-
-#### 3. Mẫu đơn xin ở ký túc xá
-
-```
-              CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                  Độc lập – Tự do – Hạnh phúc
-                  -------------------------------
-
-                         ĐƠN XIN Ở KÝ TÚC XÁ
-                    (Mẫu này là dữ liệu giả lập)
-
-Kính gửi: Ban Quản lý Ký túc xá A – Trường Đại học A
-
-Tên tôi là: ....................................  Ngày sinh: ...../...../..........
-Mã sinh viên: ....................  Lớp: ............  Khoa: ....................
-Số điện thoại: ....................  Email: ....................
-Hộ khẩu thường trú: ...............................................................
-
-Tôi làm đơn này đề nghị được xét duyệt vào ở Ký túc xá A, năm học ............
-Thuộc đối tượng ưu tiên (nếu có): .....................................................
-Giấy tờ chứng minh kèm theo: .......................................................
-
-Tôi xin cam kết chấp hành nghiêm Nội quy Ký túc xá, đóng phí nội trú đầy đủ,
-đúng hạn và chịu trách nhiệm trước Nhà trường về mọi vi phạm của bản thân.
-
-                                                     Thành phố C, ngày ..... tháng ..... năm .....
-                                                               Người làm đơn
-                                                              (ký, ghi rõ họ tên)
-```
-
 ## Căn cứ & lưu ý
 - Quy chế công tác sinh viên đối với chương trình đào tạo đại học hệ chính quy (Thông tư 10/2016/TT-BGDĐT); nội quy KTX do Hiệu trưởng ban hành sau khi lấy ý kiến các đơn vị liên quan.
 - Thứ tự ưu tiên xét chỗ ở phải công khai, minh bạch; hồ sơ xét duyệt lưu trữ đầy đủ để phục vụ thanh tra, kiểm tra.
@@ -341,10 +151,10 @@ Tôi xin cam kết chấp hành nghiêm Nội quy Ký túc xá, đóng phí nộ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/noi-quy-ky-tuc-xa`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/noi-quy-ky-tuc-xa`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

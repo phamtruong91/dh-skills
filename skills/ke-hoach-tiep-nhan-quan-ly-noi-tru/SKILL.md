@@ -5,16 +5,18 @@ description: "Lập kế hoạch tiếp nhận và quản lý sinh viên nội t
 
 # Kế hoạch tiếp nhận & quản lý nội trú
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Đầu năm học (hoặc đầu học kỳ), Trung tâm Nội trú/Ký túc xá cần lập kế hoạch tiếp nhận sinh viên
@@ -117,29 +119,13 @@ flowchart TD
     A --> B --> HG --> C --> D --> E --> F --> O
 ```
 
-## Đầu ra (Output)
-- Kế hoạch tiếp nhận & quản lý nội trú năm học (markdown).
-- Biểu mẫu: đơn đăng ký chỗ ở, danh sách phân phòng, nội quy nội trú.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch, các phần theo đúng thứ tự:
-1. Tiêu đề: tên trung tâm + trường + "Kế hoạch tiếp nhận và quản lý nội trú
-   năm học..." (căn giữa).
-2. I. Chỉ tiêu: số SV tiếp nhận (tân SV, SV cũ), sức chứa, số chỗ dự phòng.
-3. II. Tiến độ tiếp nhận: lịch theo đợt nhập học, phân luồng theo khoa/khóa,
-   hồ sơ yêu cầu.
-4. III. Phân phòng: thứ tự tiêu chí ưu tiên, nguyên tắc xếp phòng (cùng khoa/khóa),
-   thời hạn công khai danh sách.
-5. IV. An ninh trật tự – PCCC: trực bảo vệ 24/7, kiểm tra tạm trú, diễn tập PCCC.
-6. V. Dịch vụ ăn ở: căng tin (VSATTP), điện – nước – wifi, cơ chế xử lý phản ánh
-   của SV (thời hạn cam kết).
-7. VI. Hoạt động hỗ trợ SV nội trú: sinh hoạt đầu khóa, câu lạc bộ, hỗ trợ SV
-   khó khăn.
-8. VII. Kinh phí dự kiến: tổng mức và các khoản chính.
-9. Chữ ký duyệt: Giám đốc Trung tâm Nội trú (kinh phí: lãnh đạo trường phê duyệt).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 9 phần theo "Cấu trúc output chuẩn": tiêu đề, I. Chỉ tiêu, II. Tiến độ tiếp nhận, III. Phân phòng, IV. An ninh – PCCC, V. Dịch vụ ăn ở, VI. Hoạt động hỗ trợ, VII. Kinh phí dự kiến, chữ ký duyệt.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu trong output khớp với Input đã cho (chỉ tiêu tiếp nhận, sức chứa, tiêu chí ưu tiên, nhân sự).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức kế hoạch hành chính; lịch tiếp nhận khớp lịch nhập học chung của trường; thông báo công khai trước ít nhất 2 tuần.
@@ -150,46 +136,6 @@ flowchart TD
 - [ ] Kèm đủ 3 biểu mẫu: đơn đăng ký chỗ ở, danh sách phân phòng, nội quy nội trú.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_hoc` | 2026–2027 |
-| `quy_mo` | 02 tòa nhà, 240 phòng, sức chứa 1.920 SV |
-| `chi_tieu_tiep_nhan` | 1.500 SV (1.100 tân SV + 400 SV cũ đăng ký lại) |
-| `tieu_chi_uu_tien` | 1. Diện chính sách; 2. Tân SV năm nhất; 3. SV có hộ khẩu xa |
-| `nhan_su` | 06 cán bộ quản lý, 12 bảo vệ (3 ca), 08 nhân viên phục vụ |
-
-### Output mẫu
-
-```
-TRUNG TÂM NỘI TRÚ — TRƯỜNG ĐẠI HỌC A
-KẾ HOẠCH TIẾP NHẬN VÀ QUẢN LÝ NỘI TRÚ NĂM HỌC 2026–2027
-
-I. CHỈ TIÊU: tiếp nhận 1.500 SV (sức chứa 1.920; dự phòng 420 chỗ cho đợt bổ sung).
-II. TIẾN ĐỘ TIẾP NHẬN (đợt nhập học 20–25/08/2026)
-- 20–22/08: tân SV khối Kinh tế, CNTT (dự kiến 700 SV).
-- 23–25/08: tân SV các khoa còn lại + SV cũ đăng ký lại.
-- Hồ sơ: đơn đăng ký, bản sao giấy báo nhập học/CCCD, ảnh 3x4.
-III. PHÂN PHÒNG: ưu tiên (1) diện chính sách, (2) tân SV năm nhất, (3) SV xa nhà;
-xếp cùng khoa/khóa; công khai danh sách trước 28/08/2026.
-IV. AN NINH – PCCC
-- Trực bảo vệ 24/7 (3 ca); kiểm tra tạm trú định kỳ hằng tháng.
-- Diễn tập PCCC toàn trung tâm: 05/09/2026.
-V. DỊCH VỤ: căng tin đạt VSATTP (kiểm tra đột xuất hằng tháng); xử lý phản ánh
-của SV trong 48 giờ qua hộp thư/hotline trung tâm.
-VI. HOẠT ĐỘNG HỖ TRỢ: sinh hoạt đầu khóa cho SV nội trú (đầu tháng 9); câu lạc bộ
-thể thao, đọc sách; rà soát hỗ trợ SV khó khăn (giữ kín danh tính).
-VII. KINH PHÍ DỰ KIẾN: 320 triệu đồng (sửa chữa, PCCC, hoạt động).
-
-Duyệt:                                      GIÁM ĐỐC TRUNG TÂM NỘI TRÚ
-                                                    [CHỜ KÝ]
-```
 
 ## Human gate
 - **Giám đốc Trung tâm Nội trú** phê duyệt kế hoạch và danh sách phân phòng.
@@ -206,10 +152,10 @@ Duyệt:                                      GIÁM ĐỐC TRUNG TÂM NỘI TRÚ
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-tiep-nhan-quan-ly-noi-tru`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-tiep-nhan-quan-ly-noi-tru`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

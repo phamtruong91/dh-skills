@@ -5,16 +5,18 @@ description: "Lập kế hoạch hoạt động năm của trung tâm thực hà
 
 # Kế hoạch hoạt động trung tâm thực hành
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Đầu năm học, trung tâm thực hành nghề nghiệp của trường (thực hành pháp luật, thực hành sư phạm,
@@ -122,26 +124,13 @@ flowchart TD
     I --> J[/Kế hoạch hoạt động năm của trung tâm/]
 ```
 
-## Đầu ra (Output)
-- Kế hoạch hoạt động năm của trung tâm thực hành (markdown).
-- Rubric đánh giá kỹ năng thực hành + mẫu báo cáo thu hoạch của SV.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch, các phần theo đúng thứ tự:
-1. Tiêu đề: tên trung tâm + "Kế hoạch hoạt động năm học..." (căn giữa).
-2. I. Mục tiêu: chỉ tiêu đo được gắn với chuẩn đầu ra từng học phần.
-3. II. Lịch thực hành: phân kỳ theo học kỳ/tuần, ca – nhóm SV – nội dung mô phỏng –
-   phòng/thiết bị.
-4. III. Tiếp nhận vụ việc thực tế (chỉ khi trung tâm có mảng này): quy trình tiếp nhận –
-   phân loại – phân công dưới giám sát giảng viên.
-5. IV. Phân công hướng dẫn: giảng viên phụ trách từng nhóm/ca, chuyên gia thỉnh giảng.
-6. V. Đánh giá: rubric (thang điểm, trọng số tiêu chí), mẫu báo cáo thu hoạch,
-   điều kiện đạt.
-7. VI. Kinh phí dự kiến: tổng mức và phân bổ theo nguồn.
-8. Chữ ký duyệt: Giám đốc trung tâm (kèm xác nhận của Trưởng khoa về chuẩn đầu ra).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 8 phần theo "Cấu trúc output chuẩn": tiêu đề, mục tiêu, lịch thực hành, tiếp nhận vụ việc thực tế (nếu có), phân công hướng dẫn, đánh giá, kinh phí dự kiến, chữ ký duyệt.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: số lượng SV, giảng viên, học phần, cơ sở vật chất.
 - [ ] Không bịa đặt lịch, phân công giảng viên hay chuyên gia thỉnh giảng chưa có xác nhận tham gia.
 - [ ] Chuẩn đầu ra khớp CTĐT đã kiểm định (có xác nhận của trưởng khoa); chỉ tiêu đo được.
@@ -152,43 +141,6 @@ flowchart TD
 - [ ] Đã qua Human gate: giám đốc trung tâm phê duyệt kế hoạch, trưởng khoa xác nhận chuẩn đầu ra.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, trung tâm, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_trung_tam` | Trung tâm Thực hành pháp luật — Trường Đại học A |
-| `nam_hoc` | 2026–2027 |
-| `hoc_phan_lien_quan` | Thực hành nghề luật 1, 2 (ngành Luật, năm 3–4) |
-| `so_luong_sv` | 360 SV (12 nhóm × 30 SV) |
-| `giang_vien` | 06 giảng viên Khoa Luật + 04 luật sư thỉnh giảng (giả lập) |
-
-### Output mẫu
-
-```
-TRUNG TÂM THỰC HÀNH PHÁP LUẬT — KẾ HOẠCH HOẠT ĐỘNG NĂM HỌC 2026–2027
-
-I. MỤC TIÊU: 100% SV hoàn thành 02 học phần thực hành; mỗi SV tham gia tối thiểu
-02 phiên tòa mô phỏng và 01 vụ việc tư vấn thực tế có giám sát.
-II. LỊCH THỰC HÀNH (mỗi học kỳ)
-- Tuần 1–6: kỹ năng tư vấn, soạn thảo văn bản pháp lý (tại trung tâm).
-- Tuần 7–12: phiên tòa mô phỏng (12 phiên/kỳ, mỗi nhóm 01 phiên vai trò khác nhau).
-- Tuần 13–15: tiếp nhận vụ việc thực tế (tư vấn miễn phí, có giảng viên giám sát).
-III. TIẾP NHẬN VỤ VIỆC THỰC TẾ: tiếp nhận → phân loại mức độ → phân công SV xử lý
-dưới sự giám sát trực tiếp của giảng viên; từ chối vụ việc vượt năng lực trung tâm.
-IV. PHÂN CÔNG: 06 giảng viên × 02 nhóm; 04 luật sư thỉnh giảng tham gia phiên tòa
-mô phỏng và phản biện.
-V. ĐÁNH GIÁ (rubric 100 điểm): kỹ năng tố tụng 40, soạn thảo 30, đạo đức nghề
-nghiệp 20, báo cáo thu hoạch 10. SV phải đạt ≥ 50 điểm và tham gia đủ số buổi.
-VI. KINH PHÍ DỰ KIẾN: 150 triệu đồng (giả lập).
-
-Duyệt:                                          GIÁM ĐỐC TRUNG TÂM
-Trưởng khoa (xác nhận chuẩn đầu ra)                  [CHỜ KÝ]
-```
 
 ## Human gate
 - **Giám đốc trung tâm** phê duyệt kế hoạch và phân công giảng viên.
@@ -206,10 +158,10 @@ Trưởng khoa (xác nhận chuẩn đầu ra)                  [CHỜ KÝ]
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoat-dong-trung-tam-thuc-hanh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoat-dong-trung-tam-thuc-hanh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

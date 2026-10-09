@@ -5,16 +5,18 @@ description: "Soạn công văn đi của trường đại học đúng thể th
 
 # Soạn công văn đi
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần ban hành văn bản hành chính để trao đổi công việc: phúc đáp công văn đến, đề nghị phối hợp,
@@ -49,7 +51,7 @@ thông báo, giải trình, báo cáo đột xuất.
 - → Kết quả bước: Bảng đối chiếu dữ liệu đầu vào đã kiểm chuẩn, kèm danh sách lỗi cần bổ sung (nếu có).
 
 **Bước 3. Dựng phần đầu văn bản theo thể thức NĐ 30/2020**
-- Làm gì: Lắp ráp đúng thứ tự: dòng 1 — "TRƯỜNG ĐẠI HỌC A" (chữ in hoa, bên trái) và Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" (bên phải); dòng 2 — tên đơn vị soạn và Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"; Số, ký hiệu (lấy số tiếp theo từ sổ đăng ký văn bản đi của đơn vị, kèm ký hiệu loại văn bản và mã đơn vị); địa danh, ngày tháng năm; trích yếu sau chữ "V/v"; dòng "Kính gửi". Nếu `do_khan` khác Thường: ghi dấu độ khẩn (Khẩn / Thượng khẩn / Hỏa tốc) ngay dưới số, ký hiệu.
+- Làm gì: Dùng Mẫu 1.5 Phụ lục III Nghị định 30: bên trái là cơ quan chủ quản trực tiếp (nếu có), cơ quan ban hành; bên phải là quốc hiệu, tiêu ngữ. Dưới cơ quan là số, ký hiệu và trích yếu V/v; dưới tiêu ngữ là địa danh/ngày. Số đã cấp lấy đúng hồ sơ văn thư; chưa cấp để trống. Ký hiệu công văn chỉ gồm mã cơ quan và mã đơn vị soạn/lĩnh vực, không dùng chữ CV. Không đặt phòng soạn thảo thay tên cơ quan ban hành. Nếu có độ khẩn được xác nhận, bố trí dấu ở ô 10a Phụ lục I.
 - Dùng input: `trich_yeu`, `noi_nhan` (xác định đối tượng "Kính gửi"), `do_khan`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
 - Lưu ý nghiệp vụ: Số văn bản phải lấy từ sổ đăng ký văn bản đi — không tự đặt số trùng; trích yếu viết sau "V/v", không có dấu chấm cuối câu; "Kính gửi" ghi đúng tên cơ quan như trong `noi_nhan`.
@@ -63,7 +65,7 @@ thông báo, giải trình, báo cáo đột xuất.
 - → Kết quả bước: Dự thảo nội dung 3 phần hoàn chỉnh.
 
 **Bước 5. Soạn nơi nhận và khối chữ ký**
-- Làm gì: Liệt kê nơi nhận: dòng "- Như trên;" (hoặc "- Như Kính gửi;"), tiếp theo các nơi nhận để biết/lưu, kết thúc bằng "- Lưu: VT, [mã đơn vị]."; khối chữ ký phía bên phải: Phó Hiệu trưởng ký thay → "KT. HIỆU TRƯỞNG" / "PHÓ HIỆU TRƯỞNG"; Trưởng phòng ký thừa ủy quyền → "TUQ. HIỆU TRƯỞNG" / "TRƯỞNG PHÒNG [tên phòng]"; bản trình ký ghi họ tên người dự kiến ký và trạng thái [CHỜ KÝ].
+- Làm gì: Liệt kê nơi nhận: dòng "- Như trên;" (hoặc "- Như Kính gửi;"), tiếp theo các nơi nhận để biết/lưu, kết thúc bằng "- Lưu: VT, [mã đơn vị]."; khối chữ ký phía bên phải: Phó Hiệu trưởng ký thay → "KT. HIỆU TRƯỞNG" / "PHÓ HIỆU TRƯỞNG"; Trưởng phòng ký thừa ủy quyền → "TUQ. HIỆU TRƯỞNG" / "TRƯỞNG PHÒNG [tên phòng]"; bản trình ký ghi họ tên người dự kiến ký và chừa khoảng trống ký.
 - Dùng input: `noi_nhan`, `nguoi_ky`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
 - Lưu ý nghiệp vụ: Thừa lệnh (TL.) phải có căn cứ giao ký trong quy chế làm việc/quy chế văn thư; thừa ủy quyền (TUQ.) phải có văn bản ủy quyền giới hạn thời gian và nội dung, không được ủy quyền lại. Kiểm tra căn cứ trước khi chọn ký hiệu; nơi nhận thiếu đơn vị lưu thì văn thư không có bản lưu.
@@ -77,11 +79,11 @@ thông báo, giải trình, báo cáo đột xuất.
 - → Kết quả bước: Checklist kiểm tra đã đánh dấu + danh sách lỗi cần sửa (nếu có), trả về bước tương ứng để chỉnh.
 
 **Bước 7. Xuất bản văn bản hoàn chỉnh trình ký**
-- Làm gì: Ghép phần đầu văn bản + nội dung + nơi nhận + khối chữ ký thành văn bản hoàn chỉnh ở định dạng markdown; đính kèm checklist kiểm tra; chuyển cho chuyên viên soạn xác nhận rồi trình người ký duyệt (human gate).
+- Làm gì: Ghép phần đầu văn bản + nội dung + nơi nhận + khối chữ ký thành văn bản hoàn chỉnh ở định dạng markdown; thực hiện đối chiếu nội bộ, không xuất kèm checklist; chuyển cho chuyên viên soạn xác nhận rồi trình người ký duyệt (human gate).
 - Dùng input: toàn bộ.
 - Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Sau khi đã đăng ký số vào sổ văn bản đi thì không tự ý đổi số, ký hiệu.
-- → Kết quả bước: Văn bản công văn hoàn chỉnh + checklist kiểm tra, sẵn sàng trình ký / chuyển sang Word.
+- → Kết quả bước: Văn bản công văn hoàn chỉnh; phần kiểm tra giữ nội bộ, sẵn sàng trình ký / chuyển sang Word.
 
 ## Luồng quy trình (Workflow)
 
@@ -101,107 +103,35 @@ flowchart TD
     HG --> OUT[["Văn bản công văn hoàn chỉnh trình ký"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản công văn hoàn chỉnh.
-- Checklist kiểm tra thể thức (đánh dấu từng thành phần đã đủ/chưa).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của văn bản công văn — các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tên cơ quan ban hành ("TRƯỜNG ĐẠI HỌC A") + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-2. Tên đơn vị soạn thảo + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"
-3. Số, ký hiệu văn bản (ghi dấu độ khẩn ngay bên dưới nếu có: Khẩn / Thượng khẩn / Hỏa tốc)
-4. Địa danh, ngày tháng năm ban hành
-5. Trích yếu nội dung sau chữ "V/v"
-6. Dòng "Kính gửi" + tên cơ quan/cá nhân nhận
-7. Phần mở đầu: lý do, căn cứ ban hành (trích dẫn số, ký hiệu, ngày của công văn đến nếu là loại Phúc đáp)
-8. Nội dung chính: đánh số thứ tự 1., 2., 3..., mỗi điểm một ý
-9. Phần kết thúc: đề nghị phối hợp/hồi âm + lời cảm ơn, kết bằng ký hiệu "./."
-10. Nơi nhận (dòng "- Như trên;" rồi các nơi nhận để biết/lưu, kết thúc "- Lưu: VT, [mã đơn vị].")
-11. Khối chữ ký: ký hiệu thay mặt (KT. / TL.) + chức danh + họ tên người ký
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tên cơ quan ban hành ("TRƯỜNG ĐẠI HỌC A") + Quốc hiệu "CỘNG…; Tên đơn vị soạn thảo + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"; Số, ký hiệu văn bản; Địa danh, ngày tháng năm ban hành; … (đủ 11 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Nghị định 30/2020/NĐ-CP về công tác văn thư.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Số văn bản phải lấy từ sổ đăng ký văn bản đi — không tự đặt số trùng
 - [ ] "Kính gửi" ghi đúng tên cơ quan như trong `noi_nhan`
 - [ ] Viết tắt (vd "HCTH") phải giải thích đầy đủ ở lần xuất hiện đầu tiên
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_cong_van` | Phúc đáp |
-| `trich_yeu` | phối hợp tổ chức Hội thảo khoa học sinh viên năm 2026 |
-| `cong_van_den` | Số 45/CV-B ngày 02/10/2026 của Học viện B (giả lập) |
-| `noi_dung` | 1. Đồng ý phối hợp tổ chức Hội thảo theo đề xuất. 2. Cử 02 giảng viên Khoa CNTT tham gia Ban Tổ chức (danh sách kèm theo). 3. Đề nghị gửi chương trình chi tiết trước ngày 20/10/2026. |
-| `noi_nhan` | Học viện B (giả lập); Phòng KHCN (lưu); Lưu: VT, HCTH |
-| `nguoi_ky` | Phó Hiệu trưởng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG HÀNH CHÍNH – TỔNG HỢP              Độc lập – Tự do – Hạnh phúc
-      Số: 182/CV-ĐHA-HCTH
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-V/v phối hợp tổ chức Hội thảo khoa học sinh viên năm 2026
-
-Kính gửi: Học viện B (giả lập)
-
-Phúc đáp Công văn số 45/CV-B ngày 02/10/2026 của Quý cơ quan về việc phối hợp
-tổ chức Hội thảo khoa học sinh viên năm 2026, Trường Đại học A trân trọng
-thông báo:
-
-1. Nhà trường đồng ý phối hợp tổ chức Hội thảo theo đề xuất của Quý cơ quan.
-
-2. Nhà trường cử 02 giảng viên Khoa Công nghệ thông tin tham gia Ban Tổ chức
-Hội thảo (danh sách kèm theo).
-
-3. Đề nghị Quý cơ quan gửi chương trình chi tiết của Hội thảo về Nhà trường
-trước ngày 20/10/2026 để phối hợp triển khai.
-
-Trân trọng cảm ơn sự phối hợp của Quý cơ quan./.
-
-Nơi nhận:                                          KT. HIỆU TRƯỞNG
-- Như trên;                                        PHÓ HIỆU TRƯỞNG
-- Phòng KHCN (lưu);
-- Lưu: VT, HCTH.                                       [CHỜ KÝ]
-
-                                                PGS.TS. Trần Văn B
-```
-
-### Checklist kiểm tra thể thức (output kèm theo)
-- [x] Quốc hiệu – Tiêu ngữ đúng vị trí, chữ in hoa
-- [x] Số, ký hiệu văn bản
-- [x] Địa danh, ngày tháng năm
-- [x] Trích yếu nội dung
-- [x] Trích dẫn công văn đến (loại Phúc đáp)
-- [x] Nội dung đánh số thứ tự rõ ràng
-- [x] Nơi nhận đầy đủ
-- [x] Thẩm quyền ký phù hợp
-
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư.
-- Công văn có độ khẩn "Hỏa tốc"/"Thượng khẩn" cần ghi dấu độ khẩn dưới số, ký hiệu.
+- Công văn có độ khẩn được xác nhận dùng KHẨN/THƯỢNG KHẨN/HỎA TỐC tại ô 10a theo Phụ lục I.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-cong-van`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-cong-van`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

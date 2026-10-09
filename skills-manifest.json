@@ -1,42 +1,50 @@
 {
-  "version": "1.1.1",
-  "updated_at": "2026-10-09",
+  "version": "1.2.1",
+  "updated_at": "2026-10-10",
   "count": 171,
   "skills": [
     {
       "name": "audit-tien-do-tot-nghiep",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bai-viet-truyen-thong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-3-cong-khai",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -45,28 +53,36 @@
       "approval_owner": null,
       "legal_updates": [
         "cong-khai"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-chuyen-doi-so",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-cong-khai-tai-chinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -76,70 +92,90 @@
       "legal_updates": [
         "cong-khai",
         "hoc-phi"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-cong-tac-chinh-tri",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "dang",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-cong-tac-thu-vien",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-cong-tac-y-te",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-ctsv-nam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-danh-gia-vc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -150,14 +186,18 @@
         "nhan-su-0",
         "nhan-su-1",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-dao-tao-dinh-ky",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -166,28 +206,36 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-dao-tao-sdh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-dbcl-nam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -197,70 +245,90 @@
       "legal_updates": [
         "kiem-dinh-co-so",
         "kiem-dinh-ctdt"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-dich-vu-khcn",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-du-an-dinh-ky",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-giam-sat-du-an-dau-tu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-ket-qua-doan",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-ket-qua-tuyen-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -269,14 +337,18 @@
       "approval_owner": null,
       "legal_updates": [
         "tuyen-sinh"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-khcn-nam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -285,28 +357,36 @@
       "approval_owner": null,
       "legal_updates": [
         "khcn"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-kiem-toan-noi-bo",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-nghiem-thu-de-tai",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -315,14 +395,18 @@
       "approval_owner": null,
       "legal_updates": [
         "khcn"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-quyet-toan",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -332,14 +416,18 @@
       "legal_updates": [
         "ke-toan",
         "ngan-sach"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tai-chinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -348,14 +436,18 @@
       "approval_owner": null,
       "legal_updates": [
         "ke-toan"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-thi-dua",
-      "version": "1.1.1",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -363,14 +455,18 @@
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
       "legal_updates": [],
-      "changes": "Aggregate confirmed records only; remove unsupported sample claims and individual merit assessment."
+      "changes": "Aggregate confirmed records only; remove unsupported sample claims and individual merit assessment.",
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tien-do-de-tai",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -379,70 +475,90 @@
       "approval_owner": null,
       "legal_updates": [
         "khcn"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tong-hop-phan-hieu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tong-ket-khoa",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tong-ket-nam-truong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tong-ket-vp",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bao-cao-tu-danh-gia",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -452,42 +568,54 @@
       "legal_updates": [
         "kiem-dinh-co-so",
         "kiem-dinh-ctdt"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-ban-bao-ve-luan-van",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-ban-hop-hoi-dong-khdt",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-ban-kiem-ke-tai-san",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -496,28 +624,36 @@
       "approval_owner": null,
       "legal_updates": [
         "tai-san"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-ban-nghiem-thu-thiet-bi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-ban-phong-thi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -526,14 +662,18 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-soan-giao-trinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -542,98 +682,126 @@
       "approval_owner": null,
       "legal_updates": [
         "shtt"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "bien-tap-xuat-ban-an-pham",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "campaign-brief-tuyen-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "cap-chung-chi-dao-tao-lien-tuc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "cau-truc-bai-bao-khoa-hoc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "checklist-chung-tu-thanh-toan",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "checklist-ho-so-gs-pgs",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "checklist-minh-chung-kiem-dinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -643,14 +811,18 @@
       "legal_updates": [
         "kiem-dinh-co-so",
         "kiem-dinh-ctdt"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "chuan-bi-hop-hoi-dong-truong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -659,42 +831,54 @@
       "approval_owner": null,
       "legal_updates": [
         "nhan-su-2"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "chuan-bi-hop-va-action-tracker",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "content-calendar-truyen-thong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "de-an-mo-nganh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -703,14 +887,18 @@
       "approval_owner": null,
       "legal_updates": [
         "chuong-trinh"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "de-an-tuyen-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -719,28 +907,36 @@
       "approval_owner": null,
       "legal_updates": [
         "tuyen-sinh"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "de-an-vi-tri-viec-lam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "de-cuong-chi-tiet-hoc-phan",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -750,112 +946,144 @@
       "legal_updates": [
         "dao-tao",
         "chuong-trinh"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "dich-thuat-song-ngu-va-thuat-ngu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "dong-goi-skill-tu-quy-trinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "executive-brief-trinh-lanh-dao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "faq-chinh-sach-co-trich-nguon",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "faq-tuyen-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "funnel-theo-doi-thi-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "helpdesk-cntt-triage",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-chuyen-giao-cong-nghe",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -865,84 +1093,108 @@
       "legal_updates": [
         "khcn",
         "shtt"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-cong-nhan-sang-kien",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-dang-ky-shtt",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-de-nghi-khen-thuong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-du-an-dau-tu-ha-tang",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-hop-dong-dich-vu-khcn",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-moi-thau",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -951,28 +1203,36 @@
       "approval_owner": null,
       "legal_updates": [
         "mua-sam"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-quan-ly-suc-khoe",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ho-so-quyet-toan-de-tai",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -981,14 +1241,18 @@
       "approval_owner": null,
       "legal_updates": [
         "khcn"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "hop-dong-lam-viec",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -999,14 +1263,18 @@
         "nhan-su-0",
         "nhan-su-4",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "hop-dong-mua-sam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1015,14 +1283,18 @@
       "approval_owner": null,
       "legal_updates": [
         "mua-sam"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "hop-dong-thuc-hien-de-tai",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1031,42 +1303,54 @@
       "approval_owner": null,
       "legal_updates": [
         "khcn"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "hop-nhat-bao-cao-don-vi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-bao-tri-csvc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-bo-sung-hoc-lieu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1075,28 +1359,36 @@
       "approval_owner": null,
       "legal_updates": [
         "shtt"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-boi-duong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-cai-tien-chat-luong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1106,140 +1398,180 @@
       "legal_updates": [
         "kiem-dinh-co-so",
         "kiem-dinh-ctdt"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-dao-tao-lien-tuc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-dao-tao-sdh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-doan-ra-vao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-giao-duc-chinh-tri-tu-tuong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-hoat-dong-bao-chi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-hoat-dong-phan-hieu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-hoat-dong-trung-tam-thuc-hanh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-hoi-thao-khoa-hoc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-kiem-toan-noi-bo",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-mua-sam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1249,14 +1581,18 @@
       "legal_updates": [
         "mua-sam",
         "tai-san"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-nam-hoc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1265,126 +1601,162 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-nam-hoc-truong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-nckh-khoa",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-ngay-hoi-viec-lam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-phat-trien-cntt",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-quan-tri-thuong-hieu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-thanh-tra-nam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-tiep-nhan-quan-ly-noi-tru",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-to-chuc-su-kien",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-to-chuc-thi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1393,98 +1765,126 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-truyen-thong-nam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-tuan-shcd",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-uom-tao-dmst",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-xuc-tien-dau-tu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ke-hoach-y-te-hoc-duong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ket-luan-thanh-tra",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "khao-sat-viec-lam-sv-tot-nghiep",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1493,14 +1893,18 @@
       "approval_owner": null,
       "legal_updates": [
         "kiem-dinh-co-so"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "khung-chuong-trinh-dao-tao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1509,84 +1913,108 @@
       "approval_owner": null,
       "legal_updates": [
         "chuong-trinh"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "kich-ban-khanh-tiet",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "kich-ban-tu-van-tuyen-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "kich-ban-video-truyen-thong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "kiem-tra-day-du-ho-so",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ky-yeu-hoi-thao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "lap-du-toan-nam",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1595,28 +2023,36 @@
       "approval_owner": null,
       "legal_updates": [
         "ngan-sach"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "lap-lich-cong-tac-tuan",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "lap-thoi-khoa-bieu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1625,14 +2061,18 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ma-tran-chuan-dau-ra",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1641,70 +2081,90 @@
       "approval_owner": null,
       "legal_updates": [
         "chuong-trinh"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "nghi-quyet-hoi-dong-khdt",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "noi-quy-ky-tuc-xa",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phan-cong-giang-day",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phan-tich-chenh-lech-ngan-sach",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phan-tich-ket-qua-khao-sat",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1714,14 +2174,18 @@
       "legal_updates": [
         "kiem-dinh-co-so",
         "kiem-dinh-ctdt"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phan-tich-ket-qua-thi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1730,28 +2194,36 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phieu-danh-gia-ren-luyen",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phieu-danh-gia-vien-chuc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1762,112 +2234,144 @@
         "nhan-su-0",
         "nhan-su-1",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phieu-lay-y-kien-hoi-dong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "phieu-trinh-ky",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "pmo-quan-tri-du-an",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "press-kit-su-kien",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quan-ly-phien-ban-tai-lieu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quan-tri-tap-chi-khoa-hoc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-che-an-toan-thong-tin",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-che-dao-tao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1876,28 +2380,36 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-che-to-chuc-hoat-dong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-che-to-chuc-hoat-dong-truong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1906,14 +2418,18 @@
       "approval_owner": null,
       "legal_updates": [
         "nhan-su-2"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-trinh-bo-nhiem",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1923,14 +2439,18 @@
       "legal_updates": [
         "nhan-su-0",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-trinh-ngan-hang-de-thi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1939,14 +2459,18 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quy-trinh-tuyen-dung",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1956,14 +2480,18 @@
       "legal_updates": [
         "nhan-su-0",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-cap-hoc-bong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1972,28 +2500,36 @@
       "approval_owner": null,
       "legal_updates": [
         "hoc-phi"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-cu-di-hoc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-dieu-dong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2003,28 +2539,36 @@
       "legal_updates": [
         "nhan-su-0",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-giai-quyet-kn",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-hoc-vu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2033,56 +2577,72 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-hoi-dong-bao-ve",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-khen-thuong-kl",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-ky-luat-sv",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-nang-luong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2093,14 +2653,18 @@
         "nhan-su-0",
         "nhan-su-1",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-phan-cong-thi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2109,14 +2673,18 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-phuc-khao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2125,14 +2693,18 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "quyet-dinh-tot-nghiep",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2142,14 +2714,18 @@
       "legal_updates": [
         "dao-tao",
         "van-bang"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "ra-soat-du-thao-van-ban",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2158,14 +2734,18 @@
       "approval_owner": null,
       "legal_updates": [
         "dao-tao"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "so-lieu-3-cong-khai-dt",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2174,182 +2754,234 @@
       "approval_owner": null,
       "legal_updates": [
         "cong-khai"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "so-van-ban-di-den",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "chuyen-nganh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-bien-ban-hop",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-cong-van",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-giay-moi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-ke-hoach-ct",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-mou-moa",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-quyet-dinh-hc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-thong-bao",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "soan-to-trinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "tham-dinh-phap-ly-van-ban",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "theo-doi-grant-nghien-cuu",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "theo-doi-thay-doi-van-ban-phap-quy",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thiet-ke-phieu-khao-sat",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2359,14 +2991,18 @@
       "legal_updates": [
         "kiem-dinh-co-so",
         "kiem-dinh-ctdt"
-      ]
+      ],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thong-bao-dang-ky-de-tai",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2375,28 +3011,36 @@
       "approval_owner": null,
       "legal_updates": [
         "khcn"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thong-bao-hoc-bong",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thong-bao-muc-thu-hoc-phi",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2406,14 +3050,18 @@
       "legal_updates": [
         "cong-khai",
         "hoc-phi"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thong-bao-tuyen-dung",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2423,14 +3071,18 @@
       "legal_updates": [
         "nhan-su-0",
         "nhan-su-3"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thong-bao-tuyen-sinh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2439,105 +3091,137 @@
       "approval_owner": null,
       "legal_updates": [
         "tuyen-sinh"
-      ]
+      ],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thong-bao-tuyen-sinh-sdh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "thuyet-minh-de-tai-nckh",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "to-chuc-khoa-boi-duong-ngan-han",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "tong-hop-diem-ren-luyen",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "hanh-chinh",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "tong-quan-tai-lieu-khoa-hoc",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "triage-case-sinh-vien",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     },
     {
       "name": "tro-ly-giang-day",
-      "version": "1.1.0",
-      "updated_at": "2026-10-09",
-      "source_repository": "https://github.com/phamtruong91/dh-skills",
-      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "version": "1.2.1",
+      "updated_at": "2026-10-10",
+      "source_repository": "https://github.com/phamtruong91/university-skills-framework",
+      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
       "legal_review_status": "requires-applicability-and-fulltext-check",
       "approval_owner": null,
-      "legal_updates": []
+      "legal_updates": [],
+      "output_profile": "nghiep-vu",
+      "output_reference": "references/quy-cach-dau-ra.md",
+      "missing_data_policy": "preserve-template-fill-spaces",
+      "qa_attachments": false
     }
   ]
 }

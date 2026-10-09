@@ -5,16 +5,18 @@ description: "Soạn quyết định thành lập hội đồng đánh giá lu�
 
 # Quyết định thành lập hội đồng bảo vệ luận văn / luận án
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi học viên cao học / nghiên cứu sinh đã đủ điều kiện bảo vệ (hoàn thành học phần, đề cương được duyệt,
@@ -123,30 +125,12 @@ flowchart TD
     F -->|Có| H --> OUT
 ```
 
-## Đầu ra (Output)
-- Quyết định thành lập hội đồng hoàn chỉnh.
-- Checklist điều kiện bảo vệ + tiêu chuẩn thành viên hội đồng.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của quyết định thành lập hội đồng đánh giá luận văn/
-luận án, các phần theo đúng thứ tự:
-1. Phần đầu văn bản: quốc hiệu – tiêu ngữ; tên trường; số, ký hiệu quyết định; địa danh,
-   ngày tháng năm ban hành.
-2. Tên loại và trích yếu: "QUYẾT ĐỊNH" + "Về việc thành lập Hội đồng đánh giá luận văn thạc sĩ /
-   luận án tiến sĩ".
-3. Thẩm quyền ban hành: chức danh người ký (HIỆU TRƯỞNG / KT. HIỆU TRƯỞNG – PHÓ HIỆU TRƯỞNG).
-4. Phần căn cứ: quy chế đào tạo trình độ thạc sĩ (TT 23/2021) / tiến sĩ (TT 18/2021); quy chế
-   đào tạo sau đại học của trường; tờ trình đề nghị của Trưởng phòng Đào tạo Sau đại học
-   (số, ngày).
-5. Phần quyết định: Điều 1 (thành lập hội đồng: họ tên HV/NCS, mã HV, ngành, tên đề tài trong
-   ngoặc kép, người hướng dẫn, danh sách thành viên đánh số theo vai trò); Điều 2 (trách nhiệm
-   của hội đồng; thời gian — giờ, ngày — và địa điểm bảo vệ); Điều 3 (trách nhiệm thi hành,
-   hiệu lực kể từ ngày ký).
-6. Phần cuối: nơi nhận; chữ ký, họ tên người ký.
-7. Sản phẩm kèm theo: checklist điều kiện bảo vệ của HV/NCS + tiêu chuẩn thành viên hội đồng.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": phần đầu văn bản; tên loại + trích yếu; thẩm quyền ban hành; phần căn cứ (TT 23/2021 hoặc TT 18/2021, quy chế SĐH của trường, tờ trình); Điều 1–3; nơi nhận, chữ ký; checklist điều kiện bảo vệ + tiêu chuẩn thành viên hội đồng.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (bậc đào tạo, họ tên/mã HV-NCS, ngành, tên đề tài, người hướng dẫn, thành viên hội đồng, thời gian – địa điểm).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính theo Nghị định 30/2020/NĐ-CP; tên đề tài trong Điều 1 đặt trong ngoặc kép.
@@ -158,79 +142,6 @@ luận án, các phần theo đúng thứ tự:
 - [ ] Ngày bảo vệ sau ngày ký quyết định ít nhất 15 ngày (đối với luận án tiến sĩ); giờ, ngày, địa điểm ghi cụ thể; quyết định đã gửi đến thành viên hội đồng kèm luận văn/luận án cho phản biện đủ thời gian đọc.
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `bac_dao_tao` | Thạc sĩ |
-| `ho_ten_hv` | Hoàng Thị Yến |
-| `ma_hv` | CH2024-018 |
-| `nganh` | Quản trị kinh doanh |
-| `ten_de_tai` | Các nhân tố ảnh hưởng đến ý định mua sắm trực tuyến của người tiêu dùng trẻ tại thành phố C |
-| `nguoi_huong_dan` | PGS.TS. Ngô Thị A |
-| `thanh_phan_hd` | Chủ tịch: GS.TS. Lê Văn D (Trường ĐH A); Phản biện 1: PGS.TS. Trần Văn B (Trường ĐH A); Phản biện 2: TS. Trần Văn D (Học viện Tài chính); Ủy viên: TS. Phạm Thị C (Trường ĐH A); Thư ký: ThS. Đỗ Thị A (Trường ĐH A) |
-| `thoi_gian_dia_diem` | 09h00, ngày 25/10/2026, Phòng họp A2.03, Trường Đại học A |
-| `nguoi_ky` | Phó Hiệu trưởng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A             CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                           Độc lập – Tự do – Hạnh phúc
-      Số: 486/QĐ-ĐHA-SĐH
-                                                   Thành phố C, ngày 09 tháng 10 năm 2026
-
-                                     QUYẾT ĐỊNH
-              Về việc thành lập Hội đồng đánh giá luận văn thạc sĩ
-
-HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Quy chế đào tạo trình độ thạc sĩ ban hành kèm theo Thông tư số
-23/2021/TT-BGDĐT ngày 30/8/2021 của Bộ trưởng Bộ Giáo dục và Đào tạo;
-Căn cứ Quy chế đào tạo sau đại học của Trường Đại học A;
-Căn cứ đề nghị của Trưởng phòng Đào tạo Sau đại học tại Tờ trình
-số 112/TTr-SĐH ngày 05/10/2026,
-
-                                    QUYẾT ĐỊNH:
-
-Điều 1. Thành lập Hội đồng đánh giá luận văn thạc sĩ của học viên
-Hoàng Thị Yến, mã học viên CH2024-018, ngành Quản trị kinh doanh,
-đề tài: "Các nhân tố ảnh hưởng đến ý định mua sắm trực tuyến của
-người tiêu dùng trẻ tại thành phố C", người hướng dẫn: PGS.TS. Ngô Thị A,
-gồm các thành viên có tên sau:
-1. GS.TS. Lê Văn D — Chủ tịch Hội đồng;
-2. PGS.TS. Trần Văn B — Phản biện 1;
-3. TS. Trần Văn D — Phản biện 2;
-4. TS. Phạm Thị C — Ủy viên;
-5. ThS. Đỗ Thị A — Ủy viên, Thư ký Hội đồng.
-
-Điều 2. Hội đồng có trách nhiệm tổ chức đánh giá luận văn thạc sĩ theo
-đúng quy chế hiện hành. Buổi bảo vệ được tổ chức vào hồi 09h00,
-ngày 25 tháng 10 năm 2026, tại Phòng họp A2.03, Trường Đại học A.
-
-Điều 3. Trưởng phòng Đào tạo Sau đại học, Trưởng các đơn vị có liên quan
-và các thành viên có tên tại Điều 1 chịu trách nhiệm thi hành Quyết định này.
-Quyết định có hiệu lực kể từ ngày ký./.
-
-Nơi nhận:                                        KT. HIỆU TRƯỞNG
-- Như Điều 3;                                    PHÓ HIỆU TRƯỞNG
-- Học viên Hoàng Thị Yến;
-- Lưu: VT, SĐH.                                      [CHỜ KÝ]
-
-                                                PGS.TS. Trần Văn B
-```
-
-### Checklist điều kiện & tiêu chuẩn (output kèm theo)
-- [x] Học viên hoàn thành học phần, đề cương được duyệt, người HD đồng ý cho bảo vệ
-- [x] Hội đồng 05 thành viên, đủ: Chủ tịch + 02 phản biện + 02 ủy viên (01 thư ký)
-- [x] Phản biện có trình độ TS trở lên, không phải người hướng dẫn
-- [x] Thời gian bảo vệ sau ngày ký quyết định ≥ 15 ngày
-- [x] Thẩm quyền ký: Phó Hiệu trưởng (thừa ủy quyền)
-
 ## Căn cứ & lưu ý
 - Thông tư 23/2021/TT-BGDĐT (Quy chế đào tạo trình độ thạc sĩ); Thông tư 18/2021/TT-BGDĐT
   (Quy chế tuyển sinh và đào tạo trình độ tiến sĩ); Nghị định 30/2020/NĐ-CP (thể thức văn bản).
@@ -241,10 +152,10 @@ Nơi nhận:                                        KT. HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-hoi-dong-bao-ve`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-hoi-dong-bao-ve`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
