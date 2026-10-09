@@ -2,7 +2,7 @@
 
 Kho nguồn: https://github.com/phamtruong91/dh-skills. Người duy trì ghi theo GitHub: `phamtruong91`, Phạm Văn Trường. Giấy phép và bản quyền theo LICENSE (CES Global); tài khoản duy trì không đồng nghĩa chủ sở hữu toàn bộ nội dung.
 
-Phiên bản gói hiện tại: **1.1.0**, ngày cập nhật **2026-10-09**. Baseline trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Xác định commit thực tế bằng `git log -1` và `git log -1 -- skills/<ten-skill>`; không dùng baseline như commit của bản mới. Không có người phê duyệt nghiệp vụ đã được chỉ định trong kho; trường triển khai phải giao người chịu trách nhiệm.
+Phiên bản gói hiện tại: **1.1.1**, ngày cập nhật **2026-10-09**. Baseline trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Xác định commit thực tế bằng `git log -1` và `git log -1 -- skills/<ten-skill>`; không dùng baseline như commit của bản mới. Không có người phê duyệt nghiệp vụ đã được chỉ định trong kho; trường triển khai phải giao người chịu trách nhiệm.
 
 ## Quy tắc thay đổi
 

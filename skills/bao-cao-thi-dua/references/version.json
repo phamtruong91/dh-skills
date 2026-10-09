@@ -1,6 +1,6 @@
 {
   "name": "bao-cao-thi-dua",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "updated_at": "2026-10-09",
   "source_repository": "https://github.com/phamtruong91/dh-skills",
   "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
@@ -10,5 +10,6 @@
   },
   "legal_review_status": "requires-applicability-and-fulltext-check",
   "approval_owner": null,
-  "legal_updates": []
+  "legal_updates": [],
+  "changes": "Aggregate confirmed records only; remove unsupported sample claims and individual merit assessment."
 }

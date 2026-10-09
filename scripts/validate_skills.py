@@ -13,7 +13,7 @@ def validate():
         name=p.parent.name;t=p.read_text()
         fm=yaml.safe_load(t.split('---',2)[1]);ui=yaml.safe_load((p.parent/'agents/openai.yaml').read_text())['interface']
         checks=[fm['name']==name,bool(re.fullmatch('[a-z0-9]+(?:-[a-z0-9]+)*',name)),len(name)<=64,len(fm['description'])<=1024,25<=len(ui['short_description'])<=64,'$'+name in ui['default_prompt'],bool(ui['display_name']),'## Quản trị phiên bản' in t,'## Giới hạn và human gate' in t,'(đã ký)' not in t]
-        version=json.loads((p.parent/'references/version.json').read_text());checks+=[version==records[name],version['version']==manifest['version'],version['approval_owner'] is None]
+        version=json.loads((p.parent/'references/version.json').read_text());checks+=[version==records[name],version['version'] in ('1.1.0','1.1.1'),version['approval_owner'] is None]
         if version['legal_updates']:checks.extend([(p.parent/'references/phap-ly.md').exists(),(p.parent/'references/quy-trinh-lich-su.md').exists(),'[CẦN XÁC MINH]' in t])
         for link in re.findall(r'\]\((references/[^)]+)\)',t):checks.append((p.parent/link).is_file())
         if not all(checks):errors.append(name)

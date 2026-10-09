@@ -12,7 +12,9 @@
 
 > **Skill là gì?** Một bộ hướng dẫn thực hiện công việc có thể tái sử dụng: nêu khi nào dùng, cần dữ liệu gì, thực hiện những bước nào, tạo sản phẩm gì và ai kiểm duyệt. Ví dụ: skill soạn công văn nhận yêu cầu và thông tin nơi nhận để tạo dự thảo kèm checklist kiểm tra.
 
-## Phiên bản 1.1.0 — cập nhật 09/10/2026
+## Phiên bản 1.1.1 — cập nhật 09/10/2026
+
+Bản 1.1.1 sửa riêng skill báo cáo thi đua; 170 skill còn lại giữ bản 1.1.0.
 
 | Hạng mục | Kết quả |
 | --- | --- |

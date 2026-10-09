@@ -1,5 +1,10 @@
 # Nhật ký thay đổi
 
+## 1.1.1 — 2026-10-09
+
+- Sửa bao-cao-thi-dua để chỉ tổng hợp dữ liệu đã được xác nhận, bỏ ví dụ tự sinh số liệu/nhận xét, không đánh giá hoặc quyết định quyền lợi cá nhân. Các skill khác giữ bản 1.1.0.
+
+
 ## 1.1.0 — 2026-10-09
 
 - Bổ sung `agents/openai.yaml` cho 171 skill: display_name, short_description, default_prompt có tên gọi `$skill`.
