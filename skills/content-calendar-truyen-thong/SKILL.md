@@ -5,16 +5,18 @@ description: "Lập content calendar truyền thông theo tuần/tháng: chủ �
 
 # Content calendar truyền thông
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần lên lịch đăng bài chi tiết theo tuần hoặc tháng cho các kênh (website, fanpage, TikTok,
@@ -82,18 +84,13 @@ flowchart TD
 ```
 ```
 
-## Đầu ra (Output)
-- Bảng content calendar (markdown): ngày, chủ đề, định dạng, kênh, người phụ trách, trạng thái.
-- Danh sách việc theo từng người phụ trách.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** Content calendar gồm các phần bắt buộc theo đúng thứ tự sau:
-1. Tiêu đề: "CONTENT CALENDAR — TUẦN/THÁNG ..." + tên trường + dòng chiến dịch (+ ghi chú giả lập nếu mô phỏng).
-2. Bảng calendar với các cột: Ngày – Chủ đề – Định dạng – Kênh – Phụ trách – Trạng thái.
-3. Danh sách việc theo từng người phụ trách.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề; Bảng calendar với các cột; Danh sách việc theo từng người phụ trách.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Bảng content calendar (markdown): ngày, chủ đề, định dạng, kênh, người phụ trách, trạng…
 - [ ] Có đầy đủ sản phẩm: Danh sách việc theo từng người phụ trách
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -105,43 +102,6 @@ flowchart TD
 - [ ] Tỉ lệ là gợi ý — cao điểm tuyển sinh thì tăng tỉ trọng tuyển sinh
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ky` | Tuần 3, tháng 10/2026 (12–17/10/2026) |
-| `chien_dich` | Cao điểm tư vấn tuyển sinh |
-| `kenh` | Fanpage, TikTok, Website |
-| `tan_suat` | Fanpage 5 bài/tuần, TikTok 3 video/tuần, Website 2 bài/tuần |
-| `chu_de_uu_tien` | Ngày hội tư vấn 17/10; gương sinh viên tiêu biểu |
-
-### Output mẫu
-
-```
-CONTENT CALENDAR — TUẦN 3, THÁNG 10/2026 (Trường Đại học A — giả lập)
-Chiến dịch: Cao điểm tư vấn tuyển sinh
-
-| Ngày | Chủ đề | Định dạng | Kênh | Phụ trách | Trạng thái |
-|------|--------|-----------|------|-----------|-----------|
-| 12/10 | 5 lý do chọn ngành CNTT tại A | Infographic | Fanpage | BTV An | Chờ duyệt |
-| 13/10 | Một ngày của sinh viên năm nhất | Video 60s | TikTok | Quay dựng Bình | Đang sản xuất |
-| 14/10 | Hướng dẫn đăng ký xét học bạ online | Bài viết + ảnh | Website, Fanpage | BTV An | Chờ duyệt |
-| 15/10 | Gương SV đạt học bổng toàn phần | Bài phỏng vấn | Website, Fanpage | BTV Chi | Lên ý tưởng |
-| 16/10 | Nhá hàng Ngày hội tư vấn 17/10 | Teaser video 30s | TikTok, Fanpage | Quay dựng Bình | Đang sản xuất |
-| 17/10 | Livestream Ngày hội tư vấn | Livestream | Fanpage | Cả nhóm | Chuẩn bị |
-```
-
-DANH SÁCH VIỆC THEO NGƯỜI PHỤ TRÁCH
-- BTV An: 12/10 (infographic 5 lý do chọn ngành CNTT); 14/10 (bài viết hướng dẫn đăng ký xét học bạ)
-- Quay dựng Bình: 13/10 (video 60s một ngày của SV năm nhất); 16/10 (teaser video 30s Ngày hội tư vấn)
-- BTV Chi: 15/10 (bài phỏng vấn gương SV học bổng toàn phần)
-- Cả nhóm: 17/10 (livestream Ngày hội tư vấn)
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng phòng duyệt content calendar trước khi giao sản xuất.
@@ -159,10 +119,10 @@ DANH SÁCH VIỆC THEO NGƯỜI PHỤ TRÁCH
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/content-calendar-truyen-thong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/content-calendar-truyen-thong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

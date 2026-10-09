@@ -5,16 +5,18 @@ description: "Xây dựng bộ hỏi đáp tuyển sinh theo quy chế/đề án
 
 # FAQ tuyển sinh
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần bộ câu hỏi thường gặp về tuyển sinh: phương thức xét tuyển, chỉ tiêu, học phí,
@@ -82,21 +84,13 @@ flowchart TD
     HG --> I[["Bộ FAQ theo nhóm + danh sách rà soát hằng năm"]]
 ```
 
-## Đầu ra (Output)
-- Bộ FAQ theo nhóm (markdown): câu hỏi → câu trả lời → nguồn trích dẫn + năm áp dụng.
-- Danh sách câu hỏi cần rà soát lại mỗi năm.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (khung mẫu cố định của sản phẩm chính — Bộ FAQ):
-1. Tiêu đề bộ FAQ (tên trường + năm tuyển sinh áp dụng).
-2. Các nhóm câu hỏi theo đúng thứ tự `nhom_cau_hoi`; trong mỗi nhóm, mỗi mục gồm:
-   a. Câu hỏi (Q).
-   b. Câu trả lời (A): ngắn gọn 2–4 câu, ngôn ngữ dễ hiểu với học sinh/phụ huynh.
-   c. Dòng nguồn: (Nguồn: [tên văn bản], [điều/mục] — áp dụng năm YYYY).
-3. Phụ lục: danh sách câu hỏi cần rà soát lại mỗi năm (kèm thời điểm rà soát).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề bộ FAQ (tên trường + năm tuyển sinh…; Các nhóm câu hỏi theo đúng thứ tự…; Phụ lục
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Bộ FAQ theo nhóm (markdown): câu hỏi → câu trả lời → nguồn trích dẫn + năm áp dụng
 - [ ] Có đầy đủ sản phẩm: Danh sách câu hỏi cần rà soát lại mỗi năm
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -108,53 +102,6 @@ flowchart TD
 - [ ] Chỉ dùng văn bản của đúng `nam_tuyen_sinh` — không dùng quy định năm cũ
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_tuyen_sinh` | 2027 |
-| `nguon` | Đề án tuyển sinh 2027 của Trường Đại học A (giả lập) |
-| `nhom_cau_hoi` | Phương thức, học phí, học bổng, hồ sơ |
-
-### Output mẫu
-
-```
-FAQ TUYỂN SINH 2027 — Trường Đại học A (dữ liệu giả lập)
-
-**Nhóm: Phương thức xét tuyển**
-Q: Năm 2027 trường xét tuyển theo những phương thức nào?
-A: 03 phương thức: (1) xét điểm thi tốt nghiệp THPT, (2) xét học bạ THPT,
-(3) xét tuyển thẳng theo quy định.
-(Nguồn: Đề án tuyển sinh 2027, mục 2 — áp dụng năm 2027)
-
-**Nhóm: Học phí**
-Q: Học phí năm 2027 là bao nhiêu?
-A: 18 triệu đồng/năm với khối ngành Kinh tế, 22 triệu đồng/năm với khối ngành
-Kỹ thuật (số liệu giả lập).
-(Nguồn: Đề án tuyển sinh 2027, mục 4 — áp dụng năm 2027, cần rà soát lại mỗi năm)
-
-**Nhóm: Học bổng**
-Q: Trường có học bổng cho tân sinh viên không?
-A: Có. Học bổng thủ khoa 100% học phí năm nhất và 50 suất học bổng khuyến khích
-(số liệu giả lập).
-(Nguồn: Đề án tuyển sinh 2027, mục 5 — áp dụng năm 2027)
-
-**Nhóm: Hồ sơ**
-Q: Hồ sơ xét học bạ gồm những gì?
-A: Phiếu đăng ký (mẫu của trường), bản sao học bạ THPT, bản sao CCCD.
-(Nguồn: Thông báo tuyển sinh đợt 1/2027 — áp dụng năm 2027)
-
-PHỤ LỤC: DANH SÁCH CÂU HỎI RÀ SOÁT HẰNG NĂM
-(Rà soát ngay sau khi Đề án tuyển sinh năm mới được ban hành)
-- Nhóm Học phí: câu hỏi về mức học phí năm 2027.
-- Nhóm Hồ sơ: câu hỏi về thành phần hồ sơ xét học bạ.
-- Câu hỏi về chỉ tiêu, thời gian (khi bổ sung vào bộ FAQ).
-```
 
 ## Human gate (người kiểm duyệt)
 - Tư vấn viên trưởng rà soát tính đúng đắn của câu trả lời.
@@ -173,10 +120,10 @@ PHỤ LỤC: DANH SÁCH CÂU HỎI RÀ SOÁT HẰNG NĂM
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/faq-tuyen-sinh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/faq-tuyen-sinh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

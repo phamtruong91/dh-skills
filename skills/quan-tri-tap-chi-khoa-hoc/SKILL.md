@@ -5,16 +5,18 @@ description: "Quản trị quy trình tạp chí khoa học của trường đ�
 
 # Quản trị tạp chí khoa học
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Ban biên tập tạp chí khoa học của trường cần tổ chức quy trình từ tiếp nhận bản thảo đến
@@ -105,21 +107,13 @@ flowchart TD
     G -->|Có| T --> H --> P --> Q --> OUT
 ```
 
-## Đầu ra (Output)
-- Bảng theo dõi tiến độ bình duyệt từng bản thảo (mã số, trạng thái, hạn).
-- Quyết định danh mục bài đăng số tạp chí.
-- Số tạp chí hoàn chỉnh sẵn sàng phát hành + biên bản họp hội đồng biên tập.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của bộ sản phẩm điều hành số tạp chí, các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Bảng theo dõi tiến độ bình duyệt (mã bản thảo – lĩnh vực – phản biện 1/2 – kết quả – hạn sửa)
-2. Quyết định danh mục bài đăng (danh sách bài chính thức + bài dự kiến chờ sửa/phản biện lại)
-3. Biên bản họp hội đồng biên tập duyệt danh mục
-4. Số tạp chí hoàn chỉnh (đã hiệu đính, chế bản, tác giả duyệt proof)
-5. Biên nhận nộp lưu chiểu theo quy định
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": bảng theo dõi tiến độ bình duyệt; quyết định danh mục bài đăng; biên bản họp hội đồng biên tập; số tạp chí hoàn chỉnh; biên nhận nộp lưu chiểu.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Thông tin bản thảo (mã số, lĩnh vực, phản biện, kết quả, hạn sửa) khớp dữ liệu thực của số tạp chí.
 - [ ] Danh mục bài đăng chính thức chỉ gồm bài đạt yêu cầu bình duyệt; bài "Sửa lớn" chưa phản biện lại không đưa vào danh mục chính thức.
 - [ ] Không bịa đặt kết quả phản biện hoặc đánh giá chất lượng khoa học của bản thảo.
@@ -129,42 +123,6 @@ flowchart TD
 - [ ] Đã qua Human gate: trưởng ban chuyên môn xác nhận kết quả bình duyệt; Tổng biên tập duyệt danh mục và ký phát hành; tác giả duyệt bản in thử.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, tạp chí, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_tap_chi` | Tạp chí Khoa học A — cơ quan chủ quản: Trường Đại học A; ISSN 2615-XXXX (giả lập) |
-| `so_tap_chi` | Số 3, Tập 12, năm 2026 (dự kiến phát hành 15/12/2026) |
-| `ban_thao` | 08 bản thảo: ĐHA-2026-031 đến ĐHA-2026-038 (lĩnh vực: CNTT 3, Kinh tế 3, Luật 2) |
-| `hoi_dong_bien_tap` | PGS.TS. Trần Văn B (Tổng biên tập); 06 ủy viên theo lĩnh vực |
-| `thoi_han` | Hạn phản biện: 10/11/2026; hạn tác giả sửa: 25/11/2026; phát hành: 15/12/2026 |
-
-### Output mẫu
-
-```
-TẠP CHÍ KHOA HỌC A — KẾ HOẠCH XUẤT BẢN SỐ 3/TẬP 12/2026
-(I. Tiến độ bình duyệt — cập nhật ngày 05/11/2026)
-
-| Mã BT | Lĩnh vực | Phản biện 1 | Phản biện 2 | Kết quả | Hạn sửa |
-|---|---|---|---|---|---|
-| ĐHA-2026-031 | CNTT | Xong: Sửa nhỏ | Xong: Sửa nhỏ | Sửa nhỏ | 25/11/2026 |
-| ĐHA-2026-032 | CNTT | Xong: Chấp nhận | Đang thực hiện | Chờ PB2 | 10/11/2026 |
-| ĐHA-2026-033 | Kinh tế | Xong: Sửa lớn | Xong: Sửa lớn | Phản biện lại | 25/11/2026 |
-| ĐHA-2026-034 | Kinh tế | Xong: Từ chối | Xong: Từ chối | Từ chối | — |
-| ĐHA-2026-035 | Kinh tế | Đang thực hiện | Đang thực hiện | Chờ | 10/11/2026 |
-| ĐHA-2026-036 | Luật | Xong: Chấp nhận | Xong: Sửa nhỏ | Sửa nhỏ | 25/11/2026 |
-| ĐHA-2026-037 | Luật | Rút bài (tác giả) | — | Rút | — |
-| ĐHA-2026-038 | CNTT | Sơ loại: không đạt thể thức | — | Trả về | — |
-
-II. Dự kiến danh mục đăng: 05 bài (031, 032*, 033*, 036, + 01 bài tồn từ số trước).
-(*: sau khi hoàn thành sửa và phản biện lại)
-III. Mốc tiếp theo: họp Hội đồng biên tập duyệt danh mục chính thức — 28/11/2026.
-```
 
 ## Human gate
 - **Tổng biên tập** duyệt danh mục bài đăng cuối cùng và ký duyệt phát hành số tạp chí.
@@ -183,10 +141,10 @@ III. Mốc tiếp theo: họp Hội đồng biên tập duyệt danh mục chín
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quan-tri-tap-chi-khoa-hoc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quan-tri-tap-chi-khoa-hoc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

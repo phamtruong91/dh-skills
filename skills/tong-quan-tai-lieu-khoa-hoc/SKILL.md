@@ -5,16 +5,18 @@ description: "Tổng quan tài liệu khoa học (literature review) từ các t
 
 # Tổng quan tài liệu khoa học
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi viết phần tổng quan nghiên cứu cho đề tài, luận văn/luận án, bài báo khoa học.
@@ -79,21 +81,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> HG --> G
 ```
 
-## Đầu ra (Output)
-- Ma trận so sánh tài liệu (bảng).
-- Bản tổng hợp xu hướng/đồng thuận/mâu thuẫn/gap.
-- Outline phần tổng quan kèm trích dẫn chuẩn.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Bản tổng hợp tổng quan):
-1. Câu hỏi nghiên cứu + phạm vi tổng quan (năm xuất bản, loại nguồn).
-2. Ma trận so sánh tài liệu: hàng = tài liệu, cột = phương pháp / dữ liệu / kết quả chính / hạn chế.
-3. Tổng hợp: xu hướng chung, điểm đồng thuận, điểm mâu thuẫn (kèm dẫn chiếu từng tài liệu).
-4. Gap nghiên cứu: khoảng trống chưa được trả lời, dẫn từ tài liệu cụ thể.
-5. Outline phần tổng quan + danh mục trích dẫn theo định dạng yêu cầu.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Output đầy đủ 5 phần theo Cấu trúc output chuẩn: câu hỏi nghiên cứu + phạm vi tổng quan; ma trận so sánh; tổng hợp; gap nghiên cứu; outline + danh mục trích dẫn.
+- [ ] Output đầy đủ 5 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: câu hỏi nghiên cứu + phạm vi tổng quan; ma trận so sánh; tổng hợp; gap nghiên cứu; outline + danh mục trích dẫn.
 - [ ] Chỉ tổng hợp từ tài liệu được cung cấp; mọi nhận định trong tổng hợp đều dẫn chiếu cụ thể tài liệu (tác giả, năm).
 - [ ] TUYỆT ĐỐI không bịa trích dẫn: không tự tạo tên tác giả, năm, tạp chí, số liệu; thiếu thông tin ghi "không xác định".
 - [ ] Mâu thuẫn được nêu rõ cả hai phía, không "hòa giải" hộ nhà nghiên cứu; gap dẫn từ tài liệu, phân biệt gap thật với hạn chế đã được nghiên cứu khác lấp đầy.
@@ -102,50 +96,6 @@ flowchart TD
 - [ ] Đã qua Human gate: nhà nghiên cứu/chủ nhiệm đề tài đã kiểm tra từng trích dẫn và từng kết luận tổng hợp.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên tác giả, tài liệu, số liệu dưới đây đều là **giả lập**, minh họa cấu trúc output.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `cau_hoi_nghien_cuu` | AI hỗ trợ đánh giá kết quả học tập sinh viên đại học có hiệu quả không? |
-| `tai_lieu` | 4 bài báo giả lập (2019–2024) về AI trong đánh giá giáo dục |
-| `dinh_dang_trich_dan` | APA |
-
-### Output mẫu
-
-```
-BẢN TỔNG HỢP TỔNG QUAN TÀI LIỆU (giả lập — minh họa cấu trúc)
-
-1. Câu hỏi nghiên cứu: AI hỗ trợ đánh giá kết quả học tập sinh viên đại học có hiệu quả không?
-   Phạm vi: 4 bài báo giả lập (2019–2024) về AI trong đánh giá giáo dục; định dạng trích dẫn: APA.
-
-2. ĐHA TRẬN SO SÁNH TÀI LIỆU
-
-| Tài liệu (giả lập) | Phương pháp | Kết quả chính | Hạn chế |
-|---|---|---|---|
-| Nguyễn A. & Trần B. (2022) | Thực nghiệm, n=200 | AI chấm tự luận nhanh hơn 40%, độ đồng thuận với GV 0.82 | Chỉ 1 môn học |
-| Lê C. (2023) | Khảo sát, n=500 | 72% SV hài lòng với feedback tự động | Thiếu nhóm đối chứng |
-| Phạm D. et al. (2024) | Phân tích log LMS | Feedback tức thì giúp tăng 15% điểm quá trình | Dữ liệu 1 trường |
-| Hoàng E. (2019) | Tổng quan | Cảnh báo thiên lệch khi dữ liệu huấn luyện không đại diện | Không thực nghiệm |
-
-3. TỔNG HỢP: các nghiên cứu đồng thuận AI giúp tăng tốc và cá nhân hóa đánh giá
-   (Nguyễn A. & Trần B., 2022; Lê C., 2023; Phạm D. et al., 2024); mâu thuẫn ở mức độ
-   tin cậy khi thiếu kiểm chứng của giảng viên (Hoàng E., 2019).
-
-4. GAP: thiếu nghiên cứu dài hạn về tác động đến năng lực tự đánh giá của SV
-   (dẫn từ hạn chế của cả 4 tài liệu) — đây là khoảng trống đề tài có thể khai thác.
-
-5. OUTLINE PHẦN TỔNG QUAN + DANH MỤC TRÍCH DẪN (APA):
-   I. Mở đầu: bối cảnh AI trong đánh giá giáo dục
-   II. AI hỗ trợ chấm và feedback tự động
-   III. Mức độ tin cậy và thiên lệch của AI
-   IV. Gap nghiên cứu và hướng đề xuất
-   Danh mục: Nguyễn A. & Trần B. (2022); Lê C. (2023); Phạm D. et al. (2024); Hoàng E. (2019).
-```
 
 ## Human gate (người kiểm duyệt)
 - **Nhà nghiên cứu/chủ nhiệm đề tài** kiểm tra từng trích dẫn, từng kết luận tổng hợp
@@ -167,10 +117,10 @@ BẢN TỔNG HỢP TỔNG QUAN TÀI LIỆU (giả lập — minh họa cấu tr�
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/tong-quan-tai-lieu-khoa-hoc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/tong-quan-tai-lieu-khoa-hoc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

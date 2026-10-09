@@ -1,5 +1,20 @@
 # Nhật ký thay đổi
 
+## 1.2.1 — 2026-10-10
+
+- Sửa quy tắc dữ liệu thiếu của 171 skill: giữ dấu chấm, dấu gạch hoặc ô trống đúng mẫu gốc; bỏ lệnh cấm dấu chấm.
+- Bổ sung dòng dấu chấm trong khung biên bản, giữ ô bảng trống theo mẫu và đồng bộ phiên bản/manifest.
+- Giữ quy tắc không xuất checklist hay phụ lục kiểm tra đầu ra.
+
+## 1.2.0 — 2026-10-10
+
+- Rà soát đầu ra 171 skill; thêm quy cách tự chứa trong từng gói và cấu trúc sản phẩm theo nghiệp vụ.
+- File giao chỉ chứa sản phẩm chính; bỏ yêu cầu xuất checklist, phụ lục kiểm tra, bảng truy nguyên và danh sách thiếu dữ liệu; giữ phụ lục nghiệp vụ khi mẫu yêu cầu.
+- Thông tin thiếu để trống; bỏ nhãn CHỜ KÝ và nhãn kiểm duyệt tự chèn; không tự gán số, ngày, người ký hoặc kết luận.
+- Đối chiếu Phụ lục I/III Nghị định 30; sửa mẫu công văn, thông báo, giấy mời, biên bản và phân biệt cơ quan ban hành/phòng soạn.
+- Bổ sung lựa chọn mẫu chuyên ngành cho công khai, tài chính, quyết toán, nhân sự, kiểm kê, kiểm định, đào tạo và đấu thầu. Mẫu lịch sử vẫn chỉ dùng cho hồ sơ thuộc chuyển tiếp.
+- Cập nhật manifest, phiên bản và công cụ kiểm tra gói. Đây là rà soát quy cách đầu ra, không chứng nhận toàn bộ mọi căn cứ chuyên ngành còn hiệu lực.
+
 ## 1.1.1 — 2026-10-09
 
 - Sửa bao-cao-thi-dua để chỉ tổng hợp dữ liệu đã được xác nhận, bỏ ví dụ tự sinh số liệu/nhận xét, không đánh giá hoặc quyết định quyền lợi cá nhân. Các skill khác giữ bản 1.1.0.

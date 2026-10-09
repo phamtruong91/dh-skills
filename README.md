@@ -10,18 +10,20 @@
 
 [📚 Danh mục 171 skill](skills/README.md) · [🧭 Khung phòng ban](khung-phong-ban-chuan.md) · [📐 Chuẩn đóng gói](khung-skill-tong-the.md) · [🗺️ Sơ đồ tương tác](so-do-case-phong-ban.html)
 
-> **Skill là gì?** Một bộ hướng dẫn thực hiện công việc có thể tái sử dụng: nêu khi nào dùng, cần dữ liệu gì, thực hiện những bước nào, tạo sản phẩm gì và ai kiểm duyệt. Ví dụ: skill soạn công văn nhận yêu cầu và thông tin nơi nhận để tạo dự thảo kèm checklist kiểm tra.
+> **Skill là gì?** Một bộ hướng dẫn thực hiện công việc có thể tái sử dụng: nêu khi nào dùng, cần dữ liệu gì, thực hiện những bước nào, tạo sản phẩm gì và ai kiểm duyệt. Ví dụ: skill soạn công văn nhận yêu cầu và thông tin nơi nhận để tạo văn bản đúng mẫu, để trống dữ liệu thiếu và kiểm tra nội bộ.
 
-## Phiên bản 1.1.1 — cập nhật 09/10/2026
+## Phiên bản 1.2.1 — cập nhật 10/10/2026
 
-Bản 1.1.1 sửa riêng skill báo cáo thi đua; 170 skill còn lại giữ bản 1.1.0.
+Bản 1.2.1 cập nhật quy cách đầu ra của toàn bộ 171 skill: văn bản nghiệp vụ sạch, trường thiếu để trống, kiểm tra nội bộ không xuất kèm; bổ sung cấu trúc riêng và định dạng hành chính/chuyên ngành.
+
+[Quy cách đầu ra và phạm vi đối chiếu mẫu biểu](docs/QUY_CACH_DAU_RA.md). Khi dùng từng skill, đọc tài liệu quy cách được liên kết ngay đầu SKILL.md. Bản xuất chỉ chứa sản phẩm yêu cầu; thông tin thiếu chừa chỗ theo mẫu gốc.
 
 | Hạng mục | Kết quả |
 | --- | --- |
 | Đóng gói | 171 skill có YAML hợp lệ, metadata giao diện và hồ sơ phiên bản |
-| Pháp lý | 58 skill có căn cứ/điều kiện áp dụng mới; quy trình cũ chuyển sang tư liệu lịch sử |
+| Pháp lý | Giữ căn cứ/điều kiện của 58 skill từ đợt trước; bổ sung lựa chọn mẫu và phạm vi xác minh trong đợt này |
 | Kiểm duyệt | Mỗi skill có giới hạn, kiểm soát dữ liệu, người kiểm tra và trạng thái dự thảo |
-| Quản trị | Phiên bản 1.1.0 do đợt cập nhật này thiết lập; không phải thông tin về GitHub Release đã phát hành |
+| Quản trị | 171 skill đồng bộ phiên bản nội dung 1.2.1; không phải thông tin về GitHub Release đã phát hành |
 
 [Nhật ký thay đổi](CHANGELOG.md) · [Quản trị phiên bản](GOVERNANCE.md) · [Bảng đối chiếu pháp lý](docs/CAP_NHAT_PHAP_LY.md) · [Danh mục máy đọc](skills-manifest.json)
 
@@ -276,7 +278,7 @@ Nhân sự đối chiếu kết quả với tài liệu nguồn, kiểm tra chec
 ### Tải repository về máy
 
 ```bash
-git clone https://github.com/phamtruong91/dh-skills.git
+git clone https://github.com/phamtruong91/university-skills-framework.git
 cd dh-skills
 ```
 

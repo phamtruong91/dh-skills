@@ -5,16 +5,18 @@ description: "Lập kế hoạch kiểm toán nội bộ năm của trường đ
 
 # Lập kế hoạch kiểm toán nội bộ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Đầu mỗi năm (hoặc đầu nhiệm kỳ), khi Ban Thanh tra, Pháp chế và Kiểm toán nội bộ cần xây dựng
@@ -98,23 +100,13 @@ flowchart TD
 ```
 ```
 
-## Đầu ra (Output)
-- Kế hoạch kiểm toán nội bộ năm hoàn chỉnh (markdown), sẵn sàng trình ký.
-- Phụ lục: danh mục các cuộc kiểm toán (đối tượng, thời kỳ, thời gian, trưởng đoàn).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** Kế hoạch kiểm toán nội bộ năm gồm các phần bắt buộc theo đúng thứ tự sau:
-1. Phần đầu: quốc hiệu – tiêu ngữ, tên ban (Ban Thanh tra, Pháp chế và Kiểm toán nội bộ), số/ký hiệu, địa danh – ngày tháng, tên văn bản "KẾ HOẠCH Kiểm toán nội bộ năm ...".
-2. I. Căn cứ (quy chế kiểm toán nội bộ, kết quả kiểm toán năm trước và kiến nghị tồn đọng).
-3. II. Mục tiêu.
-4. III. Đối tượng, phạm vi và thời gian: bảng STT – Cuộc kiểm toán – Đơn vị được kiểm toán – Thời kỳ kiểm toán – Thời gian thực hiện – Trưởng đoàn.
-5. IV. Phương pháp.
-6. V. Tổ chức thực hiện (nhân sự, kinh phí, trách nhiệm các bên, thời hạn báo cáo kết quả).
-7. Phụ lục: danh mục các cuộc kiểm toán.
-8. Phần cuối: nơi nhận, chữ ký người phê duyệt.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần đầu; I. Căn cứ (quy chế kiểm toán nội bộ, kết quả…; II. Mục tiêu.; III. Đối tượng, phạm vi và thời gian; IV. Phương pháp.; V. Tổ chức thực hiện (nhân sự, kinh phí,…; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Kế hoạch kiểm toán nội bộ năm hoàn chỉnh (markdown), sẵn sàng trình ký
 - [ ] Có đầy đủ sản phẩm: Phụ lục: danh mục các cuộc kiểm toán (đối tượng, thời kỳ, thời gian, trưởng đoàn)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -126,66 +118,6 @@ flowchart TD
 - [ ] Số cuộc phải phù hợp với nguồn lực
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_ke_hoach` | 2027 |
-| `doi_tuong_kiem_toan` | 1. Thu, quản lý và sử dụng học phí năm 2026 (Phòng Tài chính – Kế toán). 2. Mua sắm trang thiết bị 2025–2026 (Phòng Quản trị – Thiết bị). 3. Quản lý đề tài NCKH cấp trường năm 2026 (Phòng KHCN). |
-| `tieu_chi_uu_tien` | Rủi ro cao + kiến nghị tồn đọng từ kiểm toán năm 2025 |
-| `nguon_luc` | 04 kiểm toán viên, triển khai trong 09 tháng, kinh phí 120 triệu đồng |
-| `don_vi_chu_tri` | Ban Thanh tra, Pháp chế và Kiểm toán nội bộ |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-BAN THANH TRA, PHÁP CHẾ                                Độc lập – Tự do – Hạnh phúc
-VÀ KIỂM TOÁN NỘI BỘ
-      Số: 12/KH-ĐHA-TTPCKTNB
-                                                 Thành phố C, ngày 15 tháng 12 năm 2026
-
-                          KẾ HOẠCH
-                Kiểm toán nội bộ năm 2027
-
-I. CĂN CỨ
-- Quy chế kiểm toán nội bộ của Trường Đại học A;
-- Kết quả kiểm toán nội bộ năm 2025 và các kiến nghị còn tồn đọng.
-
-II. MỤC TIÊU
-Đánh giá tính tuân thủ, tính kinh tế – hiệu quả trong quản lý tài chính, tài sản
-và hoạt động NCKH; kiến nghị khắc phục tồn tại, phòng ngừa rủi ro.
-
-III. ĐỐI TƯỢNG, PHẠM VI VÀ THỜI GIAN
-
-| STT | Cuộc kiểm toán | Đơn vị được kiểm toán | Thời kỳ kiểm toán | Thời gian thực hiện | Trưởng đoàn |
-|-----|----------------|----------------------|-------------------|---------------------|-------------|
-| 1 | Thu, quản lý và sử dụng học phí năm 2026 | Phòng Tài chính – Kế toán | 01/2026–12/2026 | Quý I/2027 | Ông Trần Văn D |
-| 2 | Mua sắm trang thiết bị 2025–2026 | Phòng Quản trị – Thiết bị | 01/2025–12/2026 | Quý II/2027 | Bà Bùi Thị A |
-| 3 | Quản lý đề tài NCKH cấp trường năm 2026 | Phòng KHCN | 01/2026–12/2026 | Quý III/2027 | Ông Trần Văn D |
-
-IV. PHƯƠNG PHÁP
-Kiểm tra chứng từ, đối chiếu sổ sách, phỏng vấn cán bộ liên quan, kiểm tra thực tế
-chọn mẫu theo mức độ rủi ro.
-
-V. TỔ CHỨC THỰC HIỆN
-1. Ban Thanh tra, Pháp chế và Kiểm toán nội bộ chủ trì, bố trí 04 kiểm toán viên
-   triển khai trong 09 tháng, kinh phí 120 triệu đồng từ nguồn chi thường xuyên.
-2. Các đơn vị được kiểm toán có trách nhiệm cung cấp đầy đủ hồ sơ, tài liệu.
-3. Kết quả từng cuộc kiểm toán báo cáo Hiệu trưởng trong 15 ngày sau khi kết thúc.
-
-Nơi nhận:                                          KT. HIỆU TRƯỞNG
-- Ban Giám hiệu (để b/c);                    TRƯỞNG BAN THANH TRA,
-- Các đơn vị được kiểm toán;                  PHÁP CHẾ VÀ KIỂM TOÁN NỘI BỘ
-- Lưu: VT, TTPCKTNB.                                   [CHỜ KÝ]
-
-                                                     ThS. Nguyễn Văn D
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng Ban Thanh tra, Pháp chế và Kiểm toán nội bộ soát xét toàn bộ kế hoạch trước khi trình.
@@ -203,10 +135,10 @@ Nơi nhận:                                          KT. HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-kiem-toan-noi-bo`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-kiem-toan-noi-bo`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

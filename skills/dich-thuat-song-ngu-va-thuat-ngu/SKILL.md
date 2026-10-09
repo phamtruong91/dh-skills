@@ -5,16 +5,18 @@ description: "Dịch Việt–Anh (và ngược lại) văn bản của trườn
 
 # Dịch song ngữ & quản lý thuật ngữ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần bản tiếng Anh (hoặc tiếng Việt) của văn bản trường học: MOU/MOA, thông báo tuyển sinh,
@@ -87,20 +89,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> G --> HG --> H
 ```
 
-## Đầu ra (Output)
-- Bản dịch hoàn chỉnh (song ngữ trình bày 2 cột hoặc 2 văn bản riêng).
-- Glossary cập nhật (thuật ngữ mới phát sinh trong quá trình dịch).
-- Issue list (điểm chưa chắc chắn cần biên tập viên quyết).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Bản dịch hoàn chỉnh):
-1. Thông tin văn bản: tên văn bản, hướng dịch, register áp dụng, ngày xuất bản.
-2. Bản dịch: trình bày 2 cột song ngữ hoặc 2 văn bản riêng, các đoạn tương ứng nhau.
-3. Glossary cập nhật: thuật ngữ mới phát sinh trong quá trình dịch (thuật ngữ + bản dịch đề xuất).
-4. Issue list: vị trí + phương án đề xuất + phương án thay thế + câu hỏi cho biên tập viên.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Output đầy đủ 4 phần theo Cấu trúc output chuẩn: thông tin văn bản (tên, hướng dịch, register, ngày xuất bản); bản dịch; glossary cập nhật; issue list.
+- [ ] Output đầy đủ 4 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: thông tin văn bản (tên, hướng dịch, register, ngày xuất bản); bản dịch; glossary cập nhật; issue list.
 - [ ] Bản dịch trình bày 2 cột song ngữ hoặc 2 văn bản riêng, các đoạn tương ứng nhau; register nhất quán toàn văn theo đối tượng đọc.
 - [ ] Số liệu, ngày tháng, họ tên, tên đơn vị, số/ký hiệu văn bản khớp 100% bản gốc; định dạng ngày tháng theo chuẩn ngôn ngữ đích.
 - [ ] Thuật ngữ theo glossary thống nhất 100% mọi vị trí; danh sách không-dịch (tên trường, tên đơn vị, chức danh) giữ nguyên; tên giao dịch quốc tế của trường chính xác.
@@ -109,32 +104,6 @@ flowchart TD
 - [ ] Đã qua Human gate: biên tập viên song ngữ đã duyệt toàn bộ bản dịch và chốt issue list; văn bản có giá trị pháp lý (MOU, văn bằng) đã được lãnh đạo ký duyệt.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-> Ví dụ: dịch đoạn thông báo tuyển sinh — áp dụng tương tự cho MOU, văn bằng...
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `van_ban_goc` | "Trường Đại học A thông báo tuyển sinh đại học chính quy năm 2027 với tổng chỉ tiêu 2.500. Thí sinh nộp hồ sơ trực tuyến từ ngày 01/03/2027 đến hết ngày 30/06/2027." |
-| `huong_dich` | Việt → Anh |
-| `glossary` | Trường Đại học A → Minh Duc University (không dịch từng từ); tuyển sinh → admissions |
-| `doi_tuong_doc` | Thí sinh quốc tế |
-
-### Output mẫu
-
-**1. Thông tin văn bản:** Thông báo tuyển sinh đại học chính quy năm 2027 | Hướng dịch: Việt → Anh | Register: truyền thông (đối tượng: thí sinh quốc tế).
-
-**2. Bản dịch:**
-"Minh Duc University announces admissions for full-time undergraduate programs in 2027 with a total quota of 2,500. Applicants shall submit online applications from March 1, 2027 to June 30, 2027."
-
-**3. Glossary cập nhật:** tuyển sinh → admissions (đã có); đại học chính quy → full-time undergraduate (mới phát sinh).
-
-**4. Issue list:**
-- Vị trí: câu 1 — "chỉ tiêu" dịch là "quota". Phương án đề xuất: "quota"; phương án thay thế: "enrollment quota". Câu hỏi cho biên tập viên: có muốn dùng "enrollment quota" không?
 
 ## Human gate (người kiểm duyệt)
 1. **Biên tập viên song ngữ** của trường: duyệt toàn bộ bản dịch, quyết định các mục trong issue list,
@@ -155,10 +124,10 @@ flowchart TD
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/dich-thuat-song-ngu-va-thuat-ngu`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/dich-thuat-song-ngu-va-thuat-ngu`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -5,16 +5,18 @@ description: "Lập kế hoạch đào tạo, bồi dưỡng cán bộ, giảng 
 
 # Kế hoạch đào tạo, bồi dưỡng cán bộ năm
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần xây dựng kế hoạch năm về đào tạo, bồi dưỡng cán bộ, viên chức, giảng viên:
@@ -93,116 +95,23 @@ flowchart TD
     HG --> OUT[["Kế hoạch bồi dưỡng năm"]]
 ```
 
-## Đầu ra (Output)
-- Quyết định ban hành kế hoạch đào tạo, bồi dưỡng cán bộ năm (hoàn chỉnh, trình ký).
-- Bảng kế hoạch chi tiết kèm theo (chương trình | đối tượng | số lượng | hình thức | thời gian | kinh phí | đơn vị thực hiện).
-- Bảng dự toán kinh phí tổng hợp theo nguồn.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (Quyết định ban hành kế hoạch + Kế hoạch chi tiết kèm theo):
-- *Phần Quyết định:* 1. Quốc hiệu – Tiêu ngữ; 2. Tên cơ quan, số/ký hiệu; 3. Địa danh, ngày tháng;
-  4. Tên loại "QUYẾT ĐỊNH" + trích yếu; 5. Người ban hành (Hiệu trưởng); 6. Phần "Căn cứ...";
-  7. Phần "Xét..."; 8. Nội dung "QUYẾT ĐỊNH:": Điều 1 (ban hành kế hoạch kèm theo),
-  Điều 2 (tổng kinh phí + nguồn kinh phí), Điều 3 (tổ chức thực hiện, chế độ báo cáo),
-  Điều 4 (hiệu lực, trách nhiệm thi hành); 9. Nơi nhận; 10. Chữ ký.
-- *Phần Kế hoạch chi tiết (kèm theo quyết định):* I. Mục tiêu; II. Nội dung thực hiện
-  (bảng: chương trình | đối tượng | số lượng | hình thức | thời gian | kinh phí | đơn vị thực hiện);
-  III. Kinh phí (tổng kinh phí + nguồn); IV. Tổ chức thực hiện.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tên loại "QUYẾT ĐỊNH" + trích yếu; 5. Người ban hành (Hiệu trưởng);…; Phần "Xét..."; 8. Nội dung "QUYẾT ĐỊNH:": Điều 1 (ban hành kế hoạch…
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản).
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Nhu cầu phải xuất phát từ yêu cầu của vị trí việc làm / chuẩn chức danh, không theo nguyện vọng cá nhân đơn thuần
 - [ ] Chỉ tiêu phải đo đếm được (số lượng, tỷ lệ %, thời hạn hoàn thành)
 - [ ] Mục tiêu chung chung không kiểm tra được khi tổng kết cuối năm
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_ke_hoach` | 2026 |
-| `muc_tieu` | Nâng cao năng lực đội ngũ, phấn đấu 100% giảng viên có chứng chỉ nghiệp vụ sư phạm, 60% viên chức quản lý được bồi dưỡng kỹ năng quản lý |
-| `nhu_cau_don_vi` | Khoa CNTT: 12 GV cần bồi dưỡng phương pháp giảng dạy tích cực; Khoa Kinh tế: 8 GV cần bồi dưỡng ngoại ngữ chuyên ngành; các đơn vị hành chính: 20 viên chức cần bồi dưỡng kỹ năng văn phòng |
-| `noi_dung_boi_duong` | 1. Nghiệp vụ sư phạm cho giảng viên. 2. Phương pháp giảng dạy tích cực và ứng dụng AI. 3. Ngoại ngữ chuyên ngành (B2). 4. Kỹ năng quản lý hành chính |
-| `hinh_thuc` | Tập huấn tại trường; gửi đi bồi dưỡng tại cơ sở đào tạo; học trực tuyến |
-| `kinh_phi_du_kien` | 480 triệu đồng (nguồn thu sự nghiệp 350 triệu; ngân sách nhà nước 130 triệu) |
-| `tien_do` | Quý I–II: 2 chương trình; Quý III: 1 chương trình; Quý IV: 1 chương trình |
-| `nguoi_ky` | Hiệu trưởng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                             Độc lập – Tự do – Hạnh phúc
-      Số: 95/QĐ-ĐHA-TCCB
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                            QUYẾT ĐỊNH
-   Về việc ban hành Kế hoạch đào tạo, bồi dưỡng cán bộ, viên chức năm 2026
-
-                                    HIỆU TRƯỞNG
-                          TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Quyết định số 12/QĐ-BGDĐT ngày 05/01/2020 của Bộ trưởng Bộ Giáo dục và Đào tạo
-về việc thành lập Trường Đại học A;
-Căn cứ Quy chế tổ chức và hoạt động của Trường Đại học A;
-Căn cứ nhu cầu đào tạo, bồi dưỡng của các đơn vị trực thuộc Nhà trường năm 2026;
-Xét đề nghị của Trưởng phòng Tổ chức – Cán bộ,
-
-                                 QUYẾT ĐỊNH:
-
-Điều 1. Ban hành kèm theo Quyết định này Kế hoạch đào tạo, bồi dưỡng cán bộ,
-viên chức Trường Đại học A năm 2026.
-
-Điều 2. Tổng kinh phí thực hiện kế hoạch: 480.000.000 đồng (Bốn trăm tám mươi triệu
-đồng), trong đó: nguồn thu sự nghiệp 350.000.000 đồng; ngân sách nhà nước 130.000.000 đồng.
-
-Điều 3. Phòng Tổ chức – Cán bộ chủ trì, phối hợp với Phòng Tài chính – Kế toán và các
-đơn vị liên quan tổ chức thực hiện kế hoạch; báo cáo Hiệu trưởng kết quả thực hiện
-định kỳ 6 tháng và cả năm.
-
-Điều 4. Quyết định này có hiệu lực kể từ ngày ký.
-Trưởng phòng Tổ chức – Cán bộ, Trưởng phòng Tài chính – Kế toán, thủ trưởng các đơn vị
-có liên quan chịu trách nhiệm thi hành Quyết định này./.
-
-Nơi nhận:                                                      HIỆU TRƯỞNG
-- Như Điều 4;
-- Lưu: VT, TCCB.                                                   [CHỜ KÝ]
-
-                                                              TS. Trần Văn D
-
-
-                    KẾ HOẠCH CHI TIẾT (kèm theo Quyết định số 95/QĐ-ĐHA-TCCB)
-
-I. MỤC TIÊU
-1. 100% giảng viên có chứng chỉ nghiệp vụ sư phạm.
-2. 60% viên chức quản lý được bồi dưỡng kỹ năng quản lý hành chính.
-3. Nâng cao năng lực ứng dụng AI trong giảng dạy cho đội ngũ giảng viên.
-
-II. NỘI DUNG THỰC HIỆN
-
-| TT | Chương trình | Đối tượng | Số lượng | Hình thức | Thời gian | Kinh phí (tr.đ) | Đơn vị thực hiện |
-|----|--------------|-----------|----------|-----------|-----------|-----------------|-------------------|
-| 1 | Nghiệp vụ sư phạm cho giảng viên | Giảng viên chưa có chứng chỉ | 25 | Tập huấn tại trường | Quý I/2026 | 90 | P. TCCB + Viện SPKT |
-| 2 | Phương pháp giảng dạy tích cực, ứng dụng AI | Giảng viên các khoa | 40 | Tập huấn tại trường | Quý II/2026 | 120 | P. TCCB |
-| 3 | Ngoại ngữ chuyên ngành (trình độ B2) | Giảng viên Khoa Kinh tế, CNTT | 20 | Gửi đi bồi dưỡng | Quý III/2026 | 180 | P. TCCB + Trung tâm NN |
-| 4 | Kỹ năng quản lý hành chính | Viên chức quản lý | 20 | Trực tuyến + tập trung | Quý IV/2026 | 90 | P. TCCB |
-
-III. KINH PHÍ: 480.000.000 đồng (nguồn thu sự nghiệp: 350 triệu; NSNN: 130 triệu).
-
-IV. TỔ CHỨC THỰC HIỆN: Phòng Tổ chức – Cán bộ chủ trì; Phòng Tài chính – Kế toán
-bảo đảm kinh phí; các đơn vị cử cán bộ tham gia đầy đủ theo kế hoạch.
-```
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản).
@@ -212,10 +121,10 @@ bảo đảm kinh phí; các đơn vị cử cán bộ tham gia đầy đủ the
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-boi-duong`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-boi-duong`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

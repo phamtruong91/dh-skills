@@ -5,16 +5,18 @@ description: "Helpdesk CNTT: phân loại ticket hỗ trợ, đánh giá ưu ti�
 
 # Helpdesk CNTT (triage)
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi tiếp nhận yêu cầu hỗ trợ CNTT (mạng, phần mềm, tài khoản, thiết bị) cần phân loại
@@ -101,23 +103,13 @@ flowchart TD
     C -->|Không| E --> F --> G --> HG --> H
 ```
 
-## Đầu ra (Output)
-- Ticket đã phân loại + mức ưu tiên + hướng xử lý dự thảo.
-- Gợi ý FAQ liên quan.
-- Báo cáo xu hướng sự cố (theo yêu cầu định kỳ).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Ticket đã phân loại + hướng xử lý dự thảo):
-1. Mã ticket (người báo, thời điểm tiếp nhận).
-2. Phân loại và mức ưu tiên (nhóm sự cố, mức ưu tiên, căn cứ SLA, deadline).
-3. Mô tả sự cố.
-4. Hướng xử lý dự thảo từng bước (thao tác → kết quả mong đợi; ghi rõ điểm chuyển tuyến 2).
-5. Phân công xử lý (kỹ thuật viên phụ trách đề xuất).
-6. FAQ liên quan (mã + tên bài).
-7. Ghi chú kiểm thử (kỹ thuật viên kiểm tra trước khi thực hiện/gửi người dùng).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo Cấu trúc output chuẩn: mã ticket, phân loại + ưu tiên, mô tả sự cố, hướng xử lý dự thảo, phân công, FAQ, ghi chú kiểm thử.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Mức ưu tiên có căn cứ SLA và deadline cụ thể (tính theo giờ làm việc của đơn vị), không phụ thuộc hoàn toàn vào mức độ người dùng tự đánh giá.
 - [ ] Hướng xử lý từng bước có thao tác → kết quả mong đợi; điểm chuyển tuyến 2 ghi rõ ràng.
 - [ ] FAQ chỉ gợi ý bài có thật trong kho tri thức (mã + tên bài), khớp đúng triệu chứng người dùng mô tả — không bịa mã FAQ.
@@ -127,53 +119,6 @@ flowchart TD
 - [ ] Đã qua Human gate: kỹ thuật viên kiểm thử hướng xử lý trước khi gửi cho người dùng hoặc thực hiện.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên người, đơn vị, sự cố dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `mo_ta_su_co` | Không đăng nhập được email công vụ, báo sai mật khẩu dù đã nhập đúng |
-| `nguoi_bao` | CB-1024 (Phòng Đào tạo) |
-| `muc_do_bao` | Cao |
-| `thong_tin_he_thong` | Laptop cá nhân, trình duyệt Chrome, xảy ra từ sáng 09/10/2026 |
-
-### Output mẫu
-
-```
-TICKET HD-2026-0341 (giả lập)
-
-1. Mã ticket
-HD-2026-0341 | Người báo: CB-1024 (Phòng Đào tạo) | Tiếp nhận: sáng 09/10/2026
-
-2. Phân loại và mức ưu tiên
-Nhóm: Tài khoản & phân quyền | Ưu tiên: Cao (ảnh hưởng công việc) | SLA: 4 giờ
-Deadline SLA: 13h00 ngày 09/10/2026
-
-3. Mô tả sự cố
-Không đăng nhập được email công vụ, báo sai mật khẩu dù đã nhập đúng
-(Laptop cá nhân, Chrome, xảy ra từ sáng 09/10/2026).
-
-4. Hướng xử lý dự thảo
-1. Xác minh tài khoản CB-1024 còn hiệu lực trên hệ thống quản trị
-   → kết quả mong đợi: thấy trạng thái tài khoản.
-2. Kiểm tra có bị khóa do nhập sai quá số lần không → mở khóa nếu có
-   (chỉ thực hiện sau khi xác thực đúng người báo).
-3. Hướng dẫn đặt lại mật khẩu qua kênh xác thực chính thức; kiểm tra đăng nhập lại.
-4. Nếu vẫn lỗi → chuyển tuyến 2 (kiểm tra đồng bộ hệ thống).
-
-5. Phân công xử lý
-Kỹ thuật viên trực ca sáng 09/10/2026.
-
-6. FAQ liên quan
-"Quên mật khẩu email công vụ phải làm gì?" (mã FAQ-07).
-
-7. Ghi chú kiểm thử
-Kỹ thuật viên kiểm thử hướng xử lý trước khi thực hiện hoặc gửi cho người dùng.
-```
 
 ## Human gate (người kiểm duyệt)
 - **Kỹ thuật viên** kiểm thử/kiểm tra hướng xử lý trước khi gửi cho người dùng hoặc
@@ -193,10 +138,10 @@ Kỹ thuật viên kiểm thử hướng xử lý trước khi thực hiện ho�
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/helpdesk-cntt-triage`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/helpdesk-cntt-triage`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

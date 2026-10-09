@@ -5,16 +5,18 @@ description: "Lập kế hoạch quản trị thương hiệu trường đại h
 
 # Lập kế hoạch quản trị thương hiệu
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi đơn vị phụ trách truyền thông – thương hiệu cần xây dựng kế hoạch quản trị thương hiệu
@@ -108,26 +110,13 @@ flowchart TD
     HG --> L[["Kế hoạch quản trị thương hiệu + kịch bản khủng hoảng"]]
 ```
 
-## Đầu ra (Output)
-- Kế hoạch quản trị thương hiệu hoàn chỉnh (markdown).
-- Phụ lục: bảng KPI đo lường + kịch bản xử lý khủng hoảng truyền thông.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (khung mẫu cố định của sản phẩm chính — Kế hoạch quản trị thương hiệu):
-1. Phần mở đầu hành chính (tên trường, đơn vị, số ký hiệu, ngày tháng).
-2. Tên kế hoạch + kỳ áp dụng.
-3. Mục tiêu.
-4. Định vị và thông điệp chủ đạo.
-5. Chuẩn hóa bộ nhận diện (danh mục rà soát + đề xuất).
-6. Hoạt động theo quý (bảng: quý – chiến dịch – kênh chính – KPI).
-7. Giám sát hình ảnh (cơ chế theo dõi, chỉ số đo lường).
-8. Kịch bản xử lý khủng hoảng (3 cấp độ: dấu hiệu – người phát ngôn – thời hạn – kênh).
-9. Kinh phí và tổ chức thực hiện.
-10. Nơi nhận, chữ ký.
-- Phụ lục: Bảng KPI đo lường chi tiết.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần mở đầu hành chính (tên trường, đơn vị,…; Tên kế hoạch + kỳ áp dụng.; Mục tiêu.; Định vị và thông điệp chủ đạo.; Chuẩn hóa bộ nhận diện (danh mục rà soát +…; Hoạt động theo quý (bảng; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Kế hoạch quản trị thương hiệu hoàn chỉnh (markdown)
 - [ ] Có đầy đủ sản phẩm: Phụ lục: bảng KPI đo lường + kịch bản xử lý khủng hoảng truyền thông
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -139,75 +128,6 @@ flowchart TD
 - [ ] Định vị phải khác biệt và chứng minh được bằng thực tế đào tạo
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `muc_tieu` | Tăng 20% mức độ nhận biết trong học sinh THPT tại 5 tỉnh trọng điểm trong năm 2027 |
-| `dinh_vi` | Đại học ứng dụng, đào tạo gắn với nhu cầu doanh nghiệp |
-| `doi_tuong` | Học sinh lớp 11–12, phụ huynh, doanh nghiệp đối tác |
-| `kenh` | Fanpage, TikTok, website, báo chí giáo dục, ngày hội tư vấn |
-| `ngan_sach` | 800 triệu đồng |
-| `rui_ro` | Tin đồn sai về điểm chuẩn; phản ánh tiêu cực về ký túc xá trên mạng xã hội |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG TRUYỀN THÔNG VÀ TUYỂN SINH         Độc lập – Tự do – Hạnh phúc
-      Số: 34/KH-ĐHA-TTTTS
-                                                 Thành phố C, ngày 10 tháng 12 năm 2026
-
-                          KẾ HOẠCH
-               Quản trị thương hiệu năm 2027
-
-I. MỤC TIÊU
-Tăng 20% mức độ nhận biết thương hiệu trong học sinh THPT tại 5 tỉnh trọng điểm
-trong năm 2027.
-
-II. ĐỊNH VỊ VÀ THÔNG ĐIỆP CHỦ ĐẠO
-- Định vị: Đại học ứng dụng, đào tạo gắn với nhu cầu doanh nghiệp.
-- Thông điệp chủ đạo: "Học thực tế – Làm được việc".
-
-III. CHUẨN HÓA BỘ NHẬN DIỆN
-1. Rà soát, ban hành Sổ tay nhận diện thương hiệu (logo, màu sắc, slogan, quy định
-   sử dụng) trong Quý I/2027.
-2. Chuẩn hóa mẫu văn bản, slide, backdrop sự kiện theo bộ nhận diện mới.
-
-IV. HOẠT ĐỘNG THEO QUÝ
-| Quý | Chiến dịch | Kênh chính | KPI |
-|-----|-----------|------------|-----|
-| I | Khởi động thương hiệu năm 2027 | Fanpage, website | 50 bài đăng, 1 triệu lượt tiếp cận |
-| II | Đồng hành mùa thi THPT | TikTok, ngày hội tư vấn | 30 video, 15 trường THPT |
-| III | Tuyển sinh đợt 1 | Báo chí, livestream | 10 bài báo, 8 livestream |
-| IV | Tổng kết – tri ân | Fanpage, sự kiện | 01 gala tri ân đối tác |
-
-V. GIÁM SÁT HÌNH ẢNH
-- Theo dõi hằng ngày báo chí và mạng xã hội; báo cáo tuần về Ban Giám hiệu.
-- Chỉ số: lượt nhắc tích cực/tiêu cực, mức độ nhận biết (khảo sát 6 tháng/lần).
-
-VI. KỊCH BẢN XỬ LÝ KHỦNG HOẢNG (tóm tắt)
-- Cấp độ 1 (tin đồn nhỏ): Phòng Truyền thông phản hồi trong 4 giờ trên kênh chính thức.
-- Cấp độ 2 (lan rộng): thành lập tổ xử lý, người phát ngôn do Hiệu trưởng chỉ định,
-  ra thông cáo trong 24 giờ.
-- Cấp độ 3 (nghiêm trọng): báo cáo Ban Giám hiệu ngay, phối hợp cơ quan chức năng.
-
-VII. KINH PHÍ VÀ TỔ CHỨC THỰC HIỆN
-- Tổng dự toán: 800 triệu đồng từ nguồn chi sự nghiệp.
-- Phòng Truyền thông và Tuyển sinh chủ trì, phối hợp các khoa, phòng liên quan.
-
-Nơi nhận:                                          KT. HIỆU TRƯỞNG
-- Ban Giám hiệu (để b/c);                   TRƯỞNG PHÒNG TRUYỀN THÔNG
-- Các đơn vị (để phối hợp);                        VÀ TUYỂN SINH
-- Lưu: VT, TTTTS.                                      [CHỜ KÝ]
-
-                                                  ThS. Đỗ Thị A
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng phòng Truyền thông (đơn vị phụ trách thương hiệu) soạn và chịu trách nhiệm nội dung.
@@ -226,10 +146,10 @@ Nơi nhận:                                          KT. HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-quan-tri-thuong-hieu`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-quan-tri-thuong-hieu`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

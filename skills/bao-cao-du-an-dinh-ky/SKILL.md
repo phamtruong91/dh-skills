@@ -5,16 +5,18 @@ description: "Soạn báo cáo dự án định kỳ gửi khách hàng/đối t
 
 # Báo cáo dự án định kỳ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi dự án của Viện đến kỳ báo cáo (tháng/quý/giai đoạn) cho khách hàng, đối tác, cơ quan quản lý:
@@ -109,23 +111,13 @@ flowchart TD
     I --> J[/Báo cáo dự án định kỳ/]
 ```
 
-## Đầu ra (Output)
-- Báo cáo dự án định kỳ hoàn chỉnh (markdown), sẵn sàng trình duyệt trước khi gửi.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (báo cáo dự án định kỳ — các phần theo đúng thứ tự):
-1. Tiêu đề + thông tin dự án: tên, mã dự án, đối tác/khách hàng, đơn vị thực hiện,
-   kỳ báo cáo (thời gian bao phủ).
-2. Tiến độ tổng thể: % thực hiện so với kế hoạch, đánh giá chung (đúng tiến độ/chậm).
-3. Sản phẩm bàn giao: đã bàn giao (ngày bàn giao, biên bản) / đang thực hiện (tiến độ,
-   dự kiến xong).
-4. KPI: bảng chỉ tiêu cam kết so với thực đạt, giải thích chỉ số chưa đạt.
-5. Vấn đề tồn tại: mô tả, nguyên nhân, giải pháp đang triển khai, tiến độ khắc phục.
-6. Kế hoạch kỳ tiếp theo: việc chính, mốc quan trọng, đề nghị phối hợp từ phía
-   khách hàng/đối tác (nếu có).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 6 phần theo "Cấu trúc output chuẩn": thông tin dự án, tiến độ tổng thể, sản phẩm bàn giao, KPI, vấn đề tồn tại, kế hoạch kỳ tiếp theo.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu tiến độ, KPI, deliverable khớp với Input (tracker PMO, biên bản bàn giao) đã cho.
 - [ ] Không bịa đặt biên bản bàn giao, KPI hay minh chứng không có thật; mục "chưa có biên bản" ghi đúng là chưa có.
 - [ ] Số liệu nhất quán giữa các phần (tiến độ ↔ KPI ↔ deliverable) hoặc đã giải thích được chênh lệch.
@@ -135,51 +127,6 @@ flowchart TD
 - [ ] Đã qua Human gate: chủ nhiệm xác nhận số liệu, viện trưởng duyệt trước khi gửi khách hàng/đối tác.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, tổ chức, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_du_an` | Nền tảng số hóa di sản văn hóa (ĐHA-DMST-2026-03) — Đối tác: Bảo tàng B |
-| `ky_bao_cao` | Quý II/2026 (01/04–30/06/2026) |
-| `tien_do` | Tổng thể 41% (kế hoạch 40%): WP1 100%, WP2 45%, WP3 20% |
-| `deliverables` | Đã bàn giao: Báo cáo khảo sát + Thiết kế hệ thống (BB ngày 28/03/2026). Đang thực hiện: số hóa 225/500 hiện vật; module tra cứu cơ bản |
-| `kpi` | Số hiện vật số hóa: 225/250 (đạt 90% chỉ tiêu quý); uptime hệ thống thử nghiệm: 98,5% |
-| `van_de` | Máy scan 3D hỏng từ 10/06, đang chờ linh kiện; đã bố trí scan 2D tạm thời nên WP2 không bị gián đoạn |
-| `ke_hoach_tiep` | Quý III: hoàn thành số hóa 500 hiện vật; xong module tra cứu; chạy thử nghiệm nội bộ tháng 9 |
-
-### Output mẫu
-
-```
-BÁO CÁO TIẾN ĐỘ DỰ ÁN — QUÝ II/2026
-Dự án: Nền tảng số hóa di sản văn hóa (ĐHA-DMST-2026-03)
-Đối tác: Bảo tàng B
-Đơn vị thực hiện: Viện Đổi mới sáng tạo và Chuyển giao công nghệ — Trường Đại học A
-Kỳ báo cáo: 01/04/2026 – 30/06/2026
-
-1. TIẾN ĐỘ TỔNG THỂ
-   Đạt 41% so với kế hoạch 40% — đúng tiến độ.
-
-2. SẢN PHẨM BÀN GIAO
-   - Đã bàn giao: Báo cáo khảo sát + Thiết kế hệ thống (biên bản ngày 28/03/2026).
-   - Đang thực hiện: số hóa 225/500 hiện vật; module tra cứu cơ bản (20%).
-
-3. KPI
-   - Số hiện vật số hóa trong quý: 225/250 (đạt 90%).
-   - Uptime hệ thống thử nghiệm: 98,5%.
-
-4. VẤN ĐỀ TỒN TẠI
-   - Máy scan 3D hỏng từ 10/06/2026, đang chờ linh kiện thay thế (dự kiến 15/07).
-   - Giải pháp tạm thời: chuyển sang scan 2D, WP2 không bị gián đoạn.
-
-5. KẾ HOẠCH QUÝ III/2026
-   - Hoàn thành số hóa 500 hiện vật; hoàn thiện module tra cứu; chạy thử nghiệm nội bộ tháng 9/2026.
-   - Đề nghị phía Bảo tàng: cử cán bộ kiểm tra chất lượng dữ liệu số hóa đợt 1 trước 31/07/2026.
-```
 
 ## Human gate (người kiểm duyệt)
 - **Chủ nhiệm dự án** xác nhận số liệu tiến độ, KPI, vấn đề trước khi soạn báo cáo.
@@ -197,10 +144,10 @@ Kỳ báo cáo: 01/04/2026 – 30/06/2026
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-du-an-dinh-ky`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-du-an-dinh-ky`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

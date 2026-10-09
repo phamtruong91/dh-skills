@@ -5,16 +5,18 @@ description: "Soạn kế hoạch hoạt động năm của Phân hiệu / Cơ s
 
 # Soạn kế hoạch hoạt động phân hiệu
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Phân hiệu / Cơ sở đào tạo lập kế hoạch hoạt động năm học, cụ thể hóa kế hoạch của
@@ -90,21 +92,13 @@ flowchart TD
     E -->|Có| HG --> O
 ```
 
-## Đầu ra (Output)
-- Kế hoạch hoạt động năm của phân hiệu (markdown) kèm bảng nhiệm vụ – chỉ tiêu – tiến độ.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Kế hoạch hoạt động năm của phân hiệu):
-1. Tiêu đề hành chính: tên trường + tên phân hiệu, quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM / Độc lập – Tự do – Hạnh phúc", số hiệu văn bản, địa danh và ngày ban hành.
-2. Tên văn bản: "KẾ HOẠCH — Hoạt động năm học [năm học] của Phân hiệu [tên phân hiệu]".
-3. Căn cứ: kế hoạch năm học của trường mẹ; điều kiện thực tế của phân hiệu (quy mô đào tạo, nhân sự, CSVC).
-4. Phần I — Nhiệm vụ trọng tâm: danh sách nhiệm vụ (kế thừa từ trường mẹ + nhiệm vụ đặc thù của phân hiệu).
-5. Phần II — Phân công thực hiện: bảng gồm các cột Nhiệm vụ | Chỉ tiêu | Đơn vị thực hiện | Thời gian, sắp xếp theo 5 mảng (đào tạo – CTSV – KHCN – tài chính – CSVC).
-6. Phần III — Kinh phí: tổng dự toán theo phân cấp tài chính (trong phân cấp / đề nghị trường mẹ bổ sung).
-7. Nơi nhận + chữ ký Giám đốc phân hiệu.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên văn bản, căn cứ, Phần I — Nhiệm vụ trọng tâm, Phần II — Phân công thực hiện (bảng), Phần III — Kinh phí, nơi nhận + chữ ký.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: tên phân hiệu, năm học, nhiệm vụ trường mẹ giao, quy mô, nhiệm vụ trọng tâm riêng.
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính: quốc hiệu, số hiệu, địa danh, ngày ban hành, nơi nhận, chữ ký.
@@ -115,60 +109,6 @@ flowchart TD
 - [ ] Chỉ tiêu trong bảng phân công khớp 100% với chỉ tiêu trong phần Nhiệm vụ trọng tâm.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_phan_hieu` | Phân hiệu Trường Đại học A tại tỉnh Đồng Nai (giả lập) |
-| `nam_hoc` | 2026–2027 |
-| `ke_hoach_truong_me` | Tuyển sinh đạt 100% chỉ tiêu; triển khai kiểm định 2 chương trình; số hóa 50% hồ sơ |
-| `quy_mo` | 1.800 sinh viên, 95 CBVC, 2 dãy nhà học |
-| `nhiem_vu_trong_tam` | Mở thêm 1 ngành đào tạo mới; nâng cấp phòng thực hành |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÂN HIỆU TẠI ĐỒNG NAI                    Độc lập – Tự do – Hạnh phúc
-      Số: 08/KH-ĐHA-PHDN
-                                                 Đồng Nai, ngày 20 tháng 8 năm 2026
-
-                          KẾ HOẠCH
-          Hoạt động năm học 2026–2027 của Phân hiệu
-
-Căn cứ Kế hoạch năm học 2026–2027 của Trường Đại học A;
-Xét điều kiện thực tế của Phân hiệu (1.800 sinh viên, 95 CBVC),
-
-Phân hiệu xây dựng Kế hoạch hoạt động năm học 2026–2027 như sau:
-
-I. NHIỆM VỤ TRỌNG TÂM
-1. Tuyển sinh đạt 100% chỉ tiêu được giao (1.000 chỉ tiêu).
-2. Triển khai tự đánh giá phục vụ kiểm định 2 chương trình đào tạo.
-3. Số hóa 50% hồ sơ đào tạo, học vụ.
-4. Mở thêm 1 ngành đào tạo mới theo đề án được phê duyệt.
-5. Nâng cấp 2 phòng thực hành.
-
-II. PHÂN CÔNG THỰC HIỆN (trích; bảng đầy đủ sắp xếp theo 5 mảng:
-đào tạo – CTSV – KHCN – tài chính – CSVC)
-| Nhiệm vụ | Chỉ tiêu | Đơn vị thực hiện | Thời gian |
-|----------|----------|------------------|-----------|
-| Tuyển sinh | 1.000 chỉ tiêu | Tổ Đào tạo PH | 3–9/2027 |
-| Kiểm định 2 CTĐT | 2 báo cáo TĐG | Tổ ĐBCL PH | 10/2026–6/2027 |
-| Số hóa hồ sơ | 50% | Tổ Hành chính PH | Cả năm |
-| Mở ngành mới | 1 đề án | Tổ Đào tạo PH | 11/2026–3/2027 |
-
-III. KINH PHÍ: theo phân cấp tài chính, tổng dự toán 4,2 tỷ đồng (giả lập).
-
-Nơi nhận:                                          GIÁM ĐỐC PHÂN HIỆU
-- Ban Giám hiệu (b/c);                                  [CHỜ KÝ]
-- Các tổ thuộc Phân hiệu;
-- Lưu: VT, PHDN.                                  TS. Phạm Văn D
-```
 
 ## Human gate (người kiểm duyệt)
 - Giám đốc phân hiệu duyệt kế hoạch trước khi gửi trường mẹ.
@@ -186,10 +126,10 @@ Nơi nhận:                                          GIÁM ĐỐC PHÂN HIỆU
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoat-dong-phan-hieu`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoat-dong-phan-hieu`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

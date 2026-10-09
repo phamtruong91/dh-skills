@@ -5,16 +5,18 @@ description: "Lập kế hoạch Ngày hội việc làm / kết nối doanh ngh
 
 # Kế hoạch Ngày hội việc làm
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi trường cần tổ chức Ngày hội việc làm (Job Fair) nhằm kết nối sinh viên năm cuối /
@@ -127,29 +129,13 @@ flowchart TD
     H --> OUT[["Kế hoạch hoàn chỉnh + phân công + tiến độ"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản kế hoạch Ngày hội việc làm hoàn chỉnh (mục đích, thời gian – địa điểm,
-  thành phần, nội dung, kinh phí dự kiến, tổ chức thực hiện).
-- Bảng phân công nhiệm vụ các tiểu ban + bảng tiến độ chuẩn bị theo mốc thời gian.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của Kế hoạch Ngày hội việc làm:
-1. Tiêu đề hành chính: Quốc hiệu – Tiêu ngữ; tên đơn vị; số, ký hiệu; địa danh, ngày tháng
-   năm.
-2. Tên kế hoạch: "KẾ HOẠCH" + "Tổ chức ..." (`ten_su_kien`).
-3. I. Mục đích – yêu cầu.
-4. II. Thời gian – địa điểm – thành phần (`thoi_gian`, `dia_diem`, `doi_tuong_sv`,
-   `so_luong_dn`).
-5. III. Nội dung chương trình (theo khung giờ: khai mạc, gian hàng, phỏng vấn thử, tọa đàm,
-   tư vấn 1–1).
-6. IV. Kinh phí dự kiến (bảng hạng mục + tổng cộng + phân nguồn).
-7. V. Tổ chức thực hiện (Ban Tổ chức, các tiểu ban, tiến độ chuẩn bị).
-8. Phụ lục 1 – Phân công nhiệm vụ chi tiết các tiểu ban; Phụ lục 2 – Tiến độ chuẩn bị theo
-   mốc; danh sách doanh nghiệp tham gia.
-9. Nơi nhận + chữ ký.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 9 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính; tên kế hoạch; I. Mục đích – yêu cầu; II. Thời gian – địa điểm – thành phần; III. Nội dung chương trình; IV. Kinh phí dự kiến; V. Tổ chức thực hiện; các phụ lục (phân công tiểu ban, tiến độ, danh sách doanh nghiệp); Nơi nhận + chữ ký.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Kèm phụ lục: bảng phân công nhiệm vụ các tiểu ban, bảng tiến độ chuẩn bị theo mốc (T-6 tuần đến T+1 tuần), danh sách doanh nghiệp tham gia.
 - [ ] Quy mô (số doanh nghiệp, số sinh viên, số vị trí tuyển dụng dự kiến), thời gian, địa điểm khớp với Input đã cho.
 - [ ] Không bịa đặt tên doanh nghiệp, số liệu vị trí tuyển dụng, đơn giá trong dự toán.
@@ -160,133 +146,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, doanh nghiệp, số liệu dưới đây đều là **giả lập**,
-> không liên quan tổ chức/cá nhân/doanh nghiệp có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_su_kien` | Ngày hội việc làm Trường Đại học A năm 2027 |
-| `doi_tuong_sv` | Sinh viên năm cuối khóa K12 và sinh viên tốt nghiệp năm 2026 (dự kiến 2.500 SV) |
-| `so_luong_dn` | 20 doanh nghiệp |
-| `thoi_gian` | Thứ Bảy, ngày 20/3/2027, 8h00–16h30 |
-| `dia_diem` | Sân trường + Nhà thi đấu đa năng |
-| `nganh_nghe` | CNTT, Kinh tế – Quản trị kinh doanh, Kế toán, Marketing, Ngoại ngữ |
-| `kinh_phi` | Ngân sách trường + phí gian hàng doanh nghiệp |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG CÔNG TÁC SINH VIÊN                Độc lập – Tự do – Hạnh phúc
-       Số: 15/KH-ĐHA-CTSV
-                                                 Thành phố C, ngày 10 tháng 01 năm 2027
-
-KẾ HOẠCH
-Tổ chức Ngày hội việc làm Trường Đại học A năm 2027
-
-I. MỤC ĐÍCH – YÊU CẦU
-1. Kết nối trực tiếp sinh viên năm cuối, sinh viên mới tốt nghiệp với doanh
-nghiệp tuyển dụng; phấn đấu 20 doanh nghiệp tham gia với khoảng 400 vị trí
-tuyển dụng.
-2. Trang bị cho sinh viên kỹ năng viết CV, phỏng vấn, định hướng nghề nghiệp.
-3. Mở rộng mạng lưới đối tác doanh nghiệp, ký kết hợp tác đào tạo – tuyển dụng.
-4. Tổ chức chuyên nghiệp, an toàn, thiết thực, hiệu quả.
-
-II. THỜI GIAN – ĐỊA ĐIỂM – THÀNH PHẦN
-1. Thời gian: Thứ Bảy, ngày 20/3/2027, từ 8h00 đến 16h30.
-2. Địa điểm: Sân trường (khu gian hàng) và Nhà thi đấu đa năng (lễ khai mạc,
-tọa đàm, phỏng vấn thử).
-3. Thành phần:
-   - Đại biểu: Ban Giám hiệu, lãnh đạo các Khoa, Phòng, Trung tâm;
-   - Khách mời: đại diện 20 doanh nghiệp, Sở Lao động – Thương binh và Xã hội;
-   - Sinh viên: khoảng 2.500 sinh viên năm cuối khóa K12 và sinh viên tốt
-     nghiệp năm 2026.
-
-III. NỘI DUNG CHƯƠNG TRÌNH
-1. 8h00–9h00: Lễ khai mạc (văn nghệ chào mừng, phát biểu của Hiệu trưởng,
-phát biểu đại diện doanh nghiệp, ký kết biên bản ghi nhớ hợp tác với 03
-doanh nghiệp).
-2. 9h00–16h30: Khu gian hàng tuyển dụng (20 gian hàng): doanh nghiệp giới
-thiệu, tư vấn và nhận hồ sơ ứng tuyển trực tiếp.
-3. 9h30–11h30: Phỏng vấn thử (mock interview): 06 bàn phỏng vấn, mỗi lượt
-15 phút, chuyên gia nhân sự góp ý CV và kỹ năng trả lời (120 sinh viên đăng
-ký trước).
-4. 13h30–15h00: Tọa đàm "Kỹ năng chinh phục nhà tuyển dụng": viết CV, trả
-lời phỏng vấn, tác phong công sở.
-5. 15h00–16h00: Tọa đàm "Xu hướng thị trường lao động và khởi nghiệp cho
-sinh viên".
-6. Cả ngày: Khu tư vấn hướng nghiệp 1–1 của Trung tâm Quan hệ doanh nghiệp
-và Hỗ trợ sinh viên.
-
-IV. KINH PHÍ DỰ KIẾN (giả lập)
-| Hạng mục | Số tiền (đồng) |
-|---|---|
-| Dựng 20 gian hàng, backdrop, sân khấu | 60.000.000 |
-| Âm thanh, ánh sáng, máy chiếu | 25.000.000 |
-| In cẩm nang ngày hội (2.500 cuốn), băng rôn, poster | 30.000.000 |
-| Thù lao MC, chuyên gia tọa đàm | 15.000.000 |
-| Nước uống, quà tặng doanh nghiệp, chi phí lễ tân | 20.000.000 |
-| Dự phòng | 10.000.000 |
-| **Tổng cộng** | **160.000.000** |
-Nguồn kinh phí: ngân sách Nhà trường 100.000.000 đồng; phí tham gia gian
-hàng của doanh nghiệp (3.000.000 đồng/doanh nghiệp) 60.000.000 đồng.
-
-V. TỔ CHỨC THỰC HIỆN
-1. Ban Tổ chức do Phó Hiệu trưởng phụ trách CTSV làm Trưởng ban; Phòng CTSV
-là thường trực.
-2. Các Tiểu ban: Nội dung – chương trình; Hậu cần – kỹ thuật – mặt bằng;
-Truyền thông – lễ tân; An ninh – y tế; Tài chính – tổng hợp (phân công chi
-tiết tại Phụ lục 1).
-3. Tiến độ chuẩn bị (Phụ lục 2): T-6 tuần gửi thư mời doanh nghiệp; T-4 tuần
-chốt danh sách DN; T-2 tuần mở đăng ký sinh viên, hoàn thành truyền thông;
-T-1 tuần tổng duyệt mặt bằng, kịch bản; ngày G tổ chức; T+1 tuần báo cáo
-tổng kết.
-
-Nơi nhận:                                    KT. HIỆU TRƯỞNG
-- Ban Giám hiệu (b/c);                       PHÓ HIỆU TRƯỞNG
-- Các Khoa, Phòng, Trung tâm;
-- Lưu: VT, CTSV.                                 [CHỜ KÝ]
-
-                                         TS. Vũ Thị Lan
-
-Phụ lục 1 – Phân công nhiệm vụ (trích):
-- Tiểu ban Nội dung – chương trình (Phòng CTSV chủ trì): kịch bản MC, nội
-  dung tọa đàm, điều phối phỏng vấn thử, cẩm nang ngày hội.
-- Tiểu ban Hậu cần – kỹ thuật (Phòng Quản trị – Thiết bị chủ trì): mặt bằng,
-  gian hàng, điện – nước, âm thanh – ánh sáng, phương án mưa.
-- Tiểu ban Truyền thông – lễ tân (Đoàn – Hội SV chủ trì): poster, fanpage,
-  đón tiếp đại biểu và doanh nghiệp, đội tình nguyện viên (50 SV).
-- Tiểu ban An ninh – y tế (Phòng Bảo vệ chủ trì): phân luồng giao thông,
-  giữ xe, trực y tế, PCCC.
-- Tiểu ban Tài chính – tổng hợp (Phòng Tài chính – Kế toán chủ trì): dự
-  toán, quyết toán, thu phí gian hàng, báo cáo tổng kết.
-
-Phụ lục 2 – Tiến độ chuẩn bị (trích):
-| Mốc | Công việc |
-|---|---|
-| T-6 tuần (06/02) | Gửi thư mời 35 doanh nghiệp; họp Ban Tổ chức lần 1 |
-| T-4 tuần (20/02) | Chốt 20 doanh nghiệp; thu thông tin tuyển dụng in cẩm nang |
-| T-2 tuần (06/03) | Mở form đăng ký SV + phỏng vấn thử; treo băng rôn, chạy truyền thông |
-| T-1 tuần (13/03) | Chốt sơ đồ gian hàng, kịch bản MC; tổng duyệt kỹ thuật |
-| Ngày G (20/03) | Tổ chức ngày hội |
-| T+1 tuần (27/03) | Họp tổng kết, báo cáo Ban Giám hiệu, gửi thư cảm ơn doanh nghiệp |
-
-Danh sách 20 doanh nghiệp tham gia (giả lập — tên hư cấu):
-Công ty CP Công nghệ D, Công ty TNHH Phần mềm Ánh Dương, Công ty CP
-Thương mại Đông Dương, Công ty TNHH Giải pháp số Hoàng Long, Công ty CP
-Đầu tư Thiên Phú, Công ty TNHH Truyền thông Việt Star, Công ty CP Logistics
-Bình Minh, Công ty TNHH Kế toán An Phát, Công ty CP Bất động sản Đại Cát,
-Công ty TNHH Sản xuất Minh Khang, Công ty CP Du lịch Hương Sen, Công ty TNHH
-Dược phẩm Ngọc Linh, Công ty CP Giáo dục Trí Việt, Công ty TNHH Thiết kế
-Sáng Tạo, Công ty CP Năng lượng Xanh, Công ty TNHH Thực phẩm Hòa Bình,
-Công ty CP Viễn thông Liên Việt, Công ty TNHH Kiểm toán Chính Xác, Công ty
-CP Xây dựng Trường Thịnh, Công ty TNHH Thời trang Phong Cách.
-```
 
 ## Căn cứ & lưu ý
 - Kế hoạch năm học và chiến lược hợp tác doanh nghiệp của Nhà trường.
@@ -300,10 +159,10 @@ CP Xây dựng Trường Thịnh, Công ty TNHH Thời trang Phong Cách.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-ngay-hoi-viec-lam`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-ngay-hoi-viec-lam`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

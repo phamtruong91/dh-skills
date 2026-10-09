@@ -5,16 +5,18 @@ description: "Xây dựng mẫu sổ theo dõi sức khỏe và quy trình quả
 
 # Hồ sơ quản lý sức khỏe
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Trạm Y tế cần thiết lập hoặc chuẩn hóa: sổ theo dõi sức khỏe CBVC/sinh viên,
@@ -117,25 +119,13 @@ flowchart TD
     E -->|Có| F --> HG --> O
 ```
 
-## Đầu ra (Output)
-- Mẫu sổ/biểu mẫu theo dõi sức khỏe (markdown).
-- Quy trình quản lý và bảo mật hồ sơ sức khỏe.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** bộ hồ sơ gồm 2 phần, theo đúng thứ tự:
-- Phần A — Mẫu biểu:
-  1. Tiêu đề đơn vị + tên biểu mẫu + căn cứ ban hành (số quyết định).
-  2. Bảng biểu mẫu: các cột theo trường thông tin đã chốt, có cột mã hồ sơ ẩn danh.
-  3. Hướng dẫn ghi chép ngắn (ai ghi, ghi khi nào, ký xác nhận).
-- Phần B — Quy trình quản lý và bảo mật:
-  1. Phạm vi và đối tượng áp dụng.
-  2. Quy trình 5 bước: thu thập → kiểm tra → lưu trữ → khai thác → tiêu hủy
-     (mỗi bước: người thực hiện, cách làm, thời hạn).
-  3. Quy định bảo mật và phân quyền truy cập (ai được xem, thủ tục trích xuất).
-  4. Trách nhiệm và xử lý vi phạm.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 2 phần theo "Cấu trúc output chuẩn": Phần A — Mẫu biểu (tiêu đề + căn cứ ban hành, bảng biểu mẫu có cột mã hồ sơ ẩn danh, hướng dẫn ghi chép) và Phần B — Quy trình quản lý và bảo mật (phạm vi, quy trình 5 bước, bảo mật và phân quyền, trách nhiệm và xử lý vi phạm).
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Biểu mẫu khớp với Input: đúng đối tượng, loại hồ sơ, trường thông tin đã chốt và chế độ bảo mật.
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng định dạng quy định: số quyết định ban hành ghi đúng trên đầu biểu mẫu.
@@ -146,49 +136,6 @@ flowchart TD
 - [ ] Quy trình 5 bước ghi rõ người chịu trách nhiệm ở mỗi bước; phân biệt trích xuất nội bộ Trạm và trích xuất ra ngoài Trạm.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường (Trường Đại học A), cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `doi_tuong` | Sinh viên |
-| `loai_ho_so` | Sổ theo dõi sức khỏe |
-| `truong_thong_tin` | Mã SV (ẩn danh khi tổng hợp), khoa, năm nhập học, ngày khám, phân loại sức khỏe, ghi chú theo dõi, tình trạng BHYT |
-| `che_do_bao_mat` | Chỉ Trạm Y tế |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-TRẠM Y TẾ
-
-MẪU SỔ THEO DÕI SỨC KHỎE SINH VIÊN (ban hành kèm Quyết định số .../QĐ-ĐHA)
-
-| STT | Mã hồ sơ | Khoa | Năm NH | Ngày khám | Phân loại SK | Ghi chú theo dõi | BHYT |
-|-----|----------|------|--------|-----------|--------------|------------------|------|
-| 1 | SK-2026-0001 | CNTT | 2026 | 12/09/2026 | Loại II | Tái khám 6 tháng | Có |
-| 2 | SK-2026-0002 | Kinh tế | 2026 | 12/09/2026 | Loại I | — | Có |
-
-Hướng dẫn ghi chép: y sĩ trực tiếp khám lập hồ sơ ngay trong buổi khám; sinh viên
-ký xác nhận vào sổ; mã hồ sơ dùng để tra cứu, không dùng họ tên khi tổng hợp.
-
-QUY TRÌNH QUẢN LÝ VÀ BẢO MẬT HỒ SƠ SỨC KHỎE
-Phạm vi áp dụng: toàn bộ hồ sơ sức khỏe sinh viên do Trạm Y tế quản lý.
-1. Thu thập: Trạm Y tế trực tiếp lập hồ sơ khi khám; sinh viên ký xác nhận.
-2. Kiểm tra: y sĩ phụ trách rà soát đầy đủ trường thông tin trong 3 ngày.
-3. Lưu trữ: tủ hồ sơ có khóa; file điện tử đặt mật khẩu, chỉ máy tính của Trạm.
-4. Khai thác: mọi trích xuất ghi vào nhật ký (người xin – mục đích – thời gian);
-   trích xuất ngoài Trạm phải có phê duyệt của Trưởng Trạm.
-5. Tiêu hủy: hồ sơ hết thời hạn lưu được tiêu hủy theo quy định, có biên bản.
-
-Bảo mật và phân quyền: chỉ nhân sự Trạm Y tế được truy cập; cấm sao chụp, mang hồ
-sơ ra khỏi Trạm khi chưa có phê duyệt bằng văn bản của Trưởng Trạm. Vi phạm bảo
-mật bị xử lý theo quy định của trường và pháp luật về bảo vệ dữ liệu cá nhân.
-```
 
 ## Human gate (người kiểm duyệt)
 - Trưởng Trạm Y tế phê duyệt biểu mẫu và quy trình trước khi áp dụng.
@@ -208,10 +155,10 @@ mật bị xử lý theo quy định của trường và pháp luật về bảo
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-quan-ly-suc-khoe`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-quan-ly-suc-khoe`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

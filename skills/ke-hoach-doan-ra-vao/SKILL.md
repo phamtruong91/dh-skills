@@ -5,16 +5,18 @@ description: "Lập kế hoạch đoàn ra (cán bộ đi công tác nước ngo
 
 # Kế hoạch đoàn ra / đoàn vào
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần lập kế hoạch cho **đoàn ra** (cán bộ, giảng viên của Trường đi công tác, học tập,
@@ -91,28 +93,12 @@ flowchart TD
     HG --> Z[["Xuất bản kế hoạch và dự toán"]]
 ```
 
-## Đầu ra (Output)
-- Tờ trình kế hoạch đoàn ra / đoàn vào hoàn chỉnh (mục đích, thành phần, chương trình theo ngày).
-- Bảng dự toán kinh phí chi tiết theo khoản mục.
-- Danh sách đầu mối phối hợp.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Tờ trình kế hoạch đoàn ra /
-đoàn vào, các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề cơ quan ban hành + tên tờ trình + trích yếu (V/v...).
-2. Kính gửi (Hiệu trưởng).
-3. Căn cứ (thư mời của đối tác / MOU / quy chế quản lý đoàn ra, đoàn vào).
-4. Mục 1. Mục đích (chuyến đi / chuyến thăm).
-5. Mục 2. Thành phần (đoàn ra: thành viên đoàn đi; đoàn vào: thành phần đoàn khách).
-6. Mục 3. Thời gian.
-7. Mục 4. Thành phần đón tiếp phía Trường (đoàn vào) / nhiệm vụ từng thành viên (đoàn ra).
-8. Mục 5. Chương trình chi tiết theo ngày (ngày – giờ – nội dung – địa điểm – người phụ trách).
-9. Mục 6. Dự toán kinh phí (bảng khoản mục – số lượng – đơn giá – thành tiền; nguồn kinh phí).
-10. Mục 7. Kiến nghị.
-11. Địa danh, ngày tháng năm; chức danh, chữ ký, họ tên người ký (đơn vị trình).
-12. Sản phẩm kèm theo: bảng dự toán kinh phí chi tiết, danh sách đầu mối phối hợp.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề cơ quan, kính gửi, căn cứ, mục 1–7, chữ ký đơn vị trình, bảng dự toán kèm theo.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu khớp với Input: số người, số ngày, thời gian, địa điểm, tổng kinh phí, nguồn kinh phí.
 - [ ] Không bịa đặt số liệu, đơn giá, thông tin đối tác, thành viên đoàn.
 - [ ] Đúng thể thức tờ trình hành chính; bảng dự toán đủ cột (khoản mục – số lượng – đơn giá – thành tiền – nguồn).
@@ -124,93 +110,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_doan` | Đoàn vào |
-| `muc_dich` | Đón đoàn Trường Đại học C (Hà Lan) sang thăm, làm việc và ký kết MOU hợp tác |
-| `doi_tac` | Trường Đại học Khoa học Ứng dụng C, Vương quốc Hà Lan – đoàn 04 người do GS. Willem Janssen, Hiệu trưởng, làm trưởng đoàn |
-| `thoi_gian` | 18/11/2026 – 20/11/2026 (3 ngày) |
-| `thanh_phan` | Phía Trường: PGS.TS. Trần Văn B (Phó Hiệu trưởng, trưởng đoàn đón tiếp), TS. Nguyễn Thị A (Trưởng phòng KHCN&HTQT), TS. Trần Văn D (Trưởng khoa CNTT), ThS. Đặng Thị A (chuyên viên đối ngoại, phiên dịch) |
-| `chuong_trinh` | Ngày 1: đón sân bay, chào xã giao Ban Giám hiệu, tham quan trường. Ngày 2: hội đàm, ký MOU, tọa đàm với giảng viên – sinh viên Khoa CNTT. Ngày 3: tham quan thực tế, tiễn đoàn |
-| `nguon_kinh_phi` | Ngân sách đối ngoại của Trường năm 2026 |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-PHÒNG KHCN & HTQT
-
-TỜ TRÌNH
-V/v đón tiếp đoàn Trường Đại học C (Hà Lan) thăm và làm việc
-
-Kính gửi: Hiệu trưởng Trường Đại học A
-
-Căn cứ Biên bản ghi nhớ hợp tác đã thống nhất giữa hai trường; theo đề xuất
-của Trường Đại học Khoa học Ứng dụng C (Vương quốc Hà Lan), Phòng
-KHCN&HTQT kính trình Hiệu trưởng phê duyệt kế hoạch đón tiếp đoàn như sau:
-
-1. Mục đích
-Đón đoàn Trường Đại học C sang thăm, làm việc và ký kết Biên bản
-ghi nhớ hợp tác (MOU) về đào tạo và nghiên cứu khoa học.
-
-2. Thành phần đoàn khách (04 người)
-- GS. Willem Janssen – Hiệu trưởng, Trưởng đoàn;
-- TS. Anna de Vries – Trưởng khoa Công nghệ thông tin;
-- TS. John B – Điều phối viên hợp tác quốc tế;
-- Bà Maria Jansen – Trợ lý Hiệu trưởng.
-
-3. Thời gian: từ ngày 18/11/2026 đến ngày 20/11/2026.
-
-4. Thành phần đón tiếp phía Trường
-- PGS.TS. Trần Văn B – Phó Hiệu trưởng, Trưởng đoàn đón tiếp;
-- TS. Nguyễn Thị A – Trưởng phòng KHCN&HTQT;
-- TS. Trần Văn D – Trưởng khoa Công nghệ thông tin;
-- ThS. Đặng Thị A – Chuyên viên đối ngoại, phiên dịch tiếng Anh.
-
-5. Chương trình chi tiết
-
-Ngày 18/11/2026 (Thứ Tư):
-- 10h30: Đón đoàn tại Sân bay quốc tế Nội Bài (ThS. Đặng Thị A).
-- 14h00: Chào xã giao Ban Giám hiệu tại Phòng họp A (PGS.TS. Trần Văn B).
-- 15h30: Tham quan cơ sở vật chất, phòng Lab AI của Khoa CNTT.
-
-Ngày 19/11/2026 (Thứ Năm):
-- 08h30: Hội đàm chính thức về nội dung hợp tác (Phòng họp A).
-- 10h30: Lễ ký kết MOU (Hội trường tầng 3, Nhà A1).
-- 14h00: Tọa đàm "AI trong giáo dục đại học" với giảng viên, sinh viên Khoa CNTT.
-- 18h30: Tiệc chiêu đãi đoàn (Nhà khách trường).
-
-Ngày 20/11/2026 (Thứ Sáu):
-- 08h30: Tham quan thực tế tại Khu Công nghệ cao Hòa Lạc.
-- 14h00: Tổng kết, trao quà lưu niệm; tiễn đoàn tại sân bay (chuyến bay 17h55).
-
-6. Dự toán kinh phí (nguồn: ngân sách đối ngoại năm 2026)
-
-| Khoản mục | Số lượng | Đơn giá (đ) | Thành tiền (đ) |
-|---|---|---|---|
-| Khách sạn (3 đêm × 4 phòng) | 12 phòng-đêm | 1.500.000 | 18.000.000 |
-| Xe đón tiễn sân bay (2 lượt) | 2 lượt | 2.500.000 | 5.000.000 |
-| Tiệc chiêu đãi (12 khách) | 12 suất | 800.000 | 9.600.000 |
-| Quà tặng đối ngoại | 4 bộ | 1.000.000 | 4.000.000 |
-| Phiên dịch, in ấn, khánh tiết | trọn gói | – | 5.000.000 |
-| TỔNG CỘNG | | | 41.600.000 |
-
-7. Kiến nghị
-Kính đề nghị Hiệu trưởng phê duyệt kế hoạch và dự toán kinh phí nêu trên để
-Phòng KHCN&HTQT phối hợp các đơn vị triển khai.
-
-                                                Thành phố C, ngày 09 tháng 10 năm 2026
-                                                TRƯỞNG PHÒNG KHCN&HTQT
-
-                                                TS. Nguyễn Thị A
-```
-
 ## Căn cứ & lưu ý
 - Quy chế quản lý đoàn ra, đoàn vào và Quy chế chi tiêu nội bộ của Trường Đại học A.
 - Đoàn ra đi nước ngoài phải có thư mời chính thức của đối tác và quyết định cử đi công tác của Hiệu trưởng.
@@ -219,10 +118,10 @@ Phòng KHCN&HTQT phối hợp các đơn vị triển khai.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-doan-ra-vao`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-doan-ra-vao`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

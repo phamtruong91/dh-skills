@@ -5,16 +5,18 @@ description: "Lập kế hoạch chương trình ươm tạo đổi mới sáng 
 
 # Kế hoạch ươm tạo ĐMST
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Viện ĐMST & CGCN tổ chức chương trình ươm tạo (startup sinh viên, giảng viên, dự án spin-off):
@@ -107,25 +109,13 @@ flowchart TD
     H --> I[/Kế hoạch chương trình ươm tạo/]
 ```
 
-## Đầu ra (Output)
-- Kế hoạch chương trình ươm tạo hoàn chỉnh: tiêu chí + thang điểm, timeline các giai đoạn,
-  phân bổ nguồn lực, KPI.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (văn bản kế hoạch chương trình ươm tạo — các phần theo đúng
-thứ tự):
-1. Tiêu đề: tên chương trình + đợt/năm; đơn vị tổ chức; thời gian thực hiện.
-2. Đối tượng và lĩnh vực ưu tiên.
-3. Tiêu chí tuyển chọn: thang điểm 100 (trọng số từng tiêu chí), rubric chấm, ngưỡng
-   trúng tuyển.
-4. Lộ trình ươm tạo: 4 giai đoạn (tuyển chọn, ươm tạo, tăng tốc, tốt nghiệp) — mỗi giai
-   đoạn ghi mốc thời gian, đầu ra, tiêu chí "qua cửa".
-5. Nguồn lực hỗ trợ: mentor, lab, vốn mồi (lịch giải ngân theo mốc), hỗ trợ pháp lý.
-6. KPI đầu ra (định lượng, có mốc thời gian).
-7. Đánh giá cuối kỳ, demo day và chính sách hỗ trợ sau ươm tạo.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo "Cấu trúc output chuẩn": tiêu đề, đối tượng và lĩnh vực ưu tiên, tiêu chí tuyển chọn, lộ trình 4 giai đoạn, nguồn lực hỗ trợ, KPI đầu ra, đánh giá cuối kỳ và hỗ trợ sau ươm tạo.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu khớp với Input: số dự án tuyển, nguồn lực (mentor, lab, vốn mồi), thời gian.
 - [ ] Không bịa đặt cam kết gọi vốn, cam kết đầu tư hay nguồn lực không có thật.
 - [ ] Bộ tiêu chí thang 100 điểm có trọng số và rubric cụ thể cho từng mức điểm, ngưỡng trúng tuyển rõ ràng.
@@ -136,63 +126,6 @@ thứ tự):
 - [ ] Đã qua Human gate: hội đồng ươm tạo duyệt bộ tiêu chí, viện trưởng phê duyệt kế hoạch và danh sách trúng tuyển.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, tổ chức, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_chuong_trinh` | Vườn ươm A — Đợt 2/2026 |
-| `doi_tuong` | Sinh viên và giảng viên Trường Đại học A |
-| `linh_vuc_uu_tien` | AI ứng dụng, nông nghiệp thông minh, giáo dục số |
-| `nguon_luc` | 12 mentor, 02 phòng lab, vốn mồi 500 triệu đồng, hỗ trợ pháp lý |
-| `thoi_gian` | 9 tháng (T07/2026 – T03/2027) |
-| `chi_tieu` | Tuyển 10 dự án, tối thiểu 6 dự án tốt nghiệp |
-
-### Output mẫu (trích)
-
-```
-KẾ HOẠCH CHƯƠNG TRÌNH ƯƠM TẠO "VƯỜN ƯƠM A" — ĐỢT 2/2026
-Đơn vị tổ chức: Viện ĐMST & CGCN — Trường Đại học A
-Thời gian: 9 tháng (T07/2026 – T03/2027)
-
-1. ĐỐI TƯỢNG VÀ LĨNH VỰC ƯU TIÊN
-   - Đối tượng: sinh viên và giảng viên Trường Đại học A.
-   - Lĩnh vực ưu tiên: AI ứng dụng, nông nghiệp thông minh, giáo dục số.
-
-2. TIÊU CHÍ TUYỂN CHỌN (thang 100 điểm)
-   - Tính đổi mới sáng tạo: 30 điểm
-   - Tính khả thi kỹ thuật: 25 điểm
-   - Năng lực đội ngũ: 20 điểm
-   - Tiềm năng thị trường: 15 điểm
-   - Phù hợp lĩnh vực ưu tiên: 10 điểm
-   Ngưỡng trúng tuyển: ≥ 70 điểm.
-
-3. LỘ TRÌNH ƯƠM TẠO
-   - Giai đoạn 1 – Tuyển chọn (T07–T08/2026): phát động, nhận hồ sơ, chấm, phỏng vấn,
-     công bố 10 dự án. Qua cửa: đạt ngưỡng 70 điểm.
-   - Giai đoạn 2 – Ươm tạo (T09–T12/2026): hoàn thiện MVP, đào tạo kỹ năng, mentor 1-1
-     hằng tuần. Qua cửa: có bản MVP chạy được.
-   - Giai đoạn 3 – Tăng tốc (T01–T02/2027): kết nối thị trường, tập gọi vốn, hoàn thiện
-     mô hình kinh doanh. Qua cửa: có kế hoạch kinh doanh và ít nhất 01 khách hàng thử nghiệm.
-   - Giai đoạn 4 – Tốt nghiệp (T03/2027): demo day, đánh giá tốt nghiệp.
-
-4. NGUỒN LỰC HỖ TRỢ
-   - 12 mentor (mỗi dự án 01 mentor chính, cam kết 2 giờ/tuần); 02 phòng lab đặt lịch theo tuần.
-   - Vốn mồi 500 triệu đồng, giải ngân theo mốc (30%-40%-30%) khi đạt KPI giai đoạn.
-   - Hỗ trợ pháp lý: đăng ký doanh nghiệp, SHTT.
-
-5. KPI ĐẦU RA
-   - ≥ 6/10 dự án tốt nghiệp; ≥ 4 MVP hoàn thiện; ≥ 2 dự án gọi được vốn mồi tiếp theo.
-
-6. ĐÁNH GIÁ CUỐI KỲ VÀ SAU ƯƠM TẠO
-   - Demo day tháng 3/2027: ban giám khảo gồm hội đồng ươm tạo và nhà đầu tư khách mời,
-     chấm thang 100 điểm; điều kiện tốt nghiệp: đạt ≥ 70 điểm và có MVP hoạt động được.
-   - Hỗ trợ sau ươm tạo: tham gia mạng lưới alumni, ưu tiên đặt chỗ lab 12 tháng.
-```
 
 ## Human gate (người kiểm duyệt)
 - **Hội đồng ươm tạo** chấm tuyển chọn và đánh giá tốt nghiệp theo thang điểm đã duyệt.
@@ -210,10 +143,10 @@ Thời gian: 9 tháng (T07/2026 – T03/2027)
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-uom-tao-dmst`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-uom-tao-dmst`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

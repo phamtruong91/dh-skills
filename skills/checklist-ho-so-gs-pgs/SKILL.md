@@ -5,16 +5,18 @@ description: "Rà soát hồ sơ ứng viên xét công nhận chức danh Giáo
 
 # Checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi tiếp nhận hồ sơ đăng ký xét công nhận chức danh Giáo sư (GS) / Phó giáo sư (PGS):
@@ -138,120 +140,21 @@ flowchart TD
     HG --> OUT[["Báo cáo thẩm định hồ sơ GS, PGS"]]
 ```
 
-## Đầu ra (Output)
-- Bảng checklist hồ sơ (thành phần | tình trạng | ghi chú).
-- Bảng đối chiếu tiêu chuẩn GS/PGS (tiêu chí | yêu cầu | thực tế | kết quả).
-- Báo cáo thẩm định hồ sơ hoàn chỉnh (trình Hội đồng).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** (Báo cáo thẩm định hồ sơ — sản phẩm chính, theo thể thức NĐ 30/2020)
-1. Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc lập – Tự do – Hạnh phúc").
-2. Tên cơ quan ban hành (Phòng Tổ chức – Cán bộ).
-3. Số, ký hiệu báo cáo.
-4. Địa danh, ngày tháng năm ban hành.
-5. Tên loại văn bản "BÁO CÁO" + trích yếu (thẩm định hồ sơ đăng ký xét công nhận chức danh
-GS/PGS của ông/bà...).
-6. Kính gửi (Hội đồng xét công nhận chức danh GS, PGS Trường Đại học A).
-7. Phần mở đầu: căn cứ nhiệm vụ thẩm định; thông tin ứng viên (họ tên, đơn vị, chức danh
-đăng ký, ngành xét).
-8. Nội dung chính: 1. Về thành phần hồ sơ (số nhóm tài liệu, nhóm đủ/thiếu cụ thể);
-2. Về tiêu chuẩn theo Quyết định 37/2018/QĐ-TTg (nêu số liệu từng nhóm tiêu chuẩn);
-3. Kiến nghị (kết luận đủ điều kiện / cần bổ sung gì + thời hạn bổ sung cụ thể).
-9. Nơi nhận (Hội đồng; ứng viên để bổ sung; lưu VT, TCCB).
-10. Chữ ký (Trưởng phòng + họ tên).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc l…; Tên cơ quan ban hành (Phòng Tổ chức – Cán bộ).; Số, ký hiệu báo cáo.; Địa danh, ngày tháng năm ban hành.; … (đủ 12 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Quyết định số 37/2018/QĐ-TTg ngày 31/8/2018 của Thủ tướng Chính phủ…
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Kết luận phải rõ ràng, không dùng từ mập mờ ("cơ bản đáp ứng" phải đi
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ho_ten` | Trần Văn B |
-| `chuc_danh` | Phó giáo sư |
-| `nganh` | Công nghệ thông tin |
-| `don_vi` | Khoa Công nghệ thông tin, Trường Đại học A |
-| `ly_lich_khoa_hoc` | Tiến sĩ CNTT (2015); 11 năm giảng dạy đại học; giảng viên chính từ 2019 |
-| `tieu_chuan_dao_tao` | Đã hướng dẫn thành công 02 NCS tiến sĩ, 09 học viên cao học |
-| `tieu_chuan_khoa_hoc` | 32 công trình: 08 bài báo quốc tế uy tín (tác giả chính 05), 01 sách chuyên khảo, 01 bằng sáng chế |
-| `tieu_chuan_giang_day` | 11 năm giảng dạy liên tục, 280 giờ chuẩn/năm, đánh giá hoàn thành tốt nhiệm vụ |
-| `minh_chung` | Bằng tiến sĩ; quyết định công nhận giảng viên chính; danh mục 32 công trình có bản sao bài báo; giấy chứng nhận hướng dẫn NCS |
-| `thanh_phan_ho_so` | Đơn đăng ký; lý lịch khoa học; bản sao văn bằng; minh chứng công trình; minh chứng giảng dạy; xác nhận đơn vị — thiếu: bản sao quyết định hướng dẫn NCS số 2 |
-
-### Output mẫu
-
-**A. CHECKLIST THÀNH PHẦN HỒ SƠ**
-
-| TT | Thành phần | Tình trạng | Ghi chú |
-|----|------------|------------|---------|
-| 1 | Đơn đăng ký xét công nhận chức danh PGS | Đủ | Đúng mẫu, có chữ ký |
-| 2 | Bản đăng ký xét (lý lịch khoa học) | Đủ | Kê khai đầy đủ |
-| 3 | Bản sao văn bằng tiến sĩ | Đủ | Có chứng thực |
-| 4 | Minh chứng quá trình giảng dạy | Đủ | Xác nhận của Khoa |
-| 5 | Minh chứng hướng dẫn NCS, học viên cao học | Thiếu 01 mục | Thiếu bản sao QĐ hướng dẫn NCS thứ 2 |
-| 6 | Minh chứng công trình khoa học | Đủ | 32 công trình, có bản sao |
-| 7 | Xác nhận của đơn vị công tác | Đủ | Có ý kiến đồng ý giới thiệu |
-
-**B. ĐỐI CHIẾU TIÊU CHUẨN (Quyết định 37/2018/QĐ-TTg)**
-
-| Tiêu chí | Yêu cầu (PGS) | Thực tế ứng viên | Kết quả |
-|---|---|---|---|
-| Trình độ tiến sĩ | Có | Tiến sĩ CNTT (2015) | Đạt |
-| Thâm niên giảng dạy | ≥ 6 năm | 11 năm | Đạt |
-| Hướng dẫn NCS/HVCH | Theo quy định ngành | 02 NCS, 09 HVCH | Đạt (cần bổ sung QĐ) |
-| Công trình khoa học | Đủ số lượng, chất lượng | 32 công trình, 08 bài quốc tế | Đạt |
-| Sách/bằng sáng chế | Theo quy định | 01 sách chuyên khảo, 01 bằng sáng chế | Đạt |
-
-**C. BÁO CÁO THẨM ĐỊNH HỒ SƠ**
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG TỔ CHỨC – CÁN BỘ                    Độc lập – Tự do – Hạnh phúc
-      Số: 42/BC-ĐHA-TCCB
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                       BÁO CÁO
-      Thẩm định hồ sơ đăng ký xét công nhận chức danh Phó giáo sư
-              của ông Trần Văn B
-
-Kính gửi: Hội đồng xét công nhận chức danh GS, PGS Trường Đại học A
-
-Thực hiện nhiệm vụ thẩm định hồ sơ ứng viên xét công nhận chức danh năm 2026,
-Phòng Tổ chức – Cán bộ báo cáo kết quả thẩm định hồ sơ của ông Trần Văn B,
-giảng viên Khoa Công nghệ thông tin, đăng ký xét công nhận chức danh Phó giáo sư,
-ngành Công nghệ thông tin, như sau:
-
-1. Về thành phần hồ sơ: hồ sơ gồm 07 nhóm tài liệu theo quy định; 06 nhóm đầy đủ,
-hợp lệ; còn thiếu 01 minh chứng: bản sao quyết định giao nhiệm vụ hướng dẫn
-nghiên cứu sinh thứ hai.
-
-2. Về tiêu chuẩn theo Quyết định số 37/2018/QĐ-TTg ngày 31/8/2018 của Thủ tướng
-Chính phủ:
-   - Tiêu chuẩn chung, tiêu chuẩn về đào tạo, khoa học và công nghệ, giảng dạy:
-     ứng viên cơ bản đáp ứng; các minh chứng về công trình khoa học (32 công trình,
-     trong đó 08 bài báo quốc tế uy tín) và hướng dẫn đào tạo (02 NCS, 09 học viên
-     cao học) phù hợp quy định.
-
-3. Kiến nghị: đề nghị ứng viên bổ sung bản sao quyết định hướng dẫn nghiên cứu sinh
-thứ hai trước ngày 20/10/2026 để hoàn thiện hồ sơ trình Hội đồng xem xét./.
-
-Nơi nhận:                                          TRƯỞNG PHÒNG
-- Như trên;
-- Ông Trần Văn B (bổ sung);
-- Lưu: VT, TCCB.                                       [CHỜ KÝ]
-```
 
 ## Căn cứ & lưu ý
 - Quyết định số 37/2018/QĐ-TTg ngày 31/8/2018 của Thủ tướng Chính phủ quy định tiêu chuẩn,
@@ -262,10 +165,10 @@ thủ tục xét công nhận đạt tiêu chuẩn và bổ nhiệm chức danh 
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/checklist-ho-so-gs-pgs`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/checklist-ho-so-gs-pgs`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -5,16 +5,18 @@ description: "Xét điều kiện hoàn thành khóa học, lập quyết địn
 
 # Cấp chứng chỉ đào tạo liên tục
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi khóa bồi dưỡng ngắn hạn kết thúc: xét điều kiện hoàn thành của từng học viên,
@@ -87,27 +89,13 @@ flowchart TD
     A --> B --> C --> HG --> D --> E --> O
 ```
 
-## Đầu ra (Output)
-- Tờ trình + Quyết định cấp chứng chỉ kèm danh sách học viên.
-- Sổ cấp chứng chỉ (số hiệu, thông tin, ngày cấp).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Tờ trình + Quyết định cấp chứng chỉ):
-1. Phần Tờ trình:
-   - Tiêu đề hành chính: tên trường + tên trung tâm, quốc hiệu, số hiệu văn bản, địa danh và ngày ban hành.
-   - Tên văn bản: "TỜ TRÌNH — Về việc cấp chứng chỉ khóa bồi dưỡng ngắn hạn".
-   - Kính gửi: Giám đốc Trung tâm (hoặc Hiệu trưởng).
-   - Nội dung: thông tin khóa học (tên khóa, thời gian, sĩ số); căn cứ điều kiện cấp chứng chỉ đã công bố; kết quả xét (số học viên đủ điều kiện + số không đủ điều kiện kèm lý do tóm tắt).
-   - Đề nghị xem xét, ký quyết định; người lập ký tên.
-2. Phần Quyết định (dự thảo):
-   - Tên văn bản: "QUYẾT ĐỊNH — Về việc cấp chứng chỉ bồi dưỡng ngắn hạn".
-   - Căn cứ ban hành.
-   - Điều 1: cấp chứng chỉ cho N học viên có tên trong danh sách kèm theo (ghi rõ dải số hiệu phôi).
-   - Điều 2: hiệu lực thi hành; chữ ký người có thẩm quyền.
-3. Danh sách học viên kèm theo: bảng gồm các cột STT | Họ tên | Ngày sinh | Số hiệu chứng chỉ.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 3 phần của "Cấu trúc output chuẩn": Tờ trình, Quyết định (dự thảo), Danh sách học viên kèm theo.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số học viên và kết quả xét trong quyết định khớp với Input (`danh_sach_hv`, `dieu_kien_cap`).
 - [ ] Dải số hiệu chứng chỉ trong quyết định khớp 100% với số phôi được cấp phát (`so_phoi`).
 - [ ] Không bịa đặt số liệu, kết quả đánh giá học viên, số hiệu chứng chỉ.
@@ -119,75 +107,6 @@ flowchart TD
 - [ ] Sổ cấp chứng chỉ đã ghi đầy đủ, không tẩy xóa; số liệu báo cáo kỳ khớp với sổ.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_khoa` | Ứng dụng AI trong công việc văn phòng — Khóa 1/2027 (12/01–30/01/2027) |
-| `danh_sach_hv` | 38 học viên; 35 đạt (chuyên cần ≥80%, điểm ≥5), 03 không đạt (02 nghỉ quá số buổi, 01 điểm 4) |
-| `dieu_kien_cap` | Chuyên cần ≥80%, bài tập thực hành ≥5/10 |
-| `mau_chung_chi` | CC-ĐTLT-2027 |
-| `so_phoi` | 40 phôi (số hiệu ĐHA-CC-2027-001 đến 040) |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-TRUNG TÂM ĐÀO TẠO LIÊN TỤC               Độc lập – Tự do – Hạnh phúc
-      Số: 08/TTr-ĐHA-ĐTLT
-                                                 Thành phố C, ngày 05 tháng 02 năm 2027
-
-                          TỜ TRÌNH
-         Về việc cấp chứng chỉ khóa bồi dưỡng ngắn hạn
-
-Kính gửi: Giám đốc Trung tâm Đào tạo liên tục
-
-Khóa bồi dưỡng "Ứng dụng AI trong công việc văn phòng — Khóa 1/2027" đã kết thúc
-ngày 30/01/2027 với 38 học viên tham dự. Căn cứ điều kiện cấp chứng chỉ đã công bố
-(chuyên cần ≥80%, bài tập ≥5/10), kết quả xét như sau:
-- Đủ điều kiện cấp chứng chỉ: 35 học viên (danh sách kèm theo).
-- Không đủ điều kiện: 03 học viên (02 nghỉ quá số buổi quy định, 01 không đạt điểm).
-
-Kính trình Giám đốc xem xét, ký Quyết định cấp chứng chỉ cho 35 học viên có tên
-trong danh sách./.
-
-                                              NGƯỜI LẬP
-                                          (phụ trách khóa học)
-
-                                          ThS. Trần Thị C
----
-                        QUYẾT ĐỊNH (dự thảo)
-         Về việc cấp chứng chỉ bồi dưỡng ngắn hạn
-
-GIÁM ĐỐC TRUNG TÂM ĐÀO TẠO LIÊN TỤC – TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Quy chế đào tạo liên tục, bồi dưỡng ngắn hạn của Trường Đại học A;
-Căn cứ kết quả khóa bồi dưỡng "Ứng dụng AI trong công việc văn phòng — Khóa 1/2027";
-
-QUYẾT ĐỊNH:
-
-Điều 1. Cấp chứng chỉ "Ứng dụng AI trong công việc văn phòng" cho 35 học viên
-có tên trong danh sách kèm theo (số hiệu ĐHA-CC-2027-001 đến 035).
-Điều 2. Quyết định có hiệu lực kể từ ngày ký.
-
-Nơi nhận:                                          GIÁM ĐỐC TRUNG TÂM
-- Phòng Đào tạo (lưu);                                 (ký, đóng dấu)
-- Lưu: VT, ĐTLT.
-
-DANH SÁCH HỌC VIÊN ĐƯỢC CẤP CHỨNG CHỈ (kèm theo Quyết định; trích 3 dòng mẫu)
-
-| STT | Họ tên (giả lập) | Ngày sinh (giả lập) | Số hiệu chứng chỉ |
-|-----|------------------|---------------------|-------------------|
-| 1 | Nguyễn Văn Hùng | 12/03/1990 | ĐHA-CC-2027-001 |
-| 2 | Trần Thị Lan | 25/07/1988 | ĐHA-CC-2027-002 |
-| 3 | Lê Đức Minh | 08/11/1995 | ĐHA-CC-2027-003 |
-| ... | (32 học viên còn lại) | ... | ĐHA-CC-2027-004 đến 035 |
-```
 
 ## Human gate
 - Phụ trách khóa học lập danh sách; Giám đốc Trung tâm ký quyết định cấp.
@@ -204,10 +123,10 @@ DANH SÁCH HỌC VIÊN ĐƯỢC CẤP CHỨNG CHỈ (kèm theo Quyết định; 
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/cap-chung-chi-dao-tao-lien-tuc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/cap-chung-chi-dao-tao-lien-tuc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

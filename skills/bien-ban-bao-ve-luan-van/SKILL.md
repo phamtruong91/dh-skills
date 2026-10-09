@@ -5,16 +5,18 @@ description: "Lập biên bản buổi bảo vệ luận văn thạc sĩ / luậ
 
 # Biên bản bảo vệ luận văn / luận án
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Ngay sau khi kết thúc buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ: thư ký hội đồng tổng hợp
@@ -120,30 +122,12 @@ flowchart TD
     I --> OUT
 ```
 
-## Đầu ra (Output)
-- Biên bản buổi bảo vệ hoàn chỉnh (có chữ ký Chủ tịch, Thư ký).
-- Bảng tổng hợp điểm đánh giá từng thành viên hội đồng.
-- Danh mục yêu cầu chỉnh sửa (nếu có) kèm thời hạn.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của biên bản buổi bảo vệ luận văn/luận án, các phần theo đúng thứ tự:
-1. Phần đầu: tên trường + đơn vị (Phòng Đào tạo Sau đại học); quốc hiệu – tiêu ngữ.
-2. Tên biên bản + đối tượng: "BIÊN BẢN" + "Buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ
-   của học viên/NCS…" (họ tên).
-3. Phần căn cứ: quyết định thành lập hội đồng (số, ngày ký, người ký).
-4. Thông tin chung: thời gian (giờ, ngày), địa điểm buổi bảo vệ; thông tin HV/NCS (họ tên, mã,
-   ngành, đề tài trong ngoặc kép, người hướng dẫn).
-5. Nội dung chính theo thứ tự: I. Thành phần tham dự (đánh số, ghi rõ có mặt/vắng mặt và lý do);
-   II. Diễn biến buổi bảo vệ (theo trình tự, gắn câu hỏi với từng thành viên); III. Kết quả đánh
-   giá (bảng điểm từng thành viên — vai trò, điểm thang 10, phiếu đạt/không đạt — + điểm trung
-   bình); IV. Kết luận của hội đồng (ĐẠT/KHÔNG ĐẠT + xếp loại nếu có + danh mục yêu cầu chỉnh
-   sửa chi tiết kèm thời hạn nộp bản hoàn chỉnh).
-6. Phần phân phối: số bản biên bản và nơi lưu (hồ sơ HV/NCS, Phòng Đào tạo SĐH, người hướng dẫn).
-7. Phần ký: Thư ký hội đồng và Chủ tịch hội đồng (chữ ký, họ tên).
-8. Tài liệu đính kèm bắt buộc: phiếu đánh giá của từng thành viên.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": phần đầu; tên biên bản + đối tượng; phần căn cứ (quyết định thành lập hội đồng); thông tin chung; nội dung I–IV (thành phần tham dự; diễn biến; kết quả đánh giá; kết luận); phần phân phối; phần ký; phiếu đánh giá đính kèm.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (bậc đào tạo, thông tin HV/NCS, đề tài, quyết định hội đồng, thành viên, diễn biến, phiếu điểm, kết luận, thời gian – địa điểm).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính của biên bản.
@@ -155,96 +139,6 @@ flowchart TD
 - [ ] Yêu cầu chỉnh sửa cụ thể, kiểm chứng được, có thời hạn khả thi được hội đồng thống nhất; ghi rõ số bản biên bản và nơi lưu.
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `bac_dao_tao` | Thạc sĩ |
-| `ho_ten_hv` | Hoàng Thị Yến — CH2024-018 — ngành Quản trị kinh doanh |
-| `ten_de_tai` | Các nhân tố ảnh hưởng đến ý định mua sắm trực tuyến của người tiêu dùng trẻ tại thành phố C |
-| `quyet_dinh_hd` | Số 486/QĐ-ĐHA-SĐH ngày 09/10/2026 của Hiệu trưởng Trường ĐH A |
-| `thanh_phan_tham_du` | Có mặt 5/5: GS.TS. Lê Văn D (Chủ tịch), PGS.TS. Trần Văn B (PB1), TS. Trần Văn D (PB2), TS. Phạm Thị C (Ủy viên), ThS. Đỗ Thị A (Thư ký) |
-| `dien_bien` | HV trình bày 18 phút. PB1 hỏi về tính đại diện của mẫu khảo sát (n=412, chỉ thành phố C) — HV trả lời đã nêu rõ phạm vi và hạn chế trong mục 5.3. PB2 hỏi vì sao loại biến "niềm tin" khỏi mô hình — HV giải thích biến bị loại do hệ số tải < 0,5 ở phân tích EFA. Ủy viên hỏi về đóng góp thực tiễn — HV nêu 3 khuyến nghị cho doanh nghiệp TMĐT. |
-| `phieu_danh_gia` | Lê Văn D: 8,5; Trần Văn B: 8,0; Trần Văn D: 8,0; Phạm Thị C: 8,5; Đỗ Thị A: 9,0. Điểm TB: 8,4. 5/5 phiếu "đạt". |
-| `ket_luan` | Đạt. Yêu cầu chỉnh sửa: bổ sung phần hạn chế nghiên cứu về phạm vi mẫu; chuẩn hóa danh mục tài liệu tham khảo theo APA 7. Thời hạn nộp bản hoàn chỉnh: 10/11/2026. |
-| `thoi_gian_dia_diem` | 09h00–11h30, ngày 25/10/2026, Phòng họp A2.03, Trường ĐH A |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A             CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG ĐÀO TẠO SAU ĐẠI HỌC                 Độc lập – Tự do – Hạnh phúc
-
-                                  BIÊN BẢN
-           Buổi bảo vệ luận văn thạc sĩ của học viên Hoàng Thị Yến
-
-Căn cứ Quyết định số 486/QĐ-ĐHA-SĐH ngày 09/10/2026 của Hiệu trưởng
-Trường Đại học A về việc thành lập Hội đồng đánh giá luận văn thạc sĩ.
-
-Hôm nay, hồi 09h00 ngày 25 tháng 10 năm 2026, tại Phòng họp A2.03,
-Trường Đại học A, Hội đồng đánh giá luận văn thạc sĩ đã họp
-để đánh giá luận văn của học viên:
-
-- Họ và tên: Hoàng Thị Yến — Mã học viên: CH2024-018
-- Ngành: Quản trị kinh doanh
-- Đề tài: "Các nhân tố ảnh hưởng đến ý định mua sắm trực tuyến của
-  người tiêu dùng trẻ tại thành phố C"
-- Người hướng dẫn: PGS.TS. Ngô Thị A
-
-I. THÀNH PHẦN THAM DỰ (có mặt 5/5 thành viên)
-1. GS.TS. Lê Văn D — Chủ tịch Hội đồng
-2. PGS.TS. Trần Văn B — Phản biện 1
-3. TS. Trần Văn D — Phản biện 2
-4. TS. Phạm Thị C — Ủy viên
-5. ThS. Đỗ Thị A — Ủy viên, Thư ký Hội đồng
-
-II. DIỄN BIẾN BUỔI BẢO VỆ
-1. Chủ tịch Hội đồng tuyên bố lý do, giới thiệu thành phần Hội đồng và
-công bố Quyết định thành lập Hội đồng.
-2. Học viên trình bày tóm tắt luận văn trong 18 phút: mục tiêu, phương pháp
-(khảo sát 412 người tiêu dùng trẻ tại thành phố C, phân tích EFA và hồi quy),
-kết quả chính và 3 khuyến nghị cho doanh nghiệp thương mại điện tử.
-3. Phản biện 1 (PGS.TS. Trần Văn B) đọc nhận xét; nêu câu hỏi về tính
-đại diện của mẫu khảo sát (chỉ trong phạm vi thành phố C). Học viên trả lời:
-đã xác định rõ phạm vi và hạn chế nghiên cứu tại mục 5.3 của luận văn.
-4. Phản biện 2 (TS. Trần Văn D) đọc nhận xét; hỏi lý do loại biến "niềm tin"
-khỏi mô hình. Học viên trả lời: biến bị loại do hệ số tải nhân tố < 0,5
-ở bước phân tích EFA, đã trình bày tại mục 4.2.
-5. Ủy viên (TS. Phạm Thị C) hỏi về đóng góp thực tiễn của đề tài.
-Học viên trình bày 3 khuyến nghị cụ thể cho doanh nghiệp TMĐT.
-6. Hội đồng họp kín, thảo luận và bỏ phiếu đánh giá.
-
-III. KẾT QUẢ ĐÁNH GIÁ
-| Thành viên             | Vai trò      | Điểm (thang 10) | Phiếu |
-|------------------------|--------------|-----------------|-------|
-| GS.TS. Lê Văn D    | Chủ tịch      | 8,5             | Đạt   |
-| PGS.TS. Trần Văn B  | Phản biện 1  | 8,0             | Đạt   |
-| TS. Trần Văn D       | Phản biện 2  | 8,0             | Đạt   |
-| TS. Phạm Thị C       | Ủy viên      | 8,5             | Đạt   |
-| ThS. Đỗ Thị A    | Thư ký       | 9,0             | Đạt   |
-| ĐIỂM TRUNG BÌNH        |              | **8,4**         | **5/5 phiếu Đạt** |
-
-IV. KẾT LUẬN CỦA HỘI ĐỒNG
-Hội đồng nhất trí đánh giá luận văn của học viên Hoàng Thị Yến: **ĐẠT**,
-xếp loại Khá (điểm trung bình 8,4).
-Yêu cầu học viên chỉnh sửa, bổ sung trước khi nộp bản luận văn hoàn chỉnh:
-1. Bổ sung, làm rõ phần hạn chế của nghiên cứu về phạm vi mẫu khảo sát;
-2. Chuẩn hóa toàn bộ danh mục tài liệu tham khảo theo chuẩn APA 7.
-Thời hạn nộp bản hoàn chỉnh về Phòng Đào tạo Sau đại học: ngày 10/11/2026.
-
-Biên bản được lập thành 03 bản có giá trị như nhau: 01 bản lưu hồ sơ
-học viên, 01 bản lưu Phòng Đào tạo Sau đại học, 01 bản gửi người hướng dẫn.
-
-        THƯ KÝ HỘI ĐỒNG                        CHỦ TỊCH HỘI ĐỒNG
-            [CHỜ KÝ]                                  [CHỜ KÝ]
-
-       ThS. Đỗ Thị A                      GS.TS. Lê Văn D
-```
-
 ## Căn cứ & lưu ý
 - Thông tư 23/2021/TT-BGDĐT (Quy chế đào tạo trình độ thạc sĩ); Thông tư 18/2021/TT-BGDĐT
   (Quy chế tuyển sinh và đào tạo trình độ tiến sĩ).
@@ -255,10 +149,10 @@ học viên, 01 bản lưu Phòng Đào tạo Sau đại học, 01 bản gửi n
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-ban-bao-ve-luan-van`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-ban-bao-ve-luan-van`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

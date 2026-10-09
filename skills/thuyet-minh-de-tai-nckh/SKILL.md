@@ -5,16 +5,18 @@ description: "Soạn thuyết minh đề tài nghiên cứu khoa học đầy đ
 
 # Soạn thuyết minh đề tài NCKH
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi chủ nhiệm đề tài (hoặc Phòng KHCN hỗ trợ) cần soạn bản thuyết minh đề tài NCKH
@@ -127,25 +129,13 @@ flowchart TD
     HG --> OUT[["Thuyết minh hoàn chỉnh và bảng kiểm logic"]]
 ```
 
-## Đầu ra (Output)
-- Bản thuyết minh đề tài hoàn chỉnh (7 mục bắt buộc).
-- Bảng kiểm logic: đối chiếu mục tiêu – nội dung – sản phẩm – kinh phí – tiến độ.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của bản Thuyết minh đề tài, các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề loại văn bản ("THUYẾT MINH ĐỀ TÀI NGHIÊN CỨU KHOA HỌC CẤP ...")
-2. Khối thông tin hành chính: tên đề tài; chủ nhiệm (họ tên, học hàm/học vị); thành viên; cơ quan chủ trì; thời gian thực hiện; tổng kinh phí (số + chữ)
-3. Mục 1. Tính cấp thiết của đề tài
-4. Mục 2. Mục tiêu nghiên cứu (2.1. Mục tiêu chung; 2.2. Mục tiêu cụ thể)
-5. Mục 3. Nội dung nghiên cứu (đánh số, mỗi nội dung gắn mục tiêu cụ thể tương ứng)
-6. Mục 4. Phương pháp nghiên cứu
-7. Mục 5. Sản phẩm dự kiến (3 nhóm: khoa học – ứng dụng – đào tạo; có số lượng + yêu cầu chất lượng)
-8. Mục 6. Dự toán kinh phí chi tiết (bảng theo khoản mục, tổng khớp tổng kinh phí)
-9. Mục 7. Tiến độ thực hiện (bảng theo quý, mỗi giai đoạn gắn sản phẩm, mốc cuối là nghiệm thu)
-10. Địa danh, ngày tháng năm + chữ ký chủ nhiệm đề tài
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 10 phần theo "Cấu trúc output chuẩn": tiêu đề loại văn bản → khối thông tin hành chính → 7 mục (tính cấp thiết, mục tiêu, nội dung, phương pháp, sản phẩm, dự toán, tiến độ) → chữ ký chủ nhiệm
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu trong output khớp Input: tổng kinh phí (số + chữ) = `tong_kinh_phi`; tổng các khoản mục dự toán khớp từng đồng; số quý tiến độ = `thoi_gian_thuc_hien`
 - [ ] Không bịa đặt số liệu, công trình công bố, trích dẫn tài liệu
 - [ ] Đúng biểu mẫu thuyết minh của cấp đề tài; bảng dự toán và tiến độ trình bày rõ ràng
@@ -157,114 +147,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, đề tài, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_de_tai` | Nghiên cứu ứng dụng trí tuệ nhân tạo trong dự báo năng suất lúa tại Đồng bằng sông Hồng |
-| `cap_de_tai` | Cấp trường |
-| `chu_nhiem` | PGS.TS. Trần Văn B – Khoa Công nghệ thông tin |
-| `co_quan_chu_tri` | Khoa Công nghệ thông tin, Trường Đại học A |
-| `thoi_gian_thuc_hien` | 24 tháng (01/2027 – 12/2028) |
-| `tong_kinh_phi` | 280.000.000 đồng |
-| `y_tinh_cap_thiet` | Dự báo năng suất lúa hiện nay chủ yếu dựa vào kinh nghiệm; AI đã chứng minh hiệu quả ở nhiều nước nhưng chưa được thử nghiệm với dữ liệu đồng ruộng Việt Nam; kết quả giúp nông dân và cơ quan quản lý chủ động kế hoạch sản xuất |
-| `muc_tieu` | Chung: xây dựng mô hình AI dự báo năng suất lúa. Cụ thể: (1) thu thập bộ dữ liệu 5.000 mẫu ruộng; (2) mô hình đạt độ chính xác ≥ 85%; (3) thử nghiệm tại 3 hợp tác xã |
-| `noi_dung_nghien_cuu` | ND1: tổng quan và thu thập dữ liệu; ND2: xây dựng và huấn luyện mô hình AI; ND3: thử nghiệm thực tế và đánh giá |
-| `phuong_phap` | Học máy (học sâu); dữ liệu ảnh viễn thám + số liệu đồng ruộng; đánh giá bằng kiểm chứng chéo; phạm vi: 3 tỉnh Đồng bằng sông Hồng, vụ xuân và vụ mùa 2027 |
-| `san_pham_du_kien` | 02 bài báo tạp chí trong nước; 01 phần mềm dự báo; 01 báo cáo tổng kết; đào tạo 02 thạc sĩ |
-| `du_toan_kinh_phi` | Nhân công 140tr; vật tư, thiết bị 60tr; hội thảo, công tác phí 40tr; quản lý phí 28tr; dự phòng 12tr |
-| `tien_do` | Quý 1–2: thu thập dữ liệu; Quý 3–5: xây dựng mô hình; Quý 6–7: thử nghiệm; Quý 8: nghiệm thu |
-
-### Output mẫu
-
-```
-THUYẾT MINH ĐỀ TÀI NGHIÊN CỨU KHOA HỌC CẤP TRƯỜNG
-
-Tên đề tài: Nghiên cứu ứng dụng trí tuệ nhân tạo trong dự báo năng suất lúa
-             tại Đồng bằng sông Hồng
-Chủ nhiệm: PGS.TS. Trần Văn B – Khoa Công nghệ thông tin
-Cơ quan chủ trì: Khoa Công nghệ thông tin, Trường Đại học A
-Thời gian thực hiện: 24 tháng (từ tháng 01/2027 đến tháng 12/2028)
-Tổng kinh phí: 280.000.000 đồng (Hai trăm tám mươi triệu đồng)
-
-1. TÍNH CẤP THIẾT CỦA ĐỀ TÀI
-Dự báo năng suất lúa tại Đồng bằng sông Hồng hiện nay chủ yếu dựa vào kinh nghiệm
-của cán bộ nông nghiệp và số liệu thống kê thủ công, độ chính xác hạn chế, khó đáp
-ứng yêu cầu chỉ đạo sản xuất kịp thời. Trên thế giới, các mô hình trí tuệ nhân tạo
-kết hợp ảnh viễn thám đã đạt độ chính xác dự báo trên 85% tại nhiều quốc gia, song
-chưa được nghiên cứu, thử nghiệm với đặc thù đồng ruộng, giống lúa và điều kiện
-khí hậu Việt Nam. Việc nghiên cứu xây dựng mô hình AI dự báo năng suất lúa phù hợp
-điều kiện trong nước có ý nghĩa khoa học (bổ sung phương pháp mới cho lĩnh vực nông
-nghiệp thông minh) và ý nghĩa thực tiễn (giúp nông dân, hợp tác xã và cơ quan quản lý
-chủ động kế hoạch gieo trồng, thu hoạch và tiêu thụ). Vì vậy, đề tài cần được triển
-khai ngay trong giai đoạn 2027–2028.
-
-2. MỤC TIÊU NGHIÊN CỨU
-2.1. Mục tiêu chung
-Xây dựng mô hình trí tuệ nhân tạo dự báo năng suất lúa có độ chính xác cao, phù hợp
-điều kiện Đồng bằng sông Hồng.
-2.2. Mục tiêu cụ thể
-- Thu thập và chuẩn hóa bộ dữ liệu gồm 5.000 mẫu ruộng (ảnh viễn thám, số liệu đồng
-ruộng, năng suất thực tế) trong 2 vụ năm 2027;
-- Xây dựng mô hình học sâu dự báo năng suất lúa đạt độ chính xác ≥ 85% trên tập kiểm chứng;
-- Thử nghiệm mô hình tại 03 hợp tác xã nông nghiệp, đánh giá hiệu quả và đề xuất
-khuyến nghị ứng dụng.
-
-3. NỘI DUNG NGHIÊN CỨU
-Nội dung 1: Tổng quan nghiên cứu và thu thập, chuẩn hóa dữ liệu (phục vụ mục tiêu 1).
-Nội dung 2: Xây dựng, huấn luyện và tối ưu mô hình AI dự báo năng suất (phục vụ mục tiêu 2).
-Nội dung 3: Thử nghiệm thực tế tại 03 hợp tác xã, đánh giá và hoàn thiện mô hình
-(phục vụ mục tiêu 3).
-
-4. PHƯƠNG PHÁP NGHIÊN CỨU
-- Cách tiếp cận: học máy, trọng tâm là mạng nơ-ron học sâu cho bài toán hồi quy.
-- Thu thập dữ liệu: ảnh viễn thám đa thời điểm kết hợp điều tra đồng ruộng
-(giống, phân bón, thời tiết, năng suất thực tế).
-- Xử lý, phân tích: tiền xử lý ảnh, trích chọn đặc trưng, huấn luyện và đánh giá
-mô hình bằng kiểm chứng chéo k-fold.
-- Phạm vi: 03 tỉnh Đồng bằng sông Hồng (giả lập), vụ xuân và vụ mùa năm 2027.
-
-5. SẢN PHẨM DỰ KIẾN
-a) Sản phẩm khoa học: 02 bài báo đăng tạp chí khoa học trong nước có phản biện;
-01 báo cáo tổng kết đề tài.
-b) Sản phẩm ứng dụng: 01 phần mềm dự báo năng suất lúa (bản thử nghiệm) kèm tài
-liệu hướng dẫn sử dụng.
-c) Sản phẩm đào tạo: 02 học viên cao học bảo vệ thành công luận văn thạc sĩ từ
-kết quả đề tài; 04 sinh viên tham gia NCKH.
-
-6. DỰ TOÁN KINH PHÍ CHI TIẾT (đồng)
-- Thuê khoán nhân công (chủ nhiệm, thành viên, cộng tác viên): 140.000.000
-- Vật tư, thiết bị, thuê dịch vụ phân tích: 60.000.000
-- Hội thảo khoa học, công tác phí điều tra: 40.000.000
-- Quản lý phí (10%): 28.000.000
-- Dự phòng: 12.000.000
-TỔNG CỘNG: 280.000.000
-
-7. TIẾN ĐỘ THỰC HIỆN
-- Quý 1–2/2027: tổng quan nghiên cứu; thu thập và chuẩn hóa 5.000 mẫu dữ liệu.
-- Quý 3–5/2027: xây dựng, huấn luyện và tối ưu mô hình AI; viết 01 bài báo.
-- Quý 6–7/2028: thử nghiệm tại 03 hợp tác xã; đánh giá, hoàn thiện mô hình và phần mềm.
-- Quý 8/2028: hoàn thiện báo cáo tổng kết, công bố bài báo thứ 2, nghiệm thu đề tài.
-
-Thành phố C, ngày 09 tháng 10 năm 2026
-CHỦ NHIỆM ĐỀ TÀI (ký, ghi rõ họ tên)
-PGS.TS. Trần Văn B
-```
-
-### Bảng kiểm logic (output kèm theo)
-
-| Mục tiêu cụ thể | Nội dung đáp ứng | Sản phẩm tương ứng | Ghi chú |
-|---|---|---|---|
-| Bộ dữ liệu 5.000 mẫu | Nội dung 1 | Báo cáo tổng kết (phần dữ liệu) | Khớp |
-| Mô hình đạt ≥ 85% | Nội dung 2 | 02 bài báo, phần mềm | Khớp |
-| Thử nghiệm 03 HTX | Nội dung 3 | Phần mềm hoàn thiện, khuyến nghị | Khớp |
-| Tổng kinh phí | 280.000.000 = tổng các khoản mục | — | Khớp số học |
-| Tiến độ | 8 quý = 24 tháng, mốc cuối là nghiệm thu | — | Khớp |
-
 ## Căn cứ & lưu ý
 - Quy chế quản lý đề tài NCKH cấp trường của Trường Đại học A (giả lập);
   biểu mẫu thuyết minh của Bộ chủ quản đối với đề tài cấp bộ/nhà nước.
@@ -274,10 +156,10 @@ PGS.TS. Trần Văn B
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thuyet-minh-de-tai-nckh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thuyet-minh-de-tai-nckh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

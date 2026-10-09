@@ -5,16 +5,18 @@ description: "Lập kế hoạch tổ chức hội thảo khoa học cấp trư�
 
 # Kế hoạch tổ chức hội thảo khoa học
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi trường/khoa/phòng được giao hoặc chủ động đề xuất tổ chức hội thảo khoa học
@@ -102,27 +104,12 @@ flowchart TD
     HG --> Z[["Xuất bản bộ hồ sơ kế hoạch, chương trình, dự toán, thư mời"]]
 ```
 
-## Đầu ra (Output)
-- Kế hoạch tổ chức hội thảo (văn bản hoàn chỉnh).
-- Chương trình chi tiết theo khung giờ.
-- Bảng dự toán kinh phí theo nhóm nội dung chi.
-- Thư mời tham dự / thư mời viết bài (mẫu).
-- Checklist triển khai và tiến độ các mốc chuẩn bị.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Kế hoạch tổ chức hội thảo
-(kèm các sản phẩm triển khai), các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề văn bản: "KẾ HOẠCH TỔ CHỨC HỘI THẢO KHOA HỌC".
-2. Khối thông tin định danh: tên hội thảo, cấp hội thảo, đơn vị chủ trì, đơn vị phối hợp, thời gian, địa điểm.
-3. I. Mục đích – yêu cầu.
-4. II. Nội dung (chủ đề và các tiểu ban).
-5. III. Thành phần tham dự (số lượng, đối tượng).
-6. IV. Tiến độ chuẩn bị (các mốc: thông báo – nhận bài – phản biện – in kỷ yếu – tổ chức).
-7. Chương trình chi tiết theo khung giờ (giờ – nội dung – người phụ trách).
-8. Dự toán kinh phí theo nhóm (khoản mục – thành tiền – nguồn kinh phí).
-9. Thư mời tham dự / thư mời viết bài (mẫu; thêm bản tiếng Anh nếu hội thảo quốc tế).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề văn bản, khối thông tin định danh, mục đích – yêu cầu, nội dung, thành phần, tiến độ, chương trình khung giờ, dự toán, thư mời.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu khớp với Input: tên hội thảo, thời gian, địa điểm, số đại biểu, số tiểu ban, tỷ lệ nguồn kinh phí.
 - [ ] Không bịa đặt số liệu, đơn giá, thông tin đối tác/tài trợ.
 - [ ] Thể thức văn bản hành chính đúng quy định (tiêu đề, kính gửi, bố cục mục – tiểu mục).
@@ -133,91 +120,6 @@ flowchart TD
 - [ ] Thư mời viết bài và thư mời tham dự là hai mẫu riêng; hội thảo quốc tế có bản tiếng Anh.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan
-> tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_hoi_thao` | Hội thảo khoa học "Trí tuệ nhân tạo trong giáo dục đại học" |
-| `cap_hoi_thao` | Quốc gia |
-| `chu_de` | 3 tiểu ban: (1) AI trong dạy – học; (2) AI trong quản trị đại học; (3) Đạo đức và chính sách AI |
-| `thoi_gian` | Ngày 15/11/2026 (1 ngày) |
-| `dia_diem` | Hội trường A, Trường Đại học A, thành phố C |
-| `don_vi_to_chuc` | Chủ trì: Phòng KHCN; phối hợp: Khoa CNTT, Khoa Giáo dục |
-| `thanh_phan` | 150 đại biểu: nhà khoa học, giảng viên các trường ĐH, đại diện doanh nghiệp công nghệ |
-| `nguon_kinh_phi` | Ngân sách trường 70%, tài trợ doanh nghiệp 30% |
-
-### Output mẫu
-
-```
-KẾ HOẠCH TỔ CHỨC HỘI THẢO KHOA HỌC
-Tên hội thảo: "Trí tuệ nhân tạo trong giáo dục đại học"
-Cấp: Quốc gia
-Đơn vị chủ trì: Phòng Khoa học công nghệ – Trường Đại học A
-Đơn vị phối hợp: Khoa Công nghệ thông tin, Khoa Giáo dục
-Thời gian: Ngày 15/11/2026 | Địa điểm: Hội trường A, thành phố C
-
-I. MỤC ĐÍCH – YÊU CẦU
-- Tạo diễn đàn trao đổi học thuật về ứng dụng AI trong giáo dục đại học.
-- Công bố kỷ yếu có phản biện, 40–50 bài báo cáo.
-- Yêu cầu: tổ chức trang trọng, đúng tiến độ, đảm bảo chất lượng nội dung.
-
-II. NỘI DUNG
-- Tiểu ban 1: AI trong dạy – học
-- Tiểu ban 2: AI trong quản trị đại học
-- Tiểu ban 3: Đạo đức và chính sách AI
-
-III. THÀNH PHẦN: 150 đại biểu (nhà khoa học, giảng viên, doanh nghiệp).
-
-IV. TIẾN ĐỘ CHUẨN BỊ
-- 20/09/2026: Ban hành thông báo và thư mời viết bài
-- 20/10/2026: Hạn nhận bài toàn văn
-- 30/10/2026: Hoàn thành phản biện và thông báo kết quả
-- 10/11/2026: In kỷ yếu, hoàn tất hậu cần
-- 15/11/2026: Tổ chức hội thảo
-
-CHƯƠNG TRÌNH CHI TIẾT (15/11/2026)
-08:00 – 08:30  Đón tiếp đại biểu
-08:30 – 09:00  Khai mạc, phát biểu chào mừng
-09:00 – 10:00  Báo cáo mời (keynote): GS.TS. Phạm Văn B
-10:00 – 10:20  Giải lao
-10:20 – 11:50  Báo cáo phiên toàn thể (3 báo cáo)
-11:50 – 13:30  Nghỉ trưa
-13:30 – 15:30  Thảo luận 3 tiểu ban song song
-15:30 – 16:00  Giải lao
-16:00 – 16:45  Tổng kết tiểu ban, thảo luận chung
-16:45 – 17:00  Bế mạc, trao giấy chứng nhận
-
-DỰ TOÁN KINH PHÍ (tổng: 180.000.000đ)
-- In kỷ yếu và tài liệu: 45.000.000đ
-- Thù lao báo cáo mời, phản biện: 35.000.000đ
-- Ăn ở, đi lại đại biểu/khách mời: 50.000.000đ
-- Hội trường, thiết bị, truyền thông: 30.000.000đ
-- Chi quản lý: 20.000.000đ
-Nguồn: ngân sách trường 70% (126.000.000đ), tài trợ 30% (54.000.000đ).
-
-THƯ MỜI VIẾT BÀI (trích)
-Kính gửi Quý nhà khoa học,
-Trường Đại học A tổ chức Hội thảo khoa học quốc gia "Trí tuệ nhân
-tạo trong giáo dục đại học" vào ngày 15/11/2026 tại thành phố C. Trân trọng kính
-mời Quý vị gửi bài toàn văn trước ngày 20/10/2026 về địa chỉ
-khcn@dha.edu.vn (địa chỉ giả lập). Bài được chấp nhận sẽ đăng trong
-kỷ yếu hội thảo có phản biện.
-```
-
-### Checklist triển khai (output kèm theo)
-- [x] Kế hoạch tổng thể trình Hiệu trưởng phê duyệt
-- [x] Thành lập Ban Tổ chức, Ban Nội dung, Ban Hậu cần – Tài chính
-- [x] Thư mời viết bài gửi trước 20/09/2026
-- [x] Chương trình chi tiết theo khung giờ
-- [x] Dự toán kinh phí theo nguồn (ngân sách + tài trợ)
-- [!] Xác nhận keynote GS.TS. Phạm Văn B — đang liên hệ
-- [!] Hợp đồng tài trợ doanh nghiệp — đang đàm phán
 
 ## Căn cứ & lưu ý
 - Quy chế tổ chức hội thảo, hội nghị khoa học của Trường Đại học A
@@ -230,10 +132,10 @@ kỷ yếu hội thảo có phản biện.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoi-thao-khoa-hoc`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoi-thao-khoa-hoc`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

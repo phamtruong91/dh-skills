@@ -5,16 +5,18 @@ description: "Soạn quyết định khen thưởng hoặc kỷ luật viên ch�
 
 # Quyết định khen thưởng / kỷ luật viên chức
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần ban hành quyết định chính thức về khen thưởng (Giấy khen của Hiệu trưởng, đề nghị cấp trên khen...)
@@ -117,7 +119,7 @@ liên quan, lưu hồ sơ cán bộ); số liệu tiền thưởng khớp giữa
 - Lưu ý nghiệp vụ: quyết định kỷ luật sai tên người bị kỷ luật hoặc sai hình thức kỷ luật là
 lỗi nghiêm trọng về pháp lý — kiểm tra chéo với biên bản họp Hội đồng; Nơi nhận của quyết
 định kỷ luật bắt buộc có lưu hồ sơ viên chức.
-- → Kết quả bước: dự thảo quyết định đã soát lỗi, kèm checklist kiểm tra thể thức và hồ sơ.
+- → Kết quả bước: dự thảo quyết định đã soát lỗi, đã đối chiếu nội bộ về thể thức và hồ sơ.
 
 **Bước 7. Xuất bản và lưu hồ sơ**
 - Làm gì: hoàn thiện văn bản quyết định ở định dạng markdown, sẵn sàng trình ký / chuyển sang
@@ -128,7 +130,7 @@ phải lưu 01 bản vào hồ sơ viên chức theo quy định công tác cán
 - Vai trò: Chuyên viên Phòng TCCB chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: quyết định chỉ có hiệu lực sau khi ký và đóng dấu, phát hành theo Nơi nhận;
 bản lưu hồ sơ viên chức (đối với kỷ luật) là bắt buộc, không được bỏ sót.
-- → Kết quả bước: văn bản quyết định hoàn chỉnh + checklist kiểm tra thể thức và hồ sơ kèm theo.
+- → Kết quả bước: văn bản quyết định hoàn chỉnh; phần kiểm tra giữ nội bộ thể thức và hồ sơ kèm theo.
 
 ## Luồng quy trình (Workflow)
 
@@ -145,123 +147,23 @@ flowchart TD
     HG --> OUT[["Quyết định khen thưởng, kỷ luật"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản quyết định hoàn chỉnh (khen thưởng hoặc kỷ luật).
-- Checklist kiểm tra thể thức và tính hợp lệ hồ sơ kèm theo.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** (Quyết định khen thưởng / kỷ luật — theo thể thức NĐ 30/2020)
-1. Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc lập – Tự do – Hạnh phúc").
-2. Tên cơ quan ban hành (Trường Đại học A).
-3. Số, ký hiệu quyết định.
-4. Địa danh, ngày tháng năm ban hành.
-5. Tên loại văn bản "QUYẾT ĐỊNH" + trích yếu ("Về việc khen thưởng..." / "Về việc xử lý
-kỷ luật...").
-6. Chức danh người ký (HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A).
-7. Phần căn cứ: mỗi căn cứ một dòng bắt đầu bằng "Căn cứ" — nhánh khen thưởng (Luật Thi đua,
-khen thưởng → quy chế thi đua – khen thưởng của trường → biên bản họp Hội đồng thi đua –
-khen thưởng); nhánh kỷ luật (Luật Viên chức và văn bản hướng dẫn xử lý kỷ luật → nội quy,
-quy chế của trường → biên bản họp Hội đồng kỷ luật) — tiếp theo là "Theo đề nghị của...".
-8. Cụm "QUYẾT ĐỊNH:" và các Điều: Điều 1 (nội dung chính: khen thưởng ai / áp dụng hình thức
-kỷ luật gì đối với ai, lý do / hành vi vi phạm cụ thể); Điều 2 (chế độ kèm theo: mức tiền
-thưởng bằng số + bằng chữ, nguồn chi / hậu quả về lương, chức vụ, thời hạn thi hành);
-Điều 3 (trách nhiệm thi hành; hiệu lực kể từ ngày ký).
-9. Nơi nhận (cá nhân, đơn vị liên quan; lưu VT, TCCB — quyết định kỷ luật bắt buộc lưu
-01 bản vào hồ sơ viên chức).
-10. Chữ ký (chức danh người ký + họ tên).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Quốc hiệu – Tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc l…; Tên cơ quan ban hành (Trường Đại học A).; Số, ký hiệu quyết định.; Địa danh, ngày tháng năm ban hành.; … (đủ 10 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Luật Thi đua, khen thưởng (sửa đổi, bổ sung hiện hành).
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Xác định đúng loại ngay từ đầu vì căn cứ pháp lý của kỷ luật (Luật Viên
 - [ ] Biên bản họp Hội đồng là căn cứ bắt buộc — phải ghi rõ số, ngày họp và
 - [ ] Điều 1 của quyết định kỷ luật phải mô tả hành vi vi phạm cụ thể, có căn
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu (quyết định khen thưởng)
-
-| Trường | Giá trị |
-|---|---|
-| `loai_quyet_dinh` | Khen thưởng |
-| `ho_ten` | Bùi Thị A |
-| `chuc_vu_don_vi` | Giảng viên chính, Khoa Kinh tế |
-| `hinh_thuc` | Giấy khen của Hiệu trưởng |
-| `ly_do` | Đạt danh hiệu "Giảng viên xuất sắc" năm học 2025–2026; chủ nhiệm 01 đề tài NCKH cấp trường xếp loại Xuất sắc; công bố 03 bài báo khoa học trên tạp chí trong nước có uy tín |
-| `can_cu` | Biên bản họp Hội đồng thi đua – khen thưởng ngày 28/9/2026 (kết quả bỏ phiếu: 9/9 đồng ý) |
-| `muc_thuong` | 1.500.000 đồng (kèm theo Giấy khen) |
-| `so_quyet_dinh` | 245/QĐ-ĐHA-TCCB |
-| `ngay_ky` | 09/10/2026 |
-| `nguoi_ky` | Hiệu trưởng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                          Độc lập – Tự do – Hạnh phúc
-      Số: 245/QĐ-ĐHA-TCCB
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                    QUYẾT ĐỊNH
-      Về việc khen thưởng viên chức năm học 2025–2026
-
-                              HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Luật Thi đua, khen thưởng ngày 15 tháng 6 năm 2022;
-Căn cứ Quy chế thi đua – khen thưởng của Trường Đại học A ban hành kèm
-theo Quyết định số 88/QĐ-ĐHA ngày 20 tháng 8 năm 2024 của Hiệu trưởng;
-Căn cứ Biên bản họp Hội đồng thi đua – khen thưởng Trường ngày 28 tháng 9 năm
-2026 (kết quả bỏ phiếu: 9/9 thành viên đồng ý);
-Theo đề nghị của Trưởng phòng Tổ chức – Cán bộ,
-
-                              QUYẾT ĐỊNH:
-
-Điều 1. Tặng Giấy khen của Hiệu trưởng Trường Đại học A cho bà
-Bùi Thị A, Giảng viên chính, Khoa Kinh tế, vì đã đạt danh hiệu
-"Giảng viên xuất sắc" năm học 2025–2026; chủ nhiệm 01 đề tài nghiên cứu khoa học
-cấp trường xếp loại Xuất sắc; công bố 03 bài báo khoa học trên tạp chí trong
-nước có uy tín.
-
-Điều 2. Bà Bùi Thị A được thưởng kèm theo Giấy khen số tiền
-1.500.000 đồng (Một triệu năm trăm nghìn đồng), trích từ quỹ thi đua –
-khen thưởng của Nhà trường.
-
-Điều 3. Trưởng phòng Tổ chức – Cán bộ, Trưởng phòng Tài chính – Kế toán,
-Trưởng khoa Kinh tế, bà Bùi Thị A và các đơn vị, cá nhân có liên quan
-chịu trách nhiệm thi hành Quyết định này.
-Quyết định này có hiệu lực kể từ ngày ký./.
-
-Nơi nhận:                                              HIỆU TRƯỞNG
-- Như Điều 3;
-- Lưu: VT, TCCB (hồ sơ).                                   [CHỜ KÝ]
-
-                                                     PGS.TS. Trần Văn B
-```
-
-### Checklist kiểm tra thể thức và hồ sơ (output kèm theo)
-- [x] Quốc hiệu – Tiêu ngữ đúng vị trí, chữ in hoa
-- [x] Số, ký hiệu quyết định
-- [x] Địa danh, ngày tháng năm
-- [x] Tên loại văn bản + trích yếu
-- [x] Đủ các căn cứ pháp lý (Luật, Quy chế, Biên bản họp HĐ)
-- [x] Các Điều đánh số, nội dung rõ ràng
-- [x] Họ tên, chức vụ, đơn vị người được khen thưởng chính xác
-- [x] Hình thức khen thưởng đúng thẩm quyền Hiệu trưởng
-- [x] Nơi nhận đầy đủ, có lưu hồ sơ cán bộ
-- [x] Hồ sơ kèm theo đủ: tờ trình, báo cáo thành tích, biên bản họp HĐ + kết quả bỏ phiếu
-
-> Ghi chú: Quyết định **kỷ luật** dùng chung khung thể thức trên, thay phần căn cứ bằng Luật Viên chức
-> và quy định xử lý kỷ luật viên chức, nội dung các Điều ghi rõ hình thức kỷ luật, hành vi vi phạm,
-> thời hạn thi hành; bắt buộc lưu 01 bản vào hồ sơ viên chức và bảo đảm đúng trình tự, thời hiệu
-> xử lý kỷ luật theo quy định công tác cán bộ.
 
 ## Căn cứ & lưu ý
 - Luật Thi đua, khen thưởng (sửa đổi, bổ sung hiện hành).
@@ -275,10 +177,10 @@ Nơi nhận:                                              HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-khen-thuong-kl`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-khen-thuong-kl`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

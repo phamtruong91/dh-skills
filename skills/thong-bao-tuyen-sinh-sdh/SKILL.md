@@ -5,16 +5,18 @@ description: "Soạn thông báo tuyển sinh trình độ thạc sĩ và tiến
 
 # Thông báo tuyển sinh thạc sĩ / tiến sĩ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Phòng Đào tạo Sau đại học cần ban hành thông báo tuyển sinh trình độ thạc sĩ và/hoặc
@@ -153,27 +155,12 @@ flowchart TD
     G -->|Có| HG --> I --> OUT
 ```
 
-## Đầu ra (Output)
-- Thông báo tuyển sinh thạc sĩ/tiến sĩ hoàn chỉnh.
-- Checklist kiểm tra trước khi công bố.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của thông báo tuyển sinh sau đại học, các phần theo đúng thứ tự:
-1. Phần đầu văn bản: tên trường + đơn vị ban hành (Phòng Đào tạo Sau đại học); quốc hiệu – tiêu ngữ;
-   số, ký hiệu thông báo; địa danh, ngày tháng năm ban hành.
-2. Tên thông báo và phạm vi: "THÔNG BÁO TUYỂN SINH SAU ĐẠI HỌC…" + trình độ (thạc sĩ/tiến sĩ) + đợt tuyển.
-3. Phần căn cứ: Quy chế tuyển sinh và đào tạo trình độ thạc sĩ (TT 23/2021/TT-BGDĐT); Quy chế tuyển
-   sinh và đào tạo trình độ tiến sĩ (TT 18/2021/TT-BGDĐT).
-4. Nội dung chính theo thứ tự: I. Chỉ tiêu tuyển sinh (bảng theo ngành, có mã ngành, tách theo
-   trình độ); II. Điều kiện dự tuyển (tách theo trình độ); III. Hình thức tuyển sinh (tách theo
-   trình độ); IV. Hồ sơ dự tuyển; V. Thời gian đào tạo và học phí; VI. Thời gian và địa điểm
-   nộp hồ sơ.
-5. Thông tin liên hệ: số điện thoại, email.
-6. Phần cuối: nơi nhận; chữ ký, họ tên người ký.
-7. Sản phẩm kèm theo: checklist kiểm tra trước khi công bố.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": phần đầu văn bản; tên thông báo + phạm vi (trình độ, đợt tuyển); phần căn cứ (TT 23/2021, TT 18/2021); nội dung I–VI (chỉ tiêu; điều kiện dự tuyển; hình thức tuyển; hồ sơ; thời gian đào tạo và học phí; thời gian – địa điểm nộp hồ sơ); thông tin liên hệ; nơi nhận, chữ ký; checklist trước công bố.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (trình độ, đợt tuyển, chỉ tiêu từng ngành, điều kiện, hình thức, hồ sơ, học phí, mốc thời gian, địa chỉ).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính của thông báo.
@@ -183,118 +170,6 @@ flowchart TD
 - [ ] Điều kiện dự tuyển đúng quy chế, không tự đặt thêm điều kiện ngoài quy chế; trường hợp "ngành gần" phải học bổ sung được ghi rõ.
 - [ ] Mốc thời gian logic (nộp hồ sơ < xét tuyển < công bố < nhập học) và khớp kế hoạch đã duyệt; học phí khớp quyết định học phí hiện hành; số điện thoại, email, link đăng ký đã kiểm tra hoạt động thực tế.
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `trinh_do` | Thạc sĩ và Tiến sĩ |
-| `dot_tuyen` | Đợt 1 năm 2026 |
-| `chi_tieu_sdh` | Thạc sĩ: Quản trị kinh doanh 60, Kế toán 40, CNTT 50. Tiến sĩ: Quản trị kinh doanh 8, CNTT 6 |
-| `dieu_kien_du_tuyen` | Thạc sĩ: tốt nghiệp ĐH ngành phù hợp; ngoại ngữ bậc 3/6 trở lên hoặc chứng chỉ tương đương; ngành gần phải học bổ sung. Tiến sĩ: tốt nghiệp thạc sĩ ngành phù hợp; có ít nhất 01 bài báo khoa học; ngoại ngữ bậc 4/6 |
-| `hinh_thuc_tuyen` | Thạc sĩ: xét tuyển (đánh giá hồ sơ + phỏng vấn). Tiến sĩ: xét tuyển (đánh giá hồ sơ, đề cương nghiên cứu + bảo vệ đề cương trước tiểu ban) |
-| `ho_so` | Đơn dự tuyển; sơ yếu lý lịch; bản sao văn bằng, bảng điểm; bản sao chứng chỉ ngoại ngữ; đề cương nghiên cứu (tiến sĩ); 02 thư giới thiệu; minh chứng công trình khoa học (tiến sĩ) |
-| `thoi_gian_dao_tao` | Thạc sĩ: 2 năm; Tiến sĩ: 3 năm (thạc sĩ lên tiến sĩ) |
-| `hoc_phi` | Thạc sĩ: 28 triệu đồng/năm; Tiến sĩ: 45 triệu đồng/năm |
-| `thoi_gian` | Nhận hồ sơ: 01/3 – 30/4/2026. Xét tuyển: 15 – 20/5/2026. Công bố kết quả: 30/5/2026. Nhập học: 15/6/2026 |
-| `dia_chi_nop` | Phòng Đào tạo Sau đại học, Trường Đại học A, 123 đường B, thành phố C |
-| `nguoi_ky` | Trưởng phòng Đào tạo SĐH |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG ĐÀO TẠO SAU ĐẠI HỌC                    Độc lập – Tự do – Hạnh phúc
-      Số: 32/TB-ĐHA-SĐH
-                                                 Thành phố C, ngày 10 tháng 02 năm 2026
-
-              THÔNG BÁO TUYỂN SINH SAU ĐẠI HỌC ĐỢT 1 NĂM 2026
-                       (Trình độ thạc sĩ và tiến sĩ)
-
-Căn cứ Quy chế tuyển sinh và đào tạo trình độ thạc sĩ ban hành kèm theo Thông tư
-số 23/2021/TT-BGDĐT và Quy chế tuyển sinh và đào tạo trình độ tiến sĩ ban hành
-kèm theo Thông tư số 18/2021/TT-BGDĐT của Bộ trưởng Bộ Giáo dục và Đào tạo,
-Trường Đại học A thông báo tuyển sinh sau đại học đợt 1 năm 2026 như sau:
-
-I. CHỈ TIÊU TUYỂN SINH
-
-1. Trình độ thạc sĩ
-
-| TT | Ngành đào tạo       | Mã ngành | Chỉ tiêu |
-|----|---------------------|----------|----------|
-| 1  | Quản trị kinh doanh | 8340101  | 60       |
-| 2  | Kế toán             | 8340301  | 40       |
-| 3  | Công nghệ thông tin | 8480101  | 50       |
-
-2. Trình độ tiến sĩ
-
-| TT | Ngành đào tạo       | Mã ngành | Chỉ tiêu |
-|----|---------------------|----------|----------|
-| 1  | Quản trị kinh doanh | 9340101  | 8        |
-| 2  | Công nghệ thông tin | 9480101  | 6        |
-
-II. ĐIỀU KIỆN DỰ TUYỂN
-
-1. Trình độ thạc sĩ
-- Đã tốt nghiệp đại học ngành phù hợp với ngành đăng ký dự tuyển; trường hợp
-  tốt nghiệp ngành gần phải học bổ sung kiến thức theo quy định.
-- Có năng lực ngoại ngữ từ bậc 3/6 trở lên theo Khung năng lực ngoại ngữ 6 bậc
-  dùng cho Việt Nam hoặc chứng chỉ tương đương.
-
-2. Trình độ tiến sĩ
-- Đã tốt nghiệp thạc sĩ ngành phù hợp; có ít nhất 01 bài báo khoa học liên quan
-  đến lĩnh vực dự định nghiên cứu.
-- Có năng lực ngoại ngữ từ bậc 4/6 trở lên theo Khung năng lực ngoại ngữ 6 bậc
-  dùng cho Việt Nam hoặc chứng chỉ tương đương.
-- Có đề cương nghiên cứu và dự kiến người hướng dẫn.
-
-III. HÌNH THỨC TUYỂN SINH
-1. Trình độ thạc sĩ: xét tuyển (đánh giá hồ sơ dự tuyển và phỏng vấn trực tiếp).
-2. Trình độ tiến sĩ: xét tuyển (đánh giá hồ sơ, đề cương nghiên cứu; ứng viên
-   bảo vệ đề cương trước tiểu ban đánh giá).
-
-IV. HỒ SƠ DỰ TUYỂN
-- Đơn dự tuyển theo mẫu của Trường.
-- Sơ yếu lý lịch có xác nhận.
-- Bản sao công chứng văn bằng tốt nghiệp, bảng điểm.
-- Bản sao chứng chỉ ngoại ngữ.
-- Đề cương nghiên cứu (đối với trình độ tiến sĩ).
-- 02 thư giới thiệu của nhà khoa học.
-- Minh chứng công trình khoa học đã công bố (đối với trình độ tiến sĩ).
-
-V. THỜI GIAN ĐÀO TẠO VÀ HỌC PHÍ
-- Thời gian đào tạo: thạc sĩ 02 năm; tiến sĩ 03 năm (đối với người đã có bằng
-  thạc sĩ).
-- Học phí: thạc sĩ 28.000.000đ/năm; tiến sĩ 45.000.000đ/năm.
-
-VI. THỜI GIAN VÀ ĐỊA ĐIỂM NỘP HỒ SƠ
-- Nhận hồ sơ: từ 01/3/2026 đến 30/4/2026.
-- Xét tuyển: 15 – 20/5/2026.
-- Công bố kết quả: 30/5/2026.
-- Nhập học: 15/6/2026.
-- Địa điểm: Phòng Đào tạo Sau đại học, Trường Đại học A,
-  123 đường B, thành phố C.
-
-Mọi chi tiết xin liên hệ: 024.3xxx.xxxx – sdh@dha.edu.vn.
-
-Nơi nhận:                                        TRƯỞNG PHÒNG ĐÀO TẠO SĐH
-- Các khoa có đào tạo SĐH;
-- Đăng website trường;                                   [CHỜ KÝ]
-- Lưu: VT, SĐH.
-                                                     TS. Trần Văn D
-```
-
-### Checklist trước khi công bố (output kèm theo)
-- [x] Chỉ tiêu từng ngành, từng trình độ trong phạm vi năng lực đào tạo SĐH
-- [x] Điều kiện dự tuyển đúng Thông tư 23/2021 (thạc sĩ), 18/2021 (tiến sĩ)
-- [x] Hình thức tuyển, hồ sơ, thời gian đào tạo, học phí đầy đủ
-- [x] Thời gian nộp hồ sơ, xét tuyển, nhập học rõ ràng
-- [x] Địa chỉ, số điện thoại, email liên hệ chính xác
-- [x] Thể thức văn bản, chính tả đã rà soát
 
 ## Căn cứ & lưu ý
 - Thông tư 23/2021/TT-BGDĐT ngày 30/8/2021 của Bộ GD&ĐT ban hành Quy chế tuyển
@@ -307,10 +182,10 @@ Nơi nhận:                                        TRƯỞNG PHÒNG ĐÀO TẠO
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thong-bao-tuyen-sinh-sdh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thong-bao-tuyen-sinh-sdh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

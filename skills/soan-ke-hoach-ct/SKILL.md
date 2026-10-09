@@ -5,16 +5,18 @@ description: "Soạn kế hoạch công tác tháng / quý / năm của đơn v�
 
 # Soạn kế hoạch công tác
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi đơn vị cần lập kế hoạch công tác tháng, quý, năm; khi lập kế hoạch triển khai
@@ -99,77 +101,23 @@ flowchart TD
     HG --> OUT[["Kế hoạch công tác"]]
 ```
 
-## Đầu ra (Output)
-- Văn bản kế hoạch công tác hoàn chỉnh.
-- Bảng nhiệm vụ chi tiết.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch công tác — các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tên trường (in hoa) + tên đơn vị lập kế hoạch (in hoa)
-2. Tên loại "KẾ HOẠCH CÔNG TÁC [phạm vi thời gian]" (in hoa, căn giữa)
-3. I. MỤC ĐÍCH, YÊU CẦU: mục tiêu cần đạt + yêu cầu chất lượng – tiến độ – phối hợp
-4. II. NHIỆM VỤ CỤ THỂ: bảng đúng 5 cột theo thứ tự — STT | Nội dung | Đơn vị/cá nhân thực hiện | Thời gian | Kết quả mong đợi
-5. III. KINH PHÍ (nếu có): tổng dự toán + nguồn kinh phí (phân bổ chi tiết theo nhiệm vụ)
-6. IV. TỔ CHỨC THỰC HIỆN: phân công trách nhiệm, cơ chế báo cáo và kiểm tra tiến độ
-7. Địa danh, ngày tháng năm + khối chữ ký thủ trưởng đơn vị (chức danh + họ tên)
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tên trường; Tên loại "KẾ HOẠCH CÔNG TÁC [phạm vi thời gian]"; I. MỤC ĐÍCH, YÊU CẦU: mục tiêu cần đạt + yêu cầu chất lượng – tiến…; II. NHIỆM VỤ CỤ THỂ: bảng đúng 5 cột theo thứ tự — STT | Nội dung |…; … (đủ 7 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Kế hoạch năm học toàn trường
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Phạm vi thời gian quyết định độ chi tiết — kế hoạch năm nêu định hướng theo quý, kế hoạch tháng/quý phải có nhiệm vụ cụ thể từng tuần
 - [ ] Xác định sai cấp phê duyệt khiến kế hoạch phải làm lại
 - [ ] Mục đích phải trả lời "làm kế hoạch này để đạt gì"
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `don_vi` | Phòng Hành chính – Tổng hợp, Trường Đại học A |
-| `thoi_gian` | Quý IV năm 2026 |
-| `muc_tieu` | Đảm bảo công tác văn phòng phục vụ tổng kết năm học và chuẩn bị năm học mới |
-| `nhiem_vu` | 1. Tổng hợp báo cáo tổng kết năm học (HCTH chủ trì, T12/2026). 2. Rà soát, thanh lý văn bản hết giá trị lưu trữ (T11/2026). 3. Chuẩn bị khánh tiết Lễ khai giảng (T10/2026). |
-| `kinh_phi` | 120.000.000 đồng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-PHÒNG HÀNH CHÍNH – TỔNG HỢP
-
-KẾ HOẠCH CÔNG TÁC QUÝ IV NĂM 2026
-(Dữ liệu giả lập)
-
-I. MỤC ĐÍCH, YÊU CẦU
-1. Đảm bảo công tác văn phòng, văn thư, lễ tân phục vụ tổng kết năm học
-   2025–2026 và chuẩn bị cho năm học mới.
-2. Yêu cầu: đúng tiến độ, đúng thể thức, phối hợp chặt chẽ với các đơn vị.
-
-II. NHIỆM VỤ CỤ THỂ
-| STT | Nội dung | Thực hiện | Thời gian | Kết quả |
-|-----|----------|-----------|-----------|---------|
-| 1 | Tổng hợp báo cáo tổng kết năm học 2025–2026 | HCTH chủ trì, các đơn vị phối hợp | T12/2026 | Báo cáo trình BGH |
-| 2 | Rà soát, lập danh mục văn bản hết giá trị, đề xuất thanh lý | Tổ Văn thư | T11/2026 | Danh mục trình duyệt |
-| 3 | Chuẩn bị lễ tân, khánh tiết Lễ khai giảng năm học mới | HCTH | T10/2026 | Kịch bản, hậu cần |
-
-III. KINH PHÍ: 120.000.000 đồng (nguồn: kinh phí thường xuyên).
-
-IV. TỔ CHỨC THỰC HIỆN
-Các tổ, cá nhân báo cáo tiến độ vào giao ban tuần của Phòng.
-
-Thành phố C, ngày 01 tháng 10 năm 2026
-TRƯỞNG PHÒNG [CHỜ KÝ]
-ThS. Vũ Thị D
-```
 
 ## Căn cứ & lưu ý
 - Kế hoạch năm học toàn trường; chức năng nhiệm vụ của đơn vị.
@@ -178,10 +126,10 @@ ThS. Vũ Thị D
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-ke-hoach-ct`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-ke-hoach-ct`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

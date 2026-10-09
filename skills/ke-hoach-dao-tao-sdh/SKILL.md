@@ -5,16 +5,18 @@ description: "Lập kế hoạch đào tạo sau đại học theo dõi tiến �
 
 # Kế hoạch đào tạo sau đại học (tiến độ học viên/NCS)
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần lập kế hoạch đào tạo và theo dõi tiến độ cho một khóa/lớp cao học hoặc một
@@ -145,25 +147,12 @@ flowchart TD
     G -->|Có| HG --> I --> OUT
 ```
 
-## Đầu ra (Output)
-- Kế hoạch đào tạo SĐH hoàn chỉnh (khung thời gian, các mốc, phân công hướng dẫn,
-  cơ chế theo dõi).
-- Bảng tiến độ mẫu để cập nhật định kỳ.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch đào tạo sau đại học, các phần theo đúng thứ tự:
-1. Phần đầu văn bản: tên trường + đơn vị (Phòng Đào tạo Sau đại học); quốc hiệu – tiêu ngữ;
-   số, ký hiệu; địa danh, ngày tháng năm ban hành.
-2. Tên kế hoạch + đối tượng áp dụng (khóa/lớp cao học hoặc NCS, ngành, thời gian đào tạo).
-3. Phần căn cứ: Quy chế tuyển sinh và đào tạo trình độ thạc sĩ (TT 23/2021) / tiến sĩ (TT 18/2021).
-4. Nội dung chính theo thứ tự: I. Khung thời gian toàn khóa; II. Tiến độ học các học phần
-   (bảng theo học kỳ); III. Các mốc quan trọng (bảng mốc công việc – thời hạn dự kiến);
-   IV. Phân công người hướng dẫn; V. Theo dõi tiến độ định kỳ (chu kỳ, trách nhiệm, cơ chế
-   cảnh báo); VI. Bảng theo dõi tiến độ (mẫu).
-5. Phần cuối: nơi nhận; chữ ký, họ tên người ký.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-
-## Checklist nghiệm thu
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": phần đầu văn bản; tên kế hoạch + đối tượng áp dụng; phần căn cứ (TT 23/2021 / TT 18/2021); nội dung I–VI (khung thời gian; tiến độ học phần; các mốc quan trọng; phân công hướng dẫn; theo dõi tiến độ định kỳ; bảng theo dõi mẫu); nơi nhận, chữ ký.
+## Kiểm tra nội bộ trước khi giao
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (trình độ, khóa/lớp, ngành, thời gian, người hướng dẫn, học phần, các mốc, chu kỳ báo cáo).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính của kế hoạch.
@@ -173,100 +162,6 @@ flowchart TD
 - [ ] Mốc bảo vệ luận án cấp trường sau bảo vệ cấp cơ sở và sau khi hoàn thành công bố khoa học (đối với NCS); các mốc trong bảng tiến độ khớp bảng mốc ở mục III.
 - [ ] Người hướng dẫn đủ tiêu chuẩn quy chế và không vượt số lượng HV/NCS được hướng dẫn đồng thời; bảng tiến độ bao phủ 100% học viên/NCS của khóa; "chậm tiến độ" có tiêu chí đo cụ thể, biện pháp xử lý có căn cứ quy chế.
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `trinh_do` | Thạc sĩ |
-| `khoa_lop` | Lớp Cao học Quản trị kinh doanh K12 (2026 – 2028) |
-| `nganh` | Quản trị kinh doanh |
-| `thoi_gian_bat_dau` | 15/6/2026 |
-| `thoi_gian_dao_tao` | 2 năm |
-| `nguoi_huong_dan` | TS. Trần Văn D (Trưởng phòng Đào tạo SĐH) – hướng dẫn 05 học viên |
-| `hoc_phan` | HK1: Quản trị học nâng cao, Kinh tế học quản lý; HK2: Quản trị marketing, Quản trị tài chính, Phương pháp nghiên cứu khoa học; HK3: 02 học phần tự chọn |
-| `chu_ky_bao_cao` | 6 tháng |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG ĐÀO TẠO SAU ĐẠI HỌC                    Độc lập – Tự do – Hạnh phúc
-      Số: 40/KH-ĐHA-SĐH
-                                                 Thành phố C, ngày 20 tháng 6 năm 2026
-
-              KẾ HOẠCH ĐÀO TẠO SAU ĐẠI HỌC
-     Lớp Cao học Quản trị kinh doanh K12 (2026 – 2028)
-
-Căn cứ Quy chế tuyển sinh và đào tạo trình độ thạc sĩ ban hành kèm theo Thông tư
-số 23/2021/TT-BGDĐT của Bộ trưởng Bộ Giáo dục và Đào tạo,
-Phòng Đào tạo Sau đại học xây dựng kế hoạch đào tạo lớp Cao học Quản trị kinh
-doanh K12 như sau:
-
-I. KHUNG THỜI GIAN TOÀN KHÓA
-- Thời gian đào tạo: 02 năm (từ 15/6/2026 đến 15/6/2028).
-- Hình thức đào tạo: tập trung theo học kỳ.
-
-II. TIẾN ĐỘ HỌC CÁC HỌC PHẦN
-
-| Học kỳ | Thời gian       | Học phần |
-|--------|-----------------|----------|
-| HK1    | 6 – 12/2026     | Quản trị học nâng cao; Kinh tế học quản lý |
-| HK2    | 1 – 6/2027      | Quản trị marketing; Quản trị tài chính; Phương pháp nghiên cứu khoa học |
-| HK3    | 7 – 12/2027     | 02 học phần tự chọn; giao đề tài và bảo vệ đề cương luận văn |
-
-III. CÁC MỐC QUAN TRỌNG
-
-| TT | Mốc công việc                  | Thời hạn dự kiến |
-|----|--------------------------------|------------------|
-| 1  | Hoàn thành các học phần        | 12/2027          |
-| 2  | Giao đề tài luận văn           | 01/2028          |
-| 3  | Bảo vệ đề cương luận văn       | 03/2028          |
-| 4  | Seminar giữa kỳ (báo cáo tiến độ) | 04/2028       |
-| 5  | Nộp luận văn hoàn chỉnh        | 05/2028          |
-| 6  | Bảo vệ luận văn thạc sĩ        | 06/2028          |
-
-IV. PHÂN CÔNG NGƯỜI HƯỚNG DẪN
-- Người hướng dẫn: TS. Trần Văn D – Trưởng phòng Đào tạo Sau đại học.
-- Số học viên hướng dẫn: 05 học viên (trong giới hạn quy định).
-- Trách nhiệm: hướng dẫn học viên thực hiện đề cương, luận văn; nhận xét tiến
-  độ định kỳ 6 tháng/lần.
-
-V. THEO DÕI TIẾN ĐỘ ĐỊNH KỲ
-- Học viên báo cáo tiến độ 6 tháng/lần (tháng 12 và tháng 6 hằng năm) theo mẫu
-  của Phòng Đào tạo SĐH.
-- Người hướng dẫn nhận xét, đánh giá mức độ hoàn thành.
-- Phòng Đào tạo SĐH tổng hợp, cảnh báo các trường hợp chậm tiến độ quá 01 học
-  kỳ và đề xuất biện pháp xử lý theo quy chế (gia hạn, cảnh báo học vụ).
-
-VI. BẢNG THEO DÕI TIẾN ĐỘ (mẫu)
-
-| TT | Họ tên học viên | Đề tài luận văn | Người hướng dẫn | Hoàn thành HP | Bảo vệ đề cương | Seminar | Nộp luận văn | Bảo vệ | Ghi chú |
-|----|-----------------|-----------------|-----------------|---------------|-----------------|---------|--------------|--------|---------|
-| 1  | Nguyễn Văn A    | ...             | TS. Trần Văn D| ☐             | ☐               | ☐       | ☐            | ☐      |         |
-| 2  | Trần Thị B      | ...             | TS. Trần Văn D| ☐             | ☐               | ☐       | ☐            | ☐      |         |
-| 3  | Phạm Văn C      | ...             | TS. Trần Văn D| ☐             | ☐               | ☐       | ☐            | ☐      |         |
-| 4  | Lê Thị D        | ...             | TS. Trần Văn D| ☐             | ☐               | ☐       | ☐            | ☐      |         |
-| 5  | Hoàng Văn E     | ...             | TS. Trần Văn D| ☐             | ☐               | ☐       | ☐            | ☐      |         |
-
-Nơi nhận:                                        TRƯỞNG PHÒNG ĐÀO TẠO SĐH
-- Lớp CH QTKD K12;
-- Người hướng dẫn;                                        [CHỜ KÝ]
-- Lưu: VT, SĐH.
-                                                     TS. Trần Văn D
-```
-
-### Checklist kiểm tra (output kèm theo)
-- [x] Khung thời gian toàn khóa đúng thời gian đào tạo chuẩn theo quy chế
-- [x] Học phần phân bổ hợp lý theo từng học kỳ
-- [x] Các mốc quan trọng đầy đủ, logic, không chồng chéo
-- [x] Người hướng dẫn đủ tiêu chuẩn, trong giới hạn số lượng hướng dẫn
-- [x] Cơ chế báo cáo tiến độ định kỳ rõ ràng
-- [x] Bảng theo dõi tiến độ đầy đủ học viên/NCS của khóa
 
 ## Căn cứ & lưu ý
 - Thông tư 23/2021/TT-BGDĐT (Quy chế tuyển sinh và đào tạo trình độ thạc sĩ).
@@ -280,10 +175,10 @@ Nơi nhận:                                        TRƯỞNG PHÒNG ĐÀO TẠO
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-dao-tao-sdh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-dao-tao-sdh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

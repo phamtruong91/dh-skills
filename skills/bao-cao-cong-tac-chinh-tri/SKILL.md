@@ -5,16 +5,18 @@ description: "Soạn báo cáo công tác chính trị, tư tưởng định k�
 
 # Soạn báo cáo công tác chính trị
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi đơn vị phụ trách công tác chính trị cần báo cáo định kỳ (quý, năm học) hoặc sau đợt
@@ -111,22 +113,13 @@ flowchart TD
     H --> OUT[["Báo cáo công tác chính trị hoàn chỉnh"]]
 ```
 
-## Đầu ra (Output)
-- Báo cáo công tác chính trị, tư tưởng (markdown).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của Báo cáo công tác chính trị, tư tưởng:
-1. Tiêu đề: tên trường + "ĐẢNG ỦY" + tên báo cáo ("BÁO CÁO" + "Công tác chính trị, tư tưởng ..."
-   + `ky_bao_cao`) + Kính gửi (Đảng ủy cấp trên).
-2. I. Tình hình tư tưởng: đánh giá chung theo nhóm đối tượng (CBVC, sinh viên), mặt tích cực
-   và biểu hiện cần lưu ý — không nêu tên cá nhân.
-3. II. Kết quả triển khai: số hoạt động, lượt người tham gia so với kế hoạch; vụ việc phát
-   sinh (mô tả ẩn danh, khách quan) và biện pháp xử lý.
-4. III. Tồn tại, kiến nghị: tồn tại + đề xuất với Đảng ủy về nội dung, hình thức thời gian tới.
-5. Đoạn kết (kính trình cấp trên xem xét) + Nơi nhận + chữ ký (T/M Đảng ủy, Bí thư).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 5 phần theo "Cấu trúc output chuẩn": tiêu đề (tên trường + ĐẢNG ỦY + tên báo cáo + Kính gửi cấp trên); I. Tình hình tư tưởng (theo nhóm đối tượng, không nêu tên cá nhân); II. Kết quả triển khai (số hoạt động, lượt người tham gia so với kế hoạch; vụ việc phát sinh mô tả ẩn danh + biện pháp xử lý); III. Tồn tại, kiến nghị; đoạn kết + Nơi nhận + chữ ký (T/M Đảng ủy, Bí thư).
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Kỳ báo cáo, tình hình tư tưởng, kết quả triển khai, tồn tại/kiến nghị trong output khớp với Input đã cho.
 - [ ] Không bịa đặt số liệu; số liệu hoạt động có nguồn (biên bản, danh sách điểm danh); nêu rõ đạt/vượt/chưa đạt so với kế hoạch.
 - [ ] Đúng thể thức văn bản báo cáo của Đảng ủy: ký tên theo thẩm quyền (T/M Đảng ủy, Bí thư).
@@ -137,55 +130,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường (Trường Đại học A), cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ky_bao_cao` | Quý I, năm học 2026–2027 |
-| `tinh_hinh_tu_tuong` | Ổn định; CBVC yên tâm công tác; sinh viên tích cực học tập, không có biểu hiện lệch lạc nổi cộm |
-| `ket_qua_trien_khai` | 4 hội nghị quán triệt (1.200 lượt CBVC); 60 buổi sinh hoạt chi đoàn chuyên đề (8.500 lượt SV) |
-| `vu_viec_noi_bat` | Không có vụ việc nghiêm trọng |
-| `ton_tai_kien_nghi` | Một bộ phận SV ít tham gia sinh hoạt chính trị; kiến nghị đa dạng hình thức trực tuyến |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-ĐẢNG ỦY
-
-                          BÁO CÁO
-     Công tác chính trị, tư tưởng quý I, năm học 2026–2027
-
-Kính gửi: Đảng ủy cấp trên
-
-I. TÌNH HÌNH TƯ TƯỞNG
-Tình hình tư tưởng của cán bộ, viên chức và sinh viên trong quý ổn định;
-CBVC yên tâm công tác; sinh viên tích cực học tập, rèn luyện; không ghi nhận
-biểu hiện lệch lạc nổi cộm về tư tưởng.
-
-II. KẾT QUẢ TRIỂN KHAI
-- Tổ chức 4 hội nghị học tập, quán triệt với 1.200 lượt CBVC tham dự;
-- 60 buổi sinh hoạt chi đoàn theo chuyên đề với 8.500 lượt sinh viên tham gia;
-- Không phát sinh vụ việc nghiêm trọng về tư tưởng.
-
-III. TỒN TẠI, KIẾN NGHỊ
-- Tồn tại: một bộ phận sinh viên chưa tích cực tham gia sinh hoạt chính trị.
-- Kiến nghị: đa dạng hóa hình thức sinh hoạt, tăng cường sinh hoạt trực tuyến
-phù hợp với sinh viên.
-
-Trên đây là báo cáo của Đảng ủy Trường, kính trình cấp trên xem xét./.
-
-Nơi nhận:                                      T/M ĐẢNG ỦY
-- Đảng ủy cấp trên;                             BÍ THƯ
-- Lưu: VPĐU.                                        [CHỜ KÝ]
-
-                                              Nguyễn Văn Đức
-```
 
 ## Human gate (người kiểm duyệt)
 - Đảng ủy trường thẩm định nội dung, số liệu trước khi ký ban hành.
@@ -205,10 +149,10 @@ Nơi nhận:                                      T/M ĐẢNG ỦY
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-cong-tac-chinh-tri`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-cong-tac-chinh-tri`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

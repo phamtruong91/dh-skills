@@ -5,16 +5,18 @@ description: "Lập kế hoạch nghiên cứu khoa học cấp khoa của trư�
 
 # Kế hoạch NCKH cấp khoa
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi đầu năm học, khoa cần xây dựng kế hoạch nghiên cứu khoa học cho giảng viên
@@ -131,28 +133,13 @@ flowchart TD
     H --> I[/"Kế hoạch NCKH, bảng chỉ tiêu chi tiết"/]
 ```
 
-## Đầu ra (Output)
-- Văn bản kế hoạch NCKH cấp khoa hoàn chỉnh.
-- Bảng chỉ tiêu chi tiết theo bộ môn/nhóm nghiên cứu.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Văn bản kế hoạch NCKH cấp khoa) — các phần
-bắt buộc theo đúng thứ tự:
-1. Tên trường (dòng trên), tên khoa (dòng dưới).
-2. Số ký hiệu văn bản.
-3. Địa danh, ngày tháng năm ban hành.
-4. Tiêu đề: KẾ HOẠCH / Nghiên cứu khoa học năm học ...
-5. Phần I. ĐỊNH HƯỚNG (02–03 hướng nghiên cứu trọng tâm, gắn chiến lược trường).
-6. Phần II. CHỈ TIÊU CỤ THỂ (bảng: STT, nội dung, chỉ tiêu, đơn vị thực hiện, tiến độ).
-7. Phần III. PHÂN CÔNG THEO BỘ MÔN (bảng giao chỉ tiêu từng bộ môn/nhóm).
-8. Phần IV. TIẾN ĐỘ THỰC HIỆN (các mốc chính theo quý + mốc sơ kết giữa kỳ).
-9. Phần V. KINH PHÍ (nguồn trường + nguồn ngoài dự kiến).
-10. Phần VI. TỔ CHỨC THỰC HIỆN (trách nhiệm bộ môn, theo dõi tiến độ, gắn thi đua).
-11. Nơi nhận – Lưu.
-12. Chữ ký Trưởng khoa (họ tên, học hàm/học vị).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 12 phần của "Cấu trúc output chuẩn": từ tiêu đề hành chính đến chữ ký Trưởng khoa.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: 02–03 hướng trọng tâm, chỉ tiêu 5 mảng (đề tài, bài báo, hội thảo, giáo trình, NCKH SV).
 - [ ] Tổng chỉ tiêu các bộ môn cộng lại khớp với chỉ tiêu chung của khoa.
 - [ ] Nguồn ngoài chỉ ghi "dự kiến" kèm cơ sở; kinh phí theo đúng định mức hiện hành của trường.
@@ -165,80 +152,6 @@ bắt buộc theo đúng thứ tự:
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `khoa` | Khoa Công nghệ thông tin |
-| `nam_hoc` | 2027–2028 |
-| `dinh_huong` | Trí tuệ nhân tạo ứng dụng, an toàn thông tin, chuyển đổi số giáo dục |
-| `chi_tieu` | 07 đề tài (02 cấp bộ, 05 cấp trường); 20 bài báo (10 quốc tế); 01 hội thảo quốc tế; 02 giáo trình |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A
-KHOA CÔNG NGHỆ THÔNG TIN
-      Số: 10/KH-ĐHA-CNTT
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-KẾ HOẠCH
-Nghiên cứu khoa học năm học 2027–2028
-
-I. ĐỊNH HƯỚNG
-Tập trung 03 hướng nghiên cứu trọng tâm: (1) Trí tuệ nhân tạo ứng dụng;
-(2) An toàn thông tin; (3) Chuyển đổi số trong giáo dục – gắn với chiến lược
-KHCN của Trường giai đoạn 2026–2030.
-
-II. CHỈ TIÊU CỤ THỂ
-
-| STT | Nội dung | Chỉ tiêu | Đơn vị thực hiện | Tiến độ |
-|---|---|---|---|---|
-| 1 | Đề tài cấp bộ | 02 đề tài | Nhóm AI, Nhóm ATTT | Đăng ký Q4/2027 |
-| 2 | Đề tài cấp trường | 05 đề tài | Các bộ môn | Đăng ký Q1/2028 |
-| 3 | Bài báo quốc tế | 10 bài | Các nhóm nghiên cứu | Rải đều 4 quý |
-| 4 | Bài báo trong nước | 10 bài | Các bộ môn | Rải đều 4 quý |
-| 5 | Hội thảo quốc tế | 01 hội thảo | Khoa chủ trì | Q2/2028 |
-| 6 | Giáo trình | 02 giáo trình | Bộ môn KHMT, HTTT | Nghiệm thu Q3/2028 |
-| 7 | NCKH sinh viên | 15 đề tài SV; phấn đấu 02 giải cấp bộ | Đoàn – Hội + các bộ môn | Q2/2028 |
-
-III. PHÂN CÔNG THEO BỘ MÔN
-
-| Bộ môn | Đề tài | Bài báo QT | Bài báo TN | Ghi chú |
-|---|---|---|---|---|
-| Khoa học máy tính | 01 cấp bộ + 02 cấp trường | 05 | 04 | Chủ trì hội thảo |
-| Hệ thống thông tin | 01 cấp bộ + 02 cấp trường | 03 | 04 | — |
-| Mạng máy tính & ATTT | 01 cấp trường | 02 | 02 | Hướng ATTT |
-
-IV. TIẾN ĐỘ THỰC HIỆN
-- Q4/2027: đăng ký 02 đề tài cấp bộ; sơ kết NCKH sinh viên đợt 1.
-- Q1/2028: đăng ký 05 đề tài cấp trường; các bộ môn gửi kế hoạch bộ môn về khoa.
-- Q2/2028: tổ chức 01 hội thảo quốc tế; tổng kết NCKH sinh viên, xét giải cấp bộ.
-- Q3/2028: nghiệm thu 02 giáo trình; sơ kết 6 tháng, điều chỉnh chỉ tiêu nếu cần.
-- Rải đều 4 quý: công bố 10 bài báo quốc tế, 10 bài báo trong nước.
-
-V. KINH PHÍ
-- Nguồn trường: 600 triệu đồng (đề tài cấp trường, hội thảo, hỗ trợ bài báo).
-- Nguồn ngoài: đề tài cấp bộ và hợp tác doanh nghiệp (dự kiến 1,2 tỷ đồng).
-
-VI. TỔ CHỨC THỰC HIỆN
-- Các bộ môn cụ thể hóa thành kế hoạch bộ môn, gửi về khoa trước 30/11/2027.
-- Trợ lý NCKH khoa theo dõi tiến độ hằng quý, báo cáo trưởng khoa.
-- Kết quả NCKH là tiêu chí đánh giá thi đua của bộ môn và cá nhân.
-
-Nơi nhận:                                        TRƯỞNG KHOA
-- Ban Giám hiệu (báo cáo);                            [CHỜ KÝ]
-- Phòng KHCN (tổng hợp);
-- Các bộ môn (thực hiện);
-- Lưu: VT khoa.
-
-                                              TS. Phạm Văn B
-```
-
 ## Căn cứ & lưu ý
 - Chiến lược phát triển khoa học công nghệ của Trường Đại học A (giả lập).
 - Chỉ tiêu NCKH gắn với đánh giá thi đua và là minh chứng cho tiêu chí về NCKH
@@ -249,10 +162,10 @@ Nơi nhận:                                        TRƯỞNG KHOA
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-nckh-khoa`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-nckh-khoa`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

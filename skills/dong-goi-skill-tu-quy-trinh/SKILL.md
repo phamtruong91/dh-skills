@@ -5,16 +5,18 @@ description: "Meta-skill — phân rã một quy trình thực tế của đơn 
 
 # Đóng gói skill từ quy trình (meta-skill)
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi một đơn vị muốn biến quy trình công việc thực tế (đang làm thủ công hoặc nằm trong
@@ -93,25 +95,13 @@ flowchart TD
     H -->|Có| HG --> J
 ```
 
-## Đầu ra (Output)
-- Process map của quy trình.
-- Skill spec hoàn chỉnh theo chuẩn SKILL.md.
-- Bộ test case kiểm thử.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — skill spec:
-1. Frontmatter (`name`, `description`) và tiêu đề tên skill.
-2. "Khi nào dùng": điều kiện kích hoạt, phạm vi áp dụng.
-3. "Đầu vào (Input)": bảng Trường | Mô tả | Bắt buộc.
-4. "Quy trình": các bước thực thi, mỗi bước cho ra bán thành phẩm.
-5. "Đầu ra (Output)": danh sách sản phẩm cuối.
-6. "Ví dụ mô phỏng": Input mẫu + Output mẫu (dữ liệu giả lập, có ghi chú giả lập).
-7. "Human gate": ai kiểm duyệt, kiểm duyệt nội dung gì, điều kiện dừng.
-8. "Giới hạn": các việc cấm làm.
-9. "Căn cứ & lưu ý": văn bản/căn cứ áp dụng.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 3 sản phẩm theo Cấu trúc output chuẩn: process map, skill spec, bộ test case.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Skill spec đủ 9 mục: frontmatter, khi nào dùng, input (bảng), quy trình, output, ví dụ mô phỏng, human gate, giới hạn, căn cứ.
 - [ ] Quy trình trong spec phản ánh đúng process map, kể cả nhánh ngoại lệ và điểm human gate.
 - [ ] Ví dụ mô phỏng dùng đúng cặp mẫu input/output đã phân tích ở bước 2 (dữ liệu giả lập, đã ẩn danh).
@@ -121,51 +111,6 @@ flowchart TD
 - [ ] Đã qua Human gate: process owner nghiệm thu và ký xác nhận gói skill (duyệt spec, duyệt test case).
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên quy trình, dữ liệu dưới đây đều là **giả lập**, minh họa cách đóng gói.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `mo_ta_quy_trinh` | Quy trình "Tiếp nhận và phúc đáp công văn đến": văn thư nhận → đăng ký sổ → trình lãnh đạo phân công → chuyên viên dự thảo → trình ký → phát hành → lưu |
-| `mau_input` | Công văn đến giả lập số 45/CV-SK của Học viện B: đề nghị phối hợp hội thảo |
-| `mau_output` | Công văn phúc đáp 182/CV-ĐHA-HCTH (đã ban hành, giả lập) |
-| `tieu_chi_nghiem_thu` | Đúng thể thức NĐ 30/2020; trích dẫn đúng công văn đến; nơi nhận đủ |
-
-### Output mẫu
-
-```
-PROCESS MAP (rút gọn):
-Nhận CV đến → Đăng ký sổ (1 ngày) → Trình lãnh đạo phân công (2 ngày)
-→ Chuyên viên dự thảo (3 ngày) → Trình ký → Phát hành & lưu
-  └─ Ngoại lệ: CV khẩn → rút ngắn còn 1 ngày, báo ngay qua điện thoại
-
-SKILL SPEC: xem mẫu "soan-cong-van" — skill này được sinh ra chính bằng meta-skill này.
-(rút gọn đủ 9 mục cho quy trình "Tiếp nhận và phúc đáp công văn đến", dữ liệu giả lập)
-1. Frontmatter: name: tiep-nhan-phuc-dap-cong-van-den; description: tiếp nhận công văn
-   đến, dự thảo phúc đáp đúng thể thức NĐ 30/2020.
-2. Khi nào dùng: khi văn thư nhận được công văn đến cần phúc đáp bằng văn bản.
-3. Input (bảng): cong_van_den | tai_lieu_kem_theo | do_khan | nguoi_phan_cong.
-4. Quy trình: nhận CV → đăng ký sổ → trình lãnh đạo phân công → chuyên viên dự thảo
-   → trình ký → phát hành → lưu hồ sơ.
-5. Output: dự thảo công văn phúc đáp đúng thể thức; sổ đăng ký công văn đến cập nhật.
-6. Ví dụ mô phỏng: Input: CV số 45/CV-SK của Học viện B (giả lập)
-   → Output: công văn phúc đáp 182/CV-ĐHA-HCTH (giả lập, đã ban hành).
-7. Human gate: lãnh đạo phân công chuyên viên; người có thẩm quyền ký duyệt dự thảo.
-8. Giới hạn: không bịa số hiệu/ký hiệu công văn; không dự thảo khi công văn đến
-   thiếu thông tin bắt buộc.
-9. Căn cứ: Nghị định 30/2020/NĐ-CP về công tác văn thư; quy chế văn thư nội bộ.
-
-TEST CASE:
-| # | Input | Output kỳ vọng | Tiêu chí đạt |
-|---|---|---|---|
-| 1 | CV đề nghị phối hợp (thường) | Dự thảo phúc đáp | Đủ 8 thành phần thể thức |
-| 2 | CV khẩn | Dự thảo + ghi chú độ khẩn | Có dấu "Khẩn", đúng hạn |
-| 3 | CV thiếu số/ký hiệu | Yêu cầu bổ sung, không dự thảo | Không bịa số hiệu |
-```
 
 ## Human gate (người kiểm duyệt)
 - **Process owner** (chủ quy trình — trưởng đơn vị hoặc cán bộ phụ trách nghiệp vụ)
@@ -186,10 +131,10 @@ TEST CASE:
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/dong-goi-skill-tu-quy-trinh`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/dong-goi-skill-tu-quy-trinh`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

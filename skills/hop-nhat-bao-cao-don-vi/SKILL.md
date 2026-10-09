@@ -5,16 +5,18 @@ description: "Hợp nhất báo cáo của nhiều đơn vị theo một mẫu c
 
 # Hợp nhất báo cáo nhiều đơn vị
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần tổng hợp báo cáo từ nhiều khoa/phòng/trung tâm thành một báo cáo chung của trường:
@@ -117,22 +119,13 @@ flowchart TD
     G --> H --> I --> HG --> J
 ```
 
-## Đầu ra (Output)
-- Dự thảo báo cáo hợp nhất theo mẫu chung.
-- Data gap log (đơn vị thiếu/chưa nộp theo từng chỉ tiêu).
-- Phụ lục liên kết nguồn từng số liệu.
-- Danh sách mâu thuẫn cần xác minh thêm.
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Dự thảo báo cáo hợp nhất):
-1. Tiêu đề: tên báo cáo, kỳ báo cáo, đơn vị tổng hợp, ngày lập.
-2. Phạm vi số liệu: đơn vị nào đã có số liệu / chưa nộp / nộp bản nháp (minh bạch ngay từ đầu).
-3. Nội dung theo mẫu chung: từng mục gồm bảng số liệu (mỗi con số có chú thích nguồn) + nhận xét dựa trên số liệu.
-4. Data gap log: đơn vị thiếu chỉ tiêu nào, trạng thái.
-5. Danh sách mâu thuẫn cần xác minh thêm + hạn bổ sung.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Báo cáo hợp nhất đầy đủ 5 phần theo Cấu trúc output chuẩn: tiêu đề + kỳ báo cáo + ngày lập; phạm vi số liệu (đơn vị nào đã có số liệu / chưa nộp / nộp bản nháp); nội dung theo mẫu chung; data gap log; danh sách mâu thuẫn cần xác minh + hạn bổ sung.
+- [ ] Báo cáo hợp nhất đầy đủ 5 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: tiêu đề + kỳ báo cáo + ngày lập; phạm vi số liệu (đơn vị nào đã có số liệu / chưa nộp / nộp bản nháp); nội dung theo mẫu chung; data gap log; danh sách mâu thuẫn cần xác minh + hạn bổ sung.
 - [ ] Số liệu trong output khớp với báo cáo các đơn vị trong Input; không bịa, không ước lượng, không "làm tròn cho đẹp".
 - [ ] Mỗi con số trong báo cáo hợp nhất đều có chú thích nguồn (đơn vị, báo cáo, mục) trong phụ lục liên kết nguồn.
 - [ ] Số liệu từ bản nháp chưa xác minh KHÔNG đưa vào tổng; chỉ tiêu thiếu ghi rõ "chưa có số liệu", không bỏ mục.
@@ -141,40 +134,6 @@ flowchart TD
 - [ ] Đã qua Human gate: đầu mối từng đơn vị đã xác nhận số liệu đơn vị mình; lãnh đạo đã duyệt báo cáo cuối trước khi ban hành/gửi cấp trên.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-> Ví dụ: hợp nhất số liệu tuyển sinh từ 3 khoa để phục vụ báo cáo 3 công khai.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `mau_bao_cao_chung` | Mục II. Quy mô đào tạo: tổng chỉ tiêu, tổng nhập học (chia theo khoa) |
-| `bao_cao_don_vi` | Khoa CNTT: chỉ tiêu 500, nhập học 487. Khoa Kinh tế: chỉ tiêu 400, nhập học 392. Khoa Ngoại ngữ: mới nộp bản nháp, ghi "khoảng 300 nhập học", chưa có chỉ tiêu |
-| `dinh_nghia_chi_tieu` | Nhập học = số SV làm thủ tục nhập học tính đến 30/9/2026 |
-| `ky_bao_cao` | Năm học 2026–2027 |
-
-### Output mẫu
-
-**BÁO CÁO HỢP NHẤT — Tuyển sinh năm học 2026–2027** (đơn vị tổng hợp: Phòng Đào tạo; ngày lập: 09/10/2026)
-
-**Phạm vi số liệu:** 2/3 khoa có số liệu chính thức (CNTT, Kinh tế); Khoa Ngoại ngữ mới nộp bản nháp — KHÔNG đưa vào tổng.
-
-**Báo cáo hợp nhất (trích Mục II):**
-- Tổng chỉ tiêu (2 khoa có số liệu): 900
-- Tổng nhập học (2 khoa có số liệu): 879 — đạt 97,7% chỉ tiêu
-- Khoa Ngoại ngữ: CHƯA CÓ SỐ LIỆU CHÍNH THỨC (xem gap log)
-
-**Data gap log:**
-| Đơn vị | Chỉ tiêu thiếu | Trạng thái |
-|---|---|---|
-| Khoa Ngoại ngữ | Chỉ tiêu tuyển sinh; số nhập học chính thức | Mới nộp bản nháp, số "khoảng 300" chưa xác minh — KHÔNG đưa vào tổng |
-
-**Phụ lục nguồn:** 500 (Khoa CNTT, BC-TS2026, mục 1) + 400 (Khoa Kinh tế, BC-TS2026, mục 1)...
-
-**Cần xác minh:** Khoa Ngoại ngữ nộp lại số liệu chính thức trước 15/10/2026.
 
 ## Human gate (người kiểm duyệt)
 1. **Đầu mối từng đơn vị**: xác nhận số liệu của đơn vị mình trong bản hợp nhất (đặc biệt các chỗ
@@ -196,10 +155,10 @@ flowchart TD
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/hop-nhat-bao-cao-don-vi`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/hop-nhat-bao-cao-don-vi`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

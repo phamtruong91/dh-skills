@@ -5,16 +5,18 @@ description: "Soạn thông báo nội bộ của trường đại học (lịch
 
 # Soạn thông báo
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần thông tin chính thức đến toàn thể hoặc một nhóm đối tượng trong trường: lịch nghỉ,
@@ -48,7 +50,7 @@ triệu tập họp, quy định mới, kế hoạch, kết quả...
 - → Kết quả bước: Danh sách nội dung đã kiểm chứng, loại trùng, sẵn sàng đưa vào thông báo.
 
 **Bước 3. Đặt tiêu đề và viết mở đầu**
-- Làm gì: Viết dòng "THÔNG BÁO" (in hoa, căn giữa) + tiêu đề vắn tắt sau "V/v" lấy từ `tieu_de`; viết dòng "Kính gửi" + `doi_tuong`; mở đầu 1–2 câu: nêu căn cứ/quyết định liên quan (nếu có) rồi đi thẳng vào nội dung ("...thông báo ... như sau:").
+- Làm gì: Viết dòng "THÔNG BÁO" (in hoa, căn giữa) + trích yếu ở dòng dưới lấy từ `tieu_de`; viết dòng "Kính gửi" + `doi_tuong`; mở đầu 1–2 câu: nêu căn cứ/quyết định liên quan (nếu có) rồi đi thẳng vào nội dung ("...thông báo ... như sau:").
 - Dùng input: `tieu_de`, `doi_tuong`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
 - Lưu ý nghiệp vụ: Tiêu đề không dài quá một dòng; mở đầu không kể lể dài dòng — thông báo càng vào việc nhanh càng tốt.
@@ -97,81 +99,23 @@ flowchart TD
     HG --> OUT[["Thông báo ban hành"]]
 ```
 
-## Đầu ra (Output)
-- Thông báo hoàn chỉnh (markdown).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của thông báo — các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tên trường + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
-2. Tên đơn vị ban hành + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"
-3. Số, ký hiệu thông báo (ký hiệu "TB"); địa danh, ngày tháng năm
-4. Tên loại "THÔNG BÁO" (in hoa, căn giữa) + tiêu đề vắn tắt sau "V/v"
-5. Dòng "Kính gửi" + đối tượng nhận
-6. Mở đầu 1–2 câu: căn cứ/quyết định liên quan (nếu có), rồi đi thẳng vào nội dung
-7. Nội dung: đánh số 1., 2., 3..., mỗi ý đủ việc gì – ai thực hiện – khi nào – ở đâu
-8. Kết thúc: đề nghị các đơn vị/cá nhân nghiêm túc thực hiện (nếu là thông báo yêu cầu), kết bằng "./."
-9. Nơi nhận
-10. Khối chữ ký: chức danh người ký (+ ký hiệu TL. nếu ký thừa ủy quyền) + họ tên
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-Tiêu chí đạt: tất cả các ô dưới đây được đánh dấu.
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Tên trường + Quốc hiệu "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"; Tên đơn vị ban hành + Tiêu ngữ "Độc lập – Tự do – Hạnh phúc"; Số, ký hiệu thông báo (ký hiệu "TB"); địa danh, ngày tháng năm; Tên loại "THÔNG BÁO" (in hoa, căn giữa) + tiêu đề vắn tắt sau "V/v"; … (đủ 10 phần)
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và định dạng theo Thông báo càng ngắn càng tốt
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
-- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/duyệt trước khi phát hành
+- [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Thông báo yêu cầu thực hiện bắt buộc phải có thời hạn rõ ràng
 - [ ] Thông báo gửi "toàn thể" mà nội dung chỉ liên quan một nhóm sẽ gây nhiễu — thu hẹp đối tượng cho đúng
 - [ ] Tránh câu bị động mập mờ ("sẽ được bố trí") — phải ghi rõ chủ thể thực hiện
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `tieu_de` | V/v nghỉ Tết Dương lịch năm 2027 |
-| `doi_tuong` | Toàn thể cán bộ, viên chức và sinh viên |
-| `noi_dung` | 1. Nghỉ 01 ngày: thứ Sáu, 01/01/2027. 2. Các đơn vị bố trí trực bảo vệ, PCCC. 3. Sinh viên ở KTX đăng ký ở lại (nếu có) tại Ban Quản lý KTX trước 28/12/2026. |
-| `don_vi_ban_hanh` | Phòng Hành chính – Tổng hợp |
-| `nguoi_ky` | Trưởng phòng (thừa ủy quyền Hiệu trưởng) |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG HÀNH CHÍNH – TỔNG HỢP              Độc lập – Tự do – Hạnh phúc
-      Số: 98/TB-ĐHA-HCTH
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                          THÔNG BÁO
-                   V/v nghỉ Tết Dương lịch năm 2027
-
-Kính gửi: Toàn thể cán bộ, viên chức và sinh viên Trường Đại học A
-
-Căn cứ Bộ luật Lao động và kế hoạch năm học 2026–2027, Nhà trường thông báo
-lịch nghỉ Tết Dương lịch năm 2027 như sau:
-
-1. Toàn trường nghỉ 01 ngày: thứ Sáu, ngày 01/01/2027.
-
-2. Các đơn vị bố trí cán bộ trực, đảm bảo công tác bảo vệ, phòng cháy chữa cháy
-trong thời gian nghỉ.
-
-3. Sinh viên có nhu cầu ở lại ký túc xá trong dịp nghỉ đăng ký tại Ban Quản lý
-ký túc xá trước ngày 28/12/2026.
-
-Đề nghị các đơn vị, cá nhân nghiêm túc thực hiện./.
-
-Nơi nhận:                                          TL. HIỆU TRƯỞNG
-- Như trên;                                        TRƯỞNG PHÒNG
-- Lưu: VT, HCTH.                                       [CHỜ KÝ]
-
-                                                  ThS. Vũ Văn B
-```
 
 ## Căn cứ & lưu ý
 - Thông báo càng ngắn càng tốt; tránh văn hoa, vòng vo.
@@ -179,10 +123,10 @@ Nơi nhận:                                          TL. HIỆU TRƯỞNG
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-thong-bao`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-thong-bao`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

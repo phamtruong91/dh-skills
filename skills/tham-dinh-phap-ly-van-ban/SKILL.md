@@ -5,16 +5,18 @@ description: "Rà soát, cho ý kiến pháp lý đối với dự thảo văn b
 
 # Thẩm định pháp lý dự thảo văn bản nội bộ
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi một đơn vị trong trường soạn thảo văn bản nội bộ (quy định, quy chế, hướng dẫn,
@@ -101,20 +103,13 @@ flowchart TD
 ```
 ```
 
-## Đầu ra (Output)
-- Phiếu ý kiến pháp lý hoàn chỉnh (markdown), ghi rõ mức kết luận và từng điểm cần sửa.
-- Bảng đối chiếu: nội dung dự thảo – vấn đề pháp lý phát hiện – đề xuất chỉnh sửa.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** Phiếu ý kiến pháp lý gồm các phần bắt buộc theo đúng thứ tự sau:
-1. Phần đầu: quốc hiệu – tiêu ngữ, tên đơn vị thẩm định, số/ký hiệu, địa danh – ngày tháng, tên văn bản "PHIẾU Ý KIẾN PHÁP LÝ" + trích yếu (về dự thảo ... do ... soạn thảo); dòng "Kính gửi: ...".
-2. I. Đánh giá chung (thẩm quyền ban hành, bố cục, nhận định tổng thể + số điểm cần sửa).
-3. II. Ý kiến cụ thể (từng điểm: điều khoản – vấn đề phát hiện – đề xuất chỉnh sửa).
-4. III. Kết luận (đánh dấu 1 trong 3 mức: đồng ý / đồng ý với điều kiện chỉnh sửa / không đồng ý).
-5. Phần cuối: nơi nhận, chữ ký người thẩm định.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần đầu; I. Đánh giá chung (thẩm quyền ban hành, bố…; II. Ý kiến cụ thể (từng điểm; III. Kết luận (đánh dấu 1 trong 3 mức; Phần cuối
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Phiếu ý kiến pháp lý hoàn chỉnh (markdown), ghi rõ mức kết luận và từng điểm cần sửa
 - [ ] Có đầy đủ sản phẩm: Bảng đối chiếu: nội dung dự thảo – vấn đề pháp lý phát hiện – đề xuất chỉnh sửa
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -127,94 +122,6 @@ flowchart TD
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_du_thao` | Dự thảo Quy định quản lý đề tài nghiên cứu khoa học cấp Trường |
-| `don_vi_soan_thao` | Phòng Khoa học công nghệ |
-| `noi_dung_du_thao` | 10 điều: đối tượng, tiêu chí đề tài, hội đồng xét duyệt, kinh phí, nghiệm thu, xử lý vi phạm |
-| `can_cu_du_thao_trich` | Luật Khoa học và Công nghệ 2013; Nghị định 30/2020/NĐ-CP |
-| `van_ban_cap_tren` | Quy chế chi tiêu nội bộ của Trường (quy định thời hạn nghiệm thu 45 ngày) |
-| `nguoi_tham_dinh` | Phòng Thanh tra & Pháp chế |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-PHÒNG THANH TRA & PHÁP CHẾ               Độc lập – Tự do – Hạnh phúc
-      Số: 07/YKPL-ĐHA-TTPC
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-PHIẾU Ý KIẾN PHÁP LÝ
-Về dự thảo Quy định quản lý đề tài nghiên cứu khoa học cấp Trường
-(do Phòng Khoa học công nghệ soạn thảo)
-
-Kính gửi: Phòng Khoa học công nghệ
-
-Sau khi rà soát dự thảo Quy định quản lý đề tài nghiên cứu khoa học cấp Trường,
-Phòng Thanh tra & Pháp chế có ý kiến như sau:
-
-I. ĐÁNH GIÁ CHUNG
-Dự thảo thuộc thẩm quyền ban hành của Hiệu trưởng; bố cục cơ bản hợp lý, nội dung
-không trái với quy định của pháp luật. Tuy nhiên còn một số điểm cần chỉnh sửa,
-bổ sung trước khi trình ký.
-
-II. Ý KIẾN CỤ THỂ
-
-1. Về căn cứ pháp lý: dự thảo chưa viện dẫn Luật Giáo dục đại học năm 2012 (sửa
-đổi, bổ sung năm 2018) là căn cứ trực tiếp điều chỉnh hoạt động khoa học công nghệ
-trong cơ sở giáo dục đại học. Đề nghị bổ sung.
-
-2. Về tính thống nhất: Điều 9 dự thảo quy định thời hạn nghiệm thu đề tài là
-30 ngày, trong khi Quy chế chi tiêu nội bộ của Trường quy định thời hạn nghiệm
-thu là 45 ngày. Đề nghị thống nhất thành 45 ngày để tránh mâu thuẫn giữa các văn
-bản nội bộ.
-
-3. Về thuật ngữ: Điều 6 dùng thuật ngữ "chủ nhiệm đề tài" trong khi Quy chế hoạt
-động khoa học công nghệ hiện hành của Trường dùng thuật ngữ "chủ nhiệm nhiệm vụ".
-Đề nghị thống nhất thuật ngữ trong toàn bộ dự thảo.
-
-4. Về thể thức (Nghị định 30/2020/NĐ-CP): dự thảo thiếu mục "Nơi nhận"; đánh số
-điều khoản bị nhảy số (thiếu Điều 7). Đề nghị bổ sung, rà soát lại toàn bộ.
-
-III. KẾT LUẬN
-
-[X] Đồng ý với điều kiện chỉnh sửa (04 điểm nêu tại Mục II)
-[ ] Đồng ý
-[ ] Không đồng ý
-
-Đề nghị Phòng Khoa học công nghệ hoàn thiện dự thảo theo các ý kiến trên trước
-khi trình Hiệu trưởng ký ban hành./.
-
-Nơi nhận:                              KT. TRƯỞNG PHÒNG
-- Phòng KHCN;                          PHÓ TRƯỞNG PHÒNG
-- Lưu: TTPC.                               [CHỜ KÝ]
-
-                                        ThS. Lê Thị C
-```
-
-### Bảng đối chiếu vấn đề – đề xuất (output kèm theo)
-
-| Điều khoản | Vấn đề pháp lý | Đề xuất chỉnh sửa |
-|---|---|---|
-| Phần căn cứ | Thiếu viện dẫn Luật GDĐH 2012 (sửa đổi 2018) | Bổ sung căn cứ |
-| Điều 9 | Thời hạn nghiệm thu 30 ngày mâu thuẫn Quy chế chi tiêu nội bộ (45 ngày) | Thống nhất thành 45 ngày |
-| Điều 6 | Thuật ngữ "chủ nhiệm đề tài" không thống nhất | Dùng thống nhất "chủ nhiệm nhiệm vụ" |
-| Thể thức | Thiếu Nơi nhận; nhảy số điều (thiếu Điều 7) | Bổ sung, rà soát lại |
-
-### Checklist thẩm định (output kèm theo)
-- [x] Thẩm quyền ban hành phù hợp
-- [x] Căn cứ pháp lý còn hiệu lực, trích dẫn chính xác
-- [x] Không trái văn bản cấp trên
-- [x] Thống nhất với văn bản nội bộ hiện hành
-- [x] Thể thức theo Nghị định 30/2020/NĐ-CP
-- [x] Kết luận rõ một trong ba mức
-
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản).
 - Luật Giáo dục đại học 2012, sửa đổi bổ sung 2018; Điều lệ trường đại học.
@@ -225,10 +132,10 @@ trọng; đơn vị soạn thảo phải tiếp thu hoặc giải trình bằng 
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/tham-dinh-phap-ly-van-ban`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/tham-dinh-phap-ly-van-ban`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

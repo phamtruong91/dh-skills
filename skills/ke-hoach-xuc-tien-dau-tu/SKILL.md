@@ -5,16 +5,18 @@ description: "Lập kế hoạch xúc tiến đầu tư của Ban Xúc tiến đ
 
 # Kế hoạch xúc tiến đầu tư
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi Ban Xúc tiến đầu tư và Phát triển hạ tầng cần lập kế hoạch thu hút đầu tư cho trường:
@@ -87,24 +89,13 @@ flowchart TD
     HG --> G[["Kế hoạch xúc tiến đầu tư + hồ sơ dự án"]]
 ```
 
-## Đầu ra (Output)
-- Kế hoạch xúc tiến đầu tư (định hướng, danh mục dự án, đối tác, hoạt động, tiến độ).
-- Bộ hồ sơ giới thiệu dự án (tóm tắt 1–2 trang/dự án).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (khung mẫu cố định của sản phẩm chính — Kế hoạch xúc tiến đầu tư):
-1. Phần mở đầu hành chính (tên trường, đơn vị, số ký hiệu, ngày tháng).
-2. Tên kế hoạch + năm/giai đoạn.
-3. Định hướng (nhu cầu hạ tầng ưu tiên, tổng nhu cầu vốn).
-4. Danh mục dự án kêu gọi (bảng: STT – dự án – quy mô – tổng mức đầu tư dự kiến – hình thức).
-5. Đối tác mục tiêu (nhóm đối tác + tiêu chí lựa chọn).
-6. Hoạt động xúc tiến (theo quý: hoạt động – quy mô – thời gian).
-7. Tổ chức thực hiện (đơn vị chủ trì, phối hợp, chế độ báo cáo).
-8. Nơi nhận, chữ ký.
-- Kèm theo: Bộ hồ sơ giới thiệu dự án (tóm tắt 1–2 trang/dự án, song ngữ Việt – Anh).
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần mở đầu hành chính (tên trường, đơn vị,…; Tên kế hoạch + năm/giai đoạn.; Định hướng (nhu cầu hạ tầng ưu tiên, tổng…; Danh mục dự án kêu gọi (bảng; Đối tác mục tiêu (nhóm đối tác + tiêu chí…; Hoạt động xúc tiến (theo quý; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Kế hoạch xúc tiến đầu tư (định hướng, danh mục dự án, đối tác, hoạt động, tiến độ)
 - [ ] Có đầy đủ sản phẩm: Bộ hồ sơ giới thiệu dự án (tóm tắt 1–2 trang/dự án)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -116,60 +107,6 @@ flowchart TD
 - [ ] Mọi số liệu ở mức "dự kiến" và phải ghi rõ như vậy
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `nam_ke_hoach` | 2027 |
-| `dinh_huong` | Mở rộng ký túc xá 2.000 chỗ; xây Trung tâm Đổi mới sáng tạo 5 tầng |
-| `danh_muc_du_an` | 1. KTX sinh viên 2.000 chỗ — 180 tỷ đồng — hình thức PPP. 2. Trung tâm Đổi mới sáng tạo — 120 tỷ đồng — tài trợ + đối ứng. |
-| `doi_tac_muc_tieu` | Doanh nghiệp bất động sản, quỹ đầu tư giáo dục, tập đoàn công nghệ |
-| `hoat_dong_xuc_tien` | Hội nghị xúc tiến Q1/2027; 10 cuộc gặp song phương; profile dự án song ngữ |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-BAN XÚC TIẾN ĐẦU TƯ & PT HẠ TẦNG         Độc lập – Tự do – Hạnh phúc
-      Số: 05/KH-ĐHA-XTĐT
-                                                 Thành phố C, ngày 09 tháng 10 năm 2026
-
-                    KẾ HOẠCH XÚC TIẾN ĐẦU TƯ NĂM 2027
-
-I. ĐỊNH HƯỚNG
-Tập trung thu hút đầu tư cho 02 dự án hạ tầng trọng điểm: ký túc xá sinh viên
-và Trung tâm Đổi mới sáng tạo, tổng nhu cầu vốn khoảng 300 tỷ đồng.
-
-II. DANH MỤC DỰ ÁN KÊU GỌI
-
-| STT | Dự án | Quy mô | Tổng mức đầu tư (dự kiến) | Hình thức |
-|-----|-------|--------|---------------------------|-----------|
-| 1 | Ký túc xá sinh viên | 2.000 chỗ ở | 180 tỷ đồng | Đối tác công – tư (PPP) |
-| 2 | Trung tâm Đổi mới sáng tạo | 5 tầng, 8.000 m² sàn | 120 tỷ đồng | Tài trợ + vốn đối ứng |
-
-III. ĐỐI TÁC MỤC TIÊU
-- Doanh nghiệp bất động sản có kinh nghiệm dự án giáo dục.
-- Quỹ đầu tư giáo dục, tổ chức quốc tế.
-- Tập đoàn công nghệ (cho Trung tâm Đổi mới sáng tạo).
-
-IV. HOẠT ĐỘNG XÚC TIẾN
-- Quý I/2027: Hội nghị xúc tiến đầu tư (dự kiến 80 khách mời).
-- Quý I–II/2027: 10 cuộc gặp song phương với đối tác tiềm năng.
-- Xây dựng bộ profile dự án song ngữ Việt – Anh.
-
-V. TỔ CHỨC THỰC HIỆN
-Ban Xúc tiến đầu tư và Phát triển hạ tầng chủ trì, phối hợp Phòng QTTB và Phòng TCKT./.
-
-Nơi nhận:                                       TRƯỞNG BAN
-- Ban Giám hiệu (b/c);                              [CHỜ KÝ]
-- Lưu: VT, XTĐT.
-                                              TS. Phạm Văn D
-```
 
 ## Human gate
 - Trưởng Ban duyệt kế hoạch; Ban Giám hiệu/Hội đồng trường phê duyệt danh mục và chủ trương kêu gọi.
@@ -186,10 +123,10 @@ Nơi nhận:                                       TRƯỞNG BAN
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-xuc-tien-dau-tu`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-xuc-tien-dau-tu`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

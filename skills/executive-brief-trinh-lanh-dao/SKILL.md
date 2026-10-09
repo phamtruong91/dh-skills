@@ -5,16 +5,18 @@ description: "Tóm tắt nhiều nguồn (báo cáo, tờ trình, bảng số li
 
 # Executive brief trình lãnh đạo
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi lãnh đạo cần quyết định một vấn đề phức tạp có nhiều nguồn thông tin: phê duyệt đề án,
@@ -103,23 +105,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> G --> HG --> H
 ```
 
-## Đầu ra (Output)
-- Executive brief (1–2 trang).
-- Decision memo (mẫu ghi quyết định).
-- Bảng vấn đề cần quyết định (câu hỏi + phương án + khuyến nghị trung lập + căn cứ).
+## Đầu ra
 
-**Cấu trúc output chuẩn** (sản phẩm chính: Executive brief):
-1. Tiêu đề: EXECUTIVE BRIEF + vấn đề cần quyết định (1 câu) + thời hạn quyết định.
-2. Bối cảnh (3–5 dòng): vì sao vấn đề phát sinh, ai đề xuất.
-3. Số liệu chính: các con số quyết định, mỗi số ghi nguồn.
-4. So sánh phương án: bảng theo tiêu chí quyết định (mỗi ô có nguồn).
-5. Vấn đề còn mở: thông tin thiếu, giả định đang dùng, rủi ro chưa lượng hóa.
-6. Bảng vấn đề cần quyết định: câu hỏi | phương án | khuyến nghị trung lập + căn cứ.
-7. Phụ lục: danh mục nguồn tài liệu.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Brief đầy đủ 7 phần theo Cấu trúc output chuẩn: tiêu đề + vấn đề 1 câu + thời hạn; bối cảnh (3–5 dòng); số liệu chính; bảng so sánh phương án; vấn đề còn mở; bảng vấn đề cần quyết định; phụ lục danh mục nguồn.
+- [ ] Brief đầy đủ 7 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: tiêu đề + vấn đề 1 câu + thời hạn; bối cảnh (3–5 dòng); số liệu chính; bảng so sánh phương án; vấn đề còn mở; bảng vấn đề cần quyết định; phụ lục danh mục nguồn.
 - [ ] Brief không quá 2 trang; chi tiết đầy đủ để ở phụ lục nguồn, không nhồi vào brief.
 - [ ] Mọi số liệu khớp với Input; mỗi số ghi rõ nguồn; ô không có số liệu ghi "chưa có số liệu", không bịa.
 - [ ] Khuyến nghị trung lập: trình bày cân bằng các phương án, luôn kèm căn cứ; không thiên vị phương án nào.
@@ -129,38 +121,6 @@ flowchart TD
 - [ ] Đã qua Human gate: thư ký/văn phòng lãnh đạo đã kiểm tra nguồn trích dẫn đầy đủ, chính xác, không sót nguồn quan trọng.
 
 > Tiêu chí đạt: tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**.
-> Ví dụ: Ban Giám hiệu cần quyết định có đầu tư phòng lab AI mới không.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `van_de` | Có đầu tư xây dựng Phòng Lab AI dùng chung năm 2027 không? |
-| `nguon_tai_lieu` | Tờ trình của Khoa CNTT (đề xuất 8 tỷ đồng); Báo cáo khảo sát nhu cầu (72% giảng viên ủng hộ); Báo cáo tài chính (ngân sách còn 12 tỷ); Biên bản họp Hội đồng KH&ĐT (ý kiến chia rẽ) |
-| `tieu_chi_quyet_dinh` | Chi phí; nhu cầu sử dụng thực; khả năng huy động thêm nguồn; rủi ro công nghệ lạc hậu |
-| `thoi_han_quyet_dinh` | Trước 30/11/2026 (để kịp kế hoạch năm) |
-
-### Output mẫu
-
-**EXECUTIVE BRIEF — Có đầu tư xây dựng Phòng Lab AI dùng chung năm 2027 không?** (thời hạn quyết định: trước 30/11/2026)
-
-1. **Bối cảnh:** Khoa CNTT đề xuất đầu tư 8 tỷ đồng xây phòng lab AI dùng chung phục vụ đào tạo và nghiên cứu; Hội đồng KH&ĐT chưa thống nhất (7/13 phiếu thuận).
-2. **Số liệu chính:** 72% giảng viên được khảo sát ủng hộ (n=180) *(nguồn: Báo cáo khảo sát nhu cầu)*; ngân sách đầu tư 2027 còn 12 tỷ *(nguồn: Báo cáo tài chính)*; đề xuất 8 tỷ *(nguồn: Tờ trình Khoa CNTT)*.
-3. **So sánh phương án:**
-| Tiêu chí | PA1: Đầu tư ngay 8 tỷ | PA2: Thuê dịch vụ cloud 2 tỷ/năm | PA3: Hoãn sang 2028 |
-|---|---|---|---|
-| Chi phí | 8 tỷ một lần | 2 tỷ/năm | 0 (năm nay) |
-| Rủi ro lạc hậu | Cao (thiết bị 3–5 năm) | Thấp | — |
-4. **Vấn đề còn mở:** chưa có khảo sát nhu cầu sinh viên; chưa có báo giá chi tiết thiết bị; chưa lượng hóa được chi phí vận hành PA1.
-5. **Bảng vấn đề cần quyết định:**
-| # | Câu hỏi quyết định | Phương án | Khuyến nghị (trung lập, kèm căn cứ) |
-|---|---|---|---|
-| 1 | Có đầu tư lab năm 2027? | Đầu tư / Thuê cloud / Hoãn | Cân nhắc PA2 nếu ưu tiên linh hoạt chi phí (căn cứ: rủi ro lạc hậu thiết bị, Hội đồng chưa đồng thuận) |
-6. **Phụ lục nguồn:** Tờ trình Khoa CNTT; Báo cáo khảo sát nhu cầu (n=180); Báo cáo tài chính; Biên bản họp Hội đồng KH&ĐT.
 
 ## Human gate (người kiểm duyệt)
 1. **Thư ký/văn phòng lãnh đạo**: kiểm tra nguồn trích dẫn trong brief có đầy đủ, chính xác;
@@ -180,10 +140,10 @@ flowchart TD
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/executive-brief-trinh-lanh-dao`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/executive-brief-trinh-lanh-dao`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

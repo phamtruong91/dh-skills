@@ -5,16 +5,18 @@ description: "Soạn hồ sơ đề nghị công nhận sáng kiến kinh nghi�
 
 # Hồ sơ đề nghị công nhận sáng kiến kinh nghiệm
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cán bộ, giảng viên, nhân viên trường đại học đăng ký công nhận sáng kiến kinh nghiệm:
@@ -93,32 +95,11 @@ flowchart TD
     E --> OUT[["Bộ hồ sơ đề nghị công nhận"]]
 ```
 
-## Đầu ra (Output)
-- Đơn đề nghị công nhận sáng kiến (mẫu hoàn chỉnh).
-- Bản mô tả sáng kiến (thực trạng – giải pháp – hiệu quả áp dụng).
-- Mẫu ý kiến nhận xét của đơn vị.
-- Checklist hồ sơ + đối chiếu nhanh các tiêu chí công nhận.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung cố định của bộ hồ sơ (3 văn bản), các phần bắt buộc theo đúng thứ tự xuất hiện:
-- Văn bản 1 – Đơn đề nghị công nhận sáng kiến:
-  1. Quốc hiệu – Tiêu ngữ
-  2. Tiêu đề "ĐƠN ĐỀ NGHỊ CÔNG NHẬN SÁNG KIẾN KINH NGHIỆM" + Kính gửi Hội đồng sáng kiến
-  3. Thông tin tác giả (họ tên, chức danh, đơn vị)
-  4. Tên sáng kiến, lĩnh vực áp dụng, thời gian áp dụng, cấp công nhận đề nghị
-  5. Lời cam kết (do tác giả thực hiện, chưa được công nhận ở cấp này, nội dung trung thực)
-  6. Địa danh, ngày tháng năm + chữ ký người đề nghị (ghi rõ họ tên)
-- Văn bản 2 – Bản mô tả sáng kiến:
-  1. Tiêu đề "BẢN MÔ TẢ SÁNG KIẾN KINH NGHIỆM" + tên sáng kiến, tác giả
-  2. Phần I. Thực trạng (vấn đề, nguyên nhân, hậu quả, số liệu minh họa)
-  3. Phần II. Giải pháp (nội dung đổi mới, tính mới so với cách làm cũ, các bước triển khai)
-  4. Phần III. Hiệu quả áp dụng (số liệu so sánh trước–sau, phạm vi áp dụng, khả năng nhân rộng)
-- Văn bản 3 – Ý kiến của đơn vị:
-  1. Tiêu đề "Ý KIẾN CỦA ĐƠN VỊ"
-  2. Nhận xét về tính mới, tính hiệu quả, khả năng nhân rộng
-  3. Đề nghị mức công nhận
-  4. Chữ ký, đóng dấu của thủ trưởng đơn vị
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
 - [ ] Đủ cấu trúc 3 văn bản theo chuẩn: Đơn đề nghị 6 phần (Quốc hiệu – Tiêu ngữ → tiêu đề → thông tin tác giả → tên/lĩnh vực/thời gian/cấp công nhận → cam kết → chữ ký) + Bản mô tả (tiêu đề → phần I, II, III) + Ý kiến đơn vị 4 phần
 - [ ] Nội dung trong output khớp Input: tên sáng kiến, tác giả, lĩnh vực, thời gian áp dụng = `ten_sang_kien`, `tac_gia`, `linh_vuc`, `thoi_gian_ap_dung`
@@ -132,88 +113,6 @@ flowchart TD
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan
-> tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_sang_kien` | Ứng dụng bảng tương tác số trong đánh giá quá trình học phần Tin học đại cương |
-| `tac_gia` | ThS. Đỗ Thị A – Giảng viên Khoa Công nghệ thông tin |
-| `linh_vuc` | Đổi mới phương pháp dạy – học và kiểm tra đánh giá |
-| `thuc_trang` | Đánh giá quá trình chủ yếu bằng bài kiểm tra giấy, sinh viên thụ động, tỷ lệ đạt loại Giỏi chỉ 18%, thời gian chấm bài trung bình 5 ngày/lớp |
-| `giai_phap` | Thiết kế bộ câu hỏi tương tác trên bảng số, sinh viên trả lời trực tiếp bằng thiết bị cá nhân; kết quả tổng hợp tự động, giảng viên phản hồi ngay trong giờ học |
-| `thoi_gian_ap_dung` | Học kỳ 1 năm học 2025–2026, 4 lớp Tin học đại cương (khoảng 180 sinh viên) |
-| `hieu_qua` | Tỷ lệ đạt loại Giỏi tăng từ 18% lên 34%; thời gian có kết quả đánh giá rút từ 5 ngày xuống ngay trong buổi học; 92% sinh viên khảo sát hài lòng |
-| `cap_cong_nhan` | Cấp Trường |
-
-### Output mẫu
-
-```
-CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-Độc lập – Tự do – Hạnh phúc
-
-ĐƠN ĐỀ NGHỊ CÔNG NHẬN SÁNG KIẾN KINH NGHIỆM
-
-Kính gửi: Hội đồng sáng kiến Trường Đại học A
-
-Tôi tên là: Đỗ Thị A
-Chức danh, đơn vị: Giảng viên – Khoa Công nghệ thông tin
-Đề nghị công nhận sáng kiến kinh nghiệm cấp Trường năm học 2025–2026:
-
-Tên sáng kiến: Ứng dụng bảng tương tác số trong đánh giá quá trình
-học phần Tin học đại cương
-Lĩnh vực áp dụng: Đổi mới phương pháp dạy – học và kiểm tra đánh giá
-Thời gian áp dụng: Học kỳ 1, năm học 2025–2026 (4 lớp, khoảng 180 sinh viên)
-
-Tôi cam kết sáng kiến do tôi nghiên cứu, triển khai; chưa được công nhận
-ở cấp đăng ký; nội dung trung thực.
-
-Thành phố C, ngày 09 tháng 10 năm 2026
-Người đề nghị
-(ký, ghi rõ họ tên)
-Đỗ Thị A
-
-BẢN MÔ TẢ SÁNG KIẾN KINH NGHIỆM
-
-I. THỰC TRẠNG
-Đánh giá quá trình học phần Tin học đại cương trước đây chủ yếu bằng bài kiểm
-tra trên giấy. Sinh viên thụ động, ít tương tác trong giờ học; tỷ lệ đạt loại
-Giỏi chỉ 18%; giảng viên mất trung bình 5 ngày/lớp để chấm và trả kết quả,
-phản hồi đến sinh viên chậm, kém hiệu quả điều chỉnh phương pháp học.
-
-II. GIẢI PHÁP
-Thiết kế bộ câu hỏi tương tác gắn với từng chủ đề bài học, trình chiếu trên
-bảng tương tác số; sinh viên trả lời trực tiếp bằng thiết bị cá nhân. Hệ thống
-tổng hợp kết quả tự động theo thời gian thực, giảng viên nắm ngay mức độ hiểu
-bài của lớp và điều chỉnh giảng dạy ngay trong buổi học. Điểm mới so với cách
-làm cũ: chuyển từ kiểm tra giấy một chiều sang đánh giá tương tác hai chiều,
-phản hồi tức thì.
-
-III. HIỆU QUẢ ÁP DỤNG
-Áp dụng thử học kỳ 1 năm học 2025–2026 tại 4 lớp (khoảng 180 sinh viên):
-- Tỷ lệ sinh viên đạt loại Giỏi tăng từ 18% lên 34%;
-- Thời gian có kết quả đánh giá rút từ 5 ngày xuống ngay trong buổi học;
-- 92% sinh viên được khảo sát hài lòng với hình thức đánh giá mới.
-Giải pháp có thể nhân rộng cho các học phần lý thuyết khác trong trường.
-
-Ý KIẾN CỦA ĐƠN VỊ
-Khoa Công nghệ thông tin nhận xét: sáng kiến có tính mới, đã được áp dụng thử
-có hiệu quả rõ rệt, phù hợp nhân rộng. Đề nghị Hội đồng xem xét công nhận
-sáng kiến cấp Trường.
-(Ký tên, đóng dấu)
-```
-
-### Checklist hồ sơ (output kèm theo)
-- [x] Đơn đề nghị công nhận sáng kiến (có chữ ký tác giả)
-- [x] Bản mô tả sáng kiến (đủ 3 phần: thực trạng – giải pháp – hiệu quả)
-- [x] Ý kiến nhận xét của đơn vị (chờ thủ trưởng ký)
-- [x] Minh chứng kèm theo: bảng tổng hợp điểm, kết quả khảo sát sinh viên
-- [x] Đối chiếu tiêu chí: tính mới (có) / đã áp dụng thử (có) / hiệu quả (có số liệu) / khả năng nhân rộng (có)
-
 ## Căn cứ & lưu ý
 - Nghị định 13/2012/NĐ-CP về sáng kiến và các văn bản hướng dẫn công nhận
   sáng kiến của Trường Đại học A.
@@ -223,10 +122,10 @@ sáng kiến cấp Trường.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-cong-nhan-sang-kien`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ho-so-cong-nhan-sang-kien`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

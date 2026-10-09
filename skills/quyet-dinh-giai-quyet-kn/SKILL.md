@@ -5,16 +5,18 @@ description: "Soạn quyết định giải quyết khiếu nại / tố cáo tr
 
 # Soạn quyết định giải quyết khiếu nại / tố cáo
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi cần ban hành quyết định giải quyết khiếu nại lần đầu hoặc kết luận nội dung tố cáo
@@ -102,24 +104,13 @@ flowchart TD
 ```
 ```
 
-## Đầu ra (Output)
-- Quyết định giải quyết khiếu nại / kết luận nội dung tố cáo hoàn chỉnh (markdown).
-- Tóm tắt kết quả: khiếu nại đúng/sai mức nào, biện pháp khắc phục, thời hạn thực hiện.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** Quyết định giải quyết khiếu nại (lần đầu) gồm các phần bắt buộc theo đúng thứ tự sau:
-1. Phần đầu: quốc hiệu – tiêu ngữ, số/ký hiệu, địa danh – ngày tháng, tên văn bản "QUYẾT ĐỊNH" + trích yếu (về việc giải quyết khiếu nại của ... (lần đầu)).
-2. Phần căn cứ: luật, nghị định, quy chế nội bộ; "Xét đề nghị của ...".
-3. Điều 1. Tóm tắt nội dung khiếu nại/tố cáo.
-4. Điều 2. Quá trình xác minh.
-5. Điều 3. Căn cứ giải quyết.
-6. Điều 4. Nội dung quyết định (công nhận/bác; giữ nguyên/sửa đổi/hủy bỏ; biện pháp khắc phục; xử lý trách nhiệm nếu có).
-7. Điều 5. Quyền khiếu nại tiếp / khởi kiện (thời hạn, cơ quan tiếp nhận).
-8. Điều 6. Hiệu lực thi hành (ngày hiệu lực, trách nhiệm thi hành).
-9. Phần cuối: nơi nhận, chữ ký Hiệu trưởng.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Phần đầu; Phần căn cứ; Điều 1. Tóm tắt nội dung khiếu nại/tố cáo.; Điều 2. Quá trình xác minh.; Điều 3. Căn cứ giải quyết.; Điều 4. Nội dung quyết định (công nhận/bác;…; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Quyết định giải quyết khiếu nại / kết luận nội dung tố cáo hoàn chỉnh (markdown)
 - [ ] Có đầy đủ sản phẩm: Tóm tắt kết quả: khiếu nại đúng/sai mức nào, biện pháp khắc phục, thời hạn thực hiện
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -132,93 +123,6 @@ flowchart TD
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `loai_don` | Khiếu nại |
-| `nguoi_kn_tc` | ThS. Vũ Thị A, giảng viên Khoa Kinh tế, Trường Đại học A |
-| `tom_tat_don` | Khiếu nại Quyết định số 118/QĐ-ĐHA-TCCB ngày 20/01/2026 xếp loại viên chức năm 2025 là "Hoàn thành nhiệm vụ"; đề nghị điều chỉnh thành "Hoàn thành xuất sắc nhiệm vụ" |
-| `quyet_dinh_bi_kn` | Quyết định số 118/QĐ-ĐHA-TCCB ngày 20/01/2026 của Hiệu trưởng về xếp loại viên chức năm 2025 |
-| `qua_trinh_xac_minh` | Thụ lý ngày 05/02/2026; tổ xác minh làm việc với bà Lan, Phòng TCCB, Khoa Kinh tế; đối chiếu hồ sơ NCKH; phát hiện thiếu 02 bài báo đã công bố khi tính điểm tiêu chí NCKH |
-| `can_cu_phap_ly` | Luật Khiếu nại 2011; Nghị định 124/2020/NĐ-CP; Quy định đánh giá, xếp loại viên chức của Trường |
-| `noi_dung_quyet_dinh` | Công nhận một phần khiếu nại; sửa đổi Quyết định 118/QĐ-ĐHA-TCCB, điều chỉnh xếp loại thành "Hoàn thành xuất sắc nhiệm vụ" |
-| `quyen_kn_tiep` | Khiếu nại lần hai đến cơ quan cấp trên trực tiếp hoặc khởi kiện vụ án hành chính tại Tòa án |
-
-### Output mẫu
-
-```
-TRƯỜNG ĐẠI HỌC A            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-                                                   Độc lập – Tự do – Hạnh phúc
-      Số: 24/QĐ-ĐHA
-                                                 Thành phố C, ngày 10 tháng 3 năm 2026
-
-QUYẾT ĐỊNH
-Về việc giải quyết khiếu nại của bà Vũ Thị A
-(lần đầu)
-
-HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A
-
-Căn cứ Luật Khiếu nại năm 2011;
-Căn cứ Nghị định số 124/2020/NĐ-CP ngày 19/10/2020 của Chính phủ quy định chi tiết
-một số điều và biện pháp thi hành Luật Khiếu nại;
-Căn cứ Quy chế tổ chức và hoạt động của Trường Đại học A;
-Xét đề nghị của Trưởng phòng Thanh tra & Pháp chế,
-
-QUYẾT ĐỊNH:
-
-Điều 1. Tóm tắt nội dung khiếu nại
-Bà Vũ Thị A, giảng viên Khoa Kinh tế, khiếu nại Quyết định số 118/QĐ-ĐHA-TCCB
-ngày 20/01/2026 của Hiệu trưởng về việc xếp loại viên chức năm 2025 của bà là
-"Hoàn thành nhiệm vụ"; đề nghị điều chỉnh xếp loại thành "Hoàn thành xuất sắc
-nhiệm vụ".
-
-Điều 2. Quá trình xác minh
-Ngày 05/02/2026, Nhà trường thụ lý đơn khiếu nại của bà Vũ Thị A và thành
-lập Tổ xác minh. Tổ xác minh đã làm việc với bà Lan, Phòng Tổ chức cán bộ, Ban
-Chủ nhiệm Khoa Kinh tế; đối chiếu hồ sơ nghiên cứu khoa học của bà Lan với bảng
-tổng hợp điểm đánh giá. Kết quả xác minh: khi tính điểm tiêu chí nghiên cứu khoa
-học, Phòng Tổ chức cán bộ đã bỏ sót 02 bài báo khoa học của bà Lan đã được công
-bố trên tạp chí trong năm 2025.
-
-Điều 3. Căn cứ giải quyết
-Luật Khiếu nại năm 2011; Nghị định số 124/2020/NĐ-CP; Quy định đánh giá, xếp loại
-viên chức của Trường Đại học A và kết quả xác minh nêu tại Điều 2.
-
-Điều 4. Nội dung quyết định
-1. Công nhận một phần khiếu nại của bà Vũ Thị A.
-2. Sửa đổi Quyết định số 118/QĐ-ĐHA-TCCB ngày 20/01/2026: điều chỉnh kết quả xếp
-loại viên chức năm 2025 của bà Vũ Thị A từ "Hoàn thành nhiệm vụ" thành
-"Hoàn thành xuất sắc nhiệm vụ".
-3. Yêu cầu Phòng Tổ chức cán bộ rút kinh nghiệm, rà soát quy trình tổng hợp điểm
-đánh giá viên chức, không để xảy ra sai sót tương tự.
-
-Điều 5. Quyền khiếu nại tiếp
-Trong thời hạn 30 ngày kể từ ngày nhận được Quyết định này, nếu không đồng ý,
-bà Vũ Thị A có quyền khiếu nại lần hai đến cơ quan cấp trên trực tiếp của
-Nhà trường hoặc khởi kiện vụ án hành chính tại Tòa án theo quy định của pháp luật.
-
-Điều 6. Hiệu lực thi hành
-Quyết định này có hiệu lực kể từ ngày ký. Trưởng phòng Thanh tra & Pháp chế,
-Trưởng phòng Tổ chức cán bộ, Trưởng Khoa Kinh tế, bà Vũ Thị A và các đơn
-vị, cá nhân liên quan chịu trách nhiệm thi hành Quyết định này./.
-
-Nơi nhận:                                           HIỆU TRƯỞNG
-- Như Điều 6;
-- Lưu: VT, TTPC, TCCB.                                  [CHỜ KÝ]
-
-                                                 PGS.TS. Trần Văn B
-```
-
-### Tóm tắt kết quả (output kèm theo)
-- Khiếu nại: **đúng một phần** (có sai sót khi tính điểm tiêu chí NCKH).
-- Biện pháp: sửa đổi quyết định, điều chỉnh xếp loại thành "Hoàn thành xuất sắc nhiệm vụ".
-- Phòng TCCB rút kinh nghiệm, rà soát quy trình tổng hợp điểm.
-
 ## Căn cứ & lưu ý
 - Luật Khiếu nại 2011 (Luật số 02/2011/QH13); Nghị định 124/2020/NĐ-CP.
 - Luật Tố cáo 2018 (Luật số 25/2018/QH14); Nghị định 31/2019/NĐ-CP quy định chi tiết
@@ -230,10 +134,10 @@ khởi kiện để người khiếu nại thực hiện.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-giai-quyet-kn`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/quyet-dinh-giai-quyet-kn`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

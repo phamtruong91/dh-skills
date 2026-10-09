@@ -5,16 +5,18 @@ description: "Lập kế hoạch hoạt động báo chí của cơ quan báo ch
 
 # Kế hoạch hoạt động báo chí
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Đầu năm, cơ quan báo chí của trường (báo in, tạp chí nội bộ, bản tin điện tử) cần lập kế hoạch
@@ -112,24 +114,13 @@ flowchart TD
     A --> B --> C --> D --> E --> F --> HG --> O
 ```
 
-## Đầu ra (Output)
-- Kế hoạch hoạt động báo chí năm (markdown): lịch xuất bản, tuyến bài, phân công, kinh phí.
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch, các phần theo đúng thứ tự:
-1. Tiêu đề: tên ấn phẩm + "Kế hoạch hoạt động năm..." (căn giữa).
-2. I. Tôn chỉ, mục đích của ấn phẩm trong năm kế hoạch.
-3. II. Kế hoạch xuất bản: số kỳ/năm, ngày phát hành, hạn chốt bài từng kỳ
-   (đánh dấu số đặc biệt).
-4. III. Tuyến bài trọng tâm: theo quý/sự kiện — chuyên mục cố định + bài trọng tâm,
-   phân công phóng viên/cộng tác viên theo tuyến.
-5. IV. Phân công nhân sự: biên tập viên phụ trách mảng, cộng tác viên theo đầu mối,
-   quy trình duyệt bài.
-6. V. Kinh phí dự kiến: tổng mức và phân bổ (nhuận bút, in ấn – phát hành, khác).
-7. Chữ ký duyệt: Tổng biên tập; lãnh đạo trường (cơ quan chủ quản) phê duyệt.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ 7 phần theo "Cấu trúc output chuẩn": tiêu đề ấn phẩm + năm, I. Tôn chỉ mục đích, II. Kế hoạch xuất bản, III. Tuyến bài trọng tâm, IV. Phân công nhân sự, V. Kinh phí dự kiến, chữ ký duyệt.
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: tên ấn phẩm, năm, số kỳ/năm, chuyên mục, sự kiện trọng tâm, nhân sự.
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản kế hoạch; kế hoạch không vượt giấy phép hoạt động báo chí (loại hình, kỳ hạn, phạm vi phát hành).
@@ -140,43 +131,6 @@ flowchart TD
 - [ ] Hạn chốt bài trừ hao thời gian biên tập – chế bản – in ấn; số đặc biệt có lịch riêng dài hơn số thường.
 
 Tiêu chí đạt = tất cả các ô được đánh dấu.
-
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, ấn phẩm, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `ten_an_pham` | Bản tin A (bản in + điện tử) |
-| `nam_ke_hoach` | 2027 |
-| `ky_xuat_ban` | 12 kỳ/năm (mỗi tháng 01 kỳ, phát hành ngày 05) |
-| `chuyen_muc` | Tin hoạt động, Gương điển hình, Khoa học & Đào tạo, Sinh viên |
-| `su_kien_trong_tam` | Kỷ niệm 30 năm thành lập trường (11/2027); kiểm định cơ sở giáo dục (quý II) |
-| `nhan_su` | 01 Tổng biên tập, 03 biên tập viên, 10 cộng tác viên |
-
-### Output mẫu
-
-```
-BẢN TIN A — KẾ HOẠCH HOẠT ĐỘNG NĂM 2027
-
-I. TÔN CHỈ, MỤC ĐÍCH: tuyên truyền chủ trương, đường lối của Đảng và chính sách
-của Nhà nước trong giáo dục đại học; phản ánh hoạt động đào tạo, NCKH và đời sống
-CBVC, sinh viên Trường Đại học A.
-II. KẾ HOẠCH XUẤT BẢN: 12 kỳ/năm; phát hành ngày 05 hằng tháng; hạn chốt bài: 25 tháng trước.
-III. TUYẾN BÀI TRỌNG TÂM
-- Quý I: tuyển sinh 2027; gương SV nghiên cứu khoa học.
-- Quý II: đợt kiểm định cơ sở giáo dục; ngày Khoa học Việt Nam 18/5.
-- Quý III: khai giảng năm học mới; tân SV.
-- Quý IV (trọng điểm): kỷ niệm 30 năm thành lập trường — số đặc biệt 24 trang.
-IV. PHÂN CÔNG: mỗi biên tập viên phụ trách 01 mảng; cộng tác viên theo đầu mối khoa/phòng;
-quy trình duyệt bài: phóng viên → biên tập viên → Tổng biên tập.
-V. KINH PHÍ DỰ KIẾN: 240 triệu đồng (nhuận bút 40%, in ấn – phát hành 50%, còn lại 10%).
-
-Duyệt:                                          TỔNG BIÊN TẬP
-Lãnh đạo trường (cơ quan chủ quản) phê duyệt          [CHỜ KÝ]
-```
 
 ## Human gate
 - **Tổng biên tập** chịu trách nhiệm nội dung từng kỳ, duyệt tuyến bài và bản thảo cuối.
@@ -192,10 +146,10 @@ Lãnh đạo trường (cơ quan chủ quản) phê duyệt          [CHỜ KÝ]
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoat-dong-bao-chi`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-hoat-dong-bao-chi`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

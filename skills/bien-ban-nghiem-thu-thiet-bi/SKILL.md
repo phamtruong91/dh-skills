@@ -5,16 +5,18 @@ description: "Lập biên bản nghiệm thu, bàn giao trang thiết bị mua s
 
 # Lập biên bản nghiệm thu thiết bị
 
+## Quy cách đầu ra và thông tin thiếu
+
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
+
+
 ## Kiểm soát áp dụng và phê duyệt
 
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
 
 ## Giới hạn và human gate
 
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
-
-
-
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
 
 ## Khi nào dùng
 Khi thiết bị đã được giao, lắp đặt xong và cần nghiệm thu trước khi thanh toán;
@@ -114,27 +116,13 @@ flowchart TD
     HG --> K[["Biên bản nghiệm thu, bàn giao"]]
 ```
 
-## Đầu ra (Output)
-- Biên bản nghiệm thu, bàn giao thiết bị.
-- Bảng chi tiết thiết bị kèm số serial (phụ lục).
+## Đầu ra
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của biên bản nghiệm thu, các phần theo đúng
-thứ tự xuất hiện:
-1. Quốc hiệu – Tiêu ngữ;
-2. Tiêu đề biên bản;
-3. Căn cứ (hợp đồng mua sắm);
-4. Thời gian, địa điểm, thành phần hội đồng nghiệm thu;
-5. Phần I: Thiết bị nghiệm thu (danh mục thiết bị);
-6. Phần II: Kết quả kiểm tra (số lượng, ngoại quan, chạy thử);
-7. Phần III: Kết luận nghiệm thu (nghiệm thu toàn bộ / nghiệm thu có điều kiện ghi rõ việc
-   khắc phục và thời hạn / từ chối nghiệm thu);
-8. Số bản biên bản;
-9. Chữ ký các thành viên hội đồng (ghi rõ họ tên, chức vụ);
-10. Phụ lục: Bảng chi tiết thiết bị kèm số serial.
+Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Checklist nghiệm thu
+## Kiểm tra nội bộ trước khi giao
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Quốc hiệu; Tiêu đề biên bản;; Căn cứ (hợp đồng mua sắm);; Thời gian, địa điểm, thành phần hội đồng…; Phần I; Phần II; …
+- [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Có đầy đủ sản phẩm: Biên bản nghiệm thu, bàn giao thiết bị
 - [ ] Có đầy đủ sản phẩm: Bảng chi tiết thiết bị kèm số serial (phụ lục)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
@@ -147,66 +135,6 @@ thứ tự xuất hiện:
 
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
 
-## Ví dụ mô phỏng (dữ liệu giả lập)
-
-> Tất cả tên trường, cá nhân, số liệu dưới đây đều là **giả lập**, không liên quan tổ chức/cá nhân có thật.
-
-### Input mẫu
-
-| Trường | Giá trị |
-|---|---|
-| `hop_dong` | Số 12/2026/HĐMB-ĐHA ngày 28/03/2026 giữa Trường Đại học A và Công ty TNHH D |
-| `danh_muc` | 40 bộ máy tính (CPU i5-13400, RAM 16GB, SSD 512GB, màn 24"); số serial SM26001–SM26040 |
-| `ket_qua_kiem_tra` | 40/40 bộ đúng chủng loại, ngoại quan tốt, khởi động và chạy thử phần mềm đạt yêu cầu |
-| `thanh_phan` | 1. Ông Vũ Văn C – Trưởng phòng QTTB (Chủ tịch HĐ). 2. Bà Đỗ Thị A – Khoa CNTT (đơn vị sử dụng). 3. Ông Đỗ Quang Huy – Đại diện nhà thầu. |
-| `thoi_gian_dia_diem` | 09h00 ngày 25/04/2026, phòng Lab A2 |
-
-### Output mẫu
-
-```
-CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-Độc lập – Tự do – Hạnh phúc
-
-BIÊN BẢN NGHIỆM THU, BÀN GIAO THIẾT BỊ
-(Dữ liệu giả lập)
-
-Căn cứ Hợp đồng số 12/2026/HĐMB-ĐHA ngày 28/03/2026 giữa Trường Đại học A
-và Công ty TNHH D;
-
-Hôm nay, hồi 09 giờ 00 ngày 25 tháng 04 năm 2026, tại phòng Lab A2, Trường Đại
-học A, chúng tôi gồm:
-
-1. Ông Vũ Văn C – Trưởng phòng Quản trị – Thiết bị – Chủ tịch Hội đồng;
-2. Bà Đỗ Thị A – Đại diện Khoa Công nghệ thông tin (đơn vị sử dụng);
-3. Ông Đỗ Quang Huy – Đại diện Công ty TNHH D (nhà thầu).
-
-Cùng tiến hành nghiệm thu thiết bị thuộc hợp đồng nêu trên, với nội dung:
-
-I. THIẾT BỊ NGHIỆM THU
-40 bộ máy tính để bàn (CPU Intel Core i5-13400, RAM 16GB DDR4, SSD 512GB,
-màn hình 24" Full HD), số serial từ SM26001 đến SM26040 (chi tiết tại Phụ lục).
-
-II. KẾT QUẢ KIỂM TRA
-1. Số lượng: đủ 40/40 bộ, đúng chủng loại, model theo hợp đồng.
-2. Ngoại quan: nguyên đai, nguyên kiện, không móp méo, trầy xước.
-3. Chạy thử: 40/40 bộ khởi động bình thường, kiểm tra cấu hình đúng yêu cầu,
-   chạy thử phần mềm văn phòng và lập trình ổn định.
-
-III. KẾT LUẬN
-Hội đồng thống nhất nghiệm thu toàn bộ 40 bộ máy tính, đạt yêu cầu theo hợp
-đồng. Nhà thầu bàn giao cho Khoa Công nghệ thông tin đưa vào sử dụng; thời
-gian bảo hành 36 tháng kể từ ngày ký biên bản này.
-
-Biên bản lập thành 04 bản có giá trị như nhau.
-
-   CHỦ TỊCH HỘI ĐỒNG      ĐƠN VỊ SỬ DỤNG         ĐẠI DIỆN NHÀ THẦU
-       [CHỜ KÝ]                [CHỜ KÝ]                 [CHỜ KÝ]
-
-   Vũ Văn C           Đỗ Thị A           Đỗ Quang Huy
-
-PHỤ LỤC: Bảng chi tiết 40 bộ máy tính kèm số serial SM26001–SM26040.
-```
-
 ## Căn cứ & lưu ý
 - Hợp đồng mua sắm đã ký; HSMT và HSDT của nhà thầu trúng thầu.
 - Trường hợp nghiệm thu có điều kiện: ghi rõ nội dung phải khắc phục và thời hạn, nghiệm thu lại sau khắc phục.
@@ -214,10 +142,10 @@ PHỤ LỤC: Bảng chi tiết 40 bộ máy tính kèm số serial SM26001–SM2
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
-- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-ban-nghiem-thu-thiet-bi`; không tự gán SHA chưa tạo.
+- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-ban-nghiem-thu-thiet-bi`; không tự gán SHA chưa tạo.
 - Giấy phép: theo LICENSE của kho; bản quyền CES Global.
 - Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
 - Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
