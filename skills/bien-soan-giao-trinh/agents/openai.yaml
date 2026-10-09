@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Biên soạn giáo trình / bài giảng"
+  "short_description": "Hỗ trợ biên soạn giáo trình / bài giảng"
+  "default_prompt": "Hãy dùng $bien-soan-giao-trinh để hỗ trợ công việc: Biên soạn giáo trình / bài giảng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

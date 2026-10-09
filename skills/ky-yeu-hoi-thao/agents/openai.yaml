@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Biên tập kỷ yếu hội thảo khoa học"
+  "short_description": "Hỗ trợ biên tập kỷ yếu hội thảo khoa học"
+  "default_prompt": "Hãy dùng $ky-yeu-hoi-thao để hỗ trợ công việc: Biên tập kỷ yếu hội thảo khoa học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

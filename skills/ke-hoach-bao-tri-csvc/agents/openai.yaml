@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập kế hoạch bảo trì cơ sở vật chất"
+  "short_description": "Hỗ trợ lập kế hoạch bảo trì cơ sở vật chất"
+  "default_prompt": "Hãy dùng $ke-hoach-bao-tri-csvc để hỗ trợ công việc: Lập kế hoạch bảo trì cơ sở vật chất; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

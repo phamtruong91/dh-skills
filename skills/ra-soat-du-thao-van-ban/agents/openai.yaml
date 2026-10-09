@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Rà soát dự thảo văn bản"
+  "short_description": "Hỗ trợ rà soát dự thảo văn bản"
+  "default_prompt": "Hãy dùng $ra-soat-du-thao-van-ban để hỗ trợ công việc: Rà soát dự thảo văn bản; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

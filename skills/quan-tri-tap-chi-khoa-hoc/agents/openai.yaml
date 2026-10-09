@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quản trị tạp chí khoa học"
+  "short_description": "Hỗ trợ quản trị tạp chí khoa học"
+  "default_prompt": "Hãy dùng $quan-tri-tap-chi-khoa-hoc để hỗ trợ công việc: Quản trị tạp chí khoa học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

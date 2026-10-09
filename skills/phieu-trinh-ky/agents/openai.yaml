@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập phiếu trình ký"
+  "short_description": "Hỗ trợ lập phiếu trình ký"
+  "default_prompt": "Hãy dùng $phieu-trinh-ky để hỗ trợ công việc: Lập phiếu trình ký; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn hợp đồng mua sắm thiết bị"
+  "short_description": "Hỗ trợ soạn hợp đồng mua sắm thiết bị"
+  "default_prompt": "Hãy dùng $hop-dong-mua-sam để hỗ trợ công việc: Soạn hợp đồng mua sắm thiết bị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

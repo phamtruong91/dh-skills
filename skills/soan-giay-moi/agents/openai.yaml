@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn giấy mời"
+  "short_description": "Hỗ trợ soạn giấy mời cho trường đại học"
+  "default_prompt": "Hãy dùng $soan-giay-moi để hỗ trợ công việc: Soạn giấy mời; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

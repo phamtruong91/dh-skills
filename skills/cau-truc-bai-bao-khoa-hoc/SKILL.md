@@ -1,9 +1,20 @@
 ---
-name: cau-truc-bai-bao-khoa-hoc
-description: Hỗ trợ cấu trúc và hoàn thiện bài báo khoa học: tiêu đề, tóm tắt (abstract), từ khóa, đặt vấn đề, phương pháp, kết quả, thảo luận, kết luận, tài liệu tham khảo; kèm checklist kiểm tra trước khi gửi tạp chí. Dùng khi giảng viên, nghiên cứu sinh chuẩn bị bản thảo gửi tạp chí trong nước hoặc quốc tế.
+name: "cau-truc-bai-bao-khoa-hoc"
+description: "Hỗ trợ cấu trúc và hoàn thiện bài báo khoa học: tiêu đề, tóm tắt (abstract), từ khóa, đặt vấn đề, phương pháp, kết quả, thảo luận, kết luận, tài liệu tham khảo; kèm checklist kiểm tra trước khi gửi tạp chí. Dùng khi giảng viên, nghiên cứu sinh chuẩn bị bản thảo gửi tạp chí trong nước hoặc quốc tế."
 ---
 
-# Skill: Cấu trúc bài báo khoa học
+# Cấu trúc bài báo khoa học
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Khi giảng viên, nghiên cứu sinh, học viên cao học cần dàn ý và hoàn thiện bản thảo
@@ -203,3 +214,13 @@ DÀN Ý CHI TIẾT
 - Kiểm tra đạo văn/trùng lặp và xin ý kiến đồng tác giả trước khi nộp là
   trách nhiệm của nhóm tác giả.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/cau-truc-bai-bao-khoa-hoc`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

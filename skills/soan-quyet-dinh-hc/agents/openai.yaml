@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn quyết định hành chính"
+  "short_description": "Hỗ trợ soạn quyết định hành chính"
+  "default_prompt": "Hãy dùng $soan-quyet-dinh-hc để hỗ trợ công việc: Soạn quyết định hành chính; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

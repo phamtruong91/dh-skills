@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Content calendar truyền thông"
+  "short_description": "Hỗ trợ content calendar truyền thông"
+  "default_prompt": "Hãy dùng $content-calendar-truyen-thong để hỗ trợ công việc: Content calendar truyền thông; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

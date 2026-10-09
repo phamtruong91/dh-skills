@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo tổng kết công tác thi đua, khen thưởng"
+  "short_description": "Hỗ trợ báo cáo tổng kết công tác thi đua, khen thưởng"
+  "default_prompt": "Hãy dùng $bao-cao-thi-dua để hỗ trợ công việc: Báo cáo tổng kết công tác thi đua, khen thưởng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

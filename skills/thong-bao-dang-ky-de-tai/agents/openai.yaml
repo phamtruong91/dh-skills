@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Thông báo đăng ký đề tài NCKH các cấp"
+  "short_description": "Hỗ trợ thông báo đăng ký đề tài NCKH các cấp"
+  "default_prompt": "Hãy dùng $thong-bao-dang-ky-de-tai để hỗ trợ công việc: Thông báo đăng ký đề tài NCKH các cấp; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

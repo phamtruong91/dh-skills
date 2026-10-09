@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập ma trận đối sánh chuẩn đầu ra học phần – chương trình (CLO–PLO)"
+  "short_description": "Hỗ trợ lập ma trận đối sánh chuẩn đầu ra học phần – chương trình"
+  "default_prompt": "Hãy dùng $ma-tran-chuan-dau-ra để hỗ trợ công việc: Lập ma trận đối sánh chuẩn đầu ra học phần – chương trình (CLO–PLO); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

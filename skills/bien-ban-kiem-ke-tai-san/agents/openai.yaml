@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập biên bản kiểm kê tài sản"
+  "short_description": "Hỗ trợ lập biên bản kiểm kê tài sản"
+  "default_prompt": "Hãy dùng $bien-ban-kiem-ke-tai-san để hỗ trợ công việc: Lập biên bản kiểm kê tài sản; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

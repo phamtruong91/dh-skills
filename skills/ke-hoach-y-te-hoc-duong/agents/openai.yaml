@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn kế hoạch y tế học đường"
+  "short_description": "Hỗ trợ soạn kế hoạch y tế học đường"
+  "default_prompt": "Hãy dùng $ke-hoach-y-te-hoc-duong để hỗ trợ công việc: Soạn kế hoạch y tế học đường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

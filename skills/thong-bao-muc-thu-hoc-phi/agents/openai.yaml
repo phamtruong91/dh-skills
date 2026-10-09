@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn thông báo mức thu học phí / lệ phí"
+  "short_description": "Hỗ trợ soạn thông báo mức thu học phí / lệ phí"
+  "default_prompt": "Hãy dùng $thong-bao-muc-thu-hoc-phi để hỗ trợ công việc: Soạn thông báo mức thu học phí / lệ phí; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn hợp đồng làm việc / hợp đồng lao động"
+  "short_description": "Hỗ trợ soạn hợp đồng làm việc / hợp đồng lao động"
+  "default_prompt": "Hãy dùng $hop-dong-lam-viec để hỗ trợ công việc: Soạn hợp đồng làm việc / hợp đồng lao động; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

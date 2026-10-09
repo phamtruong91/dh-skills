@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn thông báo tuyển sinh theo phương thức"
+  "short_description": "Hỗ trợ soạn thông báo tuyển sinh theo phương thức"
+  "default_prompt": "Hãy dùng $thong-bao-tuyen-sinh để hỗ trợ công việc: Soạn thông báo tuyển sinh theo phương thức; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

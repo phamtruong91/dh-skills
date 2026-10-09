@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quản trị dự án (PMO)"
+  "short_description": "Hỗ trợ quản trị dự án (PMO)"
+  "default_prompt": "Hãy dùng $pmo-quan-tri-du-an để hỗ trợ công việc: Quản trị dự án (PMO); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

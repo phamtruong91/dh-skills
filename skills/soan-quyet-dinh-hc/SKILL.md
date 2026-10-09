@@ -1,9 +1,20 @@
 ---
-name: soan-quyet-dinh-hc
-description: Soạn quyết định hành chính của trường đại học đúng thể thức Nghị định 30/2020/NĐ-CP (thành lập tổ chức, ban hành văn bản, điều động, khen thưởng...). Dùng khi cần ban hành quyết định cá biệt của Hiệu trưởng / Hội đồng trường.
+name: "soan-quyet-dinh-hc"
+description: "Soạn quyết định hành chính của trường đại học đúng thể thức Nghị định 30/2020/NĐ-CP (thành lập tổ chức, ban hành văn bản, điều động, khen thưởng...). Dùng khi cần ban hành quyết định cá biệt của Hiệu trưởng / Hội đồng trường."
 ---
 
-# Skill: Soạn quyết định hành chính
+# Soạn quyết định hành chính
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Khi ban hành quyết định: thành lập / giải thể đơn vị, ban hành quy chế – quy định,
@@ -164,7 +175,7 @@ quốc tế, Tài chính – Kế toán; Trưởng các khoa và các thành vi�
 danh sách chịu trách nhiệm thi hành Quyết định này./.
 
 Nơi nhận:                                          HIỆU TRƯỞNG
-- Như Điều 4;                                         (đã ký)
+- Như Điều 4;                                         [CHỜ KÝ]
 - Lưu: VT, HCTH, KHCN.
 
                                               PGS.TS. Phạm Văn A
@@ -182,3 +193,13 @@ Nơi nhận:                                          HIỆU TRƯỞNG
 - Nghị định 30/2020/NĐ-CP về công tác văn thư.
 - Quyết định về tổ chức bộ máy, chiến lược thuộc thẩm quyền Hội đồng trường.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-quyet-dinh-hc`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

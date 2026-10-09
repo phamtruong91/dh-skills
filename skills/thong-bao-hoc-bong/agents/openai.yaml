@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn thông báo học bổng"
+  "short_description": "Hỗ trợ soạn thông báo học bổng"
+  "default_prompt": "Hãy dùng $thong-bao-hoc-bong để hỗ trợ công việc: Soạn thông báo học bổng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

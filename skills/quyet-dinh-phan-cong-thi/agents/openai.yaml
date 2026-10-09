@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quyết định phân công coi thi / chấm thi"
+  "short_description": "Hỗ trợ quyết định phân công coi thi / chấm thi"
+  "default_prompt": "Hãy dùng $quyet-dinh-phan-cong-thi để hỗ trợ công việc: Quyết định phân công coi thi / chấm thi; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

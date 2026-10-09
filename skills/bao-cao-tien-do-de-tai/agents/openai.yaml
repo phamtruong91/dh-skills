@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo tiến độ đề tài NCKH (6 tháng / năm)"
+  "short_description": "Hỗ trợ báo cáo tiến độ đề tài NCKH (6 tháng / năm)"
+  "default_prompt": "Hãy dùng $bao-cao-tien-do-de-tai để hỗ trợ công việc: Báo cáo tiến độ đề tài NCKH (6 tháng / năm); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

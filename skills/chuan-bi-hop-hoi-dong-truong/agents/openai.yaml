@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Chuẩn bị họp Hội đồng trường"
+  "short_description": "Hỗ trợ chuẩn bị họp Hội đồng trường"
+  "default_prompt": "Hãy dùng $chuan-bi-hop-hoi-dong-truong để hỗ trợ công việc: Chuẩn bị họp Hội đồng trường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn quyết định công nhận tốt nghiệp"
+  "short_description": "Hỗ trợ soạn quyết định công nhận tốt nghiệp"
+  "default_prompt": "Hãy dùng $quyet-dinh-tot-nghiep để hỗ trợ công việc: Soạn quyết định công nhận tốt nghiệp; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn báo cáo công tác chính trị"
+  "short_description": "Hỗ trợ soạn báo cáo công tác chính trị"
+  "default_prompt": "Hãy dùng $bao-cao-cong-tac-chinh-tri để hỗ trợ công việc: Soạn báo cáo công tác chính trị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

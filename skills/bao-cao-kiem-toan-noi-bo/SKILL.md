@@ -1,9 +1,20 @@
 ---
-name: bao-cao-kiem-toan-noi-bo
-description: Soạn báo cáo kết quả kiểm toán nội bộ của trường đại học: tổng hợp phát hiện, đánh giá rủi ro, kiến nghị khắc phục và theo dõi thực hiện. Dùng sau mỗi cuộc kiểm toán nội bộ để báo cáo lãnh đạo và gửi đơn vị được kiểm toán.
+name: "bao-cao-kiem-toan-noi-bo"
+description: "Soạn báo cáo kết quả kiểm toán nội bộ của trường đại học: tổng hợp phát hiện, đánh giá rủi ro, kiến nghị khắc phục và theo dõi thực hiện. Dùng sau mỗi cuộc kiểm toán nội bộ để báo cáo lãnh đạo và gửi đơn vị được kiểm toán."
 ---
 
-# Skill: Soạn báo cáo kiểm toán nội bộ
+# Soạn báo cáo kiểm toán nội bộ
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Sau khi kết thúc mỗi cuộc kiểm toán nội bộ, đoàn kiểm toán cần lập báo cáo kết quả để trình
@@ -181,7 +192,7 @@ V. THEO DÕI THỰC HIỆN
 Ban sẽ theo dõi việc thực hiện các kiến nghị và báo cáo Hiệu trưởng khi hết thời hạn.
 
 Nơi nhận:                                          TRƯỞNG ĐOÀN KIỂM TOÁN
-- Hiệu trưởng (để b/c);                                   (đã ký)
+- Hiệu trưởng (để b/c);                                   [CHỜ KÝ]
 - Phòng TCKT (để thực hiện);
 - Lưu: VT, TTPCKTNB.
                                                      Ông Trần Văn D
@@ -208,3 +219,13 @@ Phụ lục: Bảng theo dõi thực hiện kiến nghị
 - Quy chế kiểm toán nội bộ của trường (văn bản nội bộ).
 - Nghị định 05/2019/NĐ-CP về kiểm toán nội bộ (áp dụng tham khảo nguyên tắc).
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-kiem-toan-noi-bo`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

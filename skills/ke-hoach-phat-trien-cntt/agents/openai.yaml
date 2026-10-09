@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch phát triển CNTT"
+  "short_description": "Hỗ trợ kế hoạch phát triển CNTT"
+  "default_prompt": "Hãy dùng $ke-hoach-phat-trien-cntt để hỗ trợ công việc: Kế hoạch phát triển CNTT; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

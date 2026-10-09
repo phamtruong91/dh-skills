@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Chuẩn bị họp & theo dõi action"
+  "short_description": "Hỗ trợ chuẩn bị họp & theo dõi action"
+  "default_prompt": "Hãy dùng $chuan-bi-hop-va-action-tracker để hỗ trợ công việc: Chuẩn bị họp & theo dõi action; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

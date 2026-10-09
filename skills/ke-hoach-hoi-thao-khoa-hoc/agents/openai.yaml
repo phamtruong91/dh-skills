@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch tổ chức hội thảo khoa học"
+  "short_description": "Hỗ trợ kế hoạch tổ chức hội thảo khoa học"
+  "default_prompt": "Hãy dùng $ke-hoach-hoi-thao-khoa-hoc để hỗ trợ công việc: Kế hoạch tổ chức hội thảo khoa học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

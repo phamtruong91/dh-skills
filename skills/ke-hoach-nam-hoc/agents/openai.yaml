@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập kế hoạch năm học"
+  "short_description": "Hỗ trợ lập kế hoạch năm học"
+  "default_prompt": "Hãy dùng $ke-hoach-nam-hoc để hỗ trợ công việc: Lập kế hoạch năm học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

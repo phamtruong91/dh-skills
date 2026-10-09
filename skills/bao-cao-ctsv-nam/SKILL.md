@@ -1,9 +1,20 @@
 ---
-name: bao-cao-ctsv-nam
-description: Soạn báo cáo tổng kết công tác sinh viên năm học đầy đủ các mảng (học bổng, rèn luyện, ký túc xá, phong trào, hỗ trợ việc làm, y tế – bảo hiểm) kèm số liệu, đánh giá ưu/khuyết điểm và phương hướng năm sau. Dùng khi Phòng Công tác sinh viên lập báo cáo tổng kết năm học trình Ban Giám hiệu.
+name: "bao-cao-ctsv-nam"
+description: "Soạn báo cáo tổng kết công tác sinh viên năm học đầy đủ các mảng (học bổng, rèn luyện, ký túc xá, phong trào, hỗ trợ việc làm, y tế – bảo hiểm) kèm số liệu, đánh giá ưu/khuyết điểm và phương hướng năm sau. Dùng khi Phòng Công tác sinh viên lập báo cáo tổng kết năm học trình Ban Giám hiệu."
 ---
 
-# Skill: Soạn báo cáo công tác sinh viên năm học
+# Soạn báo cáo công tác sinh viên năm học
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Khi Phòng Công tác sinh viên cần soạn báo cáo tổng kết năm học: tổng hợp kết quả thực hiện các nhiệm vụ công tác sinh viên trong năm, đánh giá ưu điểm/khuyết điểm, đề xuất phương hướng năm học tiếp theo để trình Ban Giám hiệu và báo cáo cấp trên.
@@ -222,7 +233,7 @@ Trên đây là báo cáo tổng kết công tác sinh viên năm học 2025–2
 sinh viên, kính trình Ban Giám hiệu xem xét./.
 
 Nơi nhận:                                           TRƯỞNG PHÒNG
-- Ban Giám hiệu (báo cáo);                             (đã ký)
+- Ban Giám hiệu (báo cáo);                             [CHỜ KÝ]
 - Lưu: VT, CTSV.
 
                                              ThS. Đỗ Thị A
@@ -233,3 +244,13 @@ Nơi nhận:                                           TRƯỞNG PHÒNG
 - Báo cáo tổng kết năm học thực hiện theo hướng dẫn của Bộ Giáo dục và Đào tạo và quy chế công tác sinh viên của nhà trường (Thông tư 10/2016/TT-BGDĐT ban hành Quy chế công tác sinh viên đối với chương trình đào tạo đại học hệ chính quy).
 - Số liệu các mảng phải được đối chiếu, thống nhất với các đơn vị liên quan trước khi đưa vào báo cáo.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng; mọi số liệu trong ví dụ đều giả lập.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-ctsv-nam`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Hợp nhất báo cáo nhiều đơn vị"
+  "short_description": "Hỗ trợ hợp nhất báo cáo nhiều đơn vị"
+  "default_prompt": "Hãy dùng $hop-nhat-bao-cao-don-vi để hỗ trợ công việc: Hợp nhất báo cáo nhiều đơn vị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

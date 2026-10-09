@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn báo cáo tổng kết năm học toàn trường"
+  "short_description": "Hỗ trợ soạn báo cáo tổng kết năm học toàn trường"
+  "default_prompt": "Hãy dùng $bao-cao-tong-ket-nam-truong để hỗ trợ công việc: Soạn báo cáo tổng kết năm học toàn trường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

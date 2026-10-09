@@ -1,9 +1,20 @@
 ---
-name: soan-bien-ban-hop
-description: Soạn biên bản cuộc họp / hội nghị / hội đồng từ ghi chép, gồm thành phần, diễn biến và kết luận. Dùng cho giao ban, họp hội đồng, họp đơn vị.
+name: "soan-bien-ban-hop"
+description: "Soạn biên bản cuộc họp / hội nghị / hội đồng từ ghi chép, gồm thành phần, diễn biến và kết luận. Dùng cho giao ban, họp hội đồng, họp đơn vị."
 ---
 
-# Skill: Soạn biên bản cuộc họp
+# Soạn biên bản cuộc họp
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Sau mỗi cuộc họp, hội nghị, phiên họp hội đồng cần lập biên bản ghi nhận diễn biến và kết luận
@@ -53,7 +64,7 @@ làm căn cứ triển khai.
 - → Kết quả bước: Dự thảo phần kết luận với nhiệm vụ đã gắn đầu mối và thời hạn.
 
 **Bước 5. Hoàn thiện phần kết thúc và chữ ký**
-- Làm gì: Ghi dòng thời gian kết thúc cuộc họp ("Cuộc họp kết thúc lúc ... cùng ngày./."); bố trí khối chữ ký: bên trái "THƯ KÝ", bên phải "CHỦ TRÌ", họ tên người ký bên dưới (ghi "(đã ký)" ở bản trình ký).
+- Làm gì: Ghi dòng thời gian kết thúc cuộc họp ("Cuộc họp kết thúc lúc ... cùng ngày./."); bố trí khối chữ ký: bên trái "THƯ KÝ", bên phải "CHỦ TRÌ", họ tên người ký bên dưới (ghi "[CHỜ KÝ]" ở bản trình ký).
 - Dùng input: `thoi_gian`, `chu_tri`, `thu_ky`.
 - Vai trò: Chuyên viên Phòng HCTH (Trưởng phòng kiểm tra lại) · AI hỗ trợ: áp dụng góp ý, hoàn thiện bản thảo · ⏱ ~15–30 phút (ước tính)
 - Lưu ý nghiệp vụ: Giờ kết thúc phải khớp thực tế (không sớm hơn giờ bắt đầu đã ghi); biên bản hợp lệ cần chữ ký của cả chủ trì và thư ký.
@@ -166,7 +177,7 @@ chi tiết trước ngày 20/10/2026.
 Cuộc họp kết thúc lúc 10h00 cùng ngày./.
 
         THƯ KÝ                                     CHỦ TRÌ
-        (đã ký)                                     (đã ký)
+        [CHỜ KÝ]                                     [CHỜ KÝ]
 
    ThS. Vũ Văn B                        PGS.TS. Trần Văn B
 ```
@@ -174,3 +185,13 @@ Cuộc họp kết thúc lúc 10h00 cùng ngày./.
 ## Căn cứ & lưu ý
 - Biên bản phải khách quan, trung thực; kết luận ghi rõ đầu mối và thời hạn.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/soan-bien-ban-hop`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

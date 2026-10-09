@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn quy chế tổ chức và hoạt động của trường"
+  "short_description": "Hỗ trợ soạn quy chế tổ chức và hoạt động của trường"
+  "default_prompt": "Hãy dùng $quy-che-to-chuc-hoat-dong-truong để hỗ trợ công việc: Soạn quy chế tổ chức và hoạt động của trường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

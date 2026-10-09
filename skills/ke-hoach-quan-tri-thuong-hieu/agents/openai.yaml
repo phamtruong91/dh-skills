@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập kế hoạch quản trị thương hiệu"
+  "short_description": "Hỗ trợ lập kế hoạch quản trị thương hiệu"
+  "default_prompt": "Hãy dùng $ke-hoach-quan-tri-thuong-hieu để hỗ trợ công việc: Lập kế hoạch quản trị thương hiệu; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

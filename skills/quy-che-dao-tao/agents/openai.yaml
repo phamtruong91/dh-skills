@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn/sửa đổi quy chế đào tạo của trường"
+  "short_description": "Hỗ trợ soạn/sửa đổi quy chế đào tạo của trường"
+  "default_prompt": "Hãy dùng $quy-che-dao-tao để hỗ trợ công việc: Soạn/sửa đổi quy chế đào tạo của trường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

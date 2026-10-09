@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn báo cáo công tác y tế"
+  "short_description": "Hỗ trợ soạn báo cáo công tác y tế"
+  "default_prompt": "Hãy dùng $bao-cao-cong-tac-y-te để hỗ trợ công việc: Soạn báo cáo công tác y tế; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

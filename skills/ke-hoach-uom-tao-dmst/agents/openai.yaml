@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch ươm tạo ĐMST"
+  "short_description": "Hỗ trợ kế hoạch ươm tạo ĐMST"
+  "default_prompt": "Hãy dùng $ke-hoach-uom-tao-dmst để hỗ trợ công việc: Kế hoạch ươm tạo ĐMST; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

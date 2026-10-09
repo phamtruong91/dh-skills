@@ -1,3 +1,5 @@
+> Tư liệu thiết kế trước phiên bản 1.1.0. Các số lượng, mô hình quản trị và căn cứ pháp lý cũ không phải thông tin hiện hành. Đối chiếu README, skills-manifest.json và docs/CAP_NHAT_PHAP_LY.md trước áp dụng.
+
 # KHUNG PHÒNG BAN CHUẨN — Áp dụng chung cho mọi trường đại học Việt Nam
 
 > **Mục đích:** danh mục phòng ban tổng thể, chuẩn hóa để làm khung mẫu triển khai cho bất kỳ

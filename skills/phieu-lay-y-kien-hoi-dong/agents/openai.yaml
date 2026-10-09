@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Phiếu lấy ý kiến hội đồng"
+  "short_description": "Hỗ trợ phiếu lấy ý kiến hội đồng"
+  "default_prompt": "Hãy dùng $phieu-lay-y-kien-hoi-dong để hỗ trợ công việc: Phiếu lấy ý kiến hội đồng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

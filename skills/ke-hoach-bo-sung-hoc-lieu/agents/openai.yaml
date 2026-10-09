@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch bổ sung, số hóa học liệu"
+  "short_description": "Hỗ trợ kế hoạch bổ sung, số hóa học liệu"
+  "default_prompt": "Hãy dùng $ke-hoach-bo-sung-hoc-lieu để hỗ trợ công việc: Kế hoạch bổ sung, số hóa học liệu; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

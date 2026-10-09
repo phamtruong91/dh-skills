@@ -1,3 +1,5 @@
+> Tư liệu thiết kế trước phiên bản 1.1.0. Các số lượng, mô hình quản trị và căn cứ pháp lý cũ không phải thông tin hiện hành. Đối chiếu README, skills-manifest.json và docs/CAP_NHAT_PHAP_LY.md trước áp dụng.
+
 # Danh mục Skill triển khai cho các phòng ban trường Đại học Việt Nam
 
 > Tổng hợp từ khảo sát cơ cấu tổ chức và chức năng nhiệm vụ các trường ĐH công lập Việt Nam

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn đề án tuyển sinh hằng năm"
+  "short_description": "Hỗ trợ soạn đề án tuyển sinh hằng năm"
+  "default_prompt": "Hãy dùng $de-an-tuyen-sinh để hỗ trợ công việc: Soạn đề án tuyển sinh hằng năm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

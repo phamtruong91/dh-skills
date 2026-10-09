@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn quyết định giải quyết khiếu nại / tố cáo"
+  "short_description": "Hỗ trợ soạn quyết định giải quyết khiếu nại / tố cáo"
+  "default_prompt": "Hãy dùng $quyet-dinh-giai-quyet-kn để hỗ trợ công việc: Soạn quyết định giải quyết khiếu nại / tố cáo; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

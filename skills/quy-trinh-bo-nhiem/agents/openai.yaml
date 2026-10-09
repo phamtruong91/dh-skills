@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quy trình bổ nhiệm, bổ nhiệm lại, miễn nhiệm"
+  "short_description": "Hỗ trợ quy trình bổ nhiệm, bổ nhiệm lại, miễn nhiệm"
+  "default_prompt": "Hãy dùng $quy-trinh-bo-nhiem để hỗ trợ công việc: Quy trình bổ nhiệm, bổ nhiệm lại, miễn nhiệm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

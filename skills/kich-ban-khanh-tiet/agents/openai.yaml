@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Xây dựng kịch bản lễ tân, khánh tiết"
+  "short_description": "Hỗ trợ xây dựng kịch bản lễ tân, khánh tiết"
+  "default_prompt": "Hãy dùng $kich-ban-khanh-tiet để hỗ trợ công việc: Xây dựng kịch bản lễ tân, khánh tiết; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Xây dựng kịch bản tư vấn tuyển sinh & hướng nghiệp"
+  "short_description": "Hỗ trợ xây dựng kịch bản tư vấn tuyển sinh & hướng nghiệp"
+  "default_prompt": "Hãy dùng $kich-ban-tu-van-tuyen-sinh để hỗ trợ công việc: Xây dựng kịch bản tư vấn tuyển sinh & hướng nghiệp; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

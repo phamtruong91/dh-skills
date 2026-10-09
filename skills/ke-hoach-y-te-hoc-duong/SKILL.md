@@ -1,9 +1,20 @@
 ---
-name: ke-hoach-y-te-hoc-duong
-description: Soạn kế hoạch y tế học đường của Trạm Y tế trường đại học: chăm sóc sức khỏe ban đầu, khám sức khỏe định kỳ, phòng chống dịch bệnh, vệ sinh môi trường học đường. Dùng khi lập kế hoạch năm học hoặc kế hoạch đột xuất phòng dịch.
+name: "ke-hoach-y-te-hoc-duong"
+description: "Soạn kế hoạch y tế học đường của Trạm Y tế trường đại học: chăm sóc sức khỏe ban đầu, khám sức khỏe định kỳ, phòng chống dịch bệnh, vệ sinh môi trường học đường. Dùng khi lập kế hoạch năm học hoặc kế hoạch đột xuất phòng dịch."
 ---
 
-# Skill: Soạn kế hoạch y tế học đường
+# Soạn kế hoạch y tế học đường
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Khi Trạm Y tế lập kế hoạch công tác năm học (khám sức khỏe đầu năm, tiêm chủng, phòng chống dịch,
@@ -126,7 +137,7 @@ flowchart TD
    kinh phí từng việc.
 8. III. Tổ chức thực hiện: trách nhiệm của Trạm Y tế và các đơn vị phối hợp;
    tổng kinh phí và nguồn kinh phí.
-9. Chữ ký: Trưởng Trạm Y tế (kèm "(đã ký)" khi là bản mô phỏng).
+9. Chữ ký: Trưởng Trạm Y tế (kèm "[CHỜ KÝ]" khi là bản mô phỏng).
 10. Nơi nhận + nơi lưu hồ sơ.
 
 ## Checklist nghiệm thu
@@ -196,7 +207,7 @@ Trạm Y tế chịu trách nhiệm triển khai; các đơn vị phối hợp t
 Tổng kinh phí: 180 triệu đồng (từ nguồn chi thường xuyên).
 
 Nơi nhận:                                          TRƯỞNG TRẠM Y TẾ
-- Ban Giám hiệu (b/c);                                 (đã ký)
+- Ban Giám hiệu (b/c);                                 [CHỜ KÝ]
 - Các đơn vị phối hợp;
 - Lưu: VT, TYT.                                   BS. Hoàng Thị B
 ```
@@ -215,3 +226,13 @@ Nơi nhận:                                          TRƯỞNG TRẠM Y TẾ
 ## Căn cứ & lưu ý
 - Quy định về y tế trường học của Bộ Y tế và Bộ GD&ĐT; Luật Khám bệnh, chữa bệnh; Luật BHYT.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-y-te-hoc-duong`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

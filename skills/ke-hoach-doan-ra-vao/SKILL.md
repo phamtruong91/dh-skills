@@ -1,9 +1,20 @@
 ---
-name: ke-hoach-doan-ra-vao
-description: Lập kế hoạch đoàn ra (cán bộ đi công tác nước ngoài) và đoàn vào (đón tiếp đối tác quốc tế) cho trường đại học: mục đích, thành phần đoàn, chương trình chi tiết theo ngày, kinh phí dự kiến. Dùng khi chuẩn bị chuyến công tác quốc tế hoặc đón đoàn đối tác.
+name: "ke-hoach-doan-ra-vao"
+description: "Lập kế hoạch đoàn ra (cán bộ đi công tác nước ngoài) và đoàn vào (đón tiếp đối tác quốc tế) cho trường đại học: mục đích, thành phần đoàn, chương trình chi tiết theo ngày, kinh phí dự kiến. Dùng khi chuẩn bị chuyến công tác quốc tế hoặc đón đoàn đối tác."
 ---
 
-# Skill: Kế hoạch đoàn ra / đoàn vào
+# Kế hoạch đoàn ra / đoàn vào
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Khi cần lập kế hoạch cho **đoàn ra** (cán bộ, giảng viên của Trường đi công tác, học tập,
@@ -205,3 +216,13 @@ Phòng KHCN&HTQT phối hợp các đơn vị triển khai.
 - Đoàn ra đi nước ngoài phải có thư mời chính thức của đối tác và quyết định cử đi công tác của Hiệu trưởng.
 - Kinh phí đối ngoại thực hiện theo đúng dự toán được duyệt, thanh quyết toán đầy đủ chứng từ.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-doan-ra-vao`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

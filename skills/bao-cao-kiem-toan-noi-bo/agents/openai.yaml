@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn báo cáo kiểm toán nội bộ"
+  "short_description": "Hỗ trợ soạn báo cáo kiểm toán nội bộ"
+  "default_prompt": "Hãy dùng $bao-cao-kiem-toan-noi-bo để hỗ trợ công việc: Soạn báo cáo kiểm toán nội bộ; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

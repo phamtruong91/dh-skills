@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Trợ lý giảng dạy"
+  "short_description": "Hỗ trợ trợ lý giảng dạy cho trường đại học"
+  "default_prompt": "Hãy dùng $tro-ly-giang-day để hỗ trợ công việc: Trợ lý giảng dạy; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

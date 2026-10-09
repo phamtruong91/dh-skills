@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch cải tiến chất lượng"
+  "short_description": "Hỗ trợ kế hoạch cải tiến chất lượng"
+  "default_prompt": "Hãy dùng $ke-hoach-cai-tien-chat-luong để hỗ trợ công việc: Kế hoạch cải tiến chất lượng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

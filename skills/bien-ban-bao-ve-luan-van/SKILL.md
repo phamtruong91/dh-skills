@@ -1,9 +1,20 @@
 ---
-name: bien-ban-bao-ve-luan-van
-description: Lập biên bản buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ: ghi nhận thành phần hội đồng, diễn biến buổi bảo vệ, tổng hợp phiếu đánh giá và điểm, kết luận đạt/không đạt cùng yêu cầu chỉnh sửa. Dùng ngay sau khi kết thúc buổi bảo vệ để làm căn cứ ra quyết định công nhận tốt nghiệp.
+name: "bien-ban-bao-ve-luan-van"
+description: "Lập biên bản buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ: ghi nhận thành phần hội đồng, diễn biến buổi bảo vệ, tổng hợp phiếu đánh giá và điểm, kết luận đạt/không đạt cùng yêu cầu chỉnh sửa. Dùng ngay sau khi kết thúc buổi bảo vệ để làm căn cứ ra quyết định công nhận tốt nghiệp."
 ---
 
-# Skill: Biên bản bảo vệ luận văn / luận án
+# Biên bản bảo vệ luận văn / luận án
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Ngay sau khi kết thúc buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ: thư ký hội đồng tổng hợp
@@ -229,7 +240,7 @@ Biên bản được lập thành 03 bản có giá trị như nhau: 01 bản l�
 học viên, 01 bản lưu Phòng Đào tạo Sau đại học, 01 bản gửi người hướng dẫn.
 
         THƯ KÝ HỘI ĐỒNG                        CHỦ TỊCH HỘI ĐỒNG
-            (đã ký)                                  (đã ký)
+            [CHỜ KÝ]                                  [CHỜ KÝ]
 
        ThS. Đỗ Thị A                      GS.TS. Lê Văn D
 ```
@@ -241,3 +252,13 @@ học viên, 01 bản lưu Phòng Đào tạo Sau đại học, 01 bản gửi n
   Chủ tịch, Thư ký và ít nhất 01 phản biện; tiến sĩ: 5/7).
 - Phiếu đánh giá của từng thành viên là tài liệu đính kèm bắt buộc của biên bản.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bien-ban-bao-ve-luan-van`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

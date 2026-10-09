@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo tự đánh giá (kiểm định chất lượng)"
+  "short_description": "Hỗ trợ báo cáo tự đánh giá (kiểm định chất lượng)"
+  "default_prompt": "Hãy dùng $bao-cao-tu-danh-gia để hỗ trợ công việc: Báo cáo tự đánh giá (kiểm định chất lượng); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

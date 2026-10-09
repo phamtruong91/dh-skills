@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Tổ chức khóa bồi dưỡng ngắn hạn"
+  "short_description": "Hỗ trợ tổ chức khóa bồi dưỡng ngắn hạn"
+  "default_prompt": "Hãy dùng $to-chuc-khoa-boi-duong-ngan-han để hỗ trợ công việc: Tổ chức khóa bồi dưỡng ngắn hạn; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Hồ sơ chuyển giao công nghệ"
+  "short_description": "Hỗ trợ hồ sơ chuyển giao công nghệ"
+  "default_prompt": "Hãy dùng $ho-so-chuyen-giao-cong-nghe để hỗ trợ công việc: Hồ sơ chuyển giao công nghệ; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

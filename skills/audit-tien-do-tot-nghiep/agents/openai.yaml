@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Audit tiến độ tốt nghiệp"
+  "short_description": "Hỗ trợ audit tiến độ tốt nghiệp"
+  "default_prompt": "Hãy dùng $audit-tien-do-tot-nghiep để hỗ trợ công việc: Audit tiến độ tốt nghiệp; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

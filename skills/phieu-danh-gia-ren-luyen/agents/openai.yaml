@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập phiếu đánh giá kết quả rèn luyện sinh viên + hướng dẫn chấm"
+  "short_description": "Hỗ trợ lập phiếu đánh giá kết quả rèn luyện sinh viên + hướng dẫ"
+  "default_prompt": "Hãy dùng $phieu-danh-gia-ren-luyen để hỗ trợ công việc: Lập phiếu đánh giá kết quả rèn luyện sinh viên + hướng dẫn chấm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

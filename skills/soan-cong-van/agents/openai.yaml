@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn công văn đi"
+  "short_description": "Hỗ trợ soạn công văn đi cho trường đại học"
+  "default_prompt": "Hãy dùng $soan-cong-van để hỗ trợ công việc: Soạn công văn đi; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

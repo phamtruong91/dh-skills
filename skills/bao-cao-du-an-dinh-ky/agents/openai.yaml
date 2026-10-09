@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo dự án định kỳ"
+  "short_description": "Hỗ trợ báo cáo dự án định kỳ"
+  "default_prompt": "Hãy dùng $bao-cao-du-an-dinh-ky để hỗ trợ công việc: Báo cáo dự án định kỳ; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch NCKH cấp khoa"
+  "short_description": "Hỗ trợ kế hoạch NCKH cấp khoa"
+  "default_prompt": "Hãy dùng $ke-hoach-nckh-khoa để hỗ trợ công việc: Kế hoạch NCKH cấp khoa; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

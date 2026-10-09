@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Xây dựng khung chương trình đào tạo"
+  "short_description": "Hỗ trợ xây dựng khung chương trình đào tạo"
+  "default_prompt": "Hãy dùng $khung-chuong-trinh-dao-tao để hỗ trợ công việc: Xây dựng khung chương trình đào tạo; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Biên bản bảo vệ luận văn / luận án"
+  "short_description": "Hỗ trợ biên bản bảo vệ luận văn / luận án"
+  "default_prompt": "Hãy dùng $bien-ban-bao-ve-luan-van để hỗ trợ công việc: Biên bản bảo vệ luận văn / luận án; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

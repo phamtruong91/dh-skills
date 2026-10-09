@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quyết định kết quả phúc khảo bài thi"
+  "short_description": "Hỗ trợ quyết định kết quả phúc khảo bài thi"
+  "default_prompt": "Hãy dùng $quyet-dinh-phuc-khao để hỗ trợ công việc: Quyết định kết quả phúc khảo bài thi; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập kế hoạch thanh tra nội bộ năm"
+  "short_description": "Hỗ trợ lập kế hoạch thanh tra nội bộ năm"
+  "default_prompt": "Hãy dùng $ke-hoach-thanh-tra-nam để hỗ trợ công việc: Lập kế hoạch thanh tra nội bộ năm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

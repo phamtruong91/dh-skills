@@ -1,0 +1,2542 @@
+{
+  "version": "1.1.0",
+  "updated_at": "2026-10-09",
+  "count": 171,
+  "skills": [
+    {
+      "name": "audit-tien-do-tot-nghiep",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bai-viet-truyen-thong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-3-cong-khai",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "cong-khai"
+      ]
+    },
+    {
+      "name": "bao-cao-chuyen-doi-so",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-cong-khai-tai-chinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "cong-khai",
+        "hoc-phi"
+      ]
+    },
+    {
+      "name": "bao-cao-cong-tac-chinh-tri",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-cong-tac-thu-vien",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-cong-tac-y-te",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-ctsv-nam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-danh-gia-vc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-1",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "bao-cao-dao-tao-dinh-ky",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "bao-cao-dao-tao-sdh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-dbcl-nam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so",
+        "kiem-dinh-ctdt"
+      ]
+    },
+    {
+      "name": "bao-cao-dich-vu-khcn",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-du-an-dinh-ky",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-giam-sat-du-an-dau-tu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-ket-qua-doan",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-ket-qua-tuyen-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "tuyen-sinh"
+      ]
+    },
+    {
+      "name": "bao-cao-khcn-nam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn"
+      ]
+    },
+    {
+      "name": "bao-cao-kiem-toan-noi-bo",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-nghiem-thu-de-tai",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn"
+      ]
+    },
+    {
+      "name": "bao-cao-quyet-toan",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "ke-toan",
+        "ngan-sach"
+      ]
+    },
+    {
+      "name": "bao-cao-tai-chinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "ke-toan"
+      ]
+    },
+    {
+      "name": "bao-cao-thi-dua",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-tien-do-de-tai",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn"
+      ]
+    },
+    {
+      "name": "bao-cao-tong-hop-phan-hieu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-tong-ket-khoa",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-tong-ket-nam-truong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-tong-ket-vp",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bao-cao-tu-danh-gia",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so",
+        "kiem-dinh-ctdt"
+      ]
+    },
+    {
+      "name": "bien-ban-bao-ve-luan-van",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bien-ban-hop-hoi-dong-khdt",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bien-ban-kiem-ke-tai-san",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "tai-san"
+      ]
+    },
+    {
+      "name": "bien-ban-nghiem-thu-thiet-bi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "bien-ban-phong-thi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "bien-soan-giao-trinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "shtt"
+      ]
+    },
+    {
+      "name": "bien-tap-xuat-ban-an-pham",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "campaign-brief-tuyen-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "cap-chung-chi-dao-tao-lien-tuc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "cau-truc-bai-bao-khoa-hoc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "checklist-chung-tu-thanh-toan",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "checklist-ho-so-gs-pgs",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "checklist-minh-chung-kiem-dinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so",
+        "kiem-dinh-ctdt"
+      ]
+    },
+    {
+      "name": "chuan-bi-hop-hoi-dong-truong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-2"
+      ]
+    },
+    {
+      "name": "chuan-bi-hop-va-action-tracker",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "content-calendar-truyen-thong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "de-an-mo-nganh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "chuong-trinh"
+      ]
+    },
+    {
+      "name": "de-an-tuyen-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "tuyen-sinh"
+      ]
+    },
+    {
+      "name": "de-an-vi-tri-viec-lam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "de-cuong-chi-tiet-hoc-phan",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao",
+        "chuong-trinh"
+      ]
+    },
+    {
+      "name": "dich-thuat-song-ngu-va-thuat-ngu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "dong-goi-skill-tu-quy-trinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "executive-brief-trinh-lanh-dao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "faq-chinh-sach-co-trich-nguon",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "faq-tuyen-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "funnel-theo-doi-thi-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "helpdesk-cntt-triage",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-chuyen-giao-cong-nghe",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn",
+        "shtt"
+      ]
+    },
+    {
+      "name": "ho-so-cong-nhan-sang-kien",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-dang-ky-shtt",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-de-nghi-khen-thuong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-du-an-dau-tu-ha-tang",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-hop-dong-dich-vu-khcn",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-moi-thau",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "mua-sam"
+      ]
+    },
+    {
+      "name": "ho-so-quan-ly-suc-khoe",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ho-so-quyet-toan-de-tai",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn"
+      ]
+    },
+    {
+      "name": "hop-dong-lam-viec",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-4",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "hop-dong-mua-sam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "mua-sam"
+      ]
+    },
+    {
+      "name": "hop-dong-thuc-hien-de-tai",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn"
+      ]
+    },
+    {
+      "name": "hop-nhat-bao-cao-don-vi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-bao-tri-csvc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-bo-sung-hoc-lieu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "shtt"
+      ]
+    },
+    {
+      "name": "ke-hoach-boi-duong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-cai-tien-chat-luong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so",
+        "kiem-dinh-ctdt"
+      ]
+    },
+    {
+      "name": "ke-hoach-dao-tao-lien-tuc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-dao-tao-sdh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-doan-ra-vao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-giao-duc-chinh-tri-tu-tuong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-hoat-dong-bao-chi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-hoat-dong-phan-hieu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-hoat-dong-trung-tam-thuc-hanh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-hoi-thao-khoa-hoc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-kiem-toan-noi-bo",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-mua-sam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "mua-sam",
+        "tai-san"
+      ]
+    },
+    {
+      "name": "ke-hoach-nam-hoc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "ke-hoach-nam-hoc-truong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-nckh-khoa",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-ngay-hoi-viec-lam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-phat-trien-cntt",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-quan-tri-thuong-hieu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-thanh-tra-nam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-tiep-nhan-quan-ly-noi-tru",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-to-chuc-su-kien",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-to-chuc-thi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "ke-hoach-truyen-thong-nam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-tuan-shcd",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-uom-tao-dmst",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-xuc-tien-dau-tu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ke-hoach-y-te-hoc-duong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ket-luan-thanh-tra",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "khao-sat-viec-lam-sv-tot-nghiep",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so"
+      ]
+    },
+    {
+      "name": "khung-chuong-trinh-dao-tao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "chuong-trinh"
+      ]
+    },
+    {
+      "name": "kich-ban-khanh-tiet",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "kich-ban-tu-van-tuyen-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "kich-ban-video-truyen-thong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "kiem-tra-day-du-ho-so",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "ky-yeu-hoi-thao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "lap-du-toan-nam",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "ngan-sach"
+      ]
+    },
+    {
+      "name": "lap-lich-cong-tac-tuan",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "lap-thoi-khoa-bieu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "ma-tran-chuan-dau-ra",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "chuong-trinh"
+      ]
+    },
+    {
+      "name": "nghi-quyet-hoi-dong-khdt",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "noi-quy-ky-tuc-xa",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "phan-cong-giang-day",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "phan-tich-chenh-lech-ngan-sach",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "phan-tich-ket-qua-khao-sat",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so",
+        "kiem-dinh-ctdt"
+      ]
+    },
+    {
+      "name": "phan-tich-ket-qua-thi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "phieu-danh-gia-ren-luyen",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "phieu-danh-gia-vien-chuc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-1",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "phieu-lay-y-kien-hoi-dong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "phieu-trinh-ky",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "pmo-quan-tri-du-an",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "press-kit-su-kien",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quan-ly-phien-ban-tai-lieu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quan-tri-tap-chi-khoa-hoc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quy-che-an-toan-thong-tin",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quy-che-dao-tao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "quy-che-to-chuc-hoat-dong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quy-che-to-chuc-hoat-dong-truong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-2"
+      ]
+    },
+    {
+      "name": "quy-trinh-bo-nhiem",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "quy-trinh-ngan-hang-de-thi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "quy-trinh-tuyen-dung",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "quyet-dinh-cap-hoc-bong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "hoc-phi"
+      ]
+    },
+    {
+      "name": "quyet-dinh-cu-di-hoc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quyet-dinh-dieu-dong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "quyet-dinh-giai-quyet-kn",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quyet-dinh-hoc-vu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "quyet-dinh-hoi-dong-bao-ve",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quyet-dinh-khen-thuong-kl",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quyet-dinh-ky-luat-sv",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "quyet-dinh-nang-luong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-1",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "quyet-dinh-phan-cong-thi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "quyet-dinh-phuc-khao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "quyet-dinh-tot-nghiep",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao",
+        "van-bang"
+      ]
+    },
+    {
+      "name": "ra-soat-du-thao-van-ban",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "dao-tao"
+      ]
+    },
+    {
+      "name": "so-lieu-3-cong-khai-dt",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "cong-khai"
+      ]
+    },
+    {
+      "name": "so-van-ban-di-den",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-bien-ban-hop",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-cong-van",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-giay-moi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-ke-hoach-ct",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-mou-moa",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-quyet-dinh-hc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-thong-bao",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "soan-to-trinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "tham-dinh-phap-ly-van-ban",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "theo-doi-grant-nghien-cuu",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "theo-doi-thay-doi-van-ban-phap-quy",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "thiet-ke-phieu-khao-sat",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "kiem-dinh-co-so",
+        "kiem-dinh-ctdt"
+      ]
+    },
+    {
+      "name": "thong-bao-dang-ky-de-tai",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "khcn"
+      ]
+    },
+    {
+      "name": "thong-bao-hoc-bong",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "thong-bao-muc-thu-hoc-phi",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "cong-khai",
+        "hoc-phi"
+      ]
+    },
+    {
+      "name": "thong-bao-tuyen-dung",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "nhan-su-0",
+        "nhan-su-3"
+      ]
+    },
+    {
+      "name": "thong-bao-tuyen-sinh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": [
+        "tuyen-sinh"
+      ]
+    },
+    {
+      "name": "thong-bao-tuyen-sinh-sdh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "thuyet-minh-de-tai-nckh",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "to-chuc-khoa-boi-duong-ngan-han",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "tong-hop-diem-ren-luyen",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "tong-quan-tai-lieu-khoa-hoc",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "triage-case-sinh-vien",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    },
+    {
+      "name": "tro-ly-giang-day",
+      "version": "1.1.0",
+      "updated_at": "2026-10-09",
+      "source_repository": "https://github.com/phamtruong91/dh-skills",
+      "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+      "maintainer": {
+        "github": "phamtruong91",
+        "name": "Phạm Văn Trường"
+      },
+      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "approval_owner": null,
+      "legal_updates": []
+    }
+  ]
+}

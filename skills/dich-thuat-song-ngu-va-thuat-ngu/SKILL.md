@@ -1,9 +1,20 @@
 ---
-name: dich-thuat-song-ngu-va-thuat-ngu
-description: Dịch Việt–Anh (và ngược lại) văn bản của trường, kiểm soát thuật ngữ theo glossary (kể cả danh sách không-dịch), đối chiếu số liệu/tên riêng giữa hai bản → bản song ngữ + issue list. Dùng chung cho MOU, thông báo tuyển sinh, văn bằng, website...
+name: "dich-thuat-song-ngu-va-thuat-ngu"
+description: "Dịch Việt–Anh (và ngược lại) văn bản của trường, kiểm soát thuật ngữ theo glossary (kể cả danh sách không-dịch), đối chiếu số liệu/tên riêng giữa hai bản → bản song ngữ + issue list. Dùng chung cho MOU, thông báo tuyển sinh, văn bằng, website..."
 ---
 
-# Skill: Dịch song ngữ & quản lý thuật ngữ
+# Dịch song ngữ & quản lý thuật ngữ
+
+## Kiểm soát áp dụng và phê duyệt
+
+Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Hồ sơ có yếu tố pháp lý phải kèm văn bản gốc, tình trạng hiệu lực, điều khoản áp dụng và chuyển tiếp.
+
+## Giới hạn và human gate
+
+AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Mọi đầu ra mặc định là **DỰ THẢO – CHỜ KIỂM DUYỆT**; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+
+
+
 
 ## Khi nào dùng
 Khi cần bản tiếng Anh (hoặc tiếng Việt) của văn bản trường học: MOU/MOA, thông báo tuyển sinh,
@@ -141,3 +152,13 @@ flowchart TD
 - Tên giao dịch quốc tế của trường (nếu đã đăng ký) là chuẩn duy nhất, không dịch theo nghĩa đen.
 - Glossary là tài sản dùng chung — cập nhật sau mỗi lần dịch để các lần sau nhất quán.
 - Mọi ví dụ đều giả lập; không dùng tên thật của trường/cá nhân.
+
+## Quản trị phiên bản
+
+- Phiên bản gói: `1.1.0`; ngày cập nhật: `2026-10-09`.
+- Kho nguồn: https://github.com/phamtruong91/dh-skills
+- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
+- Commit nguồn trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/dich-thuat-song-ngu-va-thuat-ngu`; không tự gán SHA chưa tạo.
+- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
+- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
+- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Hồ sơ đề nghị công nhận sáng kiến kinh nghiệm"
+  "short_description": "Hỗ trợ hồ sơ đề nghị công nhận sáng kiến kinh nghiệm"
+  "default_prompt": "Hãy dùng $ho-so-cong-nhan-sang-kien để hỗ trợ công việc: Hồ sơ đề nghị công nhận sáng kiến kinh nghiệm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

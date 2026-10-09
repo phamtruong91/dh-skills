@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch đoàn ra / đoàn vào"
+  "short_description": "Hỗ trợ kế hoạch đoàn ra / đoàn vào"
+  "default_prompt": "Hãy dùng $ke-hoach-doan-ra-vao để hỗ trợ công việc: Kế hoạch đoàn ra / đoàn vào; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

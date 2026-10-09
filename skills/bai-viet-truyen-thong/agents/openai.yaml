@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Bài viết truyền thông"
+  "short_description": "Hỗ trợ bài viết truyền thông"
+  "default_prompt": "Hãy dùng $bai-viet-truyen-thong để hỗ trợ công việc: Bài viết truyền thông; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

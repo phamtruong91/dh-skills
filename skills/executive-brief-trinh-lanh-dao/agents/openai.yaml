@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Executive brief trình lãnh đạo"
+  "short_description": "Hỗ trợ executive brief trình lãnh đạo"
+  "default_prompt": "Hãy dùng $executive-brief-trinh-lanh-dao để hỗ trợ công việc: Executive brief trình lãnh đạo; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

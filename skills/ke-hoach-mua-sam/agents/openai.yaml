@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập kế hoạch mua sắm trang thiết bị"
+  "short_description": "Hỗ trợ lập kế hoạch mua sắm trang thiết bị"
+  "default_prompt": "Hãy dùng $ke-hoach-mua-sam để hỗ trợ công việc: Lập kế hoạch mua sắm trang thiết bị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

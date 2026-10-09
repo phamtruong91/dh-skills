@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn biên bản ghi nhớ / thỏa thuận hợp tác (MOU/MOA) song ngữ Việt–Anh"
+  "short_description": "Hỗ trợ soạn biên bản ghi nhớ / thỏa thuận hợp tác (MOU/MOA) song"
+  "default_prompt": "Hãy dùng $soan-mou-moa để hỗ trợ công việc: Soạn biên bản ghi nhớ / thỏa thuận hợp tác (MOU/MOA) song ngữ Việt–Anh; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

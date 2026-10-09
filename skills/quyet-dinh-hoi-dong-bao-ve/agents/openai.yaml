@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quyết định thành lập hội đồng bảo vệ luận văn / luận án"
+  "short_description": "Hỗ trợ quyết định thành lập hội đồng bảo vệ luận văn / luận án"
+  "default_prompt": "Hãy dùng $quyet-dinh-hoi-dong-bao-ve để hỗ trợ công việc: Quyết định thành lập hội đồng bảo vệ luận văn / luận án; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

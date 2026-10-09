@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Biên bản họp Hội đồng KH&ĐT"
+  "short_description": "Hỗ trợ biên bản họp Hội đồng KH&ĐT"
+  "default_prompt": "Hãy dùng $bien-ban-hop-hoi-dong-khdt để hỗ trợ công việc: Biên bản họp Hội đồng KH&ĐT; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

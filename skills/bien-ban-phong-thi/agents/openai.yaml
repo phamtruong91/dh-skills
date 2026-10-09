@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Biên bản phòng thi & bàn giao bài thi"
+  "short_description": "Hỗ trợ biên bản phòng thi & bàn giao bài thi"
+  "default_prompt": "Hãy dùng $bien-ban-phong-thi để hỗ trợ công việc: Biên bản phòng thi & bàn giao bài thi; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

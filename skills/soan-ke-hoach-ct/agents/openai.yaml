@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn kế hoạch công tác"
+  "short_description": "Hỗ trợ soạn kế hoạch công tác"
+  "default_prompt": "Hãy dùng $soan-ke-hoach-ct để hỗ trợ công việc: Soạn kế hoạch công tác; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

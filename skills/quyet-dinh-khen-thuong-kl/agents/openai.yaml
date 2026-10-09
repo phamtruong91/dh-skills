@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Quyết định khen thưởng / kỷ luật viên chức"
+  "short_description": "Hỗ trợ quyết định khen thưởng / kỷ luật viên chức"
+  "default_prompt": "Hãy dùng $quyet-dinh-khen-thuong-kl để hỗ trợ công việc: Quyết định khen thưởng / kỷ luật viên chức; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

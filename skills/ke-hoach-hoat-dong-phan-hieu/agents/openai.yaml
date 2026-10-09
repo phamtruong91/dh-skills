@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn kế hoạch hoạt động phân hiệu"
+  "short_description": "Hỗ trợ soạn kế hoạch hoạt động phân hiệu"
+  "default_prompt": "Hãy dùng $ke-hoach-hoat-dong-phan-hieu để hỗ trợ công việc: Soạn kế hoạch hoạt động phân hiệu; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

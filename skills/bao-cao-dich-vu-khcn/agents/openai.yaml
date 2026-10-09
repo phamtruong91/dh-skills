@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo dịch vụ KHCN"
+  "short_description": "Hỗ trợ báo cáo dịch vụ KHCN"
+  "default_prompt": "Hãy dùng $bao-cao-dich-vu-khcn để hỗ trợ công việc: Báo cáo dịch vụ KHCN; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

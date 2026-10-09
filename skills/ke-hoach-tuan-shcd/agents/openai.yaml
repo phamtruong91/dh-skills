@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch Tuần sinh hoạt công dân"
+  "short_description": "Hỗ trợ kế hoạch Tuần sinh hoạt công dân"
+  "default_prompt": "Hãy dùng $ke-hoach-tuan-shcd để hỗ trợ công việc: Kế hoạch Tuần sinh hoạt công dân; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

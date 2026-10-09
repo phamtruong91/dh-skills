@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn kế hoạch giáo dục chính trị, tư tưởng"
+  "short_description": "Hỗ trợ soạn kế hoạch giáo dục chính trị, tư tưởng"
+  "default_prompt": "Hãy dùng $ke-hoach-giao-duc-chinh-tri-tu-tuong để hỗ trợ công việc: Soạn kế hoạch giáo dục chính trị, tư tưởng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

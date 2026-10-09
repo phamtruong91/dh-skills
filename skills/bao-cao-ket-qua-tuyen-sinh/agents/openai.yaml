@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo kết quả tuyển sinh gửi Bộ GD&ĐT"
+  "short_description": "Hỗ trợ báo cáo kết quả tuyển sinh gửi Bộ GD&ĐT"
+  "default_prompt": "Hãy dùng $bao-cao-ket-qua-tuyen-sinh để hỗ trợ công việc: Báo cáo kết quả tuyển sinh gửi Bộ GD&ĐT; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

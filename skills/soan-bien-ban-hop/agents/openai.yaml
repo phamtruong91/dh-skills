@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn biên bản cuộc họp"
+  "short_description": "Hỗ trợ soạn biên bản cuộc họp"
+  "default_prompt": "Hãy dùng $soan-bien-ban-hop để hỗ trợ công việc: Soạn biên bản cuộc họp; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

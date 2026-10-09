@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Hồ sơ quản lý sức khỏe"
+  "short_description": "Hỗ trợ hồ sơ quản lý sức khỏe"
+  "default_prompt": "Hãy dùng $ho-so-quan-ly-suc-khoe để hỗ trợ công việc: Hồ sơ quản lý sức khỏe; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

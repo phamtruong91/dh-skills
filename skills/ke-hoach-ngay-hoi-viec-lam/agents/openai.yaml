@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch Ngày hội việc làm"
+  "short_description": "Hỗ trợ kế hoạch Ngày hội việc làm"
+  "default_prompt": "Hãy dùng $ke-hoach-ngay-hoi-viec-lam để hỗ trợ công việc: Kế hoạch Ngày hội việc làm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

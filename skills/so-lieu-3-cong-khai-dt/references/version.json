@@ -1,0 +1,16 @@
+{
+  "name": "so-lieu-3-cong-khai-dt",
+  "version": "1.1.0",
+  "updated_at": "2026-10-09",
+  "source_repository": "https://github.com/phamtruong91/dh-skills",
+  "source_commit": "78fd1d51b8acd1a724d9b9af6c488460bc7551ad",
+  "maintainer": {
+    "github": "phamtruong91",
+    "name": "Phạm Văn Trường"
+  },
+  "legal_review_status": "requires-applicability-and-fulltext-check",
+  "approval_owner": null,
+  "legal_updates": [
+    "cong-khai"
+  ]
+}

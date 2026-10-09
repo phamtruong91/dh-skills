@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Báo cáo hiện trạng & kết quả chuyển đổi số"
+  "short_description": "Hỗ trợ báo cáo hiện trạng & kết quả chuyển đổi số"
+  "default_prompt": "Hãy dùng $bao-cao-chuyen-doi-so để hỗ trợ công việc: Báo cáo hiện trạng & kết quả chuyển đổi số; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

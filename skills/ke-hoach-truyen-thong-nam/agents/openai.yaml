@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch truyền thông năm"
+  "short_description": "Hỗ trợ kế hoạch truyền thông năm"
+  "default_prompt": "Hãy dùng $ke-hoach-truyen-thong-nam để hỗ trợ công việc: Kế hoạch truyền thông năm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

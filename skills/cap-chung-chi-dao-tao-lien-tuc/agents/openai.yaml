@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Cấp chứng chỉ đào tạo liên tục"
+  "short_description": "Hỗ trợ cấp chứng chỉ đào tạo liên tục"
+  "default_prompt": "Hãy dùng $cap-chung-chi-dao-tao-lien-tuc để hỗ trợ công việc: Cấp chứng chỉ đào tạo liên tục; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

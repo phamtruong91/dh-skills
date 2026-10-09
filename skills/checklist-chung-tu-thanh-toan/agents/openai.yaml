@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Lập checklist chứng từ thanh toán"
+  "short_description": "Hỗ trợ lập checklist chứng từ thanh toán"
+  "default_prompt": "Hãy dùng $checklist-chung-tu-thanh-toan để hỗ trợ công việc: Lập checklist chứng từ thanh toán; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

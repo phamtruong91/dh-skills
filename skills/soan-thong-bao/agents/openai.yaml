@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn thông báo"
+  "short_description": "Hỗ trợ soạn thông báo cho trường đại học"
+  "default_prompt": "Hãy dùng $soan-thong-bao để hỗ trợ công việc: Soạn thông báo; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn tờ trình"
+  "short_description": "Hỗ trợ soạn tờ trình cho trường đại học"
+  "default_prompt": "Hãy dùng $soan-to-trinh để hỗ trợ công việc: Soạn tờ trình; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

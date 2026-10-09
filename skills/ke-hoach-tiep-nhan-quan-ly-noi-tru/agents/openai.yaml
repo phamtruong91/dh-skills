@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Kế hoạch tiếp nhận & quản lý nội trú"
+  "short_description": "Hỗ trợ kế hoạch tiếp nhận & quản lý nội trú"
+  "default_prompt": "Hãy dùng $ke-hoach-tiep-nhan-quan-ly-noi-tru để hỗ trợ công việc: Kế hoạch tiếp nhận & quản lý nội trú; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

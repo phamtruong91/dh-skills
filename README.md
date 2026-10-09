@@ -12,6 +12,19 @@
 
 > **Skill là gì?** Một bộ hướng dẫn thực hiện công việc có thể tái sử dụng: nêu khi nào dùng, cần dữ liệu gì, thực hiện những bước nào, tạo sản phẩm gì và ai kiểm duyệt. Ví dụ: skill soạn công văn nhận yêu cầu và thông tin nơi nhận để tạo dự thảo kèm checklist kiểm tra.
 
+## Phiên bản 1.1.0 — cập nhật 09/10/2026
+
+| Hạng mục | Kết quả |
+| --- | --- |
+| Đóng gói | 171 skill có YAML hợp lệ, metadata giao diện và hồ sơ phiên bản |
+| Pháp lý | 58 skill có căn cứ/điều kiện áp dụng mới; quy trình cũ chuyển sang tư liệu lịch sử |
+| Kiểm duyệt | Mỗi skill có giới hạn, kiểm soát dữ liệu, người kiểm tra và trạng thái dự thảo |
+| Quản trị | Phiên bản 1.1.0 do đợt cập nhật này thiết lập; không phải thông tin về GitHub Release đã phát hành |
+
+[Nhật ký thay đổi](CHANGELOG.md) · [Quản trị phiên bản](GOVERNANCE.md) · [Bảng đối chiếu pháp lý](docs/CAP_NHAT_PHAP_LY.md) · [Danh mục máy đọc](skills-manifest.json)
+
+Rà soát pháp lý có phạm vi: đã đối chiếu nguồn chính thức cho các thay đổi được liệt kê, chưa chứng nhận toàn bộ 171 skill tuân thủ mọi văn bản hiện hành. Cần kiểm tra toàn văn, chuyển tiếp và quy chế nội bộ trước thực thi. Các tài liệu khung/DOCX cũ là tư liệu thiết kế; ưu tiên SKILL.md phiên bản hiện tại và bảng đối chiếu khi có khác biệt. Skill hội đồng trường không dùng cho hoạt động mới của hội đồng trường công lập theo mô hình cũ từ 2026.
+
 ## Mục lục
 
 - [1. Hệ thống giải quyết công việc gì?](#1-hệ-thống-giải-quyết-công-việc-gì)

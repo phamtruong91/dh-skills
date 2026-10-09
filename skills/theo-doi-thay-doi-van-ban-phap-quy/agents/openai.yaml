@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Theo dõi thay đổi văn bản pháp quy"
+  "short_description": "Hỗ trợ theo dõi thay đổi văn bản pháp quy"
+  "default_prompt": "Hãy dùng $theo-doi-thay-doi-van-ban-phap-quy để hỗ trợ công việc: Theo dõi thay đổi văn bản pháp quy; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

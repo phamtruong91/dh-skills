@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Tổng quan tài liệu khoa học"
+  "short_description": "Hỗ trợ tổng quan tài liệu khoa học"
+  "default_prompt": "Hãy dùng $tong-quan-tai-lieu-khoa-hoc để hỗ trợ công việc: Tổng quan tài liệu khoa học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

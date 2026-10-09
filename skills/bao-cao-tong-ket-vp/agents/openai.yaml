@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Soạn báo cáo tổng kết công tác văn phòng"
+  "short_description": "Hỗ trợ soạn báo cáo tổng kết công tác văn phòng"
+  "default_prompt": "Hãy dùng $bao-cao-tong-ket-vp để hỗ trợ công việc: Soạn báo cáo tổng kết công tác văn phòng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."

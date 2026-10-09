@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Helpdesk CNTT (triage)"
+  "short_description": "Hỗ trợ helpdesk CNTT (triage)"
+  "default_prompt": "Hãy dùng $helpdesk-cntt-triage để hỗ trợ công việc: Helpdesk CNTT (triage); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
