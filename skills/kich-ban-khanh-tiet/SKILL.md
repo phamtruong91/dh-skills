@@ -84,13 +84,13 @@ hội nghị – hội thảo, đón đoàn khách cấp trên / quốc tế.
 
 ```mermaid
 flowchart TD
-    IN[/"Kế hoạch tổ chức sự kiện"/] --> A["Tổng hợp thông tin, chốt quy mô tổ chức"]
-    A --> B["Dựng timeline chương trình chi tiết"]
-    B --> C["Thiết kế kịch bản điều hành và lời dẫn MC"]
-    C --> D["Lập bảng phân công hậu cần"]
-    D --> E["Kiểm tra kỹ thuật, chạy thử nghi thức"]
+    IN[/"Kế hoạch tổ chức sự kiện"/] --> A["Bước 1: Tổng hợp thông tin, chốt quy mô tổ chức"]
+    A --> B["Bước 2: Dựng timeline chương trình chi tiết"]
+    B --> C["Bước 3: Thiết kế kịch bản điều hành và lời dẫn MC"]
+    C --> D["Bước 4: Lập bảng phân công hậu cần"]
+    D --> E["Bước 5: Kiểm tra kỹ thuật, chạy thử nghi thức"]
     E --> HG["👤 Trưởng ban tổ chức duyệt kịch bản"]
-    HG --> F["Điều hành sự kiện theo timeline, rút kinh nghiệm"]
+    HG --> F["Bước 6: Điều hành sự kiện theo timeline, rút kinh nghiệm"]
     F --> OUT[["Kịch bản khánh tiết hoàn thành"]]
 ```
 

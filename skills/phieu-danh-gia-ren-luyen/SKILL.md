@@ -81,19 +81,14 @@ làm căn cứ xét học bổng, khen thưởng, kỷ luật và đánh giá to
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Khung 5 nhóm tiêu chí Thông tư 16"/]
-    A["Áp dụng khung tiêu chí, thang điểm, mức xếp loại"]
-    B["Thiết kế phiếu đánh giá 4 cột chấm"]
-    C["Soạn hướng dẫn chấm điểm chi tiết"]
-    D["Tổ chức chấm theo 4 cấp: SV, lớp, cố vấn"]
-    E{"Có vi phạm kỷ luật?"}
-    F["Trừ điểm hoặc hạ xếp loại theo quy định"]
-    G["👤 Hội đồng khoa quyết định điểm chính thức"]
-    OUT[/"Phiếu đánh giá và hướng dẫn chấm"/]
-    IN --> A --> B --> C --> D --> E
-    E -->|Có| F --> G
-    E -->|Không| G
-    G --> OUT
+    IN[/"Khung 5 nhóm tiêu chí Thông tư 16"/] --> B1["Bước 1: Áp dụng khung 5 nhóm tiêu chí, thang điểm 100"]
+    B1 --> B2["Bước 2: Áp dụng mức xếp loại và quy định trừ điểm khi vi phạm kỷ luật"]
+    B2 --> B3["Bước 3: Thiết kế phiếu đánh giá"]
+    B3 --> B4["Bước 4: Soạn hướng dẫn chấm điểm chi tiết"]
+    B4 --> B5["Bước 5: Tổ chức quy trình chấm theo 4 cấp"]
+    B5 --> B6["Bước 6: Kiểm tra và xuất bản bộ phiếu"]
+    B6 --> HG["👤 Hội đồng khoa quyết định điểm chính thức"]
+    HG --> OUT[["Phiếu đánh giá và hướng dẫn chấm"]]
 ```
 
 ## Đầu ra

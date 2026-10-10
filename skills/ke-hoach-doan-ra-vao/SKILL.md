@@ -85,14 +85,14 @@ dự hội nghị ở nước ngoài) hoặc **đoàn vào** (đón tiếp đoà
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A{"Đoàn ra hay đoàn vào?"} -->|Ra| B["Xác định mục đích đoàn ra: thư mời, nhiệm vụ được giao"]
-    A -->|Vào| C["Xác định mục đích đoàn vào: đoàn khách, nội dung làm việc"]
-    B --> D["Lập danh sách thành phần đoàn"]
-    C --> D
-    D --> E["Xây dựng chương trình chi tiết theo ngày"]
-    E --> F["Lập dự toán kinh phí chi tiết"]
-    F --> HG["👤 Hiệu trưởng phê duyệt tờ trình"]
-    HG --> Z[["Xuất bản kế hoạch và dự toán"]]
+    IN[/"Đầu vào"/] --> B1["Bước 1: Xác định loại đoàn và mục đích"]
+    B1 --> B2["Bước 2: Lập danh sách thành phần"]
+    B2 --> B3["Bước 3: Xây dựng chương trình chi tiết theo ngày"]
+    B3 --> B4["Bước 4: Lập dự toán kinh phí chi tiết"]
+    B4 --> B5["Bước 5: Hoàn thiện tờ trình xin chủ trương"]
+    B5 --> B6["Bước 6: Trình phê duyệt và xuất bản"]
+    B6 --> HG["👤 Hiệu trưởng phê duyệt tờ trình"]
+    HG --> OUT[["Xuất bản kế hoạch và dự toán"]]
 ```
 
 ## Đầu ra

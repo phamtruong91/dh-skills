@@ -88,17 +88,13 @@ của trường, học bổng tài trợ của doanh nghiệp/tổ chức/cá nh
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Thông tin chương trình học bổng"/]
-    A["Xác định loại học bổng và nội dung trọng tâm"]
-    B["Dựng khung thể thức, viết 6 mục nội dung"]
-    C["Đối chiếu minh bạch với văn bản căn cứ"]
-    D["Kiểm tra thể thức, số liệu, thẩm quyền ký"]
-    E{"Đạt yêu cầu?"}
-    F["Sửa lỗi"]
-    OUT[/"Thông báo học bổng hoàn chỉnh"/]
-    IN --> A --> B --> C --> D --> E
-    E -->|Không| F --> D
-    E -->|Có| OUT
+    IN[/"Thông tin chương trình học bổng"/] --> B1["Bước 1: Xác định loại học bổng và nội dung trọng tâm"]
+    B1 --> B2["Bước 2: Dựng khung thể thức thông báo"]
+    B2 --> B3["Bước 3: Viết nội dung theo 6 mục bắt buộc"]
+    B3 --> B4["Bước 4: Đối chiếu minh bạch với văn bản căn cứ"]
+    B4 --> B5["Bước 5: Kiểm tra thể thức, số liệu và thẩm quyền"]
+    B5 --> B6["Bước 6: Xuất bản thông báo"]
+    B6 --> OUT[["Thông báo học bổng hoàn chỉnh"]]
 ```
 
 ## Đầu ra

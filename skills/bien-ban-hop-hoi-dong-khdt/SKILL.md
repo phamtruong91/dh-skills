@@ -77,18 +77,13 @@ nghị quyết.
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A[/"Tài liệu họp Hội đồng KH-ĐT"/]
-    B["Ghi mở đầu: phiên họp, chủ trì, điểm danh, xác nhận túc số"]
-    C{"Đủ túc số theo quy chế?"}
-    D["Dừng họp, ghi rõ lý do vào biên bản"]
-    E["Ghi từng nội dung: trình bày - ý kiến - biểu quyết"]
-    F["Tổng hợp kết luận phiên họp"]
-    G["Ghi bế mạc; kiểm tra biểu quyết khớp số dự họp"]
-    HG["👤 Chủ tịch hội đồng ký xác nhận biên bản"]
-    H[/"Biên bản họp đã ký"/]
-    A --> B --> C
-    C -->|Không| D --> H
-    C -->|Có| E --> F --> G --> HG --> H
+    IN[/"Tài liệu họp Hội đồng KH-ĐT"/] --> B1["Bước 1: Ghi phần mở đầu và điểm danh"]
+    B1 --> B2["Bước 2: Ghi diễn biến từng nội dung"]
+    B2 --> B3["Bước 3: Tổng hợp kết luận phiên họp"]
+    B3 --> B4["Bước 4: Ghi bế mạc và ký xác nhận"]
+    B4 --> B5["Bước 5: Kiểm tra biên bản trước khi lưu hồ sơ"]
+    B5 --> HG["👤 Chủ tịch hội đồng ký xác nhận biên bản"]
+    HG --> OUT[["Biên bản họp đã ký"]]
 ```
 
 ## Đầu ra

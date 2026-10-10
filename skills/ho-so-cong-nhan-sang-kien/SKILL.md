@@ -87,14 +87,14 @@ sáng kiến cấp trường (hoặc cấp trên).
 
 ```mermaid
 flowchart TD
-    IN[/Thông tin sáng kiến và số liệu áp dụng/] --> A["Bước 1: Soạn đơn đề nghị công nhận"]
-    A --> B["Bước 2-4: Soạn bản mô tả 3 phần"]
-    B --> C["Bước 5: Ý kiến đơn vị và đối chiếu tiêu chí"]
-    C --> D{"Đủ tiêu chí công nhận?"}
-    D -->|Không| B
-    D -->|Có| HG["👤 Bước 6: Thủ trưởng đơn vị ký nhận xét"]
-    HG --> E["Lập checklist và hoàn thiện hồ sơ"]
-    E --> OUT[["Bộ hồ sơ đề nghị công nhận"]]
+    IN[/"Đầu vào"/] --> B1["Bước 1: Soạn Đơn đề nghị công nhận sáng kiến"]
+    B1 --> B2["Bước 2: Soạn Bản mô tả sáng kiến – phần Thực trạng"]
+    B2 --> B3["Bước 3: Soạn Bản mô tả sáng kiến – phần Giải pháp"]
+    B3 --> B4["Bước 4: Soạn Bản mô tả sáng kiến – phần Hiệu quả áp dụng"]
+    B4 --> B5["Bước 5: Soạn mẫu Ý kiến của đơn vị và đối chiếu tiêu chí công nhận"]
+    B5 --> B6["Bước 6: Lập checklist và hoàn thiện hồ sơ"]
+    B6 --> HG["👤 Bước 6: Thủ trưởng đơn vị ký nhận xét"]
+    HG --> OUT[["Bộ hồ sơ đề nghị công nhận"]]
 ```
 
 ## Đầu ra

@@ -91,18 +91,13 @@ hoặc cán bộ phụ trách CNTT của mọi đơn vị.
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A[/"Ticket sự cố CNTT"/]
-    B["Bước 1. Phân loại nhóm sự cố, đánh giá ưu tiên theo SLA"]
-    C{"Sự cố an toàn thông tin?"}
-    D["Chuyển ngay cho bộ phận chuyên trách ATTT"]
-    E["Bước 2. Dự thảo hướng xử lý an toàn từng bước"]
-    F["Bước 3. Gợi ý FAQ/bài hướng dẫn liên quan"]
-    G["Bước 4. Ghi nhận ticket, phụ trách, deadline SLA"]
-    HG["👤 Kỹ thuật viên kiểm thử hướng xử lý"]
-    H[["Ticket đã phân loại + hướng xử lý + báo cáo xu hướng"]]
-    A --> B --> C
-    C -->|Có| D --> H
-    C -->|Không| E --> F --> G --> HG --> H
+    IN[/"Ticket sự cố CNTT"/] --> B1["Bước 1: Phân loại và đánh giá ưu tiên"]
+    B1 --> B2["Bước 2: Dự thảo hướng xử lý an toàn"]
+    B2 --> B3["Bước 3: Gợi ý FAQ"]
+    B3 --> B4["Bước 4: Ghi nhận ticket"]
+    B4 --> B5["Bước 5: Báo cáo xu hướng"]
+    B5 --> HG["👤 Kỹ thuật viên kiểm thử hướng xử lý"]
+    HG --> OUT[["Ticket đã phân loại + hướng xử lý + báo cáo xu hướng"]]
 ```
 
 ## Đầu ra

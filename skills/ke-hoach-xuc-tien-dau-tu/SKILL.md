@@ -82,13 +82,14 @@ kêu gọi đầu tư hạ tầng, hợp tác công–tư, tài trợ, liên doa
 
 ```mermaid
 flowchart TD
-    A[/"Nhu cầu hạ tầng + định hướng trường"/] --> B["Bước 1. Xác định nhu cầu hạ tầng ưu tiên"]
-    B --> C["Bước 2. Xây dựng danh mục dự án kêu gọi"]
-    C --> D["Bước 3. Phân tích đối tác mục tiêu"]
-    D --> E["Bước 4. Thiết kế hoạt động xúc tiến và bộ tài liệu"]
-    E --> F["Bước 5. Lập tiến độ và phân công đầu mối"]
-    F --> HG["👤 Trưởng ban → BGH/HĐ trường phê duyệt"]
-    HG --> G[["Kế hoạch xúc tiến đầu tư + hồ sơ dự án"]]
+    IN[/"Nhu cầu hạ tầng + định hướng trường"/] --> B1["Bước 1: Xác định nhu cầu hạ tầng ưu tiên"]
+    B1 --> B2["Bước 2: Xây dựng danh mục dự án kêu gọi"]
+    B2 --> B3["Bước 3: Phân tích đối tác mục tiêu"]
+    B3 --> B4["Bước 4: Thiết kế hoạt động xúc tiến và bộ tài liệu"]
+    B4 --> B5["Bước 5: Lập tiến độ và phân công đầu mối"]
+    B5 --> B6["Bước 6: Tổng hợp và hoàn thiện kế hoạch"]
+    B6 --> HG["👤 Trưởng ban → BGH/HĐ trường phê duyệt"]
+    HG --> OUT[["Kế hoạch xúc tiến đầu tư + hồ sơ dự án"]]
 ```
 
 ## Đầu ra

@@ -87,7 +87,7 @@ flowchart TD
     C --> D["Bước 3: Lập dự toán từng hạng mục"]
     D --> E["Bước 4: Sắp xếp tiến độ thực hiện"]
     E --> F["Bước 5: Soạn dự thảo kế hoạch theo cấu trúc chuẩn"]
-    F --> HG["👤 Hiệu trưởng phê duyệt"]
+    F --> HG["👤 Bước 6: Hiệu trưởng phê duyệt"]
     HG --> G[["Kế hoạch bảo trì CSVC năm + tờ trình"]]
 ```
 ```

@@ -86,15 +86,14 @@ làm cơ sở triển khai các thỏa thuận và kiến nghị tiếp theo.
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A["Thu thập nhật ký, biên bản, văn bản đã ký"] --> B{"Thực hiện đúng kế hoạch đã duyệt?"}
-    B -->|Không| C["Ghi rõ nội dung điều chỉnh và lý do"]
-    B -->|Có| D["Viết phần diễn biến theo trình tự thời gian"]
-    C --> D
-    D --> E["Tổng hợp kết quả đạt được có số liệu"]
-    E --> F["Ghi nhận thỏa thuận với đối tác"]
-    F --> G["Đề xuất kiến nghị bước tiếp theo"]
-    G --> HG["👤 Trưởng phòng KHCN duyệt báo cáo"]
-    HG --> Z[["Xuất bản báo cáo gửi Ban Giám hiệu"]]
+    IN[/"Đầu vào"/] --> B1["Bước 1: Thu thập và đối chiếu tài liệu đoàn"]
+    B1 --> B2["Bước 2: Viết phần diễn biến"]
+    B2 --> B3["Bước 3: Tổng hợp kết quả đạt được"]
+    B3 --> B4["Bước 4: Ghi nhận thỏa thuận với đối tác"]
+    B4 --> B5["Bước 5: Đề xuất kiến nghị"]
+    B5 --> B6["Bước 6: Hoàn thiện, trình duyệt và xuất bản báo cáo"]
+    B6 --> HG["👤 Trưởng phòng KHCN duyệt báo cáo"]
+    HG --> OUT[["Xuất bản báo cáo gửi Ban Giám hiệu"]]
 ```
 
 ## Đầu ra

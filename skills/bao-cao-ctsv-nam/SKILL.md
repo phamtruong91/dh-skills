@@ -94,7 +94,7 @@ Khi Phòng Công tác sinh viên cần soạn báo cáo tổng kết năm học:
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Năm học, tổng số SV, số liệu các mảng"/]
+    IN[/"Bước 2: Năm học, tổng số SV, số liệu các mảng"/]
     IN --> A["Bước 1. Thu thập số liệu các mảng công tác sinh viên"]
     A --> B{"Số liệu nhất quán giữa các nguồn?"}
     B -->|Không| A

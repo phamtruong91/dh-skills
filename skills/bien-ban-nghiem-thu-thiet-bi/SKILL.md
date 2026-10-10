@@ -103,15 +103,15 @@ khi bàn giao thiết bị cho đơn vị sử dụng quản lý.
 
 ```mermaid
 flowchart TD
-    A[/"Hợp đồng và biên bản giao hàng"/] --> B["Chuẩn bị hồ sơ, catalogue, danh sách kiểm tra"]
-    B --> C["Đối chiếu số lượng, chủng loại, serial với hợp đồng"]
-    C --> D["Kiểm tra thực tế: ngoại quan, chạy thử"]
-    D --> E["Ghi nhận Đạt hoặc Không đạt từng hạng mục"]
+    A[/"Hợp đồng và biên bản giao hàng"/] --> B["Bước 1: Chuẩn bị hồ sơ, catalogue, danh sách kiểm tra"]
+    B --> C["Bước 2: Đối chiếu số lượng, chủng loại, serial với hợp đồng"]
+    C --> D["Bước 3: Kiểm tra thực tế: ngoại quan, chạy thử"]
+    D --> E["Bước 4: Ghi nhận Đạt hoặc Không đạt từng hạng mục"]
     E --> F{"Kết luận nghiệm thu?"}
     F -->|Đạt toàn bộ| G["Nghiệm thu toàn bộ"]
     F -->|Có tồn tại| H["Nghiệm thu có điều kiện: khắc phục và nghiệm thu lại"]
-    F -->|Không đạt| I["Từ chối nghiệm thu"]
-    G --> J["Lập biên bản và ký"]
+    F -->|Không đạt| I["Bước 5: Từ chối nghiệm thu"]
+    G --> J["Bước 6: Lập biên bản và ký"]
     H --> J
     I --> J
     J --> HG["👤 Hội đồng nghiệm thu ký biên bản"]

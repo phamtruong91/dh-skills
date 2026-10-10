@@ -82,7 +82,7 @@ flowchart TD
     D -->|Không| F
     F --> G["Bước 4. Rà soát cảnh báo"]
     G --> HG["👤 Trưởng bộ phận tuyển sinh duyệt"]
-    HG --> H[["Báo cáo phễu + đề xuất hành động"]]
+    HG --> H[["Bước 5: Báo cáo phễu + đề xuất hành động"]]
 ```
 
 ## Đầu ra

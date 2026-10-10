@@ -82,16 +82,14 @@ trường mẹ cho phù hợp điều kiện thực tế tại phân hiệu.
 
 ```mermaid
 flowchart TD
-    A["Bước 1: Tiếp nhận và bóc tách kế hoạch trường mẹ"]
-    B["Bước 2: Cụ thể hóa nhiệm vụ theo 5 mảng"]
-    C["Bước 3: Bổ sung nhiệm vụ đặc thù của phân hiệu"]
-    D["Bước 4: Dự toán kinh phí theo phân cấp"]
-    E{"Bám sát trường mẹ, chỉ tiêu khả thi, phân công rõ đầu mối?"}
-    HG["👤 Giám đốc phân hiệu ký, gửi trường mẹ phê duyệt"]
-    O[/"Kế hoạch hoạt động năm của phân hiệu"/]
-    A --> B --> C --> D --> E
-    E -->|Không| B
-    E -->|Có| HG --> O
+    IN[/"Kế hoạch hoạt động năm của phân hiệu"/] --> B1["Bước 1: Tiếp nhận và bóc tách kế hoạch trường mẹ"]
+    B1 --> B2["Bước 2: Cụ thể hóa nhiệm vụ theo 5 mảng"]
+    B2 --> B3["Bước 3: Bổ sung nhiệm vụ đặc thù của phân hiệu"]
+    B3 --> B4["Bước 4: Dự toán kinh phí theo phân cấp"]
+    B4 --> B5["Bước 5: Kiểm tra chéo và hoàn thiện dự thảo"]
+    B5 --> B6["Bước 6: Trình ký và gửi trường mẹ"]
+    B6 --> HG["👤 Giám đốc phân hiệu ký, gửi trường mẹ phê duyệt"]
+    HG --> OUT[["Sản phẩm đầu ra"]]
 ```
 
 ## Đầu ra

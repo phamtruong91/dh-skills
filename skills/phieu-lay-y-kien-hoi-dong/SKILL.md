@@ -76,13 +76,13 @@ nội dung mà quy chế bắt buộc phải họp.
 flowchart TD
     A[/"Nội dung cần xin ý kiến HĐ"/]
     B["Soạn phiếu: nội dung tách riêng, ô lựa chọn, hạn trả lời"]
-    C["Gửi phiếu kèm tài liệu cho từng thành viên"]
+    C["Bước 2: Gửi phiếu kèm tài liệu cho từng thành viên"]
     D["Hết hạn, thu phiếu"]
-    E["Kiểm tra tính hợp lệ từng phiếu"]
+    E["Bước 3: Kiểm tra tính hợp lệ từng phiếu"]
     F{"Phiếu hợp lệ?"}
-    G["Loại phiếu không hợp lệ, không suy diễn ý kiến"]
-    H["Tổng hợp kết quả từng nội dung"]
-    I["Báo cáo kết quả, lưu phiếu gốc vào hồ sơ"]
+    G["Bước 1: Loại phiếu không hợp lệ, không suy diễn ý kiến"]
+    H["Bước 4: Tổng hợp kết quả từng nội dung"]
+    I["Bước 5: Báo cáo kết quả, lưu phiếu gốc vào hồ sơ"]
     HG["👤 Thư ký tổng hợp trung thực; Chủ tịch nhận báo cáo"]
     J[/"Báo cáo tổng hợp + phiếu gốc lưu hồ sơ"/]
     A --> B --> C --> D --> E --> F

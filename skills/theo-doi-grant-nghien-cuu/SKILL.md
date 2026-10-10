@@ -73,13 +73,13 @@ phòng KHCN ở mọi trường.
 ```mermaid
 flowchart TD
     A[/"Thông tin call + hồ sơ dự thảo"/]
-    B["Checklist điều kiện (eligibility)"]
+    B["Bước 1: Checklist điều kiện (eligibility)"]
     C{"Đạt đủ điều kiện?"}
-    D["Đối chiếu hồ sơ, liệt kê gap"]
+    D["Bước 2: Đối chiếu hồ sơ, liệt kê gap"]
     E["Ghi rõ lý do chưa đủ điều kiện"]
-    F["Dự thảo outline đề xuất theo cấu trúc call"]
-    G["Lập tracker milestone + cảnh báo deadline"]
-    N["Tổng hợp nhắc việc theo độ khẩn cấp"]
+    F["Bước 3: Dự thảo outline đề xuất theo cấu trúc call"]
+    G["Bước 4: Lập tracker milestone + cảnh báo deadline"]
+    N["Bước 5: Tổng hợp nhắc việc theo độ khẩn cấp"]
     HG["👤 PI duyệt; Phòng KHCN kiểm tra"]
     H[/"Gap list + outline + tracker grant"/]
     A --> B --> C

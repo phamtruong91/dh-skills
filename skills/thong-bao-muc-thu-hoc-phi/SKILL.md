@@ -6,7 +6,6 @@ description: "Soạn thông báo mức thu học phí / lệ phí năm học c�
 # Soạn thông báo mức thu học phí / lệ phí
 
 ## Định dạng và file đầu ra
-
 Định dạng đầu ra có thể chọn theo sản phẩm/yêu cầu: .docx, .pdf. Đọc mục “Định dạng bổ sung” trong quy cách đầu ra trước khi chọn.
 
 **Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
@@ -17,31 +16,167 @@ description: "Soạn thông báo mức thu học phí / lệ phí năm học c�
 ## Kiểm soát áp dụng và phê duyệt
 Trước khi chạy, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu`, `nguoi_kiem_duyet`; chỉ hỏi thông tin liên quan nghiệp vụ, không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu căn cứ pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
-Nếu có cập nhật pháp lý dưới đây, đọc [căn cứ và điều kiện áp dụng](references/phap-ly.md) trước khi làm. Phần quy trình lịch sử ở cuối chỉ để đối chiếu, không dùng làm chỉ dẫn hiện hành.
+Nếu có cập nhật pháp lý dưới đây, đọc [căn cứ và điều kiện áp dụng](references/phap-ly.md) trước khi làm. Quy trình dưới đây giữ nghiệp vụ từ bản gốc; mọi viện dẫn văn bản, mẫu biểu, điều khoản phải theo căn cứ đã chọn trong phap-ly.md, không theo văn bản cũ.
 
-## Quy trình hiện hành
+## Giới hạn và human gate
+AI hỗ trợ chuẩn bị và đối chiếu; cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Không đánh dấu đã ký, đã duyệt, đã công bố khi chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự, tài chính chỉ dùng theo mục đích và phân quyền, che thông tin định danh khi dùng ví dụ (Luật 91/2025/QH15, hiệu lực 01/01/2026); không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
-1. Xác nhận yêu cầu “Soạn thông báo mức thu học phí / lệ phí”, dữ liệu gốc và thời điểm nghiệp vụ.
-2. Chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH], để trống phần tương ứng trong file giao, chưa kết luận tuân thủ.
-- Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản.
-- Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học.
+## Khi nào dùng
+Khi ban hành hoặc cập nhật mức thu học phí, lệ phí năm học mới: công bố theo khối ngành
+(Kỹ thuật, Kinh tế, Xã hội...), theo hệ đào tạo (chính quy, vừa làm vừa học), kèm thời hạn
+và hình thức nộp.
 
-3. Thực hiện nghiệp vụ trên dữ liệu đã xác nhận; lập văn bản và đối chiếu nội bộ. Các công thức, tiêu chí, mẫu biểu và thẩm quyền phải lấy từ căn cứ đã chọn, không từ ví dụ lịch sử.
-4. Xuất văn bản theo mẫu áp dụng, để trống dữ liệu thiếu, không kèm tài liệu kiểm tra đầu ra; chuyển cán bộ phụ trách xác nhận trước khi trình người có thẩm quyền. Không tự phát hành, công bố hoặc xác nhận đã ký.
+## Đầu vào (Input)
+| Trường | Mô tả | Bắt buộc |
+|---|---|---|
+| `nam_hoc` | Năm học áp dụng (vd: 2026–2027) | Có |
+| `can_cu` | Căn cứ ban hành (Quyết định số..., Nghị quyết Hội đồng trường...) | Có |
+| `khoi_nganh` | Danh sách khối ngành cần công bố (vd: Kỹ thuật, Kinh tế, Xã hội) | Có |
+| `he_dao_tao` | Các hệ đào tạo áp dụng (Chính quy, Vừa làm vừa học...) | Có |
+| `muc_thu` | Bảng mức thu theo từng khối ngành × hệ đào tạo, đơn vị đồng/tín chỉ và đồng/năm | Có |
+| `thoi_han_nop` | Thời hạn nộp học phí (theo đợt: đợt 1, đợt 2...) | Có |
+| `hinh_thuc_nop` | Hình thức nộp (chuyển khoản, cổng thanh toán trực tuyến...) + tài khoản thụ hưởng | Có |
+| `le_phi` | Các lệ phí kèm theo (lệ phí nhập học, lệ phí thi lại, cấp lại thẻ SV...) | Không |
+| `nguoi_ky` | Hiệu trưởng / Phó Hiệu trưởng phụ trách tài chính | Có |
+| `ngay_ban_hanh` | Ngày ban hành thông báo | Không (mặc định: ngày hiện tại) |
+
+## Quy trình
+**Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
+- Thông tư 09/2024/TT-BGDĐT, hiệu lực 19/07/2024, thay 36/2017: Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản.
+- Nghị định 238/2025/NĐ-CP, hiệu lực 03/09/2025: Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học.
+- Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+
+**Bước 1. Xác thực văn bản gốc phê duyệt mức thu**
+- Làm gì: đối chiếu `can_cu` (số ký hiệu, ngày ban hành, cơ quan ban hành, phạm vi áp dụng
+  theo `nam_hoc`) với bản gốc lưu tại Văn thư / Phòng Tài chính – Kế toán; kiểm tra văn bản
+  đã được ký, đóng dấu, còn hiệu lực và đúng thẩm quyền (Hội đồng trường đối với đơn vị
+  tự chủ tài chính; Hiệu trưởng theo phân cấp).
+- Dùng input: `can_cu`, `nam_hoc`.
+- Vai trò: Chuyên viên Phòng TCKT · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch, lưu trữ hồ sơ · ⏱ ~1–3 giờ (ước tính)
+- Lưu ý nghiệp vụ: tuyệt đối không ban hành thông báo khi văn bản gốc chưa ký/đóng dấu
+  hoặc mức thu trong văn bản gốc không khớp với số liệu được giao; ghi lại chính xác số
+  ký hiệu và ngày văn bản gốc để trích dẫn trong thông báo.
+- → Kết quả bước: biên bản xác nhận căn cứ pháp lý (số văn bản, cơ quan ban hành, phạm vi
+  áp dụng, tình trạng hiệu lực).
+
+**Bước 2. Lập bảng mức thu theo khối ngành × hệ đào tạo**
+- Làm gì: sắp xếp các dòng theo `khoi_nganh` → `he_dao_tao`; mỗi ô điền đủ hai mức:
+  đồng/tín chỉ và đồng/năm (đồng/năm = đồng/tín chỉ × khối lượng học tập chuẩn của hệ đào
+  tạo trong năm); đối chiếu từng con số với bảng mức thu trong văn bản gốc đã xác thực
+  ở Bước 1.
+- Dùng input: `muc_thu`, `khoi_nganh`, `he_dao_tao`, `can_cu` (để đối chiếu).
+- Vai trò: Chuyên viên Phòng TCKT · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch, lập bảng biểu, định dạng · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: mức thu hệ Vừa làm vừa học không được thấp hơn hệ chính quy cùng khối
+  ngành; mức đồng/năm chỉ là bình quân ước tính — số tiền thực nộp của sinh viên tính theo
+  số tín chỉ đăng ký thực tế, phải ghi chú rõ trong thông báo để tránh tranh chấp.
+- → Kết quả bước: bảng mức thu hoàn chỉnh (khối ngành × hệ đào tạo, hai đơn vị tính,
+  đã đối chiếu khớp với văn bản gốc).
+
+**Bước 3. Soạn thảo thông báo theo thể thức văn bản hành chính**
+- Làm gì: viết toàn văn thông báo theo đúng trình tự thể thức: Quốc hiệu – Tiêu ngữ →
+  tên trường → số, ký hiệu văn bản → địa danh, ngày tháng năm (`ngay_ban_hanh`) → tiêu đề
+  "THÔNG BÁO" + trích yếu → Kính gửi → Nội dung gồm: (1) căn cứ ban hành; (2) bảng mức thu
+  chi tiết từ Bước 2; (3) thời hạn nộp (`thoi_han_nop`, ghi rõ từng đợt); (4) hình thức nộp
+  (`hinh_thuc_nop`: số tài khoản, ngân hàng, chủ tài khoản, nội dung ghi chú chuyển khoản);
+  (5) lệ phí kèm theo (`le_phi`, nếu có) → nơi nhận → chữ ký (`nguoi_ky`).
+- Dùng input: toàn bộ input trên, trọng tâm `thoi_han_nop`, `hinh_thuc_nop`, `le_phi`,
+  `nguoi_ky`, `ngay_ban_hanh`.
+- Vai trò: Chuyên viên Phòng TCKT · AI hỗ trợ: soạn dự thảo · ⏱ ~30–60 phút (ước tính)
+- Lưu ý nghiệp vụ: nội dung ghi chú chuyển khoản (mã sinh viên, họ tên) là điểm gây sai
+  đối soát nhiều nhất — phải hướng dẫn rõ ràng; lệ phí trình bày thành mục riêng, không
+  gộp chung vào bảng học phí.
+- → Kết quả bước: dự thảo văn bản thông báo đầy đủ thể thức.
+
+**Bước 4. Bổ sung mục trách nhiệm thực hiện**
+- Làm gì: ghi rõ trách nhiệm từng đơn vị: Phòng Tài chính – Kế toán là đầu mối giải đáp,
+  đối soát và xác nhận học phí đã nộp; các khoa/viện phổ biến thông báo đến sinh viên, học
+  viên; Phòng Công tác sinh viên hướng dẫn diện miễn, giảm học phí.
+- Dùng input: phân công nghiệp vụ chuẩn của trường (không có trường input riêng).
+- Vai trò: Chuyên viên Phòng TCKT · AI hỗ trợ: xử lý sơ bộ, tổng hợp · ⏱ ~1–2 giờ (ước tính)
+- Lưu ý nghiệp vụ: ghi trách nhiệm theo tên đơn vị, không ghi tên cá nhân, để văn bản
+  không lỗi thời khi thay đổi nhân sự.
+- → Kết quả bước: dự thảo thông báo đầy đủ nội dung (đã có mục trách nhiệm thực hiện).
+
+**Bước 5. Kiểm tra chéo và soát xét**
+- Làm gì: đối chiếu từng số liệu trong bảng mức thu với văn bản gốc; kiểm tra số ký hiệu,
+  ngày tháng, thẩm quyền ký (`nguoi_ky`), nơi nhận đầy đủ (toàn thể sinh viên, các đơn vị,
+  cổng thông tin điện tử); soát chính tả, định dạng bảng, đơn vị tính.
+- Dùng input: `can_cu` (đối chiếu số liệu), `nguoi_ky`.
+- Vai trò: Trưởng phòng Tài chính – Kế toán · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch, tính toán, phân tích số liệu · ⏱ ~1–2 giờ (ước tính)
+- Lưu ý nghiệp vụ: sai một con số trong bảng mức thu đồng nghĩa phải ban hành thông báo
+  đính chính — kiểm tra kỹ dấu phân cách hàng nghìn và đơn vị tính (ghi "đồng", không viết
+  tắt trong văn bản chính thức).
+- → Kết quả bước: danh sách lỗi cần sửa (nếu có) và bản thông báo đã soát xong.
+
+**Bước 6. Trình ký và xuất bản**
+- Làm gì: trình người có thẩm quyền ký (`nguoi_ky`), đóng dấu; đăng tải trên cổng thông tin
+  điện tử của trường tại chuyên mục công khai; gửi các khoa/viện để phổ biến; lưu văn thư.
+- Dùng input: `nguoi_ky`.
+- Vai trò: Chuyên viên Phòng TCKT (chuẩn bị hồ sơ trình); Hiệu trưởng (người ký) ban hành · AI hỗ trợ: chuẩn bị hồ sơ trình đầy đủ, chuẩn bị bản phát hành · ⏱ ~1–3 giờ (ước tính)
+- Lưu ý nghiệp vụ: thông báo mức thu học phí thuộc nội dung phải công khai theo văn bản hiện hành nêu tại phap-ly.md — bắt buộc đăng công khai trên cổng thông tin, không chỉ gửi nội bộ.
+- → Kết quả bước: văn bản thông báo mức thu hoàn chỉnh, đã ký và đăng công khai.
+
+## Luồng quy trình (Workflow)
+```mermaid
+flowchart TD
+    IN[/"Căn cứ: QĐ/NQ phê duyệt mức thu"/] --> B1["Bước 1: Xác thực văn bản gốc phê duyệt mức thu"]
+    B1 --> B2["Bước 2: Lập bảng mức thu theo khối ngành × hệ đào tạo"]
+    B2 --> B3["Bước 3: Soạn thảo thông báo theo thể thức văn bản hành chính"]
+    B3 --> B4["Bước 4: Bổ sung mục trách nhiệm thực hiện"]
+    B4 --> B5["Bước 5: Kiểm tra chéo và soát xét"]
+    B5 --> B6["Bước 6: Trình ký và xuất bản"]
+    B6 --> HG["👤 Trưởng phòng TCKT soát xét"]
+    HG --> OUT[["Thông báo mức thu hoàn chỉnh, đã ký và đăng công khai"]]
+```
 
 ## Đầu ra
+- Văn bản thông báo mức thu học phí hoàn chỉnh, đúng thể thức.
+- Bảng mức thu chi tiết theo khối ngành × hệ đào tạo.
+
+**Cấu trúc output chuẩn:** khung mẫu cố định của văn bản thông báo, các phần theo đúng
+thứ tự xuất hiện:
+1. Quốc hiệu – Tiêu ngữ;
+2. Tên trường, số và ký hiệu văn bản, địa danh và ngày tháng năm ban hành;
+3. Tiêu đề "THÔNG BÁO" + trích yếu nội dung;
+4. "Kính gửi" (đối tượng nhận: sinh viên, học viên, các đơn vị);
+5. Căn cứ ban hành (Nghị quyết/Quyết định phê duyệt mức thu);
+6. Nội dung mức thu: bảng học phí theo từng hệ đào tạo (cột: khối ngành, đồng/tín chỉ,
+   đồng/năm) + ghi chú cách tính mức bình quân;
+7. Thời hạn nộp học phí theo từng đợt;
+8. Hình thức nộp (tài khoản thụ hưởng, nội dung ghi chú chuyển khoản);
+9. Lệ phí kèm theo (nếu có);
+10. Trách nhiệm thực hiện của các đơn vị;
+11. Hiệu lực thi hành và cam kết công khai;
+12. Nơi nhận – chữ ký người có thẩm quyền (ghi rõ họ tên, chức vụ).
 
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
-## Giới hạn và human gate
-AI hỗ trợ chuẩn bị và đối chiếu; cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Không đánh dấu đã ký, đã duyệt, đã công bố khi chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự, tài chính chỉ dùng theo mục đích và phân quyền, che thông tin định danh khi dùng ví dụ (Luật 91/2025/QH15, hiệu lực 01/01/2026); không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
+## Kiểm tra nội bộ trước khi giao
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
+
+- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Quốc hiệu; Tên trường, số và ký hiệu văn bản, địa danh…; Tiêu đề "THÔNG BÁO" + trích yếu nội dung;; "Kính gửi" (đối tượng nhận; Căn cứ ban hành (Nghị quyết/Quyết định phê…; Nội dung mức thu; …
+- [ ] Có đầy đủ sản phẩm: Văn bản thông báo mức thu học phí hoàn chỉnh, đúng thể thức
+- [ ] Có đầy đủ sản phẩm: Bảng mức thu chi tiết theo khối ngành × hệ đào tạo
+- [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
+- [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
+- [ ] Đúng thể thức, định dạng văn bản theo quy định hiện hành
+- [ ] Căn cứ pháp lý nêu đầy đủ, còn hiệu lực tại thời điểm lập
+- [ ] Đã qua Human gate: người có thẩm quyền đã kiểm tra/ký duyệt trước khi phát hành
+- [ ] Tuyệt đối không ban hành thông báo khi văn bản gốc chưa ký/đóng dấu
+- [ ] Mức thu hệ Vừa làm vừa học không được thấp hơn hệ chính quy cùng khối
+
+## Căn cứ & lưu ý
+- Căn cứ hiện hành: xem [căn cứ và điều kiện áp dụng](references/phap-ly.md); phải đối chiếu văn bản gốc, hiệu lực và chuyển tiếp tại ngày nghiệp vụ.
+- Mức thu học phí thực tế phải tuân thủ Nghị định 81/2021/NĐ-CP và Nghị định 97/2023/NĐ-CP
+  về cơ chế thu, quản lý học phí; số liệu trong ví dụ chỉ là giả lập minh họa.
+- Đối với đơn vị tự chủ tài chính, mức thu do Hội đồng trường quyết định trong khung
+  quy định của pháp luật.
+- Không dùng tên thật của trường/cá nhân khi mô phỏng.
 
 ## Tư liệu đối chiếu
-
-Quy trình trước cập nhật được lưu tại `references/quy-trinh-lich-su.md`. Chỉ đọc khi cần đối chiếu hồ sơ lịch sử; phải chọn căn cứ theo ngày nghiệp vụ trước khi sử dụng.
-
+Bản gốc trước cập nhật pháp lý (kèm ví dụ giả lập) lưu tại `references/quy-trinh-lich-su.md`, chỉ để đối chiếu hồ sơ lịch sử; không dùng căn cứ, mẫu hay số liệu trong đó làm chỉ dẫn hiện hành.
 
 ## Quản trị phiên bản
 - Phiên bản gói `1.3.2` (cập nhật 2026-10-10); hồ sơ đầy đủ tại [references/version.json](references/version.json).

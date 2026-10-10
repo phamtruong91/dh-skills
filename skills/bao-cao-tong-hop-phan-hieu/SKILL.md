@@ -89,8 +89,8 @@ flowchart TD
     C["Bước 3: Đánh giá kết quả, tồn tại, nguyên nhân"]
     D["Bước 4: Xây dựng kiến nghị có địa chỉ gửi trường mẹ"]
     E{"Số liệu nhất quán, tồn tại nào cũng có kiến nghị?"}
-    HG["👤 Giám đốc phân hiệu kiểm tra và ký báo cáo"]
-    O[/"Báo cáo tổng hợp gửi trường mẹ"/]
+    HG["👤 Bước 5: Giám đốc phân hiệu kiểm tra và ký báo cáo"]
+    O[/"Bước 6: Báo cáo tổng hợp gửi trường mẹ"/]
     A --> B --> C --> D --> E
     E -->|Không| A
     E -->|Có| HG --> O

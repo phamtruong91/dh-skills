@@ -93,16 +93,15 @@ xác minh đầy đủ.
 
 ```mermaid
 flowchart TD
-    A[/"Đơn khiếu nại hoặc tố cáo"/] --> B["Bước 1: Kiểm tra điều kiện thụ lý"]
-    B --> C{"Đủ điều kiện thụ lý?"}
-    C -->|Không| Z["Không thụ lý: trả đơn và hướng dẫn"]
-    C -->|Có| D["Bước 2: Tóm tắt nội dung đơn"]
-    D --> E["Bước 3: Thành lập tổ xác minh, làm việc, lập báo cáo"]
-    E --> F["Bước 4: Đối chiếu căn cứ pháp lý"]
-    F --> G["Bước 5: Đánh giá và xác định nội dung quyết định"]
-    G --> H["Bước 6: Soạn quyết định theo bố cục chuẩn"]
-    H --> HG["👤 Hiệu trưởng ký ban hành"]
-    HG --> I[["Quyết định giải quyết khiếu nại hoặc tố cáo"]]
+    IN[/"Đơn khiếu nại hoặc tố cáo"/] --> B1["Bước 1: Kiểm tra điều kiện thụ lý"]
+    B1 --> B2["Bước 2: Tóm tắt nội dung đơn"]
+    B2 --> B3["Bước 3: Tổ chức xác minh"]
+    B3 --> B4["Bước 4: Đối chiếu căn cứ pháp lý"]
+    B4 --> B5["Bước 5: Đánh giá và xác định nội dung quyết định"]
+    B5 --> B6["Bước 6: Soạn quyết định theo bố cục chuẩn"]
+    B6 --> B7["Bước 7: Trình ký, ban hành và lưu hồ sơ"]
+    B7 --> HG["👤 Hiệu trưởng ký ban hành"]
+    HG --> OUT[["Quyết định giải quyết khiếu nại hoặc tố cáo"]]
 ```
 ```
 

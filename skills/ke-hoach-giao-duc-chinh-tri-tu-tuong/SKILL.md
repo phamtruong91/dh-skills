@@ -95,18 +95,14 @@ lập kế hoạch giáo dục chính trị, tư tưởng năm học hoặc kế
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Năm học hoặc đợt, đối tượng, nội dung trọng tâm, hình thức"/]
-    IN --> A["Bước 1. Xác định yêu cầu theo chỉ đạo"]
-    A --> B["Bước 2. Xây dựng nội dung theo 3 nhóm"]
-    B --> C["Bước 3. Phân đối tượng CBVC và sinh viên"]
-    C --> D["Bước 4. Lập tiến độ chi tiết"]
-    D --> E{"Nội dung bám sát chỉ đạo, hình thức đa dạng?"}
-    E -->|Không| B
-    E -->|Có| HG["👤 Đảng ủy duyệt nội dung chính trị"]
-    HG --> F{"Đảng ủy phê duyệt?"}
-    F -->|Không| B
-    F -->|Có| G["Bước 6. Trình Đảng ủy phê duyệt và ban hành"]
-    G --> OUT[["Kế hoạch giáo dục chính trị, tư tưởng"]]
+    IN[/"Năm học hoặc đợt, đối tượng, nội dung trọng tâm, hình thức"/] --> B1["Bước 1: Xác định yêu cầu theo chỉ đạo"]
+    B1 --> B2["Bước 2: Xây dựng nội dung theo 3 nhóm"]
+    B2 --> B3["Bước 3: Phân đối tượng CBVC và sinh viên"]
+    B3 --> B4["Bước 4: Lập tiến độ chi tiết"]
+    B4 --> B5["Bước 5: Kiểm tra nội dung"]
+    B5 --> B6["Bước 6: Trình Đảng ủy phê duyệt và ban hành"]
+    B6 --> HG["👤 Đảng ủy duyệt nội dung chính trị"]
+    HG --> OUT[["Kế hoạch giáo dục chính trị, tư tưởng"]]
 ```
 
 ## Đầu ra

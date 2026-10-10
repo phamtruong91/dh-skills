@@ -94,15 +94,15 @@ chi tiết, dự toán kinh phí và thư mời để trình lãnh đạo phê d
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A["Xác định quy mô, cấp và mục tiêu hội thảo"] --> B["Soạn kế hoạch tổng thể"]
-    B --> C["Xây dựng chương trình chi tiết theo khung giờ"]
-    C --> D["Lập dự toán kinh phí theo nhóm"]
+    A["Bước 1: Xác định quy mô, cấp và mục tiêu hội thảo"] --> B["Bước 2: Soạn kế hoạch tổng thể"]
+    B --> C["Bước 3: Xây dựng chương trình chi tiết theo khung giờ"]
+    C --> D["Bước 4: Lập dự toán kinh phí theo nhóm"]
     D --> E{"Hội thảo quốc tế?"}
     E -->|Có| F["Soạn thư mời song ngữ Việt Anh"]
-    E -->|Không| G["Soạn thư mời tham dự và thư mời viết bài"]
-    F --> H["Lập checklist triển khai và tiến độ"]
+    E -->|Không| G["Bước 5: Soạn thư mời tham dự và thư mời viết bài"]
+    F --> H["Bước 6: Lập checklist triển khai và tiến độ"]
     G --> H
-    H --> HG["👤 Hiệu trưởng phê duyệt"]
+    H --> HG["👤 Bước 7: Hiệu trưởng phê duyệt"]
     HG --> Z[["Xuất bản bộ hồ sơ kế hoạch, chương trình, dự toán, thư mời"]]
 ```
 

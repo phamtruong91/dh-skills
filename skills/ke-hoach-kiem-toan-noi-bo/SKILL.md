@@ -89,16 +89,15 @@ kế hoạch kiểm toán nội bộ năm để trình Hiệu trưởng (hoặc 
 
 ```mermaid
 flowchart TD
-    A[/"Kiến nghị tồn đọng + lĩnh vực rủi ro cao"/] --> B["Bước 1: Rà soát rủi ro và kiến nghị tồn đọng"]
-    B --> C["Bước 2: Lựa chọn đối tượng theo tiêu chí ưu tiên"]
-    C --> D["Bước 3: Xác định phạm vi và phương pháp từng cuộc"]
-    D --> E["Bước 4: Lập lịch và phân công đoàn kiểm toán"]
-    E --> F["Bước 5: Kiểm tra khả thi, đối chiếu kế hoạch thanh tra"]
-    F --> G{"Đạt yêu cầu?"}
-    G -->|Chưa| E
-    G -->|Đạt| H["Bước 6: Dự thảo kế hoạch theo cấu trúc chuẩn"]
-    H --> HG["👤 Hiệu trưởng hoặc HĐ trường phê duyệt"]
-    HG --> I[["Kế hoạch kiểm toán nội bộ năm"]]
+    IN[/"Kiến nghị tồn đọng + lĩnh vực rủi ro cao"/] --> B1["Bước 1: Rà soát rủi ro và kiến nghị tồn đọng"]
+    B1 --> B2["Bước 2: Lựa chọn đối tượng kiểm toán"]
+    B2 --> B3["Bước 3: Xác định phạm vi và phương pháp từng cuộc"]
+    B3 --> B4["Bước 4: Lập lịch và phân công đoàn kiểm toán"]
+    B4 --> B5["Bước 5: Kiểm tra khả thi và đối chiếu kế hoạch thanh tra"]
+    B5 --> B6["Bước 6: Dự thảo kế hoạch theo cấu trúc chuẩn"]
+    B6 --> B7["Bước 7: Trình phê duyệt và công bố"]
+    B7 --> HG["👤 Hiệu trưởng hoặc HĐ trường phê duyệt"]
+    HG --> OUT[["Kế hoạch kiểm toán nội bộ năm"]]
 ```
 ```
 

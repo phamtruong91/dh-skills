@@ -108,17 +108,14 @@ hồ sơ khám sức khỏe định kỳ, hồ sơ tham gia BHYT và quy trình 
 
 ```mermaid
 flowchart TD
-    A["Bước 1. Xác định loại hồ sơ và mục đích sử dụng"]
-    B["Bước 2. Thiết kế biểu mẫu, tối thiểu dữ liệu nhạy cảm"]
-    C["Bước 3. Xây dựng quy trình quản lý 5 bước"]
-    D["Bước 4. Quy định bảo mật và phân quyền truy cập"]
-    E{"Biểu mẫu gọn, phân công rõ, tuân thủ bảo mật?"}
-    F["Bước 6. Trình phê duyệt và ban hành"]
-    HG["👤 Trưởng Trạm phê duyệt biểu mẫu và quy trình"]
-    O[/"Biểu mẫu và quy trình quản lý hoàn chỉnh"/]
-    A --> B --> C --> D --> E
-    E -->|Không| B
-    E -->|Có| F --> HG --> O
+    IN[/"Biểu mẫu và quy trình quản lý hoàn chỉnh"/] --> B1["Bước 1: Xác định loại hồ sơ và mục đích sử dụng"]
+    B1 --> B2["Bước 2: Thiết kế biểu mẫu"]
+    B2 --> B3["Bước 3: Xây dựng quy trình quản lý 5 bước"]
+    B3 --> B4["Bước 4: Quy định bảo mật và phân quyền truy cập"]
+    B4 --> B5["Bước 5: Rà soát và hoàn thiện"]
+    B5 --> B6["Bước 6: Trình phê duyệt và ban hành"]
+    B6 --> HG["👤 Trưởng Trạm phê duyệt biểu mẫu và quy trình"]
+    HG --> OUT[["Sản phẩm đầu ra"]]
 ```
 
 ## Đầu ra

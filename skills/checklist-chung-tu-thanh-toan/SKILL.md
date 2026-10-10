@@ -165,18 +165,18 @@ Danh mục chi tiết theo từng loại chi:
 
 ```mermaid
 flowchart TD
-    A[/"Loại chi và bộ chứng từ hiện có"/] --> B["Xác định đúng loại chi trong 6 nhóm"]
-    B --> C["Liệt kê chứng từ bắt buộc, đơn vị lập, lưu ý kiểm soát"]
+    A[/"Bước 3: Loại chi và bộ chứng từ hiện có"/] --> B["Bước 1: Xác định đúng loại chi trong 6 nhóm"]
+    B --> C["Bước 2: Liệt kê chứng từ bắt buộc, đơn vị lập, lưu ý kiểm soát"]
     C --> D["Đánh dấu từng chứng từ: Đủ hoặc Thiếu"]
     D --> E{"Đủ chứng từ bắt buộc?"}
     E -->|Thiếu| F["Trả lại đơn vị bổ sung"]
     F --> D
-    E -->|Đủ| G["Kiểm tra tính hợp lệ nội dung chứng từ"]
+    E -->|Đủ| G["Bước 4: Kiểm tra tính hợp lệ nội dung chứng từ"]
     G --> H{"Nội dung hợp lệ?"}
     H -->|Sai| I["Yêu cầu điều chỉnh"]
     I --> G
     H -->|Đúng| HG["👤 Kế toán trưởng kiểm soát"]
-    HG --> J[["Kết luận đủ điều kiện trình ký thanh toán"]]
+    HG --> J[["Bước 5: Kết luận đủ điều kiện trình ký thanh toán"]]
 ```
 
 ## Đầu ra

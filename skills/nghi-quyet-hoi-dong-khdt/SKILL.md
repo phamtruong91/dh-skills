@@ -69,13 +69,13 @@ làm căn cứ để Hiệu trưởng quyết định và các đơn vị triể
 ```mermaid
 flowchart TD
     A[/"Biên bản họp + Quy chế HĐ KH-ĐT"/]
-    B["Trích lập phần căn cứ: quy chế, biên bản phiên họp"]
-    C["Soạn các điều quyết nghị theo kết quả biểu quyết"]
+    B["Bước 1: Trích lập phần căn cứ: quy chế, biên bản phiên họp"]
+    C["Bước 2: Soạn các điều quyết nghị theo kết quả biểu quyết"]
     D{"Vượt thẩm quyền hội đồng?"}
     E["Loại khỏi nghị quyết, chuyển Hiệu trưởng quyết định"]
-    F["Đối chiếu từng điều với biên bản họp"]
+    F["Bước 3: Đối chiếu từng điều với biên bản họp"]
     HG["👤 Chủ tịch hội đồng ký ban hành nghị quyết"]
-    G["Hoàn thiện thể thức; chuyển đơn vị triển khai"]
+    G["Bước 4: Hoàn thiện thể thức; chuyển đơn vị triển khai"]
     H[/"Nghị quyết đã ban hành"/]
     A --> B --> C --> D
     D -->|Có| E --> F

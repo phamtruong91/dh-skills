@@ -109,17 +109,14 @@ gửi Ban Giám hiệu, Phòng CTSV và cơ quan y tế địa phương.
 
 ```mermaid
 flowchart TD
-    A["Bước 1. Xác định kỳ báo cáo và biểu mẫu yêu cầu"]
-    B["Bước 2. Tổng hợp số liệu 4 mảng: khám, dịch, vệ sinh, BHYT"]
-    C["Bước 3. Đánh giá kết quả so với kế hoạch, nêu tồn tại"]
-    D["Bước 4. Xây dựng kiến nghị với Ban Giám hiệu"]
-    E{"Số liệu nhất quán, ngôn ngữ khách quan?"}
-    F["Bước 5. Kiểm tra và hoàn thiện văn bản báo cáo"]
-    HG["👤 Trưởng Trạm kiểm tra và ký báo cáo"]
-    O[/"Báo cáo công tác y tế hoàn chỉnh"/]
-    A --> B --> C --> D --> E
-    E -->|Không| B
-    E -->|Có| F --> HG --> O
+    IN[/"Báo cáo công tác y tế hoàn chỉnh"/] --> B1["Bước 1: Xác định kỳ báo cáo và biểu mẫu yêu cầu"]
+    B1 --> B2["Bước 2: Tổng hợp số liệu theo 4 mảng"]
+    B2 --> B3["Bước 3: Đánh giá kết quả và tồn tại"]
+    B3 --> B4["Bước 4: Xây dựng kiến nghị"]
+    B4 --> B5["Bước 5: Kiểm tra và hoàn thiện văn bản"]
+    B5 --> B6["Bước 6: Trình ký và phát hành"]
+    B6 --> HG["👤 Trưởng Trạm kiểm tra và ký báo cáo"]
+    HG --> OUT[["Sản phẩm đầu ra"]]
 ```
 
 ## Đầu ra

@@ -73,11 +73,11 @@ Dùng chung cho giảng viên, nghiên cứu viên, học viên cao học, NCS �
 ```mermaid
 flowchart TD
     A[/"Tập tài liệu được cung cấp"/]
-    B["Trích xuất có cấu trúc từng tài liệu"]
-    C["Lập ma trận literature"]
-    D["Tổng hợp đồng thuận, mâu thuẫn, xu hướng"]
-    E["Xác định gap nghiên cứu"]
-    F["Dự thảo outline + danh mục trích dẫn"]
+    B["Bước 1: Trích xuất có cấu trúc từng tài liệu"]
+    C["Bước 2: Lập ma trận literature"]
+    D["Bước 3: Tổng hợp đồng thuận, mâu thuẫn, xu hướng"]
+    E["Bước 4: Xác định gap nghiên cứu"]
+    F["Bước 5: Dự thảo outline + danh mục trích dẫn"]
     HG["👤 Nhà nghiên cứu kiểm tra từng trích dẫn"]
     G[/"Outline tổng quan + danh mục trích dẫn"/]
     A --> B --> C --> D --> E --> F --> HG --> G

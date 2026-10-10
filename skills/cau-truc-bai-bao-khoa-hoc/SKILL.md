@@ -96,16 +96,15 @@ lần cuối trước khi nộp.
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/Ý tưởng bài báo và dữ liệu nghiên cứu/] --> A["Bước 1: Rà soát và chốt tiêu đề"]
-    A --> B{"Tiêu đề đạt chuẩn?"}
-    B -->|Không| C["Đề xuất 2-3 phương án tiêu đề mới"]
-    C --> A
-    B -->|Có| D["Bước 2-3: Tóm tắt 4 ý và từ khóa"]
-    D --> E["Bước 4: Dựng khung bài theo IMRaD"]
-    E --> F["Bước 5: Chuẩn hóa tài liệu tham khảo"]
-    F --> HG["👤 Bước 6: Đồng tác giả duyệt bản thảo"]
-    HG --> H["Chạy checklist trước khi gửi"]
-    H --> Z[["Bước 7: Xuất bản bản thảo hoàn chỉnh"]]
+    IN[/"Đầu vào"/] --> B1["Bước 1: Rà soát và chốt tiêu đề"]
+    B1 --> B2["Bước 2: Soạn tóm tắt (abstract)"]
+    B2 --> B3["Bước 3: Chuẩn hóa từ khóa"]
+    B3 --> B4["Bước 4: Dựng khung bài báo theo IMRaD"]
+    B4 --> B5["Bước 5: Chuẩn hóa tài liệu tham khảo"]
+    B5 --> B6["Bước 6: Đồng tác giả duyệt và chạy checklist"]
+    B6 --> B7["Bước 7: Xuất bản"]
+    B7 --> HG["👤 Bước 6: Đồng tác giả duyệt bản thảo"]
+    HG --> OUT[["Bước 7: Xuất bản bản thảo hoàn chỉnh"]]
 ```
 
 ## Đầu ra

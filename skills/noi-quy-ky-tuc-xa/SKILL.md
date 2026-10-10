@@ -125,7 +125,7 @@ flowchart TD
     E --> F["Bước 6. Lấy ý kiến và chỉnh sửa"]
     F --> G{"Cần chỉnh sửa thêm?"}
     G -->|Có| C
-    G -->|Không| HG["👤 Hiệu trưởng ký ban hành"]
+    G -->|Không| HG["👤 Bước 7: Hiệu trưởng ký ban hành"]
     HG --> OUT[["Nội quy + quy trình xét duyệt + mẫu đơn"]]
 ```
 

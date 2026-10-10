@@ -90,14 +90,15 @@ theo năm hoặc theo giai đoạn (3–5 năm).
 
 ```mermaid
 flowchart TD
-    A[/"Hiện trạng hạ tầng + chiến lược trường"/] --> B["Bước 1. Đánh giá hiện trạng và xác định điểm nghẽn"]
-    B --> C["Bước 2. Xác định mục tiêu theo giai đoạn"]
-    C --> D["Bước 3. Chi tiết hóa danh mục hạng mục"]
-    D --> E["Bước 4. Lập tiến độ thực hiện"]
-    E --> F["Bước 5. Dự toán kinh phí và xác định nguồn vốn"]
-    F --> G["Bước 6. Phân công trách nhiệm và cơ chế giám sát"]
-    G --> HG["👤 Hiệu trưởng phê duyệt"]
-    HG --> H[["Kế hoạch phát triển CNTT + bảng hạng mục"]]
+    IN[/"Hiện trạng hạ tầng + chiến lược trường"/] --> B1["Bước 1: Đánh giá hiện trạng và xác định điểm nghẽn"]
+    B1 --> B2["Bước 2: Xác định mục tiêu theo giai đoạn"]
+    B2 --> B3["Bước 3: Chi tiết hóa danh mục hạng mục"]
+    B3 --> B4["Bước 4: Lập tiến độ thực hiện"]
+    B4 --> B5["Bước 5: Dự toán kinh phí và xác định nguồn vốn"]
+    B5 --> B6["Bước 6: Phân công trách nhiệm và cơ chế giám sát"]
+    B6 --> B7["Bước 7: Tổng hợp và hoàn thiện văn bản kế hoạch"]
+    B7 --> HG["👤 Hiệu trưởng phê duyệt"]
+    HG --> OUT[["Kế hoạch phát triển CNTT + bảng hạng mục"]]
 ```
 
 ## Đầu ra

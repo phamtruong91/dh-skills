@@ -121,13 +121,17 @@ ký hợp đồng thực hiện đề tài.
 
 ```mermaid
 flowchart TD
-    IN[/Thông tin đề tài và dữ liệu đầu vào/] --> A["Bước 1: Xác định cấp và chọn biểu mẫu"]
-    A --> B["Bước 2-4: Tính cấp thiết, mục tiêu, nội dung"]
-    B --> C["Bước 5-6: Phương pháp và sản phẩm dự kiến"]
-    C --> D["Bước 7-8: Dự toán kinh phí và tiến độ"]
-    D --> E{"Bước 9: Logic xuyên suốt đạt?"}
-    E -->|Không| B
-    E -->|Có| HG["👤 Bước 10: Chủ nhiệm ký duyệt"]
+    IN[/"Đầu vào"/] --> B1["Bước 1: Xác định cấp đề tài và chọn biểu mẫu"]
+    B1 --> B2["Bước 2: Viết mục 1 – Tính cấp thiết"]
+    B2 --> B3["Bước 3: Viết mục 2 – Mục tiêu nghiên cứu"]
+    B3 --> B4["Bước 4: Viết mục 3 – Nội dung nghiên cứu"]
+    B4 --> B5["Bước 5: Viết mục 4 – Phương pháp nghiên cứu"]
+    B5 --> B6["Bước 6: Viết mục 5 – Sản phẩm dự kiến"]
+    B6 --> B7["Bước 7: Lập mục 6 – Dự toán kinh phí chi tiết"]
+    B7 --> B8["Bước 8: Lập mục 7 – Tiến độ thực hiện"]
+    B8 --> B9["Bước 9: Kiểm tra tính logic xuyên suốt"]
+    B9 --> B10["Bước 10: Hoàn thiện và xuất bản"]
+    B10 --> HG["👤 Bước 10: Chủ nhiệm ký duyệt"]
     HG --> OUT[["Thuyết minh hoàn chỉnh và bảng kiểm logic"]]
 ```
 

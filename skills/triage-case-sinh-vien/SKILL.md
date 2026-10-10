@@ -82,12 +82,12 @@ khiếu nại điểm số, vướng mắc học phí, vấn đề KTX, đề ng
 ```mermaid
 flowchart TD
     A[/"Yêu cầu của sinh viên"/]
-    B["Tóm tắt case (tối đa 5 dòng)"]
-    C["Phân loại nghiệp vụ + căn cứ"]
-    D["Đánh giá mức ưu tiên, gắn SLA"]
-    E["Định tuyến đơn vị/cá nhân xử lý"]
-    F["Soạn dự thảo phản hồi (chưa gửi)"]
-    G["Ghi log case"]
+    B["Bước 1: Tóm tắt case (tối đa 5 dòng)"]
+    C["Bước 2: Phân loại nghiệp vụ + căn cứ"]
+    D["Bước 3: Đánh giá mức ưu tiên, gắn SLA"]
+    E["Bước 4: Định tuyến đơn vị/cá nhân xử lý"]
+    F["Bước 5: Soạn dự thảo phản hồi (chưa gửi)"]
+    G["Bước 6: Ghi log case"]
     HG["👤 Cán bộ xác nhận; chỉ cán bộ liên hệ SV"]
     H[/"Case log + dự thảo phản hồi"/]
     A --> B --> C --> D --> E --> F --> G --> HG --> H

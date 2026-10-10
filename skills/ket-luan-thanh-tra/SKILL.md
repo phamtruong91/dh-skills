@@ -98,7 +98,7 @@ flowchart TD
     D --> E["Bước 4: Viết kết luận chung"]
     E --> F["Bước 5: Viết kiến nghị xử lý và thời hạn khắc phục"]
     F --> G["Bước 6: Soạn kết luận theo bố cục chuẩn"]
-    G --> HG["👤 Người ra QĐ thanh tra ký ban hành"]
+    G --> HG["👤 Bước 7: Người ra QĐ thanh tra ký ban hành"]
     HG --> H[["Kết luận thanh tra + bảng theo dõi kiến nghị"]]
 ```
 ```

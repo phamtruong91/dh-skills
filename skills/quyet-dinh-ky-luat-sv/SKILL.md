@@ -114,18 +114,14 @@ phong trào, nghiên cứu khoa học theo đợt (học kỳ, năm học, độ
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Biên bản vi phạm hoặc đề nghị khen thưởng"/]
-    A["Bước 1. Xác định loại quyết định và hình thức xử lý"]
-    B["Bước 2. Kiểm tra trình tự hồ sơ kỷ luật"]
-    C{"Hồ sơ đầy đủ?"}
-    D["Báo lại để bổ sung hồ sơ"]
-    E["Bước 3. Soạn khung quyết định theo thể thức NĐ 30"]
-    F["Bước 4/5. Hoàn thiện nội dung các Điều"]
-    G["👤 Hội đồng duyệt, Hiệu trưởng ký"]
-    OUT[/"Quyết định khen thưởng hoặc kỷ luật"/]
-    IN --> A --> B --> C
-    C -->|Không| D --> B
-    C -->|Có| E --> F --> G --> OUT
+    IN[/"Biên bản vi phạm hoặc đề nghị khen thưởng"/] --> B1["Bước 1: Xác định loại quyết định và hình thức xử lý"]
+    B1 --> B2["Bước 2: Kiểm tra trình tự hồ sơ kỷ luật"]
+    B2 --> B3["Bước 3: Soạn khung quyết định theo thể thức NĐ 30/2020"]
+    B3 --> B4["Bước 4: Hoàn thiện nội dung các Điều — quyết định kỷ luật"]
+    B4 --> B5["Bước 5: Hoàn thiện nội dung các Điều — quyết định khen thưởng"]
+    B5 --> B6["Bước 6: Kiểm tra và xuất bản"]
+    B6 --> HG["👤 Hội đồng duyệt, Hiệu trưởng ký"]
+    HG --> OUT[["Quyết định khen thưởng hoặc kỷ luật"]]
 ```
 
 ## Đầu ra

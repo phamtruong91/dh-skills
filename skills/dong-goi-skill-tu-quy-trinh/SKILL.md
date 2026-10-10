@@ -82,12 +82,12 @@ Khi một đơn vị muốn biến quy trình công việc thực tế (đang l�
 ```mermaid
 flowchart TD
     A[/"Quy trình cần đóng gói"/]
-    B["Rà soát mô tả, phân rã IPO + ngoại lệ + điểm human gate"]
-    C["Phân tích cặp mẫu input - output"]
-    D["Vẽ process map có điểm human gate"]
-    E["Viết skill spec theo chuẩn 9 mục"]
-    F["Soạn test case gồm case thường và case ngoại lệ"]
-    G["Chạy thử AI với từng test case"]
+    B["Bước 1: Rà soát mô tả, phân rã IPO + ngoại lệ + điểm human gate"]
+    C["Bước 2: Phân tích cặp mẫu input - output"]
+    D["Bước 3: Vẽ process map có điểm human gate"]
+    E["Bước 4: Viết skill spec theo chuẩn 9 mục"]
+    F["Bước 5: Soạn test case gồm case thường và case ngoại lệ"]
+    G["Bước 6: Chạy thử AI với từng test case"]
     H{"Đạt tiêu chí nghiệm thu?"}
     I["Hiệu chỉnh spec"]
     HG["👤 Process owner nghiệm thu, ký xác nhận gói skill"]

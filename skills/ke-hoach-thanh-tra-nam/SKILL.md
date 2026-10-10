@@ -101,7 +101,7 @@ flowchart TD
     E -->|Không| G["Bước 4: Dự kiến đoàn thanh tra theo chuyên môn"]
     G --> H["Bước 5: Xác định phương pháp từng cuộc"]
     H --> I["Bước 6: Soạn kế hoạch theo bố cục chuẩn"]
-    I --> HG["👤 Hiệu trưởng phê duyệt, ban hành"]
+    I --> HG["👤 Bước 7: Hiệu trưởng phê duyệt, ban hành"]
     HG --> J[["Kế hoạch thanh tra nội bộ năm"]]
 ```
 ```

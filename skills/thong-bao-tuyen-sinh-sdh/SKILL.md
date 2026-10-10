@@ -138,23 +138,17 @@ tiến sĩ cho từng đợt trong năm, theo chỉ tiêu và kế hoạch đã 
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Input: Chỉ tiêu, đợt tuyển, quy chế tuyển sinh"/]
-    A["Bước 1: Xác định trình độ và đợt tuyển"]
-    B["Bước 2: Liệt kê chỉ tiêu từng ngành"]
-    C["Bước 3: Quy định điều kiện dự tuyển"]
-    D["Bước 4: Quy định hình thức tuyển"]
-    E["Bước 5: Liệt kê thành phần hồ sơ dự tuyển"]
-    F["Bước 6-7: Ghi thời gian đào tạo, học phí, thời gian - địa chỉ nộp"]
-    G{"Bước 8: Kiểm tra đối chiếu đạt?"}
-    H["Chỉnh sửa nội dung chưa đạt"]
-    HG["👤 Người ký duyệt thông báo"]
-    I["Bước 9: Xuất bản, đăng website, xuất file Word"]
-    OUT[/"Output: Thông báo tuyển sinh SĐH"/]
-
-    IN --> A --> B --> C --> D --> E --> F --> G
-    G -->|Không| H
-    H --> G
-    G -->|Có| HG --> I --> OUT
+    IN[/"Input: Chỉ tiêu, đợt tuyển, quy chế tuyển sinh"/] --> B1["Bước 1: Xác định trình độ và đợt tuyển"]
+    B1 --> B2["Bước 2: Liệt kê chỉ tiêu từng ngành"]
+    B2 --> B3["Bước 3: Quy định điều kiện dự tuyển"]
+    B3 --> B4["Bước 4: Quy định hình thức tuyển"]
+    B4 --> B5["Bước 5: Liệt kê thành phần hồ sơ dự tuyển"]
+    B5 --> B6["Bước 6: Ghi rõ thời gian đào tạo và học phí"]
+    B6 --> B7["Bước 7: Ghi rõ thời gian – địa chỉ nộp hồ sơ"]
+    B7 --> B8["Bước 8: Kiểm tra, đối chiếu trước khi duyệt"]
+    B8 --> B9["Bước 9: Xuất bản thông báo"]
+    B9 --> HG["👤 Người ký duyệt thông báo"]
+    HG --> OUT[["Output: Thông báo tuyển sinh SĐH"]]
 ```
 
 ## Đầu ra

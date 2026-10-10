@@ -106,15 +106,13 @@ luật, định hướng kỹ năng học tập bậc đại học và tổ ch�
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    IN[/"Đối tượng, số SV, thời gian, địa điểm"/]
-    IN --> A["Bước 1. Xác định đối tượng và phạm vi tổ chức"]
-    A --> B["Bước 2. Xây dựng khung 5 buổi theo chủ đề chuẩn"]
-    B --> C["Bước 3. Phân công báo cáo viên từng buổi"]
-    C --> D["Bước 4. Lập lịch chi tiết từng buổi"]
-    D --> E{"Kiểm tra: lịch không trùng giờ học, báo cáo viên xác nhận, hội trường và tài liệu sẵn sàng?"}
-    E -->|Không| D
-    E -->|Có| F["Bước 6. Hoàn thiện kế hoạch trình ký"]
-    F --> OUT[["Kế hoạch hoàn chỉnh + bảng lịch chi tiết"]]
+    IN[/"Đối tượng, số SV, thời gian, địa điểm"/] --> B1["Bước 1: Xác định đối tượng và phạm vi tổ chức"]
+    B1 --> B2["Bước 2: Xây dựng khung 5 buổi theo chủ đề chuẩn"]
+    B2 --> B3["Bước 3: Phân công báo cáo viên từng buổi"]
+    B3 --> B4["Bước 4: Lập lịch chi tiết từng buổi"]
+    B4 --> B5["Bước 5: Kiểm tra điều kiện tổ chức"]
+    B5 --> B6["Bước 6: Hoàn thiện kế hoạch trình ký"]
+    B6 --> OUT[["Kế hoạch hoàn chỉnh + bảng lịch chi tiết"]]
 ```
 
 ## Đầu ra

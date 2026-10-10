@@ -93,15 +93,15 @@ soạn lời nói đầu và mục lục, giao bản in / bản điện tử.
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A["Thu thập và kiểm kê bài viết"] --> B{"Còn bài thiếu hoặc nộp muộn?"}
-    B -->|Có| C["Báo Ban Tổ chức đôn đốc, loại bài quá hạn"]
-    B -->|Không| D["Chuẩn hoá hình thức từng bài viết"]
-    C --> D
-    D --> E["Chuẩn hoá trích dẫn tài liệu tham khảo"]
-    E --> F["Sắp xếp bài theo phiên thảo luận"]
-    F --> G["Soạn bìa, lời nói đầu và mục lục"]
-    G --> HG["👤 Trưởng phòng KHCN duyệt"]
-    HG --> Z[["Xuất bản kỷ yếu PDF và bản in"]]
+    IN[/"Đầu vào"/] --> B1["Bước 1: Thu thập và kiểm kê bài viết"]
+    B1 --> B2["Bước 2: Chuẩn hoá hình thức từng bài"]
+    B2 --> B3["Bước 3: Chuẩn hoá trích dẫn tài liệu tham khảo"]
+    B3 --> B4["Bước 4: Sắp xếp bài theo phiên thảo luận"]
+    B4 --> B5["Bước 5: Soạn phần mở đầu kỷ yếu"]
+    B5 --> B6["Bước 6: Kiểm tra lần cuối và trình duyệt"]
+    B6 --> B7["Bước 7: Xuất bản kỷ yếu"]
+    B7 --> HG["👤 Trưởng phòng KHCN duyệt"]
+    HG --> OUT[["Xuất bản kỷ yếu PDF và bản in"]]
 ```
 
 ## Đầu ra

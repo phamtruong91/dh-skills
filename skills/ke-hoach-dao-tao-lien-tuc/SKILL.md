@@ -82,16 +82,14 @@ Khi Trung tâm Đào tạo liên tục / Trường bồi dưỡng cần lập k�
 
 ```mermaid
 flowchart TD
-    A["Bước 1: Tổng hợp nhu cầu theo đối tượng và chủ đề"]
-    B["Bước 2: Xây dựng danh mục khóa đủ 7 trường thông tin"]
-    C["Bước 3: Lập lịch khai giảng theo quý/tháng"]
-    D["Bước 4: Dự toán thu – chi theo hệ số lấp đầy thực tế"]
-    E{"Đủ điều kiện pháp lý và tài chính?"}
-    HG["👤 Giám đốc Trung tâm và Ban Giám hiệu phê duyệt"]
-    O[/"Kế hoạch đào tạo liên tục năm + phụ lục"/]
-    A --> B --> C --> D --> E
-    E -->|Không| B
-    E -->|Có| HG --> O
+    IN[/"Kế hoạch đào tạo liên tục năm + phụ lục"/] --> B1["Bước 1: Tổng hợp và phân nhóm nhu cầu đào tạo"]
+    B1 --> B2["Bước 2: Xây dựng danh mục khóa học"]
+    B2 --> B3["Bước 3: Lập lịch khai giảng"]
+    B3 --> B4["Bước 4: Dự toán thu – chi"]
+    B4 --> B5["Bước 5: Rà soát pháp lý và điều kiện mở khóa"]
+    B5 --> B6["Bước 6: Trình duyệt và ban hành"]
+    B6 --> HG["👤 Giám đốc Trung tâm và Ban Giám hiệu phê duyệt"]
+    HG --> OUT[["Sản phẩm đầu ra"]]
 ```
 
 ## Đầu ra

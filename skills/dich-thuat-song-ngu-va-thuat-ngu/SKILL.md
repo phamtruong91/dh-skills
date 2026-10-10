@@ -80,12 +80,12 @@ giới thiệu chương trình, văn bằng/chứng chỉ, nội dung website, h
 ```mermaid
 flowchart TD
     A[/"Văn bản gốc"/]
-    B["Xác định register, bộ thuật ngữ"]
-    C["Dịch đầy đủ (bản dịch thô)"]
-    D["Áp glossary, danh sách không-dịch"]
-    E["Đối chiếu chéo số liệu, tên, ngày tháng"]
-    F["QA: đọc lại như văn bản độc lập"]
-    G["Lập issue list chỗ chưa chắc chắn"]
+    B["Bước 1: Xác định register, bộ thuật ngữ"]
+    C["Bước 2: Dịch đầy đủ (bản dịch thô)"]
+    D["Bước 3: Áp glossary, danh sách không-dịch"]
+    E["Bước 4: Đối chiếu chéo số liệu, tên, ngày tháng"]
+    F["Bước 5: QA: đọc lại như văn bản độc lập"]
+    G["Bước 6: Lập issue list chỗ chưa chắc chắn"]
     HG["👤 Biên tập viên song ngữ duyệt"]
     H[/"Bản dịch hoàn chỉnh + issue list"/]
     A --> B --> C --> D --> E --> F --> G --> HG --> H

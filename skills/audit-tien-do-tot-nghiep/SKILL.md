@@ -82,15 +82,15 @@ cố vấn học tập — không phụ thuộc tên đơn vị.
 ```mermaid
 flowchart TD
     A[/"Bảng điểm sinh viên"/]
-    B["Validate dữ liệu (mã HP, thang điểm)"]
-    C["Chuẩn hóa, áp quy tắc tương đương"]
-    D["Đối chiếu từng khối kiến thức"]
-    E["Kiểm tra điều kiện bổ sung (GPA, chứng chỉ)"]
+    B["Bước 1: Validate dữ liệu (mã HP, thang điểm)"]
+    C["Bước 2: Chuẩn hóa, áp quy tắc tương đương"]
+    D["Bước 3: Đối chiếu từng khối kiến thức"]
+    E["Bước 4: Kiểm tra điều kiện bổ sung (GPA, chứng chỉ)"]
     F{"Đạt đủ điều kiện tốt nghiệp?"}
-    G["Liệt kê thiếu + gợi ý học phần bổ sung"]
+    G["Bước 5: Liệt kê thiếu + gợi ý học phần bổ sung"]
     H["Lập exception list trường hợp đặc biệt"]
     HG["👤 Chuyên viên Đào tạo kiểm tra; HĐ xét TN quyết định"]
-    I[/"Báo cáo audit + exception list"/]
+    I[/"Bước 6: Báo cáo audit + exception list"/]
     A --> B --> C --> D --> E --> F
     F -->|Không| G --> H
     F -->|Có| H

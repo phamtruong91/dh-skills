@@ -6,16 +6,16 @@ Ngày lập bản đối chiếu: 2026-10-09. Nguồn chính thức đã tra c�
 
 Nguồn: https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-259-2026-nd-cp-quy-dinh-ve-tuyen-dung-su-dung-va-quan-ly-vien-chuc-119260707070701707.htm
 
-Cập nhật căn cứ tuyển dụng, hợp đồng làm việc, bổ nhiệm, điều động và đào tạo viên chức. Không tái sử dụng số điều hoặc mẫu phiếu của NĐ115. Phải yêu cầu ngày tuyển dụng, ngày phê duyệt kế hoạch, loại hợp đồng, trạng thái hồ sơ và bản văn NĐ259 để chọn điều khoản chuyển tiếp; không tự áp dụng điều22 LuậtViênChức2010. Các văn bản cũ chỉ là căn cứ lịch sử khi chuyển tiếp cho phép.
+Cập nhật căn cứ tuyển dụng, hợp đồng làm việc, bổ nhiệm, điều động và đào tạo viên chức. Không tái sử dụng số điều hoặc mẫu phiếu của NĐ 115. Phải yêu cầu ngày tuyển dụng, ngày phê duyệt kế hoạch, loại hợp đồng, trạng thái hồ sơ và bản văn NĐ 259 để chọn điều khoản chuyển tiếp; không tự áp dụng điều22 Luật Viên chức2010. Các văn bản cũ chỉ là căn cứ lịch sử khi chuyển tiếp cho phép.
 
-## 235/2026/NĐ-CP; phạm vi: Hợp đồng lao động và dịch vụ thực hiện công việc trong đơn vị sự nghiệp công lập
+## Nghị định 235/2026/NĐ-CP; phạm vi: Hợp đồng lao động và dịch vụ thực hiện công việc trong đơn vị sự nghiệp công lập
 
 Nguồn: https://baochinhphu.vn/quy-dinh-moi-ve-hop-dong-thuc-hien-cong-viec-trong-don-vi-su-nghiep-cong-lap-102260630062226594.htm
 
-Phân biệt hợp đồng làm việc của viên chức với hợp đồng lao động/dịch vụ. NĐ235 cho công việc quản lý/chuyên môn/nghiệp vụ/hỗ trợ; công việc phục vụ như bảo vệ, lái xe ưu tiên tổ chức cung cấp dịch vụ theo điều kiện nghị định, không mặc định tất cả là hợp đồng lao động. Kiểm tra thẩm quyền ký theo nhóm vị trí.
+Phân biệt hợp đồng làm việc của viên chức với hợp đồng lao động/dịch vụ. NĐ 235 cho công việc quản lý/chuyên môn/nghiệp vụ/hỗ trợ; công việc phục vụ như bảo vệ, lái xe ưu tiên tổ chức cung cấp dịch vụ theo điều kiện nghị định, không mặc định tất cả là hợp đồng lao động. Kiểm tra thẩm quyền ký theo nhóm vị trí.
 
-## Luật Nhà giáo; Nghị định93/2026/NĐ-CP; khoản9Điều62 NĐ259/2026; phạm vi: Viên chức là nhà giáo
+## Luật Nhà giáo; Nghị định 93/2026/NĐ-CP; khoản 9 Điều 62 NĐ 259/2026; phạm vi: Viên chức là nhà giáo
 
 Nguồn: https://xaydungchinhsach.chinhphu.vn/huong-dan-quan-ly-doi-ngu-nha-giao-sap-xep-bo-nhiem-chuc-danh-thuc-hien-che-do-chinh-sach-xep-luong-119260811083919821.htm
 
-Thêm input đối tượng là nhà giáo hay viên chức khác. Nếu pháp luật nhà giáo có quy định khác về thẩm quyền, tiêu chuẩn, điều kiện, trình tự, thủ tục tuyển dụng/sử dụng/quản lý, áp dụng quy định nhà giáo và hướng dẫn BộGDĐT thay vì quy tắc chung NĐ259.
+Thêm input đối tượng là nhà giáo hay viên chức khác. Nếu pháp luật nhà giáo có quy định khác về thẩm quyền, tiêu chuẩn, điều kiện, trình tự, thủ tục tuyển dụng/sử dụng/quản lý, áp dụng quy định nhà giáo và hướng dẫn Bộ GDĐT thay vì quy tắc chung NĐ 259.
