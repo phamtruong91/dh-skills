@@ -44,6 +44,7 @@ và ký hợp đồng làm việc.
 - Luật 129/2025/QH15; Nghị định 259/2026/NĐ-CP; phạm vi: Viên chức đơn vị sự nghiệp công lập; kiểm tra chuyển tiếp và quy định riêng về nhà giáo: Cập nhật căn cứ tuyển dụng, hợp đồng làm việc, bổ nhiệm, điều động và đào tạo viên chức. Không tái sử dụng số điều hoặc mẫu phiếu của NĐ 115. Phải yêu cầu ngày tuyển dụng, ngày phê duyệt kế hoạch, loại hợp đồng, trạng thái hồ sơ và bản văn NĐ 259 để chọn điều khoản chuyển tiếp; không tự áp dụng điều22 Luật Viên chức2010. Các văn bản cũ chỉ là căn cứ lịch sử khi chuyển tiếp cho phép.
 - Luật Nhà giáo; Nghị định 93/2026/NĐ-CP; khoản 9 Điều 62 NĐ 259/2026; phạm vi: Viên chức là nhà giáo: Thêm input đối tượng là nhà giáo hay viên chức khác. Nếu pháp luật nhà giáo có quy định khác về thẩm quyền, tiêu chuẩn, điều kiện, trình tự, thủ tục tuyển dụng/sử dụng/quản lý, áp dụng quy định nhà giáo và hướng dẫn Bộ GDĐT thay vì quy tắc chung NĐ 259.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Tổng hợp nhu cầu, lập kế hoạch tuyển dụng**
 - Làm gì: Phòng Tổ chức – Cán bộ tổng hợp đề xuất từ `don_vi_de_xuat`; đối chiếu `vi_tri_tuyen` với đề án vị trí việc làm và số lượng người làm việc được giao (không tuyển vượt chỉ tiêu); dự thảo Kế hoạch tuyển dụng gồm: số lượng, cơ cấu vị trí, `tieu_chuan`, `hinh_thuc_xet_tuyen`, kinh phí, tiến độ theo `thoi_gian_du_kien`; trình Hiệu trưởng phê duyệt.
@@ -131,17 +132,6 @@ flowchart TD
   (8) Hợp đồng làm việc.
 - Checklist tiến độ 9 bước (đánh dấu hoàn thành từng bước).
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của bộ hồ sơ tuyển dụng — các văn bản xếp theo đúng trình tự phát sinh trong đợt tuyển dụng:
-1. Kế hoạch tuyển dụng (đã được Hiệu trưởng phê duyệt);
-2. Quyết định thành lập Hội đồng tuyển dụng (+ các ban giúp việc);
-3. Thông báo tuyển dụng (đã đăng công khai, niêm yết);
-4. Danh sách vòng 1: người đủ điều kiện / không đủ điều kiện (kèm lý do loại);
-5. Biên bản vòng 2 + bảng điểm (có xác nhận);
-6. Báo cáo kết quả + Quyết định công nhận kết quả trúng tuyển (kèm danh sách người trúng tuyển);
-7. Quyết định tuyển dụng từng người;
-8. Hợp đồng làm việc;
-9. Checklist tiến độ 9 bước (đánh dấu hoàn thành từng bước).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -149,7 +139,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Kế hoạch tuyển dụng (đã được Hiệu trưởng phê duyệt); Quyết định thành lập Hội đồng tuyển dụng (+ các ban giúp việc); Thông báo tuyển dụng (đã đăng công khai, niêm yết); Danh sách vòng 1: người đủ điều kiện / không đủ điều kiện (kèm lý d…; … (đủ 9 phần)
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và cấu trúc theo references/quy-cach-dau-ra.md và căn cứ đã chọn tại references/phap-ly.md.

@@ -38,6 +38,7 @@ học phần (theo kế hoạch biên soạn của khoa/trường).
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 131/2025/QH15 sửa đổi sở hữu trí tuệ, hiệu lực 01/04/2026: Yêu cầu chủ thể quyền, nguồn tài trợ, hợp đồng và loại tài sản trí tuệ; đối chiếu sửa đổi 131/2025 theo thời điểm. Không mặc định quyền thuộc trường hay tác giả khi chưa có căn cứ; rà soát quyền sử dụng học liệu trước chia sẻ/chuyển giao.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định yêu cầu và phạm vi biên soạn**
 - Làm gì: Tiếp nhận nhiệm vụ biên soạn từ khoa/trường; đọc kỹ đề cương chi tiết học
@@ -176,7 +177,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần của "Cấu trúc output chuẩn": bìa, Lời nói đầu, Mục lục chi tiết, nội dung các chương (đủ 6 mục/chương), Phụ lục, Tài liệu tham khảo.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Mọi CLO của đề cương học phần đều được ít nhất một chương "phủ" (có bảng đối chiếu chương–CLO).
 - [ ] Mỗi chương có đúng 6 mục theo đúng thứ tự; thuật ngữ và quy ước trích dẫn thống nhất toàn giáo trình.
 - [ ] Nội dung output khớp với Input (`ten_giao_trinh`, `hoc_phan`, `tac_gia`, `de_cuong_hoc_phan`).

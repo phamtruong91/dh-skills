@@ -38,6 +38,7 @@ phản biện, phê duyệt, lưu trữ bảo mật đến rút đề thi theo m
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xây dựng ma trận đề thi theo chuẩn đầu ra học phần**
 - Làm gì: căn cứ chuẩn đầu ra học phần (CLO), lập ma trận phân bố câu hỏi theo 4 mức độ nhận thức:
@@ -134,19 +135,6 @@ flowchart TD
 - Văn bản quy trình xây dựng và quản lý ngân hàng đề thi (hoàn chỉnh).
 - Bộ biểu mẫu kèm theo: phiếu biên soạn câu hỏi, biên bản phản biện, sổ theo dõi rút đề thi.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của văn bản quy trình xây dựng và quản lý ngân hàng
-đề thi, các phần theo đúng thứ tự:
-1. Tên quy trình + quyết định ban hành kèm theo (số, ngày ban hành, chức danh người ký).
-2. Các điều khoản theo đúng trình tự vòng đời câu hỏi: Điều 1. Ma trận đề thi (phân bố theo CLO
-   và 4 mức độ nhận thức); Điều 2. Biên soạn câu hỏi (biểu mẫu, nội dung bắt buộc của phiếu);
-   Điều 3. Phản biện độc lập (thành phần tổ phản biện, nội dung kiểm tra, biên bản; câu hỏi
-   không đạt phải biên soạn lại); Điều 4. Phê duyệt và lưu trữ (hiệu đính, phê duyệt, mã hóa,
-   lưu trữ tập trung, phân quyền truy cập); Điều 5. Rút đề và bảo mật (rút ngẫu nhiên theo ma
-   trận, niêm phong, bàn giao có biên bản, chế tài vi phạm bảo mật); Điều 6. Rà soát định kỳ
-   (phân tích chất lượng câu hỏi, loại bỏ/bổ sung, tỷ lệ cập nhật tối thiểu hằng năm).
-3. Bộ biểu mẫu kèm theo: Mẫu 01 – Phiếu biên soạn câu hỏi; Mẫu 02 – Biên bản phản biện;
-   Mẫu 03 – Sổ theo dõi rút đề thi.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -154,7 +142,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tên quy trình + quyết định ban hành; Điều 1–6 theo đúng vòng đời câu hỏi (ma trận; biên soạn; phản biện; phê duyệt – lưu trữ; rút đề – bảo mật; rà soát định kỳ); bộ biểu mẫu (Mẫu 01 phiếu biên soạn, Mẫu 02 biên bản phản biện, Mẫu 03 sổ theo dõi rút đề).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (phạm vi, hình thức thi, ma trận mẫu, số lượng mục tiêu, đơn vị thực hiện).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính của quy trình (ban hành kèm quyết định, có điều khoản đánh số).

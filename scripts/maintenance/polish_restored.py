@@ -22,6 +22,8 @@ def legal_notes(sdir):
 
 
 EXTRA = [
+    (r"điều kiện chung bám sát Điều 22 Luật Viên chức và", "điều kiện chung bám sát luật viên chức và nghị định hướng dẫn hiện hành, theo"),
+    (r"theo Điều 22 Luật Viên chức", "theo luật viên chức hiện hành (xem phap-ly.md)"),
     (r"xuất bản đề án hoàn chỉnh dạng markdown", "xuất bản đề án hoàn chỉnh theo định dạng đầu ra của skill"),
     (r"ở định dạng markdown", "theo định dạng đầu ra của skill"),
     (r"dạng markdown", "theo định dạng đầu ra của skill"),
@@ -38,6 +40,10 @@ EXTRA = [
 ]
 
 
+CAVEAT = ("- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); "
+          "chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.\n")
+
+
 def polish(path):
     sdir = path.parent
     t = path.read_text(encoding="utf-8")
@@ -49,15 +55,25 @@ def polish(path):
     t = re.sub(r"^- \[ \] Đúng thể thức và định dạng theo .*$",
                "- [ ] Đúng thể thức và cấu trúc theo references/quy-cach-dau-ra.md và căn cứ đã chọn tại references/phap-ly.md.",
                t, flags=re.M)
+    # cấu trúc output chuẩn của bản gốc không còn là chuẩn: cấu trúc hiện hành nằm ở references/quy-cach-dau-ra.md
+    def _cut(m):
+        body = m.group(2)
+        k = re.search(r"\*\*Cấu trúc output chuẩn", body)
+        return m.group(1) + (body[:k.start()].rstrip() + "\n\n" if k else body) + m.group(3)
+    t = re.sub(r"(## Đầu ra\n)(.*?)(File nghiệp vụ thực tế)", _cut, t, count=1, flags=re.S)
+    t = re.sub(r"^- \[ \] [^\n]*[Cc]ấu trúc output chuẩn[^\n]*$",
+               "- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).", t, flags=re.M)
     for old, new in EXTRA:
         t = re.sub(old, new, t)
+    if MARK in t and "được giữ từ quy trình gốc" not in t:
+        t = t.replace("chưa kết luận tuân thủ.\n", "chưa kết luận tuân thủ.\n" + CAVEAT, 1)
     if MARK not in t:
         notes = legal_notes(sdir)
         if notes:
             block = MARK + " (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):\n" + \
                 "\n".join(f"- {ti}: {bo}" for ti, bo in notes) + \
                 "\n- Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. " \
-                "Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.\n"
+                "Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.\n" + CAVEAT
             t = re.sub(r"(## Quy trình\n)", r"\1" + block.replace("\\", "\\\\") + "\n", t, count=1)
     if t != o:
         path.write_text(t, encoding="utf-8")

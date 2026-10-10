@@ -67,7 +67,7 @@ Nguồn gốc để đối chiếu: [Nghị định 30/2020/NĐ-CP và phụ l�
 
 6. Người ban hành (HIỆU TRƯỞNG...);
 
-7. Phần "Căn cứ..." (Luật Viên chức, NĐ 204/2004, căn cứ quản lý viên chức còn áp dụng, biên bản họp Hội đồng lương);
+7. Phần "Căn cứ..." (Luật Viên chức, căn cứ chế độ tiền lương viên chức hiện hành nêu tại phap-ly.md, căn cứ quản lý viên chức còn áp dụng, biên bản họp Hội đồng lương);
 
 8. Phần "Theo đề nghị..." (Trưởng phòng Tổ chức – Cán bộ);
 

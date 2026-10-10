@@ -39,6 +39,7 @@ so sánh và đề xuất cải tiến.
 - Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026: Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học.
 - Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025: Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Làm sạch dữ liệu**
 - Làm gì: Kiểm tra từng phiếu khảo sát thu về: loại bỏ phiếu không hợp lệ (để trống > 30% số câu, chọn 01 đáp án cho toàn bộ câu hỏi đánh giá, mâu thuẫn logic giữa các câu); tính số phiếu hợp lệ trên tổng số phiếu phát ra, xác nhận tỷ lệ phản hồi đạt yêu cầu (≥ 60% cỡ mẫu); nếu không đạt, tổ chức thu thập bổ sung trước khi phân tích.
@@ -103,13 +104,6 @@ flowchart TD
 - Báo cáo phân tích kết quả khảo sát (bảng số liệu + nhận xét + đề xuất).
 - Danh sách đề xuất cải tiến ưu tiên.
 
-**Cấu trúc output chuẩn:** báo cáo phân tích gồm các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề báo cáo + đối tượng khảo sát + mục đích + năm thực hiện;
-2. Phần I – Thông tin chung: số phiếu phát ra, số phiếu hợp lệ, tỷ lệ phản hồi (đánh giá đạt/không đạt yêu cầu), cơ cấu đối tượng (khóa/ngành/năm tốt nghiệp...);
-3. Phần II – Kết quả chi tiết: bảng điểm trung bình từng câu hỏi (kèm so sánh kỳ trước nếu có, chênh lệch, xếp loại theo quy ước ≥ 4.0 tốt / 3.0–3.99 trung bình / < 3.0 cần cải thiện) và điểm trung bình chung;
-4. Phần III – Nhận xét: điểm mạnh, điểm cần cải thiện nhất, xu hướng so với kỳ trước, ý kiến mở nổi bật (nhóm theo chủ đề, tỷ lệ %);
-5. Phần IV – Đề xuất cải tiến: 03–05 đề xuất cụ thể, mỗi đề xuất gắn đơn vị thực hiện và thời hạn.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -117,7 +111,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 5 phần theo "Cấu trúc output chuẩn": tiêu đề báo cáo + đối tượng + mục đích + năm thực hiện; Phần I – Thông tin chung (số phiếu phát ra, số phiếu hợp lệ, tỷ lệ phản hồi, cơ cấu đối tượng); Phần II – Kết quả chi tiết (bảng điểm trung bình từng câu hỏi, so sánh kỳ trước, xếp loại theo quy ước); Phần III – Nhận xét (điểm mạnh, điểm cần cải thiện, xu hướng, ý kiến mở); Phần IV – Đề xuất cải tiến (03–05 đề xuất, mỗi đề xuất gắn đơn vị thực hiện và thời hạn).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu thống kê được tính trên số phiếu hợp lệ đã làm sạch; khớp với Input (`du_lieu_tong_hop`, `doi_tuong`, `muc_dich_khao_sat`).
 - [ ] Không bịa đặt số liệu, điểm trung bình, trích dẫn ý kiến mở; không tự ý "điền hộ" câu trả lời còn trống.
 - [ ] Đúng quy ước xếp loại: ≥ 4.0 tốt / 3.0–3.99 trung bình / < 3.0 cần cải thiện; câu hỏi đảo đã được mã hóa ngược trước khi tính điểm.

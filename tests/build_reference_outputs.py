@@ -410,6 +410,44 @@ def build_pmo():
     return out
 
 
+# ---------- 4. Quyết định hành chính (soan-quyet-dinh-hc) ----------
+def build_quyet_dinh():
+    i = load("soan-quyet-dinh-hc.input.json")
+    d = new_doc()
+    left = ([i["co_quan_chu_quan"], i["co_quan_ban_hanh"], f"Số: {DOT}/QĐ-{'.' * 6}"], [False, True, False])
+    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập – Tự do – Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
+             [True, True, False])
+    t = header_block(d, left, right)
+    t.cell(0, 1).paragraphs[2].runs[0].italic = True
+    para(d, "", after=4)
+    para(d, "QUYẾT ĐỊNH", bold=True, size=14, align=WD_ALIGN_PARAGRAPH.CENTER, after=0)
+    para(d, f"Về việc {i['trich_yeu']}", bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=8)
+    para(d, f"HIỆU TRƯỞNG {i['co_quan_ban_hanh']}", bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=8)
+    for k, c in enumerate(i["can_cu"]):
+        end = ";" if k < len(i["can_cu"]) - 1 else ";"
+        c = c.split(" (")[0]
+        para(d, f"Căn cứ {c}{end}" if not c.startswith(("Tờ trình",)) else f"Xét đề nghị của {c.split(' của ')[-1]} tại {c.split(' của ')[0]};",
+             first_indent=1.0, align=WD_ALIGN_PARAGRAPH.JUSTIFY)
+    para(d, "QUYẾT ĐỊNH:", bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=8)
+    nd = i["noi_dung"]
+    for n, key in enumerate(("dieu_1", "dieu_2", "dieu_3"), 1):
+        para(d, f"Điều {n}. {nd[key]}", first_indent=1.0, align=WD_ALIGN_PARAGRAPH.JUSTIFY)
+    para(d, "Danh sách thành viên: " + DOT * 4, first_indent=1.0, align=WD_ALIGN_PARAGRAPH.JUSTIFY, after=10)
+    sg = i["nguoi_ky"]
+    t2 = d.add_table(rows=1, cols=2)
+    borders(t2, False)
+    t2.autofit = False
+    t2.columns[0].width, t2.columns[1].width = Cm(7.5), Cm(8.5)
+    nn = ["Nơi nhận:"] + [f"- {x};" for x in i["noi_nhan"][:-1]] + [f"- {i['noi_nhan'][-1]}."]
+    cell_text(t2.cell(0, 0), nn, size=12)
+    t2.cell(0, 0).paragraphs[0].runs[0].bold = True
+    t2.cell(0, 0).paragraphs[0].runs[0].italic = True
+    cell_text(t2.cell(0, 1), [sg["chuc_danh"].upper(), "", "", "", sg["ho_ten"]], size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER)
+    out = O / "soan-quyet-dinh-hc.docx"
+    d.save(out)
+    return out
+
+
 if __name__ == "__main__":
-    for f in (build_cong_van, build_thanh_tra, build_pmo):
+    for f in (build_cong_van, build_thanh_tra, build_pmo, build_quyet_dinh):
         print("đã tạo", f())

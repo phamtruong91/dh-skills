@@ -44,6 +44,7 @@ học) và cơ quan chủ quản theo yêu cầu.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 06/2026/TT-BGDĐT, hiệu lực 15/02/2026: Yêu cầu năm tuyển sinh, phương thức, trình độ và đề án đã duyệt. Đối chiếu quy chế 06/2026 và hướng dẫn năm tuyển sinh về điều kiện, quy đổi điểm, điểm cộng, thứ tự nguyện vọng; không giữ công thức cũ hoặc cộng hai lần chứng chỉ. Không tự đặt chỉ tiêu/ngưỡng khi chưa có quyết định và căn cứ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Tổng hợp số liệu theo phương thức**
 - Làm gì: với mỗi phương thức xét tuyển, thu thập từ `so_lieu_dang_ky` và `so_lieu_trung_tuyen`:
@@ -164,23 +165,6 @@ flowchart TD
 - Báo cáo kết quả tuyển sinh hoàn chỉnh (văn bản + bảng số liệu).
 - Checklist kiểm tra số liệu.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Báo cáo kết quả tuyển sinh
-gửi Bộ GD&ĐT), các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề hành chính: quốc hiệu, tiêu ngữ, số ký hiệu, địa điểm – ngày tháng.
-2. Tên văn bản: BÁO CÁO KẾT QUẢ TUYỂN SINH ĐẠI HỌC NĂM ...
-3. Kính gửi: Bộ Giáo dục và Đào tạo (Vụ Giáo dục Đại học); đoạn mở đầu nêu căn cứ báo cáo.
-4. Mục I – Kết quả tuyển sinh theo phương thức: bảng (phương thức, hồ sơ đăng ký, trúng
-   tuyển, tỷ lệ chọi) kèm dòng tổng.
-5. Mục II – Kết quả theo ngành đào tạo: bảng (ngành, chỉ tiêu, đăng ký, trúng tuyển, nhập
-   học, tỷ lệ đạt chỉ tiêu) kèm dòng tổng.
-6. Mục III – Điểm chuẩn trúng tuyển: bảng theo ngành × phương thức kèm nhận xét so sánh
-   với năm trước.
-7. Mục IV – Đánh giá chung: tỷ lệ nhập học/chỉ tiêu, điểm mới, số liệu đợt bổ sung (nếu có).
-8. Mục V – Khó khăn: liệt kê có số liệu minh họa.
-9. Mục VI – Kiến nghị: đề xuất cụ thể gửi Bộ GD&ĐT.
-10. Nơi nhận, chữ ký người ký và con dấu.
-11. Phụ lục kèm theo: Checklist kiểm tra số liệu (cộng chéo các bảng).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -188,7 +172,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 11 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên báo cáo, kính gửi Bộ GD&ĐT (Vụ Giáo dục Đại học), Mục I kết quả theo phương thức, Mục II kết quả theo ngành, Mục III điểm chuẩn, Mục IV đánh giá chung, Mục V khó khăn, Mục VI kiến nghị, nơi nhận và chữ ký, phụ lục checklist cộng chéo.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Tổng trúng tuyển theo phương thức bằng tổng trúng tuyển theo ngành; tỷ lệ phần trăm tính đúng công thức.
 - [ ] Số nhập học không lớn hơn số trúng tuyển; số liệu đợt bổ sung tách riêng, không cộng dồn vào đợt chính.
 - [ ] Số liệu khớp với Input và với hệ thống xét tuyển chung của Bộ + sổ sách lưu tại Phòng Đào tạo.

@@ -78,6 +78,11 @@ def skill_checks(path, manifest, records):
     c["khong_buoc_xuat_checklist"] = not re.search(r"Kết quả bước:[^\n]*[Cc]hecklist[^\n]*đã đánh dấu", t)
     if "md" not in version["available_output_formats"] and name not in MARKDOWN_OK:
         c["khong_nhac_markdown_khi_khong_xuat_md"] = "markdown" not in t.lower()
+    # --- Khóa kết quả khôi phục quy trình (1.3.2) ---
+    c["khong_con_quy_trinh_rut_gon"] = "## Quy trình hiện hành" not in t and "## Quy trình cập nhật pháp lý" not in t
+    c["co_it_nhat_3_buoc"] = len(re.findall(r"^\*\*Bước \d+\.", t, flags=re.M)) >= 3
+    if (path.parent / "references/phap-ly.md").is_file():
+        c["co_rang_buoc_phap_ly_trong_quy_trinh"] = "**Ràng buộc pháp lý khi thực hiện**" in t
     # --- Khóa các lỗi mẫu đã sửa ở đợt rà soát nhóm 1 ---
     for line in re.findall(r"^- \[ \] Đúng thể thức và định dạng theo (.*)$", t, flags=re.M):
         c["muc_the_thuc_khong_cat_cut"] = not line.rstrip().endswith("…") and not re.search(

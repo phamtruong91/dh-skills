@@ -39,6 +39,7 @@ Khi trường tiến hành tự đánh giá cơ sở giáo dục (CSGD) hoặc c
 - Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026: Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học.
 - Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025: Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thành lập Hội đồng tự đánh giá**
 - Làm gì: Ban hành quyết định thành lập Hội đồng tự đánh giá (Chủ tịch, Phó Chủ tịch, Thư ký, các ủy viên); thành lập các nhóm công tác theo từng lĩnh vực/tiêu chuẩn của bộ tiêu chuẩn; ban hành kế hoạch tự đánh giá chi tiết (mốc thời gian, sản phẩm từng nhóm, kinh phí).
@@ -99,16 +100,6 @@ flowchart TD
 - Báo cáo tự đánh giá hoàn chỉnh (cấu trúc: mở đầu – tổng quan – đánh giá từng tiêu chuẩn – kết luận – phụ lục minh chứng).
 - Bảng tự đánh giá mức đạt theo từng tiêu chí.
 
-**Cấu trúc output chuẩn:** báo cáo tự đánh giá gồm các phần bắt buộc theo đúng thứ tự:
-1. Trang bìa (tên báo cáo, đối tượng tự đánh giá, chu kỳ đánh giá, tên trường, năm ban hành);
-2. Mục lục;
-3. Phần mở đầu (cơ sở pháp lý, mục đích, phạm vi, phương pháp tự đánh giá, tổ chức thực hiện);
-4. Tổng quan về trường / chương trình đào tạo (lịch sử, quy mô, sứ mệnh, cơ cấu tổ chức);
-5. Đánh giá từng tiêu chuẩn theo thứ tự của bộ tiêu chuẩn; mỗi tiêu chí gồm đúng 5 mục: Mô tả (dẫn chiếu mã minh chứng) – Điểm mạnh – Tồn tại – Kế hoạch cải tiến – Tự đánh giá mức đạt;
-6. Kết luận chung (số tiêu chuẩn đạt/không đạt, nhận định tổng thể, định hướng cải tiến);
-7. Phụ lục 01 – Bảng tự đánh giá mức đạt theo từng tiêu chí;
-8. Phụ lục 02 – Danh mục minh chứng mã hóa (mã MC, tên minh chứng, đơn vị cung cấp, tình trạng).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -116,7 +107,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 8 phần theo "Cấu trúc output chuẩn": trang bìa; mục lục; phần mở đầu; tổng quan về trường/chương trình đào tạo; đánh giá từng tiêu chuẩn (mỗi tiêu chí đủ 5 mục: Mô tả – Điểm mạnh – Tồn tại – Kế hoạch cải tiến – Tự đánh giá mức đạt); kết luận chung; Phụ lục 01 – bảng tự đánh giá mức đạt; Phụ lục 02 – danh mục minh chứng mã hóa.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu, nhận định trong báo cáo khớp với Input và truy xuất được đến minh chứng gốc.
 - [ ] Không bịa đặt minh chứng, số liệu, mức điểm tự đánh giá.
 - [ ] Đúng bộ tiêu chuẩn kiểm định hiện hành, đúng thứ tự tiêu chuẩn/tiêu chí; cấu trúc mỗi tiêu chí đúng 5 mục.

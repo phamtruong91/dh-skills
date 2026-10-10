@@ -41,6 +41,45 @@ def docx_text(path):
     return "\n".join(x for x in out if x.strip())
 
 
+def nd30_format_errors(path):
+    """Kiểm tra thuộc tính trình bày thật của file Word theo Phụ lục I Nghị định 30/2020/NĐ-CP (văn bản hành chính)."""
+    from docx import Document
+    d = Document(path)
+    errs = []
+    s = d.sections[0]
+    mm = lambda v: round(v / 36000, 1)  # EMU -> mm
+    w, h = mm(s.page_width), mm(s.page_height)
+    if not (abs(w - 210) <= 1 and abs(h - 297) <= 1):
+        errs.append(f"khổ giấy không phải A4 ({w}x{h} mm)")
+    for name, v, lo, hi in (("lề trên", mm(s.top_margin), 20, 25), ("lề dưới", mm(s.bottom_margin), 20, 25),
+                            ("lề trái", mm(s.left_margin), 30, 35), ("lề phải", mm(s.right_margin), 15, 20)):
+        if not (lo - 0.5 <= v <= hi + 0.5):
+            errs.append(f"{name} {v} mm ngoài khoảng {lo}–{hi} mm")
+    fonts, sizes = set(), set()
+
+    def runs(doc_or_cell):
+        for p in doc_or_cell.paragraphs:
+            for r in p.runs:
+                yield r
+        for tb in getattr(doc_or_cell, "tables", []):
+            for row in tb.rows:
+                for c in row.cells:
+                    yield from runs(c)
+    normal = d.styles["Normal"].font
+    for r in runs(d):
+        if not r.text.strip():
+            continue
+        fonts.add(r.font.name or normal.name)
+        sz = r.font.size or normal.size
+        sizes.add(sz.pt if sz else None)
+    if fonts - {"Times New Roman"}:
+        errs.append(f"phông không phải Times New Roman: {sorted(f for f in fonts if f)}")
+    bad = sorted(x for x in sizes if x is None or not (11 <= x <= 14))
+    if bad:
+        errs.append(f"cỡ chữ ngoài 11–14 pt: {bad}")
+    return errs
+
+
 def xlsx_load(path):
     from openpyxl import load_workbook
     return load_workbook(path)
@@ -108,6 +147,8 @@ def check_one(expect, samples, outputs, results, log):
     if expect["kind"] == "docx":
         text = docx_text(path)
         nums = []
+        if expect.get("nd30_format"):
+            errs.extend(nd30_format_errors(path))
     else:
         wb = xlsx_load(path)
         text, nums = xlsx_text_and_numbers(wb)

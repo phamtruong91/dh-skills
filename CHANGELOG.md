@@ -1,5 +1,17 @@
 # Nhật ký thay đổi
 
+## 1.3.2 (bổ sung) — 2026-10-10
+
+Rà soát toàn bộ 171 skill về quy trình, đầu vào, đầu ra và thể thức.
+
+- **Khôi phục quy trình đầy đủ cho 58 skill** từng chỉ còn 4 bước chung chung sau đợt cập nhật pháp lý: giữ nghiệp vụ gốc (bước, vai trò, lưu ý, kết quả bước, sơ đồ), thay viện dẫn văn bản đã bị thay thế bằng con trỏ tới `phap-ly.md`, thêm khối "Ràng buộc pháp lý khi thực hiện". Các con số/thời hạn gốc chưa được xác minh, chỉ gắn cờ.
+- **Đầu vào/đầu ra:** mọi đầu vào đều được một bước dùng; tách các trường gộp (`nam_hoc`/`nam_tai_chinh`, người lập/kế toán trưởng/người ký); thêm câu "Dùng khi" cho 39 mô tả; sơ đồ khớp số bước ở cả 171 skill.
+- **Thể thức NĐ 30/2020:** `scripts/check_outputs.py` kiểm tra khổ A4, lề, phông Times New Roman, cỡ chữ cho file có `nd30_format`; thêm mẫu thử `soan-quyet-dinh-hc` (4/4 mẫu đạt).
+- **Validator:** thêm kiểm tra không cắt cụt mục thể thức, sơ đồ khớp bước, kết quả bước không là báo cáo kiểm tra, ≥3 bước, có ràng buộc pháp lý. `audit_structure.py`: 0/171 vấn đề.
+- **Sửa căn cứ cũ còn sót:** `de-an-mo-nganh`, `quyet-dinh-nang-luong`; viết lại bước của `bao-cao-3-cong-khai` theo hướng TT 09/2024 (không mặc định 3 biểu).
+- **Tài liệu:** `docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md` (danh sách dòng cần chuyên gia pháp lý đối chiếu), cập nhật `legal-register.json`.
+- **Chưa làm:** chưa đối chiếu toàn văn/Công báo; sơ đồ dựng lại của 44 skill mất nhánh quyết định; thời lượng ⏱ là ước tính; một số quy-cach-dau-ra.md vẫn mang cấu trúc cũ; chưa chạy thử thêm skill ngoài 4 mẫu.
+
 ## 1.3.2 — 2026-10-10
 
 Rà soát chất lượng sau khi đọc repo và chạy thử 3 skill bằng dữ liệu giả.

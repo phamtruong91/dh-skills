@@ -44,6 +44,7 @@ kiến thức, tổng số tín chỉ và danh mục học phần.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 54/2026/TT-BGDĐT, hiệu lực 30/06/2026: Phân loại xây dựng chương trình, chuẩn đầu ra hay mở ngành; yêu cầu chuẩn ngành/trình độ, trạng thái chương trình và ngày tiếp nhận hồ sơ. Đọc toàn văn và điều khoản chuyển tiếp trước khi đổi chuẩn/mẫu; chưa xác minh toàn văn thì ghi điều kiện chưa xác nhận, không tự đặt thời hạn chuyển đổi.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định mục tiêu đào tạo**
 - Làm gì: viết mục tiêu chung (phẩm chất, năng lực của người tốt nghiệp) và các mục tiêu cụ
@@ -135,18 +136,6 @@ flowchart TD
   học phần kèm mô tả vắn tắt — trình bày dạng bảng.
 - Bảng tổng hợp phân bổ tín chỉ theo khối kiến thức và theo học kỳ.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Khung chương trình đào tạo),
-các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề khung CTĐT: tên ngành, mã ngành, trình độ đào tạo, thời gian đào tạo (năm/học kỳ),
-   tổng số tín chỉ; số, ngày quyết định ban hành và người ký ban hành.
-2. Mục 1 – Mục tiêu đào tạo: mục tiêu chung và các mục tiêu cụ thể.
-3. Mục 2 – Chuẩn đầu ra của chương trình đào tạo (PLO): liệt kê đánh số theo 3 nhóm —
-   kiến thức; kỹ năng; mức tự chủ và trách nhiệm.
-4. Mục 3 – Cấu trúc khối kiến thức: bảng (khối kiến thức, số tín chỉ, tỷ lệ %) kèm dòng tổng.
-5. Mục 4 – Danh mục học phần: bảng (mã HP, tên học phần, số TC lý thuyết–thực hành, học kỳ,
-   học phần tiên quyết, mô tả vắn tắt) sắp xếp theo tiến trình học tập.
-6. Phụ lục kèm theo: Bảng tổng hợp phân bổ tín chỉ theo học kỳ.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -154,7 +143,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 6 phần theo "Cấu trúc output chuẩn": tiêu đề khung CTĐT (ngành, mã ngành, trình độ, thời gian, tổng tín chỉ, số/ngày quyết định ban hành), Mục 1 mục tiêu đào tạo, Mục 2 chuẩn đầu ra PLO, Mục 3 cấu trúc khối kiến thức, Mục 4 danh mục học phần, phụ lục phân bổ tín chỉ theo học kỳ.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Mọi mục tiêu cụ thể đều ánh xạ được sang ít nhất một PLO; PLO viết bằng động từ hành động đo lường được, số lượng vừa phải (thường 8–12).
 - [ ] Tổng tín chỉ các khối = tổng tín chỉ các học phần = tổng công bố (tỷ lệ các khối cộng đúng 100%).
 - [ ] Mỗi PLO có học phần đóng góp; học phần tiên quyết được bố trí ở học kỳ trước học phần phụ thuộc.

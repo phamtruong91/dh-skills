@@ -39,6 +39,7 @@ chương trình đào tạo, chất lượng giảng dạy, dịch vụ hỗ tr�
 - Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026: Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học.
 - Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025: Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định mục đích và phạm vi**
 - Làm gì: Chốt 01 mục đích duy nhất cho phiếu khảo sát từ `muc_dich` (mỗi phiếu chỉ phục vụ 01 mục đích rõ ràng); xác định đối tượng khảo sát (`doi_tuong`), phạm vi (khoa/ngành/khóa hoặc toàn trường), cỡ mẫu tối thiểu và cách chọn mẫu; thống nhất các lĩnh vực cần đánh giá từ `linh_vuc`.
@@ -95,16 +96,6 @@ flowchart TD
 - Phiếu khảo sát hoàn chỉnh (03 phần).
 - Hướng dẫn triển khai khảo sát (đối tượng, cỡ mẫu, hình thức, thời gian).
 
-**Cấu trúc output chuẩn:** bộ sản phẩm gồm 02 phần, các mục bắt buộc theo đúng thứ tự:
-A. Phiếu khảo sát:
-1. Tiêu đề phiếu (PHIẾU KHẢO SÁT + đối tượng) + đơn vị ban hành;
-2. Mục đích khảo sát + cam kết bảo mật, chỉ sử dụng cho cải tiến chất lượng;
-3. Phần A – Thông tin chung (câu hỏi A1, A2...: giới tính, ngành, năm tốt nghiệp, tình trạng việc làm...);
-4. Phần B – Đánh giá (thang đo Likert 5 mức ghi rõ quy ước; câu hỏi B1, B2... nhóm theo lĩnh vực);
-5. Phần C – Ý kiến đóng góp (câu hỏi mở C1, C2...);
-6. Lời cảm ơn.
-B. Hướng dẫn triển khai (dạng bảng): đối tượng – cỡ mẫu tối thiểu – hình thức – thời gian – đơn vị thực hiện.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -112,7 +103,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": (A) Phiếu khảo sát: tiêu đề phiếu + đơn vị ban hành; mục đích khảo sát + cam kết bảo mật; Phần A – Thông tin chung; Phần B – Đánh giá (thang đo Likert 5 mức ghi rõ quy ước; câu hỏi nhóm theo lĩnh vực); Phần C – Ý kiến đóng góp; lời cảm ơn; (B) Hướng dẫn triển khai (đối tượng – cỡ mẫu tối thiểu – hình thức – thời gian – đơn vị thực hiện).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Phiếu phục vụ đúng 01 mục đích đã chốt trong Input; câu hỏi bao phủ các lĩnh vực đánh giá trong Input.
 - [ ] Không sao chép nguyên văn phiếu của đơn vị khác mà không điều chỉnh cho phù hợp mục đích.
 - [ ] Đúng quy định của trường về thu thập ý kiến các bên liên quan; bảo mật thông tin người trả lời: không thu thập thông tin định danh cá nhân nhạy cảm, cam kết chỉ dùng cho cải tiến chất lượng.

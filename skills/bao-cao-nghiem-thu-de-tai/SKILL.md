@@ -51,6 +51,7 @@ Bộ hồ sơ này là căn cứ để thanh lý hợp đồng và quyết toán
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025: Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ 265 về tài chính và NĐ 267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **PHẦN A – Báo cáo tổng kết đề tài** (do chủ nhiệm soạn):
 
@@ -155,28 +156,6 @@ flowchart TD
 - Phần A: Báo cáo tổng kết đề tài hoàn chỉnh.
 - Phần B: Biên bản nghiệm thu của Hội đồng hoàn chỉnh.
 - Bảng đối chiếu sản phẩm đăng ký/thực đạt + bảng quyết toán kinh phí.
-
-**Cấu trúc output chuẩn:** khung cố định của bộ hồ sơ nghiệm thu (2 văn bản), các phần bắt buộc theo đúng thứ tự xuất hiện:
-- Phần A – Báo cáo tổng kết đề tài:
-  1. Tiêu đề "BÁO CÁO TỔNG KẾT ĐỀ TÀI NGHIÊN CỨU KHOA HỌC"
-  2. Khối thông tin: tên đề tài; mã số – cấp đề tài; chủ nhiệm; cơ quan chủ trì; thời gian thực hiện (thực tế)
-  3. Mục I. Tóm tắt (đặt vấn đề, mục tiêu, phương pháp)
-  4. Mục II. Kết quả chi tiết (theo từng nội dung/mục tiêu, đối chiếu đăng ký)
-  5. Mục III. Sản phẩm đạt được (bảng đăng ký – thực đạt)
-  6. Mục IV. Hiệu quả (khoa học – kinh tế xã hội – đào tạo)
-  7. Mục V. Quyết toán kinh phí (bảng dự toán – thực chi theo khoản mục)
-  8. Mục VI. Kết luận và kiến nghị
-  9. Địa danh, ngày tháng năm + chữ ký chủ nhiệm đề tài
-- Phần B – Biên bản nghiệm thu của Hội đồng:
-  1. Quốc hiệu – Tiêu ngữ
-  2. Tiêu đề "BIÊN BẢN NGHIỆM THU ĐỀ TÀI NGHIÊN CỨU KHOA HỌC"
-  3. Thông tin đề tài (tên, mã số, chủ nhiệm)
-  4. Phần 1. Hội đồng nghiệm thu (quyết định thành lập, thành phần, thời gian, địa điểm, tỷ lệ thành viên có mặt)
-  5. Phần 2. Diễn biến cuộc họp (trình bày, nhận xét phản biện, thảo luận/chất vấn, giải trình)
-  6. Phần 3. Kết quả đánh giá (ý kiến từng thành viên, kết quả bỏ phiếu, kết luận xếp loại)
-  7. Phần 4. Kiến nghị của Hội đồng (nội dung bổ sung + thời hạn hoàn thành)
-  8. Số bản biên bản + thời điểm thông qua toàn văn tại cuộc họp
-  9. Chữ ký: Chủ tịch hội đồng, Thư ký, các thành viên
 
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 

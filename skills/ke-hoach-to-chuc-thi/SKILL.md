@@ -39,6 +39,7 @@ thi tuyển sinh sau đại học.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định quy mô kỳ thi**
 - Làm gì: Thu thập từ Phòng Đào tạo: danh sách sinh viên đủ điều kiện dự thi theo từng học phần, danh mục học phần thi (mã HP, tên HP, hình thức thi), khung thời gian học vụ; từ Phòng Khảo thí & ĐBCL: số phòng thi khả dụng, số cán bộ có thể huy động. Tổng hợp thành bảng quy mô: tổng số thí sinh, số học phần, số ca thi ước tính, số phòng thi cần dùng, số lượt cán bộ coi/chấm thi cần huy động.
@@ -120,16 +121,6 @@ flowchart TD
 - Văn bản kế hoạch tổ chức kỳ thi hoàn chỉnh.
 - Phụ lục: lịch thi chi tiết + bảng phân công nhiệm vụ.
 
-**Cấu trúc output chuẩn:** văn bản kế hoạch gồm các phần bắt buộc theo đúng thứ tự:
-1. Quốc hiệu, tên cơ quan ban hành, số/ký hiệu văn bản, địa danh và ngày tháng năm ban hành;
-2. Tên loại văn bản (KẾ HOẠCH) + trích yếu nội dung;
-3. Phần I – Mục đích, yêu cầu (tổ chức nghiêm túc đúng quy chế; thời gian, quy mô kỳ thi);
-4. Phần II – Nội dung (lịch thi; phân công nhiệm vụ; đề thi; cơ sở vật chất; chấm thi – công bố điểm – phúc khảo);
-5. Phần III – Tổ chức thực hiện (phân công trách nhiệm từng đơn vị: Khảo thí & ĐBCL, Đào tạo, các khoa, Thanh tra & Pháp chế);
-6. Nơi nhận;
-7. Chức vụ người ký, chữ ký, họ tên người ký;
-8. Phụ lục 01 – Lịch thi chi tiết; Phụ lục 02 – Bảng phân công nhiệm vụ.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -137,7 +128,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 8 phần theo "Cấu trúc output chuẩn": quốc hiệu + số/ký hiệu + địa danh, ngày tháng; tên loại văn bản (KẾ HOẠCH) + trích yếu; Phần I – Mục đích, yêu cầu; Phần II – Nội dung; Phần III – Tổ chức thực hiện; Nơi nhận; chức vụ/chữ ký/họ tên người ký; Phụ lục 01 (lịch thi chi tiết) + Phụ lục 02 (bảng phân công nhiệm vụ).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu trong kế hoạch khớp với Input: tổng số thí sinh, số học phần, khung thời gian (`ky_thi`, `thoi_gian`, `so_luong_thi_sinh`, `danh_muc_mon_thi`).
 - [ ] Không bịa đặt số liệu thí sinh, học phần, phòng thi, nhân sự coi/chấm thi.
 - [ ] Đúng thể thức văn bản hành chính theo Nghị định 30/2020/NĐ-CP.

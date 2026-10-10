@@ -1,6 +1,6 @@
 ---
 name: "de-an-mo-nganh"
-description: "Soạn đề án mở ngành đào tạo trình độ đại học theo Thông tư 02/2022/TT-BGDĐT (sự cần thiết, điều kiện đội ngũ – CSVC, chương trình đào tạo dự kiến, kế hoạch tuyển sinh và đảm bảo chất lượng). Dùng khi trường chuẩn bị hồ sơ đề nghị Bộ GD&ĐT cho phép mở ngành mới."
+description: "Soạn đề án mở ngành đào tạo trình độ đại học theo căn cứ hiện hành nêu tại phap-ly.md (sự cần thiết, điều kiện đội ngũ – CSVC, chương trình đào tạo dự kiến, kế hoạch tuyển sinh và đảm bảo chất lượng). Dùng khi trường chuẩn bị hồ sơ đề nghị Bộ GD&ĐT cho phép mở ngành mới."
 ---
 
 # Soạn đề án mở ngành đào tạo
@@ -46,6 +46,7 @@ giảng viên, cơ sở vật chất, chương trình đào tạo dự kiến v�
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 54/2026/TT-BGDĐT, hiệu lực 30/06/2026: Phân loại xây dựng chương trình, chuẩn đầu ra hay mở ngành; yêu cầu chuẩn ngành/trình độ, trạng thái chương trình và ngày tiếp nhận hồ sơ. Đọc toàn văn và điều khoản chuyển tiếp trước khi đổi chuẩn/mẫu; chưa xác minh toàn văn thì ghi điều kiện chưa xác nhận, không tự đặt thời hạn chuyển đổi.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xây dựng luận cứ sự cần thiết mở ngành**
 - Làm gì: phân tích từ `su_can_thiet`: nhu cầu nhân lực của ngành trên thị trường lao động
@@ -145,26 +146,7 @@ flowchart TD
 ## Đầu ra
 - Đề án mở ngành hoàn chỉnh (văn bản + phụ lục minh chứng), có cấu trúc chương mục.
 - Bảng tổng hợp đội ngũ giảng viên cơ hữu đúng chuyên môn.
-- Checklist đối chiếu điều kiện mở ngành theo Thông tư 02/2022/TT-BGDĐT.
-
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Đề án mở ngành đào tạo),
-các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề hành chính: quốc hiệu, tiêu ngữ, tên đơn vị trình, số ký hiệu, địa điểm – ngày tháng.
-2. Tên văn bản: ĐỀ ÁN MỞ NGÀNH ĐÀO TẠO — NGÀNH ... — TRÌNH ĐỘ ...
-3. Phần I – Sự cần thiết mở ngành: bối cảnh và nhu cầu xã hội; khoảng trống đào tạo; sự
-   phù hợp với định hướng phát triển của trường.
-4. Phần II – Điều kiện đội ngũ giảng viên: số lượng, trình độ, bảng tổng hợp đội ngũ cơ
-   hữu đúng chuyên môn (đối chiếu Thông tư 02/2022).
-5. Phần III – Điều kiện cơ sở vật chất: phòng học, phòng thí nghiệm/thực hành, thư viện,
-   học liệu và kế hoạch đầu tư bổ sung.
-6. Phần IV – Chương trình đào tạo dự kiến: mục tiêu, chuẩn đầu ra, tổng số tín chỉ, cấu
-   trúc khối kiến thức, danh mục học phần dự kiến.
-7. Phần V – Kế hoạch tuyển sinh và đảm bảo chất lượng: chỉ tiêu năm đầu và lộ trình các
-   năm tiếp theo, phương thức tuyển sinh, cơ chế đảm bảo chất lượng.
-8. Phần VI – Hồ sơ minh chứng kèm theo (phụ lục): danh sách đội ngũ + bằng cấp; danh mục
-   học phần; biên bản khảo sát nhu cầu; quyết định đầu tư CSVC; danh mục học liệu.
-9. Chữ ký người ký (KT. Hiệu trưởng) và con dấu.
-10. Tài liệu kèm theo: Tờ trình gửi Bộ GD&ĐT; Checklist đối chiếu điều kiện mở ngành.
+- Checklist đối chiếu điều kiện mở ngành theo căn cứ hiện hành nêu tại phap-ly.md (Thông tư 54/2026/TT-BGDĐT, cần đối chiếu toàn văn).
 
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
@@ -173,7 +155,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 10 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên đề án (ngành + trình độ), Phần I sự cần thiết, Phần II đội ngũ giảng viên, Phần III cơ sở vật chất, Phần IV CTĐT dự kiến, Phần V kế hoạch tuyển sinh và đảm bảo chất lượng, Phần VI phụ lục minh chứng, chữ ký và con dấu, tờ trình + checklist đối chiếu.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Đội ngũ giảng viên cơ hữu đúng chuyên môn, đáp ứng yêu cầu số lượng và trình độ theo văn bản hiện hành nêu tại phap-ly.md (giảng viên thỉnh giảng không được tính).
 - [ ] Mỗi hạng mục cơ sở vật chất có minh chứng tương ứng; kế hoạch đầu tư bổ sung có hạng mục, kinh phí và mốc thời gian cụ thể.
 - [ ] Tổng tín chỉ các khối kiến thức bằng tổng công bố; CTĐT dự kiến tuân chuẩn văn bản hiện hành nêu tại phap-ly.md.

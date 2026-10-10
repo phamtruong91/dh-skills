@@ -42,6 +42,7 @@ Khi Phòng Công tác sinh viên (hoặc bộ phận hỗ trợ sinh viên) cầ
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026: Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định đối tượng và phạm vi khảo sát**
 - Làm gì: chốt khóa tốt nghiệp năm N, toàn bộ sinh viên tốt nghiệp các ngành đào tạo (hoặc
@@ -137,26 +138,6 @@ flowchart TD
 - Phiếu khảo sát mẫu hoàn chỉnh (8–10 câu hỏi, kèm phần thông tin người trả lời).
 - Báo cáo phân tích tình trạng việc làm: bảng số liệu chi tiết, nhận xét đánh giá, đề xuất cải tiến.
 
-**Cấu trúc output chuẩn:** khung cố định của hai sản phẩm chính:
-A. Phiếu khảo sát mẫu:
-1. Tiêu đề phiếu: "PHIẾU KHẢO SÁT TÌNH TRẠNG VIỆC LÀM SINH VIÊN TỐT NGHIỆP" + ghi chú đối
-   tượng (khóa tốt nghiệp, thời điểm khảo sát).
-2. Phần I. Thông tin chung: họ tên, năm sinh, số điện thoại, ngành đào tạo, lớp, năm tốt
-   nghiệp, xếp loại tốt nghiệp.
-3. Phần II. Tình trạng việc làm: (a) tình trạng hiện tại; (b) mức độ phù hợp với ngành đào
-   tạo; (c) thu nhập hiện tại theo khoảng; (d) thời gian tìm được việc làm đầu tiên; (e) kênh
-   tìm việc; (f) đánh giá mức độ trang bị của chương trình đào tạo (thang điểm); (g) đề xuất
-   cải tiến.
-B. Báo cáo phân tích:
-1. Tiêu đề báo cáo + kỳ khảo sát (khóa tốt nghiệp, thời điểm sau tốt nghiệp).
-2. Thông tin chung: tổng số SV tốt nghiệp, số phiếu thu về hợp lệ, tỷ lệ phản hồi.
-3. Tình trạng việc làm (bảng số lượng, tỷ lệ).
-4. Mức độ phù hợp với ngành đào tạo (bảng số lượng, tỷ lệ).
-5. Thu nhập bình quân + phân bố theo khoảng.
-6. Thời gian tìm việc (bảng + nhận xét).
-7. Đánh giá chương trình đào tạo.
-8. Đề xuất cải tiến.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -164,7 +145,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ cả hai sản phẩm theo "Cấu trúc output chuẩn": (A) phiếu khảo sát mẫu — tiêu đề + Phần I. Thông tin chung + Phần II. Tình trạng việc làm đủ các nhóm (a) tình trạng hiện tại, (b) phù hợp ngành đào tạo, (c) thu nhập, (d) thời gian tìm việc, (e) kênh tìm việc, (f) đánh giá chương trình, (g) đề xuất cải tiến; (B) báo cáo phân tích đủ 8 phần (tiêu đề + thông tin chung + việc làm + đúng ngành + thu nhập + thời gian tìm việc + đánh giá chương trình + đề xuất cải tiến).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Khóa tốt nghiệp, thời điểm khảo sát, tổng số sinh viên, ngành đào tạo trong output khớp với Input đã cho.
 - [ ] Không bịa đặt số liệu; các tỷ lệ được tính từ tập dữ liệu phản hồi hợp lệ (đã loại phiếu không hợp lệ trước khi tính).
 - [ ] Đúng định dạng: phiếu 8–10 câu hỏi, câu hỏi đóng là chính, câu mở chỉ dành cho đề xuất cải tiến.

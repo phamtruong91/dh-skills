@@ -43,6 +43,7 @@ hoặc báo cáo gửi cơ quan chủ quản / Bộ GD&ĐT. Báo cáo phản án
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Tổng hợp quy mô đào tạo**
 - Làm gì: lấy từ hệ thống quản lý đào tạo: tổng số SV theo khóa, ngành, hệ đào tạo; số lớp học phần
@@ -136,21 +137,6 @@ flowchart TD
 - Bảng số liệu tổng hợp: quy mô SV, kết quả học tập, tốt nghiệp, đội ngũ GV.
 - Phần đánh giá thuận lợi/khó khăn và phương hướng kỳ tới.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của báo cáo công tác đào tạo định kỳ, các phần theo đúng thứ tự:
-1. Tiêu đề báo cáo: tên báo cáo + kỳ báo cáo (học kỳ/năm học) + tên trường.
-2. Phần I. Quy mô đào tạo: tổng số SV theo khóa, ngành, hệ đào tạo; số lớp học phần đã mở;
-   so sánh với kỳ trước/cùng kỳ năm trước.
-3. Phần II. Kết quả học tập: phân loại kết quả theo %; số SV bị cảnh báo học vụ, buộc thôi học;
-   phân tích nguyên nhân chính.
-4. Phần III. Công tác tốt nghiệp: số SV tốt nghiệp trong kỳ theo ngành và xếp loại;
-   tỷ lệ tốt nghiệp đúng hạn các khóa.
-5. Phần IV. Đội ngũ giảng viên và cơ sở vật chất: số lượng, cơ cấu trình độ GV, tỷ lệ SV/GV;
-   phòng học, phòng thí nghiệm, thư viện.
-6. Phần V. Đánh giá chung: thuận lợi, kết quả đạt được; khó khăn, tồn tại và nguyên nhân
-   (khách quan, chủ quan).
-7. Phần VI. Phương hướng kỳ tới: nhiệm vụ trọng tâm, giải pháp khắc phục, chỉ tiêu phấn đấu.
-8. Phụ lục: bảng số liệu tổng hợp chi tiết (các chỉ tiêu của kỳ này và kỳ so sánh).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -158,7 +144,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề báo cáo + kỳ báo cáo; Phần I–VI (quy mô; kết quả học tập; tốt nghiệp; đội ngũ và CSVC; đánh giá chung; phương hướng); phụ lục bảng số liệu tổng hợp.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (kỳ báo cáo, quy mô SV, kết quả học tập, tốt nghiệp, đội ngũ GV, CSVC).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng bố cục văn bản hành chính chuẩn của báo cáo định kỳ.

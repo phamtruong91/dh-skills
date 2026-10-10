@@ -44,6 +44,7 @@ hưởng.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Nghị định 238/2025/NĐ-CP, hiệu lực 03/09/2025: Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Kiểm tra và làm sạch danh sách đầu vào**
 - Làm gì: kiểm tra từng sinh viên trong `danh_sach` phải có đủ họ tên, mã SV, lớp, khoa, mức học bổng hoặc mức miễn/giảm; loại bỏ trùng lặp (trùng mã SV); đối chiếu điều kiện từng sinh viên với biên bản họp hội đồng xét trong `can_cu`.
@@ -112,20 +113,6 @@ flowchart TD
 - Danh sách sinh viên kèm theo dạng bảng (STT, họ tên, mã SV, lớp, khoa, mức hưởng).
 - Checklist kiểm tra thể thức và số liệu.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Quyết định cấp học bổng /
-miễn giảm học phí, các phần bắt buộc theo đúng thứ tự:
-1. Quốc hiệu – Tiêu ngữ; tên cơ quan ban hành; số, ký hiệu văn bản; địa danh, ngày tháng năm.
-2. Tiêu đề "QUYẾT ĐỊNH" + trích yếu (V/v...).
-3. Tên và chức danh người ký (HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC...).
-4. Các căn cứ (quy chế học bổng, biên bản họp hội đồng, tờ trình — viện dẫn theo trình tự).
-5. Điều 1: nội dung cấp học bổng / miễn, giảm học phí + tổng số sinh viên (danh sách kèm theo).
-6. Điều 2: mức hưởng từng sinh viên (theo danh sách kèm theo), tổng kinh phí (bằng số và bằng chữ), nguồn kinh phí, thời gian áp dụng.
-7. Điều 3: hiệu lực thi hành (kể từ ngày ký).
-8. Điều 4: trách nhiệm thi hành của các đơn vị, cá nhân có tên.
-9. Nơi nhận.
-10. Chữ ký (Hiệu trưởng: chức danh, họ tên).
-11. Danh sách kèm theo: tiêu đề danh sách + dòng "Kèm theo Quyết định số ... ngày ... của Hiệu trưởng" + bảng (STT | Họ và tên | Mã SV | Lớp | Khoa | Mức học bổng/Mức miễn giảm | Ghi chú) + dòng tổng cộng (tổng số SV – tổng kinh phí).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -133,7 +120,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": quốc hiệu – tiêu ngữ; tiêu đề "QUYẾT ĐỊNH" + trích yếu; tên và chức danh người ký; các căn cứ; Điều 1–4; nơi nhận; chữ ký; danh sách kèm theo có dòng "Kèm theo Quyết định số ... ngày ..." + bảng + dòng tổng cộng.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Danh sách sinh viên khớp Input: đủ họ tên, mã SV, lớp, khoa, mức hưởng; không trùng mã SV.
 - [ ] Số sinh viên ở Điều 1 khớp số dòng trong danh sách kèm theo.
 - [ ] Tổng kinh phí bằng số khớp bằng chữ và khớp tổng các mức trong bảng.

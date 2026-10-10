@@ -45,6 +45,7 @@ và hình thức nộp.
 - Thông tư 09/2024/TT-BGDĐT, hiệu lực 19/07/2024, thay 36/2017: Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản.
 - Nghị định 238/2025/NĐ-CP, hiệu lực 03/09/2025: Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác thực văn bản gốc phê duyệt mức thu**
 - Làm gì: đối chiếu `can_cu` (số ký hiệu, ngày ban hành, cơ quan ban hành, phạm vi áp dụng
@@ -133,22 +134,6 @@ flowchart TD
 - Văn bản thông báo mức thu học phí hoàn chỉnh, đúng thể thức.
 - Bảng mức thu chi tiết theo khối ngành × hệ đào tạo.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của văn bản thông báo, các phần theo đúng
-thứ tự xuất hiện:
-1. Quốc hiệu – Tiêu ngữ;
-2. Tên trường, số và ký hiệu văn bản, địa danh và ngày tháng năm ban hành;
-3. Tiêu đề "THÔNG BÁO" + trích yếu nội dung;
-4. "Kính gửi" (đối tượng nhận: sinh viên, học viên, các đơn vị);
-5. Căn cứ ban hành (Nghị quyết/Quyết định phê duyệt mức thu);
-6. Nội dung mức thu: bảng học phí theo từng hệ đào tạo (cột: khối ngành, đồng/tín chỉ,
-   đồng/năm) + ghi chú cách tính mức bình quân;
-7. Thời hạn nộp học phí theo từng đợt;
-8. Hình thức nộp (tài khoản thụ hưởng, nội dung ghi chú chuyển khoản);
-9. Lệ phí kèm theo (nếu có);
-10. Trách nhiệm thực hiện của các đơn vị;
-11. Hiệu lực thi hành và cam kết công khai;
-12. Nơi nhận – chữ ký người có thẩm quyền (ghi rõ họ tên, chức vụ).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -156,7 +141,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Quốc hiệu; Tên trường, số và ký hiệu văn bản, địa danh…; Tiêu đề "THÔNG BÁO" + trích yếu nội dung;; "Kính gửi" (đối tượng nhận; Căn cứ ban hành (Nghị quyết/Quyết định phê…; Nội dung mức thu; …
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Văn bản thông báo mức thu học phí hoàn chỉnh, đúng thể thức
 - [ ] Có đầy đủ sản phẩm: Bảng mức thu chi tiết theo khối ngành × hệ đào tạo
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)

@@ -39,6 +39,7 @@ biên bản chuyển giao.
 - Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025: Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ 265 về tài chính và NĐ 267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận.
 - Luật 131/2025/QH15 sửa đổi sở hữu trí tuệ, hiệu lực 01/04/2026: Yêu cầu chủ thể quyền, nguồn tài trợ, hợp đồng và loại tài sản trí tuệ; đối chiếu sửa đổi 131/2025 theo thời điểm. Không mặc định quyền thuộc trường hay tác giả khi chưa có căn cứ; rà soát quyền sử dụng học liệu trước chia sẻ/chuyển giao.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Lập hồ sơ mô tả công nghệ**
 - Làm gì: Viết tài liệu mô tả: nguyên lý hoạt động, thông số kỹ thuật chính, ưu điểm vượt
@@ -137,7 +138,7 @@ Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 8 phần theo "Cấu trúc output chuẩn": bìa hồ sơ, mô tả công nghệ, rà soát SHTT, báo cáo định giá, bảng điều khoản thương thảo, dự thảo hợp đồng, biên bản mẫu, checklist hồ sơ.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Mức TRL nêu trong hồ sơ có bằng chứng kèm theo, không khai cao hơn thực tế.
 - [ ] Số liệu định giá khớp với Input; mọi giả định và độ không chắc chắn được nêu rõ, không bịa dữ liệu thị trường.
 - [ ] Kết luận chủ thể chuyển giao phù hợp với tình trạng văn bằng SHTT (hiệu lực, đồng sở hữu).

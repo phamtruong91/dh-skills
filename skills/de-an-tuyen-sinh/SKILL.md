@@ -44,6 +44,7 @@ chất lượng đầu vào, chính sách ưu tiên và kế hoạch triển kha
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 06/2026/TT-BGDĐT, hiệu lực 15/02/2026: Yêu cầu năm tuyển sinh, phương thức, trình độ và đề án đã duyệt. Đối chiếu quy chế 06/2026 và hướng dẫn năm tuyển sinh về điều kiện, quy đổi điểm, điểm cộng, thứ tự nguyện vọng; không giữ công thức cũ hoặc cộng hai lần chứng chỉ. Không tự đặt chỉ tiêu/ngưỡng khi chưa có quyết định và căn cứ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định chỉ tiêu theo năng lực đào tạo**
 - Làm gì: thu thập kết quả xác định năng lực đào tạo (NLĐT) năm gần nhất của từng ngành —
@@ -165,22 +166,6 @@ flowchart TD
 - Đề án tuyển sinh hoàn chỉnh (văn bản + bảng chỉ tiêu, bảng phương thức/tổ hợp/ngưỡng từng ngành).
 - Checklist đối chiếu quy chế tuyển sinh của Bộ GD&ĐT.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Đề án tuyển sinh), các phần
-bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề hành chính: quốc hiệu, tiêu ngữ, số ký hiệu văn bản, địa điểm – ngày tháng ban hành.
-2. Tên văn bản: ĐỀ ÁN TUYỂN SINH ĐẠI HỌC NĂM ... (ghi rõ hệ đào tạo).
-3. Căn cứ pháp lý: Quy chế tuyển sinh (Thông tư 08/2022/TT-BGDĐT); năng lực đào tạo của
-   trường trong năm tuyển sinh.
-4. Phần I – Chỉ tiêu tuyển sinh theo ngành: bảng (TT, tên ngành, mã ngành, chỉ tiêu) kèm dòng tổng.
-5. Phần II – Phương thức xét tuyển và phân bổ chỉ tiêu: bảng (phương thức, tỷ lệ chỉ tiêu)
-   kèm quy tắc quy đổi điểm tương đương giữa các phương thức.
-6. Phần III – Tổ hợp môn và ngưỡng đảm bảo chất lượng đầu vào: bảng theo từng ngành × từng phương thức.
-7. Phần IV – Chính sách ưu tiên: đối tượng, khu vực, mức cộng điểm, điều kiện tuyển thẳng.
-8. Phần V – Lệ phí xét tuyển: mức thu theo từng phương thức.
-9. Phần VI – Tiến độ triển khai: bảng mốc thời gian, nội dung, đơn vị thực hiện.
-10. Chữ ký người ký duyệt và con dấu.
-11. Phụ lục kèm theo: Checklist đối chiếu quy chế tuyển sinh của Bộ GD&ĐT.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -188,7 +173,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 11 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên văn bản (kèm năm và hệ đào tạo), căn cứ pháp lý, Phần I chỉ tiêu theo ngành, Phần II phương thức và phân bổ chỉ tiêu, Phần III tổ hợp môn và ngưỡng đầu vào, Phần IV chính sách ưu tiên, Phần V lệ phí, Phần VI tiến độ triển khai, chữ ký và con dấu, phụ lục checklist đối chiếu.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Tổng chỉ tiêu không vượt năng lực đào tạo đã công bố (trần cứng), kể cả ngành sức khỏe/sư phạm bị khống chế riêng.
 - [ ] Tổng chỉ tiêu theo ngành bằng tổng chỉ tiêu theo phương thức (cộng chéo khớp nhau).
 - [ ] Tổ hợp môn phù hợp đặc thù từng ngành (ngành ngôn ngữ có môn ngoại ngữ; ngành kỹ thuật có môn Toán).

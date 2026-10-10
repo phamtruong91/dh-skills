@@ -44,6 +44,7 @@ pháp lý cho việc cấp kinh phí, kiểm tra tiến độ, nghiệm thu và 
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025: Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ 265 về tài chính và NĐ 267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập và đối chiếu căn cứ**
 - Làm gì: thu thập `quyet_dinh_phe_duyet`, thuyết minh và dự toán kinh phí đã duyệt; lập bảng đối chiếu các số liệu then chốt (tên đề tài, mã số, thời gian, tổng kinh phí, danh mục sản phẩm) — mọi số liệu đưa vào hợp đồng phải khớp 100% với các văn bản này; ghi lại số và ngày ban hành của quyết định phê duyệt để dùng ở phần căn cứ.
@@ -128,21 +129,6 @@ flowchart TD
 - Văn bản hợp đồng hoàn chỉnh (mở đầu + 7 điều khoản + điều khoản chung + chữ ký).
 - Checklist kiểm tra điều khoản.
 
-**Cấu trúc output chuẩn:** khung cố định của văn bản Hợp đồng, các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Quốc hiệu – Tiêu ngữ
-2. Tiêu đề "HỢP ĐỒNG THỰC HIỆN ĐỀ TÀI KHOA HỌC CÔNG NGHỆ" + Số hợp đồng
-3. Các căn cứ (quy chế quản lý đề tài; quyết định phê duyệt; thuyết minh và dự toán kinh phí đã duyệt)
-4. Câu mở đầu: thời gian, địa điểm ký + thông tin Bên giao (A) / Bên nhận (B)
-5. Điều 1. Đối tượng của hợp đồng (tên đề tài, mã số, mục tiêu, danh mục sản phẩm)
-6. Điều 2. Thời gian thực hiện (ngày bắt đầu – ngày kết thúc, mốc báo cáo tiến độ định kỳ)
-7. Điều 3. Kinh phí (tổng mức số + chữ, nguồn kinh phí, tiến độ cấp theo đợt, nguyên tắc sử dụng và quyết toán)
-8. Điều 4. Quyền và nghĩa vụ của Bên A (bên giao)
-9. Điều 5. Quyền và nghĩa vụ của Bên B (bên nhận)
-10. Điều 6. Nghiệm thu (điều kiện, hội đồng, các mức xếp loại)
-11. Điều 7. Thanh lý hợp đồng (điều kiện thanh lý, xử lý vi phạm)
-12. Điều khoản chung (hiệu lực, sửa đổi bổ sung, số bản có giá trị như nhau)
-13. Khối chữ ký hai bên (chức danh, ký/đóng dấu, ghi rõ họ tên)
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md); trường thiếu để trống, không kèm tài liệu kiểm tra đầu ra.
@@ -150,7 +136,7 @@ Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 13 phần theo "Cấu trúc output chuẩn": Quốc hiệu – Tiêu ngữ → tiêu đề + số hợp đồng → căn cứ → câu mở đầu + thông tin hai bên → Điều 1–7 → điều khoản chung → chữ ký hai bên
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu trong hợp đồng (tên đề tài, mã số, thời gian, tổng kinh phí, danh mục sản phẩm) khớp 100% với quyết định phê duyệt, thuyết minh và dự toán đã duyệt
 - [ ] Không bịa đặt số/ngày quyết định phê duyệt, số hợp đồng, thông tin đại diện hai bên
 - [ ] Đúng mẫu hợp đồng thực hiện đề tài theo quy chế quản lý đề tài của trường/cơ quan quản lý

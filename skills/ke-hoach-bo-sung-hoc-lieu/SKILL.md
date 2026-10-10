@@ -36,6 +36,7 @@ chương trình đào tạo, nghiên cứu khoa học trong năm.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 131/2025/QH15 sửa đổi sở hữu trí tuệ, hiệu lực 01/04/2026: Yêu cầu chủ thể quyền, nguồn tài trợ, hợp đồng và loại tài sản trí tuệ; đối chiếu sửa đổi 131/2025 theo thời điểm. Không mặc định quyền thuộc trường hay tác giả khi chưa có căn cứ; rà soát quyền sử dụng học liệu trước chia sẻ/chuyển giao.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập và tổng hợp nhu cầu từ các khoa**
 - Làm gì: Thu phiếu đề xuất của các khoa: tên tài liệu, tác giả/NXB, số lượng, phục vụ
@@ -133,7 +134,7 @@ Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 7 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên kế hoạch + năm, mục tiêu, nội dung theo hình thức, tiến độ theo quý, tổ chức thực hiện, nơi nhận + chữ ký.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Danh mục và dự toán khớp với Input: nhu cầu các khoa, ngân sách, chỉ tiêu số hóa.
 - [ ] Không bịa đặt đơn giá, báo giá nhà cung cấp hay nhu cầu không có trong đề xuất của khoa.
 - [ ] Mỗi đề xuất gắn với học phần/CTĐT cụ thể; đã gộp các đề xuất trùng nhau giữa các khoa.

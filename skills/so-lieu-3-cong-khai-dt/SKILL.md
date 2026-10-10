@@ -41,6 +41,7 @@ Phòng Quản trị – Thiết bị để công bố trên website và báo cá
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 09/2024/TT-BGDĐT, hiệu lực 19/07/2024, thay 36/2017: Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập 3 nhóm số liệu từ các đơn vị đầu mối**
 - Làm gì: gửi yêu cầu và thu thập số liệu từ từng đơn vị đầu mối, đúng 3 nhóm:
@@ -127,20 +128,6 @@ flowchart TD
 - Bảng đối chiếu nhất quán số liệu giữa các đơn vị.
 - Checklist kiểm tra trước khi công bố.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của bộ bảng 3 công khai mảng đào tạo, các phần theo đúng thứ tự:
-1. Tiêu đề chung: tên trường; tên bộ công khai ("CÔNG KHAI THÔNG TIN…"); năm học công khai;
-   dòng căn cứ ban hành theo Thông tư 36/2017/TT-BGDĐT.
-2. Nhóm A. Công khai chất lượng đào tạo: các bảng theo biểu mẫu (quy mô SV theo ngành/khóa;
-   tốt nghiệp theo ngành; kết quả khảo sát việc làm sau 12 tháng; tỷ lệ thôi học).
-3. Nhóm B. Công khai điều kiện đảm bảo chất lượng: các bảng theo biểu mẫu (đội ngũ GV cơ hữu
-   theo trình độ, tỷ lệ SV/GV; cơ sở vật chất phục vụ đào tạo).
-4. Nhóm C. Công khai thu chi tài chính (mảng đào tạo): các bảng theo biểu mẫu (học phí từng
-   ngành; thu – chi hoạt động đào tạo; chi học bổng, chi NCKH trên đầu SV).
-5. Ghi chú nguồn số liệu và thời điểm chốt số liệu (dưới mỗi bảng hoặc cuối bộ bảng).
-6. Phần ký xác nhận: địa danh, ngày tháng năm; chức danh, chữ ký và họ tên người ký.
-7. Sản phẩm kèm theo: bảng đối chiếu nhất quán số liệu giữa các đơn vị; checklist kiểm tra
-   trước khi công bố.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -148,7 +135,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề chung + căn cứ văn bản hiện hành nêu tại phap-ly.md; Nhóm A (chất lượng đào tạo); Nhóm B (điều kiện đảm bảo chất lượng); Nhóm C (thu chi tài chính mảng đào tạo); ghi chú nguồn và thời điểm chốt số liệu; phần ký xác nhận; bảng đối chiếu nhất quán; checklist trước công bố.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (năm học, 3 nhóm số liệu từ các đơn vị).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng biểu mẫu tại Phụ lục văn bản hiện hành nêu tại phap-ly.md; đơn vị tính thống nhất, đơn vị tiền tệ ghi rõ.

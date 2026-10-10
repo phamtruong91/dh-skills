@@ -45,6 +45,7 @@ sung, dựa trên đề án tuyển sinh đã được phê duyệt.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 06/2026/TT-BGDĐT, hiệu lực 15/02/2026: Yêu cầu năm tuyển sinh, phương thức, trình độ và đề án đã duyệt. Đối chiếu quy chế 06/2026 và hướng dẫn năm tuyển sinh về điều kiện, quy đổi điểm, điểm cộng, thứ tự nguyện vọng; không giữ công thức cũ hoặc cộng hai lần chứng chỉ. Không tự đặt chỉ tiêu/ngưỡng khi chưa có quyết định và căn cứ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Rút trích thông tin từ đề án đã duyệt**
 - Làm gì: mở đề án tuyển sinh đã được phê duyệt (số, ngày ký trong `de_an_can_cu`); chỉ lấy
@@ -145,22 +146,6 @@ flowchart TD
 - Thông báo tuyển sinh hoàn chỉnh theo phương thức.
 - Checklist kiểm tra trước khi công bố.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Thông báo tuyển sinh theo
-phương thức), các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề hành chính: quốc hiệu, tiêu ngữ, tên cơ quan ban hành, số ký hiệu, địa điểm –
-   ngày tháng.
-2. Tên văn bản: THÔNG BÁO TUYỂN SINH ĐẠI HỌC NĂM ... (ghi rõ phương thức xét tuyển).
-3. Căn cứ: số, ngày ký của đề án tuyển sinh đã duyệt.
-4. Mục 1 – Đối tượng và điều kiện xét tuyển.
-5. Mục 2 – Ngành tuyển sinh và chỉ tiêu: bảng (TT, ngành, mã ngành, chỉ tiêu).
-6. Mục 3 – Hồ sơ đăng ký xét tuyển: danh mục đánh số thứ tự, ghi rõ loại bản và số lượng.
-7. Mục 4 – Thời gian: nhận hồ sơ, xét tuyển, công bố kết quả, nhập học.
-8. Mục 5 – Lệ phí xét tuyển.
-9. Mục 6 – Cách thức nộp hồ sơ: trực tiếp/qua bưu điện (địa chỉ), trực tuyến (link).
-10. Thông tin liên hệ tư vấn (điện thoại, email).
-11. Nơi nhận, chữ ký người ký ban hành và con dấu.
-12. Phụ lục kèm theo: Checklist kiểm tra trước khi công bố.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -168,7 +153,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 12 phần theo "Cấu trúc output chuẩn": tiêu đề hành chính, tên văn bản (kèm phương thức), căn cứ đề án đã duyệt, Mục 1 đối tượng và điều kiện, Mục 2 ngành và chỉ tiêu, Mục 3 hồ sơ đăng ký, Mục 4 thời gian, Mục 5 lệ phí, Mục 6 cách thức nộp hồ sơ, thông tin liên hệ tư vấn, nơi nhận và chữ ký, phụ lục checklist.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Tên phương thức, danh sách ngành, chỉ tiêu, ngưỡng, lệ phí khớp 100% đề án đã duyệt (đúng số, ngày ký nêu trong phần Căn cứ).
 - [ ] Không tự ý thêm ngành, thay đổi chỉ tiêu hay hạ ngưỡng so với đề án.
 - [ ] Điều kiện xét tuyển diễn đạt dễ hiểu, đo lường được (không gây tranh cãi khi áp dụng).

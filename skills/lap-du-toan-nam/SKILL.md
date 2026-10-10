@@ -41,6 +41,7 @@ thẩm quyền phê duyệt.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 89/2025/QH15 và Nghị định 73/2026/NĐ-CP – ngân sách năm 2026: Yêu cầu năm ngân sách, nguồn kinh phí, dự toán được giao và thời điểm nghiệp vụ; áp dụng Luật 89 từ 01/01/2026 và NĐ 73 cho năm ngân sách 2026. Quyết toán 2025 phải kiểm tra chế độ và chuyển tiếp của năm đó, không tự thay toàn bộ căn cứ lịch sử.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Tổng hợp và kiểm chứng nguồn thu**
 - Làm gì: phân loại đầy đủ 4 nhóm nguồn thu từ `so_lieu_thu`: (1) thu học phí, lệ phí
@@ -120,15 +121,6 @@ flowchart TD
 - Bảng dự toán chi ngân sách năm (đơn vị: triệu đồng), tổng thu = tổng chi.
 - Thuyết minh dự toán (tóm tắt).
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của bộ hồ sơ dự toán, các phần theo đúng
-thứ tự xuất hiện:
-1. Tờ trình (đơn vị trình, nội dung trình, tổng thu = tổng chi, đề nghị phê duyệt);
-2. Biểu 1: Dự toán thu (cột: TT, nguồn thu, dự toán, tỷ trọng; dòng tổng thu);
-3. Biểu 2: Dự toán chi (cột: TT, nội dung chi, dự toán, tỷ trọng; dòng tổng chi);
-4. Thuyết minh dự toán (cơ sở tính từng khoản, biến động so với năm trước, các khoản
-   đã điều chỉnh khi cân đối);
-5. Chữ ký: người lập, trưởng phòng, người phê duyệt (ký, đóng dấu).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -136,7 +128,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tờ trình (đơn vị trình, nội dung trình, tổng…; Biểu 1; Biểu 2; Thuyết minh dự toán (cơ sở tính từng khoản,…; Chữ ký
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Tờ trình phê duyệt dự toán ngân sách năm
 - [ ] Có đầy đủ sản phẩm: Bảng dự toán thu ngân sách năm (đơn vị: triệu đồng)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)

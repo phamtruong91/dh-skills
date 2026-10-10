@@ -44,6 +44,7 @@ tốt nghiệp) để làm căn cứ in bằng, cấp bảng điểm và tổ ch
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Thông tư 10/2026/TT-BGDĐT – Quy chế văn bằng, chứng chỉ: Đối chiếu văn bản gốc, ngày hiệu lực và chuyển tiếp trước khi chọn mẫu, sổ, quy trình cấp/chỉnh sửa/thu hồi; không dùng mẫu 21/2019 như mẫu hiện hành. Yêu cầu hồ sơ gốc, quyết định và thẩm quyền. AI chỉ chuẩn bị hồ sơ, không cấp bằng, gán số hay tự xác nhận chữ ký.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Rà soát điều kiện tốt nghiệp của từng SV**
 - Làm gì: đối chiếu từng SV trong danh sách dự kiến với 5 nhóm điều kiện: (a) tích lũy đủ số tín chỉ
@@ -126,20 +127,6 @@ flowchart TD
 - Thống kê nhanh: tổng số SV tốt nghiệp theo ngành và theo xếp loại.
 - Checklist kiểm tra: điều kiện tốt nghiệp từng SV, biên bản hội đồng, thẩm quyền ký.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của quyết định công nhận tốt nghiệp, các phần theo đúng thứ tự:
-1. Phần đầu văn bản: quốc hiệu – tiêu ngữ; tên cơ quan ban hành; số, ký hiệu quyết định;
-   địa danh, ngày tháng năm ban hành.
-2. Tên loại và trích yếu: "QUYẾT ĐỊNH" + "Về việc công nhận tốt nghiệp…" (ghi rõ đợt xét).
-3. Thẩm quyền ban hành: chức danh người ký (HIỆU TRƯỞNG / KT. HIỆU TRƯỞNG – PHÓ HIỆU TRƯỞNG).
-4. Phần căn cứ: quy chế đào tạo (điều, khoản về điều kiện tốt nghiệp); biên bản họp hội đồng
-   xét tốt nghiệp (số, ngày họp); đề nghị của Trưởng phòng Đào tạo.
-5. Phần quyết định: Điều 1 (công nhận tốt nghiệp và cấp bằng cho số lượng SV có tên trong danh
-   sách kèm theo); Điều 2 (giao Phòng Đào tạo phối hợp in bằng, tổ chức lễ trao bằng — ghi ngày
-   dự kiến nếu có); Điều 3 (trách nhiệm thi hành).
-6. Phần cuối: nơi nhận; chữ ký, họ tên người ký.
-7. Phụ lục kèm theo: danh sách SV (STT, mã SV, họ tên, ngày sinh, lớp, ngành, ĐTB toàn khóa,
-   xếp loại) sắp xếp theo ngành; bảng thống kê số SV tốt nghiệp theo ngành và theo xếp loại.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -147,7 +134,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": phần đầu văn bản; tên loại + trích yếu (đợt xét); thẩm quyền ban hành; phần căn cứ; 3 điều khoản quyết định; nơi nhận, chữ ký; phụ lục danh sách SV có xếp loại + bảng thống kê theo ngành/xếp loại.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu/nội dung trong output khớp với Input đã cho (mã SV, họ tên, ngày sinh, lớp, ngành, ĐTB toàn khóa, xếp loại, đợt xét).
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn.
 - [ ] Đúng thể thức văn bản hành chính theo Nghị định 30/2020/NĐ-CP.

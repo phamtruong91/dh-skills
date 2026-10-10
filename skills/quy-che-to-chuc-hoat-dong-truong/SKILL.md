@@ -37,6 +37,7 @@ Luật Giáo dục đại học sửa đổi và tình hình thực tế của t
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 125/2025/QH15; Nghị quyết 10/2026/NQ-CP giữ99/2019 một phần; phạm vi: Quản trị cơ sở giáo dục đại học; phân biệt công lập và tư thục: 99/2019 không bị thay thế toàn bộ. NQ 10 loại trừ quy định về hội đồng trường/đại học công lập: điểm b khoản 4 Điều 2, điểm e khoản 1 Điều 3, điểm a khoản 2 Điều 4, điểm c khoản 4 Điều 4, điểm b khoản 2 Điều 5, Điều 7, khoản 1 Điều 9, điểm c khoản 2 Điều 16. Không tổ chức hoạt động mới của hội đồng trường công lập theo quy trình cũ. Yêu cầu loại hình trường, thời điểm xử lý, quy chế hiện hành, quyết định phân quyền; tư thục phải đối chiếu Luật 125.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Rà soát căn cứ pháp lý**
 - Làm gì: Thu thập đầy đủ văn bản pháp lý liên quan (Luật Giáo dục đại học và luật
@@ -170,7 +171,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần của "Cấu trúc output chuẩn": tiêu đề + Chương I–X theo đúng thứ tự + tờ trình ban hành.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Đủ 10 chương; các điều được đánh số liên tục toàn quy chế.
 - [ ] Nội dung khớp với Input: cơ cấu tổ chức, chức năng đơn vị, nội dung đặc thù đã cho.
 - [ ] Thuật ngữ thống nhất xuyên suốt (một khái niệm — một tên gọi); không mâu thuẫn giữa các chương về thẩm quyền, chức năng.

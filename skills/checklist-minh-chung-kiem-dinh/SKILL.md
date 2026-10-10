@@ -38,6 +38,7 @@ kiểm định chất lượng CSGD hoặc CTĐT.
 - Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026: Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học.
 - Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025: Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Liệt kê tiêu chí**
 - Làm gì: Bóc tách `bo_tieu_chuan` thành danh sách tiêu chí chi tiết theo đúng thứ tự (tiêu chuẩn → tiêu chí), đánh số thứ tự đầy đủ; ghi kèm yêu cầu/yếu tố cần đánh giá của từng tiêu chí theo hướng dẫn của bộ tiêu chuẩn.
@@ -104,12 +105,6 @@ flowchart TD
 - Hướng dẫn mã hóa minh chứng.
 - Báo cáo rà soát: tỷ lệ minh chứng đã đủ / còn thiếu.
 
-**Cấu trúc output chuẩn:** bộ sản phẩm gồm các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề danh mục (DANH MỤC MINH CHỨNG KIỂM ĐỊNH) + đối tượng kiểm định + quy tắc mã hóa áp dụng;
-2. Bảng checklist theo từng tiêu chuẩn, mỗi dòng gồm: Mã MC – Tiêu chí – Tên minh chứng yêu cầu – Đơn vị đầu mối – Thời hạn – Tình trạng (Đầy đủ / Cần bổ sung / Thiếu);
-3. Báo cáo rà soát (tính đến ngày lập): tổng số minh chứng yêu cầu, số đã đầy đủ (tỷ lệ %), số cần bổ sung, số còn thiếu; liệt kê các đơn vị còn nợ minh chứng nhiều nhất;
-4. Hướng dẫn mã hóa minh chứng: quy tắc mã hóa, ví dụ minh họa, nguyên tắc mã duy nhất và nhất quán với báo cáo tự đánh giá.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -117,7 +112,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 4 phần theo "Cấu trúc output chuẩn": tiêu đề danh mục + đối tượng kiểm định + quy tắc mã hóa; bảng checklist theo từng tiêu chuẩn (Mã MC – Tiêu chí – Tên minh chứng yêu cầu – Đơn vị đầu mối – Thời hạn – Tình trạng); báo cáo rà soát (tổng số minh chứng, số đầy đủ + tỷ lệ %, số cần bổ sung, số còn thiếu; đơn vị nợ nhiều nhất); hướng dẫn mã hóa minh chứng.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Mỗi tiêu chí của bộ tiêu chuẩn đều có minh chứng riêng, không gộp/bỏ tiêu chí; ưu tiên minh chứng trong chu kỳ đánh giá.
 - [ ] Không bịa đặt minh chứng, mã minh chứng, tình trạng thu thập.
 - [ ] Mã minh chứng duy nhất, đúng quy tắc mã hóa, nhất quán giữa checklist, báo cáo tự đánh giá và hồ sơ lưu.

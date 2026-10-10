@@ -40,6 +40,7 @@ chất lượng thành báo cáo chung.
 - Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026: Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học.
 - Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025: Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập số liệu**
 - Làm gì: Thu thập số liệu năm học từ 04 mảng: (a) Khảo thí — số kỳ thi, số lượt SV dự thi, số trường hợp vi phạm, số đơn phúc khảo, kết quả phân tích đề thi (từ `so_lieu_khao_thi`); (b) Tự đánh giá/kiểm định — tiến độ TĐG các CTĐT/CSGD, số CTĐT được công nhận, tình trạng minh chứng (từ `so_lieu_tdg_kiem_dinh`); (c) Khảo sát — các đợt khảo sát đã thực hiện, số phiếu hợp lệ, kết quả chính (từ `so_lieu_khao_sat`); (d) Cải tiến — số giải pháp hoàn thành/tổng số, các nội dung chuyển tiếp (từ `tien_do_cai_tien`).
@@ -91,18 +92,6 @@ flowchart TD
 ## Đầu ra
 - Báo cáo công tác đảm bảo chất lượng năm học hoàn chỉnh.
 
-**Cấu trúc output chuẩn:** báo cáo hành chính gồm các phần bắt buộc theo đúng thứ tự:
-1. Quốc hiệu, tên cơ quan ban hành (Phòng Khảo thí & ĐBCL), số/ký hiệu văn bản, địa danh và ngày tháng năm ban hành;
-2. Tên loại văn bản (BÁO CÁO) + trích yếu (công tác đảm bảo chất lượng năm học...);
-3. Phần I – Khái quát chung (các mảng công tác ĐBCL triển khai trong năm);
-4. Phần II – Công tác khảo thí (số kỳ thi, quy mô, kỷ luật thi, phúc khảo, phân tích chất lượng đề thi);
-5. Phần III – Tự đánh giá và kiểm định (tiến độ TĐG, kết quả kiểm định, tình trạng minh chứng);
-6. Phần IV – Khảo sát các bên liên quan (các đợt khảo sát, số phiếu, kết quả nổi bật);
-7. Phần V – Cải tiến chất lượng (tiến độ kế hoạch cải tiến, nội dung chuyển tiếp);
-8. Phần VI – Đánh giá chung và phương hướng (ưu điểm, tồn tại, phương hướng năm học tới);
-9. Nơi nhận;
-10. Chức vụ người ký, chữ ký, họ tên người ký.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -110,7 +99,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 10 phần theo "Cấu trúc output chuẩn": quốc hiệu + số/ký hiệu + địa danh, ngày tháng; BÁO CÁO + trích yếu; Phần I – Khái quát chung; Phần II – Công tác khảo thí; Phần III – Tự đánh giá và kiểm định; Phần IV – Khảo sát các bên liên quan; Phần V – Cải tiến chất lượng; Phần VI – Đánh giá chung và phương hướng; Nơi nhận; chức vụ/chữ ký/họ tên người ký.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu 04 mảng (khảo thí, tự đánh giá/kiểm định, khảo sát, cải tiến) lấy từ báo cáo chính thức của các đơn vị (không dùng số liệu ước tính), khớp với Input, ghi rõ nguồn số liệu từng mảng.
 - [ ] Không bịa đặt số liệu năm học.
 - [ ] Đúng thể thức văn bản hành chính theo Nghị định 30/2020/NĐ-CP.

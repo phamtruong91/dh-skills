@@ -42,6 +42,7 @@ Báo cáo lưu chuyển tiền tệ và Thuyết minh báo cáo tài chính.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 24/2024/TT-BTC, áp dụng từ năm tài chính 2025; sửa đổi 46/2025: Phân biệt năm tài chính, chế độ kế toán, chứng từ, sổ và báo cáo; dùng hệ thống biểu mẫu của 24/2024 cùng sửa đổi 46/2025 theo thời điểm. Không chuyển mã tài khoản hoặc mẫu cũ cơ học; đối chiếu sổ, số dư đầu/cuối kỳ và xác nhận của kế toán trưởng.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Khóa sổ và đối chiếu số liệu**
 - Làm gì: đảm bảo đã hạch toán đầy đủ chứng từ của `nam_tai_chinh`; đối chiếu số dư tiền mặt
@@ -127,19 +128,6 @@ flowchart TD
 - Báo cáo lưu chuyển tiền tệ (tóm tắt).
 - Thuyết minh báo cáo tài chính (ngắn).
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của bộ báo cáo tài chính, các phần theo đúng
-thứ tự xuất hiện:
-1. Tiêu đề bộ báo cáo (tên đơn vị, năm tài chính, đơn vị tính);
-2. Biểu 1: Bảng cân đối kế toán (cột: chỉ tiêu, đầu năm, cuối năm; hai phần Tài sản /
-   Nguồn vốn; dòng tổng cộng hai bên bằng nhau);
-3. Biểu 2: Báo cáo kết quả hoạt động (tổng thu hoạt động chi tiết, tổng chi hoạt động
-   chi tiết, thặng dư/thâm hụt = tổng thu − tổng chi);
-4. Biểu 3: Báo cáo lưu chuyển tiền tệ tóm tắt (3 dòng tiền, tăng tiền thuần, tiền đầu kỳ,
-   tiền cuối kỳ khớp với Bảng cân đối);
-5. Thuyết minh báo cáo tài chính (đặc điểm đơn vị, chế độ kế toán, chính sách kế toán,
-   giải thích biến động lớn);
-6. Chữ ký: người lập, kế toán trưởng, thủ trưởng đơn vị (ký, đóng dấu, ghi rõ họ tên).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -147,7 +135,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề bộ báo cáo (tên đơn vị, năm tài…; Biểu 1; Biểu 2; Biểu 3; Thuyết minh báo cáo tài chính (đặc điểm đơn…; Chữ ký
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Bảng cân đối kế toán (tài sản / nguồn vốn, cột đầu năm – cuối năm)
 - [ ] Có đầy đủ sản phẩm: Báo cáo kết quả hoạt động (thu – chi – thặng dư/thâm hụt)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)

@@ -38,6 +38,7 @@ quyết định công nhận kết quả (điểm giữ nguyên hoặc điều c
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Tổng hợp đơn phúc khảo**
 - Làm gì: Phòng Khảo thí & ĐBCL tiếp nhận đơn phúc khảo của sinh viên trong thời hạn quy định của trường (thường 07–15 ngày sau công bố điểm); kiểm tra tính hợp lệ của đơn (đúng mẫu, còn thời hạn, đã nộp lệ phí nếu có); lập danh sách tổng hợp: họ tên, MSSV, lớp, học phần, điểm đã công bố.
@@ -94,17 +95,6 @@ flowchart TD
 - Văn bản quyết định công nhận kết quả phúc khảo hoàn chỉnh.
 - Danh sách kết quả phúc khảo kèm theo (điểm trước/sau).
 
-**Cấu trúc output chuẩn:** quyết định theo thể thức Nghị định 30/2020/NĐ-CP, các phần bắt buộc theo đúng thứ tự:
-1. Quốc hiệu, tên cơ quan ban hành, số/ký hiệu văn bản, địa danh và ngày tháng năm ban hành;
-2. Tên loại văn bản (QUYẾT ĐỊNH) + trích yếu nội dung;
-3. Thẩm quyền ban hành (chức vụ người ký + tên cơ quan, viết hoa);
-4. Các căn cứ pháp lý: quy chế đào tạo, quy định phúc khảo của trường, quyết định thành lập hội đồng phúc khảo, biên bản chấm phúc khảo (mỗi căn cứ một dòng, bắt đầu bằng "Căn cứ");
-5. "Xét đề nghị của..." (đơn vị đề xuất);
-6. "QUYẾT ĐỊNH:" + các điều: Điều 1 – công nhận kết quả phúc khảo (danh sách chi tiết kèm theo); Điều 2 – cập nhật điểm vào hệ thống và thông báo đến sinh viên; Điều 3 – hiệu lực thi hành và trách nhiệm thi hành;
-7. Nơi nhận (đầy đủ các đơn vị liên quan + lưu);
-8. Chức vụ người ký, chữ ký, họ tên người ký (đóng dấu);
-9. Danh sách kết quả phúc khảo kèm theo (STT, họ tên, MSSV, lớp, học phần, điểm công bố, điểm phúc khảo, kết luận giữ nguyên/điều chỉnh).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -112,7 +102,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 9 phần theo "Cấu trúc output chuẩn" NĐ 30/2020: quốc hiệu + số/ký hiệu + địa danh, ngày tháng; QUYẾT ĐỊNH + trích yếu; thẩm quyền ban hành; các căn cứ pháp lý (quy chế đào tạo, quy định phúc khảo của trường, quyết định thành lập hội đồng phúc khảo, biên bản chấm phúc khảo); "Xét đề nghị của..."; các điều (Điều 1 – công nhận kết quả phúc khảo; Điều 2 – cập nhật điểm và thông báo; Điều 3 – hiệu lực thi hành); Nơi nhận; chức vụ/chữ ký/họ tên người ký (đóng dấu); danh sách kết quả phúc khảo kèm theo.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Danh sách kèm theo liệt kê đủ 100% sinh viên trong `danh_sach_phuc_khao` (kể cả trường hợp điểm giữ nguyên); họ tên, MSSV, học phần, điểm công bố, điểm phúc khảo khớp với Input và biên bản chấm phúc khảo.
 - [ ] Không bịa đặt điểm công bố, điểm phúc khảo, kết luận giữ nguyên/điều chỉnh.
 - [ ] Đúng thể thức Nghị định 30/2020/NĐ-CP.

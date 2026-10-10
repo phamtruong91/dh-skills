@@ -47,6 +47,7 @@ tuần/chương, phương pháp giảng dạy và cách thức đánh giá ngư�
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Thông tư 54/2026/TT-BGDĐT, hiệu lực 30/06/2026: Phân loại xây dựng chương trình, chuẩn đầu ra hay mở ngành; yêu cầu chuẩn ngành/trình độ, trạng thái chương trình và ngày tiếp nhận hồ sơ. Đọc toàn văn và điều khoản chuyển tiếp trước khi đổi chuẩn/mẫu; chưa xác minh toàn văn thì ghi điều kiện chưa xác nhận, không tự đặt thời hạn chuyển đổi.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Ghi thông tin chung của học phần**
 - Làm gì: ghi đầy đủ từ các trường input: tên học phần (`ten_hoc_phan`, kèm tên tiếng Anh nếu
@@ -150,25 +151,6 @@ flowchart TD
 - Đề cương chi tiết học phần hoàn chỉnh (văn bản có cấu trúc mục rõ ràng).
 - Bảng đối sánh CLO – PLO và CLO – hình thức đánh giá.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Đề cương chi tiết học phần),
-các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề: tên trường, tên khoa/bộ môn; dòng "ĐỀ CƯƠNG CHI TIẾT HỌC PHẦN".
-2. Mục 1 – Thông tin chung: tên học phần (kèm tên tiếng Anh nếu có), mã học phần, số tín
-   chỉ (lý thuyết – thực hành – tự học), học kỳ, học phần tiên quyết/song hành, đơn vị
-   phụ trách.
-3. Mục 2 – Mục tiêu học phần.
-4. Mục 3 – Chuẩn đầu ra học phần (CLO): liệt kê đánh số, mỗi CLO ghi rõ đóng góp vào PLO
-   nào (mức I/R/M).
-5. Mục 4 – Tóm tắt nội dung theo tuần/chương: bảng hoặc danh sách (tuần, chủ đề, số tiết
-   LT/TH, hoạt động GV–SV).
-6. Mục 5 – Phương pháp giảng dạy (PPGD).
-7. Mục 6 – Phương pháp và trọng số đánh giá: bảng (thành phần, hình thức, trọng số, CLO
-   đánh giá) với tổng trọng số 100%; thang điểm và cách làm tròn.
-8. Mục 7 – Tài liệu học tập: giáo trình chính (bắt buộc), tài liệu tham khảo, học liệu số.
-9. Mục 8 – Thông tin giảng viên soạn đề cương; địa điểm – ngày tháng; chữ ký (trưởng khoa,
-   người soạn).
-10. Phụ lục kèm theo: Bảng đối sánh CLO – PLO.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -176,7 +158,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 10 phần theo "Cấu trúc output chuẩn": tiêu đề, Mục 1 thông tin chung, Mục 2 mục tiêu, Mục 3 CLO, Mục 4 nội dung theo tuần, Mục 5 PPGD, Mục 6 phương pháp và trọng số đánh giá, Mục 7 tài liệu học tập, Mục 8 giảng viên soạn + chữ ký, phụ lục đối sánh CLO–PLO.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Mã, tên học phần khớp 100% danh mục học phần trong khung CTĐT đã ban hành; số tiết quy đổi từ tín chỉ đúng quy định.
 - [ ] Nhất quán 4 chiều: mỗi CLO đều có nội dung dạy – PPGD phù hợp – thành phần đánh giá đo lường.
 - [ ] Tổng trọng số các thành phần đánh giá đúng 100%; trọng số phản ánh đúng mức độ quan trọng của CLO.

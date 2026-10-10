@@ -44,6 +44,7 @@ nghiên cứu khoa học: xác định cấp đề tài, thời hạn nộp hồ
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025: Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ 265 về tài chính và NĐ 267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định phạm vi đợt đăng ký**
 - Làm gì: đọc `dot_dang_ky` để xác định đợt và năm; lập bảng gồm từng cấp trong `cap_de_tai`, điền `so_luong_chi_tieu` và `dinh_muc_kinh_phi` tương ứng từng cấp; kiểm tra tổng (định mức × chỉ tiêu) có khớp kế hoạch kinh phí KHCN năm đã duyệt không.
@@ -120,17 +121,6 @@ flowchart TD
 - Văn bản thông báo hoàn chỉnh.
 - Checklist kiểm tra thể thức và nội dung.
 
-**Cấu trúc output chuẩn:** khung cố định của văn bản Thông báo, các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Quốc hiệu – Tiêu ngữ (căn phải, chữ in hoa)
-2. Tên cơ quan ban hành (căn trái) + Số, ký hiệu văn bản
-3. Địa danh, ngày tháng năm ban hành (căn phải)
-4. Tiêu đề "THÔNG BÁO" + dòng trích yếu nội dung (ghi rõ đợt, năm đăng ký)
-5. Kính gửi các đơn vị nhận
-6. Căn cứ ban hành (nếu có)
-7. Nội dung đánh số 5 mục: (1) Đối tượng, điều kiện đăng ký; (2) Cấp đề tài, số lượng chỉ tiêu, định mức kinh phí (dạng bảng); (3) Hồ sơ đăng ký (từng thành phần + số bản); (4) Thời hạn và nơi nộp hồ sơ; (5) Thông tin liên hệ, giải đáp thắc mắc
-8. Câu kết thúc đề nghị các đơn vị phổ biến + ký hiệu "./."
-9. Khối Nơi nhận (trái) và Chữ ký (phải, đúng chức danh người ký)
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md); trường thiếu để trống, không kèm tài liệu kiểm tra đầu ra.
@@ -138,7 +128,7 @@ Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 9 phần theo "Cấu trúc output chuẩn": Quốc hiệu – Tiêu ngữ → tên cơ quan + số ký hiệu → địa danh, ngày tháng → tiêu đề → Kính gửi → căn cứ → nội dung 5 mục → câu kết thúc + "./." → Nơi nhận và Chữ ký
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu trong output (chỉ tiêu, định mức kinh phí theo từng cấp) khớp 100% với Input (`dot_dang_ky`, `so_luong_chi_tieu`, `dinh_muc_kinh_phi`)
 - [ ] Không bịa đặt căn cứ pháp lý, số ký hiệu văn bản, thông tin đơn vị
 - [ ] Đúng thể thức văn bản hành chính theo Nghị định 30/2020/NĐ-CP

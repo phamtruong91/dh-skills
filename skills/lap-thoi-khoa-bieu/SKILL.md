@@ -42,6 +42,7 @@ lịch giảng viên/phòng học/sinh viên → chốt và công bố.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập đăng ký học phần**
 - Làm gì: trích xuất từ hệ thống quản lý đào tạo danh sách đăng ký học phần của sinh viên
@@ -134,15 +135,6 @@ flowchart TD
 - Checklist kiểm tra trùng lịch (đánh dấu từng tiêu chí đã kiểm tra).
 - Danh sách các lớp chưa xếp được (nếu có) kèm nguyên nhân và đề xuất xử lý.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Thời khóa biểu học kỳ), các
-phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề: THỜI KHÓA BIỂU — HỌC KỲ ... NĂM HỌC ... (ghi rõ tên trường).
-2. Bảng thời khóa biểu: các cột Lớp học phần – Học phần – Giảng viên – Thứ/Tiết – Phòng –
-   Sĩ số.
-3. Checklist kiểm tra trùng lịch: bảng (tiêu chí kiểm tra – kết quả đạt/không đạt kèm ghi chú).
-4. Danh sách các lớp chưa xếp được (nếu có): lớp học phần, nguyên nhân, đề xuất xử lý; nếu
-   không có thì ghi rõ "Không có".
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -150,7 +142,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 4 phần theo "Cấu trúc output chuẩn": tiêu đề TKB (học kỳ, năm học, tên trường), bảng thời khóa biểu (Lớp học phần – Học phần – Giảng viên – Thứ/Tiết – Phòng – Sĩ số), checklist kiểm tra trùng lịch, danh sách lớp chưa xếp được (ghi rõ "Không có" nếu không có).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Một giảng viên không dạy 2 lớp cùng khung giờ; một phòng học không xếp 2 lớp cùng khung giờ.
 - [ ] Sinh viên cùng khóa/ngành không bị trùng 2 học phần bắt buộc cùng khung giờ; đảm bảo giờ nghỉ giữa các buổi.
 - [ ] Sức chứa phòng ≥ sĩ số lớp; lớp thực hành xếp phòng máy/thí nghiệm đúng chuẩn thiết bị.

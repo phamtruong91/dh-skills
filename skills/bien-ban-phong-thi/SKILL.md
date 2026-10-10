@@ -43,6 +43,7 @@ và bàn giao bài thi, giấy thi cho thư ký hội đồng.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Lập biên bản ngay tại phòng thi**
 - Làm gì: Ngay sau khi thu bài xong tại phòng thi, cán bộ coi thi lập biên bản trên mẫu chuẩn của trường: ghi đầy đủ kỳ thi, mã + tên học phần, ngày thi, ca thi, số phòng thi, họ tên 02 cán bộ coi thi; ghi số liệu thí sinh theo 03 con số: tổng số theo danh sách (`tong_so_thi_sinh`), số thực tế dự thi (`so_thi_sinh_du_thi`), số vắng (đối chiếu với danh sách điểm danh).
@@ -100,23 +101,6 @@ flowchart TD
 - Biên bản phòng thi hoàn chỉnh.
 - Biên bản bàn giao bài thi (kèm theo).
 
-**Cấu trúc output chuẩn:** 02 văn bản, mỗi văn bản gồm các phần bắt buộc theo đúng thứ tự:
-A. Biên bản phòng thi:
-1. Quốc hiệu – tiêu ngữ;
-2. Tên biên bản (BIÊN BẢN PHÒNG THI);
-3. Thông tin ca thi: kỳ thi, mã + tên học phần, ngày thi, ca thi, phòng thi, họ tên 02 cán bộ coi thi;
-4. Số lượng thí sinh: theo danh sách – dự thi – vắng thi (kèm họ tên, MSSV thí sinh vắng, phân loại có phép/không phép);
-5. Ghi nhận vi phạm quy chế (mô tả cụ thể hoặc ghi "Không có trường hợp vi phạm");
-6. Số bài thi thu được, số túi niêm phong và số niêm phong;
-7. Địa danh, ngày tháng năm lập biên bản;
-8. Chữ ký của 02 cán bộ coi thi (ký, ghi rõ họ tên).
-B. Biên bản bàn giao bài thi:
-1. Quốc hiệu – tiêu ngữ;
-2. Tên biên bản (BIÊN BẢN BÀN GIAO BÀI THI);
-3. Thời gian, địa điểm bàn giao; thành phần bên giao (cán bộ coi thi) – bên nhận (thư ký hội đồng);
-4. Nội dung bàn giao: số túi bài thi đã niêm phong (số niêm phong), số bài thi, học phần, ca thi, kèm 01 biên bản phòng thi; xác nhận túi bài thi còn nguyên niêm phong;
-5. Chữ ký hai bên (ký, ghi rõ họ tên), lập thành 02 bản.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -124,7 +108,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": (A) Biên bản phòng thi: quốc hiệu – tiêu ngữ; tên biên bản; thông tin ca thi; số lượng thí sinh (danh sách – dự thi – vắng, kèm họ tên, MSSV thí sinh vắng, phân loại có phép/không phép); ghi nhận vi phạm; số bài thi thu được, số túi niêm phong và số niêm phong; địa danh, ngày tháng năm lập; chữ ký 02 cán bộ coi thi; (B) Biên bản bàn giao bài thi: quốc hiệu – tiêu ngữ; tên biên bản; thời gian, địa điểm, thành phần bên giao – bên nhận; nội dung bàn giao; chữ ký hai bên, lập thành 02 bản.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] 03 con số thí sinh cộng khớp nhau (dự thi + vắng = tổng số); số bài thi thực tế thu được = số thí sinh dự thi.
 - [ ] Không bịa đặt số liệu thí sinh, bài thi, nội dung vi phạm.
 - [ ] Đúng mẫu biên bản chuẩn của trường; biên bản vi phạm lập riêng, đính kèm biên bản phòng thi.

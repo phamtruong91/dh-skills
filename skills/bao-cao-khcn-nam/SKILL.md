@@ -44,6 +44,7 @@ Trường, phục vụ kiểm định chất lượng, hoặc báo cáo Hội đ
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025: Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ 265 về tài chính và NĐ 267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập số liệu từ các đơn vị**
 - Làm gì: gửi biểu mẫu thống kê KHCN & HTQT đến các khoa, viện, trung tâm theo đúng các nhóm input (đề tài các cấp, công bố khoa học, sở hữu trí tuệ, hội thảo, hợp tác quốc tế, giải thưởng); quy định thời hạn nộp; Phòng KHCN&HTQT làm đầu mối tổng hợp và đôn đốc đơn vị chưa nộp.
@@ -111,19 +112,6 @@ flowchart TD
 - Báo cáo tổng kết KHCN & HTQT năm hoàn chỉnh (văn bản + các bảng số liệu).
 - Bộ bảng tổng hợp số liệu (có thể tách file Excel để nộp Bộ GD&ĐT).
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — Báo cáo tổng kết công tác
-KHCN & HTQT năm, các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề cơ quan ban hành + tên báo cáo + năm báo cáo.
-2. I. Kết quả thực hiện — các tiểu mục theo nhóm, mỗi nhóm một bảng tổng hợp:
-   (1) Đề tài NCKH các cấp (cấp quản lý – tổng số – đang thực hiện – đã nghiệm thu – kinh phí);
-   (2) Công bố khoa học (loại công bố – số lượng – so với năm trước);
-   (3) Sở hữu trí tuệ; (4) Hội thảo khoa học (tổ chức / tham dự); (5) Hợp tác quốc tế;
-   (6) Giải thưởng KHCN (nếu có).
-3. II. Đánh giá chung: 1. Kết quả nổi bật (định lượng bằng số liệu); 2. Tồn tại, hạn chế và nguyên nhân.
-4. III. Phương hướng năm tiếp theo: nhiệm vụ cụ thể, chỉ tiêu định lượng, đơn vị thực hiện.
-5. Địa danh, ngày tháng năm; chức danh, chữ ký, họ tên người ký.
-6. Bộ bảng tổng hợp số liệu (kèm theo; có thể tách file Excel để nộp Bộ GD&ĐT).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -131,7 +119,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": tiêu đề báo cáo; I. Kết quả thực hiện với đủ 6 nhóm bảng (đề tài các cấp, công bố khoa học, sở hữu trí tuệ, hội thảo, hợp tác quốc tế, giải thưởng); II. Đánh giá chung; III. Phương hướng; khối chữ ký; bộ bảng tổng hợp kèm theo.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu trong output khớp với Input đã cho (đề tài, công bố, SHTT, hội thảo, HTQT, giải thưởng).
 - [ ] Tổng các dòng chi tiết khớp dòng tổng cộng trong mỗi bảng; số liệu trong phần đánh giá và phương hướng khớp với bảng tổng hợp.
 - [ ] Mọi số liệu đều có minh chứng (quyết định nghiệm thu, bài báo, văn bằng SHTT, văn bản ký kết); không đưa số liệu thiếu minh chứng vào báo cáo chính thức.

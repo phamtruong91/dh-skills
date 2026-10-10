@@ -36,6 +36,7 @@ khi bàn giao, sáp nhập, giải thể đơn vị.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Nghị định 186/2025/NĐ-CP, hiệu lực 01/07/2025: Yêu cầu nguồn hình thành, chủ sở hữu, phân cấp quản lý và hồ sơ tài sản công; phân biệt mua sắm, kiểm kê, khai thác, thanh lý. Đối chiếu thẩm quyền và điều kiện theo NĐ 186, không tự quyết định xử lý tài sản.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thành lập ban kiểm kê và phân công**
 - Làm gì: ban hành quyết định thành lập ban kiểm kê (`ban_kiem_ke`: trưởng ban, thành viên);
@@ -120,20 +121,6 @@ flowchart TD
 - Biên bản kiểm kê tài sản.
 - Bảng tổng hợp kết quả kiểm kê (phụ lục).
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của biên bản kiểm kê tài sản, các phần theo
-đúng thứ tự xuất hiện:
-1. Quốc hiệu – Tiêu ngữ;
-2. Tiêu đề biên bản;
-3. Thời gian, địa điểm, thành phần ban kiểm kê;
-4. Phần I: Kết quả kiểm kê (bảng: STT, mã tài sản, tên tài sản, năm đưa vào sử dụng,
-   nguyên giá, giá trị còn lại, tình trạng thực tế);
-5. Phần II: Chênh lệch thừa/thiếu so với sổ sách;
-6. Phần III: Kiến nghị xử lý (sửa chữa, thanh lý, bồi thường — cụ thể đến từng tài sản,
-   có thời hạn);
-7. Số bản biên bản;
-8. Chữ ký: ban kiểm kê và thủ trưởng đơn vị được kiểm kê (ghi rõ họ tên, chức vụ);
-9. Phụ lục: Bảng tổng hợp kết quả kiểm kê.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md); trường thiếu để trống, không kèm tài liệu kiểm tra đầu ra.
@@ -141,7 +128,7 @@ Sản phẩm nghiệp vụ theo [quy cách và cấu trúc](references/quy-cach-
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Quốc hiệu; Tiêu đề biên bản;; Thời gian, địa điểm, thành phần ban kiểm kê;; Phần I; Phần II; Phần III; …
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Biên bản kiểm kê tài sản
 - [ ] Có đầy đủ sản phẩm: Bảng tổng hợp kết quả kiểm kê (phụ lục)
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)

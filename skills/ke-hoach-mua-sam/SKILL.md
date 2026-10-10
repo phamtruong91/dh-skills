@@ -39,6 +39,7 @@ khi điều chỉnh, bổ sung kế hoạch mua sắm giữa năm.
 - Nghị định 214/2025, sửa đổi 165/2026, 170/2026, 349/2026; VBHN 36/2026/VBHN-NĐ-BTC ngày 23/09/2026: Yêu cầu chủ thể, nguồn vốn, loại gói, dự toán được duyệt, phân cấp thẩm quyền, mua sắm tập trung, điều kiện áp dụng hình thức và thời điểm phát hành. Đối chiếu Luật Đấu thầu hợp nhất 74/VBHN-VPQH ngày 25/03/2026 và nghị định hiện hành. Không suy ra chỉ định thầu/mua sắm trực tiếp chỉ vì nhỏ lẻ hoặc cấp bách; ghi điều khoản và điều kiện từng gói, cán bộ thẩm định xác nhận. Không tự đặt hạn mức.
 - Nghị định 186/2025/NĐ-CP, hiệu lực 01/07/2025: Yêu cầu nguồn hình thành, chủ sở hữu, phân cấp quản lý và hồ sơ tài sản công; phân biệt mua sắm, kiểm kê, khai thác, thanh lý. Đối chiếu thẩm quyền và điều kiện theo NĐ 186, không tự quyết định xử lý tài sản.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Tổng hợp nhu cầu mua sắm của các đơn vị**
 - Làm gì: thu thập đề xuất mua sắm của các phòng, khoa, trung tâm từ `nhu_cau_don_vi`;
@@ -120,15 +121,6 @@ flowchart TD
 - Bảng kế hoạch mua sắm trang thiết bị năm.
 - Tờ trình phê duyệt kế hoạch mua sắm.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của kế hoạch mua sắm, các phần theo đúng
-thứ tự xuất hiện:
-1. Tiêu đề văn bản (tên trường, đơn vị lập, địa danh ngày tháng, tên kế hoạch, năm);
-2. Phần I: Danh mục mua sắm (bảng: STT, danh mục thiết bị, đơn vị tính, số lượng, dự toán,
-   nguồn vốn, hình thức lựa chọn nhà thầu, tiến độ, đơn vị sử dụng; dòng tổng cộng dự toán);
-3. Phần II: Tổ chức thực hiện (phân công trách nhiệm các đơn vị);
-4. Nơi nhận – chữ ký người có thẩm quyền (ghi rõ họ tên, chức vụ);
-5. (Kèm theo) Tờ trình phê duyệt kế hoạch mua sắm.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -136,7 +128,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề văn bản (tên trường, đơn vị lập, địa…; Phần I; Phần II; Nơi nhận; (Kèm theo) Tờ trình phê duyệt kế hoạch mua…
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Bảng kế hoạch mua sắm trang thiết bị năm
 - [ ] Có đầy đủ sản phẩm: Tờ trình phê duyệt kế hoạch mua sắm
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)

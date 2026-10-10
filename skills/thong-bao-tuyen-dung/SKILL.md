@@ -47,6 +47,7 @@ hình thức và nội dung xét/thi tuyển.
 - Luật 129/2025/QH15; Nghị định 259/2026/NĐ-CP; phạm vi: Viên chức đơn vị sự nghiệp công lập; kiểm tra chuyển tiếp và quy định riêng về nhà giáo: Cập nhật căn cứ tuyển dụng, hợp đồng làm việc, bổ nhiệm, điều động và đào tạo viên chức. Không tái sử dụng số điều hoặc mẫu phiếu của NĐ 115. Phải yêu cầu ngày tuyển dụng, ngày phê duyệt kế hoạch, loại hợp đồng, trạng thái hồ sơ và bản văn NĐ 259 để chọn điều khoản chuyển tiếp; không tự áp dụng điều22 Luật Viên chức2010. Các văn bản cũ chỉ là căn cứ lịch sử khi chuyển tiếp cho phép.
 - Luật Nhà giáo; Nghị định 93/2026/NĐ-CP; khoản 9 Điều 62 NĐ 259/2026; phạm vi: Viên chức là nhà giáo: Thêm input đối tượng là nhà giáo hay viên chức khác. Nếu pháp luật nhà giáo có quy định khác về thẩm quyền, tiêu chuẩn, điều kiện, trình tự, thủ tục tuyển dụng/sử dụng/quản lý, áp dụng quy định nhà giáo và hướng dẫn Bộ GDĐT thay vì quy tắc chung NĐ 259.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Rà soát căn cứ pháp lý và kế hoạch**
 - Làm gì: lấy số lượng, cơ cấu vị trí từ Kế hoạch tuyển dụng đã được phê duyệt; đối chiếu `tieu_chuan_chung`, `tieu_chuan_rieng` với đề án vị trí việc làm và điều kiện đăng ký dự tuyển tại văn bản hiện hành nêu tại phap-ly.md; lập bảng đối chiếu (chỉ tiêu kế hoạch – chỉ tiêu dự thảo thông báo) để đảm bảo khớp nhau.
@@ -66,7 +67,7 @@ hình thức và nội dung xét/thi tuyển.
 - Làm gì: tách 2 mục — (a) Điều kiện chung cho mọi vị trí từ `tieu_chuan_chung` (quốc tịch, tuổi, lý lịch, sức khỏe, không vi phạm pháp luật); (b) Tiêu chuẩn cụ thể từng vị trí từ `tieu_chuan_rieng` (trình độ, ngành/chuyên ngành đào tạo, chứng chỉ ngoại ngữ – tin học, kinh nghiệm, yêu cầu khác).
 - Dùng input: `tieu_chuan_chung`, `tieu_chuan_rieng`.
 - Vai trò: Chuyên viên Phòng TCCB · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
-- Lưu ý nghiệp vụ: điều kiện chung bám sát Điều 22 Luật Viên chức và văn bản hiện hành nêu tại phap-ly.md, không tự sáng tạo thêm; tiêu chuẩn riêng phải tương ứng đúng từng vị trí trong bảng Bước 2 — bẫy là viết tiêu chuẩn của vị trí này gán nhầm sang vị trí khác.
+- Lưu ý nghiệp vụ: điều kiện chung bám sát luật viên chức và nghị định hướng dẫn hiện hành, theo văn bản hiện hành nêu tại phap-ly.md, không tự sáng tạo thêm; tiêu chuẩn riêng phải tương ứng đúng từng vị trí trong bảng Bước 2 — bẫy là viết tiêu chuẩn của vị trí này gán nhầm sang vị trí khác.
 - → Kết quả bước: dự thảo mục 2 (điều kiện chung) và mục 3 (tiêu chuẩn từng vị trí).
 
 **Bước 4. Mô tả hồ sơ dự tuyển**
@@ -116,20 +117,6 @@ flowchart TD
 - Bảng tổng hợp vị trí – chỉ tiêu – tiêu chuẩn (theo định dạng đầu ra của skill, tiện đăng web).
 - Checklist kiểm tra nội dung (đánh dấu từng thành phần đã đủ/chưa).
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của văn bản Thông báo tuyển dụng, theo đúng thứ tự:
-1. Quốc hiệu, tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc lập – Tự do – Hạnh phúc");
-2. Tên cơ quan ban hành + số ký hiệu văn bản; địa danh, ngày tháng năm ban hành;
-3. Tiêu đề "THÔNG BÁO" + tên đợt tuyển dụng;
-4. Căn cứ pháp lý (Nghị định 115/2020/NĐ-CP; Kế hoạch tuyển dụng đã phê duyệt);
-5. Mục 1. Số lượng, vị trí tuyển dụng (bảng: STT | Vị trí việc làm | Chức danh nghề nghiệp | Đơn vị | Số lượng);
-6. Mục 2. Điều kiện đăng ký dự tuyển (điều kiện chung);
-7. Mục 3. Tiêu chuẩn cụ thể từng vị trí;
-8. Mục 4. Hồ sơ đăng ký dự tuyển (thành phần; nộp bản sao, đối chiếu bản gốc khi trúng tuyển);
-9. Mục 5. Thời gian, địa điểm nhận hồ sơ (+ lệ phí dự tuyển);
-10. Mục 6. Hình thức, nội dung tuyển dụng (vòng 1, vòng 2, thang điểm, điểm liệt, điểm ưu tiên);
-11. Mục 7. Thông tin liên hệ + kênh công khai kết quả;
-12. Nơi nhận; chữ ký người có thẩm quyền (chức danh, họ tên).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -137,7 +124,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo Cấu trúc output chuẩn: Quốc hiệu, tiêu ngữ ("CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM" / "Độc lậ…; Tên cơ quan ban hành + số ký hiệu văn bản; địa danh, ngày tháng năm…; Tiêu đề "THÔNG BÁO" + tên đợt tuyển dụng; Căn cứ pháp lý (văn bản hiện hành nêu tại phap-ly.md; Kế hoạch tuyển dụng đã ph…; … (đủ 12 phần)
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
 - [ ] Đúng thể thức và cấu trúc theo references/quy-cach-dau-ra.md và căn cứ đã chọn tại references/phap-ly.md.

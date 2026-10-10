@@ -44,6 +44,7 @@ viên), kết quả kiểm toán, theo hình thức công khai quy định.
 - Thông tư 09/2024/TT-BGDĐT, hiệu lực 19/07/2024, thay 36/2017: Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản.
 - Nghị định 238/2025/NĐ-CP, hiệu lực 03/09/2025: Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập số liệu nguồn và kiểm tra tính phê duyệt**
 - Làm gì: lấy mức học phí các ngành từ thông báo mức thu đã ban hành (`hoc_phi_cac_nganh`);
@@ -120,21 +121,6 @@ flowchart TD
 - Báo cáo công khai tài chính hoàn chỉnh, sẵn sàng đăng cổng thông tin.
 - Bảng học phí các ngành + bảng tổng hợp thu – chi + bảng chi cho người học.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của báo cáo công khai tài chính, các phần
-theo đúng thứ tự xuất hiện:
-1. Tiêu đề văn bản (tên đơn vị, số ký hiệu, địa danh ngày tháng, tên báo cáo, năm học /
-   năm tài chính, căn cứ Thông tư 36/2017/TT-BGDĐT);
-2. Nội dung 1: Mức thu học phí các ngành (bảng: khối ngành, đồng/tín chỉ, đồng/năm;
-   ghi chú các khoản thu khác);
-3. Nội dung 2: Tổng thu – chi ngân sách năm (bảng tổng hợp: tổng thu, tổng chi, chênh lệch);
-4. Nội dung 3: Các khoản chi cho người học (bảng: nội dung, số tiền, số suất/số sinh viên;
-   dòng tổng cộng);
-5. Nội dung 4: Kết quả kiểm toán (đơn vị kiểm toán, ý kiến kiểm toán, kiến nghị và tình
-   trạng khắc phục);
-6. Nội dung 5: Hình thức và thời gian công khai;
-7. Thông tin liên hệ giải đáp (đơn vị đầu mối);
-8. Nơi nhận – chữ ký Hiệu trưởng (ghi rõ họ tên).
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -142,7 +128,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Tiêu đề văn bản (tên đơn vị, số ký hiệu, địa…; Nội dung 1; Nội dung 2; Nội dung 3; Nội dung 4; Nội dung 5; …
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Báo cáo công khai tài chính hoàn chỉnh, sẵn sàng đăng cổng thông tin
 - [ ] Có đầy đủ sản phẩm: Bảng học phí các ngành + bảng tổng hợp thu – chi + bảng chi cho người học
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)

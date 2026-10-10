@@ -44,6 +44,7 @@ xét và công nhận tốt nghiệp, mốc tuyển sinh và phân công đơn v
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác lập khung thời gian năm học**
 - Làm gì: từ `nam_hoc`, `ngay_khai_giang`, `so_hoc_ky`, `lich_nghi_le_tet` dựng khung thời gian:
@@ -131,16 +132,6 @@ flowchart TD
 - Bảng phân công đơn vị thực hiện từng đầu việc chính.
 - Ghi chú điều chỉnh (nếu năm học có học kỳ hè hoặc nhiều đợt tuyển sinh).
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Kế hoạch năm học), các phần
-bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề: KẾ HOẠCH NĂM HỌC ... (ghi rõ tên trường và hệ đào tạo áp dụng).
-2. Bảng tiến độ kế hoạch năm học: các cột Tháng – Thời gian – Nội dung công việc – Đơn vị
-   thực hiện; sắp xếp theo trình tự thời gian từ khai giảng đến kết thúc năm học; bao gồm
-   khai giảng, các học kỳ, lịch thi, nghỉ lễ/Tết, bảo vệ tốt nghiệp, các mốc tuyển sinh,
-   các đợt xét tốt nghiệp.
-3. Bảng phân công đơn vị thực hiện: các cột Đầu việc – Đơn vị chủ trì – Đơn vị phối hợp.
-4. Ghi chú điều chỉnh (nếu có): học kỳ hè, nhiều đợt tuyển sinh hoặc nội dung đặc thù khác.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -148,7 +139,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 4 phần theo "Cấu trúc output chuẩn": tiêu đề kế hoạch năm học (tên trường, hệ đào tạo), bảng tiến độ theo tháng/tuần, bảng phân công đơn vị thực hiện, ghi chú điều chỉnh (nếu có).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Khung thời gian nằm trong khung kế hoạch thời gian năm học của Bộ GD&ĐT; đủ số tuần học theo quy định (≥ 15 tuần/học kỳ chính).
 - [ ] Không xung đột lịch: lịch thi không trùng nghỉ lễ; học kỳ hè không đè học kỳ chính; xét tốt nghiệp đặt sau khi có đủ điểm thi/bảo vệ; mốc tuyển sinh không xung đột với lịch thi.
 - [ ] Mỗi đầu việc chỉ có một đơn vị chủ trì duy nhất; đầu việc thu học phí gắn với đơn vị tài chính.

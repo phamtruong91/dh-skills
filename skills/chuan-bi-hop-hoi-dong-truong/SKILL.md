@@ -40,6 +40,7 @@ tổng hợp tài liệu, gửi thư mời, chuẩn bị dự thảo nghị quy�
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 125/2025/QH15; Nghị quyết 10/2026/NQ-CP giữ99/2019 một phần; phạm vi: Quản trị cơ sở giáo dục đại học; phân biệt công lập và tư thục: 99/2019 không bị thay thế toàn bộ. NQ 10 loại trừ quy định về hội đồng trường/đại học công lập: điểm b khoản 4 Điều 2, điểm e khoản 1 Điều 3, điểm a khoản 2 Điều 4, điểm c khoản 4 Điều 4, điểm b khoản 2 Điều 5, Điều 7, khoản 1 Điều 9, điểm c khoản 2 Điều 16. Không tổ chức hoạt động mới của hội đồng trường công lập theo quy trình cũ. Yêu cầu loại hình trường, thời điểm xử lý, quy chế hiện hành, quyết định phân quyền; tư thục phải đối chiếu Luật 125.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thu thập và kiểm tra tài liệu**
 - Làm gì: nhận tờ trình, dự thảo văn bản của từng nội dung từ các đơn vị; đối chiếu với `noi_dung_chuong_trinh` xem nội dung nào đã có đủ tài liệu, nội dung nào còn thiếu; lập danh mục tài liệu họp (tên tài liệu – đơn vị trình – tình trạng).
@@ -109,15 +110,6 @@ flowchart TD
 - Dự thảo nghị quyết từng nội dung + biên bản họp.
 - Bảng theo dõi thực hiện nghị quyết.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của sản phẩm chính — thư mời họp:
-1. Tên cơ quan (VĂN PHÒNG HỘI ĐỒNG TRƯỜNG) và tên trường.
-2. Tiêu đề "THƯ MỜI HỌP" + kỳ họp, năm.
-3. Kính gửi: các thành viên Hội đồng trường (và khách mời nếu có).
-4. Nội dung: thời gian, địa điểm, chương trình họp (từng nội dung + đơn vị trình).
-5. Danh mục tài liệu gửi kèm.
-6. Yêu cầu xác nhận tham dự + thời hạn xác nhận.
-7. Địa danh, ngày tháng năm; chức danh người ký, họ tên.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -125,7 +117,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Thư mời đủ 7 phần theo Cấu trúc output chuẩn: tên cơ quan + trường, tiêu đề + kỳ họp, kính gửi, nội dung (thời gian/địa điểm/chương trình), danh mục tài liệu kèm, yêu cầu xác nhận, địa danh/ngày/người ký.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Nội dung chưa có đủ tài liệu không đưa vào chương trình chính thức; tài liệu nộp trễ không được Chủ tịch chấp thuận thì đưa ra khỏi chương trình kỳ này.
 - [ ] Thư mời gửi đúng toàn bộ thành viên + khách mời, kèm đầy đủ tài liệu, trước ngày họp theo quy chế (thường ≥ 07 ngày); lưu bằng chứng đã gửi.
 - [ ] Dự thảo nghị quyết bám sát tờ trình (không thêm nội dung ngoài tờ trình), căn cứ pháp lý đầy đủ; phần quyết nghị để trống cho đến khi có kết quả biểu quyết.

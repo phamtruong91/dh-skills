@@ -38,6 +38,7 @@ câu hỏi nào quá khó/quá dễ, cần điều chỉnh gì cho lần sau.
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026: Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Thống kê mô tả**
 - Làm gì: Từ `bang_diem`, tính: điểm trung bình, trung vị, độ lệch chuẩn, điểm cao nhất, điểm thấp nhất, tỷ lệ đạt (theo `diem_dat`, mặc định thang 10: ≥ 4.0); lập bảng phân bố điểm theo các khoảng: 0–3.9; 4.0–4.9; 5.0–6.4; 6.5–7.9; 8.0–10 (số SV và tỷ lệ % từng khoảng).
@@ -99,12 +100,6 @@ flowchart TD
 - Báo cáo phân tích kết quả thi (phổ điểm, chỉ số, đánh giá từng câu hỏi).
 - Danh sách câu hỏi cần hiệu đính + đề xuất cải tiến.
 
-**Cấu trúc output chuẩn:** báo cáo phân tích gồm các phần bắt buộc theo đúng thứ tự:
-1. Tiêu đề báo cáo + học phần (mã + tên) + hình thức thi + kỳ thi + số sinh viên dự thi;
-2. Phần I – Phổ điểm: bảng phân bố điểm theo khoảng (số SV, tỷ lệ %); điểm trung bình, trung vị, độ lệch chuẩn, tỷ lệ đạt; nhận xét về mức độ phù hợp của đề thi;
-3. Phần II – Độ khó và độ phân biệt câu hỏi: bảng từng câu (độ khó p, đánh giá p, độ phân biệt D, đánh giá D, kết luận giữ lại/hiệu đính/loại bỏ); tổng hợp % câu hỏi đạt yêu cầu;
-4. Phần III – Đề xuất: danh sách câu hỏi loại bỏ/hiệu đính (gắn đơn vị thực hiện, thời hạn), bổ sung câu hỏi còn thiếu, kiến nghị giảng dạy/phụ đạo.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -112,7 +107,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 4 phần theo "Cấu trúc output chuẩn": tiêu đề báo cáo + học phần (mã + tên) + hình thức thi + kỳ thi + số sinh viên dự thi; Phần I – Phổ điểm (bảng phân bố điểm, điểm trung bình, trung vị, độ lệch chuẩn, tỷ lệ đạt, nhận xét mức phù hợp của đề); Phần II – Độ khó và độ phân biệt (bảng từng câu: độ khó p, đánh giá p, độ phân biệt D, đánh giá D, kết luận giữ lại/hiệu đính/loại bỏ; tổng hợp % câu hỏi đạt yêu cầu); Phần III – Đề xuất (câu hỏi loại bỏ/hiệu đính gắn đơn vị thực hiện và thời hạn, bổ sung câu hỏi còn thiếu, kiến nghị giảng dạy/phụ đạo).
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số sinh viên trong bảng điểm khớp với Input (`so_sinh_vien`); điểm bất thường do nhập sai (điểm âm, điểm vượt thang) đã loại trước khi tính.
 - [ ] Không bịa đặt điểm số, chỉ số p/D, kết luận chất lượng câu hỏi.
 - [ ] Đúng quy ước phân loại: độ khó p < 0.3 khó / 0.3–0.7 trung bình / p > 0.7 dễ; độ phân biệt D ≥ 0.3 tốt / 0.2–0.29 chấp nhận được / D < 0.2 kém.

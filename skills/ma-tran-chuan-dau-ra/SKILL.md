@@ -38,6 +38,7 @@ học phần nào "đạt được" (mức M) hoặc học phần không đóng 
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Thông tư 54/2026/TT-BGDĐT, hiệu lực 30/06/2026: Phân loại xây dựng chương trình, chuẩn đầu ra hay mở ngành; yêu cầu chuẩn ngành/trình độ, trạng thái chương trình và ngày tiếp nhận hồ sơ. Đọc toàn văn và điều khoản chuyển tiếp trước khi đổi chuẩn/mẫu; chưa xác minh toàn văn thì ghi điều kiện chưa xác nhận, không tự đặt thời hạn chuyển đổi.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Liệt kê PLO của chương trình đào tạo**
 - Làm gì: đưa toàn bộ chuẩn đầu ra chương trình từ `plo` thành các cột của ma trận; mỗi cột
@@ -130,18 +131,6 @@ flowchart TD
 - Bảng kiểm tra độ phủ từng PLO (số học phần ở mỗi mức I/R/M).
 - Nhận xét đánh giá + kiến nghị điều chỉnh.
 
-**Cấu trúc output chuẩn:** khung mẫu CỐ ĐỊNH của sản phẩm chính (Ma trận đối sánh CLO–PLO),
-các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề: ĐHA TRẬN ĐỐI SÁNH CHUẨN ĐẦU RA HỌC PHẦN – CHƯƠNG TRÌNH (CLO–PLO); tên ngành,
-   tên trường.
-2. Bảng ma trận: hàng là từng học phần (mã HP, tên học phần), cột là từng PLO; ô giao nhau
-   ghi I/R/M hoặc để trống.
-3. Chú thích ký hiệu: I = Giới thiệu (Introduce); R = Củng cố (Reinforce); M = Đạt được
-   (Master).
-4. Bảng kiểm tra độ phủ từng PLO: số học phần ở mỗi mức I/R/M và kết luận đạt/chưa đạt.
-5. Nhận xét và kiến nghị: đánh giá mức độ liên kết; liệt kê điểm cần điều chỉnh; kiến nghị
-   cụ thể trình Hội đồng rà soát CTĐT.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -149,7 +138,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 5 phần theo "Cấu trúc output chuẩn": tiêu đề ma trận, bảng ma trận CLO–PLO, chú thích ký hiệu I/R/M, bảng kiểm tra độ phủ từng PLO, nhận xét và kiến nghị.
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Danh sách PLO khớp bản đang có hiệu lực trong khung CTĐT (đủ số lượng, đúng nội dung, đúng thứ tự đánh số).
 - [ ] CLO lấy từ đề cương chi tiết đã được khoa thông qua (không dùng bản nháp); học phần chưa có CLO được ghi chú bổ sung.
 - [ ] Mức M chỉ gán khi học phần có hình thức đánh giá tổng hợp đo được PLO ở mức thành thạo; không gán M tùy tiện để "đẹp" ma trận.

@@ -46,6 +46,7 @@ hoặc cơ quan quản lý (đề tài cấp bộ/nhà nước). Báo cáo đạ
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025: Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ 265 về tài chính và NĐ 267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định kỳ báo cáo**
 - Làm gì: đối chiếu hợp đồng và tiến độ đã duyệt để xác định mốc thời gian của kỳ báo cáo từ `ky_bao_cao` (VD: 01/01/2027–30/06/2027); liệt kê các nội dung/sản phẩm theo kế hoạch phải hoàn thành trong kỳ để làm đầu vào cho bước 2.
@@ -130,18 +131,6 @@ flowchart TD
 - Báo cáo tiến độ hoàn chỉnh (nội dung – kinh phí – khó khăn – kế hoạch).
 - Bảng đối chiếu kế hoạch/thực hiện của kỳ báo cáo.
 
-**Cấu trúc output chuẩn:** khung cố định của văn bản Báo cáo tiến độ, các phần bắt buộc theo đúng thứ tự xuất hiện:
-1. Tiêu đề "BÁO CÁO TIẾN ĐỘ THỰC HIỆN ĐỀ TÀI NGHIÊN CỨU KHOA HỌC" + kỳ báo cáo
-2. Khối thông tin: tên đề tài, mã số đề tài, chủ nhiệm, thời gian thực hiện
-3. Mục I. Nội dung đã thực hiện trong kỳ (theo từng nội dung nghiên cứu, có % hoàn thành)
-4. Mục II. Kết quả đạt được (sản phẩm, số liệu có minh chứng)
-5. Mục III. Tình hình sử dụng kinh phí (kinh phí đã cấp / đã sử dụng / còn lại, chi tiết theo khoản mục)
-6. Mục IV. Khó khăn, vướng mắc (phân loại khách quan / chủ quan, có nguyên nhân và ảnh hưởng)
-7. Mục V. Đề xuất, kiến nghị (mỗi đề xuất có lý do + phương án)
-8. Mục VI. Kế hoạch kỳ tiếp theo (công việc – sản phẩm dự kiến – nhu cầu kinh phí)
-9. Mục VII. Đánh giá chung (mức độ hoàn thành so với kế hoạch + cam kết khắc phục)
-10. Địa danh, ngày tháng năm + xác nhận của đơn vị chủ trì + chữ ký chủ nhiệm đề tài
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -149,7 +138,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ 10 phần theo "Cấu trúc output chuẩn": tiêu đề + kỳ báo cáo → khối thông tin → mục I–VII (nội dung đã làm, kết quả, kinh phí, khó khăn, đề xuất, kế hoạch, đánh giá chung) → xác nhận + chữ ký
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Số liệu kinh phí trong output khớp Input (`kinh_phi_da_cap`, `kinh_phi_da_dung`) và khớp chứng từ, sổ sách kế toán của đề tài
 - [ ] Không bịa đặt kết quả, sản phẩm; chỉ ghi kết quả đã có minh chứng, không ghi kết quả "dự kiến" vào mục kết quả đạt được
 - [ ] Đúng bố cục báo cáo 7 mục theo quy định; bảng kinh phí có 3 cột (dự toán – đã cấp – đã dùng)

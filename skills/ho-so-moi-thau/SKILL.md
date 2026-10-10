@@ -41,6 +41,7 @@ phê duyệt trong kế hoạch mua sắm năm: đấu thầu rộng rãi, chào
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
 - Nghị định 214/2025, sửa đổi 165/2026, 170/2026, 349/2026; VBHN 36/2026/VBHN-NĐ-BTC ngày 23/09/2026: Yêu cầu chủ thể, nguồn vốn, loại gói, dự toán được duyệt, phân cấp thẩm quyền, mua sắm tập trung, điều kiện áp dụng hình thức và thời điểm phát hành. Đối chiếu Luật Đấu thầu hợp nhất 74/VBHN-VPQH ngày 25/03/2026 và nghị định hiện hành. Không suy ra chỉ định thầu/mua sắm trực tiếp chỉ vì nhỏ lẻ hoặc cấp bách; ghi điều khoản và điều kiện từng gói, cán bộ thẩm định xác nhận. Không tự đặt hạn mức.
 - Trước Bước 1: chọn căn cứ theo đối tượng, loại hình trường và chuyển tiếp; lập bảng văn bản / điều khoản / lý do áp dụng / bằng chứng. Thiếu văn bản gốc hoặc điều khoản thì ghi nhận nội bộ [CẦN XÁC MINH] (không đưa vào file giao), để trống phần tương ứng, chưa kết luận tuân thủ.
+- Các con số, thời hạn, số điều, số mức xếp loại, hệ số và mẫu biểu nêu trong các bước dưới đây được giữ từ quy trình gốc (trước cập nhật pháp lý); chỉ dùng khi đã đối chiếu đúng với căn cứ đã chọn, khác thì theo căn cứ. Danh sách điểm cần đối chiếu: docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md.
 
 **Bước 1. Xác định hình thức và chọn mẫu hồ sơ**
 - Làm gì: căn cứ `hinh_thuc` và `gia_goi_thau`: đấu thầu rộng rãi → dùng mẫu E-HSMT;
@@ -139,19 +140,6 @@ flowchart TD
 - Hồ sơ mời thầu / hồ sơ yêu cầu hoàn chỉnh.
 - Checklist rà soát HSMT trước khi phát hành.
 
-**Cấu trúc output chuẩn:** khung mẫu cố định của hồ sơ mời thầu, các phần theo đúng thứ
-tự xuất hiện:
-1. Bìa hồ sơ (tên gói thầu, chủ đầu tư, hình thức lựa chọn nhà thầu);
-2. Phần 1: Chỉ dẫn nhà thầu (tư cách hợp lệ, bảo lãnh dự thầu, ngôn ngữ, đồng tiền,
-   hiệu lực HSDT);
-3. Phần 2: Bảng dữ liệu (giá gói thầu, thời điểm phát hành/đóng thầu, thời gian thực hiện
-   hợp đồng, địa điểm);
-4. Phần 3: Tiêu chuẩn đánh giá (hợp lệ → năng lực, kinh nghiệm → kỹ thuật → tài chính);
-5. Phần 4: Yêu cầu kỹ thuật (bảng: hạng mục, yêu cầu tối thiểu, bảo hành);
-6. Phần 5: Điều kiện hợp đồng mẫu;
-7. Phần 6: Biểu mẫu dự thầu;
-8. (Kèm theo) Checklist rà soát HSMT trước khi phát hành.
-
 File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
@@ -159,7 +147,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
 
-- [ ] Đủ các phần theo "Cấu trúc output chuẩn": Bìa hồ sơ (tên gói thầu, chủ đầu tư, hình…; Phần 1; Phần 2; Phần 3; Phần 4; Phần 5; …
+- [ ] Đủ các phần và đúng bố cục theo cấu trúc tại references/quy-cach-dau-ra.md (không theo cấu trúc của bản gốc).
 - [ ] Có đầy đủ sản phẩm: Hồ sơ mời thầu / hồ sơ yêu cầu hoàn chỉnh
 - [ ] Có đầy đủ sản phẩm: Checklist rà soát HSMT trước khi phát hành
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
