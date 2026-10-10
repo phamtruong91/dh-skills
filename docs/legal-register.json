@@ -209,6 +209,10 @@
   {
    "old": "TT 09/2024/TT-BGDĐT; TT 54/2026, TT 56/2026/TT-BGDĐT; NĐ 259/2026/NĐ-CP; Luật 129/2025/QH15; NĐ 30/2020/NĐ-CP",
    "issue": "CẬP NHẬT 2026-10-10: sự tồn tại và tên các văn bản được xác nhận qua nguồn thứ cấp; toàn văn điều khoản, hiệu lực, chuyển tiếp CHƯA đối chiếu. Chưa tìm thấy văn bản thay thế NĐ 30/2020 (thể thức văn bản) nhưng chưa kiểm tra Công báo. Mọi con số, thời hạn, số điều trong các bước của 58 skill đã khôi phục là nghiệp vụ gốc trước cập nhật, chỉ dùng khi đã đối chiếu căn cứ (xem docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md)."
+  },
+  {
+   "old": "113 skill chưa cập nhật pháp lý",
+   "issue": "CẬP NHẬT 2026-10-10: danh sách căn cứ nghi lỗi thời (chưa xác minh) ở docs/CAN_CU_NGHI_LOI_THOI.md; chưa sửa căn cứ nào trong nhóm này."
   }
  ]
 }
