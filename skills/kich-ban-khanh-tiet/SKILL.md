@@ -107,7 +107,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Kế hoạch tổ chức sự kiện đã được phê duyệt
+- [ ] Đúng cấu trúc và thể thức theo references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Giờ đón tiếp phải sớm hơn giờ khai mạc đủ để ổn định tổ chức

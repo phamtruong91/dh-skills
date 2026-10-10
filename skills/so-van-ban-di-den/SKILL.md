@@ -98,16 +98,16 @@ chuẩn hóa quy trình xử lý văn bản đến.
 
 ```mermaid
 flowchart TD
-    IN[/"Mở sổ năm mới, văn bản đến, đi"/] --> A["Xác định loại sổ, chuẩn bị mẫu sổ năm mới"]
+    IN[/"Mở sổ năm mới, văn bản đến, đi"/] --> A["Bước 1: Xác định loại sổ, chuẩn bị mẫu sổ năm mới"]
     A --> Q{"Văn bản đến hay đi?"}
-    Q -->|Đến| B["Tiếp nhận, kiểm tra nguyên vẹn, niêm phong"]
-    B --> C["Đăng ký vào sổ văn bản đến trong ngày"]
-    C --> D["Trình lãnh đạo cho ý kiến chỉ đạo"]
-    D --> E["Chuyển đơn vị xử lý, đôn đốc tiến độ"]
-    E --> F["Thu hồi, sắp xếp, lưu trữ hồ sơ"]
-    Q -->|Đi| G["Đăng ký vào sổ văn bản đi"]
-    G --> H["Nhân bản, đóng dấu, gửi đi; lưu bản chính"]
-    F --> HG["👤 Văn thư kiểm tra sổ sách định kỳ"]
+    Q -->|Đến| B["Bước 2: Tiếp nhận, kiểm tra nguyên vẹn, niêm phong"]
+    B --> C["Bước 3: Đăng ký vào sổ văn bản đến trong ngày"]
+    C --> D["Bước 4: Trình lãnh đạo cho ý kiến chỉ đạo"]
+    D --> E["Bước 5: Chuyển đơn vị xử lý, đôn đốc tiến độ"]
+    E --> F["Bước 6: Thu hồi, sắp xếp, lưu trữ hồ sơ"]
+    Q -->|Đi| G["Bước 7: Đăng ký vào sổ văn bản đi"]
+    G --> H["Bước 7: Nhân bản, đóng dấu, gửi đi; lưu bản chính"]
+    F --> HG["👤 Bước 8: Văn thư kiểm tra sổ sách định kỳ"]
     H --> HG
     HG --> OUT[["Sổ văn bản cập nhật, hồ sơ lưu trữ"]]
 ```

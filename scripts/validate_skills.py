@@ -11,6 +11,7 @@ import sys
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+STRICT_DIAGRAM = set(open(Path(__file__).with_name('nhom_rasoat_1.txt'), encoding='utf-8').read().split())
 MAX_SKILL_BYTES = 25000  # chặn SKILL.md phình to trở lại
 # Cặp skill dễ bị chọn nhầm: mô tả mỗi skill phải nêu tên skill còn lại.
 CONFUSABLE = [
@@ -77,6 +78,15 @@ def skill_checks(path, manifest, records):
     c["khong_buoc_xuat_checklist"] = not re.search(r"Kết quả bước:[^\n]*[Cc]hecklist[^\n]*đã đánh dấu", t)
     if "md" not in version["available_output_formats"] and name not in MARKDOWN_OK:
         c["khong_nhac_markdown_khi_khong_xuat_md"] = "markdown" not in t.lower()
+    # --- Khóa các lỗi mẫu đã sửa ở đợt rà soát nhóm 1 ---
+    for line in re.findall(r"^- \[ \] Đúng thể thức và định dạng theo (.*)$", t, flags=re.M):
+        c["muc_the_thuc_khong_cat_cut"] = not line.rstrip().endswith("…") and not re.search(
+            r"\b(phải|nên|giúp|càng|thường)\b", line)
+    if name in STRICT_DIAGRAM:  # sơ đồ phải khớp từng số bước của quy trình
+        steps = set(re.findall(r"^\*\*Bước (\d+)\.", t, flags=re.M))
+        mer = re.search(r"```mermaid(.*?)```", t, flags=re.S)
+        c["so_do_khop_so_buoc"] = bool(mer) and steps <= set(re.findall(r"Bước (\d+)", mer.group(1)))
+        c["ket_qua_buoc_khong_bao_cao_kiem_tra"] = "Kết quả bước: Báo cáo kiểm tra" not in t
     if "43/2023" in t:
         c["can_cu_thanh_tra_cap_nhat"] = "216/2025" in t and "84/2025" in t
     return c

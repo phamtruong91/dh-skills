@@ -83,7 +83,7 @@ thông báo, giải trình, báo cáo đột xuất.
 **Bước 7. Xuất bản văn bản hoàn chỉnh trình ký**
 - Làm gì: Ghép phần đầu văn bản + nội dung + nơi nhận + khối chữ ký thành văn bản hoàn chỉnh file theo định dạng đầu ra của skill; thực hiện đối chiếu nội bộ, không xuất kèm checklist; chuyển cho chuyên viên soạn xác nhận rồi trình người ký duyệt (human gate).
 - Dùng input: toàn bộ.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, người có thẩm quyền ký · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Sau khi đã đăng ký số vào sổ văn bản đi thì không tự ý đổi số, ký hiệu.
 - → Kết quả bước: Văn bản công văn hoàn chỉnh; phần kiểm tra giữ nội bộ, sẵn sàng trình ký / xuất file Word.
 

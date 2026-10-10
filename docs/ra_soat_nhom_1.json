@@ -1,0 +1,143 @@
+{
+ "soan-bien-ban-hop": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Kết quả bước kiểm tra ghi là nội bộ, không xuất kèm file",
+  "Biên bản do chủ trì và thư ký ký, không phải Hiệu trưởng",
+  "Bỏ ngày giờ ví dụ cụ thể, dùng chỗ điền"
+ ],
+ "soan-thong-bao": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Kết quả bước kiểm tra ghi là nội bộ, không xuất kèm file",
+  "Vai trò ký theo đơn vị ban hành",
+  "Bỏ ngày ví dụ cụ thể",
+  "Bổ sung câu 'Dùng khi' và ranh giới sang skill lân cận"
+ ],
+ "soan-giay-moi": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Giấy mời do thủ trưởng đơn vị tổ chức ký (khớp sơ đồ)",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước"
+ ],
+ "soan-to-trinh": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Kết quả bước kiểm tra ghi là nội bộ, không xuất kèm file",
+  "Tờ trình do thủ trưởng đơn vị trình ký (khớp Lưu ý của Bước 5)",
+  "Sơ đồ thiếu Bước 7",
+  "Không tự cấp số văn bản (khớp quy tắc chừa chỗ điền)"
+ ],
+ "phieu-trinh-ky": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Bước chuẩn bị do đơn vị trình thực hiện; lãnh đạo chỉ ghi ý kiến ở Bước 6",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước"
+ ],
+ "soan-ke-hoach-ct": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Vai trò ký theo thủ trưởng đơn vị (khớp Lưu ý)",
+  "Đảo Bước 6/7: kiểm tra khả thi trước khi dựng thể thức và trình ký; sửa sơ đồ"
+ ],
+ "bao-cao-tong-ket-vp": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước"
+ ],
+ "kich-ban-khanh-tiet": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt"
+ ],
+ "lap-lich-cong-tac-tuan": [
+  "Sửa mục kiểm tra thể thức bị ghép sai/cắt cụt",
+  "Thống nhất người duyệt giữa Bước 6 và sơ đồ",
+  "Thống nhất người duyệt giữa Bước 6 và sơ đồ",
+  "Mô tả nêu rõ khi nào dùng"
+ ],
+ "quy-che-to-chuc-hoat-dong": [
+  "Sửa mục kiểm tra thể thức bị cắt cụt"
+ ],
+ "checklist-ho-so-gs-pgs": [
+  "Sửa mục kiểm tra thể thức bị cắt cụt"
+ ],
+ "de-an-vi-tri-viec-lam": [
+  "Sửa mục kiểm tra thể thức bị cắt cụt"
+ ],
+ "soan-cong-van": [
+  "Vai trò duyệt/ký: không mặc định Hiệu trưởng"
+ ],
+ "soan-quyet-dinh-hc": [
+  "Vai trò duyệt/ký theo nguoi_ky",
+  "Không tự cấp số văn bản (khớp quy tắc chừa chỗ điền)",
+  "Bỏ tên trường giả định",
+  "Khớp ranh giới với quyet-dinh-khen-thuong-kl trong mô tả",
+  "Khớp ranh giới với quyet-dinh-khen-thuong-kl trong bảng đầu vào"
+ ],
+ "soan-mou-moa": [
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Bỏ tên trường giả định",
+  "Bỏ tên trường giả định",
+  "Thêm yêu cầu đối chiếu hiệu lực căn cứ",
+  "Thêm quy tắc căn cứ ký kết chỉ lấy từ input",
+  "Thêm câu dẫn chuẩn cho mục kiểm tra nội bộ"
+ ],
+ "so-van-ban-di-den": [
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước"
+ ],
+ "quan-ly-phien-ban-tai-lieu": [
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Sơ đồ thêm nhãn Bước",
+  "Mô tả nêu rõ khi nào dùng"
+ ],
+ "tham-dinh-phap-ly-van-ban": [
+  "Kết quả bước không khẳng định 'đã ký'",
+  "Không tự giả định nội dung văn bản nội bộ",
+  "Mô tả nêu rõ khi nào dùng, rút gọn dưới 400 ký tự"
+ ],
+ "chuan-bi-hop-va-action-tracker": [
+  "Khớp quy tắc chừa chỗ điền, bỏ nhãn 'cần xác minh' trong file",
+  "Mô tả nêu rõ khi nào dùng"
+ ],
+ "hop-nhat-bao-cao-don-vi": [
+  "Khớp quy tắc chừa chỗ điền",
+  "Mô tả nêu rõ khi nào dùng"
+ ],
+ "bao-cao-tong-ket-nam-truong": [
+  "Khớp quy tắc chừa chỗ điền",
+  "Kết quả bước không khẳng định 'đã duyệt'"
+ ],
+ "bao-cao-du-an-dinh-ky": [
+  "Phân biệt người soạn và người duyệt"
+ ],
+ "executive-brief-trinh-lanh-dao": [
+  "Mô tả nêu rõ khi nào dùng"
+ ],
+ "kiem-tra-day-du-ho-so": [
+  "Mô tả nêu rõ khi nào dùng"
+ ]
+}

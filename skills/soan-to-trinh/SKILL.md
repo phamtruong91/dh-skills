@@ -70,7 +70,7 @@ kinh phí...: mở ngành, tổ chức sự kiện, mua sắm, cử đi công t�
 - Làm gì: Lắp ráp phần đầu: tên trường + quốc hiệu – tiêu ngữ, tên `don_vi_trinh`, số/ký hiệu tờ trình (ký hiệu TTr), địa danh ngày tháng, dòng chữ "TỜ TRÌNH" + tên tờ trình (in hoa, căn giữa), dòng "Kính gửi" + `kinh_gui`; phần kết thúc: câu kết "./.", nơi nhận ("- [cấp phê duyệt];", "- Lưu: VT, [mã đơn vị]."), danh mục tài liệu kèm theo, khối chữ ký người đứng đầu đơn vị trình (chức danh + họ tên).
 - Dùng input: `don_vi_trinh`, `ten_to_trinh`, `kinh_gui`, `tai_lieu_kem_theo`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
-- Lưu ý nghiệp vụ: Người ký tờ trình là thủ trưởng đơn vị trình (Trưởng phòng/Trưởng khoa), không phải Hiệu trưởng; số tờ trình lấy tiếp theo sổ văn bản đi của đơn vị với ký hiệu "TTr".
+- Lưu ý nghiệp vụ: Người ký tờ trình là thủ trưởng đơn vị trình (Trưởng phòng/Trưởng khoa), không phải Hiệu trưởng; ký hiệu ghi "TTr"; số tờ trình chỉ ghi khi người dùng cung cấp, nếu chưa có thì để dòng dấu chấm (văn thư cấp số khi đăng ký sổ văn bản đi).
 - → Kết quả bước: Khung tờ trình hoàn chỉnh về thể thức, đã lắp đủ mở đầu – căn cứ – đề xuất – kiến nghị – kết thúc.
 
 **Bước 6. Kiểm tra logic và số liệu**
@@ -78,12 +78,12 @@ kinh phí...: mở ngành, tổ chức sự kiện, mua sắm, cử đi công t�
 - Dùng input: toàn bộ input (đối chiếu chéo).
 - Vai trò: Chuyên viên Phòng HCTH (Trưởng phòng kiểm tra lại) · AI hỗ trợ: quét lỗi theo checklist · ⏱ ~15–30 phút (ước tính)
 - Lưu ý nghiệp vụ: Lỗi phổ biến — kiến nghị xin phê duyệt nội dung không có trong phần đề xuất, hoặc đề xuất có nội dung nhưng kiến nghị không nhắc tới; số liệu tổng trong thân không khớp bảng chi tiết đính kèm.
-- → Kết quả bước: Báo cáo kiểm tra logic + danh sách lỗi cần sửa (nếu có), trả về bước tương ứng để chỉnh.
+- → Kết quả bước: Kết quả đối chiếu logic và số liệu (nội bộ, không xuất kèm file) + danh sách lỗi cần sửa (nếu có), trả về bước tương ứng để chỉnh.
 
 **Bước 7. Xuất bản tờ trình trình ký**
 - Làm gì: Ghép toàn bộ thành tờ trình hoàn chỉnh file theo định dạng đầu ra của skill; đính kèm ghi chú các tài liệu cần đính kèm theo tờ trình; chuyển cho thủ trưởng đơn vị trình duyệt (human gate) trước khi trình lên cấp phê duyệt.
 - Dùng input: toàn bộ.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên chuẩn bị, thủ trưởng đơn vị trình ký · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Không sửa nội dung đề xuất sau khi thủ trưởng đơn vị đã ký nháy/duyệt mà không xin ý kiến lại.
 - → Kết quả bước: Tờ trình hoàn chỉnh + ghi chú tài liệu đính kèm, sẵn sàng trình ký.
 
@@ -97,7 +97,8 @@ flowchart TD
     B3 --> B4["Bước 4: Viết mở đầu và kiến nghị"]
     B4 --> B5["Bước 5: Dựng thể thức và phần kết thúc"]
     B5 --> B6["Bước 6: Kiểm tra logic và số liệu"]
-    B6 --> HG["👤 Thủ trưởng đơn vị duyệt tờ trình"]
+    B6 --> B7["Bước 7: Xuất bản tờ trình trình ký"]
+    B7 --> HG["👤 Thủ trưởng đơn vị ký tờ trình"]
     HG --> OUT[["Tờ trình trình ký"]]
 ```
 
@@ -114,7 +115,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Tờ trình là văn bản nội bộ xin ý kiến quyết định — ngôn ngữ trang t…
+- [ ] Đúng thể thức văn bản theo Nghị định 30/2020/NĐ-CP (đối chiếu hiệu lực tại ngày nghiệp vụ) và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Mỗi căn cứ phải ghi đủ tên văn bản, số/ký hiệu, ngày ban hành

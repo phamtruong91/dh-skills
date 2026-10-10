@@ -1,6 +1,6 @@
 ---
 name: "executive-brief-trinh-lanh-dao"
-description: "Tóm tắt nhiều nguồn (báo cáo, tờ trình, bảng số liệu) thành executive brief 1–2 trang kèm decision memo và bảng \"vấn đề cần quyết định\", giúp lãnh đạo nắm nhanh và ra quyết định. Dùng chung cho mọi cấp lãnh đạo, mọi lĩnh vực trong trường."
+description: "Tóm tắt nhiều nguồn (báo cáo, tờ trình, bảng số liệu) thành executive brief 1–2 trang kèm decision memo và bảng \"vấn đề cần quyết định\", giúp lãnh đạo nắm nhanh và ra quyết định. Dùng khi lãnh đạo cần nắm nhanh một vấn đề từ nhiều nguồn để ra quyết định (mọi cấp, mọi lĩnh vực trong trường)."
 ---
 
 # Executive brief trình lãnh đạo

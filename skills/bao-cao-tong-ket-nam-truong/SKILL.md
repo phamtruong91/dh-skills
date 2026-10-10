@@ -114,7 +114,7 @@ cơ quan chủ quản, Bộ GD&ĐT.
 - Lưu ý nghiệp vụ: Kiểm tra số ký hiệu văn bản, ngày tháng, nơi nhận trước khi trình
   ký — sai thể thức ở báo cáo cấp trường rất mất điểm; phụ lục số liệu phải khớp 100%
   với số liệu trong văn bản chính.
-- → Kết quả bước: Báo cáo tổng kết năm học toàn trường đã duyệt + phụ lục số liệu
+- → Kết quả bước: Báo cáo tổng kết năm học toàn trường trình Ban Giám hiệu duyệt + phụ lục số liệu
   tổng hợp theo mảng.
 
 ## Luồng quy trình (Workflow)
@@ -142,7 +142,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Phần I có đủ 6 mảng công tác; số liệu trong văn bản khớp 100% với phụ lục số liệu theo mảng.
 - [ ] Số liệu khớp với báo cáo các đơn vị đã nộp; chênh lệch chưa giải trình được đã loại khỏi báo cáo.
-- [ ] Không bịa đặt số liệu, minh chứng; số liệu thiếu được ghi rõ "chưa có số liệu".
+- [ ] Không bịa đặt số liệu, minh chứng; số liệu thiếu để trống ô và ghi nhận trong bảng theo dõi nộp.
 - [ ] Mỗi nhận định tích cực có số liệu minh chứng đi kèm; có so sánh với năm học trước.
 - [ ] Phần II: tồn tại nêu thẳng với nguyên nhân cụ thể; Phần III: mỗi tồn tại có giải pháp tương ứng, chỉ tiêu đo lường được.
 - [ ] Đúng thể thức: số ký hiệu văn bản, ngày tháng, nơi nhận, chữ ký Hiệu trưởng.

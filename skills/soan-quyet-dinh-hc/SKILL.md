@@ -22,13 +22,13 @@ AI hỗ trợ chuẩn bị và đối chiếu; cán bộ phụ trách kiểm tra
 
 ## Khi nào dùng
 Khi ban hành quyết định: thành lập / giải thể đơn vị, ban hành quy chế – quy định,
-điều động – bổ nhiệm, khen thưởng – kỷ luật, phê duyệt kế hoạch – đề án.
+điều động – bổ nhiệm, khen thưởng – kỷ luật sinh viên (khen thưởng/kỷ luật viên chức, người lao động dùng quyet-dinh-khen-thuong-kl), phê duyệt kế hoạch – đề án.
 
 ## Đầu vào (Input)
 
 | Trường | Mô tả | Bắt buộc |
 |---|---|---|
-| `loai_quyet_dinh` | Thành lập / Ban hành văn bản / Nhân sự / Khen thưởng – kỷ luật / Phê duyệt | Có |
+| `loai_quyet_dinh` | Thành lập / Ban hành văn bản / Nhân sự / Khen thưởng – kỷ luật sinh viên / Phê duyệt | Có |
 | `can_cu` | Căn cứ pháp lý: luật, nghị định, quy chế, tờ trình đề nghị | Có |
 | `noi_dung` | Nội dung các điều (Điều 1 – quyết định việc gì; Điều 2 – hiệu lực; Điều 3 – trách nhiệm thi hành) | Có |
 | `nguoi_ky` | Hiệu trưởng / Chủ tịch Hội đồng trường / Phó Hiệu trưởng (thừa ủy quyền) | Có |
@@ -58,10 +58,10 @@ Khi ban hành quyết định: thành lập / giải thể đơn vị, ban hành
 - → Kết quả bước: Dự thảo các điều khoản đầy đủ, đúng trình tự.
 
 **Bước 4. Dựng phần đầu văn bản theo thể thức NĐ 30/2020**
-- Làm gì: Lắp ráp phần đầu: tên trường + quốc hiệu – tiêu ngữ; số, ký hiệu (ký hiệu "QĐ"); địa danh, ngày tháng năm; dòng "QUYẾT ĐỊNH" (in hoa, căn giữa) + trích yếu "Về việc ..."; dòng thẩm quyền ban hành (vd "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC A", in hoa, căn giữa).
+- Làm gì: Lắp ráp phần đầu: tên trường + quốc hiệu – tiêu ngữ; số, ký hiệu (ký hiệu "QĐ"); địa danh, ngày tháng năm; dòng "QUYẾT ĐỊNH" (in hoa, căn giữa) + trích yếu "Về việc ..."; dòng thẩm quyền ban hành (vd "HIỆU TRƯỞNG TRƯỜNG …", in hoa, căn giữa).
 - Dùng input: `don_vi_soan`, `loai_quyet_dinh`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
-- Lưu ý nghiệp vụ: Số quyết định lấy tiếp theo từ sổ đăng ký văn bản đi, ký hiệu "QĐ" (+ mã đơn vị nếu có); trích yếu sau "Về việc" viết ngắn gọn, không dấu chấm cuối.
+- Lưu ý nghiệp vụ: Ký hiệu ghi "QĐ" (+ mã đơn vị nếu có); số quyết định chỉ ghi khi người dùng cung cấp, nếu chưa có thì để dòng dấu chấm (văn thư cấp số khi đăng ký sổ văn bản đi); trích yếu sau "Về việc" viết ngắn gọn, không dấu chấm cuối.
 - → Kết quả bước: Khung phần đầu quyết định đúng thể thức.
 
 **Bước 5. Soạn nơi nhận và khối chữ ký**
@@ -81,7 +81,7 @@ Khi ban hành quyết định: thành lập / giải thể đơn vị, ban hành
 **Bước 7. Trình ký ban hành quyết định**
 - Làm gì: Ghép toàn bộ thành quyết định hoàn chỉnh file theo định dạng đầu ra của skill; thực hiện đối chiếu nội bộ, không xuất kèm checklist; trình người có thẩm quyền ký ban hành (human gate); sau khi ký, chuyển văn thư đóng dấu, đăng ký vào sổ văn bản đi và phát hành.
 - Dùng input: toàn bộ.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, người ký theo `nguoi_ky` · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Quyết định chỉ có hiệu lực sau khi ký và đóng dấu; không phát hành bản chưa ký.
 - → Kết quả bước: Quyết định hành chính hoàn chỉnh, sẵn sàng ký ban hành.
 

@@ -94,7 +94,7 @@ tổng hợp tiến độ, sản phẩm bàn giao, chỉ số KPI, vấn đề t
   giữa các phần (tiến độ ↔ KPI ↔ deliverable), văn phong chuyên nghiệp, đầy đủ thông tin
   người lập/ngày lập.
 - Dùng input: `ten_du_an`, `ky_bao_cao` (tiêu đề, kỳ báo cáo, đối tác).
-- Vai trò: Viện trưởng · AI hỗ trợ: ghép khung báo cáo và kiểm tra chéo số liệu · ⏱ 1–2 giờ (ước tính)
+- Vai trò: Chủ nhiệm dự án soạn, Viện trưởng duyệt ở bước cuối · AI hỗ trợ: ghép khung báo cáo và kiểm tra chéo số liệu · ⏱ 1–2 giờ (ước tính)
 - Lưu ý nghiệp vụ: kiểm tra chéo số liệu giữa các phần — không được mâu thuẫn (VD: tiến
   độ 41% nhưng KPI đạt 90% phải giải thích được); rà chính tả, định dạng trước khi trình.
 - → Kết quả bước: Dự thảo báo cáo dự án định kỳ hoàn chỉnh (sẵn sàng trình duyệt).

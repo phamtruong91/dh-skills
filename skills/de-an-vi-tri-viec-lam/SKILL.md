@@ -181,7 +181,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Nghị định 62/2017/NĐ-CP ngày 25/5/2017 của Chính phủ về vị trí việc…
+- [ ] Đúng thể thức theo Nghị định 62/2017/NĐ-CP và Nghị định 30/2020/NĐ-CP; đối chiếu hiệu lực của căn cứ tại ngày nghiệp vụ.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Mọi vị trí việc làm phải xuất phát từ nhiệm vụ được giao — nhiệm vụ nào

@@ -1,6 +1,6 @@
 ---
 name: "chuan-bi-hop-va-action-tracker"
-description: "Chuẩn bị họp (tóm tắt tài liệu thành agenda brief) và sau họp trích kết luận, tách action theo owner/deadline, lập bảng theo dõi đến khi đóng việc. Dùng chung cho mọi cuộc họp trong trường: giao ban, hội đồng, họp đơn vị."
+description: "Chuẩn bị họp (tóm tắt tài liệu thành agenda brief) và sau họp trích kết luận, tách action theo owner/deadline, lập bảng theo dõi đến khi đóng việc. Dùng khi chuẩn bị hoặc kết thúc một cuộc họp trong trường (giao ban, hội đồng, họp đơn vị)."
 ---
 
 # Chuẩn bị họp & theo dõi action
@@ -130,7 +130,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 - [ ] Output đầy đủ 5 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: tiêu đề tracker + tên cuộc họp + ngày họp; danh sách kết luận đánh số; bảng action (# | Action | Owner | Deadline | Trạng thái | Ghi chú); lịch nhắc việc; dự thảo nhắc việc mẫu.
 - [ ] Mọi action đều có MỘT owner chính duy nhất và deadline là ngày cụ thể (không "sớm"/"ngay").
 - [ ] Mỗi action truy vết được về đúng kết luận số mấy của cuộc họp nào (cột Ghi chú).
-- [ ] Kết luận trích trung thành với biên bản gốc; chỗ chưa rõ đã đánh dấu "cần xác minh", không suy diễn.
+- [ ] Kết luận trích trung thành với biên bản gốc; chỗ chưa rõ để trống (owner/deadline) và nêu trong phản hồi cho thư ký, không suy diễn.
 - [ ] Trạng thái ban đầu của mọi action là "Mới"; tracker là tài liệu riêng, không sửa biên bản đã ký duyệt.
 - [ ] Dự thảo nhắc việc chỉ ở trạng thái dự thảo — chưa gửi cho bất kỳ ai.
 - [ ] Lịch nhắc việc đúng quy ước: nhắc trước deadline 3 ngày, ghi rõ còn bao nhiêu ngày.

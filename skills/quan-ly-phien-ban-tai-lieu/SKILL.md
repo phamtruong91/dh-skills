@@ -1,6 +1,6 @@
 ---
 name: "quan-ly-phien-ban-tai-lieu"
-description: "Kiểm kê thư mục tài liệu ở chế độ CHỈ ĐỌC: lập index, phát hiện file trùng lặp/phiên bản, đề xuất taxonomy và quy tắc đặt tên, liệt kê tài liệu thiếu. Tuyệt đối không xóa, di chuyển hay đổi tên bất kỳ file nào. Dùng chung cho mọi đơn vị."
+description: "Kiểm kê thư mục tài liệu ở chế độ CHỈ ĐỌC: lập index, phát hiện file trùng lặp/phiên bản, đề xuất taxonomy và quy tắc đặt tên, liệt kê tài liệu thiếu. Tuyệt đối không xóa, di chuyển hay đổi tên bất kỳ file nào. Dùng khi đơn vị cần sắp xếp lại thư mục tài liệu mà chưa muốn thay đổi file nào."
 ---
 
 # Quản lý file & phiên bản (chỉ đọc)
@@ -81,12 +81,12 @@ AI chỉ phân tích và đề xuất, con người thực hiện thay đổi th
 ```mermaid
 flowchart TD
     A[/"Thư mục tài liệu cần sắp xếp"/]
-    B["Kiểm kê toàn bộ file (inventory)"]
-    C["Nhóm file trùng, xác định quan hệ phiên bản"]
-    D["Đề xuất taxonomy cấu trúc thư mục"]
-    E["Đề xuất quy tắc đặt tên chuẩn"]
-    F["Đối chiếu danh mục phải có, lập missing list"]
-    G["Xuất báo cáo + hướng dẫn thủ công"]
+    B["Bước 1: Kiểm kê toàn bộ file (inventory)"]
+    C["Bước 2: Nhóm file trùng, xác định quan hệ phiên bản"]
+    D["Bước 3: Đề xuất taxonomy cấu trúc thư mục"]
+    E["Bước 4: Đề xuất quy tắc đặt tên chuẩn"]
+    F["Bước 5: Đối chiếu danh mục phải có, lập missing list"]
+    G["Bước 6: Xuất báo cáo + hướng dẫn thủ công"]
     HG["👤 Chủ sở hữu thư mục duyệt và tự thực hiện"]
     H[/"Báo cáo quản lý phiên bản + hướng dẫn"/]
     A --> B --> C --> D --> E --> F --> G --> HG --> H

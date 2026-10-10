@@ -1,6 +1,6 @@
 ---
 name: "tham-dinh-phap-ly-van-ban"
-description: "Rà soát, cho ý kiến pháp lý đối với dự thảo văn bản nội bộ của trường đại học: kiểm tra thẩm quyền ban hành, căn cứ pháp lý, tính thống nhất với văn bản cấp trên và văn bản nội bộ hiện hành, thể thức theo Nghị định 30/2020/NĐ-CP. Output là phiếu ý kiến pháp lý với một trong ba mức: đồng ý / đồng ý với điều kiện chỉnh sửa / không đồng ý kèm lý do."
+description: "Rà soát, cho ý kiến pháp lý đối với dự thảo văn bản nội bộ của trường đại học: kiểm tra thẩm quyền ban hành, căn cứ pháp lý, tính thống nhất với văn bản cấp trên và văn bản nội bộ hiện hành, thể thức theo Nghị định 30/2020/NĐ-CP. Dùng khi đơn vị trình dự thảo văn bản nội bộ cần ý kiến pháp lý. Kết quả: phiếu ý kiến pháp lý một trong ba mức (đồng ý / đồng ý có điều kiện / không đồng ý kèm lý do)."
 ---
 
 # Thẩm định pháp lý dự thảo văn bản nội bộ
@@ -61,7 +61,7 @@ pháp lý trước khi trình Hiệu trưởng ký ban hành.
 
 **Bước 4. Đối chiếu tính thống nhất**
 - Làm gì: đối chiếu từng điều khoản dự thảo với văn bản cấp trên (luật, nghị định, thông tư) và văn bản nội bộ hiện hành của trường; phát hiện nội dung trái cấp trên, mâu thuẫn nội bộ, thuật ngữ không thống nhất.
-- Dùng input: `noi_dung_du_thao`, `van_ban_cap_tren` (nếu có; nếu không có thì tự tra cứu văn bản nội bộ liên quan).
+- Dùng input: `noi_dung_du_thao`, `van_ban_cap_tren` (nếu có; nếu không có thì chỉ đối chiếu với văn bản người dùng cung cấp và ghi rõ phần chưa đối chiếu được, không tự giả định nội dung văn bản nội bộ).
 - Vai trò: Chuyên viên Phòng Thanh tra – Pháp chế · AI hỗ trợ: soạn dự thảo, đối chiếu tự động, cảnh báo sai lệch · ⏱ ~1–2 giờ (ước tính)
 - Lưu ý nghiệp vụ: mâu thuẫn về thời hạn, mức, trình tự giữa các văn bản nội bộ là bẫy thường gặp; ghi rõ điều khoản dự thảo đối chiếu với điều khoản của văn bản nào.
 - → Kết quả bước: Bảng đối chiếu (điều khoản dự thảo – vấn đề phát hiện – văn bản đối chiếu).
@@ -85,7 +85,7 @@ pháp lý trước khi trình Hiệu trưởng ký ban hành.
 - Dùng input: `nguoi_tham_dinh`, `ten_du_thao`, `don_vi_soan_thao`.
 - Vai trò: Chuyên viên Phòng Thanh tra – Pháp chế · AI hỗ trợ: soạn dự thảo, chuẩn bị hồ sơ trình đầy đủ · ⏱ ~30–60 phút (ước tính)
 - Lưu ý nghiệp vụ: đơn vị soạn thảo phải tiếp thu hoặc giải trình bằng văn bản nếu không tiếp thu; theo dõi đến khi dự thảo được hoàn thiện.
-- → Kết quả bước: Phiếu ý kiến pháp lý đã ký + bảng đối chiếu gửi đơn vị soạn thảo.
+- → Kết quả bước: Phiếu ý kiến pháp lý (trình Trưởng phòng ký) + bảng đối chiếu, gửi đơn vị soạn thảo sau khi ký.
 
 ## Luồng quy trình (Workflow)
 

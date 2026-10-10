@@ -1,6 +1,6 @@
 ---
 name: "soan-thong-bao"
-description: "Soạn thông báo nội bộ của trường đại học (lịch nghỉ lễ, cuộc họp, quy định mới, tuyển dụng, học bổng...). Ngắn gọn, rõ đối tượng, rõ thời hạn."
+description: "Soạn thông báo nội bộ của trường đại học (lịch nghỉ lễ, cuộc họp, quy định mới, tuyển dụng, học bổng...), ngắn gọn, rõ đối tượng, rõ thời hạn. Dùng khi cần thông tin chính thức tới toàn trường hoặc một nhóm đối tượng. Không dùng cho văn bản chỉ đạo/quy phạm (dùng soan-quyet-dinh-hc) hay thư mời (dùng soan-giay-moi)."
 ---
 
 # Soạn thông báo
@@ -48,7 +48,7 @@ triệu tập họp, quy định mới, kế hoạch, kết quả...
 - Làm gì: Từ `noi_dung`, kiểm chứng từng điểm: sự kiện có thật không (đối chiếu quyết định/kế hoạch liên quan), ngày giờ có chính xác và rơi đúng thứ trong tuần không, địa điểm có tồn tại và đủ sức chứa đối tượng không; loại bỏ điểm trùng lặp, gộp các điểm cùng chủ đề.
 - Dùng input: `noi_dung`, `thoi_han`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: xử lý sơ bộ theo quy trình · ⏱ ~20–45 phút (ước tính)
-- Lưu ý nghiệp vụ: Bẫy thường gặp — ngày tháng trong nội dung không khớp thứ (vd ghi "thứ Sáu, 01/01/2027" nhưng tra lịch lại là thứ khác); hạn đăng ký đặt sau ngày diễn ra sự kiện.
+- Lưu ý nghiệp vụ: Bẫy thường gặp — ngày tháng trong nội dung không khớp thứ (vd ghi "thứ Sáu, ngày …" nhưng tra lịch lại là thứ khác); hạn đăng ký đặt sau ngày diễn ra sự kiện.
 - → Kết quả bước: Danh sách nội dung đã kiểm chứng, loại trùng, sẵn sàng đưa vào thông báo.
 
 **Bước 3. Đặt tiêu đề và viết mở đầu**
@@ -77,12 +77,12 @@ triệu tập họp, quy định mới, kế hoạch, kết quả...
 - Dùng input: toàn bộ input (đối chiếu chéo).
 - Vai trò: Chuyên viên Phòng HCTH (Trưởng phòng kiểm tra lại) · AI hỗ trợ: quét lỗi theo checklist · ⏱ ~15–30 phút (ước tính)
 - Lưu ý nghiệp vụ: Đọc thử với góc nhìn của người nhận ít thông tin nhất (vd sinh viên năm nhất) — chỗ nào khó hiểu thì viết lại.
-- → Kết quả bước: Báo cáo kiểm tra + danh sách chỗ cần sửa (nếu có), trả về bước tương ứng để chỉnh.
+- → Kết quả bước: Kết quả đối chiếu nội bộ (không xuất kèm file) + danh sách chỗ cần sửa (nếu có), trả về bước tương ứng để chỉnh.
 
 **Bước 7. Xuất bản thông báo trình duyệt**
 - Làm gì: Ghép toàn bộ thành thông báo hoàn chỉnh file theo định dạng đầu ra của skill; chuyển cho thủ trưởng đơn vị ban hành duyệt (human gate) trước khi phát hành trên các kênh (website, email, bảng tin).
 - Dùng input: toàn bộ.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, thủ trưởng đơn vị ban hành ký · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Thông báo có thời hạn gấp nên ghi rõ giờ phát hành dự kiến để đơn vị truyền thông kịp đăng.
 - → Kết quả bước: Thông báo hoàn chỉnh, sẵn sàng ban hành.
 
@@ -114,7 +114,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Thông báo càng ngắn càng tốt
+- [ ] Đúng thể thức văn bản theo Nghị định 30/2020/NĐ-CP (đối chiếu hiệu lực tại ngày nghiệp vụ) và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Thông báo yêu cầu thực hiện bắt buộc phải có thời hạn rõ ràng

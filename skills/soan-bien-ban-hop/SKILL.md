@@ -50,7 +50,7 @@ làm căn cứ triển khai.
 - Làm gì: Viết phần đầu theo Mẫu 1.9: cơ quan chủ quản nếu có, cơ quan ban hành, quốc hiệu – tiêu ngữ, số/ký hiệu BB và địa danh/ngày (chưa có để trống), dòng "BIÊN BẢN" + tên cuộc họp (in hoa, căn giữa), các dòng Thời gian / Địa điểm / Chủ trì / Thư ký / Thành phần (ghi số lượng người dự, liệt kê người vắng mặt kèm lý do).
 - Dùng input: `ten_cuoc_hop`, `thoi_gian`, `dia_diem`, `chu_tri`, `thu_ky`, `thanh_phan`.
 - Vai trò: Chuyên viên Phòng HCTH · AI hỗ trợ: xử lý sơ bộ theo quy trình · ⏱ ~20–45 phút (ước tính)
-- Lưu ý nghiệp vụ: Giờ họp ghi đầy đủ "08h00 – 10h00, ngày 12 tháng 10 năm 2026"; chủ trì và thư ký ghi đủ học hàm/học vị + họ tên + chức danh.
+- Lưu ý nghiệp vụ: Giờ họp ghi đầy đủ theo dạng "…h… – …h…, ngày … tháng … năm …" từ `thoi_gian` (chỗ nào input chưa có thì để dòng dấu chấm); chủ trì và thư ký ghi đủ học hàm/học vị + họ tên + chức danh.
 - → Kết quả bước: Phần mở đầu biên bản hoàn chỉnh.
 
 **Bước 3. Ghi diễn biến theo từng nội dung**
@@ -79,12 +79,12 @@ làm căn cứ triển khai.
 - Dùng input: toàn bộ input (đối chiếu chéo).
 - Vai trò: Chuyên viên Phòng HCTH (Trưởng phòng kiểm tra lại) · AI hỗ trợ: quét lỗi theo checklist · ⏱ ~15–30 phút (ước tính)
 - Lưu ý nghiệp vụ: Nhiệm vụ giao cho đơn vị không dự họp phải được xác nhận lại với đơn vị đó trước khi ban hành biên bản; deadline đã qua so với ngày lập biên bản là lỗi phải sửa ngay.
-- → Kết quả bước: Báo cáo kiểm tra + danh sách chỗ cần sửa (nếu có), trả về bước tương ứng để chỉnh.
+- → Kết quả bước: Kết quả đối chiếu nội bộ (không xuất kèm file) + danh sách chỗ cần sửa (nếu có), trả về bước tương ứng để chỉnh.
 
 **Bước 7. Trình ký xác nhận và ban hành**
 - Làm gì: Ghép toàn bộ thành biên bản hoàn chỉnh theo quy cách đầu ra, bổ sung nơi nhận theo mẫu; chuyển cho thư ký và chủ trì ký xác nhận (human gate); sau khi ký, gửi biên bản cho các thành phần dự họp và đơn vị được phân công nhiệm vụ.
 - Dùng input: toàn bộ.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Thư ký chuẩn bị, chủ trì và thư ký cuộc họp ký · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Không sửa nội dung diễn biến/kết luận sau khi chủ trì đã ký mà không có ý kiến đồng ý bằng văn bản.
 - → Kết quả bước: Biên bản cuộc họp đã ký xác nhận, gửi đến các bên liên quan.
 
@@ -116,12 +116,12 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Biên bản phải khách quan, trung thực
+- [ ] Đúng thể thức văn bản theo Nghị định 30/2020/NĐ-CP (đối chiếu hiệu lực tại ngày nghiệp vụ) và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Tên người và chức danh sai là lỗi nghiêm trọng trong biên bản — kiểm tra kỹ từng tên
 - [ ] Người vắng mặt phải ghi rõ lý do (vắng có phép/vắng không phép/đi công tác)
-- [ ] Giờ họp ghi đầy đủ "08h00 – 10h00, ngày 12 tháng 10 năm 2026"
+- [ ] Giờ họp ghi đầy đủ theo dạng "…h… – …h…, ngày … tháng … năm …" từ `thoi_gian` (chỗ nào input chưa có thì để dòng dấu chấm)
 
 ## Căn cứ & lưu ý
 - Biên bản phải khách quan, trung thực; kết luận ghi rõ đầu mối và thời hạn.

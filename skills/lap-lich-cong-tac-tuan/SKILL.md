@@ -1,6 +1,6 @@
 ---
 name: "lap-lich-cong-tac-tuan"
-description: "Tổng hợp lịch công tác tuần của Ban Giám hiệu từ đầu việc các đơn vị gửi về, sắp xếp theo thời gian, chuẩn hóa và xuất bảng lịch tuần."
+description: "Tổng hợp lịch công tác tuần của Ban Giám hiệu từ đầu việc các đơn vị gửi về, sắp xếp theo thời gian, chuẩn hóa và xuất bảng lịch tuần. Dùng khi Phòng HCTH lập lịch công tác tuần của Ban Giám hiệu."
 ---
 
 # Lập lịch công tác tuần
@@ -71,7 +71,7 @@ của Ban Giám hiệu, ban hành cho toàn trường.
 **Bước 6. Trình duyệt trước khi ban hành**
 - Làm gì: Gửi bảng lịch + danh sách xung đột (nếu còn) cho Chánh Văn phòng rà soát, sau đó trình Hiệu trưởng duyệt (human gate); ghi nhận ý kiến điều chỉnh của lãnh đạo và cập nhật vào bảng lịch.
 - Dùng input: toàn bộ.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Trưởng phòng HCTH phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, người có thẩm quyền duyệt lịch (theo quy chế làm việc của trường) · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Lịch tuần chỉ ban hành sau khi Hiệu trưởng duyệt — không tự phát hành bản nháp; mọi điều chỉnh sau duyệt phải xin ý kiến lại.
 - → Kết quả bước: Bảng lịch tuần đã được lãnh đạo duyệt.
 
@@ -95,7 +95,7 @@ flowchart TD
     B4A --> B3
     DP -->|Không còn| B5["Bước 5: Dựng bảng lịch tuần và văn bản ban hành kèm"]
     B5 --> B6["Bước 6: Trình duyệt trước khi ban hành"]
-    B6 --> HG["👤 Chánh Văn phòng, Hiệu trưởng duyệt"]
+    B6 --> HG["👤 Người có thẩm quyền duyệt lịch"]
     HG --> B7["Bước 7: Ban hành lịch tuần"]
     B7 --> OUT[["Lịch công tác tuần đã ban hành"]]
 ```
@@ -113,7 +113,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Lịch tuần thường ban hành vào chiều thứ Sáu cho tuần kế tiếp.
+- [ ] Đúng cấu trúc và thể thức theo references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Đầu việc "cả ngày" hoặc chưa chốt giờ phải ghi rõ trạng thái, không tự đặt giờ

@@ -22,7 +22,7 @@ AI hỗ trợ chuẩn bị và đối chiếu; cán bộ phụ trách kiểm tra
 
 ## Khi nào dùng
 Khi cần soạn thảo văn bản ghi nhớ (MOU – Memorandum of Understanding) hoặc thỏa thuận
-hợp tác (MOA – Memorandum of Agreement) giữa Trường Đại học A với đối tác trong nước
+hợp tác (MOA – Memorandum of Agreement) giữa trường với đối tác trong nước
 hoặc quốc tế, phục vụ ký kết hợp tác đào tạo, nghiên cứu khoa học, trao đổi giảng viên –
 sinh viên.
 
@@ -34,7 +34,7 @@ sinh viên.
 | `ten_doi_tac` | Tên đầy đủ của đối tác (tiếng Việt và tiếng Anh), quốc gia, người đại diện | Có |
 | `muc_dich` | Mục đích hợp tác (1–2 câu) | Có |
 | `linh_vuc_hop_tac` | Các lĩnh vực hợp tác: đào tạo, NCKH, trao đổi GV-SV, đồng tổ chức hội thảo... | Có |
-| `trach_nhiem_ben_a` | Trách nhiệm của Trường Đại học A | Có |
+| `trach_nhiem_ben_a` | Trách nhiệm của Bên A (trường) | Có |
 | `trach_nhiem_ben_b` | Trách nhiệm của đối tác | Có |
 | `thoi_han` | Thời hạn hiệu lực (số năm) và điều kiện gia hạn/chấm dứt | Có |
 | `nguoi_ky` | Người ký hai bên (chức danh, họ tên) | Có |
@@ -87,17 +87,17 @@ sinh viên.
 ## Luồng quy trình (Workflow)
 ```mermaid
 flowchart TD
-    A["Xác định loại văn bản MOU hay MOA"] --> B{"MOU hay MOA?"}
+    A["Bước 1: Xác định loại văn bản MOU hay MOA"] --> B{"MOU hay MOA?"}
     B -->|MOU| C["Khung nguyên tắc, không cam kết chặt"]
     B -->|MOA| D["Cam kết cụ thể, điều khoản chi tiết"]
-    C --> E["Soạn bản tiếng Việt đầy đủ điều khoản"]
+    C --> E["Bước 2: Soạn bản tiếng Việt đầy đủ điều khoản"]
     D --> E
-    E --> F["Soạn bản tiếng Anh tương ứng"]
-    F --> G{"Tương thích pháp lý?"}
+    E --> F["Bước 3: Soạn bản tiếng Anh tương ứng"]
+    F --> G{"Bước 4: Tương thích pháp lý?"}
     G -->|Không| H["Chỉnh sửa điều khoản"]
     H --> F
-    G -->|Có| HG["👤 Thẩm định nội bộ, Hiệu trưởng phê duyệt"]
-    HG --> Z[["Xuất bản văn bản song ngữ, lưu hồ sơ"]]
+    G -->|Có| HG["👤 Bước 5: Thẩm định nội bộ, Hiệu trưởng phê duyệt"]
+    HG --> Z[["Bước 6: Xuất bản văn bản song ngữ, lưu hồ sơ"]]
 ```
 
 ## Đầu ra
@@ -107,11 +107,14 @@ File nghiệp vụ thực tế theo định dạng mặc định ở đầu skil
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
 ## Kiểm tra nội bộ trước khi giao
+
+Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file xuất. Mục thiếu dữ liệu được để trống, không đánh dấu đã đạt hoặc đã duyệt.
+
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung khớp với Input: tên đối tác, lĩnh vực hợp tác, trách nhiệm hai bên, thời hạn, người ký.
 - [ ] Không bịa đặt cam kết, số liệu tài chính, thông tin đối tác.
 - [ ] Đúng thể thức văn bản ký kết đối ngoại; hai bản Việt – Anh song hành (số năm, số bản, thời hạn thông báo khớp tuyệt đối).
-- [ ] Căn cứ pháp lý đầy đủ, còn hiệu lực: Luật Giáo dục đại học 2012 (sửa đổi 2018) và văn bản hướng dẫn hợp tác quốc tế.
+- [ ] Căn cứ pháp lý đầy đủ, còn hiệu lực: Luật Giáo dục đại học 2012 (sửa đổi 2018) và văn bản hướng dẫn hợp tác quốc tế; đối chiếu hiệu lực tại ngày nghiệp vụ (xem docs/CAP_NHAT_PHAP_LY.md).
 - [ ] Đã qua Human gate: Phòng KHCN&HTQT thẩm định, Phòng Pháp chế rà soát, Hiệu trưởng phê duyệt trước khi ký.
 - [ ] Trách nhiệm hai bên đối xứng (không bên nào chỉ có quyền mà không có nghĩa vụ); MOU không chứa điều khoản phạt vi phạm/bồi thường.
 - [ ] Tên đối tác, chức danh người ký tiếng Anh đúng theo văn bản chính thức của đối tác.
@@ -120,7 +123,8 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 ## Căn cứ & lưu ý
-- Luật Giáo dục đại học 2012 (sửa đổi, bổ sung 2018) và các văn bản hướng dẫn về hợp tác quốc tế trong giáo dục.
+- Luật Giáo dục đại học 2012 (sửa đổi, bổ sung 2018) và các văn bản hướng dẫn về hợp tác quốc tế trong giáo dục; đối chiếu hiệu lực tại ngày nghiệp vụ (xem docs/CAP_NHAT_PHAP_LY.md).
+- Phần "căn cứ ký kết" trong văn bản chỉ ghi các căn cứ do người dùng cung cấp; chưa có thì để dòng dấu chấm.
 - MOU mang tính nguyên tắc, không tạo nghĩa vụ pháp lý bắt buộc như MOA; khi có cam kết tài chính cụ thể nên dùng MOA hoặc phụ lục hợp đồng riêng.
 - Văn bản ký với đối tác nước ngoài cần rà soát pháp lý nội bộ trước khi trình Hiệu trưởng.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.

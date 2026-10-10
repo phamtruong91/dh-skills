@@ -71,19 +71,20 @@ một nhiệm vụ, đợt công tác cụ thể.
 - Lưu ý nghiệp vụ: Phải có ít nhất một cơ chế kiểm tra tiến độ định kỳ — kế hoạch không có cơ chế giám sát thường không thực hiện được; ghi rõ ai là đầu mối tổng hợp để tránh "mỗi người báo một kiểu".
 - → Kết quả bước: Dự thảo phần Tổ chức thực hiện.
 
-**Bước 6. Dựng thể thức và trình ký ban hành**
-- Làm gì: Lắp ráp phần đầu: tên trường + tên `don_vi` (in hoa), dòng "KẾ HOẠCH CÔNG TÁC [phạm vi thời gian]" (in hoa, căn giữa); sắp xếp các phần theo thứ tự: I. Mục đích, yêu cầu → II. Nhiệm vụ cụ thể → III. Kinh phí (nếu có) → IV. Tổ chức thực hiện; cuối văn bản: địa danh, ngày tháng năm + khối chữ ký thủ trưởng đơn vị (chức danh + họ tên); trình thủ trưởng đơn vị ký ban hành (human gate), hoặc trình cấp trên phê duyệt nếu vượt thẩm quyền.
-- Dùng input: `don_vi`, `thoi_gian`.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
-- Lưu ý nghiệp vụ: Người ký là thủ trưởng đơn vị lập kế hoạch; nếu kế hoạch trình cấp trên phê duyệt thì đơn vị chỉ ký phần đề xuất, không ghi "ban hành".
-- → Kết quả bước: Văn bản kế hoạch hoàn chỉnh về thể thức, đã trình ký.
-
-**Bước 7. Kiểm tra tính khả thi trước khi ban hành**
+**Bước 6. Kiểm tra tính khả thi trước khi trình ký**
 - Làm gì: Rà soát toàn văn: mỗi nhiệm vụ có đầu mối + thời hạn cụ thể không; thời gian các nhiệm vụ có nằm trong phạm vi `thoi_gian` không; tổng kinh phí có khớp phân bổ chi tiết không; nhiệm vụ có phù hợp năng lực và chức năng của đơn vị không; chính tả, tên đơn vị chính xác.
 - Dùng input: toàn bộ input (đối chiếu chéo).
 - Vai trò: Chuyên viên Phòng HCTH (Trưởng phòng kiểm tra lại) · AI hỗ trợ: quét lỗi theo checklist · ⏱ ~15–30 phút (ước tính)
 - Lưu ý nghiệp vụ: Nhiệm vụ có thời hạn nằm ngoài phạm vi kế hoạch (vd kế hoạch quý IV nhưng nhiệm vụ hạn tháng 1 năm sau) phải điều chỉnh; nhiệm vụ vượt năng lực đơn vị phải ghi rõ cần phối hợp/hỗ trợ từ đơn vị nào.
-- → Kết quả bước: Báo cáo kiểm tra + danh sách chỗ cần sửa (nếu có); sau khi sửa xong thì ban hành.
+- → Kết quả bước: Kết quả đối chiếu nội bộ (không xuất kèm file) + danh sách chỗ cần sửa (nếu có); sửa xong thì chuyển Bước 7.
+
+**Bước 7. Dựng thể thức và trình ký ban hành**
+- Làm gì: Lắp ráp phần đầu: tên trường + tên `don_vi` (in hoa), dòng "KẾ HOẠCH CÔNG TÁC [phạm vi thời gian]" (in hoa, căn giữa); sắp xếp các phần theo thứ tự: I. Mục đích, yêu cầu → II. Nhiệm vụ cụ thể → III. Kinh phí (nếu có) → IV. Tổ chức thực hiện; cuối văn bản: địa danh, ngày tháng năm + khối chữ ký thủ trưởng đơn vị (chức danh + họ tên); trình thủ trưởng đơn vị ký ban hành (human gate), hoặc trình cấp trên phê duyệt nếu vượt thẩm quyền.
+- Dùng input: `don_vi`, `thoi_gian`.
+- Vai trò: Chuyên viên chuẩn bị, thủ trưởng đơn vị ký ban hành (hoặc cấp trên phê duyệt nếu vượt thẩm quyền) · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Lưu ý nghiệp vụ: Người ký là thủ trưởng đơn vị lập kế hoạch; nếu kế hoạch trình cấp trên phê duyệt thì đơn vị chỉ ký phần đề xuất, không ghi "ban hành".
+- → Kết quả bước: Văn bản kế hoạch hoàn chỉnh về thể thức, sẵn sàng trình ký.
+
 
 ## Luồng quy trình (Workflow)
 
@@ -94,12 +95,12 @@ flowchart TD
     B2 --> B3["Bước 3: Liệt kê và chi tiết hóa nhiệm vụ"]
     B3 --> B4["Bước 4: Lập dự toán kinh phí theo nhiệm vụ"]
     B4 --> B5["Bước 5: Viết phần tổ chức thực hiện"]
-    B5 --> B6["Bước 6: Dựng thể thức và trình ký ban hành"]
-    B6 --> DP{"Vượt thẩm quyền đơn vị?"}
-    DP -->|Có| B6A["Trình cấp trên phê duyệt"]
-    DP -->|Không| B7["Bước 7: Kiểm tra tính khả thi trước khi ban hành"]
-    B6A --> B7
-    B7 --> HG["👤 Thủ trưởng đơn vị ký, cấp trên phê duyệt"]
+    B5 --> B6["Bước 6: Kiểm tra tính khả thi trước khi trình ký"]
+    B6 --> B7["Bước 7: Dựng thể thức và trình ký ban hành"]
+    B7 --> DP{"Vượt thẩm quyền đơn vị?"}
+    DP -->|Có| B7A["Trình cấp trên phê duyệt"]
+    DP -->|Không| HG
+    B7A --> HG["👤 Thủ trưởng đơn vị ký, cấp trên phê duyệt"]
     HG --> OUT[["Kế hoạch công tác"]]
 ```
 
@@ -116,7 +117,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Kế hoạch năm học toàn trường
+- [ ] Đúng cấu trúc và thể thức theo references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Phạm vi thời gian quyết định độ chi tiết — kế hoạch năm nêu định hướng theo quý, kế hoạch tháng/quý phải có nhiệm vụ cụ thể từng tuần

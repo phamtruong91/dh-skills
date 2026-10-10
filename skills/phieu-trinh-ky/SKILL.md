@@ -39,7 +39,7 @@ báo cáo, tờ trình, hợp đồng...
 **Bước 1. Thu thập hồ sơ trình ký, kiểm tra đầy đủ**
 - Làm gì: tập hợp đầy đủ `van_ban_trinh` (bản dự thảo) và `tai_lieu_kem`; kiểm tra có đủ chữ ký người soạn thảo, số lượng bản theo quy định, thể thức văn bản đúng Nghị định 30/2020/NĐ-CP; loại hồ sơ thiếu tài liệu kèm thì yêu cầu bổ sung trước khi lập phiếu trình.
 - Dùng input: `van_ban_trinh`, `don_vi_soan`, `tai_lieu_kem`.
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên đơn vị trình chuẩn bị · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: văn bản trình ký phải là bản sạch, không còn lỗi chính tả; tài liệu kèm phải đánh số thứ tự và liệt kê đầy đủ — bẫy thường gặp là trình thiếu phụ lục, danh sách kèm theo.
 - → Kết quả bước: bộ hồ sơ đủ điều kiện trình ký.
 
@@ -60,7 +60,7 @@ báo cáo, tờ trình, hợp đồng...
 **Bước 4. Hoàn thiện phiếu trình ký theo khung chuẩn**
 - Làm gì: ghép các phần theo đúng thứ tự khung chuẩn (tiêu đề đơn vị – PHIẾU TRÌNH KÝ – kính gửi – thông tin văn bản – đơn vị soạn – tóm tắt – tài liệu kèm – ý kiến đề xuất – ngày tháng và chữ ký người trình); chừa phần "Ý KIẾN CỦA LÃNH ĐẠO" trống 4–6 dòng để lãnh đạo ghi tay.
 - Dùng input: tất cả các trường (`van_ban_trinh`, `don_vi_soan`, `tom_tat`, `de_xuat`, `tai_lieu_kem`).
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên đơn vị trình chuẩn bị · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: phần ý kiến lãnh đạo tuyệt đối để trống, không được viết sẵn gợi ý; ghi đúng chức danh người nhận (Hiệu trưởng / Phó Hiệu trưởng phụ trách lĩnh vực).
 - → Kết quả bước: phiếu trình ký dự thảo hoàn chỉnh.
 
@@ -82,12 +82,12 @@ báo cáo, tờ trình, hợp đồng...
 
 ```mermaid
 flowchart TD
-    IN[/"Văn bản cần trình ký"/] --> A["Thu thập hồ sơ, kiểm tra đầy đủ tài liệu kèm"]
-    A --> B["Viết tóm tắt nội dung 3-7 dòng"]
-    B --> C["Ghi ý kiến đề xuất của đơn vị soạn thảo"]
-    C --> D["Hoàn thiện phiếu trình ký, chừa phần ý kiến lãnh đạo"]
-    D --> E["Người trình ký xác nhận, kẹp phiếu lên trên cùng hồ sơ"]
-    E --> HG["👤 Lãnh đạo ghi ý kiến, ký duyệt"]
+    IN[/"Văn bản cần trình ký"/] --> A["Bước 1: Thu thập hồ sơ, kiểm tra đầy đủ tài liệu kèm"]
+    A --> B["Bước 2: Viết tóm tắt nội dung 3-7 dòng"]
+    B --> C["Bước 3: Ghi ý kiến đề xuất của đơn vị soạn thảo"]
+    C --> D["Bước 4: Hoàn thiện phiếu trình ký, chừa phần ý kiến lãnh đạo"]
+    D --> E["Bước 5: Người trình ký xác nhận, kẹp phiếu lên trên cùng hồ sơ"]
+    E --> HG["👤 Bước 6: Lãnh đạo ghi ý kiến, ký duyệt"]
     HG --> OUT[["Phiếu trình ký hoàn chỉnh"]]
 ```
 
@@ -104,7 +104,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Phiếu trình ký giúp lãnh đạo nắm nhanh nội dung, không phải đọc toà…
+- [ ] Đúng khung phiếu trình ký tại references/quy-cach-dau-ra.md; văn bản trình kèm đúng thể thức Nghị định 30/2020/NĐ-CP (đối chiếu hiệu lực tại ngày nghiệp vụ).
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Văn bản trình ký phải là bản sạch, không còn lỗi chính tả

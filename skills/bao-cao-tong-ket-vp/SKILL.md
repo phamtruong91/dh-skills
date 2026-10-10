@@ -80,12 +80,12 @@ khi báo cáo chuyên đề về công tác văn thư, cải cách hành chính.
 
 ```mermaid
 flowchart TD
-    IN[/"Số liệu hoạt động văn phòng"/] --> A["Thu thập, đối chiếu số liệu với sổ sách"]
-    A --> B["Tổng hợp kết quả 4 mảng công tác"]
-    B --> C["Đánh giá ưu điểm, kết quả nổi bật"]
-    C --> D["Chỉ ra tồn tại, hạn chế và nguyên nhân"]
-    D --> E["Đề xuất phương hướng kỳ tới"]
-    E --> F["Soạn báo cáo theo thể thức, kèm phụ lục số liệu"]
+    IN[/"Số liệu hoạt động văn phòng"/] --> A["Bước 1: Thu thập, đối chiếu số liệu với sổ sách"]
+    A --> B["Bước 2: Tổng hợp kết quả 4 mảng công tác"]
+    B --> C["Bước 3: Đánh giá ưu điểm, kết quả nổi bật"]
+    C --> D["Bước 4: Chỉ ra tồn tại, hạn chế và nguyên nhân"]
+    D --> E["Bước 5: Đề xuất phương hướng kỳ tới"]
+    E --> F["Bước 6: Soạn báo cáo theo thể thức, kèm phụ lục số liệu"]
     F --> HG["👤 Trưởng phòng ký, gửi Ban Giám hiệu"]
     HG --> OUT[["Báo cáo tổng kết văn phòng"]]
 ```
@@ -103,7 +103,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Kế hoạch công tác của Phòng
+- [ ] Đúng cấu trúc và thể thức theo references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Số liệu phải đối chiếu với sổ văn bản đi/đến trước khi đưa vào báo cáo — bẫy là lấy số liệu miệng chưa kiểm chứng

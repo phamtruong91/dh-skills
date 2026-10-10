@@ -69,7 +69,7 @@ kỷ niệm, và các sự kiện khác của trường.
 **Bước 5. Rà soát thể thức, trình ký**
 - Làm gì: kiểm tra chính tả, thể thức trang trọng (font chữ, căn lề, logo đơn vị); đối chiếu lần cuối ngày giờ, địa điểm, danh sách khách mời; trình thủ trưởng `don_vi_moi` ký, đóng dấu; ghi số lưu hành nội bộ nếu cần.
 - Dùng input: `don_vi_moi` (người ký).
-- Vai trò: Chuyên viên Phòng HCTH chuẩn bị, Hiệu trưởng phê duyệt · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
+- Vai trò: Chuyên viên chuẩn bị, thủ trưởng đơn vị tổ chức ký · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: chữ ký phải đúng người có thẩm quyền — giấy mời cấp trường do Hiệu trưởng hoặc người được ủy quyền ký; kiểm tra dấu đóng rõ nét, đúng vị trí.
 - → Kết quả bước: giấy mời đã ký, đóng dấu.
 
@@ -84,15 +84,15 @@ kỷ niệm, và các sự kiện khác của trường.
 
 ```mermaid
 flowchart TD
-    IN[/"Kế hoạch tổ chức sự kiện"/] --> A["Rà soát thông tin sự kiện, lập danh sách khách mời"]
-    A --> B["Soạn tiêu đề GIẤY MỜI và lời mời"]
-    B --> C["Ghi thời gian, địa điểm, chương trình tóm tắt"]
+    IN[/"Kế hoạch tổ chức sự kiện"/] --> A["Bước 1: Rà soát thông tin sự kiện, lập danh sách khách mời"]
+    A --> B["Bước 2: Soạn tiêu đề GIẤY MỜI và lời mời"]
+    B --> C["Bước 3: Ghi thời gian, địa điểm, chương trình tóm tắt"]
     C --> D{"Cần xác nhận tham dự?"}
-    D -->|Có| E["Ghi đầu mối và hạn xác nhận tham dự"]
-    D -->|Không| F["Rà soát thể thức, chính tả"]
+    D -->|Có| E["Bước 4: Ghi đầu mối và hạn xác nhận tham dự"]
+    D -->|Không| F["Bước 5: Rà soát thể thức, chính tả"]
     E --> F
     F --> HG["👤 Thủ trưởng đơn vị tổ chức ký, đóng dấu"]
-    HG --> G["Phát hành giấy mời tới khách mời"]
+    HG --> G["Bước 6: Phát hành giấy mời tới khách mời"]
     G --> OUT[["Giấy mời đã phát hành"]]
 ```
 
@@ -109,7 +109,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Giấy mời sự kiện lớn nên gửi trước ít nhất 07 ngày
+- [ ] Đúng thể thức văn bản theo Nghị định 30/2020/NĐ-CP (đối chiếu hiệu lực tại ngày nghiệp vụ) và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Kiểm tra chức danh, học hàm, học vị của khách mời — bẫy thường gặp là ghi sai chức danh

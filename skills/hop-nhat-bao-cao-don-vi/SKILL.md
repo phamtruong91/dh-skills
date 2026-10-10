@@ -1,6 +1,6 @@
 ---
 name: "hop-nhat-bao-cao-don-vi"
-description: "Hợp nhất báo cáo của nhiều đơn vị theo một mẫu chung: đọc batch, mapping trường dữ liệu, chuẩn hóa, loại trùng lặp, lập gap log số liệu thiếu → báo cáo tổng hợp + phụ lục liên kết nguồn từng con số. Dùng cho báo cáo 3 công khai, kiểm định, tổng kết năm học..."
+description: "Hợp nhất báo cáo của nhiều đơn vị theo một mẫu chung: đọc batch, mapping trường dữ liệu, chuẩn hóa, loại trùng lặp, lập gap log số liệu thiếu → báo cáo tổng hợp + phụ lục liên kết nguồn từng con số. Dùng khi hợp nhất báo cáo nhiều đơn vị, như báo cáo 3 công khai, kiểm định, tổng kết năm học..."
 ---
 
 # Hợp nhất báo cáo nhiều đơn vị
@@ -132,7 +132,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 - [ ] Báo cáo hợp nhất đầy đủ 5 phần theo cấu trúc sản phẩm tại references/quy-cach-dau-ra.md: tiêu đề + kỳ báo cáo + ngày lập; phạm vi số liệu (đơn vị nào đã có số liệu / chưa nộp / nộp bản nháp); nội dung theo mẫu chung; data gap log; danh sách mâu thuẫn cần xác minh + hạn bổ sung.
 - [ ] Số liệu trong output khớp với báo cáo các đơn vị trong Input; không bịa, không ước lượng, không "làm tròn cho đẹp".
 - [ ] Mỗi con số trong báo cáo hợp nhất đều có chú thích nguồn (đơn vị, báo cáo, mục) trong phụ lục liên kết nguồn.
-- [ ] Số liệu từ bản nháp chưa xác minh KHÔNG đưa vào tổng; chỉ tiêu thiếu ghi rõ "chưa có số liệu", không bỏ mục.
+- [ ] Số liệu từ bản nháp chưa xác minh KHÔNG đưa vào tổng; chỉ tiêu thiếu để trống ô số liệu và ghi vào data gap log, không bỏ mục.
 - [ ] Trùng lặp đã loại trước khi cộng dồn; mâu thuẫn ghi rõ nguồn được chọn + lý do theo thứ tự ưu tiên nguồn.
 - [ ] Nhận xét/đánh giá chỉ dựa trên số liệu đã tổng hợp — không suy diễn vượt số liệu (không dự báo, không gán nguyên nhân khi không có căn cứ).
 - [ ] Đã qua Human gate: đầu mối từng đơn vị đã xác nhận số liệu đơn vị mình; lãnh đạo đã duyệt báo cáo cuối trước khi ban hành/gửi cấp trên.
