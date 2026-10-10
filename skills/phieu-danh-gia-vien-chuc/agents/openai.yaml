@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Phiếu đánh giá, xếp loại viên chức"
-  "short_description": "Hỗ trợ phiếu đánh giá, xếp loại viên chức"
-  "default_prompt": "Hãy dùng $phieu-danh-gia-vien-chuc để hỗ trợ công việc: Phiếu đánh giá, xếp loại viên chức; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Phiếu đánh giá, xếp loại viên chức
+  short_description: Hỗ trợ phiếu đánh giá, xếp loại viên chức
+  default_prompt: 'Hãy dùng $phieu-danh-gia-vien-chuc để hỗ trợ công việc: Phiếu đánh giá, xếp loại viên chức; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

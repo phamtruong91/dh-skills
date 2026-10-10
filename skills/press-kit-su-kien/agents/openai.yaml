@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Press kit sự kiện"
-  "short_description": "Hỗ trợ press kit sự kiện cho trường đại học"
-  "default_prompt": "Hãy dùng $press-kit-su-kien để hỗ trợ công việc: Press kit sự kiện; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Press kit sự kiện
+  short_description: Hỗ trợ press kit sự kiện cho trường đại học
+  default_prompt: 'Hãy dùng $press-kit-su-kien để hỗ trợ công việc: Press kit sự kiện; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

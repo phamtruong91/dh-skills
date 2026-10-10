@@ -1,5 +1,17 @@
 # Nhật ký thay đổi
 
+## 1.3.1 — 2026-10-10
+
+- Phân biệt định dạng mặc định với định dạng được chọn theo sản phẩm/yêu cầu; thêm available_output_formats trong manifest và từng skill.
+- Bổ sung PDF, CSV, TXT, MD, HTML, JSON, YAML, PPTX, PNG, SVG, TEX, BIB đúng nhóm nghiệp vụ; không coi skill viết kịch bản là công cụ tạo MP4.
+- Giữ bắt buộc file thực tế, không đổi đuôi giả và không tự xuất mọi định dạng cùng lúc.
+
+## 1.3.0 — 2026-10-10
+
+- Bắt buộc tạo file thực tế và cung cấp liên kết tải khi tạo sản phẩm nghiệp vụ; bỏ cách hoàn thành bằng nội dung chat rồi chờ yêu cầu xuất file.
+- Gán định dạng mặc định cho 171 skill: 150 Word, 20 Excel, 1 ZIP; ưu tiên định dạng người dùng yêu cầu.
+- Đồng bộ chỉ dẫn, lời nhắc giao diện, manifest và phiên bản; giữ chỗ điền theo mẫu và không xuất checklist kiểm tra.
+
 ## 1.2.1 — 2026-10-10
 
 - Sửa quy tắc dữ liệu thiếu của 171 skill: giữ dấu chấm, dấu gạch hoặc ô trống đúng mẫu gốc; bỏ lệnh cấm dấu chấm.

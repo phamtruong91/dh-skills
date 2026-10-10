@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở"
-  "short_description": "Hỗ trợ soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở"
-  "default_prompt": "Hãy dùng $noi-quy-ky-tuc-xa để hỗ trợ công việc: Soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở
+  short_description: Hỗ trợ soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở
+  default_prompt: 'Hãy dùng $noi-quy-ky-tuc-xa để hỗ trợ công việc: Soạn nội quy ký túc xá và quy trình xét duyệt chỗ ở; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

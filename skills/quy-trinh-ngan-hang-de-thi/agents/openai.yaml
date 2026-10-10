@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Quy trình xây dựng ngân hàng đề thi"
-  "short_description": "Hỗ trợ quy trình xây dựng ngân hàng đề thi"
-  "default_prompt": "Hãy dùng $quy-trinh-ngan-hang-de-thi để hỗ trợ công việc: Quy trình xây dựng ngân hàng đề thi; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Quy trình xây dựng ngân hàng đề thi
+  short_description: Hỗ trợ quy trình xây dựng ngân hàng đề thi
+  default_prompt: 'Hãy dùng $quy-trinh-ngan-hang-de-thi để hỗ trợ công việc: Quy trình xây dựng ngân hàng đề thi; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

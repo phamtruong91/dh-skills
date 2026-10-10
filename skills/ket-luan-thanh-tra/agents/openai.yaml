@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn kết luận thanh tra"
-  "short_description": "Hỗ trợ soạn kết luận thanh tra"
-  "default_prompt": "Hãy dùng $ket-luan-thanh-tra để hỗ trợ công việc: Soạn kết luận thanh tra; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn kết luận thanh tra
+  short_description: Hỗ trợ soạn kết luận thanh tra
+  default_prompt: 'Hãy dùng $ket-luan-thanh-tra để hỗ trợ công việc: Soạn kết luận thanh tra; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

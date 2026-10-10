@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Lập báo cáo tài chính (chế độ kế toán HCSN)"
-  "short_description": "Hỗ trợ lập báo cáo tài chính (chế độ kế toán HCSN)"
-  "default_prompt": "Hãy dùng $bao-cao-tai-chinh để hỗ trợ công việc: Lập báo cáo tài chính (chế độ kế toán HCSN); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Lập báo cáo tài chính (chế độ kế toán HCSN)
+  short_description: Hỗ trợ lập báo cáo tài chính (chế độ kế toán HCSN)
+  default_prompt: 'Hãy dùng $bao-cao-tai-chinh để hỗ trợ công việc: Lập báo cáo tài chính (chế độ kế toán HCSN); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .xlsx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

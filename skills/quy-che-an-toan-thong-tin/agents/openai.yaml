@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Quy chế an toàn thông tin mạng"
-  "short_description": "Hỗ trợ quy chế an toàn thông tin mạng"
-  "default_prompt": "Hãy dùng $quy-che-an-toan-thong-tin để hỗ trợ công việc: Quy chế an toàn thông tin mạng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Quy chế an toàn thông tin mạng
+  short_description: Hỗ trợ quy chế an toàn thông tin mạng
+  default_prompt: 'Hãy dùng $quy-che-an-toan-thong-tin để hỗ trợ công việc: Quy chế an toàn thông tin mạng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -13,12 +13,12 @@ def validate():
         name=p.parent.name;t=p.read_text()
         fm=yaml.safe_load(t.split('---',2)[1]);ui=yaml.safe_load((p.parent/'agents/openai.yaml').read_text())['interface']
         checks=[fm['name']==name,bool(re.fullmatch('[a-z0-9]+(?:-[a-z0-9]+)*',name)),len(name)<=64,len(fm['description'])<=1024,25<=len(ui['short_description'])<=64,'$'+name in ui['default_prompt'],bool(ui['display_name']),'## Quản trị phiên bản' in t,'## Giới hạn và human gate' in t,'(đã ký)' not in t]
-        version=json.loads((p.parent/'references/version.json').read_text());checks+=[version==records[name],version['version']=='1.2.1',version['approval_owner'] is None]
+        version=json.loads((p.parent/'references/version.json').read_text());checks+=[version==records[name],version['version']=='1.3.1',version['approval_owner'] is None]
         if version['legal_updates']:checks.extend([(p.parent/'references/phap-ly.md').exists(),(p.parent/'references/quy-trinh-lich-su.md').exists(),'[CẦN XÁC MINH]' in t])
         for link in re.findall(r'\]\((references/[^)]+)\)',t):checks.append((p.parent/link).is_file())
-        output=p.parent/version['output_reference'];checks.extend([output.is_file(),version['missing_data_policy']=='preserve-template-fill-spaces',version['qa_attachments'] is False])
+        output=p.parent/version['output_reference'];checks.extend([output.is_file(),version['missing_data_policy']=='preserve-template-fill-spaces',version['qa_attachments'] is False, version['output_delivery']=='file-required',version['default_output_format'] in ('docx','xlsx','zip'), version['default_output_format'] in version['available_output_formats'], len(version['available_output_formats'])==len(set(version['available_output_formats'])), '## Định dạng và file đầu ra' in t, '.'+version['default_output_format'] in ui['default_prompt']])
         output_text=output.read_text()
-        checks.extend(['## Cấu trúc sản phẩm của skill' in output_text, '## Quy tắc giao văn bản' in output_text, 'chừa chỗ điền đúng mẫu gốc' in output_text, 'Không dùng dấu ba chấm' not in output_text, '[CHỜ KÝ]' not in t, 'Mọi đầu ra mặc định là **DỰ THẢO' not in t, '## Đầu ra' in t])
+        checks.extend(['## Cấu trúc sản phẩm của skill' in output_text, '## Quy tắc giao văn bản' in output_text, '## Bắt buộc xuất file' in output_text, 'chừa chỗ điền đúng mẫu gốc' in output_text, 'Không dùng dấu ba chấm' not in output_text, '[CHỜ KÝ]' not in t, 'Mọi đầu ra mặc định là **DỰ THẢO' not in t, '## Đầu ra' in t])
         for link in re.findall(r'\]\(([^)]+)\)',output_text):
             if not link.startswith(('https://','http://')):checks.append((output.parent/link).is_file())
         if not all(checks):errors.append(name)

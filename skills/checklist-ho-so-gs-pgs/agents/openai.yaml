@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định"
-  "short_description": "Hỗ trợ checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định"
-  "default_prompt": "Hãy dùng $checklist-ho-so-gs-pgs để hỗ trợ công việc: Checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định
+  short_description: Hỗ trợ checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định
+  default_prompt: 'Hãy dùng $checklist-ho-so-gs-pgs để hỗ trợ công việc: Checklist hồ sơ xét công nhận GS/PGS + báo cáo thẩm định; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn hợp đồng thực hiện đề tài KHCN"
-  "short_description": "Hỗ trợ soạn hợp đồng thực hiện đề tài KHCN"
-  "default_prompt": "Hãy dùng $hop-dong-thuc-hien-de-tai để hỗ trợ công việc: Soạn hợp đồng thực hiện đề tài KHCN; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn hợp đồng thực hiện đề tài KHCN
+  short_description: Hỗ trợ soạn hợp đồng thực hiện đề tài KHCN
+  default_prompt: 'Hãy dùng $hop-dong-thuc-hien-de-tai để hỗ trợ công việc: Soạn hợp đồng thực hiện đề tài KHCN; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

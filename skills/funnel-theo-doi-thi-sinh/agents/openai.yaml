@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Funnel theo dõi thí sinh"
-  "short_description": "Hỗ trợ funnel theo dõi thí sinh"
-  "default_prompt": "Hãy dùng $funnel-theo-doi-thi-sinh để hỗ trợ công việc: Funnel theo dõi thí sinh; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Funnel theo dõi thí sinh
+  short_description: Hỗ trợ funnel theo dõi thí sinh
+  default_prompt: 'Hãy dùng $funnel-theo-doi-thi-sinh để hỗ trợ công việc: Funnel theo dõi thí sinh; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .xlsx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

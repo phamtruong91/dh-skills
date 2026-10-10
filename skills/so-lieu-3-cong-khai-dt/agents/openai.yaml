@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Tổng hợp số liệu 3 công khai mảng đào tạo"
-  "short_description": "Hỗ trợ tổng hợp số liệu 3 công khai mảng đào tạo"
-  "default_prompt": "Hãy dùng $so-lieu-3-cong-khai-dt để hỗ trợ công việc: Tổng hợp số liệu 3 công khai mảng đào tạo; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Tổng hợp số liệu 3 công khai mảng đào tạo
+  short_description: Hỗ trợ tổng hợp số liệu 3 công khai mảng đào tạo
+  default_prompt: 'Hãy dùng $so-lieu-3-cong-khai-dt để hỗ trợ công việc: Tổng hợp số liệu 3 công khai mảng đào tạo; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .xlsx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

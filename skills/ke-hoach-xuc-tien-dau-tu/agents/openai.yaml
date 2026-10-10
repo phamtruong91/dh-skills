@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Kế hoạch xúc tiến đầu tư"
-  "short_description": "Hỗ trợ kế hoạch xúc tiến đầu tư"
-  "default_prompt": "Hãy dùng $ke-hoach-xuc-tien-dau-tu để hỗ trợ công việc: Kế hoạch xúc tiến đầu tư; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Kế hoạch xúc tiến đầu tư
+  short_description: Hỗ trợ kế hoạch xúc tiến đầu tư
+  default_prompt: 'Hãy dùng $ke-hoach-xuc-tien-dau-tu để hỗ trợ công việc: Kế hoạch xúc tiến đầu tư; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

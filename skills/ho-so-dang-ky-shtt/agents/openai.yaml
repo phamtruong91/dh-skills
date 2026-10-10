@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Hồ sơ đăng ký sáng chế / giải pháp hữu ích"
-  "short_description": "Hỗ trợ hồ sơ đăng ký sáng chế / giải pháp hữu ích"
-  "default_prompt": "Hãy dùng $ho-so-dang-ky-shtt để hỗ trợ công việc: Hồ sơ đăng ký sáng chế / giải pháp hữu ích; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Hồ sơ đăng ký sáng chế / giải pháp hữu ích
+  short_description: Hỗ trợ hồ sơ đăng ký sáng chế / giải pháp hữu ích
+  default_prompt: 'Hãy dùng $ho-so-dang-ky-shtt để hỗ trợ công việc: Hồ sơ đăng ký sáng chế / giải pháp hữu ích; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Hồ sơ dự án đầu tư hạ tầng"
-  "short_description": "Hỗ trợ hồ sơ dự án đầu tư hạ tầng"
-  "default_prompt": "Hãy dùng $ho-so-du-an-dau-tu-ha-tang để hỗ trợ công việc: Hồ sơ dự án đầu tư hạ tầng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Hồ sơ dự án đầu tư hạ tầng
+  short_description: Hỗ trợ hồ sơ dự án đầu tư hạ tầng
+  default_prompt: 'Hãy dùng $ho-so-du-an-dau-tu-ha-tang để hỗ trợ công việc: Hồ sơ dự án đầu tư hạ tầng; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Kế hoạch hoạt động trung tâm thực hành"
-  "short_description": "Hỗ trợ kế hoạch hoạt động trung tâm thực hành"
-  "default_prompt": "Hãy dùng $ke-hoach-hoat-dong-trung-tam-thuc-hanh để hỗ trợ công việc: Kế hoạch hoạt động trung tâm thực hành; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Kế hoạch hoạt động trung tâm thực hành
+  short_description: Hỗ trợ kế hoạch hoạt động trung tâm thực hành
+  default_prompt: 'Hãy dùng $ke-hoach-hoat-dong-trung-tam-thuc-hanh để hỗ trợ công việc: Kế hoạch hoạt động trung tâm thực hành; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Kế hoạch tổ chức sự kiện"
-  "short_description": "Hỗ trợ kế hoạch tổ chức sự kiện"
-  "default_prompt": "Hãy dùng $ke-hoach-to-chuc-su-kien để hỗ trợ công việc: Kế hoạch tổ chức sự kiện; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Kế hoạch tổ chức sự kiện
+  short_description: Hỗ trợ kế hoạch tổ chức sự kiện
+  default_prompt: 'Hãy dùng $ke-hoach-to-chuc-su-kien để hỗ trợ công việc: Kế hoạch tổ chức sự kiện; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

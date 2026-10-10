@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt)"
-  "short_description": "Hỗ trợ phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt)"
-  "default_prompt": "Hãy dùng $phan-tich-ket-qua-thi để hỗ trợ công việc: Phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt)
+  short_description: Hỗ trợ phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt)
+  default_prompt: 'Hãy dùng $phan-tich-ket-qua-thi để hỗ trợ công việc: Phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt); xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .xlsx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Cấu trúc bài báo khoa học"
-  "short_description": "Hỗ trợ cấu trúc bài báo khoa học"
-  "default_prompt": "Hãy dùng $cau-truc-bai-bao-khoa-hoc để hỗ trợ công việc: Cấu trúc bài báo khoa học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Cấu trúc bài báo khoa học
+  short_description: Hỗ trợ cấu trúc bài báo khoa học
+  default_prompt: 'Hãy dùng $cau-truc-bai-bao-khoa-hoc để hỗ trợ công việc: Cấu trúc bài báo khoa học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

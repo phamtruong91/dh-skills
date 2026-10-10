@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Quyết định cử cán bộ đi đào tạo / tập huấn"
-  "short_description": "Hỗ trợ quyết định cử cán bộ đi đào tạo / tập huấn"
-  "default_prompt": "Hãy dùng $quyet-dinh-cu-di-hoc để hỗ trợ công việc: Quyết định cử cán bộ đi đào tạo / tập huấn; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Quyết định cử cán bộ đi đào tạo / tập huấn
+  short_description: Hỗ trợ quyết định cử cán bộ đi đào tạo / tập huấn
+  default_prompt: 'Hãy dùng $quyet-dinh-cu-di-hoc để hỗ trợ công việc: Quyết định cử cán bộ đi đào tạo / tập huấn; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

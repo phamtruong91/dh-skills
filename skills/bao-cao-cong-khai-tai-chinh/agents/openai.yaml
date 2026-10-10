@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn báo cáo công khai tài chính"
-  "short_description": "Hỗ trợ soạn báo cáo công khai tài chính"
-  "default_prompt": "Hãy dùng $bao-cao-cong-khai-tai-chinh để hỗ trợ công việc: Soạn báo cáo công khai tài chính; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn báo cáo công khai tài chính
+  short_description: Hỗ trợ soạn báo cáo công khai tài chính
+  default_prompt: 'Hãy dùng $bao-cao-cong-khai-tai-chinh để hỗ trợ công việc: Soạn báo cáo công khai tài chính; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

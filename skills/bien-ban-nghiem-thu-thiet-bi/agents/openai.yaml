@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Lập biên bản nghiệm thu thiết bị"
-  "short_description": "Hỗ trợ lập biên bản nghiệm thu thiết bị"
-  "default_prompt": "Hãy dùng $bien-ban-nghiem-thu-thiet-bi để hỗ trợ công việc: Lập biên bản nghiệm thu thiết bị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Lập biên bản nghiệm thu thiết bị
+  short_description: Hỗ trợ lập biên bản nghiệm thu thiết bị
+  default_prompt: 'Hãy dùng $bien-ban-nghiem-thu-thiet-bi để hỗ trợ công việc: Lập biên bản nghiệm thu thiết bị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'
