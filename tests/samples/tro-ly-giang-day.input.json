@@ -1,0 +1,40 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử. Tên trường, người, số liệu đều là mẫu.",
+ "de_cuong_hoc_phan": {
+  "ten": "Quản trị dự án",
+  "chuan_dau_ra": [
+   "CĐR1: Nhận diện được rủi ro của dự án",
+   "CĐR2: Đánh giá được mức độ rủi ro bằng ma trận xác suất – tác động",
+   "CĐR3: Đề xuất được biện pháp ứng phó"
+  ]
+ },
+ "chu_de_buoi_hoc": "Quản trị rủi ro dự án",
+ "trinh_do_sinh_vien": "Năm thứ ba",
+ "thoi_luong": 90,
+ "hoat_dong_de_xuat": [
+  {
+   "ten": "Khởi động: tình huống dự án trễ hạn",
+   "phut": 10
+  },
+  {
+   "ten": "Giảng: nhận diện và phân loại rủi ro",
+   "phut": 25
+  },
+  {
+   "ten": "Thực hành: lập ma trận rủi ro theo nhóm",
+   "phut": 35
+  },
+  {
+   "ten": "Thảo luận và phản hồi",
+   "phut": 20
+  },
+  {
+   "ten": "Tổng kết và bài tập",
+   "phut": 10
+  }
+ ],
+ "ngoai_de_cuong": "Phân tích định lượng Monte Carlo",
+ "hoc_lieu": [
+  "Giáo trình học phần (chương rủi ro)"
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử. Tên trường, người, số liệu đều là mẫu.",
+ "van_de": "Có nên nâng cấp hệ thống wifi giảng đường trong năm học này không, và theo phương án nào?",
+ "thoi_han_quyet_dinh": null,
+ "tieu_chi_quyet_dinh": [
+  "Chi phí",
+  "Thời gian triển khai",
+  "Rủi ro",
+  "Phù hợp chiến lược"
+ ],
+ "nguon_tai_lieu": [
+  "Báo cáo khảo sát sinh viên học kỳ 1 năm học 2026–2027",
+  "Báo giá NCC-01 (mẫu)"
+ ],
+ "so_lieu": {
+  "diem_wifi": "2,77",
+  "ty_le_y_kien_wifi": "33,3%",
+  "so_y_kien": "120/360",
+  "chi_phi_a": "1.200 triệu đồng"
+ },
+ "phuong_an": [
+  {
+   "ten": "A. Nâng cấp toàn bộ một lần",
+   "chi_phi": {
+    "gia_tri": "1.200 triệu",
+    "nguon": "NCC-01"
+   },
+   "thoi_gian": {
+    "gia_tri": "4 tháng",
+    "nguon": "NCC-01"
+   },
+   "rui_ro": {
+    "gia_tri": "Gián đoạn lịch học",
+    "nguon": "P. Đào tạo"
+   },
+   "chien_luoc": {
+    "gia_tri": "Phù hợp kế hoạch CĐS",
+    "nguon": "KH chuyển đổi số"
+   }
+  },
+  {
+   "ten": "B. Nâng cấp theo hai giai đoạn",
+   "chi_phi": {
+    "gia_tri": "700 triệu (giai đoạn 1)",
+    "nguon": "NCC-01"
+   },
+   "thoi_gian": {
+    "gia_tri": "2 tháng + 3 tháng",
+    "nguon": "NCC-01"
+   },
+   "rui_ro": {
+    "gia_tri": "Giai đoạn 2 chưa có vốn",
+    "nguon": "P. Tài chính"
+   },
+   "chien_luoc": {
+    "gia_tri": null,
+    "nguon": null
+   }
+  },
+  {
+   "ten": "C. Thuê dịch vụ trọn gói",
+   "chi_phi": {
+    "gia_tri": null,
+    "nguon": null
+   },
+   "thoi_gian": {
+    "gia_tri": "Chưa có báo giá",
+    "nguon": null
+   },
+   "rui_ro": {
+    "gia_tri": "Phụ thuộc nhà cung cấp",
+    "nguon": "P. Quản trị"
+   },
+   "chien_luoc": {
+    "gia_tri": null,
+    "nguon": null
+   }
+  }
+ ]
+}

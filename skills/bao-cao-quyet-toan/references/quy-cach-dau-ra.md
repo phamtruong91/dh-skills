@@ -64,3 +64,15 @@ Cấu trúc này là hướng dẫn nội dung; nếu có mẫu chuyên ngành �
 - Dòng tiêu đề đậm, nền nhạt, cố định (freeze) khi bảng dài; bề rộng cột vừa chữ; số tiền có dấu phân cách hàng nghìn; ngày theo dd/mm/yyyy; giữ công thức, không dán giá trị thay công thức.
 - Đặt vùng in và lặp dòng tiêu đề khi in; dữ liệu khác bản chất để ở sheet riêng; ô thiếu dữ liệu để trống, không ghi 0.
 - Mở file kiểm tra công thức đã tính, không có lỗi `#`, định dạng hiển thị đúng trước khi giao.
+
+## Xuất PowerPoint (.pptx) khi được yêu cầu
+
+- **Bộ slide là tài liệu trình bày, không thay văn bản gốc.** Không dùng quốc hiệu, nơi nhận, khối chữ ký của văn bản hành chính trên slide. Công văn, quyết định, báo cáo chính thức vẫn giao bằng .docx; nói rõ điều này trong phản hồi.
+- **Xác định cách dùng**: trình chiếu trực tiếp (ít chữ, mỗi slide một ý, khoảng 1,5–2 phút mỗi slide, số slide không vượt số phút của bài nói) hay đọc trước (được nhiều chữ hơn, nhưng vẫn một ý mỗi slide). Chưa biết thì ghi giả định đã dùng.
+- **Cấu trúc**: slide mở đầu, kết luận hoặc tóm tắt đặt trước, các phần nội dung, tồn tại hoặc điểm cần quyết, bước tiếp theo. Tiêu đề mỗi slide nêu kết luận (không quá 16 chữ, không dấu chấm cuối) và là ô tiêu đề thật của slide để có dàn ý và đọc được bằng trình đọc màn hình.
+- **Cỡ chữ**: tiêu đề từ 28 pt, nội dung và chữ trong bảng từ 14 pt, nguồn và chú thích từ 11 pt. Không thu nhỏ chữ để nhét thêm; quá dày thì tách slide. Khi trình chiếu trực tiếp, mỗi slide không quá khoảng 85 chữ.
+- **Số liệu và biểu đồ**: dùng biểu đồ gốc của PowerPoint (sửa được), không dán ảnh; áp dụng quy tắc biểu đồ trong quy cách này nếu có. Mỗi biểu đồ và mỗi số nổi bật có dòng “Nguồn”. Thiếu số liệu thì ghi “Chưa có số liệu”, không vẽ cột 0.
+- **Dữ liệu lệch hoặc thiếu**: số liệu lệch nhau, mục tiêu không đo được, đơn vị chưa nộp báo cáo, thiếu định hướng của lãnh đạo: nói thẳng trên slide (ô “Cần rà lại”, “Chưa có số liệu”) và trong ghi chú. Không điền cho đẹp, không bịa chỉ tiêu, nguồn, tên sách.
+- **Ghi chú người trình bày** trên mọi slide (từ 15 chữ): lời nói chính, nguồn, điểm cần thận trọng. Không đặt ghi chú vào ô chữ trên slide.
+- **Trình bày**: một bảng màu, bố cục và vị trí tiêu đề nhất quán, lề từ 0,5 inch, chữ không đè nhau, không có slide toàn chữ khi có thể dùng số liệu hoặc hình. Các nhãn trục, cột, ô trong sơ đồ phải đủ để đọc mà không cần lời nói.
+- **Trước khi giao**: chạy công cụ kiểm tra cấu trúc của kỹ năng pptx, xuất ảnh từng slide và xem: chữ không tràn khung, không đè nhau, số khớp nguồn. Kiểm tra tự động không thay việc xem ảnh.

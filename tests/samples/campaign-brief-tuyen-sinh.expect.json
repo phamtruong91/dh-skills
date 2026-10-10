@@ -1,0 +1,74 @@
+{
+ "skill": "campaign-brief-tuyen-sinh",
+ "output": "campaign-brief-tuyen-sinh.pptx",
+ "kind": "pptx",
+ "must_contain": [
+  "Mục tiêu: 1.500 hồ sơ",
+  "Chưa đo được",
+  "Cần rà lại",
+  "Chưa có KPI",
+  "Mốc: ........"
+ ],
+ "must_not_contain": [
+  "tăng 20%",
+  "tăng 30%"
+ ],
+ "allowed_derived": [
+  "520"
+ ],
+ "deck": {
+  "min_slides": 6,
+  "max_slides": 10,
+  "talk_minutes": 15,
+  "charts": [
+   {
+    "slide": 5,
+    "type": "bar",
+    "series": {
+     "Ngân sách": [
+      200,
+      150,
+      90,
+      80
+     ]
+    }
+   }
+  ],
+  "tables": [
+   {
+    "slide": 7,
+    "rows": 6,
+    "cols": 2,
+    "blank_text": "Chưa có KPI",
+    "blank_cells": 1
+   }
+  ],
+  "min_title_pt": 28,
+  "min_body_pt": 14,
+  "min_caption_pt": 11,
+  "max_words_per_slide": 85,
+  "notes_required": true
+ },
+ "traps": [
+  {
+   "id": "NGAN_SACH_LECH",
+   "mo_ta": "Cộng kênh 520, khai tổng 500"
+  },
+  {
+   "id": "MUC_TIEU_KHONG_DO_DUOC",
+   "mo_ta": "Nhận diện thương hiệu không có số: không viết thành mục tiêu SMART"
+  },
+  {
+   "id": "THONG_DIEP_THIEU_BANG_CHUNG",
+   "mo_ta": "Thông điệp chính không có số liệu: không bịa"
+  },
+  {
+   "id": "KPI_THIEU",
+   "mo_ta": "Zalo OA không có KPI: để trống"
+  },
+  {
+   "id": "TIMELINE_THIEU_MOC",
+   "mo_ta": "Không có mốc pha: dòng chấm"
+  }
+ ]
+}

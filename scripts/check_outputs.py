@@ -422,6 +422,161 @@ def layout_errors(path, expect, text, log):
     return errs
 
 
+def pptx_text(path):
+    """Văn bản trên slide (kể cả bảng) và ghi chú người trình bày."""
+    from pptx import Presentation
+    prs = Presentation(path)
+    out = []
+    for sl in prs.slides:
+        for sh in sl.shapes:
+            if sh.has_text_frame:
+                out.extend(p.text for p in sh.text_frame.paragraphs)
+            if getattr(sh, "has_table", False) and sh.has_table:
+                for r in sh.table.rows:
+                    for c in r.cells:
+                        out.append(c.text)
+        if sl.has_notes_slide:
+            out.append(sl.notes_slide.notes_text_frame.text)
+    return "\n".join(x for x in out if x.strip())
+
+
+def _run_sizes(tf):
+    for p in tf.paragraphs:
+        for r in p.runs:
+            yield p, r, (r.font.size.pt if r.font.size else None)
+
+
+def _title_shape(sl):
+    """Tiêu đề slide: placeholder kiểu title/ctrTitle (python-pptx .shapes.title chỉ nhận idx 0 nên không dùng)."""
+    from pptx.enum.shapes import PP_PLACEHOLDER
+    for sh in sl.shapes:
+        if sh.is_placeholder and sh.placeholder_format.type in (PP_PLACEHOLDER.TITLE, PP_PLACEHOLDER.CENTER_TITLE):
+            return sh
+    return None
+
+
+def deck_errors(path, expect, log):
+    """Bộ slide: số slide, tiêu đề, cỡ chữ, số chữ mỗi slide, ghi chú người trình bày, trong khung và không đè nhau,
+    chữ không tràn khung (ước lượng), bảng, biểu đồ gốc khớp số liệu."""
+    import math
+
+    from pptx import Presentation
+    from pptx.util import Emu
+    dk = expect.get("deck", {})
+    prs = Presentation(path)
+    W, H = prs.slide_width, prs.slide_height
+    errs = []
+    n = len(prs.slides)
+    if not dk.get("min_slides", 1) <= n <= dk.get("max_slides", 999):
+        errs.append(f"có {n} slide, kỳ vọng {dk.get('min_slides')}–{dk.get('max_slides')}")
+    if dk.get("talk_minutes") and n * 1.0 > dk["talk_minutes"]:
+        errs.append(f"{n} slide cho bài nói {dk['talk_minutes']} phút: chưa tới 1 phút mỗi slide")
+    titles = []
+    for i, sl in enumerate(prs.slides, 1):
+        t = _title_shape(sl)
+        ttxt = t.text_frame.text.strip() if t is not None and t.has_text_frame else ""
+        if not ttxt:
+            errs.append(f"slide {i}: không có tiêu đề (placeholder tiêu đề)")
+        else:
+            if ttxt.endswith("."):
+                errs.append(f"slide {i}: tiêu đề kết thúc bằng dấu chấm")
+            if len(ttxt.split()) > 16:
+                errs.append(f"slide {i}: tiêu đề dài {len(ttxt.split())} chữ")
+            titles.append(ttxt)
+        notes = sl.notes_slide.notes_text_frame.text if sl.has_notes_slide else ""
+        if dk.get("notes_required") and len(notes.split()) < 15:
+            errs.append(f"slide {i}: ghi chú người trình bày thiếu hoặc dưới 15 chữ")
+        words, boxes = 0, []
+        for sh in sl.shapes:
+            if sh.left is None:
+                continue
+            if sh.left < Emu(int(0.45 * 914400)) - 1 or sh.top < 0 or sh.left + sh.width > W - Emu(int(0.45 * 914400)) + 1 or sh.top + sh.height > H - Emu(int(0.1 * 914400)):
+                if sh.name not in ("Rectangle 1",) and not (t is not None and sh.shape_id == t.shape_id and False):
+                    if sh.left + sh.width > W or sh.top + sh.height > H or sh.left < 0 or sh.top < 0:
+                        errs.append(f"slide {i}: '{sh.name}' vượt ra ngoài khung slide")
+                    elif sh.has_text_frame and sh.text_frame.text.strip() and i > 1 and sh.left < Emu(int(0.45 * 914400)):
+                        errs.append(f"slide {i}: '{sh.name}' sát mép trái dưới 0,45 inch")
+            is_title = t is not None and sh.shape_id == t.shape_id
+            is_src = sh.name.startswith("nguon")
+            if getattr(sh, "has_table", False) and sh.has_table:
+                tb = sh.table
+                spec = next((x for x in dk.get("tables", []) if x["slide"] == i), None)
+                if spec:
+                    if len(tb.rows) != spec["rows"] or len(tb.columns) != spec["cols"]:
+                        errs.append(f"slide {i}: bảng {len(tb.rows)}×{len(tb.columns)}, kỳ vọng {spec['rows']}×{spec['cols']}")
+                    blanks = sum(1 for r in tb.rows for c in r.cells if spec["blank_text"] in c.text)
+                    if blanks != spec["blank_cells"]:
+                        errs.append(f"slide {i}: có {blanks} ô '{spec['blank_text']}', kỳ vọng {spec['blank_cells']}")
+                for r in tb.rows:
+                    for c in r.cells:
+                        words += len(c.text.split())
+                        for _, run, sz in _run_sizes(c.text_frame):
+                            if sz is None or sz < dk.get("min_body_pt", 14):
+                                errs.append(f"slide {i}: chữ trong bảng cỡ {sz} pt, dưới {dk.get('min_body_pt', 14)} pt")
+                                break
+                if sh.top + sh.height > H - Emu(int(0.35 * 914400)):
+                    errs.append(f"slide {i}: bảng chạm sát đáy slide")
+                boxes.append((sh.name, sh.left, sh.top, sh.width, sh.height))
+                continue
+            if sh.has_text_frame and sh.text_frame.text.strip():
+                if not is_title and not is_src:
+                    words += len(sh.text_frame.text.split())
+                mn = dk.get("min_title_pt", 28) if is_title else (dk.get("min_caption_pt", 11) if is_src else dk.get("min_body_pt", 14))
+                est_h, bodypr = 0.0, sh.text_frame._txBody.find("{http://schemas.openxmlformats.org/drawingml/2006/main}bodyPr")
+                lI = int(bodypr.get("lIns", 91440)) if bodypr is not None else 91440
+                rI = int(bodypr.get("rIns", 91440)) if bodypr is not None else 91440
+                tI = int(bodypr.get("tIns", 45720)) if bodypr is not None else 45720
+                bI = int(bodypr.get("bIns", 45720)) if bodypr is not None else 45720
+                inner_w = (sh.width - lI - rI) / 12700
+                size_seen = None
+                for p in sh.text_frame.paragraphs:
+                    txt = "".join(r.text for r in p.runs)
+                    if not txt:
+                        continue
+                    sz = next((r.font.size.pt for r in p.runs if r.font.size), None)
+                    if sz is None and is_title:
+                        sz = dk.get("min_title_pt", 28)  # cỡ lấy từ bố cục, không đọc được trực tiếp: dùng mốc tối thiểu
+                    if sz is None:
+                        errs.append(f"slide {i}: '{sh.name}' không đặt cỡ chữ")
+                        continue
+                    size_seen = sz
+                    if sz < mn:
+                        errs.append(f"slide {i}: '{sh.name}' chữ {sz:g} pt, dưới {mn} pt")
+                    cw = 0.55 * sz * (1.08 if is_title else 1.0)
+                    lines = max(1, math.ceil(len(txt) * cw / max(inner_w, 1)))
+                    est_h += lines * sz * 1.2 + (8 if "bullet" in p._p.xml or "buChar" in p._p.xml else 0)
+                if size_seen and est_h > ((sh.height - tI - bI) / 12700) * 1.08:
+                    errs.append(f"slide {i}: '{sh.name}' có thể tràn khung (cần ~{est_h:.0f} pt, khung {(sh.height - tI - bI) / 12700:.0f} pt)")
+                boxes.append((sh.name, sh.left, sh.top, sh.width, sh.height))
+        if words > dk.get("max_words_per_slide", 999):
+            errs.append(f"slide {i}: {words} chữ, quá dày (tối đa {dk['max_words_per_slide']})")
+        for a in range(len(boxes)):
+            for b in range(a + 1, len(boxes)):
+                A, B = boxes[a], boxes[b]
+                ox = min(A[1] + A[3], B[1] + B[3]) - max(A[1], B[1])
+                oy = min(A[2] + A[4], B[2] + B[4]) - max(A[2], B[2])
+                if ox > 0 and oy > 0 and ox * oy > 0.1 * min(A[3] * A[4], B[3] * B[4]):
+                    errs.append(f"slide {i}: '{A[0]}' và '{B[0]}' chồng lên nhau")
+    if len(set(titles)) != len(titles):
+        errs.append("có hai slide trùng tiêu đề")
+    for spec in dk.get("charts", []):
+        sl = prs.slides[spec["slide"] - 1]
+        ch = next((sh.chart for sh in sl.shapes if getattr(sh, "has_chart", False) and sh.has_chart), None)
+        if ch is None:
+            errs.append(f"slide {spec['slide']}: không có biểu đồ gốc (có thể là ảnh chụp)")
+            continue
+        got = {s.name: [float(v) for v in s.values] for s in ch.plots[0].series}
+        for name, vals in spec["series"].items():
+            if name not in got:
+                errs.append(f"slide {spec['slide']}: biểu đồ thiếu chuỗi {name!r}")
+            elif [round(x, 4) for x in got[name]] != [float(v) for v in vals]:
+                errs.append(f"slide {spec['slide']}: chuỗi {name!r} trong biểu đồ là {got[name]}, kỳ vọng {vals}")
+        if len(list(ch.plots[0].categories)) != len(next(iter(spec["series"].values()))):
+            errs.append(f"slide {spec['slide']}: số nhãn trục khác số giá trị")
+    log.append(f"  {n} slide")
+    return errs
+
+
 def check_one(expect, samples, outputs, results, log):
     errs = []
     name = expect["skill"]
@@ -441,11 +596,17 @@ def check_one(expect, samples, outputs, results, log):
     try:
         if expect["kind"] == "docx":
             docx_text(path)
+        elif expect["kind"] == "pptx":
+            pptx_text(path)
         else:
             xlsx_load(path)
     except Exception as e:  # file hỏng: báo lỗi, không làm sập bộ kiểm tra
         return [f"không mở được bằng thư viện ({type(e).__name__})"]
-    if expect["kind"] == "docx":
+    if expect["kind"] == "pptx":
+        text = pptx_text(path)
+        nums = []
+        errs.extend(deck_errors(path, expect, log))
+    elif expect["kind"] == "docx":
         text = docx_text(path)
         nums = []
         if expect.get("nd30_format"):

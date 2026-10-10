@@ -1,0 +1,42 @@
+{
+ "skill": "tro-ly-giang-day",
+ "output": "tro-ly-giang-day.pptx",
+ "kind": "pptx",
+ "must_contain": [
+  "Cuối buổi, bạn làm được ba việc",
+  "Tổng các hoạt động: 100 phút",
+  "thời lượng buổi học: 90 phút",
+  "Ma trận rủi ro"
+ ],
+ "must_not_contain": [
+  "Monte Carlo",
+  "Giáo trình Quản trị dự án của"
+ ],
+ "allowed_derived": [
+  "100"
+ ],
+ "deck": {
+  "min_slides": 6,
+  "max_slides": 10,
+  "talk_minutes": 90,
+  "min_title_pt": 28,
+  "min_body_pt": 14,
+  "min_caption_pt": 11,
+  "max_words_per_slide": 85,
+  "notes_required": true
+ },
+ "traps": [
+  {
+   "id": "TONG_PHUT_VUOT",
+   "mo_ta": "Hoạt động cộng 100 phút, buổi học 90"
+  },
+  {
+   "id": "NGOAI_DE_CUONG",
+   "mo_ta": "Monte Carlo không thuộc đề cương: không đưa vào"
+  },
+  {
+   "id": "HOC_LIEU_KHONG_BIA",
+   "mo_ta": "Chỉ ghi học liệu đầu vào cho, không bịa tác giả"
+  }
+ ]
+}
