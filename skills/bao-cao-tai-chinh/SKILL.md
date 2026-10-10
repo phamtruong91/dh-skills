@@ -34,7 +34,9 @@ Báo cáo lưu chuyển tiền tệ và Thuyết minh báo cáo tài chính.
 | `so_dau_nam` | Số dư đầu năm để lập cột so sánh (Bảng cân đối kế toán) | Có |
 | `che_do` | Chế độ kế toán áp dụng (mặc định: văn bản hiện hành nêu tại phap-ly.md) | Không |
 | `don_vi_tinh` | Đơn vị tính (mặc định: triệu đồng) | Không |
-| `nguoi_lap` / `ke_toan_truong` / `nguoi_ky` | Người lập, Kế toán trưởng, Thủ trưởng đơn vị ký báo cáo | Có |
+| `nguoi_lap` | Người lập báo cáo | Có |
+| `ke_toan_truong` | Kế toán trưởng | Có |
+| `nguoi_ky` | Thủ trưởng đơn vị ký báo cáo | Có |
 
 ## Quy trình
 **Ràng buộc pháp lý khi thực hiện** (trích references/phap-ly.md; đối chiếu toàn văn và hiệu lực tại ngày nghiệp vụ):
@@ -99,7 +101,7 @@ Báo cáo lưu chuyển tiền tệ và Thuyết minh báo cáo tài chính.
   chữ ký theo thứ tự: người lập → kế toán trưởng → thủ trưởng đơn vị
   (`nguoi_lap` / `ke_toan_truong` / `nguoi_ky`); lưu hồ sơ theo quy định và nộp cho cơ quan
   chủ quản, cơ quan tài chính đúng thời hạn.
-- Dùng input: `nguoi_lap` / `ke_toan_truong` / `nguoi_ky`, kết quả Bước 2 – 5.
+- Dùng input: `nguoi_lap`, `ke_toan_truong`, `nguoi_ky`, kết quả Bước 2 – 5.
 - Vai trò: Chuyên viên Phòng TCKT (đối chiếu, hoàn thiện); Kế toán trưởng và Thủ trưởng đơn vị ký duyệt · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch, lưu trữ hồ sơ · ⏱ ~1–3 giờ (ước tính)
 - Lưu ý nghiệp vụ: thiếu một trong ba chữ ký thì bộ báo cáo chưa có giá trị pháp lý để nộp.
 - → Kết quả bước: bộ báo cáo tài chính hoàn chỉnh, đã ký duyệt.

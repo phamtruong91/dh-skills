@@ -1,6 +1,6 @@
 ---
 name: "bien-ban-bao-ve-luan-van"
-description: "Lập biên bản buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ: ghi nhận thành phần hội đồng, diễn biến buổi bảo vệ, tổng hợp phiếu đánh giá và điểm, kết luận đạt/không đạt cùng yêu cầu chỉnh sửa. Dùng ngay sau khi kết thúc buổi bảo vệ để làm căn cứ ra quyết định công nhận tốt nghiệp."
+description: "Lập biên bản buổi bảo vệ luận văn thạc sĩ / luận án tiến sĩ: ghi nhận thành phần hội đồng, diễn biến buổi bảo vệ, tổng hợp phiếu đánh giá và điểm, kết luận đạt/không đạt cùng yêu cầu chỉnh sửa. Dùng ngay sau khi kết thúc buổi bảo vệ để làm căn cứ ra quyết định công nhận tốt nghiệp. Dùng khi ngay sau buổi bảo vệ luận văn thạc sĩ hoặc luận án tiến sĩ."
 ---
 
 # Biên bản bảo vệ luận văn / luận án

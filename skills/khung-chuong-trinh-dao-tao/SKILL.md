@@ -50,7 +50,7 @@ kiến thức, tổng số tín chỉ và danh mục học phần.
   thể từ `muc_tieu_dao_tao`; đối chiếu từng mục tiêu với sứ mệnh, tầm nhìn của trường và nhu
   cầu xã hội đã xác định; đảm bảo mục tiêu cụ thể có thể đo lường được qua chuẩn đầu ra ở
   Bước 2.
-- Dùng input: `ten_nganh`, `muc_tieu_dao_tao`, `don_vi_xay_dung`.
+- Dùng input: `ten_nganh`, `ma_nganh` (nếu có), `trinh_do`, `muc_tieu_dao_tao`, `don_vi_xay_dung`.
 - Vai trò: Chuyên viên đơn vị xây dựng CTĐT (khoa/bộ môn) · AI hỗ trợ: soạn dự thảo mục tiêu, kiểm tra tính đo lường được · ⏱ ~45 phút (ước tính)
 - Lưu ý nghiệp vụ: bẫy thường gặp là mục tiêu chung chung kiểu "đào tạo nguồn nhân lực chất
   lượng cao" mà không nói rõ "chất lượng cao" là gì; mỗi mục tiêu cụ thể phải ánh xạ được
@@ -74,7 +74,7 @@ kiến thức, tổng số tín chỉ và danh mục học phần.
   cương; kiến thức cơ sở ngành; kiến thức chuyên ngành; thực tập; khóa luận/đồ án tốt nghiệp;
   tính tỷ lệ % từng khối; kiểm tra tổng các khối bằng đúng `tong_tin_chi` và tỷ lệ các khối
   hợp lý theo quy định (khối chuyên ngành phải chiếm tỷ trọng lớn nhất).
-- Dùng input: `tong_tin_chi`, `khoi_kien_thuc`.
+- Dùng input: `tong_tin_chi`, `khoi_kien_thuc`, `thoi_gian_dao_tao` (số học kỳ để phân bổ tín chỉ; thiếu thì dùng mặc định ghi ở bảng đầu vào).
 - Vai trò: Chuyên viên đơn vị xây dựng CTĐT (khoa/bộ môn) · AI hỗ trợ: tính phân bổ tín chỉ theo khối, kiểm tra tổng khớp · ⏱ ~45 phút (ước tính)
 - Lưu ý nghiệp vụ: bẫy số học — tổng tín chỉ các khối không khớp tổng công bố là lỗi phổ biến
   nhất; kiểm tra quy định tối thiểu/tối đa của từng khối theo chuẩn chương trình đào tạo.

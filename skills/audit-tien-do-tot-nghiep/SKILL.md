@@ -1,6 +1,6 @@
 ---
 name: "audit-tien-do-tot-nghiep"
-description: "Audit tiến độ tốt nghiệp cho sinh viên bằng cách đối chiếu bảng điểm với chương trình đào tạo: validate dữ liệu, áp quy tắc tương đương học phần, liệt kê học phần còn thiếu và giải thích. Dùng chung cho Phòng Đào tạo, các khoa, cố vấn học tập."
+description: "Audit tiến độ tốt nghiệp cho sinh viên bằng cách đối chiếu bảng điểm với chương trình đào tạo: validate dữ liệu, áp quy tắc tương đương học phần, liệt kê học phần còn thiếu và giải thích. Dùng chung cho Phòng Đào tạo, các khoa, cố vấn học tập. Dùng khi cuối học kỳ hoặc trước đợt xét tốt nghiệp, cần rà nhanh sinh viên đã đủ điều kiện tốt nghiệp chưa."
 ---
 
 # Audit tiến độ tốt nghiệp

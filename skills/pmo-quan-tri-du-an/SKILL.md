@@ -66,7 +66,7 @@ việc, ghi nhận vấn đề/rủi ro, rút bài học kinh nghiệm, tổng h
 - Làm gì: Đánh dấu trạng thái mỗi gói việc theo 4 mức: Đúng tiến độ / Chậm / Có nguy cơ
   chậm / Hoàn thành. Với gói "Chậm" hoặc "Có nguy cơ chậm": ghi nguyên nhân và mức chênh
   lệch so với baseline. Phân loại theo `nguong_trang_thai`; gói việc chưa có minh chứng thì không nhận % thực tế và để trống trạng thái.
-- Dùng input: `workplan`, `ky_bao_cao`.
+- Dùng input: `workplan`, `ky_bao_cao`, `nguong_trang_thai` (nếu có).
 - Vai trò: Chủ nhiệm dự án · AI hỗ trợ: tính chênh lệch và gợi ý phân loại trạng thái · ⏱ 30–60 phút (ước tính)
 - Lưu ý nghiệp vụ: trạng thái dựa trên số liệu bước 2, không "làm đẹp" số liệu; trạng
   thái do chủ nhiệm dự án xác nhận trước khi đưa vào báo cáo.

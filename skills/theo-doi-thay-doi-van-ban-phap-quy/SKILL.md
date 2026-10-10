@@ -1,6 +1,6 @@
 ---
 name: "theo-doi-thay-doi-van-ban-phap-quy"
-description: "Theo dõi thay đổi văn bản pháp quy: so sánh điều khoản cũ/mới, đánh dấu giữ nguyên–sửa đổi–bãi bỏ–bổ sung, lập ma trận nghĩa vụ thay đổi và checklist cập nhật nội bộ. Dùng chung cho mọi đơn vị."
+description: "Theo dõi thay đổi văn bản pháp quy: so sánh điều khoản cũ/mới, đánh dấu giữ nguyên–sửa đổi–bãi bỏ–bổ sung, lập ma trận nghĩa vụ thay đổi và checklist cập nhật nội bộ. Dùng chung cho mọi đơn vị. Dùng khi có văn bản pháp quy mới thay thế hoặc sửa đổi văn bản đang áp dụng và cần đánh giá tác động."
 ---
 
 # Theo dõi thay đổi văn bản pháp quy

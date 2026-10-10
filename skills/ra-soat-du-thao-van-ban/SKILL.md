@@ -1,6 +1,6 @@
 ---
 name: "ra-soat-du-thao-van-ban"
-description: "Rà soát dự thảo văn bản hành chính trước khi trình ký: kiểm tra thể thức theo Nghị định 30/2020/NĐ-CP, logic nội dung, thuật ngữ, số liệu → bảng lỗi chi tiết + bản sạch đã hiệu đính. Dùng chung cho mọi loại văn bản, mọi phòng ban/khoa trong trường."
+description: "Rà soát dự thảo văn bản hành chính trước khi trình ký: kiểm tra thể thức theo Nghị định 30/2020/NĐ-CP, logic nội dung, thuật ngữ, số liệu → bảng lỗi chi tiết + bản sạch đã hiệu đính. Dùng chung cho mọi loại văn bản, mọi phòng ban/khoa trong trường. Dùng khi trước khi trình lãnh đạo ký bất kỳ văn bản nào."
 ---
 
 # Rà soát dự thảo văn bản
@@ -47,7 +47,7 @@ Bước 5 (lỗi chính tả rõ ràng), rồi sang Bước 6–7 rút gọn. M�
   tên cơ quan ban hành; số, ký hiệu; địa danh, ngày tháng năm; tên loại và trích yếu; kính gửi (nếu có);
   nội dung; thẩm quyền ký; nơi nhận; chữ ký (chức danh + họ tên); dấu chỉ mức độ khẩn, mật (nếu có).
   Đánh dấu từng thành phần: đủ / thiếu / sai vị trí.
-- Dùng input: `du_thao`, `loai_van_ban`.
+- Dùng input: `du_thao`, `loai_van_ban`, `muc_do` (nhanh: chỉ Bước 1 và Bước 5; kỹ: đủ Bước 1–5; thiếu thì mặc định kỹ).
 - Vai trò: Chuyên viên soạn thảo (đơn vị soạn thảo văn bản) · AI hỗ trợ: đối chiếu tự động theo danh mục thành phần NĐ 30/2020, đánh dấu đủ/thiếu/sai vị trí · ⏱ ~10–20 phút (ước tính)
 - Lưu ý nghiệp vụ: mỗi loại văn bản có bộ thành phần riêng (VD: quyết định không có kính gửi, công văn
   bắt buộc có kính gửi và nơi nhận) — không áp rập khuôn một mẫu cho mọi loại; kiểm tra chính tả tên

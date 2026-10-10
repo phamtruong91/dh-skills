@@ -1,6 +1,6 @@
 ---
 name: "ke-hoach-to-chuc-su-kien"
-description: "Kế hoạch tổ chức sự kiện trong trường đại học: timeline ngược, checklist theo giai đoạn, phân công RACI, kịch bản run-of-show chi tiết, dự toán và mẫu báo cáo sau sự kiện. Dùng chung cho mọi đơn vị."
+description: "Kế hoạch tổ chức sự kiện trong trường đại học: timeline ngược, checklist theo giai đoạn, phân công RACI, kịch bản run-of-show chi tiết, dự toán và mẫu báo cáo sau sự kiện. Dùng chung cho mọi đơn vị. Dùng khi tổ chức hội nghị, hội thảo, lễ khai giảng/bế giảng, ngày hội việc làm, lễ kỷ niệm."
 ---
 
 # Kế hoạch tổ chức sự kiện

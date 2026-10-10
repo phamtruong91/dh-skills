@@ -1,6 +1,6 @@
 ---
 name: "bao-cao-tien-do-de-tai"
-description: "Soạn báo cáo tiến độ đề tài NCKH định kỳ 6 tháng hoặc hằng năm: nội dung đã thực hiện, kinh phí đã sử dụng, khó khăn vướng mắc, kế hoạch kỳ tiếp theo. Dùng giữa kỳ thực hiện đề tài để báo cáo Phòng KHCN hoặc cơ quan quản lý cấp trên."
+description: "Soạn báo cáo tiến độ đề tài NCKH định kỳ 6 tháng hoặc hằng năm: nội dung đã thực hiện, kinh phí đã sử dụng, khó khăn vướng mắc, kế hoạch kỳ tiếp theo. Dùng giữa kỳ thực hiện đề tài để báo cáo Phòng KHCN hoặc cơ quan quản lý cấp trên. Dùng khi đề tài đang thực hiện và đến kỳ báo cáo tiến độ định kỳ."
 ---
 
 # Báo cáo tiến độ đề tài NCKH (6 tháng / năm)

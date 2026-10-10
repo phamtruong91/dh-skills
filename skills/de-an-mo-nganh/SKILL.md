@@ -117,7 +117,7 @@ giảng viên, cơ sở vật chất, chương trình đào tạo dự kiến v�
   trưởng gửi Bộ GD&ĐT – đề án (các phần I–VI) – phụ lục minh chứng; kiểm tra tính nhất quán
   số liệu giữa các phần (số giảng viên, số tín chỉ, chỉ tiêu phải khớp nhau mọi nơi); lấy ý
   kiến khoa và Hội đồng khoa học – đào tạo; trình Hiệu trưởng ký gửi Bộ GD&ĐT.
-- Dùng input: `minh_chung`, `don_vi_chu_tri`, toàn bộ kết quả các bước trên.
+- Dùng input: `minh_chung`, `don_vi_chu_tri`, `ma_nganh` (ghi mã ngành nếu đã xác định, chưa có thì để dòng dấu chấm), toàn bộ kết quả các bước trên.
 - Vai trò: Hội đồng KH–ĐT góp ý; Hiệu trưởng ký tờ trình; chuyên viên đơn vị chủ trì ráp hồ sơ · AI hỗ trợ: ráp hồ sơ, kiểm tra nhất quán số liệu giữa các phần · ⏱ ~1 giờ (ước tính)
 - Lưu ý nghiệp vụ: số liệu trong đề án phải nhất quán tuyệt đối giữa các phần và khớp với
   minh chứng — sai lệch một con số là lý do phổ biến khiến hồ sơ bị yêu cầu bổ sung; kiểm

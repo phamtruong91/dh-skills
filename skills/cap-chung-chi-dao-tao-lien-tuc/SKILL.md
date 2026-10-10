@@ -1,6 +1,6 @@
 ---
 name: "cap-chung-chi-dao-tao-lien-tuc"
-description: "Xét điều kiện hoàn thành khóa học, lập quyết định cấp chứng chỉ đào tạo liên tục / bồi dưỡng ngắn hạn và quản lý sổ cấp chứng chỉ. Dùng cuối mỗi khóa học."
+description: "Xét điều kiện hoàn thành khóa học, lập quyết định cấp chứng chỉ đào tạo liên tục / bồi dưỡng ngắn hạn và quản lý sổ cấp chứng chỉ. Dùng cuối mỗi khóa học. Dùng khi khóa bồi dưỡng ngắn hạn kết thúc và cần cấp chứng chỉ."
 ---
 
 # Cấp chứng chỉ đào tạo liên tục

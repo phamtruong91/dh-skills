@@ -1,6 +1,6 @@
 ---
 name: "hop-dong-thuc-hien-de-tai"
-description: "Soạn hợp đồng thực hiện đề tài/nhiệm vụ khoa học công nghệ giữa bên giao (trường hoặc cơ quan quản lý) và bên nhận (chủ nhiệm đề tài). Dùng sau khi đề tài được phê duyệt, trước khi triển khai và cấp kinh phí."
+description: "Soạn hợp đồng thực hiện đề tài/nhiệm vụ khoa học công nghệ giữa bên giao (trường hoặc cơ quan quản lý) và bên nhận (chủ nhiệm đề tài). Dùng sau khi đề tài được phê duyệt, trước khi triển khai và cấp kinh phí. Dùng khi đề tài NCKH đã có quyết định phê duyệt và cần lập hợp đồng thực hiện."
 ---
 
 # Soạn hợp đồng thực hiện đề tài KHCN

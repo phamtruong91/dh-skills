@@ -1,6 +1,6 @@
 ---
 name: "triage-case-sinh-vien"
-description: "Phân loại case sinh viên tiếp nhận qua phiếu/email: tóm tắt, phân loại nghiệp vụ, đánh giá mức độ ưu tiên và SLA, định tuyến đơn vị xử lý, soạn dự thảo phản hồi (chưa gửi). Cán bộ là người xác nhận và liên hệ sinh viên. Dùng chung cho mọi đơn vị tiếp nhận phản ánh của người học."
+description: "Phân loại case sinh viên tiếp nhận qua phiếu/email: tóm tắt, phân loại nghiệp vụ, đánh giá mức độ ưu tiên và SLA, định tuyến đơn vị xử lý, soạn dự thảo phản hồi (chưa gửi). Cán bộ là người xác nhận và liên hệ sinh viên. Dùng chung cho mọi đơn vị tiếp nhận phản ánh của người học. Dùng khi tiếp nhận phản ánh, khiếu nại, đề nghị của sinh viên và cần phân loại ưu tiên."
 ---
 
 # Phân loại case sinh viên (triage)

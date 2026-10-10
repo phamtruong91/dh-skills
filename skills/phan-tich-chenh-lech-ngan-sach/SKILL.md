@@ -1,6 +1,6 @@
 ---
 name: "phan-tich-chenh-lech-ngan-sach"
-description: "Phân tích chênh lệch ngân sách bằng cách đối chiếu dự toán với thực hiện theo từng mục: tính variance, đánh dấu vượt ngưỡng, phân loại nguyên nhân, dự thảo giải trình. Dùng chung cho mọi đơn vị có ngân sách."
+description: "Phân tích chênh lệch ngân sách bằng cách đối chiếu dự toán với thực hiện theo từng mục: tính variance, đánh dấu vượt ngưỡng, phân loại nguyên nhân, dự thảo giải trình. Dùng chung cho mọi đơn vị có ngân sách. Dùng khi cuối quý/năm hoặc cần giải trình chênh lệch giữa dự toán và thực hiện."
 ---
 
 # Phân tích chênh lệch ngân sách

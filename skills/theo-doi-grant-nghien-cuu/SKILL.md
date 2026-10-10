@@ -1,6 +1,6 @@
 ---
 name: "theo-doi-grant-nghien-cuu"
-description: "Hỗ trợ quản lý grant/tài trợ nghiên cứu: checklist điều kiện tham gia, đối chiếu hồ sơ với yêu cầu của call, outline đề xuất, tracker milestone và deliverable. Dùng chung cho PI, nhóm nghiên cứu, phòng KHCN."
+description: "Hỗ trợ quản lý grant/tài trợ nghiên cứu: checklist điều kiện tham gia, đối chiếu hồ sơ với yêu cầu của call, outline đề xuất, tracker milestone và deliverable. Dùng chung cho PI, nhóm nghiên cứu, phòng KHCN. Dùng khi chuẩn bị hồ sơ xin tài trợ nghiên cứu hoặc đang thực hiện grant cần theo dõi milestone, kinh phí."
 ---
 
 # Theo dõi grant nghiên cứu

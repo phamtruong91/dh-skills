@@ -1,6 +1,6 @@
 ---
 name: "phan-tich-ket-qua-khao-sat"
-description: "Phân tích kết quả khảo sát các bên liên quan của trường đại học (thống kê mô tả, so sánh nhóm, xu hướng) và đề xuất cải tiến. Dùng sau khi thu thập xong phiếu khảo sát sinh viên, giảng viên, cựu sinh viên, nhà tuyển dụng."
+description: "Phân tích kết quả khảo sát các bên liên quan của trường đại học (thống kê mô tả, so sánh nhóm, xu hướng) và đề xuất cải tiến. Dùng sau khi thu thập xong phiếu khảo sát sinh viên, giảng viên, cựu sinh viên, nhà tuyển dụng. Dùng khi đã có dữ liệu khảo sát thô và cần báo cáo phân tích có kết luận, đề xuất."
 ---
 
 # Phân tích kết quả khảo sát

@@ -1,6 +1,6 @@
 ---
 name: "ke-hoach-nckh-khoa"
-description: "Lập kế hoạch nghiên cứu khoa học cấp khoa của trường đại học trong năm học: đề tài các cấp, bài báo khoa học, hội thảo, giáo trình, hoạt động NCKH sinh viên. Dùng đầu mỗi năm học."
+description: "Lập kế hoạch nghiên cứu khoa học cấp khoa của trường đại học trong năm học: đề tài các cấp, bài báo khoa học, hội thảo, giáo trình, hoạt động NCKH sinh viên. Dùng đầu mỗi năm học. Dùng khi đầu năm học khoa cần xây dựng kế hoạch nghiên cứu khoa học."
 ---
 
 # Kế hoạch NCKH cấp khoa

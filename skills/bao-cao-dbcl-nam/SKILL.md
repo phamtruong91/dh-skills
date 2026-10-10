@@ -1,6 +1,6 @@
 ---
 name: "bao-cao-dbcl-nam"
-description: "Soạn báo cáo tổng kết công tác đảm bảo chất lượng năm học của trường đại học: khảo thí, tự đánh giá/kiểm định, khảo sát các bên liên quan, cải tiến chất lượng. Dùng cuối mỗi năm học để báo cáo Ban Giám hiệu và cơ quan quản lý."
+description: "Soạn báo cáo tổng kết công tác đảm bảo chất lượng năm học của trường đại học: khảo thí, tự đánh giá/kiểm định, khảo sát các bên liên quan, cải tiến chất lượng. Dùng cuối mỗi năm học để báo cáo Ban Giám hiệu và cơ quan quản lý. Dùng khi kết thúc năm học và Phòng Khảo thí & ĐBCL cần tổng hợp hoạt động đảm bảo chất lượng."
 ---
 
 # Báo cáo công tác đảm bảo chất lượng năm

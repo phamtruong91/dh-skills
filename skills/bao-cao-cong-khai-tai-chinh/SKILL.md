@@ -29,7 +29,8 @@ viên), kết quả kiểm toán, theo hình thức công khai quy định.
 ## Đầu vào (Input)
 | Trường | Mô tả | Bắt buộc |
 |---|---|---|
-| `nam_hoc` / `nam_tai_chinh` | Năm học / năm tài chính công khai | Có |
+| `nam_hoc` | Năm học công khai (khi công khai theo năm học) | Có (một trong hai) |
+| `nam_tai_chinh` | Năm tài chính công khai (khi công khai theo năm tài chính) | Có (một trong hai) |
 | `hoc_phi_cac_nganh` | Bảng học phí theo từng ngành/khối ngành đào tạo | Có |
 | `tong_thu_chi` | Tổng thu, tổng chi ngân sách năm (theo số liệu quyết toán/BCTC) | Có |
 | `chi_cho_nguoi_hoc` | Học bổng khuyến khích học tập, hỗ trợ sinh viên khó khăn, miễn giảm học phí... | Có |

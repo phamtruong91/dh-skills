@@ -76,7 +76,7 @@ hoặc ký hợp đồng lao động với lao động hợp đồng (bảo vệ
 
 **Bước 4. Soạn thảo 7 điều khoản hợp đồng**
 - Làm gì: soạn đầy đủ các điều khoản bắt buộc: Điều 1 – Công việc, chức danh, đơn vị công tác; Điều 2 – Thời hạn hợp đồng, ngày có hiệu lực; Điều 3 – Tiền lương (hệ số, bậc, cách tính), phụ cấp, hình thức trả lương, kỳ trả lương; Điều 4 – Thời giờ làm việc, thời giờ nghỉ ngơi; Điều 5 – Quyền và nghĩa vụ của người lao động / viên chức; Điều 6 – Quyền và nghĩa vụ của đơn vị sử dụng lao động (nhà trường); Điều 7 – Điều khoản thi hành (hiệu lực, số bản hợp đồng).
-- Dùng input: toàn bộ input đã thu thập ở các bước 1–3.
+- Dùng input: `cong_viec` (điều khoản công việc) và toàn bộ input đã thu thập ở các bước 1–3.
 - Vai trò: Chuyên viên Phòng TCCB · AI hỗ trợ: soạn dự thảo đúng thể thức · ⏱ ~20–45 phút (ước tính)
 - Lưu ý nghiệp vụ: căn cứ pháp lý ở phần mở đầu phải đúng loại hợp đồng đã xác định ở Bước 1; nội dung Điều 3 phải khớp bảng tiền lương ở Bước 3.
 - → Kết quả bước: dự thảo hợp đồng đầy đủ 7 điều khoản.

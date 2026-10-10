@@ -1,6 +1,6 @@
 ---
 name: "quyet-dinh-phan-cong-thi"
-description: "Soạn quyết định phân công cán bộ coi thi, chấm thi, thanh tra thi trong các kỳ thi của trường đại học đúng thể thức Nghị định 30/2020/NĐ-CP. Dùng mỗi kỳ thi kết thúc học phần, thi tốt nghiệp."
+description: "Soạn quyết định phân công cán bộ coi thi, chấm thi, thanh tra thi trong các kỳ thi của trường đại học đúng thể thức Nghị định 30/2020/NĐ-CP. Dùng mỗi kỳ thi kết thúc học phần, thi tốt nghiệp. Dùng khi cần ban hành quyết định phân công coi thi, chấm thi, thanh tra thi cho một kỳ thi cụ thể."
 ---
 
 # Quyết định phân công coi thi / chấm thi

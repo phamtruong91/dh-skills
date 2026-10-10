@@ -1,6 +1,6 @@
 ---
 name: "campaign-brief-tuyen-sinh"
-description: "Soạn brief chiến dịch tuyển sinh: mục tiêu, đối tượng, thông điệp, kênh, ngân sách, KPI, timeline. Dùng trước mỗi đợt chiến dịch để thống nhất toàn nhóm và trình duyệt."
+description: "Soạn brief chiến dịch tuyển sinh: mục tiêu, đối tượng, thông điệp, kênh, ngân sách, KPI, timeline. Dùng trước mỗi đợt chiến dịch để thống nhất toàn nhóm và trình duyệt. Dùng khi trước mỗi đợt chiến dịch tuyển sinh cần một bản brief thống nhất để triển khai và trình duyệt."
 ---
 
 # Campaign brief tuyển sinh
@@ -83,7 +83,7 @@ brief thống nhất để cả nhóm triển khai và trình lãnh đạo phê 
 
 **Bước 7. Kiểm tra tính tương xứng và hoàn thiện brief**
 - Làm gì: kiểm tra tam giác mục tiêu – ngân sách – KPI có tương xứng không (ngân sách có đủ để đạt KPI không); rà soát toàn bộ brief: thông điệp bám đề án, timeline khớp lịch chung; tổng hợp thành văn bản brief hoàn chỉnh.
-- Dùng input: toàn bộ bán thành phẩm Bước 1–6.
+- Dùng input: `ten_chien_dich` (tên brief), toàn bộ bán thành phẩm Bước 1–6.
 - Vai trò: Chuyên viên Phòng Truyền thông – Tuyển sinh · AI hỗ trợ: tổng hợp, chuẩn hóa dữ liệu, đối chiếu tự động, cảnh báo sai lệch · ⏱ ~1–2 giờ (ước tính)
 - Lưu ý nghiệp vụ: nếu ngân sách không đủ đạt KPI thì hoặc giảm mục tiêu hoặc xin bổ sung — không để brief "thiếu tiền mà đòi kết quả".
 - → Kết quả bước: Campaign brief hoàn chỉnh (sẵn sàng trình duyệt).

@@ -1,6 +1,6 @@
 ---
 name: "bao-cao-tong-ket-khoa"
-description: "Soạn báo cáo tổng kết năm học của khoa/bộ môn trường đại học: đào tạo, nghiên cứu khoa học, công tác sinh viên, đội ngũ, cơ sở vật chất. Dùng cuối mỗi năm học để báo cáo Ban Giám hiệu."
+description: "Soạn báo cáo tổng kết năm học của khoa/bộ môn trường đại học: đào tạo, nghiên cứu khoa học, công tác sinh viên, đội ngũ, cơ sở vật chất. Dùng cuối mỗi năm học để báo cáo Ban Giám hiệu. Dùng khi kết thúc năm học và khoa cần tổng hợp hoạt động gửi Ban Giám hiệu."
 ---
 
 # Báo cáo tổng kết năm học của khoa

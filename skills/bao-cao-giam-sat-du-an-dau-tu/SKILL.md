@@ -1,6 +1,6 @@
 ---
 name: "bao-cao-giam-sat-du-an-dau-tu"
-description: "Lập báo cáo giám sát dự án đầu tư hạ tầng đang triển khai: tiến độ, giải ngân, chất lượng, vướng mắc và kiến nghị. Dùng định kỳ (quý/năm) hoặc đột xuất."
+description: "Lập báo cáo giám sát dự án đầu tư hạ tầng đang triển khai: tiến độ, giải ngân, chất lượng, vướng mắc và kiến nghị. Dùng định kỳ (quý/năm) hoặc đột xuất. Dùng khi dự án đầu tư hạ tầng đang triển khai và cần báo cáo định kỳ lãnh đạo/Hội đồng trường."
 ---
 
 # Báo cáo giám sát dự án đầu tư

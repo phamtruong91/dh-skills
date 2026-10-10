@@ -1,6 +1,6 @@
 ---
 name: "ke-hoach-hoat-dong-trung-tam-thuc-hanh"
-description: "Lập kế hoạch hoạt động năm của trung tâm thực hành nghề nghiệp thuộc trường đại học (VD: trung tâm thực hành pháp luật, phòng khám thực hành, xưởng thực hành): lịch thực hành mô phỏng, tiếp nhận vụ việc/ca thực tế, phân công giảng viên hướng dẫn, đánh giá sinh viên. Dùng đầu năm học."
+description: "Lập kế hoạch hoạt động năm của trung tâm thực hành nghề nghiệp thuộc trường đại học (VD: trung tâm thực hành pháp luật, phòng khám thực hành, xưởng thực hành): lịch thực hành mô phỏng, tiếp nhận vụ việc/ca thực tế, phân công giảng viên hướng dẫn, đánh giá sinh viên. Dùng đầu năm học. Dùng khi đầu năm học trung tâm thực hành cần lập kế hoạch hoạt động."
 ---
 
 # Kế hoạch hoạt động trung tâm thực hành

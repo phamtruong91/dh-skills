@@ -1,6 +1,6 @@
 ---
 name: "ke-hoach-cai-tien-chat-luong"
-description: "Lập kế hoạch cải tiến chất lượng sau tự đánh giá hoặc sau kiểm định chất lượng giáo dục: từ khuyến nghị thành hành động cụ thể có đơn vị thực hiện, thời hạn, kinh phí và tiêu chí đánh giá. Dùng sau mỗi chu kỳ tự đánh giá / đón đoàn đánh giá ngoài."
+description: "Lập kế hoạch cải tiến chất lượng sau tự đánh giá hoặc sau kiểm định chất lượng giáo dục: từ khuyến nghị thành hành động cụ thể có đơn vị thực hiện, thời hạn, kinh phí và tiêu chí đánh giá. Dùng sau mỗi chu kỳ tự đánh giá / đón đoàn đánh giá ngoài. Dùng khi đã có kết quả tự đánh giá hoặc kết luận đánh giá ngoài và cần chuyển khuyến nghị thành kế hoạch hành động."
 ---
 
 # Kế hoạch cải tiến chất lượng

@@ -1,6 +1,6 @@
 ---
 name: "bao-cao-chuyen-doi-so"
-description: "Soạn báo cáo hiện trạng và kết quả chuyển đổi số của trường đại học: hạ tầng số, số hóa quy trình, dữ liệu, nhân lực số. Dùng cuối năm hoặc khi báo cáo cơ quan quản lý về tiến độ chuyển đổi số."
+description: "Soạn báo cáo hiện trạng và kết quả chuyển đổi số của trường đại học: hạ tầng số, số hóa quy trình, dữ liệu, nhân lực số. Dùng cuối năm hoặc khi báo cáo cơ quan quản lý về tiến độ chuyển đổi số. Dùng khi cần báo cáo Ban Giám hiệu hoặc cơ quan quản lý về tiến độ chuyển đổi số của trường."
 ---
 
 # Báo cáo hiện trạng & kết quả chuyển đổi số

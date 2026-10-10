@@ -1,6 +1,6 @@
 ---
 name: "dich-thuat-song-ngu-va-thuat-ngu"
-description: "Dịch Việt–Anh (và ngược lại) văn bản của trường, kiểm soát thuật ngữ theo glossary (kể cả danh sách không-dịch), đối chiếu số liệu/tên riêng giữa hai bản → bản song ngữ + issue list. Dùng chung cho MOU, thông báo tuyển sinh, văn bằng, website..."
+description: "Dịch Việt–Anh (và ngược lại) văn bản của trường, kiểm soát thuật ngữ theo glossary (kể cả danh sách không-dịch), đối chiếu số liệu/tên riêng giữa hai bản → bản song ngữ + issue list. Dùng chung cho MOU, thông báo tuyển sinh, văn bằng, website... Dùng khi cần bản tiếng Anh (hoặc tiếng Việt) của văn bản trường học."
 ---
 
 # Dịch song ngữ & quản lý thuật ngữ

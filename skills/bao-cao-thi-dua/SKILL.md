@@ -37,24 +37,63 @@ Xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lie
 
 ## Quy trình
 
-1. Kiểm tra kỳ, thời điểm chốt và nguồn của từng dòng. Thiếu quyết định hoặc xác nhận thì ghi [CHƯA XÁC NHẬN], không tính vào kết quả đã ban hành.
-2. Đối chiếu số liệu đơn vị với quyết định; lập bảng số liệu nguồn / số liệu báo cáo / chênh lệch / người cần xác nhận. Không tự chọn một nguồn khi có mâu thuẫn.
-3. Tổng hợp số lượng theo loại danh hiệu, hình thức khen thưởng và đơn vị; giữ tách biệt tập thể/cá nhân và đã được tặng/đang đề nghị. Tránh đếm trùng người hay hồ sơ; không cộng các đại lượng khác đơn vị tính.
-4. Chỉ tính biến động so với kỳ trước khi có dữ liệu cùng phạm vi. Nếu mẫu số bằng 0 hoặc không có dữ liệu, ghi không tính được; không tự đặt tỷ lệ tăng/giảm.
-5. Soạn báo cáo gồm kết quả đã xác nhận, vấn đề đối chiếu còn mở và nhiệm vụ kỳ tới đã được cung cấp. Chỉ trình bày nhận xét từ `nhan_xet_da_duyet`, ghi rõ nguồn; không suy đoán nguyên nhân hay thành tích cá nhân.
-6. Kiểm tra mỗi số liệu và phát biểu có nguồn truy nguyên. Xuất báo cáo hoàn chỉnh về bố cục, để trống dữ liệu thiếu; bảng đối chiếu và vấn đề cần xác nhận chỉ dùng nội bộ. Cán bộ phụ trách xác nhận nội dung; người có thẩm quyền quyết định ký/phát hành.
+**Bước 1. Kiểm tra kỳ, thời điểm chốt và nguồn từng dòng**
+- Làm gì: Kiểm tra từng dòng số liệu có kỳ, thời điểm chốt và nguồn; dòng thiếu quyết định hoặc xác nhận thì ghi nhận nội bộ [CHƯA XÁC NHẬN] (không đưa vào file giao) và không tính vào kết quả đã ban hành.
+- Dùng input: `ky_bao_cao`, `quyet_dinh_khen_thuong`, `bao_cao_don_vi`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Mọi con số phải truy được về quyết định/hồ sơ và người xác nhận.
+- → Kết quả bước: Danh sách dòng số liệu hợp lệ + danh sách dòng chưa xác nhận (nội bộ).
+
+**Bước 2. Đối chiếu số liệu đơn vị với quyết định**
+- Làm gì: Lập bảng số liệu nguồn / số liệu báo cáo / chênh lệch / người cần xác nhận. Không tự chọn một nguồn khi có mâu thuẫn.
+- Dùng input: `quyet_dinh_khen_thuong`, `bao_cao_don_vi`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Chênh lệch chưa giải trình được thì giữ ở bảng nội bộ, không đưa vào báo cáo.
+- → Kết quả bước: Bảng đối chiếu (nội bộ) + danh sách cần bổ sung.
+
+**Bước 3. Tổng hợp số lượng theo danh hiệu, hình thức và đơn vị**
+- Làm gì: Tổng hợp theo loại danh hiệu, hình thức khen thưởng và đơn vị; giữ tách biệt tập thể/cá nhân và đã được tặng/đang đề nghị. Tránh đếm trùng người hay hồ sơ; không cộng các đại lượng khác đơn vị tính.
+- Dùng input: kết quả Bước 1–2, `ho_so_dang_trinh`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Hồ sơ đang đề nghị không được cộng vào kết quả đã được tặng.
+- → Kết quả bước: Bảng thống kê đã tách các nhóm.
+
+**Bước 4. Tính biến động so với kỳ trước**
+- Làm gì: Chỉ tính biến động khi có dữ liệu kỳ trước cùng phạm vi. Nếu mẫu số bằng 0 hoặc không có dữ liệu thì để trống, ghi không tính được; không tự đặt tỷ lệ tăng/giảm.
+- Dùng input: kết quả Bước 3, `so_lieu_ky_truoc`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: So sánh khác phạm vi (đơn vị, loại danh hiệu) là so sánh sai.
+- → Kết quả bước: Bảng biến động hoặc ghi chú không tính được.
+
+**Bước 5. Soạn báo cáo**
+- Làm gì: Soạn báo cáo gồm kết quả đã xác nhận, vấn đề đối chiếu còn mở và nhiệm vụ kỳ tới đã được cung cấp. Chỉ trình bày nhận xét từ `nhan_xet_da_duyet` và phương hướng từ `phuong_huong_da_duyet`, ghi rõ nguồn.
+- Dùng input: kết quả Bước 3–4, `nhan_xet_da_duyet`, `phuong_huong_da_duyet`, `thong_tin_trinh_ky`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Không suy đoán nguyên nhân hay thành tích cá nhân; không thêm nhận xét khi thiếu dữ liệu.
+- → Kết quả bước: Dự thảo báo cáo đúng bố cục.
+
+**Bước 6. Kiểm tra nguồn truy nguyên và chuyển duyệt**
+- Làm gì: Kiểm tra mỗi số liệu và phát biểu có nguồn truy nguyên; xuất báo cáo hoàn chỉnh về bố cục, để trống dữ liệu thiếu; bảng đối chiếu và vấn đề cần xác nhận chỉ dùng nội bộ. Cán bộ phụ trách xác nhận nội dung; người có thẩm quyền quyết định ký/phát hành.
+- Dùng input: toàn bộ input, `thong_tin_trinh_ky`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) chuẩn bị; cán bộ phụ trách xác nhận; người có thẩm quyền duyệt · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Không tự gửi, công bố, ký hoặc đánh dấu đã duyệt.
+- → Kết quả bước: Báo cáo hoàn chỉnh, sẵn sàng chuyển cán bộ phụ trách kiểm tra.
 
 ## Luồng quy trình
 
 ```mermaid
 flowchart TD
-    A["Nguồn và quyết định"] --> B["Đối chiếu số liệu"]
-    B --> C{"Đủ xác nhận?"}
+    IN[/"Quyết định, báo cáo đơn vị"/] --> B1["Bước 1: Kiểm tra kỳ, thời điểm chốt và nguồn"]
+    B1 --> B2["Bước 2: Đối chiếu số liệu với quyết định"]
+    B2 --> C{"Đủ xác nhận?"}
     C -->|Chưa| D["Bảng cần bổ sung"]
-    C -->|Đủ| E["Tổng hợp kết quả"]
-    D --> B
-    E --> F["Dự thảo và nguồn"]
-    F --> G["Cán bộ kiểm tra"]
+    D --> B2
+    C -->|Đủ| B3["Bước 3: Tổng hợp theo danh hiệu, hình thức, đơn vị"]
+    B3 --> B4["Bước 4: Tính biến động so với kỳ trước"]
+    B4 --> B5["Bước 5: Soạn báo cáo"]
+    B5 --> B6["Bước 6: Kiểm tra nguồn và chuyển duyệt"]
+    B6 --> HG["👤 Cán bộ phụ trách kiểm tra, người có thẩm quyền duyệt"]
+    HG --> OUT[["Báo cáo thi đua, khen thưởng"]]
 ```
 
 ## Đầu ra

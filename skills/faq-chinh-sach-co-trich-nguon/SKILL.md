@@ -1,6 +1,6 @@
 ---
 name: "faq-chinh-sach-co-trich-nguon"
-description: "Xây dựng bộ hỏi đáp chính sách từ văn bản quy định: mỗi câu trả lời chỉ dựa trên nguồn, trích rõ điều/khoản + ngày hiệu lực; từ chối khi ngoài phạm vi hoặc văn bản hết hiệu lực. Dùng chung cho mọi chính sách: học phí, học bổng, đào tạo, cán bộ..."
+description: "Xây dựng bộ hỏi đáp chính sách từ văn bản quy định: mỗi câu trả lời chỉ dựa trên nguồn, trích rõ điều/khoản + ngày hiệu lực; từ chối khi ngoài phạm vi hoặc văn bản hết hiệu lực. Dùng chung cho mọi chính sách: học phí, học bổng, đào tạo, cán bộ... Dùng khi cần xây dựng hoặc vận hành kênh hỏi đáp về chính sách, quy định của trường."
 ---
 
 # Hỏi đáp chính sách có trích nguồn

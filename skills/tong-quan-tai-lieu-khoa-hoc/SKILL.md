@@ -1,6 +1,6 @@
 ---
 name: "tong-quan-tai-lieu-khoa-hoc"
-description: "Tổng quan tài liệu khoa học (literature review) từ các tài liệu được cung cấp: trích xuất phương pháp/kết quả, lập ma trận so sánh, xác định khoảng trống nghiên cứu, trích dẫn chuẩn. Dùng chung cho mọi đơn vị làm nghiên cứu."
+description: "Tổng quan tài liệu khoa học (literature review) từ các tài liệu được cung cấp: trích xuất phương pháp/kết quả, lập ma trận so sánh, xác định khoảng trống nghiên cứu, trích dẫn chuẩn. Dùng chung cho mọi đơn vị làm nghiên cứu. Dùng khi viết phần tổng quan nghiên cứu cho đề tài, luận văn/luận án, bài báo."
 ---
 
 # Tổng quan tài liệu khoa học

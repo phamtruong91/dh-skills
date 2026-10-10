@@ -1,6 +1,6 @@
 ---
 name: "phan-tich-ket-qua-thi"
-description: "Phân tích kết quả thi kết thúc học phần của trường đại học: phổ điểm, các chỉ số thống kê, độ khó và độ phân biệt của câu hỏi/đề thi, từ đó đánh giá chất lượng đề thi và đề xuất cải tiến. Dùng sau mỗi kỳ thi."
+description: "Phân tích kết quả thi kết thúc học phần của trường đại học: phổ điểm, các chỉ số thống kê, độ khó và độ phân biệt của câu hỏi/đề thi, từ đó đánh giá chất lượng đề thi và đề xuất cải tiến. Dùng sau mỗi kỳ thi. Dùng khi kỳ thi kết thúc và đã có bảng điểm."
 ---
 
 # Phân tích kết quả thi (phổ điểm, độ khó, độ phân biệt)

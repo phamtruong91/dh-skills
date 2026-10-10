@@ -1,6 +1,6 @@
 ---
 name: "bao-cao-ket-qua-doan"
-description: "Soạn báo cáo kết quả đoàn công tác (đoàn ra đi nước ngoài hoặc đoàn vào đón đối tác) của trường đại học: diễn biến chuyến đi, kết quả đạt được, các thỏa thuận đã ký/traol đổi, kiến nghị bước tiếp theo. Dùng sau khi đoàn kết thúc để báo cáo Ban Giám hiệu."
+description: "Soạn báo cáo kết quả đoàn công tác (đoàn ra đi nước ngoài hoặc đoàn vào đón đối tác) của trường đại học: diễn biến chuyến đi, kết quả đạt được, các thỏa thuận đã ký/traol đổi, kiến nghị bước tiếp theo. Dùng sau khi đoàn kết thúc để báo cáo Ban Giám hiệu. Dùng khi một đoàn công tác đã hoàn thành và cần báo cáo Ban Giám hiệu."
 ---
 
 # Báo cáo kết quả đoàn công tác
