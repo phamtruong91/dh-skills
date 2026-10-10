@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn báo cáo công tác sinh viên năm học"
-  "short_description": "Hỗ trợ soạn báo cáo công tác sinh viên năm học"
-  "default_prompt": "Hãy dùng $bao-cao-ctsv-nam để hỗ trợ công việc: Soạn báo cáo công tác sinh viên năm học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn báo cáo công tác sinh viên năm học
+  short_description: Hỗ trợ soạn báo cáo công tác sinh viên năm học
+  default_prompt: 'Hãy dùng $bao-cao-ctsv-nam để hỗ trợ công việc: Soạn báo cáo công tác sinh viên năm học; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

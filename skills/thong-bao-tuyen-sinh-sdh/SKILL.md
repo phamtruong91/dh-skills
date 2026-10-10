@@ -5,6 +5,12 @@ description: "Soạn thông báo tuyển sinh trình độ thạc sĩ và tiến
 
 # Thông báo tuyển sinh thạc sĩ / tiến sĩ
 
+## Định dạng và file đầu ra
+
+Định dạng đầu ra có thể chọn theo sản phẩm/yêu cầu: .docx, .pdf. Đọc mục “Định dạng bổ sung” trong quy cách đầu ra trước khi chọn.
+
+**Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
+
 ## Quy cách đầu ra và thông tin thiếu
 
 Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
@@ -125,8 +131,8 @@ tiến sĩ cho từng đợt trong năm, theo chỉ tiêu và kế hoạch đã 
 - → Kết quả bước: bản thông báo đã qua kiểm tra, đối chiếu đạt yêu cầu, sẵn sàng trình ký.
 
 **Bước 9. Xuất bản thông báo**
-- Làm gì: hoàn thiện thông báo ở định dạng markdown; trình người có thẩm quyền ký duyệt; đăng lên
-  website trường và chuyển sang Word để lưu trữ, phát hành.
+- Làm gì: hoàn thiện thông báo file theo định dạng đầu ra của skill; trình người có thẩm quyền ký duyệt; đăng lên
+  website trường và xuất file Word để lưu trữ, phát hành.
 - Dùng input: `nguoi_ky`
 - Vai trò: Hiệu trưởng/Phó Hiệu trưởng phụ trách ký duyệt · AI hỗ trợ: kiểm tra thể thức trước khi trình ký · ⏱ ~1 giờ (ước tính)
 - Lưu ý nghiệp vụ: lưu bản đã ký (scan/PDF) kèm bản Word để đối chiếu khi có khiếu nại về nội dung
@@ -146,7 +152,7 @@ flowchart TD
     G{"Bước 8: Kiểm tra đối chiếu đạt?"}
     H["Chỉnh sửa nội dung chưa đạt"]
     HG["👤 Người ký duyệt thông báo"]
-    I["Bước 9: Xuất bản, đăng website, chuyển Word"]
+    I["Bước 9: Xuất bản, đăng website, xuất file Word"]
     OUT[/"Output: Thông báo tuyển sinh SĐH"/]
 
     IN --> A --> B --> C --> D --> E --> F --> G
@@ -156,6 +162,8 @@ flowchart TD
 ```
 
 ## Đầu ra
+
+File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
 
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
@@ -182,7 +190,7 @@ Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Phiên bản gói: `1.3.1`; ngày cập nhật: `2026-10-10`.
 - Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
 - Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/thong-bao-tuyen-sinh-sdh`; không tự gán SHA chưa tạo.

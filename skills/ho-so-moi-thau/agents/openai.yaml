@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn hồ sơ mời thầu mua sắm thiết bị"
-  "short_description": "Hỗ trợ soạn hồ sơ mời thầu mua sắm thiết bị"
-  "default_prompt": "Hãy dùng $ho-so-moi-thau để hỗ trợ công việc: Soạn hồ sơ mời thầu mua sắm thiết bị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn hồ sơ mời thầu mua sắm thiết bị
+  short_description: Hỗ trợ soạn hồ sơ mời thầu mua sắm thiết bị
+  default_prompt: 'Hãy dùng $ho-so-moi-thau để hỗ trợ công việc: Soạn hồ sơ mời thầu mua sắm thiết bị; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

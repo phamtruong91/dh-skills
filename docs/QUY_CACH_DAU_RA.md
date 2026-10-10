@@ -1,4 +1,4 @@
-# Quy cách đầu ra phiên bản 1.2.1
+# Quy cách đầu ra phiên bản 1.3.1
 
 Ngày đối chiếu: 10/10/2026. Phạm vi: cấu trúc và chỉ dẫn xuất sản phẩm của 171 skill, bao gồm các chỉ dẫn cũ về checklist và xử lý dữ liệu thiếu. Không phải chứng nhận toàn diện hiệu lực mọi căn cứ pháp lý hoặc kiểm chứng mọi file DOCX/PDF có thể tạo trong tương lai.
 
@@ -42,3 +42,13 @@ Chạy `python scripts/validate_skills.py` với UTF-8. Công cụ kiểm tra t�
 ## Chỗ chừa để điền thông tin
 
 Mẫu gốc có dòng dấu chấm thì giữ dòng dấu chấm; mẫu để trống ô bảng thì giữ ô trống. Ví dụ: Họ và tên: ................................; ngày ...... tháng ...... năm ............ Không xóa dấu chấm của mẫu và không điền dữ liệu giả để làm đầy mẫu.
+
+## File đầu ra bắt buộc
+
+Khi tạo sản phẩm nghiệp vụ, phải tạo file thực tế và cung cấp liên kết tải ngay; không chờ yêu cầu xuất file bổ sung. Văn bản mặc định Word, bảng theo dõi mặc định Excel, gói skill mặc định ZIP; định dạng người dùng chỉ định được ưu tiên. Mỗi skill ghi định dạng tại đầu SKILL.md và manifest. Nội dung chat chỉ hỗ trợ trao đổi, không thay file giao.
+
+## Lựa chọn định dạng bổ sung
+
+Không giới hạn đầu ra vào định dạng mặc định. Chọn định dạng theo sản phẩm người dùng yêu cầu và công cụ thực tế: DOCX để sửa văn bản; PDF để đọc/in/công bố; XLSX để giữ sheet/công thức; CSV để trao đổi dữ liệu bảng; TXT/MD để giao nội dung thuần; HTML để giao nội dung web; JSON/YAML để giao dữ liệu hoặc cấu hình; PPTX để giao bài trình chiếu; PNG/SVG để giao biểu đồ; TEX/BIB để giao nguồn bài viết khoa học/danh mục trích dẫn; ZIP để gom bộ hồ sơ hoặc gói skill. Chỉ tạo định dạng bổ sung khi sản phẩm cần hoặc người dùng yêu cầu; danh sách định dạng là cách lựa chọn đầu ra, không cam kết mọi công cụ chuyển đổi đều có sẵn.
+
+Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.

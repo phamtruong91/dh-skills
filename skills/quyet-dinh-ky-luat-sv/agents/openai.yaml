@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Quyết định khen thưởng / kỷ luật sinh viên"
-  "short_description": "Hỗ trợ quyết định khen thưởng / kỷ luật sinh viên"
-  "default_prompt": "Hãy dùng $quyet-dinh-ky-luat-sv để hỗ trợ công việc: Quyết định khen thưởng / kỷ luật sinh viên; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Quyết định khen thưởng / kỷ luật sinh viên
+  short_description: Hỗ trợ quyết định khen thưởng / kỷ luật sinh viên
+  default_prompt: 'Hãy dùng $quyet-dinh-ky-luat-sv để hỗ trợ công việc: Quyết định khen thưởng / kỷ luật sinh viên; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

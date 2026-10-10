@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Hồ sơ thanh quyết toán kinh phí đề tài"
-  "short_description": "Hỗ trợ hồ sơ thanh quyết toán kinh phí đề tài"
-  "default_prompt": "Hãy dùng $ho-so-quyet-toan-de-tai để hỗ trợ công việc: Hồ sơ thanh quyết toán kinh phí đề tài; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Hồ sơ thanh quyết toán kinh phí đề tài
+  short_description: Hỗ trợ hồ sơ thanh quyết toán kinh phí đề tài
+  default_prompt: 'Hãy dùng $ho-so-quyet-toan-de-tai để hỗ trợ công việc: Hồ sơ thanh quyết toán kinh phí đề tài; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

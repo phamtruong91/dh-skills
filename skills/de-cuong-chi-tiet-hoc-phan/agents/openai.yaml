@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn đề cương chi tiết học phần"
-  "short_description": "Hỗ trợ soạn đề cương chi tiết học phần"
-  "default_prompt": "Hãy dùng $de-cuong-chi-tiet-hoc-phan để hỗ trợ công việc: Soạn đề cương chi tiết học phần; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn đề cương chi tiết học phần
+  short_description: Hỗ trợ soạn đề cương chi tiết học phần
+  default_prompt: 'Hãy dùng $de-cuong-chi-tiet-hoc-phan để hỗ trợ công việc: Soạn đề cương chi tiết học phần; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

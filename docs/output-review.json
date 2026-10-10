@@ -9,7 +9,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bai-viet-truyen-thong",
@@ -17,7 +19,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-3-cong-khai",
@@ -25,7 +29,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-chuyen-doi-so",
@@ -33,7 +39,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-cong-khai-tai-chinh",
@@ -41,7 +49,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-cong-tac-chinh-tri",
@@ -49,7 +59,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-cong-tac-thu-vien",
@@ -57,7 +69,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-cong-tac-y-te",
@@ -65,7 +79,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-ctsv-nam",
@@ -73,7 +89,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-danh-gia-vc",
@@ -81,7 +99,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-dao-tao-dinh-ky",
@@ -89,7 +109,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-dao-tao-sdh",
@@ -97,7 +119,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-dbcl-nam",
@@ -105,7 +129,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-dich-vu-khcn",
@@ -113,7 +139,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-du-an-dinh-ky",
@@ -121,7 +149,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-giam-sat-du-an-dau-tu",
@@ -129,7 +159,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-ket-qua-doan",
@@ -137,7 +169,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-ket-qua-tuyen-sinh",
@@ -145,7 +179,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-khcn-nam",
@@ -153,7 +189,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-kiem-toan-noi-bo",
@@ -161,7 +199,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-nghiem-thu-de-tai",
@@ -169,7 +209,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-quyet-toan",
@@ -177,7 +219,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "bao-cao-tai-chinh",
@@ -185,7 +229,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "bao-cao-thi-dua",
@@ -193,7 +239,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": false,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-tien-do-de-tai",
@@ -201,7 +249,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-tong-hop-phan-hieu",
@@ -209,7 +259,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-tong-ket-khoa",
@@ -217,7 +269,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-tong-ket-nam-truong",
@@ -225,7 +279,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-tong-ket-vp",
@@ -233,7 +289,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bao-cao-tu-danh-gia",
@@ -241,7 +299,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-ban-bao-ve-luan-van",
@@ -249,7 +309,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-ban-hop-hoi-dong-khdt",
@@ -257,7 +319,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-ban-kiem-ke-tai-san",
@@ -265,7 +329,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-ban-nghiem-thu-thiet-bi",
@@ -273,7 +339,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-ban-phong-thi",
@@ -281,7 +349,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-soan-giao-trinh",
@@ -289,7 +359,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "bien-tap-xuat-ban-an-pham",
@@ -297,7 +369,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "campaign-brief-tuyen-sinh",
@@ -305,7 +379,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "cap-chung-chi-dao-tao-lien-tuc",
@@ -313,7 +389,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "cau-truc-bai-bao-khoa-hoc",
@@ -321,7 +399,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "checklist-chung-tu-thanh-toan",
@@ -329,7 +409,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "checklist-ho-so-gs-pgs",
@@ -337,7 +419,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "checklist-minh-chung-kiem-dinh",
@@ -345,7 +429,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "chuan-bi-hop-hoi-dong-truong",
@@ -353,7 +439,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "chuan-bi-hop-va-action-tracker",
@@ -361,7 +449,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "content-calendar-truyen-thong",
@@ -369,7 +459,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "de-an-mo-nganh",
@@ -377,7 +469,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "de-an-tuyen-sinh",
@@ -385,7 +479,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "de-an-vi-tri-viec-lam",
@@ -393,7 +489,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "de-cuong-chi-tiet-hoc-phan",
@@ -401,7 +499,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "dich-thuat-song-ngu-va-thuat-ngu",
@@ -409,7 +509,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "dong-goi-skill-tu-quy-trinh",
@@ -417,7 +519,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "zip"
     },
     {
       "name": "executive-brief-trinh-lanh-dao",
@@ -425,7 +529,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "faq-chinh-sach-co-trich-nguon",
@@ -433,7 +539,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "faq-tuyen-sinh",
@@ -441,7 +549,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "funnel-theo-doi-thi-sinh",
@@ -449,7 +559,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "helpdesk-cntt-triage",
@@ -457,7 +569,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-chuyen-giao-cong-nghe",
@@ -465,7 +579,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-cong-nhan-sang-kien",
@@ -473,7 +589,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-dang-ky-shtt",
@@ -481,7 +599,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-de-nghi-khen-thuong",
@@ -489,7 +609,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-du-an-dau-tu-ha-tang",
@@ -497,7 +619,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-hop-dong-dich-vu-khcn",
@@ -505,7 +629,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-moi-thau",
@@ -513,7 +639,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-quan-ly-suc-khoe",
@@ -521,7 +649,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ho-so-quyet-toan-de-tai",
@@ -529,7 +659,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "hop-dong-lam-viec",
@@ -537,7 +669,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "hop-dong-mua-sam",
@@ -545,7 +679,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "hop-dong-thuc-hien-de-tai",
@@ -553,7 +689,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "hop-nhat-bao-cao-don-vi",
@@ -561,7 +699,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-bao-tri-csvc",
@@ -569,7 +709,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-bo-sung-hoc-lieu",
@@ -577,7 +719,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-boi-duong",
@@ -585,7 +729,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-cai-tien-chat-luong",
@@ -593,7 +739,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-dao-tao-lien-tuc",
@@ -601,7 +749,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-dao-tao-sdh",
@@ -609,7 +759,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-doan-ra-vao",
@@ -617,7 +769,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-giao-duc-chinh-tri-tu-tuong",
@@ -625,7 +779,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-hoat-dong-bao-chi",
@@ -633,7 +789,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-hoat-dong-phan-hieu",
@@ -641,7 +799,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-hoat-dong-trung-tam-thuc-hanh",
@@ -649,7 +809,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-hoi-thao-khoa-hoc",
@@ -657,7 +819,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-kiem-toan-noi-bo",
@@ -665,7 +829,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-mua-sam",
@@ -673,7 +839,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-nam-hoc",
@@ -681,7 +849,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-nam-hoc-truong",
@@ -689,7 +859,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-nckh-khoa",
@@ -697,7 +869,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-ngay-hoi-viec-lam",
@@ -705,7 +879,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-phat-trien-cntt",
@@ -713,7 +889,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-quan-tri-thuong-hieu",
@@ -721,7 +899,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-thanh-tra-nam",
@@ -729,7 +909,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-tiep-nhan-quan-ly-noi-tru",
@@ -737,7 +919,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-to-chuc-su-kien",
@@ -745,7 +929,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-to-chuc-thi",
@@ -753,7 +939,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-truyen-thong-nam",
@@ -761,7 +949,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-tuan-shcd",
@@ -769,7 +959,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-uom-tao-dmst",
@@ -777,7 +969,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-xuc-tien-dau-tu",
@@ -785,7 +979,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ke-hoach-y-te-hoc-duong",
@@ -793,7 +989,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ket-luan-thanh-tra",
@@ -801,7 +999,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "khao-sat-viec-lam-sv-tot-nghiep",
@@ -809,7 +1009,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "khung-chuong-trinh-dao-tao",
@@ -817,7 +1019,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "kich-ban-khanh-tiet",
@@ -825,7 +1029,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "kich-ban-tu-van-tuyen-sinh",
@@ -833,7 +1039,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "kich-ban-video-truyen-thong",
@@ -841,7 +1049,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "kiem-tra-day-du-ho-so",
@@ -849,7 +1059,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ky-yeu-hoi-thao",
@@ -857,7 +1069,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "lap-du-toan-nam",
@@ -865,7 +1079,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "lap-lich-cong-tac-tuan",
@@ -873,7 +1089,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "lap-thoi-khoa-bieu",
@@ -881,7 +1099,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "ma-tran-chuan-dau-ra",
@@ -889,7 +1109,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "nghi-quyet-hoi-dong-khdt",
@@ -897,7 +1119,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "noi-quy-ky-tuc-xa",
@@ -905,7 +1129,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "phan-cong-giang-day",
@@ -913,7 +1139,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "phan-tich-chenh-lech-ngan-sach",
@@ -921,7 +1149,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "phan-tich-ket-qua-khao-sat",
@@ -929,7 +1159,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "phan-tich-ket-qua-thi",
@@ -937,7 +1169,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "phieu-danh-gia-ren-luyen",
@@ -945,7 +1179,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "phieu-danh-gia-vien-chuc",
@@ -953,7 +1189,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "phieu-lay-y-kien-hoi-dong",
@@ -961,7 +1199,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "phieu-trinh-ky",
@@ -969,7 +1209,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "pmo-quan-tri-du-an",
@@ -977,7 +1219,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "press-kit-su-kien",
@@ -985,7 +1229,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quan-ly-phien-ban-tai-lieu",
@@ -993,7 +1239,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "quan-tri-tap-chi-khoa-hoc",
@@ -1001,7 +1249,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-che-an-toan-thong-tin",
@@ -1009,7 +1259,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-che-dao-tao",
@@ -1017,7 +1269,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-che-to-chuc-hoat-dong",
@@ -1025,7 +1279,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-che-to-chuc-hoat-dong-truong",
@@ -1033,7 +1289,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-trinh-bo-nhiem",
@@ -1041,7 +1299,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-trinh-ngan-hang-de-thi",
@@ -1049,7 +1309,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quy-trinh-tuyen-dung",
@@ -1057,7 +1319,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-cap-hoc-bong",
@@ -1065,7 +1329,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-cu-di-hoc",
@@ -1073,7 +1339,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-dieu-dong",
@@ -1081,7 +1349,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-giai-quyet-kn",
@@ -1089,7 +1359,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-hoc-vu",
@@ -1097,7 +1369,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-hoi-dong-bao-ve",
@@ -1105,7 +1379,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-khen-thuong-kl",
@@ -1113,7 +1389,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-ky-luat-sv",
@@ -1121,7 +1399,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-nang-luong",
@@ -1129,7 +1409,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-phan-cong-thi",
@@ -1137,7 +1419,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-phuc-khao",
@@ -1145,7 +1429,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "quyet-dinh-tot-nghiep",
@@ -1153,7 +1439,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "ra-soat-du-thao-van-ban",
@@ -1161,7 +1449,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "so-lieu-3-cong-khai-dt",
@@ -1169,7 +1459,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "so-van-ban-di-den",
@@ -1177,7 +1469,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "soan-bien-ban-hop",
@@ -1185,7 +1479,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-cong-van",
@@ -1193,7 +1489,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-giay-moi",
@@ -1201,7 +1499,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-ke-hoach-ct",
@@ -1209,7 +1509,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-mou-moa",
@@ -1217,7 +1519,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-quyet-dinh-hc",
@@ -1225,7 +1529,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-thong-bao",
@@ -1233,7 +1539,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "soan-to-trinh",
@@ -1241,7 +1549,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "tham-dinh-phap-ly-van-ban",
@@ -1249,7 +1559,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "theo-doi-grant-nghien-cuu",
@@ -1257,7 +1569,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "theo-doi-thay-doi-van-ban-phap-quy",
@@ -1265,7 +1579,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thiet-ke-phieu-khao-sat",
@@ -1273,7 +1589,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thong-bao-dang-ky-de-tai",
@@ -1281,7 +1599,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thong-bao-hoc-bong",
@@ -1289,7 +1609,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thong-bao-muc-thu-hoc-phi",
@@ -1297,7 +1619,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thong-bao-tuyen-dung",
@@ -1305,7 +1629,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thong-bao-tuyen-sinh",
@@ -1313,7 +1639,9 @@
       "specialized_legal_reference": true,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thong-bao-tuyen-sinh-sdh",
@@ -1321,7 +1649,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "thuyet-minh-de-tai-nckh",
@@ -1329,7 +1659,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "to-chuc-khoa-boi-duong-ngan-han",
@@ -1337,7 +1669,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "tong-hop-diem-ren-luyen",
@@ -1345,7 +1679,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "xlsx"
     },
     {
       "name": "tong-quan-tai-lieu-khoa-hoc",
@@ -1353,7 +1689,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "triage-case-sinh-vien",
@@ -1361,7 +1699,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     },
     {
       "name": "tro-ly-giang-day",
@@ -1369,7 +1709,9 @@
       "specialized_legal_reference": false,
       "output_schema_added": true,
       "old_inline_schema": true,
-      "missing_values": "preserve-template-fill-spaces"
+      "missing_values": "preserve-template-fill-spaces",
+      "output_delivery": "file-required",
+      "default_output_format": "docx"
     }
   ]
 }

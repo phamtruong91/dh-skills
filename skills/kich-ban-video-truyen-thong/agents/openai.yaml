@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Kịch bản video truyền thông"
-  "short_description": "Hỗ trợ kịch bản video truyền thông"
-  "default_prompt": "Hãy dùng $kich-ban-video-truyen-thong để hỗ trợ công việc: Kịch bản video truyền thông; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Kịch bản video truyền thông
+  short_description: Hỗ trợ kịch bản video truyền thông
+  default_prompt: 'Hãy dùng $kich-ban-video-truyen-thong để hỗ trợ công việc: Kịch bản video truyền thông; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

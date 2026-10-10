@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Tổng hợp kết quả đánh giá viên chức toàn trường"
-  "short_description": "Hỗ trợ tổng hợp kết quả đánh giá viên chức toàn trường"
-  "default_prompt": "Hãy dùng $bao-cao-danh-gia-vc để hỗ trợ công việc: Tổng hợp kết quả đánh giá viên chức toàn trường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Tổng hợp kết quả đánh giá viên chức toàn trường
+  short_description: Hỗ trợ tổng hợp kết quả đánh giá viên chức toàn trường
+  default_prompt: 'Hãy dùng $bao-cao-danh-gia-vc để hỗ trợ công việc: Tổng hợp kết quả đánh giá viên chức toàn trường; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Dịch song ngữ & quản lý thuật ngữ"
-  "short_description": "Hỗ trợ dịch song ngữ & quản lý thuật ngữ"
-  "default_prompt": "Hãy dùng $dich-thuat-song-ngu-va-thuat-ngu để hỗ trợ công việc: Dịch song ngữ & quản lý thuật ngữ; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Dịch song ngữ & quản lý thuật ngữ
+  short_description: Hỗ trợ dịch song ngữ & quản lý thuật ngữ
+  default_prompt: 'Hãy dùng $dich-thuat-song-ngu-va-thuat-ngu để hỗ trợ công việc: Dịch song ngữ & quản lý thuật ngữ; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

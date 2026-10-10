@@ -12,9 +12,9 @@
 
 > **Skill là gì?** Một bộ hướng dẫn thực hiện công việc có thể tái sử dụng: nêu khi nào dùng, cần dữ liệu gì, thực hiện những bước nào, tạo sản phẩm gì và ai kiểm duyệt. Ví dụ: skill soạn công văn nhận yêu cầu và thông tin nơi nhận để tạo văn bản đúng mẫu, để trống dữ liệu thiếu và kiểm tra nội bộ.
 
-## Phiên bản 1.2.1 — cập nhật 10/10/2026
+## Phiên bản 1.3.1 — cập nhật 10/10/2026
 
-Bản 1.2.1 cập nhật quy cách đầu ra của toàn bộ 171 skill: văn bản nghiệp vụ sạch, trường thiếu để trống, kiểm tra nội bộ không xuất kèm; bổ sung cấu trúc riêng và định dạng hành chính/chuyên ngành.
+Bản 1.3.1 cập nhật quy cách đầu ra của toàn bộ 171 skill: văn bản nghiệp vụ sạch, trường thiếu để trống, kiểm tra nội bộ không xuất kèm; bổ sung cấu trúc riêng và định dạng hành chính/chuyên ngành.
 
 [Quy cách đầu ra và phạm vi đối chiếu mẫu biểu](docs/QUY_CACH_DAU_RA.md). Khi dùng từng skill, đọc tài liệu quy cách được liên kết ngay đầu SKILL.md. Bản xuất chỉ chứa sản phẩm yêu cầu; thông tin thiếu chừa chỗ theo mẫu gốc.
 
@@ -23,7 +23,7 @@ Bản 1.2.1 cập nhật quy cách đầu ra của toàn bộ 171 skill: văn b�
 | Đóng gói | 171 skill có YAML hợp lệ, metadata giao diện và hồ sơ phiên bản |
 | Pháp lý | Giữ căn cứ/điều kiện của 58 skill từ đợt trước; bổ sung lựa chọn mẫu và phạm vi xác minh trong đợt này |
 | Kiểm duyệt | Mỗi skill có giới hạn, kiểm soát dữ liệu, người kiểm tra và trạng thái dự thảo |
-| Quản trị | 171 skill đồng bộ phiên bản nội dung 1.2.1; không phải thông tin về GitHub Release đã phát hành |
+| Quản trị | 171 skill đồng bộ phiên bản nội dung 1.3.1; không phải thông tin về GitHub Release đã phát hành |
 
 [Nhật ký thay đổi](CHANGELOG.md) · [Quản trị phiên bản](GOVERNANCE.md) · [Bảng đối chiếu pháp lý](docs/CAP_NHAT_PHAP_LY.md) · [Danh mục máy đọc](skills-manifest.json)
 
@@ -338,3 +338,13 @@ Theo [LICENSE](LICENSE), bộ tài liệu thuộc bản quyền **CES Global, 20
 | **Thương mại** | CES Global có thể phân phối cùng nội dung theo điều khoản thương mại riêng, bao gồm đóng gói vào CES Agent Workspace |
 
 Xem [toàn văn giấy phép CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) và file LICENSE để biết điều khoản đầy đủ.
+
+## File đầu ra bắt buộc
+
+Khi tạo sản phẩm nghiệp vụ, phải tạo file thực tế và cung cấp liên kết tải ngay; không chờ yêu cầu xuất file bổ sung. Văn bản mặc định Word, bảng theo dõi mặc định Excel, gói skill mặc định ZIP; định dạng người dùng chỉ định được ưu tiên. Mỗi skill ghi định dạng tại đầu SKILL.md và manifest. Nội dung chat chỉ hỗ trợ trao đổi, không thay file giao.
+
+## Lựa chọn định dạng bổ sung
+
+Không giới hạn đầu ra vào định dạng mặc định. Chọn định dạng theo sản phẩm người dùng yêu cầu và công cụ thực tế: DOCX để sửa văn bản; PDF để đọc/in/công bố; XLSX để giữ sheet/công thức; CSV để trao đổi dữ liệu bảng; TXT/MD để giao nội dung thuần; HTML để giao nội dung web; JSON/YAML để giao dữ liệu hoặc cấu hình; PPTX để giao bài trình chiếu; PNG/SVG để giao biểu đồ; TEX/BIB để giao nguồn bài viết khoa học/danh mục trích dẫn; ZIP để gom bộ hồ sơ hoặc gói skill. Chỉ tạo định dạng bổ sung khi sản phẩm cần hoặc người dùng yêu cầu; danh sách định dạng là cách lựa chọn đầu ra, không cam kết mọi công cụ chuyển đổi đều có sẵn.
+
+Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.

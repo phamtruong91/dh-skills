@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Báo cáo kết quả đoàn công tác"
-  "short_description": "Hỗ trợ báo cáo kết quả đoàn công tác"
-  "default_prompt": "Hãy dùng $bao-cao-ket-qua-doan để hỗ trợ công việc: Báo cáo kết quả đoàn công tác; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Báo cáo kết quả đoàn công tác
+  short_description: Hỗ trợ báo cáo kết quả đoàn công tác
+  default_prompt: 'Hãy dùng $bao-cao-ket-qua-doan để hỗ trợ công việc: Báo cáo kết quả đoàn công tác; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Xây dựng đề án vị trí việc làm"
-  "short_description": "Hỗ trợ xây dựng đề án vị trí việc làm"
-  "default_prompt": "Hãy dùng $de-an-vi-tri-viec-lam để hỗ trợ công việc: Xây dựng đề án vị trí việc làm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Xây dựng đề án vị trí việc làm
+  short_description: Hỗ trợ xây dựng đề án vị trí việc làm
+  default_prompt: 'Hãy dùng $de-an-vi-tri-viec-lam để hỗ trợ công việc: Xây dựng đề án vị trí việc làm; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

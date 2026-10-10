@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Soạn báo cáo tổng hợp phân hiệu"
-  "short_description": "Hỗ trợ soạn báo cáo tổng hợp phân hiệu"
-  "default_prompt": "Hãy dùng $bao-cao-tong-hop-phan-hieu để hỗ trợ công việc: Soạn báo cáo tổng hợp phân hiệu; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Soạn báo cáo tổng hợp phân hiệu
+  short_description: Hỗ trợ soạn báo cáo tổng hợp phân hiệu
+  default_prompt: 'Hãy dùng $bao-cao-tong-hop-phan-hieu để hỗ trợ công việc: Soạn báo cáo tổng hợp phân hiệu; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'

@@ -5,6 +5,12 @@ description: "Soạn báo cáo tổng kết công tác sinh viên năm học đ�
 
 # Soạn báo cáo công tác sinh viên năm học
 
+## Định dạng và file đầu ra
+
+Định dạng đầu ra có thể chọn theo sản phẩm/yêu cầu: .docx, .pdf. Đọc mục “Định dạng bổ sung” trong quy cách đầu ra trước khi chọn.
+
+**Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
+
 ## Quy cách đầu ra và thông tin thiếu
 
 Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
@@ -81,8 +87,8 @@ Khi Phòng Công tác sinh viên cần soạn báo cáo tổng kết năm học:
 
 **Bước 5. Kiểm tra, trình duyệt và xuất bản**
 - Làm gì: kiểm tra số liệu, chính tả, thể thức văn bản hành chính; trình lãnh đạo phòng duyệt
-  trước khi trình ký (Human gate); xuất báo cáo hoàn chỉnh định dạng markdown, sẵn sàng trình
-  ký/chuyển Word.
+  trước khi trình ký (Human gate); xuất báo cáo hoàn chỉnh file theo định dạng đầu ra của skill, sẵn sàng trình
+  ký/xuất file Word.
 - Dùng input: `nguoi_ky`, dự thảo báo cáo (kết quả bước 3–4).
 - Vai trò: Trưởng Phòng Công tác sinh viên · AI hỗ trợ: rà soát thể thức văn bản · ⏱ ~2–3 giờ (ước tính, chưa kể thời gian chờ duyệt)
 - Lưu ý nghiệp vụ: lãnh đạo phòng duyệt chưa đạt thì quay lại chỉnh sửa; chỉ trình ký khi đã
@@ -107,6 +113,8 @@ flowchart TD
 
 ## Đầu ra
 
+File nghiệp vụ thực tế theo định dạng mặc định ở đầu skill hoặc định dạng người dùng yêu cầu, kèm liên kết tải trong phản hồi cuối.
+
 Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](references/quy-cach-dau-ra.md), giữ các trường chưa có dữ liệu ở trạng thái trống. Không xuất kèm checklist/phụ lục kiểm tra đầu ra.
 
 ## Kiểm tra nội bộ trước khi giao
@@ -130,7 +138,7 @@ Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 ## Quản trị phiên bản
 
-- Phiên bản gói: `1.2.1`; ngày cập nhật: `2026-10-10`.
+- Phiên bản gói: `1.3.1`; ngày cập nhật: `2026-10-10`.
 - Kho nguồn: https://github.com/phamtruong91/university-skills-framework
 - Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
 - Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-ctsv-nam`; không tự gán SHA chưa tạo.

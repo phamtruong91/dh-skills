@@ -2,6 +2,26 @@
 
 Loại sản phẩm: `hanh-chinh`.
 
+## Bắt buộc xuất file
+
+Sản phẩm cuối phải là file thực tế đã được tạo, có thể tải xuống và tiếp tục chỉnh sửa. Không dùng nội dung trong chat hoặc writing block thay file; không chờ người dùng nhắc “xuất file”. Nếu người dùng chỉ hỏi giải thích hoặc kiểm tra trạng thái, trả lời trong chat; nếu yêu cầu soạn, sửa, tổng hợp hoặc tạo sản phẩm nghiệp vụ thì phải xuất file. Nếu người dùng yêu cầu rõ chỉ trả nội dung trong chat, thực hiện đúng yêu cầu đó.
+
+Ưu tiên định dạng người dùng chỉ định và mẫu bắt buộc của nghiệp vụ. Mặc định của skill được ghi dưới đây. Văn bản hành chính, báo cáo dạng văn bản, biên bản, thông báo, quyết định, tờ trình, hợp đồng, phiếu, đề cương và tài liệu nội dung xuất Word `.docx`; bảng tính, bảng theo dõi hoặc lịch dạng bảng xuất Excel `.xlsx`; gói skill xuất các file nguồn và `.zip`. PDF chỉ xuất khi người dùng yêu cầu hoặc mẫu yêu cầu. Bộ hồ sơ có nhiều văn bản phải tạo đủ file nghiệp vụ thành phần, có thể gom trong một ZIP khi phù hợp.
+
+Trước khi giao: kiểm tra file tồn tại và mở/đọc được, đuôi file khớp định dạng thực, nội dung khớp dữ liệu, đúng mẫu, có chỗ điền thông tin thiếu và không kèm tài liệu kiểm tra đầu ra. Word/PDF cần xem lại bố cục bằng bộ dựng trang khi có; Excel cần kiểm tra sheet, công thức và vùng in. Chỉ xác nhận kiểm tra nào đã thực hiện. Nếu không xem trước được, nêu rõ trong tin nhắn giao file, không chèn ghi chú vào file.
+
+Phản hồi cuối cung cấp liên kết tải file hoặc file đính kèm và một câu mô tả ngắn. Nếu công cụ xuất lỗi, sửa lỗi trong phạm vi được phép; nếu vẫn không tạo được định dạng yêu cầu, báo giới hạn và giữ nguồn, không tuyên bố đã xuất file hoặc tự đổi đuôi file. Không tự chuyển sang Markdown/chat để coi nhiệm vụ đã hoàn thành. Việc thiếu dữ liệu không ngăn tạo file với chỗ điền đúng mẫu gốc.
+
+Định dạng mặc định của skill: **.xlsx**. Nếu yêu cầu gồm cả báo cáo thuyết minh, tạo thêm file Word cho báo cáo; không ghép báo cáo dài vào bảng tính.
+
+## Định dạng bổ sung
+
+Định dạng đầu ra có thể chọn theo sản phẩm/yêu cầu: .xlsx, .csv, .pdf. Đọc mục “Định dạng bổ sung” trong quy cách đầu ra trước khi chọn.
+
+Không giới hạn đầu ra vào định dạng mặc định. Chọn định dạng theo sản phẩm người dùng yêu cầu và công cụ thực tế: DOCX để sửa văn bản; PDF để đọc/in/công bố; XLSX để giữ sheet/công thức; CSV để trao đổi dữ liệu bảng; TXT/MD để giao nội dung thuần; HTML để giao nội dung web; JSON/YAML để giao dữ liệu hoặc cấu hình; PPTX để giao bài trình chiếu; PNG/SVG để giao biểu đồ; TEX/BIB để giao nguồn bài viết khoa học/danh mục trích dẫn; ZIP để gom bộ hồ sơ hoặc gói skill. Chỉ tạo định dạng bổ sung khi sản phẩm cần hoặc người dùng yêu cầu; danh sách định dạng là cách lựa chọn đầu ra, không cam kết mọi công cụ chuyển đổi đều có sẵn.
+
+Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.
+
 ## Quy tắc giao văn bản
 
 File giao người dùng chỉ chứa sản phẩm nghiệp vụ được yêu cầu, trình bày như văn bản thực tế. Không ghép checklist nghiệm thu, bảng rà soát pháp lý, bảng truy nguyên nguồn, danh sách thiếu dữ liệu, phiếu kiểm duyệt, nhật ký AI hay giải thích cách tạo vào file. Những bước đối chiếu trong quy trình là công việc nội bộ, không phải tài liệu phải xuất. Không tạo thêm file kiểm tra nếu người dùng không yêu cầu.
@@ -31,7 +51,7 @@ Nguồn gốc để đối chiếu: [Nghị định 30/2020/NĐ-CP và phụ l�
 - Văn bản có tên loại: tên loại chữ hoa đậm cỡ 13–14, căn giữa; trích yếu ở dòng dưới, đậm cùng cỡ. Trích yếu của thông báo, báo cáo, kế hoạch, tờ trình không bắt buộc mở đầu “V/v”. Công văn không có tiêu đề “CÔNG VĂN”; trích yếu cỡ 12–13, chữ thường, sau “V/v”, dưới số/ký hiệu.
 - Chức vụ/quyền hạn người ký chữ hoa đậm cỡ 13–14; họ tên đậm cỡ 13–14. Chỉ dùng TM., KT., TL., TUQ. khi đúng tư cách và có căn cứ phân công/ủy quyền; không mặc định người ký thay hoặc thừa lệnh.
 - Nơi nhận ở cuối bên trái: nhãn “Nơi nhận:” cỡ 12 nghiêng đậm, danh sách cỡ 11. Khối chữ ký ở cuối bên phải; biên bản bố trí chữ ký các bên theo mẫu. Số trang chữ số Ả Rập cỡ 13–14, giữa lề trên, không hiển thị trang đầu.
-- Nếu xuất DOCX/PDF, thiết lập thực các thuộc tính trên, bảng không tràn lề, hàng không bị cắt, khối ký không đứng một mình; đọc lại bản render trước giao file. Markdown chỉ biểu diễn nội dung, không chứng minh lề, phông, cỡ chữ hoặc phân trang đã đúng.
+- Khi xuất DOCX/PDF, thiết lập thực các thuộc tính trên, bảng không tràn lề, hàng không bị cắt, khối ký không đứng một mình; đọc lại bản render trước giao file. Markdown chỉ biểu diễn nội dung, không chứng minh lề, phông, cỡ chữ hoặc phân trang đã đúng.
 
 ## Cấu trúc sản phẩm của skill
 

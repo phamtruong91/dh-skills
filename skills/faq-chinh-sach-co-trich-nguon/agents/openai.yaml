@@ -1,4 +1,4 @@
-"interface":
-  "display_name": "Hỏi đáp chính sách có trích nguồn"
-  "short_description": "Hỗ trợ hỏi đáp chính sách có trích nguồn"
-  "default_prompt": "Hãy dùng $faq-chinh-sach-co-trich-nguon để hỗ trợ công việc: Hỏi đáp chính sách có trích nguồn; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt."
+interface:
+  display_name: Hỏi đáp chính sách có trích nguồn
+  short_description: Hỗ trợ hỏi đáp chính sách có trích nguồn
+  default_prompt: 'Hãy dùng $faq-chinh-sach-co-trich-nguon để hỗ trợ công việc: Hỏi đáp chính sách có trích nguồn; xác nhận dữ liệu, căn cứ hiện hành và xuất dự thảo để kiểm duyệt. Tạo file .docx thực tế và cung cấp liên kết tải; không chỉ trả nội dung trong chat. Giữ chỗ điền thông tin thiếu đúng mẫu.'
