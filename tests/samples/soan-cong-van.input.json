@@ -1,0 +1,34 @@
+{
+  "_ghi_chu": "Dữ liệu GIẢ để thử skill. Tên cơ quan, người, số hiệu đều là mẫu.",
+  "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+  "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+  "dia_danh": "Hà Nội",
+  "so_van_ban": null,
+  "ngay_ban_hanh": null,
+  "ky_hieu_don_vi_soan": "ĐT",
+  "loai_cong_van": "Phúc đáp",
+  "trich_yeu": "về việc cử cán bộ tham gia tập huấn công tác tuyển sinh năm 2027",
+  "cong_van_den": {
+    "so_ky_hieu": "118/CQA-TS",
+    "ngay": "28/09/2026",
+    "co_quan": "Cơ quan A (mẫu)",
+    "ve_viec": "tập huấn công tác tuyển sinh năm 2027"
+  },
+  "noi_dung": [
+    "Trường Đại học Mẫu A đồng ý cử 02 cán bộ tham gia tập huấn công tác tuyển sinh năm 2027.",
+    "Thời gian tập huấn: ngày 20/10/2026, địa điểm: Hà Nội, theo nội dung Quý Cơ quan đã thông báo.",
+    "Đề nghị Quý Cơ quan gửi giấy mời và tài liệu tập huấn trước ngày 05/10/2026."
+  ],
+  "noi_nhan": [
+    "Cơ quan A (mẫu)",
+    "Lưu: VT, ĐT"
+  ],
+  "nguoi_ky": {
+    "chuc_danh": "Trưởng phòng Đào tạo",
+    "ho_ten": "Nguyễn Văn An",
+    "hinh_thuc": "TUQ. HIỆU TRƯỞNG"
+  },
+  "van_ban_uy_quyen": null,
+  "do_khan": "Thường",
+  "ngay_chay_thu": "10/10/2026"
+}

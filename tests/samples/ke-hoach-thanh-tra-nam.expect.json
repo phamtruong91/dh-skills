@@ -1,0 +1,53 @@
+{
+  "skill": "ke-hoach-thanh-tra-nam",
+  "output": "ke-hoach-thanh-tra-nam.docx",
+  "kind": "docx",
+  "must_contain": [
+    "KẾ HOẠCH",
+    "Thanh tra nội bộ năm 2027",
+    "I. MỤC ĐÍCH, YÊU CẦU",
+    "II. NỘI DUNG THANH TRA",
+    "III. PHƯƠNG PHÁP THANH TRA",
+    "IV. TỔ CHỨC THỰC HIỆN",
+    "thanh tra đột xuất",
+    "HIỆU TRƯỞNG",
+    "Trưởng đoàn: ............"
+  ],
+  "must_not_contain": [
+    "42/2013",
+    "43/2023",
+    "11/2022/QH15",
+    "Luật Thanh tra 2022"
+  ],
+  "blank_labels": [
+    "Số:",
+    "1. Mục đích",
+    "2. Yêu cầu"
+  ],
+  "traps": [
+    {
+      "id": "XUNG_DOT_LOI_ICH",
+      "mo_ta": "Phạm Văn Dũng (Phòng Đào tạo) nằm trong đoàn thanh tra Phòng Đào tạo"
+    },
+    {
+      "id": "TRUNG_DON_VI_CUNG_QUY",
+      "mo_ta": "Cuộc 3 và cuộc 5 cùng Phòng Tài chính – Kế toán, cùng Quý III/2027"
+    },
+    {
+      "id": "THIEU_DOAN_CUOC_4",
+      "mo_ta": "Cuộc 4 chưa có đoàn: phải chừa chỗ điền"
+    },
+    {
+      "id": "THIEU_MUC_DICH",
+      "mo_ta": "Không có mục đích, yêu cầu: không tự bịa"
+    },
+    {
+      "id": "NGOAI_LE_THANH_TRA_THI",
+      "mo_ta": "Cuộc 1 (tuyển sinh) và cuộc 2 (thi) diễn ra đúng thời điểm hoạt động là hợp lệ, không bị coi là trùng lịch"
+    },
+    {
+      "id": "MAU_THUAN_CO_QUAN_BAN_HANH",
+      "mo_ta": "Cấu trúc nêu 'đơn vị lập' nhưng quy tắc chung yêu cầu cơ quan ban hành là trường"
+    }
+  ]
+}

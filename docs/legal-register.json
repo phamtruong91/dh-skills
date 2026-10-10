@@ -1,210 +1,218 @@
 {
-  "as_of": "2026-10-09",
-  "scope": "targeted-source-review-not-comprehensive-legal-certification",
-  "entries": [
-    {
-      "id": "dao-tao",
-      "title": "Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026",
-      "url": "https://vanban.chinhphu.vn/?classid=1&docid=219044&pageid=27160&typegroupid=6",
-      "match": [
-        "08/2021/TT-BGDĐT"
-      ],
-      "instruction": "Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu."
-    },
-    {
-      "id": "chuong-trinh",
-      "title": "Thông tư 54/2026/TT-BGDĐT, hiệu lực 30/06/2026",
-      "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-54-2026-tt-bgddt-470099.htm",
-      "match": [
-        "17/2021/TT-BGDĐT",
-        "02/2022/TT-BGDĐT"
-      ],
-      "instruction": "Phân loại xây dựng chương trình, chuẩn đầu ra hay mở ngành; yêu cầu chuẩn ngành/trình độ, trạng thái chương trình và ngày tiếp nhận hồ sơ. Đọc toàn văn và điều khoản chuyển tiếp trước khi đổi chuẩn/mẫu; chưa xác minh toàn văn thì ghi điều kiện chưa xác nhận, không tự đặt thời hạn chuyển đổi."
-    },
-    {
-      "id": "kiem-dinh-co-so",
-      "title": "Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026",
-      "url": "https://congbao.cdnchinhphu.vn/180507251028987904/2026/4/24/469367-1777014846_v1_1777018480_signed.pdf",
-      "match": [
-        "12/2017/TT-BGDĐT"
-      ],
-      "instruction": "Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học."
-    },
-    {
-      "id": "kiem-dinh-ctdt",
-      "title": "Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025",
-      "url": "https://chinhphu.vn/?classid=1&docid=213005&pageid=27160",
-      "match": [
-        "04/2016/TT-BGDĐT"
-      ],
-      "instruction": "Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ."
-    },
-    {
-      "id": "cong-khai",
-      "title": "Thông tư 09/2024/TT-BGDĐT, hiệu lực 19/07/2024, thay 36/2017",
-      "url": "https://chinhphu.vn/?classid=1&docid=210411&pageid=27160",
-      "match": [
-        "36/2017/TT-BGDĐT"
-      ],
-      "instruction": "Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản."
-    },
-    {
-      "id": "hoc-phi",
-      "title": "Nghị định 238/2025/NĐ-CP, hiệu lực 03/09/2025",
-      "url": "https://vanban.chinhphu.vn/?docid=215169&pageid=27160",
-      "match": [
-        "81/2021/NĐ-CP",
-        "97/2023/NĐ-CP"
-      ],
-      "instruction": "Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học."
-    },
-    {
-      "id": "tuyen-sinh",
-      "title": "Thông tư 06/2026/TT-BGDĐT, hiệu lực 15/02/2026",
-      "url": "https://vanban.chinhphu.vn/?docid=217071&pageid=27160",
-      "match": [
-        "08/2022/TT-BGDĐT"
-      ],
-      "instruction": "Yêu cầu năm tuyển sinh, phương thức, trình độ và đề án đã duyệt. Đối chiếu quy chế 06/2026 và hướng dẫn năm tuyển sinh về điều kiện, quy đổi điểm, điểm cộng, thứ tự nguyện vọng; không giữ công thức cũ hoặc cộng hai lần chứng chỉ. Không tự đặt chỉ tiêu/ngưỡng khi chưa có quyết định và căn cứ."
-    },
-    {
-      "id": "van-bang",
-      "title": "Thông tư 10/2026/TT-BGDĐT – Quy chế văn bằng, chứng chỉ",
-      "url": "https://xaydungchinhsach.chinhphu.vn/quy-che-moi-ve-van-bang-chung-chi-cua-he-thong-giao-duc-quoc-dan-119260304120550185.htm",
-      "match": [
-        "21/2019/TT-BGDĐT"
-      ],
-      "instruction": "Đối chiếu văn bản gốc, ngày hiệu lực và chuyển tiếp trước khi chọn mẫu, sổ, quy trình cấp/chỉnh sửa/thu hồi; không dùng mẫu 21/2019 như mẫu hiện hành. Yêu cầu hồ sơ gốc, quyết định và thẩm quyền. AI chỉ chuẩn bị hồ sơ, không cấp bằng, gán số hay tự xác nhận chữ ký."
-    },
-    {
-      "id": "ke-toan",
-      "title": "Thông tư 24/2024/TT-BTC, áp dụng từ năm tài chính 2025; sửa đổi 46/2025",
-      "url": "https://vbpl.vn/cantho/Pages/ivbpq-lichsu.aspx?ItemID=166774&do=word",
-      "match": [
-        "107/2017/TT-BTC"
-      ],
-      "instruction": "Phân biệt năm tài chính, chế độ kế toán, chứng từ, sổ và báo cáo; dùng hệ thống biểu mẫu của 24/2024 cùng sửa đổi 46/2025 theo thời điểm. Không chuyển mã tài khoản hoặc mẫu cũ cơ học; đối chiếu sổ, số dư đầu/cuối kỳ và xác nhận của kế toán trưởng."
-    },
-    {
-      "id": "ngan-sach",
-      "title": "Luật 89/2025/QH15 và Nghị định 73/2026/NĐ-CP – ngân sách năm 2026",
-      "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-73-2026-nd-cp-469083.htm",
-      "match": [
-        "163/2016/NĐ-CP"
-      ],
-      "instruction": "Yêu cầu năm ngân sách, nguồn kinh phí, dự toán được giao và thời điểm nghiệp vụ; áp dụng Luật 89 từ 01/01/2026 và NĐ73 cho năm ngân sách 2026. Quyết toán 2025 phải kiểm tra chế độ và chuyển tiếp của năm đó, không tự thay toàn bộ căn cứ lịch sử."
-    },
-    {
-      "id": "mua-sam",
-      "title": "Nghị định 214/2025, sửa đổi 165/2026, 170/2026, 349/2026; VBHN 36/2026/VBHN-NĐ-BTC ngày 23/09/2026",
-      "url": "https://chinhphu.vn/?docid=219604&pageid=27160",
-      "match": [
-        "@mua-sam"
-      ],
-      "instruction": "Yêu cầu chủ thể, nguồn vốn, loại gói, dự toán được duyệt, phân cấp thẩm quyền, mua sắm tập trung, điều kiện áp dụng hình thức và thời điểm phát hành. Đối chiếu Luật Đấu thầu hợp nhất 74/VBHN-VPQH ngày 25/03/2026 và nghị định hiện hành. Không suy ra chỉ định thầu/mua sắm trực tiếp chỉ vì nhỏ lẻ hoặc cấp bách; ghi điều khoản và điều kiện từng gói, cán bộ thẩm định xác nhận. Không tự đặt hạn mức."
-    },
-    {
-      "id": "tai-san",
-      "title": "Nghị định 186/2025/NĐ-CP, hiệu lực 01/07/2025",
-      "url": "https://vanban.chinhphu.vn/?docid=214493&pageid=27160",
-      "match": [
-        "@tai-san"
-      ],
-      "instruction": "Yêu cầu nguồn hình thành, chủ sở hữu, phân cấp quản lý và hồ sơ tài sản công; phân biệt mua sắm, kiểm kê, khai thác, thanh lý. Đối chiếu thẩm quyền và điều kiện theo NĐ186, không tự quyết định xử lý tài sản."
-    },
-    {
-      "id": "khcn",
-      "title": "Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025",
-      "url": "https://vanban.chinhphu.vn/?classid=1&docid=215664&pageid=27160",
-      "match": [
-        "@khcn"
-      ],
-      "instruction": "Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ265 về tài chính và NĐ267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận."
-    },
-    {
-      "id": "shtt",
-      "title": "Luật 131/2025/QH15 sửa đổi sở hữu trí tuệ, hiệu lực 01/04/2026",
-      "url": "https://congbao.chinhphu.vn/van-ban/luat-so-131-2025-qh15-468691.htm",
-      "match": [
-        "@shtt"
-      ],
-      "instruction": "Yêu cầu chủ thể quyền, nguồn tài trợ, hợp đồng và loại tài sản trí tuệ; đối chiếu sửa đổi 131/2025 theo thời điểm. Không mặc định quyền thuộc trường hay tác giả khi chưa có căn cứ; rà soát quyền sử dụng học liệu trước chia sẻ/chuyển giao."
-    },
-    {
-      "id": "nhan-su-0",
-      "title": "Luật 129/2025/QH15; Nghị định 259/2026/NĐ-CP; phạm vi: Viên chức đơn vị sự nghiệp công lập; kiểm tra chuyển tiếp và quy định riêng về nhà giáo",
-      "url": "https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-259-2026-nd-cp-quy-dinh-ve-tuyen-dung-su-dung-va-quan-ly-vien-chuc-119260707070701707.htm",
-      "match": [
-        "quy-trinh-tuyen-dung",
-        "thong-bao-tuyen-dung",
-        "hop-dong-lam-viec",
-        "quy-trinh-bo-nhiem",
-        "quyet-dinh-dieu-dong",
-        "115/2020/NĐ-CP",
-        "85/2023/NĐ-CP",
-        "101/2017/NĐ-CP",
-        "89/2021/NĐ-CP"
-      ],
-      "instruction": "Cập nhật căn cứ tuyển dụng, hợp đồng làm việc, bổ nhiệm, điều động và đào tạo viên chức. Không tái sử dụng số điều hoặc mẫu phiếu của NĐ115. Phải yêu cầu ngày tuyển dụng, ngày phê duyệt kế hoạch, loại hợp đồng, trạng thái hồ sơ và bản văn NĐ259 để chọn điều khoản chuyển tiếp; không tự áp dụng điều22 LuậtViênChức2010. Các văn bản cũ chỉ là căn cứ lịch sử khi chuyển tiếp cho phép."
-    },
-    {
-      "id": "nhan-su-1",
-      "title": "233/2026/NĐ-CP; phạm vi: Đánh giá đơn vị sự nghiệp công lập và viên chức",
-      "url": "https://baochinhphu.vn/cham-diem-danh-gia-vien-chuc-hang-thang-hoac-hang-quy-102260630052951335.htm",
-      "match": [
-        "phieu-danh-gia-vien-chuc",
-        "bao-cao-danh-gia-vc",
-        "90/2020/NĐ-CP",
-        "48/2023/NĐ-CP"
-      ],
-      "instruction": "Dùng khung tiêu chí và quy chế đánh giá của đơn vị; bổ sung dữ liệu theo dõi/chấm điểm tháng hoặc quý, nhiệm vụ được giao, sản phẩm công việc, minh chứng, kết quả giám sát. Không tạo thang điểm từ trí nhớ, không tiếp tục ghi Mẫu03 của NĐ90 là mẫu hiện hành. Tính điểm và xếp loại phải từ tiêu chí được phê duyệt; báo cáo liệt kê thiếu minh chứng."
-    },
-    {
-      "id": "nhan-su-2",
-      "title": "Luật125/2025/QH15; Nghị quyết10/2026/NQ-CP giữ99/2019 một phần; phạm vi: Quản trị cơ sở giáo dục đại học; phân biệt công lập và tư thục",
-      "url": "https://baochinhphu.vn/tiep-tuc-ap-dung-mot-so-van-ban-huong-dan-thi-hanh-mot-so-luat-102260312173840717.htm",
-      "match": [
-        "quy-che-to-chuc-hoat-dong-truong",
-        "chuan-bi-hop-hoi-dong-truong",
-        "Áp dụng toàn bộ 99/2019/NĐ-CP, mô hình hội đồng trường công lập"
-      ],
-      "instruction": "99/2019 không bị thay thế toàn bộ. NQ10 loại trừ quy định về hội đồng trường/đại học công lập: điểm b khoản4Điều2, điểm e khoản1Điều3, điểm a khoản2Điều4, điểm c khoản4Điều4, điểm b khoản2Điều5, Điều7, khoản1Điều9, điểm c khoản2Điều16. Không tổ chức hoạt động mới của hội đồng trường công lập theo quy trình cũ. Yêu cầu loại hình trường, thời điểm xử lý, quy chế hiện hành, quyết định phân quyền; tư thục phải đối chiếu Luật125."
-    },
-    {
-      "id": "nhan-su-3",
-      "title": "Luật Nhà giáo; Nghị định93/2026/NĐ-CP; khoản9Điều62 NĐ259/2026; phạm vi: Viên chức là nhà giáo",
-      "url": "https://xaydungchinhsach.chinhphu.vn/huong-dan-quan-ly-doi-ngu-nha-giao-sap-xep-bo-nhiem-chuc-danh-thuc-hien-che-do-chinh-sach-xep-luong-119260811083919821.htm",
-      "match": [
-        "Áp dụng tuyển dụng viên chức chung cho mọi giảng viên"
-      ],
-      "instruction": "Thêm input đối tượng là nhà giáo hay viên chức khác. Nếu pháp luật nhà giáo có quy định khác về thẩm quyền, tiêu chuẩn, điều kiện, trình tự, thủ tục tuyển dụng/sử dụng/quản lý, áp dụng quy định nhà giáo và hướng dẫn BộGDĐT thay vì quy tắc chung NĐ259."
-    },
-    {
-      "id": "nhan-su-4",
-      "title": "235/2026/NĐ-CP; phạm vi: Hợp đồng lao động và dịch vụ thực hiện công việc trong đơn vị sự nghiệp công lập",
-      "url": "https://baochinhphu.vn/quy-dinh-moi-ve-hop-dong-thuc-hien-cong-viec-trong-don-vi-su-nghiep-cong-lap-102260630062226594.htm",
-      "match": [
-        "hop-dong-lam-viec",
-        "Hợp đồng lao động hỗ trợ và nghiệp vụ trường công theo quy tắc cũ"
-      ],
-      "instruction": "Phân biệt hợp đồng làm việc của viên chức với hợp đồng lao động/dịch vụ. NĐ235 cho công việc quản lý/chuyên môn/nghiệp vụ/hỗ trợ; công việc phục vụ như bảo vệ, lái xe ưu tiên tổ chức cung cấp dịch vụ theo điều kiện nghị định, không mặc định tất cả là hợp đồng lao động. Kiểm tra thẩm quyền ký theo nhóm vị trí."
-    }
-  ],
-  "open_issues": [
-    {
-      "old": "42/2013/NĐ-CP",
-      "issue": "ĐÃ XÁC MINH 2026-10-10: NĐ 42/2013/NĐ-CP đã bị bãi bỏ toàn bộ bởi NĐ 03/2024/NĐ-CP (điểm e, khoản 3 Điều khoản thi hành). Skill ke-hoach-thanh-tra-nam đã cập nhật: gạch bỏ căn cứ cũ, thay bằng NĐ 03/2024 (tổ chức bộ máy) + Luật Thanh tra 2022 & NĐ 43/2023 (hoạt động). Vẫn giữ [CẦN XÁC MINH] đối chiếu văn bản gốc tại ngày nghiệp vụ.",
-      "status": "resolved-2026-10-10"
-    },
-    {
-      "old": "163/2016/NĐ-CP",
-      "issue": "Trong skill là nghị định hướng dẫn ngân sách, không phải đào tạo viên chức; chuyển sang nhóm tài chính kiểm tra."
-    },
-    {
-      "issue": "54/2026 và 56/2026: phải xác minh toàn văn điều chuyển tiếp trước thực thi; không khẳng định thời hạn chuyển đổi từ nguồn thứ cấp."
-    },
-    {
-      "issue": "18/2021,23/2021,10/2016,16/2015: giữ căn cứ hiện có, kiểm tra lại trạng thái tại ngày nghiệp vụ."
-    }
-  ]
+ "as_of": "2026-10-09",
+ "scope": "targeted-source-review-not-comprehensive-legal-certification",
+ "entries": [
+  {
+   "id": "dao-tao",
+   "title": "Thông tư 56/2026/TT-BGDĐT, hiệu lực 07/07/2026",
+   "url": "https://vanban.chinhphu.vn/?classid=1&docid=219044&pageid=27160&typegroupid=6",
+   "match": [
+    "08/2021/TT-BGDĐT"
+   ],
+   "instruction": "Yêu cầu khóa tuyển sinh, chương trình, ngày áp dụng và quy chế đào tạo nội bộ. Đối chiếu điều khoản chuyển tiếp trong toàn văn trước khi chọn quy tắc; không tự áp dụng quy định mới hồi tố cho mọi khóa. Không dùng điều/khoản, thang điểm hoặc điều kiện tốt nghiệp cũ như quy định hiện hành nếu chưa đối chiếu."
+  },
+  {
+   "id": "chuong-trinh",
+   "title": "Thông tư 54/2026/TT-BGDĐT, hiệu lực 30/06/2026",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-54-2026-tt-bgddt-470099.htm",
+   "match": [
+    "17/2021/TT-BGDĐT",
+    "02/2022/TT-BGDĐT"
+   ],
+   "instruction": "Phân loại xây dựng chương trình, chuẩn đầu ra hay mở ngành; yêu cầu chuẩn ngành/trình độ, trạng thái chương trình và ngày tiếp nhận hồ sơ. Đọc toàn văn và điều khoản chuyển tiếp trước khi đổi chuẩn/mẫu; chưa xác minh toàn văn thì ghi điều kiện chưa xác nhận, không tự đặt thời hạn chuyển đổi."
+  },
+  {
+   "id": "kiem-dinh-co-so",
+   "title": "Thông tư 20/2026/TT-BGDĐT, hiệu lực 15/05/2026",
+   "url": "https://congbao.cdnchinhphu.vn/180507251028987904/2026/4/24/469367-1777014846_v1_1777018480_signed.pdf",
+   "match": [
+    "12/2017/TT-BGDĐT"
+   ],
+   "instruction": "Yêu cầu ngày hoàn tất tự đánh giá, ngày đăng ký đánh giá ngoài, khung tiêu chuẩn và minh chứng. Điều 51: chỉ cơ sở đã tự đánh giá VÀ đăng ký đánh giá ngoài trước 15/05/2026 được tiếp tục khung 12/2017, hoàn tất chậm nhất 31/12/2026. Ngoài chuyển tiếp dùng 20/2026; không chuyển thang điểm cơ học."
+  },
+  {
+   "id": "kiem-dinh-ctdt",
+   "title": "Thông tư 04/2025/TT-BGDĐT, hiệu lực 04/04/2025",
+   "url": "https://chinhphu.vn/?classid=1&docid=213005&pageid=27160",
+   "match": [
+    "04/2016/TT-BGDĐT"
+   ],
+   "instruction": "Tách kiểm định chương trình khỏi kiểm định cơ sở. Yêu cầu phiên bản tiêu chuẩn, ngày đăng ký và bộ minh chứng; trích tiêu chí từ phụ lục hiện hành. Không mặc định khung 11 tiêu chuẩn của 04/2016 là khung hiện hành; đối chiếu chuyển tiếp trước khi tiếp tục hồ sơ cũ."
+  },
+  {
+   "id": "cong-khai",
+   "title": "Thông tư 09/2024/TT-BGDĐT, hiệu lực 19/07/2024, thay 36/2017",
+   "url": "https://chinhphu.vn/?classid=1&docid=210411&pageid=27160",
+   "match": [
+    "36/2017/TT-BGDĐT"
+   ],
+   "instruction": "Chuyển từ mẫu ba công khai cũ sang nội dung công khai và báo cáo thường niên theo 09/2024. Đối chiếu phần thông tin chung, phần giáo dục đại học và phụ lục báo cáo thường niên; lưu nội dung trên website tối thiểu 5 năm. Ghi thời điểm, đường dẫn công bố, người duyệt và bằng chứng cập nhật. Không tự thêm số liệu hoặc tự công bố; không coi báo cáo gửi cơ quan quản lý là nghĩa vụ định kỳ nếu không có căn cứ/yêu cầu bằng văn bản."
+  },
+  {
+   "id": "hoc-phi",
+   "title": "Nghị định 238/2025/NĐ-CP, hiệu lực 03/09/2025",
+   "url": "https://vanban.chinhphu.vn/?docid=215169&pageid=27160",
+   "match": [
+    "81/2021/NĐ-CP",
+    "97/2023/NĐ-CP"
+   ],
+   "instruction": "Yêu cầu năm học, trình độ, ngành, loại hình trường, mức tự chủ, quyết định học phí được duyệt và đối tượng miễn/giảm/hỗ trợ. Đối chiếu 238/2025 và chuyển tiếp; không lấy mức trần, tỷ lệ tăng hoặc đối tượng từ 81/2021/97/2023 làm mặc định hiện hành. Chỉ tính khi đủ căn cứ và dữ liệu từng người học."
+  },
+  {
+   "id": "tuyen-sinh",
+   "title": "Thông tư 06/2026/TT-BGDĐT, hiệu lực 15/02/2026",
+   "url": "https://vanban.chinhphu.vn/?docid=217071&pageid=27160",
+   "match": [
+    "08/2022/TT-BGDĐT"
+   ],
+   "instruction": "Yêu cầu năm tuyển sinh, phương thức, trình độ và đề án đã duyệt. Đối chiếu quy chế 06/2026 và hướng dẫn năm tuyển sinh về điều kiện, quy đổi điểm, điểm cộng, thứ tự nguyện vọng; không giữ công thức cũ hoặc cộng hai lần chứng chỉ. Không tự đặt chỉ tiêu/ngưỡng khi chưa có quyết định và căn cứ."
+  },
+  {
+   "id": "van-bang",
+   "title": "Thông tư 10/2026/TT-BGDĐT – Quy chế văn bằng, chứng chỉ",
+   "url": "https://xaydungchinhsach.chinhphu.vn/quy-che-moi-ve-van-bang-chung-chi-cua-he-thong-giao-duc-quoc-dan-119260304120550185.htm",
+   "match": [
+    "21/2019/TT-BGDĐT"
+   ],
+   "instruction": "Đối chiếu văn bản gốc, ngày hiệu lực và chuyển tiếp trước khi chọn mẫu, sổ, quy trình cấp/chỉnh sửa/thu hồi; không dùng mẫu 21/2019 như mẫu hiện hành. Yêu cầu hồ sơ gốc, quyết định và thẩm quyền. AI chỉ chuẩn bị hồ sơ, không cấp bằng, gán số hay tự xác nhận chữ ký."
+  },
+  {
+   "id": "ke-toan",
+   "title": "Thông tư 24/2024/TT-BTC, áp dụng từ năm tài chính 2025; sửa đổi 46/2025",
+   "url": "https://vbpl.vn/cantho/Pages/ivbpq-lichsu.aspx?ItemID=166774&do=word",
+   "match": [
+    "107/2017/TT-BTC"
+   ],
+   "instruction": "Phân biệt năm tài chính, chế độ kế toán, chứng từ, sổ và báo cáo; dùng hệ thống biểu mẫu của 24/2024 cùng sửa đổi 46/2025 theo thời điểm. Không chuyển mã tài khoản hoặc mẫu cũ cơ học; đối chiếu sổ, số dư đầu/cuối kỳ và xác nhận của kế toán trưởng."
+  },
+  {
+   "id": "ngan-sach",
+   "title": "Luật 89/2025/QH15 và Nghị định 73/2026/NĐ-CP – ngân sách năm 2026",
+   "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-73-2026-nd-cp-469083.htm",
+   "match": [
+    "163/2016/NĐ-CP"
+   ],
+   "instruction": "Yêu cầu năm ngân sách, nguồn kinh phí, dự toán được giao và thời điểm nghiệp vụ; áp dụng Luật 89 từ 01/01/2026 và NĐ73 cho năm ngân sách 2026. Quyết toán 2025 phải kiểm tra chế độ và chuyển tiếp của năm đó, không tự thay toàn bộ căn cứ lịch sử."
+  },
+  {
+   "id": "mua-sam",
+   "title": "Nghị định 214/2025, sửa đổi 165/2026, 170/2026, 349/2026; VBHN 36/2026/VBHN-NĐ-BTC ngày 23/09/2026",
+   "url": "https://chinhphu.vn/?docid=219604&pageid=27160",
+   "match": [
+    "@mua-sam"
+   ],
+   "instruction": "Yêu cầu chủ thể, nguồn vốn, loại gói, dự toán được duyệt, phân cấp thẩm quyền, mua sắm tập trung, điều kiện áp dụng hình thức và thời điểm phát hành. Đối chiếu Luật Đấu thầu hợp nhất 74/VBHN-VPQH ngày 25/03/2026 và nghị định hiện hành. Không suy ra chỉ định thầu/mua sắm trực tiếp chỉ vì nhỏ lẻ hoặc cấp bách; ghi điều khoản và điều kiện từng gói, cán bộ thẩm định xác nhận. Không tự đặt hạn mức."
+  },
+  {
+   "id": "tai-san",
+   "title": "Nghị định 186/2025/NĐ-CP, hiệu lực 01/07/2025",
+   "url": "https://vanban.chinhphu.vn/?docid=214493&pageid=27160",
+   "match": [
+    "@tai-san"
+   ],
+   "instruction": "Yêu cầu nguồn hình thành, chủ sở hữu, phân cấp quản lý và hồ sơ tài sản công; phân biệt mua sắm, kiểm kê, khai thác, thanh lý. Đối chiếu thẩm quyền và điều kiện theo NĐ186, không tự quyết định xử lý tài sản."
+  },
+  {
+   "id": "khcn",
+   "title": "Luật 93/2025/QH15; Nghị định 265/2025 và 267/2025, hiệu lực 14/10/2025",
+   "url": "https://vanban.chinhphu.vn/?classid=1&docid=215664&pageid=27160",
+   "match": [
+    "@khcn"
+   ],
+   "instruction": "Yêu cầu cấp nhiệm vụ, nguồn kinh phí, tài trợ/đặt hàng, ngày phê duyệt, quy chế cơ quan tài trợ, phương thức khoán và quyền sử dụng kết quả. Đối chiếu NĐ265 về tài chính và NĐ267 về nhiệm vụ; không cố định thang xếp loại hoặc thu hồi toàn bộ kinh phí cho mọi đề tài. Nghiệm thu dựa hợp đồng và tiêu chí được duyệt, hội đồng có thẩm quyền xác nhận."
+  },
+  {
+   "id": "shtt",
+   "title": "Luật 131/2025/QH15 sửa đổi sở hữu trí tuệ, hiệu lực 01/04/2026",
+   "url": "https://congbao.chinhphu.vn/van-ban/luat-so-131-2025-qh15-468691.htm",
+   "match": [
+    "@shtt"
+   ],
+   "instruction": "Yêu cầu chủ thể quyền, nguồn tài trợ, hợp đồng và loại tài sản trí tuệ; đối chiếu sửa đổi 131/2025 theo thời điểm. Không mặc định quyền thuộc trường hay tác giả khi chưa có căn cứ; rà soát quyền sử dụng học liệu trước chia sẻ/chuyển giao."
+  },
+  {
+   "id": "nhan-su-0",
+   "title": "Luật 129/2025/QH15; Nghị định 259/2026/NĐ-CP; phạm vi: Viên chức đơn vị sự nghiệp công lập; kiểm tra chuyển tiếp và quy định riêng về nhà giáo",
+   "url": "https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-259-2026-nd-cp-quy-dinh-ve-tuyen-dung-su-dung-va-quan-ly-vien-chuc-119260707070701707.htm",
+   "match": [
+    "quy-trinh-tuyen-dung",
+    "thong-bao-tuyen-dung",
+    "hop-dong-lam-viec",
+    "quy-trinh-bo-nhiem",
+    "quyet-dinh-dieu-dong",
+    "115/2020/NĐ-CP",
+    "85/2023/NĐ-CP",
+    "101/2017/NĐ-CP",
+    "89/2021/NĐ-CP"
+   ],
+   "instruction": "Cập nhật căn cứ tuyển dụng, hợp đồng làm việc, bổ nhiệm, điều động và đào tạo viên chức. Không tái sử dụng số điều hoặc mẫu phiếu của NĐ115. Phải yêu cầu ngày tuyển dụng, ngày phê duyệt kế hoạch, loại hợp đồng, trạng thái hồ sơ và bản văn NĐ259 để chọn điều khoản chuyển tiếp; không tự áp dụng điều22 LuậtViênChức2010. Các văn bản cũ chỉ là căn cứ lịch sử khi chuyển tiếp cho phép."
+  },
+  {
+   "id": "nhan-su-1",
+   "title": "233/2026/NĐ-CP; phạm vi: Đánh giá đơn vị sự nghiệp công lập và viên chức",
+   "url": "https://baochinhphu.vn/cham-diem-danh-gia-vien-chuc-hang-thang-hoac-hang-quy-102260630052951335.htm",
+   "match": [
+    "phieu-danh-gia-vien-chuc",
+    "bao-cao-danh-gia-vc",
+    "90/2020/NĐ-CP",
+    "48/2023/NĐ-CP"
+   ],
+   "instruction": "Dùng khung tiêu chí và quy chế đánh giá của đơn vị; bổ sung dữ liệu theo dõi/chấm điểm tháng hoặc quý, nhiệm vụ được giao, sản phẩm công việc, minh chứng, kết quả giám sát. Không tạo thang điểm từ trí nhớ, không tiếp tục ghi Mẫu03 của NĐ90 là mẫu hiện hành. Tính điểm và xếp loại phải từ tiêu chí được phê duyệt; báo cáo liệt kê thiếu minh chứng."
+  },
+  {
+   "id": "nhan-su-2",
+   "title": "Luật125/2025/QH15; Nghị quyết10/2026/NQ-CP giữ99/2019 một phần; phạm vi: Quản trị cơ sở giáo dục đại học; phân biệt công lập và tư thục",
+   "url": "https://baochinhphu.vn/tiep-tuc-ap-dung-mot-so-van-ban-huong-dan-thi-hanh-mot-so-luat-102260312173840717.htm",
+   "match": [
+    "quy-che-to-chuc-hoat-dong-truong",
+    "chuan-bi-hop-hoi-dong-truong",
+    "Áp dụng toàn bộ 99/2019/NĐ-CP, mô hình hội đồng trường công lập"
+   ],
+   "instruction": "99/2019 không bị thay thế toàn bộ. NQ10 loại trừ quy định về hội đồng trường/đại học công lập: điểm b khoản4Điều2, điểm e khoản1Điều3, điểm a khoản2Điều4, điểm c khoản4Điều4, điểm b khoản2Điều5, Điều7, khoản1Điều9, điểm c khoản2Điều16. Không tổ chức hoạt động mới của hội đồng trường công lập theo quy trình cũ. Yêu cầu loại hình trường, thời điểm xử lý, quy chế hiện hành, quyết định phân quyền; tư thục phải đối chiếu Luật125."
+  },
+  {
+   "id": "nhan-su-3",
+   "title": "Luật Nhà giáo; Nghị định93/2026/NĐ-CP; khoản9Điều62 NĐ259/2026; phạm vi: Viên chức là nhà giáo",
+   "url": "https://xaydungchinhsach.chinhphu.vn/huong-dan-quan-ly-doi-ngu-nha-giao-sap-xep-bo-nhiem-chuc-danh-thuc-hien-che-do-chinh-sach-xep-luong-119260811083919821.htm",
+   "match": [
+    "Áp dụng tuyển dụng viên chức chung cho mọi giảng viên"
+   ],
+   "instruction": "Thêm input đối tượng là nhà giáo hay viên chức khác. Nếu pháp luật nhà giáo có quy định khác về thẩm quyền, tiêu chuẩn, điều kiện, trình tự, thủ tục tuyển dụng/sử dụng/quản lý, áp dụng quy định nhà giáo và hướng dẫn BộGDĐT thay vì quy tắc chung NĐ259."
+  },
+  {
+   "id": "nhan-su-4",
+   "title": "235/2026/NĐ-CP; phạm vi: Hợp đồng lao động và dịch vụ thực hiện công việc trong đơn vị sự nghiệp công lập",
+   "url": "https://baochinhphu.vn/quy-dinh-moi-ve-hop-dong-thuc-hien-cong-viec-trong-don-vi-su-nghiep-cong-lap-102260630062226594.htm",
+   "match": [
+    "hop-dong-lam-viec",
+    "Hợp đồng lao động hỗ trợ và nghiệp vụ trường công theo quy tắc cũ"
+   ],
+   "instruction": "Phân biệt hợp đồng làm việc của viên chức với hợp đồng lao động/dịch vụ. NĐ235 cho công việc quản lý/chuyên môn/nghiệp vụ/hỗ trợ; công việc phục vụ như bảo vệ, lái xe ưu tiên tổ chức cung cấp dịch vụ theo điều kiện nghị định, không mặc định tất cả là hợp đồng lao động. Kiểm tra thẩm quyền ký theo nhóm vị trí."
+  }
+ ],
+ "open_issues": [
+  {
+   "old": "42/2013/NĐ-CP",
+   "issue": "CẬP NHẬT 2026-10-10 (nguồn thứ cấp: thuvienphapluat.vn, luatvietnam.vn; chưa đối chiếu Công báo): NĐ 42/2013/NĐ-CP bị NĐ 03/2024/NĐ-CP thay thế; NĐ 216/2025/NĐ-CP (ký 05/08/2025) thay thế NĐ 43/2023/NĐ-CP và NĐ 03/2024/NĐ-CP. Luật Thanh tra 84/2025/QH15 hiệu lực 01/07/2025 thay Luật 11/2022/QH15 (trừ khoản 1, 3 Điều 64). Hai skill ke-hoach-thanh-tra-nam và ket-luan-thanh-tra đã đổi căn cứ sang Luật 84/2025 + NĐ 216/2025. Còn phải xác minh: phạm vi thay thế (toàn bộ/một phần), ngày hiệu lực NĐ 216/2025 và điều khoản chuyển tiếp.",
+   "status": "updated-pending-official-check-2026-10-10"
+  },
+  {
+   "old": "163/2016/NĐ-CP",
+   "issue": "Trong skill là nghị định hướng dẫn ngân sách, không phải đào tạo viên chức; chuyển sang nhóm tài chính kiểm tra."
+  },
+  {
+   "issue": "54/2026 và 56/2026: phải xác minh toàn văn điều chuyển tiếp trước thực thi; không khẳng định thời hạn chuyển đổi từ nguồn thứ cấp."
+  },
+  {
+   "issue": "18/2021,23/2021,10/2016,16/2015: giữ căn cứ hiện có, kiểm tra lại trạng thái tại ngày nghiệp vụ."
+  },
+  {
+   "old": "TT 09/2024/TT-BGDĐT; TT 54/2026, TT 56/2026/TT-BGDĐT; NĐ 259/2026/NĐ-CP; Luật 129/2025/QH15; NĐ 30/2020/NĐ-CP",
+   "issue": "CẬP NHẬT 2026-10-10: sự tồn tại và tên các văn bản được xác nhận qua nguồn thứ cấp; toàn văn điều khoản, hiệu lực, chuyển tiếp CHƯA đối chiếu. Chưa tìm thấy văn bản thay thế NĐ 30/2020 (thể thức văn bản) nhưng chưa kiểm tra Công báo. Mọi con số, thời hạn, số điều trong các bước của 58 skill đã khôi phục là nghiệp vụ gốc trước cập nhật, chỉ dùng khi đã đối chiếu căn cứ (xem docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md)."
+  },
+  {
+   "old": "113 skill chưa cập nhật pháp lý",
+   "issue": "CẬP NHẬT 2026-10-10: danh sách căn cứ nghi lỗi thời (chưa xác minh) ở docs/CAN_CU_NGHI_LOI_THOI.md; chưa sửa căn cứ nào trong nhóm này."
+  }
+ ]
 }

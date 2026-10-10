@@ -1,6 +1,6 @@
 ---
 name: "de-an-vi-tri-viec-lam"
-description: "Xây dựng đề án vị trí việc làm của trường đại học hoặc đơn vị trực thuộc theo Nghị định 62/2017/NĐ-CP: danh mục vị trí việc làm, bản mô tả công việc, khung năng lực và số lượng người làm việc. Dùng khi cần rà soát, sắp xếp tổ chức bộ máy hoặc làm căn cứ tuyển dụng, bổ nhiệm, đánh giá viên chức."
+description: "Xây dựng đề án vị trí việc làm của trường đại học hoặc đơn vị trực thuộc theo căn cứ vị trí việc làm hiện hành (đối chiếu Nghị định 232/2026/NĐ-CP): danh mục vị trí việc làm, bản mô tả công việc, khung năng lực và số lượng người làm việc. Dùng khi cần rà soát, sắp xếp tổ chức bộ máy hoặc làm căn cứ tuyển dụng, bổ nhiệm, đánh giá viên chức."
 ---
 
 # Xây dựng đề án vị trí việc làm
@@ -12,17 +12,13 @@ description: "Xây dựng đề án vị trí việc làm của trường đại
 **Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
 
 ## Quy cách đầu ra và thông tin thiếu
-
-Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
-
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Kiểm soát áp dụng và phê duyệt
-
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
+Trước khi chạy, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu`, `nguoi_kiem_duyet`; chỉ hỏi thông tin liên quan nghiệp vụ, không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu căn cứ pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Giới hạn và human gate
-
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+AI hỗ trợ chuẩn bị và đối chiếu; cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Không đánh dấu đã ký, đã duyệt, đã công bố khi chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự, tài chính chỉ dùng theo mục đích và phân quyền, che thông tin định danh khi dùng ví dụ (Luật 91/2025/QH15, hiệu lực 01/01/2026); không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Khi nào dùng
 Khi trường (hoặc một đơn vị trực thuộc) cần xây dựng / rà soát, điều chỉnh đề án vị trí việc làm:
@@ -57,7 +53,7 @@ thừa; khi rà soát lại, đối chiếu với đề án cũ để xác đị
 
 **Bước 2. Xây dựng danh mục vị trí việc làm theo 3 nhóm**
 - Làm gì: từ danh sách nhiệm vụ ở Bước 1, xác định các vị trí việc làm cần thiết, phân thành
-3 nhóm theo Nghị định 62/2017/NĐ-CP: (a) lãnh đạo, quản lý; (b) chức danh nghề nghiệp chuyên
+3 nhóm theo văn bản về vị trí việc làm hiện hành (đối chiếu Nghị định 232/2026/NĐ-CP): (a) lãnh đạo, quản lý; (b) chức danh nghề nghiệp chuyên
 ngành; (c) chức danh nghề nghiệp chuyên môn dùng chung và hỗ trợ, phục vụ; đối chiếu với
 `danh_muc_vi_tri` dự kiến và `de_xuat_dieu_chinh` (bổ sung/sáp nhập/xóa bỏ).
 - Dùng input: `danh_muc_vi_tri`, `de_xuat_dieu_chinh` + kết quả Bước 1.
@@ -130,7 +126,7 @@ thừa/thiếu | phương án) + lộ trình thực hiện.
 **Bước 8. Tổng hợp thành đề án hoàn chỉnh**
 - Làm gì: hợp nhất kết quả các bước thành văn bản đề án với bố cục 5 phần: I. Sự cần thiết
 và căn cứ xây dựng đề án (1. sự cần thiết — nêu từ thực trạng và Bước 7; 2. căn cứ pháp lý:
-NĐ 62/2017, quy chế trường/đơn vị); II. Thực trạng tổ chức bộ máy và nhân sự (từ
+văn bản vị trí việc làm hiện hành, quy chế trường/đơn vị); II. Thực trạng tổ chức bộ máy và nhân sự (từ
 `hien_trang_nhan_su`); III. Danh mục vị trí việc làm, mô tả công việc, khung năng lực và số
 lượng (kết quả Bước 2, 4, 5, 6 — trình bày theo 3 nhóm); IV. Phương án sắp xếp, bố trí nhân
 sự và lộ trình thực hiện (kết quả Bước 7); V. Kiến nghị, đề xuất (trình `nguoi_ky` phê duyệt);
@@ -143,17 +139,17 @@ III, IV và phụ lục phải khớp nhau tuyệt đối.
 - → Kết quả bước: dự thảo đề án vị trí việc làm hoàn chỉnh (5 phần + phụ lục).
 
 **Bước 9. Kiểm tra và xuất bản**
-- Làm gì: soát toàn văn: đủ 3 nhóm vị trí theo NĐ 62/2017; nhất quán giữa chức năng –
+- Làm gì: soát toàn văn: đủ 3 nhóm vị trí theo văn bản vị trí việc làm hiện hành; nhất quán giữa chức năng –
 nhiệm vụ – vị trí – số lượng (đối chiếu lại ma trận Bước 3); căn cứ pháp lý đầy đủ; thể thức
 văn bản theo NĐ 30/2020 (đề án ban hành kèm quyết định phê duyệt của cấp có thẩm quyền);
 hoàn thiện file theo định dạng đầu ra của skill, sẵn sàng trình phê duyệt.
 - Dùng input: toàn bộ input (tổng soát).
 - Vai trò: Chuyên viên Phòng TCCB (Trưởng phòng kiểm tra lại) · AI hỗ trợ: quét lỗi theo checklist · ⏱ ~15–30 phút (ước tính)
-- Lưu ý nghiệp vụ: checklist NĐ 62/2017 là công cụ kiểm tra cuối cùng — mọi mục không đạt
+- Lưu ý nghiệp vụ: checklist văn bản vị trí việc làm hiện hành là công cụ kiểm tra cuối cùng — mọi mục không đạt
 phải quay lại bước tương ứng sửa trước khi trình; đề án chỉ có giá trị sau khi được cấp có
 thẩm quyền phê duyệt bằng quyết định.
 - → Kết quả bước: đề án vị trí việc làm hoàn chỉnh + bảng đối chiếu hiện trạng nhân sự +
-checklist theo NĐ 62/2017, sẵn sàng trình phê duyệt.
+checklist theo văn bản vị trí việc làm hiện hành, sẵn sàng trình phê duyệt.
 
 ## Luồng quy trình (Workflow)
 
@@ -185,7 +181,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức và định dạng theo Nghị định 62/2017/NĐ-CP ngày 25/5/2017 của Chính phủ về vị trí việc…
+- [ ] Đúng thể thức theo văn bản vị trí việc làm hiện hành và Nghị định 30/2020/NĐ-CP; đối chiếu hiệu lực của căn cứ tại ngày nghiệp vụ.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Mọi vị trí việc làm phải xuất phát từ nhiệm vụ được giao — nhiệm vụ nào
@@ -193,7 +189,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Nhiệm vụ trong bản mô tả phải là công việc cụ thể, đo đếm được (tránh
 
 ## Căn cứ & lưu ý
-- Nghị định 62/2017/NĐ-CP ngày 25/5/2017 của Chính phủ về vị trí việc làm
+- Căn cứ vị trí việc làm: Nghị định 232/2026/NĐ-CP về vị trí việc làm viên chức (theo nguồn thứ cấp, một công văn địa phương tháng 9/2026; chưa đọc toàn văn nên chưa biết nghị định này thay thế văn bản nào); cần Tổ chức cán bộ/pháp chế xác nhận
   trong đơn vị sự nghiệp công lập.
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản; đề án ban hành
   kèm quyết định phê duyệt của cấp có thẩm quyền).
@@ -204,11 +200,6 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
 
 ## Quản trị phiên bản
-
-- Phiên bản gói: `1.3.1`; ngày cập nhật: `2026-10-10`.
-- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
-- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/de-an-vi-tri-viec-lam`; không tự gán SHA chưa tạo.
-- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
-- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
-- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
+- Phiên bản gói `1.3.2` (cập nhật 2026-10-10); hồ sơ đầy đủ tại [references/version.json](references/version.json).
+- Người phê duyệt nghiệp vụ: **chưa chỉ định**. Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
+- Giấy phép theo LICENSE của kho (bản quyền CES Global). Lịch sử thay đổi: CHANGELOG.md.

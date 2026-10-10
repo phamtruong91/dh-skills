@@ -12,9 +12,7 @@ description: "Soạn dự thảo báo cáo tổng kết công tác thi đua, khe
 **Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
 
 ## Quy cách đầu ra và thông tin thiếu
-
-Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
-
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Khi nào dùng
 
@@ -39,24 +37,63 @@ Xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lie
 
 ## Quy trình
 
-1. Kiểm tra kỳ, thời điểm chốt và nguồn của từng dòng. Thiếu quyết định hoặc xác nhận thì ghi [CHƯA XÁC NHẬN], không tính vào kết quả đã ban hành.
-2. Đối chiếu số liệu đơn vị với quyết định; lập bảng số liệu nguồn / số liệu báo cáo / chênh lệch / người cần xác nhận. Không tự chọn một nguồn khi có mâu thuẫn.
-3. Tổng hợp số lượng theo loại danh hiệu, hình thức khen thưởng và đơn vị; giữ tách biệt tập thể/cá nhân và đã được tặng/đang đề nghị. Tránh đếm trùng người hay hồ sơ; không cộng các đại lượng khác đơn vị tính.
-4. Chỉ tính biến động so với kỳ trước khi có dữ liệu cùng phạm vi. Nếu mẫu số bằng 0 hoặc không có dữ liệu, ghi không tính được; không tự đặt tỷ lệ tăng/giảm.
-5. Soạn báo cáo gồm kết quả đã xác nhận, vấn đề đối chiếu còn mở và nhiệm vụ kỳ tới đã được cung cấp. Chỉ trình bày nhận xét từ `nhan_xet_da_duyet`, ghi rõ nguồn; không suy đoán nguyên nhân hay thành tích cá nhân.
-6. Kiểm tra mỗi số liệu và phát biểu có nguồn truy nguyên. Xuất báo cáo hoàn chỉnh về bố cục, để trống dữ liệu thiếu; bảng đối chiếu và vấn đề cần xác nhận chỉ dùng nội bộ. Cán bộ phụ trách xác nhận nội dung; người có thẩm quyền quyết định ký/phát hành.
+**Bước 1. Kiểm tra kỳ, thời điểm chốt và nguồn từng dòng**
+- Làm gì: Kiểm tra từng dòng số liệu có kỳ, thời điểm chốt và nguồn; dòng thiếu quyết định hoặc xác nhận thì ghi nhận nội bộ [CHƯA XÁC NHẬN] (không đưa vào file giao) và không tính vào kết quả đã ban hành.
+- Dùng input: `ky_bao_cao`, `quyet_dinh_khen_thuong`, `bao_cao_don_vi`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Mọi con số phải truy được về quyết định/hồ sơ và người xác nhận.
+- → Kết quả bước: Danh sách dòng số liệu hợp lệ + danh sách dòng chưa xác nhận (nội bộ).
+
+**Bước 2. Đối chiếu số liệu đơn vị với quyết định**
+- Làm gì: Lập bảng số liệu nguồn / số liệu báo cáo / chênh lệch / người cần xác nhận. Không tự chọn một nguồn khi có mâu thuẫn.
+- Dùng input: `quyet_dinh_khen_thuong`, `bao_cao_don_vi`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Chênh lệch chưa giải trình được thì giữ ở bảng nội bộ, không đưa vào báo cáo.
+- → Kết quả bước: Bảng đối chiếu (nội bộ) + danh sách cần bổ sung.
+
+**Bước 3. Tổng hợp số lượng theo danh hiệu, hình thức và đơn vị**
+- Làm gì: Tổng hợp theo loại danh hiệu, hình thức khen thưởng và đơn vị; giữ tách biệt tập thể/cá nhân và đã được tặng/đang đề nghị. Tránh đếm trùng người hay hồ sơ; không cộng các đại lượng khác đơn vị tính.
+- Dùng input: kết quả Bước 1–2, `ho_so_dang_trinh`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Hồ sơ đang đề nghị không được cộng vào kết quả đã được tặng.
+- → Kết quả bước: Bảng thống kê đã tách các nhóm.
+
+**Bước 4. Tính biến động so với kỳ trước**
+- Làm gì: Chỉ tính biến động khi có dữ liệu kỳ trước cùng phạm vi. Nếu mẫu số bằng 0 hoặc không có dữ liệu thì để trống, ghi không tính được; không tự đặt tỷ lệ tăng/giảm.
+- Dùng input: kết quả Bước 3, `so_lieu_ky_truoc`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: So sánh khác phạm vi (đơn vị, loại danh hiệu) là so sánh sai.
+- → Kết quả bước: Bảng biến động hoặc ghi chú không tính được.
+
+**Bước 5. Soạn báo cáo**
+- Làm gì: Soạn báo cáo gồm kết quả đã xác nhận, vấn đề đối chiếu còn mở và nhiệm vụ kỳ tới đã được cung cấp. Chỉ trình bày nhận xét từ `nhan_xet_da_duyet` và phương hướng từ `phuong_huong_da_duyet`, ghi rõ nguồn.
+- Dùng input: kết quả Bước 3–4, `nhan_xet_da_duyet`, `phuong_huong_da_duyet`, `thong_tin_trinh_ky`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Không suy đoán nguyên nhân hay thành tích cá nhân; không thêm nhận xét khi thiếu dữ liệu.
+- → Kết quả bước: Dự thảo báo cáo đúng bố cục.
+
+**Bước 6. Kiểm tra nguồn truy nguyên và chuyển duyệt**
+- Làm gì: Kiểm tra mỗi số liệu và phát biểu có nguồn truy nguyên; xuất báo cáo hoàn chỉnh về bố cục, để trống dữ liệu thiếu; bảng đối chiếu và vấn đề cần xác nhận chỉ dùng nội bộ. Cán bộ phụ trách xác nhận nội dung; người có thẩm quyền quyết định ký/phát hành.
+- Dùng input: toàn bộ input, `thong_tin_trinh_ky`.
+- Vai trò: Chuyên viên Văn phòng/Phòng Thi đua (đơn vị tổng hợp) chuẩn bị; cán bộ phụ trách xác nhận; người có thẩm quyền duyệt · AI hỗ trợ: đối chiếu và tổng hợp số liệu, soạn dự thảo
+- Lưu ý nghiệp vụ: Không tự gửi, công bố, ký hoặc đánh dấu đã duyệt.
+- → Kết quả bước: Báo cáo hoàn chỉnh, sẵn sàng chuyển cán bộ phụ trách kiểm tra.
 
 ## Luồng quy trình
 
 ```mermaid
 flowchart TD
-    A["Nguồn và quyết định"] --> B["Đối chiếu số liệu"]
-    B --> C{"Đủ xác nhận?"}
+    IN[/"Quyết định, báo cáo đơn vị"/] --> B1["Bước 1: Kiểm tra kỳ, thời điểm chốt và nguồn"]
+    B1 --> B2["Bước 2: Đối chiếu số liệu với quyết định"]
+    B2 --> C{"Đủ xác nhận?"}
     C -->|Chưa| D["Bảng cần bổ sung"]
-    C -->|Đủ| E["Tổng hợp kết quả"]
-    D --> B
-    E --> F["Dự thảo và nguồn"]
-    F --> G["Cán bộ kiểm tra"]
+    D --> B2
+    C -->|Đủ| B3["Bước 3: Tổng hợp theo danh hiệu, hình thức, đơn vị"]
+    B3 --> B4["Bước 4: Tính biến động so với kỳ trước"]
+    B4 --> B5["Bước 5: Soạn báo cáo"]
+    B5 --> B6["Bước 6: Kiểm tra nguồn và chuyển duyệt"]
+    B6 --> HG["👤 Cán bộ phụ trách kiểm tra, người có thẩm quyền duyệt"]
+    HG --> OUT[["Báo cáo thi đua, khen thưởng"]]
 ```
 
 ## Đầu ra
@@ -86,11 +123,6 @@ Không tự thêm thành tích, tỷ lệ, số phiên họp, quyết định ha
 Luật Thi đua, khen thưởng và văn bản hướng dẫn đang áp dụng; quy chế nội bộ; quyết định và hồ sơ kỳ báo cáo. Thể thức văn bản đối chiếu Nghị định 30/2020/NĐ-CP. Bản skill chưa xác minh toàn văn mọi căn cứ chuyên ngành; cán bộ phụ trách phải chọn điều khoản hiện hành trước thực thi.
 
 ## Quản trị phiên bản
-
-- Phiên bản gói: `1.3.1`; ngày cập nhật: `2026-10-10`.
-- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
-- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/bao-cao-thi-dua`; không tự gán SHA chưa tạo.
-- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
-- Lịch sử 1.1.1: giới hạn ở tổng hợp dữ liệu đã được xác nhận; bỏ ví dụ có số liệu tự sinh và nhận xét cá nhân. Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
-- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
+- Phiên bản gói `1.3.2` (cập nhật 2026-10-10); hồ sơ đầy đủ tại [references/version.json](references/version.json).
+- Người phê duyệt nghiệp vụ: **chưa chỉ định**. Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
+- Giấy phép theo LICENSE của kho (bản quyền CES Global). Lịch sử thay đổi: CHANGELOG.md.

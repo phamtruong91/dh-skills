@@ -1,0 +1,107 @@
+{
+  "_ghi_chu": "Dữ liệu GIẢ để thử skill. Tên đơn vị và người là mẫu.",
+  "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+  "don_vi_lap": "PHÒNG THANH TRA & PHÁP CHẾ",
+  "dia_danh": "Hà Nội",
+  "so_van_ban": null,
+  "ngay_ban_hanh": null,
+  "nam_ke_hoach": 2027,
+  "linh_vuc": [
+    "Tuyển sinh",
+    "Thi cử",
+    "Tài chính",
+    "Văn bằng, chứng chỉ"
+  ],
+  "cuoc_thanh_tra": [
+    {
+      "stt": 1,
+      "noi_dung": "Thanh tra công tác tuyển sinh đại học chính quy",
+      "doi_tuong": "Phòng Đào tạo",
+      "thoi_gian": "Quý II/2027",
+      "doan": {
+        "truong_doan": {
+          "ten": "Trần Văn Bình",
+          "don_vi": "Phòng Thanh tra & Pháp chế"
+        },
+        "thanh_vien": [
+          {
+            "ten": "Lê Thị Chi",
+            "don_vi": "Phòng Thanh tra & Pháp chế"
+          },
+          {
+            "ten": "Phạm Văn Dũng",
+            "don_vi": "Phòng Đào tạo"
+          }
+        ]
+      }
+    },
+    {
+      "stt": 2,
+      "noi_dung": "Thanh tra công tác tổ chức thi kết thúc học phần học kỳ 1",
+      "doi_tuong": "Khoa Công nghệ (mẫu)",
+      "thoi_gian": "Tháng 12/2027",
+      "doan": {
+        "truong_doan": {
+          "ten": "Trần Văn Bình",
+          "don_vi": "Phòng Thanh tra & Pháp chế"
+        },
+        "thanh_vien": [
+          {
+            "ten": "Hoàng Thị Em",
+            "don_vi": "Phòng Thanh tra & Pháp chế"
+          }
+        ]
+      }
+    },
+    {
+      "stt": 3,
+      "noi_dung": "Thanh tra thu, chi học phí và các khoản thu dịch vụ",
+      "doi_tuong": "Phòng Tài chính – Kế toán",
+      "thoi_gian": "Quý III/2027",
+      "doan": {
+        "truong_doan": {
+          "ten": "Lê Thị Chi",
+          "don_vi": "Phòng Thanh tra & Pháp chế"
+        },
+        "thanh_vien": [
+          {
+            "ten": "Vũ Văn Giang",
+            "don_vi": "Phòng Thanh tra & Pháp chế"
+          }
+        ]
+      }
+    },
+    {
+      "stt": 4,
+      "noi_dung": "Thanh tra công tác cấp phát văn bằng, chứng chỉ",
+      "doi_tuong": "Phòng Quản lý đào tạo (mẫu)",
+      "thoi_gian": "Quý IV/2027",
+      "doan": null
+    },
+    {
+      "stt": 5,
+      "noi_dung": "Thanh tra công tác quản lý, kiểm kê tài sản",
+      "doi_tuong": "Phòng Tài chính – Kế toán",
+      "thoi_gian": "Quý III/2027",
+      "doan": {
+        "truong_doan": {
+          "ten": "Trần Văn Bình",
+          "don_vi": "Phòng Thanh tra & Pháp chế"
+        },
+        "thanh_vien": [
+          {
+            "ten": "Vũ Văn Giang",
+            "don_vi": "Phòng Thanh tra & Pháp chế"
+          }
+        ]
+      }
+    }
+  ],
+  "phuong_phap": null,
+  "muc_dich_yeu_cau": null,
+  "nguoi_ky": {
+    "chuc_danh": "HIỆU TRƯỞNG",
+    "ho_ten": null
+  },
+  "ngay_chay_thu": "10/10/2026"
+}

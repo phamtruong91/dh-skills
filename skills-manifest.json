@@ -1,14 +1,14 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "updated_at": "2026-10-10",
   "count": 171,
   "skills": [
     {
       "name": "audit-tien-do-tot-nghiep",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -30,10 +30,10 @@
     },
     {
       "name": "bai-viet-truyen-thong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -58,10 +58,10 @@
     },
     {
       "name": "bao-cao-3-cong-khai",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -85,10 +85,10 @@
     },
     {
       "name": "bao-cao-chuyen-doi-so",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -111,10 +111,10 @@
     },
     {
       "name": "bao-cao-cong-khai-tai-chinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -139,10 +139,10 @@
     },
     {
       "name": "bao-cao-cong-tac-chinh-tri",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -164,10 +164,10 @@
     },
     {
       "name": "bao-cao-cong-tac-thu-vien",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -189,10 +189,10 @@
     },
     {
       "name": "bao-cao-cong-tac-y-te",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -214,10 +214,10 @@
     },
     {
       "name": "bao-cao-ctsv-nam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -239,10 +239,10 @@
     },
     {
       "name": "bao-cao-danh-gia-vc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -268,10 +268,10 @@
     },
     {
       "name": "bao-cao-dao-tao-dinh-ky",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -295,10 +295,10 @@
     },
     {
       "name": "bao-cao-dao-tao-sdh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -320,10 +320,10 @@
     },
     {
       "name": "bao-cao-dbcl-nam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -348,10 +348,10 @@
     },
     {
       "name": "bao-cao-dich-vu-khcn",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -373,10 +373,10 @@
     },
     {
       "name": "bao-cao-du-an-dinh-ky",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -398,10 +398,10 @@
     },
     {
       "name": "bao-cao-giam-sat-du-an-dau-tu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -423,10 +423,10 @@
     },
     {
       "name": "bao-cao-ket-qua-doan",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -448,10 +448,10 @@
     },
     {
       "name": "bao-cao-ket-qua-tuyen-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -475,10 +475,10 @@
     },
     {
       "name": "bao-cao-khcn-nam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -502,10 +502,10 @@
     },
     {
       "name": "bao-cao-kiem-toan-noi-bo",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -527,10 +527,10 @@
     },
     {
       "name": "bao-cao-nghiem-thu-de-tai",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -554,10 +554,10 @@
     },
     {
       "name": "bao-cao-quyet-toan",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -583,10 +583,10 @@
     },
     {
       "name": "bao-cao-tai-chinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -611,10 +611,10 @@
     },
     {
       "name": "bao-cao-thi-dua",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -637,10 +637,10 @@
     },
     {
       "name": "bao-cao-tien-do-de-tai",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -664,10 +664,10 @@
     },
     {
       "name": "bao-cao-tong-hop-phan-hieu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -689,10 +689,10 @@
     },
     {
       "name": "bao-cao-tong-ket-khoa",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -714,10 +714,10 @@
     },
     {
       "name": "bao-cao-tong-ket-nam-truong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -740,10 +740,10 @@
     },
     {
       "name": "bao-cao-tong-ket-vp",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -765,10 +765,10 @@
     },
     {
       "name": "bao-cao-tu-danh-gia",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -793,10 +793,10 @@
     },
     {
       "name": "bien-ban-bao-ve-luan-van",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -818,10 +818,10 @@
     },
     {
       "name": "bien-ban-hop-hoi-dong-khdt",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -843,10 +843,10 @@
     },
     {
       "name": "bien-ban-kiem-ke-tai-san",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -870,10 +870,10 @@
     },
     {
       "name": "bien-ban-nghiem-thu-thiet-bi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -895,10 +895,10 @@
     },
     {
       "name": "bien-ban-phong-thi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -922,10 +922,10 @@
     },
     {
       "name": "bien-soan-giao-trinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -950,10 +950,10 @@
     },
     {
       "name": "bien-tap-xuat-ban-an-pham",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -975,10 +975,10 @@
     },
     {
       "name": "campaign-brief-tuyen-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1001,10 +1001,10 @@
     },
     {
       "name": "cap-chung-chi-dao-tao-lien-tuc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1026,10 +1026,10 @@
     },
     {
       "name": "cau-truc-bai-bao-khoa-hoc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1054,10 +1054,10 @@
     },
     {
       "name": "checklist-chung-tu-thanh-toan",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1080,10 +1080,10 @@
     },
     {
       "name": "checklist-ho-so-gs-pgs",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1105,10 +1105,10 @@
     },
     {
       "name": "checklist-minh-chung-kiem-dinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1134,10 +1134,10 @@
     },
     {
       "name": "chuan-bi-hop-hoi-dong-truong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1161,10 +1161,10 @@
     },
     {
       "name": "chuan-bi-hop-va-action-tracker",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1189,10 +1189,10 @@
     },
     {
       "name": "content-calendar-truyen-thong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1217,10 +1217,10 @@
     },
     {
       "name": "de-an-mo-nganh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1244,10 +1244,10 @@
     },
     {
       "name": "de-an-tuyen-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1271,10 +1271,10 @@
     },
     {
       "name": "de-an-vi-tri-viec-lam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1296,10 +1296,10 @@
     },
     {
       "name": "de-cuong-chi-tiet-hoc-phan",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1324,10 +1324,10 @@
     },
     {
       "name": "dich-thuat-song-ngu-va-thuat-ngu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1352,10 +1352,10 @@
     },
     {
       "name": "dong-goi-skill-tu-quy-trinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1379,10 +1379,10 @@
     },
     {
       "name": "executive-brief-trinh-lanh-dao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1405,10 +1405,10 @@
     },
     {
       "name": "faq-chinh-sach-co-trich-nguon",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1433,10 +1433,10 @@
     },
     {
       "name": "faq-tuyen-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1461,10 +1461,10 @@
     },
     {
       "name": "funnel-theo-doi-thi-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1489,10 +1489,10 @@
     },
     {
       "name": "helpdesk-cntt-triage",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1514,10 +1514,10 @@
     },
     {
       "name": "ho-so-chuyen-giao-cong-nghe",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1542,10 +1542,10 @@
     },
     {
       "name": "ho-so-cong-nhan-sang-kien",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1567,10 +1567,10 @@
     },
     {
       "name": "ho-so-dang-ky-shtt",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1592,10 +1592,10 @@
     },
     {
       "name": "ho-so-de-nghi-khen-thuong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1617,10 +1617,10 @@
     },
     {
       "name": "ho-so-du-an-dau-tu-ha-tang",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1642,10 +1642,10 @@
     },
     {
       "name": "ho-so-hop-dong-dich-vu-khcn",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1667,10 +1667,10 @@
     },
     {
       "name": "ho-so-moi-thau",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1694,10 +1694,10 @@
     },
     {
       "name": "ho-so-quan-ly-suc-khoe",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1719,10 +1719,10 @@
     },
     {
       "name": "ho-so-quyet-toan-de-tai",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1746,10 +1746,10 @@
     },
     {
       "name": "hop-dong-lam-viec",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1775,10 +1775,10 @@
     },
     {
       "name": "hop-dong-mua-sam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1802,10 +1802,10 @@
     },
     {
       "name": "hop-dong-thuc-hien-de-tai",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1829,10 +1829,10 @@
     },
     {
       "name": "hop-nhat-bao-cao-don-vi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1854,10 +1854,10 @@
     },
     {
       "name": "ke-hoach-bao-tri-csvc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1879,10 +1879,10 @@
     },
     {
       "name": "ke-hoach-bo-sung-hoc-lieu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1906,10 +1906,10 @@
     },
     {
       "name": "ke-hoach-boi-duong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1931,10 +1931,10 @@
     },
     {
       "name": "ke-hoach-cai-tien-chat-luong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1959,10 +1959,10 @@
     },
     {
       "name": "ke-hoach-dao-tao-lien-tuc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -1984,10 +1984,10 @@
     },
     {
       "name": "ke-hoach-dao-tao-sdh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2009,10 +2009,10 @@
     },
     {
       "name": "ke-hoach-doan-ra-vao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2034,10 +2034,10 @@
     },
     {
       "name": "ke-hoach-giao-duc-chinh-tri-tu-tuong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2059,10 +2059,10 @@
     },
     {
       "name": "ke-hoach-hoat-dong-bao-chi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2084,10 +2084,10 @@
     },
     {
       "name": "ke-hoach-hoat-dong-phan-hieu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2109,10 +2109,10 @@
     },
     {
       "name": "ke-hoach-hoat-dong-trung-tam-thuc-hanh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2134,10 +2134,10 @@
     },
     {
       "name": "ke-hoach-hoi-thao-khoa-hoc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2159,10 +2159,10 @@
     },
     {
       "name": "ke-hoach-kiem-toan-noi-bo",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2184,10 +2184,10 @@
     },
     {
       "name": "ke-hoach-mua-sam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2212,10 +2212,10 @@
     },
     {
       "name": "ke-hoach-nam-hoc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2239,10 +2239,10 @@
     },
     {
       "name": "ke-hoach-nam-hoc-truong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2264,10 +2264,10 @@
     },
     {
       "name": "ke-hoach-nckh-khoa",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2289,10 +2289,10 @@
     },
     {
       "name": "ke-hoach-ngay-hoi-viec-lam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2314,10 +2314,10 @@
     },
     {
       "name": "ke-hoach-phat-trien-cntt",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2339,10 +2339,10 @@
     },
     {
       "name": "ke-hoach-quan-tri-thuong-hieu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2364,15 +2364,15 @@
     },
     {
       "name": "ke-hoach-thanh-tra-nam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
-      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "legal_review_status": "secondary-sources-checked-2026-10-10; official-gazette-check-pending",
       "approval_owner": null,
       "legal_updates": [],
       "output_profile": "hanh-chinh",
@@ -2389,10 +2389,10 @@
     },
     {
       "name": "ke-hoach-tiep-nhan-quan-ly-noi-tru",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2414,10 +2414,10 @@
     },
     {
       "name": "ke-hoach-to-chuc-su-kien",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2439,10 +2439,10 @@
     },
     {
       "name": "ke-hoach-to-chuc-thi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2466,10 +2466,10 @@
     },
     {
       "name": "ke-hoach-truyen-thong-nam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2491,10 +2491,10 @@
     },
     {
       "name": "ke-hoach-tuan-shcd",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2516,10 +2516,10 @@
     },
     {
       "name": "ke-hoach-uom-tao-dmst",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2541,10 +2541,10 @@
     },
     {
       "name": "ke-hoach-xuc-tien-dau-tu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2566,10 +2566,10 @@
     },
     {
       "name": "ke-hoach-y-te-hoc-duong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2591,15 +2591,15 @@
     },
     {
       "name": "ket-luan-thanh-tra",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
       },
-      "legal_review_status": "requires-applicability-and-fulltext-check",
+      "legal_review_status": "secondary-sources-checked-2026-10-10; official-gazette-check-pending",
       "approval_owner": null,
       "legal_updates": [],
       "output_profile": "hanh-chinh",
@@ -2616,10 +2616,10 @@
     },
     {
       "name": "khao-sat-viec-lam-sv-tot-nghiep",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2643,10 +2643,10 @@
     },
     {
       "name": "khung-chuong-trinh-dao-tao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2670,10 +2670,10 @@
     },
     {
       "name": "kich-ban-khanh-tiet",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2698,10 +2698,10 @@
     },
     {
       "name": "kich-ban-tu-van-tuyen-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2726,10 +2726,10 @@
     },
     {
       "name": "kich-ban-video-truyen-thong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2754,10 +2754,10 @@
     },
     {
       "name": "kiem-tra-day-du-ho-so",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2779,10 +2779,10 @@
     },
     {
       "name": "ky-yeu-hoi-thao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2804,10 +2804,10 @@
     },
     {
       "name": "lap-du-toan-nam",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2832,10 +2832,10 @@
     },
     {
       "name": "lap-lich-cong-tac-tuan",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2858,10 +2858,10 @@
     },
     {
       "name": "lap-thoi-khoa-bieu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2886,10 +2886,10 @@
     },
     {
       "name": "ma-tran-chuan-dau-ra",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2914,10 +2914,10 @@
     },
     {
       "name": "nghi-quyet-hoi-dong-khdt",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2939,10 +2939,10 @@
     },
     {
       "name": "noi-quy-ky-tuc-xa",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2964,10 +2964,10 @@
     },
     {
       "name": "phan-cong-giang-day",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -2990,10 +2990,10 @@
     },
     {
       "name": "phan-tich-chenh-lech-ngan-sach",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3018,10 +3018,10 @@
     },
     {
       "name": "phan-tich-ket-qua-khao-sat",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3049,10 +3049,10 @@
     },
     {
       "name": "phan-tich-ket-qua-thi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3079,10 +3079,10 @@
     },
     {
       "name": "phieu-danh-gia-ren-luyen",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3104,10 +3104,10 @@
     },
     {
       "name": "phieu-danh-gia-vien-chuc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3133,10 +3133,10 @@
     },
     {
       "name": "phieu-lay-y-kien-hoi-dong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3158,10 +3158,10 @@
     },
     {
       "name": "phieu-trinh-ky",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3183,10 +3183,10 @@
     },
     {
       "name": "pmo-quan-tri-du-an",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3211,10 +3211,10 @@
     },
     {
       "name": "press-kit-su-kien",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3239,10 +3239,10 @@
     },
     {
       "name": "quan-ly-phien-ban-tai-lieu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3267,10 +3267,10 @@
     },
     {
       "name": "quan-tri-tap-chi-khoa-hoc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3292,10 +3292,10 @@
     },
     {
       "name": "quy-che-an-toan-thong-tin",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3317,10 +3317,10 @@
     },
     {
       "name": "quy-che-dao-tao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3344,10 +3344,10 @@
     },
     {
       "name": "quy-che-to-chuc-hoat-dong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3369,10 +3369,10 @@
     },
     {
       "name": "quy-che-to-chuc-hoat-dong-truong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3396,10 +3396,10 @@
     },
     {
       "name": "quy-trinh-bo-nhiem",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3424,10 +3424,10 @@
     },
     {
       "name": "quy-trinh-ngan-hang-de-thi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3451,10 +3451,10 @@
     },
     {
       "name": "quy-trinh-tuyen-dung",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3479,10 +3479,10 @@
     },
     {
       "name": "quyet-dinh-cap-hoc-bong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3506,10 +3506,10 @@
     },
     {
       "name": "quyet-dinh-cu-di-hoc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3531,10 +3531,10 @@
     },
     {
       "name": "quyet-dinh-dieu-dong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3559,10 +3559,10 @@
     },
     {
       "name": "quyet-dinh-giai-quyet-kn",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3584,10 +3584,10 @@
     },
     {
       "name": "quyet-dinh-hoc-vu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3611,10 +3611,10 @@
     },
     {
       "name": "quyet-dinh-hoi-dong-bao-ve",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3636,10 +3636,10 @@
     },
     {
       "name": "quyet-dinh-khen-thuong-kl",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3661,10 +3661,10 @@
     },
     {
       "name": "quyet-dinh-ky-luat-sv",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3686,10 +3686,10 @@
     },
     {
       "name": "quyet-dinh-nang-luong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3715,10 +3715,10 @@
     },
     {
       "name": "quyet-dinh-phan-cong-thi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3742,10 +3742,10 @@
     },
     {
       "name": "quyet-dinh-phuc-khao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3769,10 +3769,10 @@
     },
     {
       "name": "quyet-dinh-tot-nghiep",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3797,10 +3797,10 @@
     },
     {
       "name": "ra-soat-du-thao-van-ban",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3824,10 +3824,10 @@
     },
     {
       "name": "so-lieu-3-cong-khai-dt",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3852,10 +3852,10 @@
     },
     {
       "name": "so-van-ban-di-den",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3878,10 +3878,10 @@
     },
     {
       "name": "soan-bien-ban-hop",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3903,10 +3903,10 @@
     },
     {
       "name": "soan-cong-van",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3928,10 +3928,10 @@
     },
     {
       "name": "soan-giay-moi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3953,10 +3953,10 @@
     },
     {
       "name": "soan-ke-hoach-ct",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -3978,10 +3978,10 @@
     },
     {
       "name": "soan-mou-moa",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4003,10 +4003,10 @@
     },
     {
       "name": "soan-quyet-dinh-hc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4028,10 +4028,10 @@
     },
     {
       "name": "soan-thong-bao",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4053,10 +4053,10 @@
     },
     {
       "name": "soan-to-trinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4078,10 +4078,10 @@
     },
     {
       "name": "tham-dinh-phap-ly-van-ban",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4103,10 +4103,10 @@
     },
     {
       "name": "theo-doi-grant-nghien-cuu",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4128,10 +4128,10 @@
     },
     {
       "name": "theo-doi-thay-doi-van-ban-phap-quy",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4153,10 +4153,10 @@
     },
     {
       "name": "thiet-ke-phieu-khao-sat",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4181,10 +4181,10 @@
     },
     {
       "name": "thong-bao-dang-ky-de-tai",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4208,10 +4208,10 @@
     },
     {
       "name": "thong-bao-hoc-bong",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4233,10 +4233,10 @@
     },
     {
       "name": "thong-bao-muc-thu-hoc-phi",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4261,10 +4261,10 @@
     },
     {
       "name": "thong-bao-tuyen-dung",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4289,10 +4289,10 @@
     },
     {
       "name": "thong-bao-tuyen-sinh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4316,10 +4316,10 @@
     },
     {
       "name": "thong-bao-tuyen-sinh-sdh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4341,10 +4341,10 @@
     },
     {
       "name": "thuyet-minh-de-tai-nckh",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4366,10 +4366,10 @@
     },
     {
       "name": "to-chuc-khoa-boi-duong-ngan-han",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4391,10 +4391,10 @@
     },
     {
       "name": "tong-hop-diem-ren-luyen",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4417,10 +4417,10 @@
     },
     {
       "name": "tong-quan-tai-lieu-khoa-hoc",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4445,10 +4445,10 @@
     },
     {
       "name": "triage-case-sinh-vien",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"
@@ -4470,10 +4470,10 @@
     },
     {
       "name": "tro-ly-giang-day",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "updated_at": "2026-10-10",
       "source_repository": "https://github.com/phamtruong91/university-skills-framework",
-      "source_commit": "346719e6b0318ed034b4b016703f79733aa575e7",
+      "source_commit": "d2a835f00b0dbbafa13a66d56551a4f3102311ac",
       "maintainer": {
         "github": "phamtruong91",
         "name": "Phạm Văn Trường"

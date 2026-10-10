@@ -1,6 +1,6 @@
 ---
 name: "ke-hoach-thanh-tra-nam"
-description: "Lập kế hoạch thanh tra nội bộ năm của trường đại học: xác định lĩnh vực thanh tra (đào tạo, tuyển sinh, thi cử, tài chính...), đối tượng, thời gian, đoàn thanh tra và phương pháp. Dùng khi Phòng Thanh tra & Pháp chế xây dựng kế hoạch thanh tra hằng năm trình Hiệu trưởng phê duyệt."
+description: "Lập kế hoạch thanh tra nội bộ năm của trường đại học: xác định lĩnh vực thanh tra (đào tạo, tuyển sinh, thi cử, tài chính...), đối tượng, thời gian, đoàn thanh tra và phương pháp. Dùng khi Phòng Thanh tra & Pháp chế xây dựng kế hoạch thanh tra hằng năm trình Hiệu trưởng phê duyệt. Không dùng cho kế hoạch kiểm toán nội bộ (dùng ke-hoach-kiem-toan-noi-bo)."
 ---
 
 # Lập kế hoạch thanh tra nội bộ năm
@@ -12,17 +12,13 @@ description: "Lập kế hoạch thanh tra nội bộ năm của trường đạ
 **Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
 
 ## Quy cách đầu ra và thông tin thiếu
-
-Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm văn bản hoặc sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hoặc dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Các trường “bắt buộc” là điều kiện hoàn thiện hồ sơ, không ngăn việc soạn bản có chỗ chừa để điền. Mọi chỉ dẫn “để trống” trong skill được hiểu là không điền dữ liệu và giữ cách chừa chỗ của mẫu gốc, không phải xóa dấu chấm của mẫu.
-
+Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Kiểm soát áp dụng và phê duyệt
-
-Trước khi chạy quy trình, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu` và `nguoi_kiem_duyet`. Chỉ yêu cầu thông tin có liên quan đến nghiệp vụ; không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu nội bộ hồ sơ có yếu tố pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp; không tự đính kèm bảng kiểm tra vào file giao.
+Trước khi chạy, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu`, `nguoi_kiem_duyet`; chỉ hỏi thông tin liên quan nghiệp vụ, không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu căn cứ pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Giới hạn và human gate
-
-AI hỗ trợ chuẩn bị và đối chiếu. Cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Văn bản soạn chưa được coi là đã ban hành; không tự chèn nhãn trạng thái kiểm duyệt vào file giao; không đánh dấu đã ký, đã duyệt hoặc đã công bố nếu chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự và tài chính phải hạn chế theo mục đích, phân quyền và che thông tin định danh khi dùng ví dụ. Không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Kiểm tra Luật 91/2025/QH15 về bảo vệ dữ liệu cá nhân (hiệu lực 01/01/2026) và quy định áp dụng trước xử lý/chia sẻ dữ liệu cá nhân.
+AI hỗ trợ chuẩn bị và đối chiếu; cán bộ phụ trách kiểm tra dữ liệu/căn cứ, người có thẩm quyền duyệt và ký. Không đánh dấu đã ký, đã duyệt, đã công bố khi chưa có chứng cứ. Dữ liệu sinh viên, sức khỏe, nhân sự, tài chính chỉ dùng theo mục đích và phân quyền, che thông tin định danh khi dùng ví dụ (Luật 91/2025/QH15, hiệu lực 01/01/2026); không tải dữ liệu lên dịch vụ ngoài khi chưa có quyền. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Khi nào dùng
 Khi cần xây dựng kế hoạch thanh tra nội bộ hằng năm của trường: đầu năm học/năm tài chính,
@@ -58,7 +54,7 @@ giữa năm để điều chỉnh, bổ sung cuộc thanh tra đột xuất.
 - → Kết quả bước: Danh mục cuộc thanh tra dự kiến (nội dung – lĩnh vực – lý do lựa chọn).
 
 **Bước 3. Xác định đối tượng và thời gian từng cuộc**
-- Làm gì: gán đơn vị được thanh tra và thời gian thực hiện (tháng/quý) cho từng cuộc; đối chiếu với lịch thi, mùa tuyển sinh, đợt kiểm định để loại trừ trùng lặp; nếu trùng thì điều chỉnh thời gian.
+- Làm gì: gán đơn vị được thanh tra và thời gian thực hiện (tháng/quý) cho từng cuộc; đối chiếu với lịch thi, mùa tuyển sinh, đợt kiểm định để tránh chồng lấn với hoạt động của đơn vị. Ngoại lệ: cuộc thanh tra lấy chính hoạt động đó làm đối tượng (thanh tra thi, thanh tra tuyển sinh) phải diễn ra đúng thời điểm hoạt động. Nếu chồng lấn, nêu phương án điều chỉnh để người phụ trách xác nhận; không tự đổi thời gian đã nhập.
 - Dùng input: `doi_tuong`, `thoi_gian`.
 - Vai trò: Chuyên viên Phòng Thanh tra – Pháp chế · AI hỗ trợ: đối chiếu tự động, cảnh báo sai lệch · ⏱ ~1–2 giờ (ước tính)
 - Lưu ý nghiệp vụ: không dồn nhiều cuộc vào cùng một thời điểm tại cùng một đơn vị; để dự phòng thời gian cho thanh tra đột xuất phát sinh trong năm.
@@ -99,13 +95,13 @@ flowchart TD
     A[/"Kết quả năm trước + đơn thư + đề xuất đơn vị"/] --> B["Bước 1: Thu thập thông tin, đánh giá rủi ro"]
     B --> C["Bước 2: Xác định lĩnh vực trọng tâm, chốt danh mục"]
     C --> D["Bước 3: Xác định đối tượng và thời gian từng cuộc"]
-    D --> E{"Trùng kỳ thi hoặc tuyển sinh?"}
-    E -->|Có| F["Điều chỉnh thời gian"]
+    D --> E{"Chồng lấn với hoạt động của đơn vị (trừ cuộc lấy hoạt động đó làm đối tượng)?"}
+    E -->|Có| F["Đề xuất điều chỉnh, chờ xác nhận"]
     F --> D
     E -->|Không| G["Bước 4: Dự kiến đoàn thanh tra theo chuyên môn"]
     G --> H["Bước 5: Xác định phương pháp từng cuộc"]
     H --> I["Bước 6: Soạn kế hoạch theo bố cục chuẩn"]
-    I --> HG["👤 Hiệu trưởng phê duyệt, ban hành"]
+    I --> HG["👤 Bước 7: Hiệu trưởng phê duyệt, ban hành"]
     HG --> J[["Kế hoạch thanh tra nội bộ năm"]]
 ```
 ```
@@ -119,7 +115,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Kiểm tra nội bộ trước khi giao
 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
-- [ ] Có đầy đủ sản phẩm: Kế hoạch thanh tra nội bộ năm hoàn chỉnh (markdown, sẵn sàng trình ký)
+- [ ] Có đầy đủ sản phẩm: Kế hoạch thanh tra nội bộ năm hoàn chỉnh (sẵn sàng trình ký)
 - [ ] Có đầy đủ sản phẩm: Bảng tổng hợp các cuộc thanh tra: nội dung, đối tượng, thời gian, đoàn thanh tra
 - [ ] Mọi số liệu, tên, ngày tháng trong output khớp với Input đã cung cấp (không thêm bớt, không suy đoán)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
@@ -132,20 +128,16 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 > Tiêu chí đạt: tất cả các ô đều được đánh dấu.
 
 ## Căn cứ & lưu ý
-- Luật Thanh tra 2022 (Luật số 11/2022/QH15).
-- Nghị định 43/2023/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thanh tra.
-- ~~Nghị định 42/2013/NĐ-CP về tổ chức và hoạt động thanh tra giáo dục~~ — **[HẾT HIỆU LỰC]** Đã bị bãi bỏ toàn bộ bởi Nghị định 03/2024/NĐ-CP (quy định về cơ quan thực hiện chức năng thanh tra chuyên ngành); không dùng làm căn cứ. Về tổ chức bộ máy thanh tra chuyên ngành, đối chiếu NĐ 03/2024/NĐ-CP; về hoạt động thanh tra, áp dụng Luật Thanh tra 2022 và Nghị định 43/2023/NĐ-CP. [CẦN XÁC MINH: đối chiếu văn bản gốc tại ngày nghiệp vụ]
-- Điều lệ trường đại học (Quyết định 70/2014/QĐ-TTg); Quy chế tổ chức và hoạt động của trường.
+- Luật Thanh tra số 84/2025/QH15, hiệu lực từ 01/07/2025. Luật Thanh tra số 11/2022/QH15 hết hiệu lực từ ngày đó, trừ khoản 1 và khoản 3 Điều 64 của Luật 2025; đối chiếu Điều 63–64 để xác định phần chuyển tiếp.
+- Nghị định 216/2025/NĐ-CP (ký 05/08/2025) quy định chi tiết và hướng dẫn thi hành Luật Thanh tra 2025. Theo nguồn thứ cấp, nghị định này thay thế Nghị định 43/2023/NĐ-CP và Nghị định 03/2024/NĐ-CP; không dùng hai nghị định cũ làm căn cứ mới, chỉ dùng cho hồ sơ thuộc giai đoạn chuyển tiếp. [CẦN XÁC MINH: phạm vi thay thế (toàn bộ hay một phần) và ngày hiệu lực chính xác theo văn bản gốc tại Công báo]
+- ~~Nghị định 42/2013/NĐ-CP về tổ chức và hoạt động thanh tra giáo dục~~ — **[HẾT HIỆU LỰC]** Theo nguồn thứ cấp đã bị Nghị định 03/2024/NĐ-CP thay thế, và nghị định này lại bị Nghị định 216/2025/NĐ-CP thay thế; không dùng làm căn cứ.
+- Phân biệt thanh tra nhà nước chuyên ngành (do cơ quan có chức năng thực hiện) với kiểm tra nội bộ của trường (theo Điều lệ và quy chế nội bộ); chọn căn cứ theo đúng loại hoạt động và thẩm quyền ký.
+- Điều lệ trường đại học (Quyết định 70/2014/QĐ-TTg; kiểm tra hiệu lực tại ngày nghiệp vụ); Quy chế tổ chức và hoạt động của trường.
 - Kế hoạch thanh tra năm phải được ban hành trước khi triển khai cuộc thanh tra đầu tiên
 trong năm; điều chỉnh kế hoạch giữa năm phải trình Hiệu trưởng phê duyệt lại.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
 
 ## Quản trị phiên bản
-
-- Phiên bản gói: `1.3.1`; ngày cập nhật: `2026-10-10`.
-- Kho nguồn: https://github.com/phamtruong91/university-skills-framework
-- Người duy trì trên GitHub: `phamtruong91` (Phạm Văn Trường). Người phê duyệt nghiệp vụ: **chưa chỉ định**.
-- Commit nguồn trước cập nhật: `346719e6b0318ed034b4b016703f79733aa575e7`. Commit chứa phiên bản này xem bằng `git log -1 -- skills/ke-hoach-thanh-tra-nam`; không tự gán SHA chưa tạo.
-- Giấy phép: theo LICENSE của kho; bản quyền CES Global.
-- Lịch sử 1.1.0: bổ sung metadata giao diện, kiểm soát áp dụng, quản trị phiên bản.
-- Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
+- Phiên bản gói `1.3.2` (cập nhật 2026-10-10); hồ sơ đầy đủ tại [references/version.json](references/version.json).
+- Người phê duyệt nghiệp vụ: **chưa chỉ định**. Trạng thái: dự thảo nghiệp vụ; kiểm tra pháp lý trước thực thi. Ngày cập nhật không đồng nghĩa mọi văn bản đã được rà soát toàn văn.
+- Giấy phép theo LICENSE của kho (bản quyền CES Global). Lịch sử thay đổi: CHANGELOG.md.

@@ -63,7 +63,7 @@ Nguồn gốc để đối chiếu: [Nghị định 30/2020/NĐ-CP và phụ l�
    phù hợp với định hướng phát triển của trường.
 
 4. Phần II – Điều kiện đội ngũ giảng viên: số lượng, trình độ, bảng tổng hợp đội ngũ cơ
-   hữu đúng chuyên môn (đối chiếu Thông tư 02/2022).
+   hữu đúng chuyên môn (đối chiếu căn cứ hiện hành nêu tại phap-ly.md).
 
 5. Phần III – Điều kiện cơ sở vật chất: phòng học, phòng thí nghiệm/thực hành, thư viện,
    học liệu và kế hoạch đầu tư bổ sung.

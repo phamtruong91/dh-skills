@@ -1,0 +1,27 @@
+{
+  "skill": "soan-quyet-dinh-hc",
+  "output": "soan-quyet-dinh-hc.docx",
+  "kind": "docx",
+  "nd30_format": true,
+  "must_contain": [
+    "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
+    "QUYẾT ĐỊNH",
+    "Về việc thành lập Ban tổ chức Hội nghị cán bộ, viên chức năm học 2026–2027",
+    "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC MẪU A",
+    "Căn cứ Quy chế tổ chức và hoạt động",
+    "Điều 1.",
+    "Điều 3.",
+    "Nơi nhận:",
+    "- Như Điều 3;",
+    "- Lưu: VT, HCTH.",
+    "HIỆU TRƯỞNG",
+    "Trần Thị Bình"
+  ],
+  "must_not_contain": ["Số: 1", "năm 2026.", "TRƯỜNG ĐẠI HỌC A\\n"],
+  "blank_labels": ["Số:", "Hà Nội, ngày"],
+  "traps": [
+    {"id": "SO_QD_KHONG_TU_CAP", "mo_ta": "Đầu vào không có số quyết định: để dòng dấu chấm, không lấy số tiếp theo"},
+    {"id": "DANH_SACH_KEM_THEO_THIEU", "mo_ta": "Điều 1 nhắc danh sách kèm theo nhưng đầu vào không có danh sách thành viên: để trống, nêu trong phản hồi"},
+    {"id": "NGAY_HIEU_LUC", "mo_ta": "Hiệu lực 'kể từ ngày ký' khớp ý đồ ban hành; không tự đặt ngày"}
+  ]
+}
