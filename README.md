@@ -19,21 +19,35 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 | Skill nghiệp vụ | **153** |
 | Định dạng đầu ra được khai báo | **15** |
 
-## Những điểm chính của phiên bản 1.3.2
+## Trạng thái hiện tại (phiên bản 1.3.2)
 
-- **Trạng thái thử nghiệm:** 3 trong 171 skill đã chạy thử bằng dữ liệu giả (`soan-cong-van`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 168 skill còn lại chưa chạy thử. Chưa có người phê duyệt nghiệp vụ.
-- **Sửa căn cứ thanh tra** sang Luật Thanh tra 84/2025/QH15 và NĐ 216/2025/NĐ-CP (nguồn thứ cấp, cần đối chiếu Công báo).
-- **Dùng với Claude:** chỉ `name` và `description` trong SKILL.md được dùng; `agents/openai.yaml` dành cho nền tảng khác và bị bỏ qua. Mô tả các skill dễ nhầm đã nêu rõ khi nào không dùng.
+Đây là bộ skill **bản nháp đã rà soát**, chưa phải bản đã được pháp chế hay phòng chuyên môn phê duyệt. Cần hiểu đúng những gì đã và chưa được kiểm chứng:
 
-Các điểm của phiên bản 1.3.1 (vẫn áp dụng):
+| Hạng mục | Tình trạng |
+| --- | --- |
+| Cấu trúc, đầu vào, quy trình, đầu ra | **Đã kiểm tra bằng công cụ** cho cả 171 skill: đủ mục chuẩn, mọi đầu vào được một bước dùng, các bước đánh số liên tục, sơ đồ khớp số bước (`audit_structure.py`: 0 vấn đề; `validate_skills.py`: không lỗi) |
+| Quy trình đầy đủ | 58 skill từng bị rút gọn còn 4 bước chung chung đã được khôi phục nghiệp vụ gốc, kèm khối "Ràng buộc pháp lý khi thực hiện" |
+| Thể thức Nghị định 30/2020 | Có kiểm tra tự động trên file Word thật (khổ A4, lề, Times New Roman, cỡ chữ); chưa kiểm tra toàn bộ quy định về thể thức |
+| Chạy thử bằng dữ liệu giả | **4 trên 171 skill** (`soan-cong-van`, `soan-quyet-dinh-hc`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 167 skill còn lại chưa chạy thử |
+| Nội dung pháp lý | **Chưa đối chiếu toàn văn hoặc Công báo.** Căn cứ 2025–2026 được xác nhận qua nguồn thứ cấp. Con số, thời hạn, số điều trong các bước khôi phục là nghiệp vụ gốc, chỉ được gắn cờ |
+| Phê duyệt nghiệp vụ | Chưa có người phê duyệt cho từng skill |
 
-- **Giao file thực tế:** khi được yêu cầu tạo sản phẩm nghiệp vụ, skill phải tạo file tải được và cung cấp liên kết ngay, không chờ yêu cầu xuất file lần nữa.
+**Cần chuyên gia trước khi dùng thật:** pháp chế (căn cứ 2025–2026) và phòng chuyên môn của từng skill (biểu mẫu, mốc thời hạn). Danh sách điểm cần đối chiếu: [DIEM_CAN_DOI_CHIEU_PHAP_LY](docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md) và [CAN_CU_NGHI_LOI_THOI](docs/CAN_CU_NGHI_LOI_THOI.md). Báo cáo rà soát: [RA_SOAT_TOAN_BO](docs/RA_SOAT_TOAN_BO.md).
+
+## Nguyên tắc chung của mọi skill
+
+- **Giao file thực tế:** khi được yêu cầu tạo sản phẩm nghiệp vụ, skill phải tạo file tải được và cung cấp liên kết ngay.
 - **Chọn định dạng theo sản phẩm:** phân biệt định dạng mặc định với định dạng bổ sung; ưu tiên yêu cầu trực tiếp của người dùng và biểu mẫu áp dụng.
-- **Giữ chỗ điền đúng mẫu:** thông tin chưa có được chừa bằng dòng dấu chấm, dấu gạch hoặc ô trống theo mẫu gốc. Không tự điền số 0, ngày chạy, số văn bản, chữ ký hoặc dữ liệu ví dụ.
-- **File giao chỉ chứa sản phẩm nghiệp vụ:** không tự kèm checklist nghiệm thu, phụ lục kiểm tra, nhật ký AI hoặc bảng truy nguyên nguồn. Phụ lục nghiệp vụ bắt buộc theo mẫu vẫn được giữ.
-- **Có kiểm soát chất lượng và thẩm quyền:** kiểm tra nguồn, cấu trúc, định dạng và khả năng mở file; người có thẩm quyền xác nhận nội dung trước khi ký, phát hành hoặc công bố.
+- **Giữ chỗ điền đúng mẫu:** thông tin chưa có được chừa bằng dòng dấu chấm, dấu gạch hoặc ô trống. Không tự điền số 0, ngày, số văn bản, chữ ký hoặc dữ liệu ví dụ.
+- **File giao chỉ chứa sản phẩm nghiệp vụ:** không kèm checklist nghiệm thu, phụ lục kiểm tra hay nhật ký AI. Phụ lục bắt buộc theo mẫu vẫn được giữ.
+- **Con người duyệt:** người có thẩm quyền xác nhận nội dung trước khi ký, phát hành hoặc công bố.
+- **Dùng với Claude:** chỉ `name` và `description` trong `SKILL.md` được dùng khi chọn skill; `agents/openai.yaml` dành cho nền tảng khác. Mô tả các skill dễ nhầm đã nêu rõ khi nào không dùng.
 
-Các thay đổi 1.3.1 áp dụng cho toàn bộ 171 skill. Xem [CHANGELOG](CHANGELOG.md) để đối chiếu các mốc cập nhật.
+Chi tiết từng phiên bản: [CHANGELOG](CHANGELOG.md).
+
+## Cấu trúc một SKILL.md
+
+Mọi skill theo cùng thứ tự: định dạng và file đầu ra → quy cách đầu ra và thông tin thiếu → kiểm soát áp dụng và phê duyệt → giới hạn và human gate → khi nào dùng → **đầu vào** (bảng trường) → **quy trình** (từng Bước: làm gì, dùng input nào, vai trò, lưu ý nghiệp vụ, kết quả bước) → sơ đồ luồng → **đầu ra** → kiểm tra nội bộ → căn cứ và lưu ý → quản trị phiên bản.
 
 ## Phạm vi nghiệp vụ
 
@@ -140,7 +154,7 @@ Văn bản hành chính được hướng dẫn theo Nghị định 30/2020/NĐ-
 - Chức vụ, họ tên và chữ ký được xử lý theo nguồn và thẩm quyền; không tạo chữ ký, dấu hay trạng thái đã duyệt.
 - Chỉ xử lý dữ liệu cá nhân trong phạm vi được phép và cần thiết cho nghiệp vụ.
 
-**Phạm vi rà soát:** bộ skill có cập nhật căn cứ/điều kiện pháp lý cho 58 skill từ đợt trước, cùng quy cách đầu ra cho toàn bộ 171 skill. Việc kiểm tra đóng gói không chứng nhận tất cả căn cứ, ngưỡng, thời hạn hoặc mẫu chuyên ngành đều đã được xác minh toàn văn. Đơn vị phải đối chiếu quy chế, thẩm quyền và pháp luật tại thời điểm sử dụng.
+**Phạm vi rà soát:** 58 skill có tệp `phap-ly.md` với căn cứ đã cập nhật; 113 skill còn lại giữ căn cứ gốc và có thể chứa văn bản lỗi thời (xem [CAN_CU_NGHI_LOI_THOI](docs/CAN_CU_NGHI_LOI_THOI.md)). Kiểm tra tự động không chứng nhận căn cứ, ngưỡng, thời hạn hay mẫu chuyên ngành đã được xác minh toàn văn. Đơn vị phải đối chiếu quy chế, thẩm quyền và pháp luật tại thời điểm sử dụng.
 
 Xem [quy cách đầu ra](docs/QUY_CACH_DAU_RA.md), [đối chiếu pháp lý](docs/CAP_NHAT_PHAP_LY.md) và [quản trị phiên bản](GOVERNANCE.md). Các tài liệu thiết kế và quy trình lịch sử chỉ dùng tham khảo; khi có khác biệt, ưu tiên `SKILL.md`, quy cách đầu ra và manifest hiện hành. Skill hội đồng trường có giới hạn riêng theo loại hình trường và thời điểm áp dụng.
 
@@ -162,10 +176,16 @@ university-skills-framework/
 │           └── phap-ly.md              # ở skill có tài liệu pháp lý riêng
 ├── docs/
 │   ├── QUY_CACH_DAU_RA.md
-│   └── CAP_NHAT_PHAP_LY.md
+│   ├── CAP_NHAT_PHAP_LY.md              # căn cứ pháp lý đã cập nhật và điểm còn phải xác minh
+│   ├── DIEM_CAN_DOI_CHIEU_PHAP_LY.md    # dòng cần chuyên gia pháp lý đối chiếu
+│   ├── CAN_CU_NGHI_LOI_THOI.md          # căn cứ nghi lỗi thời ở skill chưa cập nhật
+│   ├── RA_SOAT_TOAN_BO.md               # báo cáo rà soát 171 skill
+│   └── legal-register.json
 ├── scripts/
-│   ├── validate_skills.py
-│   └── check_outputs.py
+│   ├── validate_skills.py               # cổng chặn: cấu trúc, mâu thuẫn, phiên bản
+│   ├── audit_structure.py               # quét quy trình, đầu vào/đầu ra từng skill
+│   ├── check_outputs.py                 # kiểm tra file Word/Excel, thể thức NĐ 30/2020
+│   └── maintenance/                     # công cụ chuẩn hóa hàng loạt
 ├── tests/                    # dữ liệu giả, file đầu ra mẫu, kết quả phát hiện
 ├── CHANGELOG.md
 ├── GOVERNANCE.md
@@ -179,8 +199,10 @@ Một số skill có thêm `assets/` hoặc tài liệu lịch sử phục vụ 
 Trước khi gửi thay đổi, đồng bộ `SKILL.md`, quy cách đầu ra, metadata giao diện, hồ sơ phiên bản và manifest; kiểm tra tình huống đủ dữ liệu, thiếu dữ liệu và dữ liệu mâu thuẫn.
 
 ```bash
-python -X utf8 scripts/validate_skills.py   # cấu trúc và mâu thuẫn nội bộ
-python -X utf8 scripts/check_outputs.py     # kiểm tra file Word/Excel đầu ra mẫu
+pip install -r scripts/requirements.txt
+python -X utf8 scripts/validate_skills.py   # cổng chặn: cấu trúc, mâu thuẫn, phiên bản
+python -X utf8 scripts/audit_structure.py   # rà quy trình, đầu vào/đầu ra từng skill
+python -X utf8 scripts/check_outputs.py     # kiểm tra file Word/Excel mẫu, thể thức NĐ 30/2020
 ```
 
 Công cụ kiểm tra số lượng skill, cấu trúc YAML, metadata, phiên bản, liên kết tài nguyên và các yêu cầu đầu ra. Việc xác nhận chất lượng nội dung, mẫu biểu và bố cục file thực tế vẫn cần thực hiện theo nghiệp vụ.
