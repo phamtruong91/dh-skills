@@ -1,0 +1,84 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử. Tên trường, người, số liệu đều là mẫu.",
+ "ten_chien_dich": "Tuyển sinh đợt 1 năm 2027 (tên mẫu)",
+ "thoi_gian": "01/02/2027–30/06/2027",
+ "muc_tieu": [
+  {
+   "noi_dung": "Số hồ sơ đăng ký xét tuyển",
+   "gia_tri": "1.500 hồ sơ",
+   "han": "30/06/2027"
+  },
+  {
+   "noi_dung": "Tăng nhận diện thương hiệu",
+   "gia_tri": null,
+   "han": null
+  }
+ ],
+ "doi_tuong": [
+  {
+   "nhom": "Học sinh lớp 12",
+   "kenh_hay_dung": "Facebook, Zalo",
+   "quan_tam": "Học phí, cơ hội việc làm"
+  },
+  {
+   "nhom": "Phụ huynh",
+   "kenh_hay_dung": "Facebook",
+   "quan_tam": "Học phí, học bổng"
+  }
+ ],
+ "thong_diep": {
+  "chinh": "Học thật, ra trường có việc",
+  "phu": [
+   "Học bổng đầu vào",
+   "Thực tập tại doanh nghiệp"
+  ],
+  "bang_chung": [
+   {
+    "thong_diep": "Học thật, ra trường có việc",
+    "so_lieu": null
+   },
+   {
+    "thong_diep": "Học bổng đầu vào",
+    "so_lieu": "Học bổng cho 100 thí sinh đầu tiên"
+   }
+  ]
+ },
+ "ngan_sach_trieu_dong": [
+  {
+   "kenh": "Facebook Ads",
+   "so_tien": "200"
+  },
+  {
+   "kenh": "Tư vấn tại trường THPT",
+   "so_tien": "150"
+  },
+  {
+   "kenh": "Website và SEO",
+   "so_tien": "90"
+  },
+  {
+   "kenh": "Zalo OA",
+   "so_tien": "80"
+  }
+ ],
+ "tong_ngan_sach_khai_bao_trieu_dong": "500",
+ "kpi": [
+  {
+   "kenh": "Facebook Ads",
+   "kpi": "600 lead"
+  },
+  {
+   "kenh": "Tư vấn tại trường THPT",
+   "kpi": "400 lead"
+  },
+  {
+   "kenh": "Website và SEO",
+   "kpi": "300 lead"
+  },
+  {
+   "kenh": "Zalo OA",
+   "kpi": null
+  }
+ ],
+ "kpi_tong": "1.500 hồ sơ"
+}

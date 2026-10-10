@@ -1,0 +1,77 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử. Tên trường, người, số liệu đều là mẫu.",
+ "nam_hoc": "2025–2026",
+ "co_so": "Trường Đại học Mẫu A",
+ "thoi_gian_trinh_bay_phut": 20,
+ "bao_cao_don_vi": {
+  "dao_tao": {
+   "tuyen_sinh": [
+    {
+     "nganh": "Công nghệ thông tin",
+     "chi_tieu": "600",
+     "nhap_hoc": "571"
+    },
+    {
+     "nganh": "Kinh tế",
+     "chi_tieu": "500",
+     "nhap_hoc": "462"
+    },
+    {
+     "nganh": "Ngoại ngữ",
+     "chi_tieu": "400",
+     "nhap_hoc": "352"
+    },
+    {
+     "nganh": "Luật",
+     "chi_tieu": "300",
+     "nhap_hoc": "257"
+    }
+   ],
+   "ty_le_tot_nghiep_dung_han_phan_tram": {
+    "2022–2023": 78,
+    "2023–2024": 81,
+    "2024–2025": 84,
+    "2025–2026": null
+   },
+   "nhan_xet_khai_bao": "Tăng 8 điểm phần trăm so với 2022–2023"
+  },
+  "tai_chinh": {
+   "thu_trieu_dong": "412.000",
+   "chi_theo_nhom_trieu_dong": [
+    {
+     "nhom": "Lương và phụ cấp",
+     "so_tien": "210.000"
+    },
+    {
+     "nhom": "Đào tạo",
+     "so_tien": "98.500"
+    },
+    {
+     "nhom": "Cơ sở vật chất",
+     "so_tien": "60.000"
+    },
+    {
+     "nhom": "Khác",
+     "so_tien": "30.000"
+    }
+   ],
+   "tong_chi_khai_bao_trieu_dong": "400.000"
+  },
+  "cong_tac_sinh_vien": null,
+  "ton_tai": [
+   [
+    "Cơ sở vật chất giảng đường chưa đáp ứng giờ cao điểm",
+    "Số phòng học không tăng trong khi quy mô tăng"
+   ],
+   [
+    "Tỷ lệ nhập học Luật còn thấp",
+    "Chưa có kênh tư vấn riêng cho ngành"
+   ],
+   [
+    "Báo cáo đơn vị nộp chậm",
+    "Chưa có mốc nộp thống nhất"
+   ]
+  ]
+ },
+ "dinh_huong_chung": null
+}

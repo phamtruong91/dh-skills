@@ -1,0 +1,56 @@
+{
+ "skill": "executive-brief-trinh-lanh-dao",
+ "output": "executive-brief-trinh-lanh-dao.pptx",
+ "kind": "pptx",
+ "must_contain": [
+  "Chưa có số liệu",
+  "Chưa đủ căn cứ để khuyến nghị",
+  "chưa xác định",
+  "2,77",
+  "33,3%"
+ ],
+ "must_not_contain": [
+  "nên chọn phương án",
+  "Khuyến nghị chọn"
+ ],
+ "allowed_derived": [
+  "1.200"
+ ],
+ "deck": {
+  "min_slides": 5,
+  "max_slides": 8,
+  "min_title_pt": 28,
+  "min_body_pt": 14,
+  "min_caption_pt": 11,
+  "max_words_per_slide": 95,
+  "notes_required": true,
+  "talk_minutes": 10,
+  "tables": [
+   {
+    "slide": 3,
+    "rows": 5,
+    "cols": 4,
+    "blank_text": "Chưa có số liệu",
+    "blank_cells": 3
+   }
+  ]
+ },
+ "traps": [
+  {
+   "id": "THOI_HAN_TRONG",
+   "mo_ta": "Không có thời hạn quyết định: ghi chưa xác định"
+  },
+  {
+   "id": "O_THIEU_NGUON",
+   "mo_ta": "Phương án B chiến lược, C chi phí/thời gian/chiến lược không có nguồn: để trống"
+  },
+  {
+   "id": "KHUYEN_NGHI_TRUNG_LAP",
+   "mo_ta": "Không đủ căn cứ: không chọn hộ phương án"
+  },
+  {
+   "id": "MOI_SO_CO_NGUON",
+   "mo_ta": "Mỗi số liệu ghi nguồn"
+  }
+ ]
+}

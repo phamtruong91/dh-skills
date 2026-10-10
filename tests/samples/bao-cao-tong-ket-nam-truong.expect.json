@@ -1,0 +1,103 @@
+{
+ "skill": "bao-cao-tong-ket-nam-truong",
+ "output": "bao-cao-tong-ket-nam-truong.pptx",
+ "kind": "pptx",
+ "must_contain": [
+  "Tổng kết năm học 2025–2026",
+  "91,2%",
+  "tăng 6 điểm",
+  "Chưa có số liệu",
+  "Chưa nhận được báo cáo của Phòng Công tác sinh viên",
+  "chờ định hướng"
+ ],
+ "must_not_contain": [
+  "tăng 8 điểm",
+  "Tăng 8 điểm",
+  "400.000 triệu đồng tổng chi"
+ ],
+ "allowed_derived": [
+  "1.800",
+  "1.642",
+  "398.500",
+  "1.500"
+ ],
+ "deck": {
+  "min_slides": 8,
+  "max_slides": 12,
+  "min_title_pt": 28,
+  "min_body_pt": 14,
+  "min_caption_pt": 11,
+  "max_words_per_slide": 85,
+  "notes_required": true,
+  "talk_minutes": 20,
+  "charts": [
+   {
+    "slide": 3,
+    "type": "bar",
+    "series": {
+     "Chỉ tiêu": [
+      600,
+      500,
+      400,
+      300
+     ],
+     "Nhập học": [
+      571,
+      462,
+      352,
+      257
+     ]
+    }
+   },
+   {
+    "slide": 4,
+    "type": "line",
+    "series": {
+     "Tốt nghiệp đúng hạn": [
+      78,
+      81,
+      84
+     ]
+    }
+   },
+   {
+    "slide": 5,
+    "type": "bar",
+    "series": {
+     "Chi": [
+      210000,
+      98500,
+      60000,
+      30000
+     ]
+    }
+   }
+  ]
+ },
+ "traps": [
+  {
+   "id": "NHAN_XET_SAI_SO",
+   "mo_ta": "Đầu vào ghi tăng 8 điểm, tính lại 6 điểm"
+  },
+  {
+   "id": "TONG_CHI_LECH",
+   "mo_ta": "Cộng nhóm 398.500, khai 400.000"
+  },
+  {
+   "id": "NAM_CHUA_CO_SO_LIEU",
+   "mo_ta": "Tốt nghiệp 2025–2026 chưa có: không ghi 0"
+  },
+  {
+   "id": "DON_VI_CHUA_BAO_CAO",
+   "mo_ta": "Công tác sinh viên chưa nộp: không bịa"
+  },
+  {
+   "id": "THIEU_DINH_HUONG",
+   "mo_ta": "Không có định hướng BGH: không bịa chỉ tiêu"
+  },
+  {
+   "id": "KHONG_PHAI_BAO_CAO_VAN_BAN",
+   "mo_ta": "Bộ slide không dùng thể thức văn bản hành chính"
+  }
+ ]
+}

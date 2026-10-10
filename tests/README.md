@@ -22,3 +22,7 @@ Giới hạn: bộ kiểm tra chứng minh file mở được, đúng quy tắc 
 ## Báo cáo có biểu đồ
 
 `python -X utf8 tests/build_bao_cao_bieu_do.py` dựng 3 báo cáo (khảo sát, tiến độ đề tài, KHCN năm) và 1 file Excel có biểu đồ gốc; `scripts/check_outputs.py` kiểm biểu đồ. Giới hạn: bộ kiểm tra không "nhìn" được nội dung ảnh, chỉ đối chiếu văn bản thay thế (alt) với bảng; việc hình đúng số thật phải xem bằng mắt (đã xem bản render LibreOffice, chưa mở bằng Word). Số trong hình được sinh từ cùng dữ liệu với bảng nên khớp là điều dễ; bẫy thật nằm ở dữ liệu đầu vào (xem findings).
+
+## Bộ slide PowerPoint
+
+`node tests/build_pptx.js` dựng 4 bộ slide (cần pptxgenjs và kỹ năng pptx ở /mnt/skills/public/pptx); `scripts/check_outputs.py` kiểm cấu trúc, kèm công cụ `validate.py` của kỹ năng pptx. Giới hạn: kiểm "chữ tràn" chỉ là ước lượng theo số ký tự, việc chữ có vừa khung thật phải xem ảnh render (đã xem bằng LibreOffice, chưa mở bằng PowerPoint); phông Cambria/Calibri trên máy người dùng có thể khác bản thay thế khi render.

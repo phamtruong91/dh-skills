@@ -1,5 +1,11 @@
 # Nhật ký thay đổi
 
+## 1.3.4 — 2026-10-10
+
+- Thêm mục "Xuất PowerPoint (.pptx) khi được yêu cầu" vào quy cách đầu ra của 171 skill (script `scripts/maintenance/add_pptx_rules.py`) và câu dẫn trong SKILL.md; cổng kiểm tra có thêm `co_quy_tac_pptx`. Trước đó mọi skill chỉ có một dòng "PPTX phải có slide thực".
+- Chạy thử 4 bộ slide bằng dữ liệu giả có bẫy (`tests/build_pptx.js`): báo cáo tổng kết năm trường, executive brief, trợ lý giảng dạy, campaign brief tuyển sinh. Biểu đồ gốc của PowerPoint, ghi chú người trình bày, bảng.
+- `scripts/check_outputs.py` kiểm .pptx: số slide, tiêu đề thật, cỡ chữ, số chữ mỗi slide, ghi chú, trong khung, đè nhau, chữ tràn (ước lượng), bảng, biểu đồ gốc khớp số liệu. Bộ test hiện 19/19.
+
 ## 1.3.3 — 2026-10-10
 
 - Thêm mục "Biểu đồ và hình trong báo cáo số liệu" vào quy cách đầu ra của 31 skill báo cáo/phân tích số liệu (danh sách: `scripts/chart_skills.txt`; script: `scripts/maintenance/add_chart_rules.py`). Cổng kiểm tra có thêm `co_quy_tac_bieu_do`.

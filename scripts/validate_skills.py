@@ -94,6 +94,9 @@ def skill_checks(path, manifest, records):
     chart_list = Path(__file__).with_name("chart_skills.txt")
     if chart_list.is_file() and name in chart_list.read_text(encoding="utf-8").split():
         c["co_quy_tac_bieu_do"] = "## Biểu đồ và hình trong báo cáo số liệu" in output_text and "Biểu đồ và hình trong báo cáo số liệu" in t
+    # --- Quy tắc xuất PowerPoint (1.3.4) ---
+    if version["default_output_format"] in ("docx", "xlsx"):
+        c["co_quy_tac_pptx"] = "## Xuất PowerPoint (.pptx) khi được yêu cầu" in output_text and "Xuất PowerPoint (.pptx) khi được yêu cầu" in t
     # --- Khóa các lỗi mẫu đã sửa ở đợt rà soát nhóm 1 ---
     for line in re.findall(r"^- \[ \] Đúng thể thức và định dạng theo (.*)$", t, flags=re.M):
         c["muc_the_thuc_khong_cat_cut"] = not line.rstrip().endswith("…") and not re.search(
