@@ -63,29 +63,63 @@ def mark_row(row, header=False, keep=True):
         trPr.append(OxmlElement("w:tblHeader"))
 
 
-def grid(d, headers, rows, widths, total=None, aligns=None):
+def _shade(cell, fill="D9D9D9"):
+    tcPr = cell._tc.get_or_add_tcPr()
+    sh = OxmlElement("w:shd")
+    sh.set(qn("w:val"), "clear")
+    sh.set(qn("w:color"), "auto")
+    sh.set(qn("w:fill"), fill)
+    tcPr.append(sh)
+
+
+def _valign(cell, val="center"):
+    tcPr = cell._tc.get_or_add_tcPr()
+    v = OxmlElement("w:vAlign")
+    v.set(qn("w:val"), val)
+    tcPr.append(v)
+
+
+def grid(d, headers, rows, widths, total=None, aligns=None, size=12):
+    """Bảng chuẩn: bố cục cố định theo tổng bề rộng vùng chữ, cột STT đủ rộng, tiêu đề đậm có nền xám và lặp mỗi trang,
+    chữ cỡ 12, căn giữa theo chiều dọc, dòng không bị cắt giữa hai trang."""
     t = d.add_table(rows=1, cols=len(headers))
     t.style = "Table Grid"
     t.autofit = False
     t.alignment = WD_TABLE_ALIGNMENT.CENTER
+    tblPr = t._tbl.tblPr
+    lay = OxmlElement("w:tblLayout")
+    lay.set(qn("w:type"), "fixed")
+    tblPr.append(lay)
+    for e in tblPr.findall(qn("w:tblW")):
+        tblPr.remove(e)
+    w = OxmlElement("w:tblW")
+    w.set(qn("w:w"), str(round(sum(widths) * 567)))
+    w.set(qn("w:type"), "dxa")
+    tblPr.append(w)
     for k, h in enumerate(headers):
-        cell_text(t.rows[0].cells[k], [h], size=11, bold=True, align=C)
+        cell_text(t.rows[0].cells[k], [h], size=size, bold=True, align=C)
+        _shade(t.rows[0].cells[k])
     mark_row(t.rows[0], header=True)
     for r in rows:
         cells = t.add_row().cells
         for k, v in enumerate(r):
-            cell_text(cells[k], [v], size=11, align=(aligns[k] if aligns else L))
+            cell_text(cells[k], [v], size=size, align=(aligns[k] if aligns else L))
         mark_row(t.rows[-1])
     if total:
         cells = t.add_row().cells
         for k, v in enumerate(total):
-            cell_text(cells[k], [v], size=11, bold=True, align=L)
+            cell_text(cells[k], [v], size=size, bold=True, align=L)
+            _shade(cells[k], "F2F2F2")
         mark_row(t.rows[-1])
-    for k, w in enumerate(widths):
-        t.columns[k].width = Cm(w)  # cập nhật lưới cột để Word/LibreOffice đều theo đúng bề rộng
+    for k, wd in enumerate(widths):
+        t.columns[k].width = Cm(wd)  # cập nhật lưới cột để Word/LibreOffice đều theo đúng bề rộng
     for row in t.rows:
-        for k, w in enumerate(widths):
-            row.cells[k].width = Cm(w)
+        for k, wd in enumerate(widths):
+            row.cells[k].width = Cm(wd)
+            _valign(row.cells[k])
+            for p in row.cells[k].paragraphs:
+                p.paragraph_format.space_before = Pt(2)
+                p.paragraph_format.space_after = Pt(2)
     return t
 
 
@@ -207,8 +241,8 @@ def build_hoc_bong():
     para(d, f"Kèm theo Quyết định số {'.' * 6}/QĐ-{'.' * 6} ngày ..... tháng ..... năm ........ của Hiệu trưởng", italic=True, align=C, after=8)
     body = [[str(k), r["ho_ten"], r["ma_sv"], r["lop"], r["khoa"], r["muc"], r["ghi_chu"]] for k, r in enumerate(clean, 1)]
     grid(d, ["STT", "Họ và tên", "Mã SV", "Lớp", "Khoa", "Mức học bổng (đồng)", "Ghi chú"], body,
-         [1.2, 3.6, 2.4, 2.1, 2.8, 2.1, 1.8], total=["Tổng cộng", f"{n} sinh viên", "", "", "", money(tong), ""],
-         aligns=[C, L, L, L, L, WD_ALIGN_PARAGRAPH.RIGHT, L])
+         [1.4, 3.5, 2.4, 2.0, 2.7, 2.2, 1.8], total=["Tổng cộng", f"{n} sinh viên", "", "", "", money(tong), ""],
+         aligns=[C, L, L, L, L, WD_ALIGN_PARAGRAPH.RIGHT, L], size=11)
     out = O / "quyet-dinh-cap-hoc-bong--tai-lon.docx"
     d.save(out)
     # kỳ vọng
@@ -340,7 +374,7 @@ def build_ke_hoach():
         para(d, f"{k}. {m}.", first_indent=1.0, align=J, after=2)
     para(d, "II. NHIỆM VỤ CỤ THỂ", bold=True, after=4)
     body = [[str(k), n["noi_dung"], n["don_vi"], n["thoi_gian"], n["ket_qua"]] for k, n in enumerate(i["nhiem_vu"], 1)]
-    grid(d, ["STT", "Nội dung", "Đơn vị/cá nhân thực hiện", "Thời gian", "Kết quả mong đợi"], body, [1.1, 5.7, 3.0, 3.2, 3.0], aligns=[C, L, L, L, L])
+    grid(d, ["STT", "Nội dung", "Đơn vị/cá nhân thực hiện", "Thời gian", "Kết quả mong đợi"], body, [1.5, 5.0, 3.0, 3.6, 2.9], aligns=[C, L, L, L, L])
     para(d, "", after=4)
     para(d, "III. KINH PHÍ", bold=True, after=2)
     for x in i["kinh_phi"]:

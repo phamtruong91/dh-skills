@@ -52,3 +52,16 @@ Khi tạo sản phẩm nghiệp vụ, phải tạo file thực tế và cung c�
 Không giới hạn đầu ra vào định dạng mặc định. Chọn định dạng theo sản phẩm người dùng yêu cầu và công cụ thực tế: DOCX để sửa văn bản; PDF để đọc/in/công bố; XLSX để giữ sheet/công thức; CSV để trao đổi dữ liệu bảng; TXT/MD để giao nội dung thuần; HTML để giao nội dung web; JSON/YAML để giao dữ liệu hoặc cấu hình; PPTX để giao bài trình chiếu; PNG/SVG để giao biểu đồ; TEX/BIB để giao nguồn bài viết khoa học/danh mục trích dẫn; ZIP để gom bộ hồ sơ hoặc gói skill. Chỉ tạo định dạng bổ sung khi sản phẩm cần hoặc người dùng yêu cầu; danh sách định dạng là cách lựa chọn đầu ra, không cam kết mọi công cụ chuyển đổi đều có sẵn.
 
 Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.
+
+## Bảng trong văn bản nhiều trang
+
+Áp dụng khi file Word có bảng dài (danh sách, bảng nhiệm vụ, bảng số liệu):
+
+- Khổ A4, lề theo Nghị định 30/2020/NĐ-CP (trên và dưới 20–25 mm, trái 30–35 mm, phải 15–20 mm); vùng chữ rộng 16 cm, tổng bề rộng bảng không vượt vùng chữ.
+- Bố cục bảng cố định; cột STT rộng tối thiểu 1,4 cm để chữ "STT" không bị tách dòng; cột số tiền căn phải; cột ngày đủ rộng để mỗi khoảng thời gian không quá hai dòng.
+- Phông Times New Roman, cỡ 12 trong bảng (nội dung văn bản 13–14).
+- Dòng tiêu đề đậm, có nền xám nhạt, lặp lại ở đầu mỗi trang; mỗi dòng dữ liệu không bị cắt giữa hai trang; nội dung ô căn giữa theo chiều dọc, có khoảng đệm trên dưới.
+- STT liên tục từ 1; dòng tổng cộng (nếu có) ở cuối bảng.
+- Số trang đặt giữa lề trên, bắt đầu từ trang 2; khối chữ ký không đứng một mình ở trang mới (cùng trang với ít nhất một đoạn nội dung cuối).
+
+`scripts/check_outputs.py` kiểm các điểm trên tự động (cần LibreOffice và `pdftotext` để kiểm số trang và ngắt dòng); nên mở file để xem bố cục thực tế trước khi giao.

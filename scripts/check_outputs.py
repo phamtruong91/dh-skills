@@ -145,6 +145,7 @@ def pdf_pages(path):
 def layout_errors(path, expect, text, log):
     """Kiểm tra file nhiều dữ liệu/nhiều trang: số trang, số trang ở đầu trang, bảng, token duy nhất, ràng buộc cùng trang."""
     from docx import Document
+    from docx.oxml.ns import qn
     lay = expect.get("layout", {})
     errs = []
     d = Document(path)
@@ -168,6 +169,15 @@ def layout_errors(path, expect, text, log):
             errs.append(f"bảng {spec['index']}: dòng tiêu đề không lặp lại ở mỗi trang")
         if spec.get("cant_split") and not all("w:cantSplit" in r._tr.xml for r in rows[1:]):
             errs.append(f"bảng {spec['index']}: có dòng bị phép ngắt giữa hai trang")
+        grid_w = [int(g.get(qn("w:w"))) / 567 for g in tb._tbl.tblGrid.findall(qn("w:gridCol"))]
+        if "w:tblLayout" not in tb._tbl.tblPr.xml or 'w:type="fixed"' not in tb._tbl.tblPr.xml:
+            errs.append(f"bảng {spec['index']}: chưa đặt bố cục cố định nên Word có thể co giãn cột")
+        if sum(grid_w) > 16.1 or sum(grid_w) < 15.0:
+            errs.append(f"bảng {spec['index']}: tổng bề rộng {sum(grid_w):.1f} cm, không khớp vùng chữ 16 cm")
+        if grid_w and grid_w[0] < 1.4:
+            errs.append(f"bảng {spec['index']}: cột STT chỉ {grid_w[0]:.1f} cm, chữ 'STT' sẽ bị tách dòng")
+        if "w:shd" not in rows[0]._tr.xml:
+            errs.append(f"bảng {spec['index']}: dòng tiêu đề chưa có nền phân biệt")
         body = [[c.text.strip() for c in r.cells] for r in rows[1:]]
         if not body:
             errs.append(f"bảng {spec['index']}: không có dòng dữ liệu")
@@ -198,6 +208,9 @@ def layout_errors(path, expect, text, log):
             if lay.get("min_pages") and len(pages) < lay["min_pages"]:
                 errs.append(f"chỉ {len(pages)} trang, kỳ vọng ít nhất {lay['min_pages']}")
             log.append(f"  số trang thực tế: {len(pages)}")
+            for k, p in enumerate(pages, 1):
+                if re.search(r"^\s*STT?\s*$", p, flags=re.M) and re.search(r"^\s*T\s*$", p, flags=re.M):
+                    errs.append(f"trang {k}: chữ STT bị tách thành hai dòng")
             for a, b in lay.get("same_page", []):
                 if not any(a in p and b in p for p in pages):
                     errs.append(f"{a!r} và {b!r} không cùng một trang (khối ký bị tách khỏi nội dung)")
