@@ -209,6 +209,10 @@ def layout_errors(path, expect, text, log):
                 errs.append(f"chỉ {len(pages)} trang, kỳ vọng ít nhất {lay['min_pages']}")
             log.append(f"  số trang thực tế: {len(pages)}")
             for k, p in enumerate(pages, 1):
+                lines = [ln.strip() for ln in p.split("\n") if ln.strip()]
+                for a_, b_ in zip(lines, lines[1:]):  # tiêu đề IN HOA có một chữ mồ côi ở dòng cuối
+                    if len(a_) > 30 and a_ == a_.upper() and len(b_.split()) == 1 and b_ == b_.upper() and b_.isalpha() and len(b_) <= 6:
+                        errs.append(f"trang {k}: tiêu đề có một chữ rơi xuống dòng riêng: {b_!r}")
                 if re.search(r"^\s*STT?\s*$", p, flags=re.M) and re.search(r"^\s*T\s*$", p, flags=re.M):
                     errs.append(f"trang {k}: chữ STT bị tách thành hai dòng")
             for a, b in lay.get("same_page", []):

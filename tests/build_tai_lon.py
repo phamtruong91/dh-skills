@@ -55,8 +55,12 @@ def page_number(d):
         r._r.append(e)
 
 
-def mark_row(row, header=False, keep=True):
+def mark_row(row, header=False, keep=True, min_h_cm=0.8):
     trPr = row._tr.get_or_add_trPr()
+    h = OxmlElement("w:trHeight")  # mọi dòng cao tối thiểu như nhau để hàng đều nhau
+    h.set(qn("w:val"), str(round(min_h_cm * 567)))
+    h.set(qn("w:hRule"), "atLeast")
+    trPr.append(h)
     if keep:
         trPr.append(OxmlElement("w:cantSplit"))
     if header:
@@ -108,7 +112,7 @@ def grid(d, headers, rows, widths, total=None, aligns=None, size=12):
     if total:
         cells = t.add_row().cells
         for k, v in enumerate(total):
-            cell_text(cells[k], [v], size=size, bold=True, align=L)
+            cell_text(cells[k], [v], size=size, bold=True, align=(aligns[k] if aligns else L))
             _shade(cells[k], "F2F2F2")
         mark_row(t.rows[-1])
     for k, wd in enumerate(widths):
@@ -236,13 +240,14 @@ def build_hoc_bong():
     keep_together(d, 2)
     sign(d, inp["noi_nhan"], inp["nguoi_ky"]["chuc_danh"], inp["nguoi_ky"]["ho_ten"])
     d.add_page_break()
-    para(d, "DANH SÁCH SINH VIÊN ĐƯỢC CẤP HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP", bold=True, align=C, after=0)
+    para(d, "DANH SÁCH SINH VIÊN ĐƯỢC CẤP", bold=True, align=C, after=0)
+    para(d, "HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP", bold=True, align=C, after=0)
     para(d, inp["ten_dot"].upper() if False else f"({inp['ten_dot']})", align=C, after=0)
     para(d, f"Kèm theo Quyết định số {'.' * 6}/QĐ-{'.' * 6} ngày ..... tháng ..... năm ........ của Hiệu trưởng", italic=True, align=C, after=8)
     body = [[str(k), r["ho_ten"], r["ma_sv"], r["lop"], r["khoa"], r["muc"], r["ghi_chu"]] for k, r in enumerate(clean, 1)]
     grid(d, ["STT", "Họ và tên", "Mã SV", "Lớp", "Khoa", "Mức học bổng (đồng)", "Ghi chú"], body,
-         [1.4, 3.5, 2.4, 2.0, 2.7, 2.2, 1.8], total=["Tổng cộng", f"{n} sinh viên", "", "", "", money(tong), ""],
-         aligns=[C, L, L, L, L, WD_ALIGN_PARAGRAPH.RIGHT, L], size=11)
+         [1.4, 3.8, 2.2, 1.9, 2.6, 2.1, 2.0], total=["Tổng cộng", f"{n} sinh viên", "", "", "", money(tong), ""],
+         aligns=[C, L, C, C, C, C, C], size=11)
     out = O / "quyet-dinh-cap-hoc-bong--tai-lon.docx"
     d.save(out)
     # kỳ vọng
@@ -374,7 +379,7 @@ def build_ke_hoach():
         para(d, f"{k}. {m}.", first_indent=1.0, align=J, after=2)
     para(d, "II. NHIỆM VỤ CỤ THỂ", bold=True, after=4)
     body = [[str(k), n["noi_dung"], n["don_vi"], n["thoi_gian"], n["ket_qua"]] for k, n in enumerate(i["nhiem_vu"], 1)]
-    grid(d, ["STT", "Nội dung", "Đơn vị/cá nhân thực hiện", "Thời gian", "Kết quả mong đợi"], body, [1.5, 5.0, 3.0, 3.6, 2.9], aligns=[C, L, L, L, L])
+    grid(d, ["STT", "Nội dung", "Đơn vị/cá nhân thực hiện", "Thời gian", "Kết quả mong đợi"], body, [1.5, 5.0, 3.0, 3.6, 2.9], aligns=[C, L, C, C, L])
     para(d, "", after=4)
     para(d, "III. KINH PHÍ", bold=True, after=2)
     for x in i["kinh_phi"]:
