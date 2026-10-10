@@ -84,3 +84,15 @@ Biên bản hành chính dùng BB và các thành phần của Mẫu 1.9 Phụ l
 ## Yêu cầu mẫu chuyên ngành
 
 Chọn biên bản kiểm kê theo loại tài sản, chế độ kế toán/tài sản công và mẫu đơn vị được phép sử dụng. Phần bảng cần nhận diện tài sản, số lượng/giá trị sổ sách, thực tế, chênh lệch, nguyên nhân và kiến nghị có nguồn; khối người kiểm kê/người quản lý/kế toán/người có thẩm quyền theo nguyên mẫu. Không tự quyết định thanh lý hay điều chỉnh sổ.
+
+## Thể thức và bảng biểu khi dựng file
+
+- Khổ A4; Times New Roman đen; nội dung canh đều hai lề, thụt đầu dòng 1 cm, cách đoạn tối thiểu 6 pt, giãn dòng từ đơn đến 1,5. Số trang chữ số Ả Rập, giữa lề trên, cỡ 13–14, không hiện ở trang đầu.
+- Tiêu đề IN HOA ngắt dòng cân đối, không để một chữ rơi xuống dòng riêng; thiếu dữ liệu thì để trống theo mẫu.
+- Bảng: bố cục cố định, tổng bề rộng không vượt vùng chữ; cột STT rộng tối thiểu 1,4 cm (để "STT" không tách dòng); cột STT, mã, lớp, ngày, đơn vị căn giữa, cột họ tên và nội dung dài căn trái, cột số tiền căn thống nhất cả cột; chữ cỡ 11–13 (khuyến nghị 12; 11 khi từ 7 cột).
+- Dòng tiêu đề bảng đậm, nền xám nhạt, lặp ở đầu mỗi trang; mọi dòng cao tối thiểu như nhau, căn giữa theo chiều dọc, có khoảng đệm trên dưới; dòng không bị cắt giữa hai trang; STT liên tục từ 1; dòng tổng cộng ở cuối bảng.
+- Danh sách hoặc bảng kèm theo là phụ lục: bắt đầu ở trang mới, ghi "Kèm theo ... số ... ngày ..." (để trống nếu chưa có), đánh số trang riêng từ 1. Khối chữ ký cùng trang với ít nhất một đoạn nội dung cuối.
+- Mở file xem bố cục thực tế trước khi giao; kiểm tra tự động không thay việc này.
+- Phần đầu theo Phụ lục I Nghị định 30/2020: quốc hiệu 12–13 đậm hoa; tiêu ngữ viết "Độc lập - Tự do - Hạnh phúc" (gạch ngang), 13–14 đậm, có đường kẻ dưới; tên cơ quan chủ quản 12–13 hoa không đậm; tên cơ quan ban hành 12–13 hoa đậm, có đường kẻ dưới; số, ký hiệu cỡ 13; địa danh, ngày tháng năm 13–14 nghiêng; tên loại văn bản 13–14 hoa đậm; chức vụ người ký hoa đậm, họ tên đậm.
+- Nhãn "Nơi nhận:" cỡ 12 đậm nghiêng (đặt định dạng cho cả đoạn); danh sách nơi nhận cỡ 11 thường. Tên cơ quan ở phần đầu không ngắt chữ giữa chừng: chia bề rộng hai cột cho đủ chỗ.
+- Số chưa cấp và ngày chưa ký để dòng dấu chấm; không tự điền.

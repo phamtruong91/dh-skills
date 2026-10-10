@@ -75,3 +75,12 @@ Cấu trúc này là hướng dẫn nội dung; nếu có mẫu chuyên ngành �
 ## Yêu cầu mẫu chuyên ngành
 
 Khung chương trình theo Thông tư 54/2026/TT-BGDĐT, chuẩn chương trình/ngành và quy định nội bộ áp dụng; giữ mục tiêu, chuẩn đầu ra, khối lượng, học phần, điều kiện thực hiện và ma trận phù hợp. Không sao chép mức tín chỉ hoặc tỷ trọng của ví dụ thành yêu cầu pháp định.
+
+## Thể thức và bảng biểu khi dựng file
+
+- Khổ A4; Times New Roman đen; nội dung canh đều hai lề, thụt đầu dòng 1 cm, cách đoạn tối thiểu 6 pt, giãn dòng từ đơn đến 1,5. Số trang chữ số Ả Rập, giữa lề trên, cỡ 13–14, không hiện ở trang đầu.
+- Tiêu đề IN HOA ngắt dòng cân đối, không để một chữ rơi xuống dòng riêng; thiếu dữ liệu thì để trống theo mẫu.
+- Bảng: bố cục cố định, tổng bề rộng không vượt vùng chữ; cột STT rộng tối thiểu 1,4 cm (để "STT" không tách dòng); cột STT, mã, lớp, ngày, đơn vị căn giữa, cột họ tên và nội dung dài căn trái, cột số tiền căn thống nhất cả cột; chữ cỡ 11–13 (khuyến nghị 12; 11 khi từ 7 cột).
+- Dòng tiêu đề bảng đậm, nền xám nhạt, lặp ở đầu mỗi trang; mọi dòng cao tối thiểu như nhau, căn giữa theo chiều dọc, có khoảng đệm trên dưới; dòng không bị cắt giữa hai trang; STT liên tục từ 1; dòng tổng cộng ở cuối bảng.
+- Danh sách hoặc bảng kèm theo là phụ lục: bắt đầu ở trang mới, ghi "Kèm theo ... số ... ngày ..." (để trống nếu chưa có), đánh số trang riêng từ 1. Khối chữ ký cùng trang với ít nhất một đoạn nội dung cuối.
+- Mở file xem bố cục thực tế trước khi giao; kiểm tra tự động không thay việc này.

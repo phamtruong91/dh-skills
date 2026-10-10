@@ -53,6 +53,8 @@ Không giới hạn đầu ra vào định dạng mặc định. Chọn định 
 
 Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.
 
+Thể thức chi tiết theo từng thành phần: xem [THE_THUC_TRINH_BAY.md](THE_THUC_TRINH_BAY.md).
+
 ## Bảng trong văn bản nhiều trang
 
 Áp dụng khi file Word có bảng dài (danh sách, bảng nhiệm vụ, bảng số liệu):

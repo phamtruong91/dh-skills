@@ -55,6 +55,39 @@ def page_number(d):
         r._r.append(e)
 
 
+def _page_field(header, size=13):
+    p = header.paragraphs[0]
+    p.alignment = C
+    r = p.add_run()
+    r.font.name, r.font.size = FONT, Pt(size)
+    for kind, txt in (("begin", None), (None, "PAGE"), ("end", None)):
+        if kind:
+            e = OxmlElement("w:fldChar")
+            e.set(qn("w:fldCharType"), kind)
+        else:
+            e = OxmlElement("w:instrText")
+            e.set(qn("xml:space"), "preserve")
+            e.text = txt
+        r._r.append(e)
+
+
+def appendix_section(d):
+    """Phụ lục: bắt đầu ở trang mới, đánh số trang riêng từ 1 (Phụ lục I NĐ 30/2020)."""
+    from docx.enum.section import WD_SECTION
+    s2 = d.add_section(WD_SECTION.NEW_PAGE)
+    s2.different_first_page_header_footer = False
+    s2.header.is_linked_to_previous = False
+    for p in list(s2.header.paragraphs)[1:]:
+        p._p.getparent().remove(p._p)
+    for r in list(s2.header.paragraphs[0].runs):
+        r._r.getparent().remove(r._r)
+    _page_field(s2.header)
+    pg = OxmlElement("w:pgNumType")
+    pg.set(qn("w:start"), "1")
+    s2._sectPr.append(pg)
+    return s2
+
+
 def mark_row(row, header=False, keep=True, min_h_cm=0.8):
     trPr = row._tr.get_or_add_trPr()
     h = OxmlElement("w:trHeight")  # mọi dòng cao tối thiểu như nhau để hàng đều nhau
@@ -129,11 +162,11 @@ def grid(d, headers, rows, widths, total=None, aligns=None, size=12):
 
 def head(d, i, ky_hieu):
     left = ([i["co_quan_chu_quan"], i["co_quan_ban_hanh"], f"Số: {'.' * 6}/{ky_hieu}-{'.' * 6}"], [False, True, False])
-    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập – Tự do – Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
+    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập - Tự do - Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
              [True, True, False])
     t = header_block(d, left, right)
     t.cell(0, 1).paragraphs[2].runs[0].italic = True
-    para(d, "", after=4)
+    para(d, "", after=6)
 
 
 def sign(d, noi_nhan, chuc_danh, ho_ten):
@@ -143,8 +176,12 @@ def sign(d, noi_nhan, chuc_danh, ho_ten):
     t.columns[0].width, t.columns[1].width = Cm(7.5), Cm(8.5)
     nn = ["Nơi nhận:"] + [f"- {x};" for x in noi_nhan[:-1]] + [f"- {noi_nhan[-1]}."]
     cell_text(t.cell(0, 0), nn, size=12)
-    t.cell(0, 0).paragraphs[0].runs[0].bold = True
-    t.cell(0, 0).paragraphs[0].runs[0].italic = True
+    for r_ in t.cell(0, 0).paragraphs[0].runs:
+        r_.bold = True
+        r_.italic = True
+    for p_ in t.cell(0, 0).paragraphs[1:]:
+        for r_ in p_.runs:
+            r_.font.size = Pt(11)
     cell_text(t.cell(0, 1), [chuc_danh.upper(), "", "", "", ho_ten or DOT], size=13, bold=True, align=C)
     mark_row(t.rows[0])
 
@@ -239,7 +276,7 @@ def build_hoc_bong():
     para(d, f"Điều 4. {dv[0]}, {dv[1]}, {dv[2]} và {dv[3]} chịu trách nhiệm thi hành Quyết định này./.", first_indent=1.0, align=J, after=10)
     keep_together(d, 2)
     sign(d, inp["noi_nhan"], inp["nguoi_ky"]["chuc_danh"], inp["nguoi_ky"]["ho_ten"])
-    d.add_page_break()
+    appendix_section(d)
     para(d, "DANH SÁCH SINH VIÊN ĐƯỢC CẤP", bold=True, align=C, after=0)
     para(d, "HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP", bold=True, align=C, after=0)
     para(d, inp["ten_dot"].upper() if False else f"({inp['ten_dot']})", align=C, after=0)
@@ -259,7 +296,7 @@ def build_hoc_bong():
                             "Phòng Công tác sinh viên", "Phòng Kế hoạch – Tài chính"],
            "must_not_contain": [money(tong_raw), "Lê Văn Nhầm"], "blank_labels": ["Số:", "Hà Nội, ngày", "Điều 2."],
            "allowed_derived": [str(n), money(tong)],
-           "layout": {"page_number": True, "min_pages": 5, "same_page": [["Điều 4.", "Trần Thị Bình"]],
+           "layout": {"page_number": True, "appendix_from_page": 2, "min_pages": 5, "same_page": [["Điều 4.", "Trần Thị Bình"]],
                       "tables": [{"index": 2, "header_repeat": True, "cant_split": True, "data_rows": n, "stt_continuous": True, "total_row_prefix": "Tổng cộng"}],
                       "unique_tokens": ids, "absent_tokens": conf_ids + excluded_hd},
            "traps": [{"id": "MA_SV_TRUNG_HET", "mo_ta": "2 dòng trùng hệt: giữ một"}, {"id": "MA_SV_TRUNG_KHAC_TEN", "mo_ta": "Cùng mã, khác tên: loại cả hai, hỏi lại"},
@@ -310,17 +347,17 @@ def build_bien_ban():
     para(d, f"Cuộc {i['ten_cuoc_hop']}", bold=True, align=C, after=8)
     para(d, f"Thời gian bắt đầu: {i['thoi_gian_bat_dau']}", first_indent=1.0)
     para(d, f"Địa điểm: {i['dia_diem']}", first_indent=1.0)
-    para(d, f"Chủ trì: {i['chu_tri']}", first_indent=1.0, after=2)
+    para(d, f"Chủ trì: {i['chu_tri']}", first_indent=1.0, after=6)
     para(d, f"Thư ký: {i['thu_ky']}", first_indent=1.0)
-    para(d, f"Thành phần tham dự ({len(tp)} người):", bold=True, first_indent=1.0, after=2)
+    para(d, f"Thành phần tham dự ({len(tp)} người):", bold=True, first_indent=1.0, after=6)
     for k, n in enumerate(tp, 1):
-        para(d, f"{k}. {n}", first_indent=1.5, after=1)
-    para(d, "Nội dung cuộc họp:", bold=True, first_indent=1.0, after=2)
+        para(d, f"{k}. {n}", first_indent=1.0, after=6)
+    para(d, "Nội dung cuộc họp:", bold=True, first_indent=1.0, after=6)
     for k, n in enumerate(i["noi_dung"], 1):
-        para(d, f"{k}. Về {n['van_de']}: {n['y_kien']}", first_indent=1.0, align=J, after=4)
-    para(d, "Kết luận của chủ trì:", bold=True, first_indent=1.0, after=2)
+        para(d, f"{k}. Về {n['van_de']}: {n['y_kien']}", first_indent=1.0, align=J, after=6)
+    para(d, "Kết luận của chủ trì:", bold=True, first_indent=1.0, after=6)
     for k, x in enumerate(i["ket_luan"], 1):
-        para(d, f"{k}. {x}", first_indent=1.0, align=J, after=2)
+        para(d, f"{k}. {x}", first_indent=1.0, align=J, after=6)
     para(d, f"Cuộc họp kết thúc lúc {DOT} cùng ngày./.", first_indent=1.0, after=10)
     keep_together(d, 2)
     t = d.add_table(rows=1, cols=2)
@@ -374,18 +411,18 @@ def build_ke_hoach():
     page_number(d)
     head(d, i, "KH")
     para(d, f"KẾ HOẠCH CÔNG TÁC {i['thoi_gian'].upper()}", bold=True, size=14, align=C, after=8)
-    para(d, "I. MỤC ĐÍCH, YÊU CẦU", bold=True, after=2)
+    para(d, "I. MỤC ĐÍCH, YÊU CẦU", bold=True, after=6)
     for k, m in enumerate(i["muc_tieu"], 1):
-        para(d, f"{k}. {m}.", first_indent=1.0, align=J, after=2)
-    para(d, "II. NHIỆM VỤ CỤ THỂ", bold=True, after=4)
+        para(d, f"{k}. {m}.", first_indent=1.0, align=J, after=6)
+    para(d, "II. NHIỆM VỤ CỤ THỂ", bold=True, after=6)
     body = [[str(k), n["noi_dung"], n["don_vi"], n["thoi_gian"], n["ket_qua"]] for k, n in enumerate(i["nhiem_vu"], 1)]
     grid(d, ["STT", "Nội dung", "Đơn vị/cá nhân thực hiện", "Thời gian", "Kết quả mong đợi"], body, [1.5, 5.0, 3.0, 3.6, 2.9], aligns=[C, L, C, C, L])
-    para(d, "", after=4)
-    para(d, "III. KINH PHÍ", bold=True, after=2)
+    para(d, "", after=6)
+    para(d, "III. KINH PHÍ", bold=True, after=6)
     for x in i["kinh_phi"]:
-        para(d, f"- {x};", first_indent=1.0, after=2)
-    para(d, f"- Tổng dự toán: {DOT}", first_indent=1.0, after=4)
-    para(d, "IV. TỔ CHỨC THỰC HIỆN", bold=True, after=2)
+        para(d, f"- {x};", first_indent=1.0, after=6)
+    para(d, f"- Tổng dự toán: {DOT}", first_indent=1.0, after=6)
+    para(d, "IV. TỔ CHỨC THỰC HIỆN", bold=True, after=6)
     para(d, "Các đơn vị thực hiện nhiệm vụ được phân công tại Mục II và báo cáo kết quả theo yêu cầu của Phòng Hành chính – Tổng hợp./.", first_indent=1.0, align=J, after=10)
     keep_together(d, 2)
     sign(d, i["noi_nhan"], i["nguoi_ky"]["chuc_danh"], i["nguoi_ky"]["ho_ten"])

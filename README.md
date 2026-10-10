@@ -40,6 +40,7 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 - **Chọn định dạng theo sản phẩm:** phân biệt định dạng mặc định với định dạng bổ sung; ưu tiên yêu cầu trực tiếp của người dùng và biểu mẫu áp dụng.
 - **Giữ chỗ điền đúng mẫu:** thông tin chưa có được chừa bằng dòng dấu chấm, dấu gạch hoặc ô trống. Không tự điền số 0, ngày, số văn bản, chữ ký hoặc dữ liệu ví dụ.
 - **File giao chỉ chứa sản phẩm nghiệp vụ:** không kèm checklist nghiệm thu, phụ lục kiểm tra hay nhật ký AI. Phụ lục bắt buộc theo mẫu vẫn được giữ.
+- **Thể thức chuẩn:** mọi skill xuất Word/Excel có mục "Thể thức và bảng biểu khi dựng file" trong quy cách đầu ra (cỡ chữ từng thành phần theo Phụ lục I NĐ 30/2020, bảng nhiều trang, số trang, phụ lục). Xem [THE_THUC_TRINH_BAY](docs/THE_THUC_TRINH_BAY.md).
 - **Con người duyệt:** người có thẩm quyền xác nhận nội dung trước khi ký, phát hành hoặc công bố.
 - **Dùng với Claude:** chỉ `name` và `description` trong `SKILL.md` được dùng khi chọn skill; `agents/openai.yaml` dành cho nền tảng khác. Mô tả các skill dễ nhầm đã nêu rõ khi nào không dùng.
 
@@ -176,6 +177,7 @@ university-skills-framework/
 │           └── phap-ly.md              # ở skill có tài liệu pháp lý riêng
 ├── docs/
 │   ├── QUY_CACH_DAU_RA.md
+│   ├── THE_THUC_TRINH_BAY.md            # cỡ chữ từng thành phần theo NĐ 30/2020, quy tắc bảng nhiều trang, Excel
 │   ├── CAP_NHAT_PHAP_LY.md              # căn cứ pháp lý đã cập nhật và điểm còn phải xác minh
 │   ├── DIEM_CAN_DOI_CHIEU_PHAP_LY.md    # dòng cần chuyên gia pháp lý đối chiếu
 │   ├── CAN_CU_NGHI_LOI_THOI.md          # căn cứ nghi lỗi thời ở skill chưa cập nhật

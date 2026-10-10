@@ -58,3 +58,9 @@ Nguồn gốc để đối chiếu: [Nghị định 30/2020/NĐ-CP và phụ l�
 Bộ báo cáo tài chính theo Phụ lục IV Thông tư 24/2024/TT-BTC và sửa đổi áp dụng cho năm tài chính: B01/BCTC Báo cáo tình hình tài chính; B02/BCTC Báo cáo kết quả hoạt động; B03/BCTC Báo cáo lưu chuyển tiền tệ (chọn phương pháp theo quy định); B04/BCTC Thuyết minh báo cáo tài chính. Giữ nguyên chỉ tiêu, mã số, cột kỳ báo cáo, đơn vị tính, khối người lập/kế toán trưởng/thủ trưởng theo từng biểu. Xác định các biểu bổ sung phải nộp theo đối tượng; không thay bộ biểu bằng bảng thu–chi tổng hợp hoặc gọi B01 là Bảng cân đối kế toán. Nguồn: https://congbao.chinhphu.vn/van-ban/thong-tu-so-24-2024-tt-btc-41775/49902.htm
 
 Cấu trúc này là hướng dẫn nội dung; nếu có mẫu chuyên ngành được áp dụng thì giữ nguyên mẫu. Các bảng điểm, kết luận, yêu cầu chỉnh sửa và kết quả kiểm tra thực tế của nghiệp vụ được giữ trong văn bản; không nhầm chúng với checklist tự kiểm tra của AI.
+
+## Thể thức và bảng biểu khi dựng file
+
+- Dòng tiêu đề đậm, nền nhạt, cố định (freeze) khi bảng dài; bề rộng cột vừa chữ; số tiền có dấu phân cách hàng nghìn; ngày theo dd/mm/yyyy; giữ công thức, không dán giá trị thay công thức.
+- Đặt vùng in và lặp dòng tiêu đề khi in; dữ liệu khác bản chất để ở sheet riêng; ô thiếu dữ liệu để trống, không ghi 0.
+- Mở file kiểm tra công thức đã tính, không có lỗi `#`, định dạng hiển thị đúng trước khi giao.

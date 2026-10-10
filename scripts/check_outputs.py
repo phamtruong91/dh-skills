@@ -41,6 +41,76 @@ def docx_text(path):
     return "\n".join(x for x in out if x.strip())
 
 
+def _all_paragraphs(d):
+    for p in d.paragraphs:
+        yield p, False
+    def walk(tables):
+        for t in tables:
+            for row in t.rows:
+                for c in row.cells:
+                    for p in c.paragraphs:
+                        yield p, True
+                    yield from walk(c.tables)
+    yield from walk(d.tables)
+
+
+def _para_size(p, d):
+    sizes = {r.font.size.pt if r.font.size else (d.styles["Normal"].font.size.pt if d.styles["Normal"].font.size else None)
+             for r in p.runs if r.text.strip()}
+    return sizes
+
+
+def _nd30_element_errors(d):
+    """Cỡ chữ, kiểu chữ, thụt đầu dòng, cách đoạn của từng thành phần theo Phụ lục I NĐ 30/2020/NĐ-CP."""
+    errs = []
+    in_noi_nhan = False
+    for p, in_table in _all_paragraphs(d):
+        txt = p.text.strip()
+        if not txt:
+            continue
+        sizes = _para_size(p, d)
+        bold = all(r.bold for r in p.runs if r.text.strip())
+        ital = all(r.italic for r in p.runs if r.text.strip())
+
+        def need(label, lo, hi, want_bold=None, want_italic=None):
+            if sizes and not all(lo <= s <= hi for s in sizes if s):
+                errs.append(f"{label}: cỡ chữ {sorted(s for s in sizes if s)} ngoài {lo}–{hi} pt")
+            if want_bold is True and not bold:
+                errs.append(f"{label}: phải in đậm")
+            if want_bold is False and bold:
+                errs.append(f"{label}: không được in đậm")
+            if want_italic is True and not ital:
+                errs.append(f"{label}: phải in nghiêng")
+        if txt == "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM":
+            need("Quốc hiệu", 12, 13, True)
+        elif txt.startswith("Độc lập"):
+            if txt != "Độc lập - Tự do - Hạnh phúc":
+                errs.append(f"Tiêu ngữ viết sai ({txt!r}); đúng: 'Độc lập - Tự do - Hạnh phúc'")
+            need("Tiêu ngữ", 13, 14, True)
+            if "w:pBdr" not in p._p.xml:
+                errs.append("Tiêu ngữ thiếu đường kẻ dưới")
+        elif re.match(r"^Số:", txt):
+            need("Số, ký hiệu", 13, 13)
+        elif re.search(r", ngày .* tháng .* năm", txt) and in_table:
+            need("Địa danh, ngày tháng", 13, 14, None, True)
+        elif txt == "Nơi nhận:":
+            need("Nhãn 'Nơi nhận'", 12, 12, True, True)
+            in_noi_nhan = True
+            continue
+        elif in_noi_nhan and txt.startswith("- "):
+            need("Danh sách nơi nhận", 11, 11)
+            continue
+        if not in_table and p.paragraph_format.first_line_indent is not None:  # đoạn nội dung
+            ind = p.paragraph_format.first_line_indent.cm
+            if not (0.99 <= ind <= 1.28):
+                errs.append(f"đoạn {txt[:30]!r}: thụt đầu dòng {ind:.2f} cm, phải 1–1,27 cm")
+            aft = p.paragraph_format.space_after.pt if p.paragraph_format.space_after is not None else 0
+            if aft < 6:
+                errs.append(f"đoạn {txt[:30]!r}: cách đoạn {aft:.0f} pt, tối thiểu 6 pt")
+            need("Nội dung", 13, 14, False if len(txt) > 80 else None)
+    return sorted(set(errs))
+
+
 def nd30_format_errors(path):
     """Kiểm tra thuộc tính trình bày thật của file Word theo Phụ lục I Nghị định 30/2020/NĐ-CP (văn bản hành chính)."""
     from docx import Document
@@ -72,6 +142,7 @@ def nd30_format_errors(path):
         fonts.add(r.font.name or normal.name)
         sz = r.font.size or normal.size
         sizes.add(sz.pt if sz else None)
+    errs.extend(_nd30_element_errors(d))
     if fonts - {"Times New Roman"}:
         errs.append(f"phông không phải Times New Roman: {sorted(f for f in fonts if f)}")
     bad = sorted(x for x in sizes if x is None or not (11 <= x <= 14))
@@ -219,10 +290,12 @@ def layout_errors(path, expect, text, log):
                 if not any(a in p and b in p for p in pages):
                     errs.append(f"{a!r} và {b!r} không cùng một trang (khối ký bị tách khỏi nội dung)")
             if lay.get("page_number") and len(pages) > 1:
+                app = lay.get("appendix_from_page")  # phụ lục đánh số trang riêng từ 1
                 for k, p in enumerate(pages[1:], 2):
+                    want = k if not app or k < app else k - app + 1
                     first = [ln.strip() for ln in p.split("\n") if ln.strip()][:1]
-                    if not first or first[0] != str(k):
-                        errs.append(f"trang {k} không có số trang ở đầu trang (thấy {first})")
+                    if not first or first[0] != str(want):
+                        errs.append(f"trang {k} phải có số trang {want} ở đầu trang (thấy {first})")
                         break
                 first1 = [ln.strip() for ln in pages[0].split("\n") if ln.strip()][:1]
                 if first1 and first1[0] == "1":

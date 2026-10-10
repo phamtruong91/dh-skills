@@ -28,6 +28,7 @@
  ],
  "layout": {
   "page_number": true,
+  "appendix_from_page": 2,
   "min_pages": 5,
   "same_page": [
    [
