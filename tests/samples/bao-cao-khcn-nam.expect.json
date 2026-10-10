@@ -1,0 +1,86 @@
+{
+ "skill": "bao-cao-khcn-nam",
+ "output": "bao-cao-khcn-nam.docx",
+ "kind": "docx",
+ "nd30_format": true,
+ "must_contain": [
+  "I. KẾT QUẢ THỰC HIỆN",
+  "II. ĐÁNH GIÁ CHUNG",
+  "III. PHƯƠNG HƯỚNG NĂM TIẾP THEO",
+  "đến 30/9/2026",
+  "n/a",
+  "HIỆU TRƯỞNG"
+ ],
+ "must_not_contain": [],
+ "blank_labels": [
+  "Số:",
+  "Hà Nội, ngày"
+ ],
+ "allowed_derived": [
+  "11.440",
+  "103",
+  "105"
+ ],
+ "layout": {
+  "page_number": true,
+  "min_pages": 2,
+  "same_page": [
+   [
+    "III. PHƯƠNG HƯỚNG NĂM TIẾP THEO",
+    "HIỆU TRƯỞNG"
+   ]
+  ],
+  "tables": [
+   {
+    "index": 1,
+    "header_repeat": true,
+    "cant_split": true,
+    "data_rows": 4,
+    "stt_continuous": true
+   },
+   {
+    "index": 2,
+    "header_repeat": true,
+    "cant_split": true,
+    "data_rows": 4,
+    "stt_continuous": true,
+    "total_row_prefix": "Cộng"
+   }
+  ],
+  "figures": [
+   {
+    "no": 1,
+    "min_points": 12
+   },
+   {
+    "no": 2,
+    "table_index": 2,
+    "label_col": 1,
+    "value_col": 3,
+    "min_points": 4
+   }
+  ]
+ },
+ "traps": [
+  {
+   "id": "NAM_CHUA_DU",
+   "mo_ta": "2026 chỉ đến 30/9: không so như cả năm"
+  },
+  {
+   "id": "THIEU_SO_LIEU_KHAC_0",
+   "mo_ta": "Kỷ yếu 2023 không có số: ghi n/a, không ghi 0, không cộng tổng"
+  },
+  {
+   "id": "TONG_2025_LECH",
+   "mo_ta": "Khai 107, cộng 105"
+  },
+  {
+   "id": "BIEU_DO_KHOP_BANG",
+   "mo_ta": "Hình 2 khớp bảng 2"
+  },
+  {
+   "id": "MUC_CHUA_CO_DU_LIEU",
+   "mo_ta": "Đánh giá chung, phương hướng chưa có dữ liệu: chừa trống"
+  }
+ ]
+}

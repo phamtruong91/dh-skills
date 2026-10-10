@@ -90,6 +90,10 @@ def skill_checks(path, manifest, records):
             c["tieu_ngu_gach_ngang"] = "Độc lập – Tự do – Hạnh phúc" not in output_text
             if version["output_profile"] == "hanh-chinh":
                 c["co_quy_tac_phan_dau_nd30"] = "Độc lập - Tự do - Hạnh phúc" in output_text and "Nơi nhận:" in output_text
+    # --- Quy tắc biểu đồ cho skill báo cáo số liệu (1.3.3) ---
+    chart_list = Path(__file__).with_name("chart_skills.txt")
+    if chart_list.is_file() and name in chart_list.read_text(encoding="utf-8").split():
+        c["co_quy_tac_bieu_do"] = "## Biểu đồ và hình trong báo cáo số liệu" in output_text and "Biểu đồ và hình trong báo cáo số liệu" in t
     # --- Khóa các lỗi mẫu đã sửa ở đợt rà soát nhóm 1 ---
     for line in re.findall(r"^- \[ \] Đúng thể thức và định dạng theo (.*)$", t, flags=re.M):
         c["muc_the_thuc_khong_cat_cut"] = not line.rstrip().endswith("…") and not re.search(

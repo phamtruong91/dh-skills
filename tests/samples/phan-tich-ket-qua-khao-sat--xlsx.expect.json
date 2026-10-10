@@ -1,0 +1,34 @@
+{
+ "skill": "phan-tich-ket-qua-khao-sat--xlsx",
+ "output": "phan-tich-ket-qua-khao-sat.xlsx",
+ "kind": "xlsx",
+ "sheets": [
+  "Du_lieu"
+ ],
+ "charts": 1,
+ "fit_to_width": true,
+ "computed_approx": {
+  "Du_lieu": {
+   "K2": 4.16,
+   "K3": 4.29,
+   "K4": 3.81,
+   "K5": 3.75,
+   "K6": 3.3,
+   "K7": 2.77,
+   "K8": 3.52,
+   "K9": 3.22,
+   "K10": 2.77,
+   "K11": 3.75,
+   "K12": 3.0,
+   "K13": 3.97,
+   "K14": 3.53
+  }
+ },
+ "must_contain": [
+  "Điểm trung bình chung"
+ ],
+ "allowed_derived": [
+  "1.010",
+  "1010"
+ ]
+}

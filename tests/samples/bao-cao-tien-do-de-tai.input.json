@@ -1,0 +1,87 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử tải lớn. Tên cơ quan, người, mã số đều là mẫu.",
+ "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+ "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A – PHÒNG KHOA HỌC VÀ CÔNG NGHỆ",
+ "dia_danh": "Hà Nội",
+ "so_van_ban": null,
+ "ten_de_tai": "Nghiên cứu mô hình dự báo kết quả học tập của sinh viên (tên mẫu)",
+ "ma_so_de_tai": "ĐT.26.15 (mã mẫu)",
+ "chu_nhiem": "TS. Nguyễn Văn Mẫu",
+ "ky_bao_cao": "6 tháng đầu năm 2026 (01/01/2026–30/06/2026)",
+ "noi_dung": [
+  {
+   "ten": "Tổng quan tài liệu",
+   "ke_hoach_luy_ke_phan_tram": 100,
+   "thuc_hien_phan_tram_khai_bao": 100,
+   "minh_chung": "Báo cáo tổng quan 28 trang"
+  },
+  {
+   "ten": "Thu thập dữ liệu",
+   "ke_hoach_luy_ke_phan_tram": 80,
+   "thuc_hien_phan_tram_khai_bao": 70,
+   "minh_chung": "Bộ dữ liệu 1 200 mẫu"
+  },
+  {
+   "ten": "Xây dựng mô hình",
+   "ke_hoach_luy_ke_phan_tram": 50,
+   "thuc_hien_phan_tram_khai_bao": 35,
+   "minh_chung": "Bản mô hình thử nghiệm v0.3"
+  },
+  {
+   "ten": "Khảo sát thực nghiệm",
+   "ke_hoach_luy_ke_phan_tram": 40,
+   "thuc_hien_phan_tram_khai_bao": 100,
+   "minh_chung": null
+  },
+  {
+   "ten": "Viết bài báo",
+   "ke_hoach_luy_ke_phan_tram": 20,
+   "thuc_hien_phan_tram_khai_bao": 10,
+   "minh_chung": "Bản thảo mục 1–2"
+  }
+ ],
+ "kinh_phi": [
+  {
+   "khoan_muc": "Thù lao nhân công",
+   "du_toan_duoc_duyet": "120.000.000",
+   "da_cap": "70.000.000",
+   "da_su_dung": "62.000.000"
+  },
+  {
+   "khoan_muc": "Nguyên vật liệu",
+   "du_toan_duoc_duyet": "60.000.000",
+   "da_cap": "30.000.000",
+   "da_su_dung": "29.500.000"
+  },
+  {
+   "khoan_muc": "Thiết bị",
+   "du_toan_duoc_duyet": "80.000.000",
+   "da_cap": "40.000.000",
+   "da_su_dung": "46.000.000"
+  },
+  {
+   "khoan_muc": "Hội thảo, công tác phí",
+   "du_toan_duoc_duyet": "30.000.000",
+   "da_cap": "15.000.000",
+   "da_su_dung": "4.000.000"
+  },
+  {
+   "khoan_muc": "Quản lý phí",
+   "du_toan_duoc_duyet": "10.000.000",
+   "da_cap": "5.000.000",
+   "da_su_dung": "5.000.000"
+  }
+ ],
+ "tong_da_cap_khai_bao": "150.000.000",
+ "tong_da_su_dung_khai_bao": "146.500.000",
+ "tong_du_toan_khai_bao": "300.000.000",
+ "khong_so_san": "",
+ "noi_nhan": [
+  "Phòng Khoa học và Công nghệ",
+  "Lưu: VT, KHCN"
+ ],
+ "nguoi_ky": {
+  "chuc_danh": "Chủ nhiệm đề tài",
+  "ho_ten": "TS. Nguyễn Văn Mẫu"
+ }
+}

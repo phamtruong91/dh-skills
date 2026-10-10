@@ -1,0 +1,67 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử tải lớn. Tên cơ quan, người, mã số đều là mẫu.",
+ "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+ "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+ "dia_danh": "Hà Nội",
+ "so_van_ban": null,
+ "nam_bao_cao": "2026",
+ "ghi_chu_thoi_diem": "Số liệu năm 2026 tính đến 30/9/2026",
+ "cong_bo_khoa_hoc": {
+  "nam": [
+   "2023",
+   "2024",
+   "2025",
+   "2026 (đến 30/9)"
+  ],
+  "WoS/Scopus": [
+   18,
+   24,
+   31,
+   22
+  ],
+  "Tạp chí trong nước": [
+   46,
+   51,
+   49,
+   30
+  ],
+  "Kỷ yếu hội thảo": [
+   null,
+   28,
+   25,
+   15
+  ]
+ },
+ "tong_cong_bo_2025_khai_bao": 107,
+ "de_tai_cac_cap": [
+  {
+   "cap": "Nhà nước",
+   "so_de_tai": 2,
+   "kinh_phi_trieu_dong": "3.200"
+  },
+  {
+   "cap": "Bộ",
+   "so_de_tai": 5,
+   "kinh_phi_trieu_dong": "4.100"
+  },
+  {
+   "cap": "Tỉnh",
+   "so_de_tai": 3,
+   "kinh_phi_trieu_dong": "1.500"
+  },
+  {
+   "cap": "Trường",
+   "so_de_tai": 22,
+   "kinh_phi_trieu_dong": "2.640"
+  }
+ ],
+ "tong_kinh_phi_khai_bao_trieu_dong": "11.440",
+ "noi_nhan": [
+  "Bộ Giáo dục và Đào tạo",
+  "Lưu: VT, KHCN"
+ ],
+ "nguoi_ky": {
+  "chuc_danh": "Hiệu trưởng",
+  "ho_ten": null
+ }
+}

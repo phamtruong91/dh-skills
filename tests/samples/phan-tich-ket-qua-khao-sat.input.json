@@ -1,0 +1,274 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử tải lớn. Tên cơ quan, người, mã số đều là mẫu.",
+ "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+ "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A – PHÒNG KHẢO THÍ VÀ ĐẢM BẢO CHẤT LƯỢNG",
+ "dia_danh": "Hà Nội",
+ "so_van_ban": null,
+ "doi_tuong": "Sinh viên",
+ "muc_dich_khao_sat": "Đánh giá mức độ hài lòng của sinh viên về hoạt động đào tạo và hỗ trợ, học kỳ 1 năm học 2026–2027",
+ "so_phieu_phat_ra": 1200,
+ "so_phieu_thu_ve": 1010,
+ "so_phieu_hop_le": 842,
+ "ly_do_loai": {
+  "bo_trong_tren_30_phan_tram": 91,
+  "chon_mot_dap_an_cho_ca_bang": 52,
+  "mau_thuan_logic": 27
+ },
+ "thang_do": "Likert 5 mức (1 = rất không hài lòng ... 5 = rất hài lòng)",
+ "du_lieu_tong_hop": [
+  {
+   "stt": 1,
+   "nhom": "Giảng dạy",
+   "noi_dung": "Nội dung bài giảng rõ ràng, dễ hiểu",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    10,
+    28,
+    110,
+    360,
+    334
+   ],
+   "diem_tb_khai_bao": 4.16,
+   "tb_ky_truoc": 4.02,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 2,
+   "nhom": "Giảng dạy",
+   "noi_dung": "Giảng viên nhiệt tình, tận tâm",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    6,
+    20,
+    90,
+    330,
+    396
+   ],
+   "diem_tb_khai_bao": 4.29,
+   "tb_ky_truoc": 4.18,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 3,
+   "nhom": "Giảng dạy",
+   "noi_dung": "Kiểm tra, đánh giá công bằng",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    22,
+    60,
+    200,
+    330,
+    230
+   ],
+   "diem_tb_khai_bao": 4.05,
+   "tb_ky_truoc": 3.7,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 4,
+   "nhom": "Giảng dạy",
+   "noi_dung": "Tài liệu học tập đầy đủ",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    18,
+    70,
+    230,
+    310,
+    214
+   ],
+   "diem_tb_khai_bao": 3.75,
+   "tb_ky_truoc": 3.55,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 5,
+   "nhom": "Cơ sở vật chất",
+   "noi_dung": "Phòng học đủ tiện nghi",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    60,
+    140,
+    260,
+    250,
+    132
+   ],
+   "diem_tb_khai_bao": 3.3,
+   "tb_ky_truoc": 3.1,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": true
+  },
+  {
+   "stt": 6,
+   "nhom": "Cơ sở vật chất",
+   "noi_dung": "Mạng wifi ổn định",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    150,
+    210,
+    240,
+    170,
+    72
+   ],
+   "diem_tb_khai_bao": 2.77,
+   "tb_ky_truoc": 2.6,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 7,
+   "nhom": "Cơ sở vật chất",
+   "noi_dung": "Thư viện đáp ứng nhu cầu",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    40,
+    90,
+    260,
+    280,
+    160
+   ],
+   "diem_tb_khai_bao": 3.52,
+   "tb_ky_truoc": 3.4,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 8,
+   "nhom": "Cơ sở vật chất",
+   "noi_dung": "Phòng thực hành đủ thiết bị",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    80,
+    150,
+    250,
+    230,
+    132
+   ],
+   "diem_tb_khai_bao": 3.22,
+   "tb_ky_truoc": 3.05,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 9,
+   "nhom": "Hỗ trợ sinh viên",
+   "noi_dung": "Thủ tục hành chính rườm rà (câu đảo)",
+   "dao": true,
+   "phan_bo_muc_1_den_5": [
+    70,
+    180,
+    220,
+    230,
+    142
+   ],
+   "diem_tb_khai_bao": 3.23,
+   "tb_ky_truoc": 3.4,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 10,
+   "nhom": "Hỗ trợ sinh viên",
+   "noi_dung": "Tư vấn học tập kịp thời",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    24,
+    66,
+    220,
+    320,
+    212
+   ],
+   "diem_tb_khai_bao": 3.75,
+   "tb_ky_truoc": 3.62,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 11,
+   "nhom": "Hỗ trợ sinh viên",
+   "noi_dung": "Hỗ trợ tìm việc làm hiệu quả",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    96,
+    170,
+    300,
+    190,
+    86
+   ],
+   "diem_tb_khai_bao": 3.0,
+   "tb_ky_truoc": 3.01,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  },
+  {
+   "stt": 12,
+   "nhom": "Hỗ trợ sinh viên",
+   "noi_dung": "Thắc mắc được giải đáp nhanh",
+   "dao": false,
+   "phan_bo_muc_1_den_5": [
+    14,
+    40,
+    170,
+    350,
+    268
+   ],
+   "diem_tb_khai_bao": 3.97,
+   "tb_ky_truoc": 3.9,
+   "cau_hoi_doi_noi_dung_so_voi_ky_truoc": false
+  }
+ ],
+ "theo_khoa": [
+  {
+   "khoa": "Công nghệ thông tin",
+   "so_phieu": 300,
+   "diem_tb_chung_khai_bao": 3.71
+  },
+  {
+   "khoa": "Kinh tế",
+   "so_phieu": 280,
+   "diem_tb_chung_khai_bao": 3.52
+  },
+  {
+   "khoa": "Ngoại ngữ",
+   "so_phieu": 190,
+   "diem_tb_chung_khai_bao": 3.38
+  },
+  {
+   "khoa": "Sư phạm",
+   "so_phieu": 48,
+   "diem_tb_chung_khai_bao": 3.6
+  },
+  {
+   "khoa": "Luật",
+   "so_phieu": 24,
+   "diem_tb_chung_khai_bao": 4.2
+  }
+ ],
+ "y_kien_mo": {
+  "so_phieu_co_tra_loi_mo": 360,
+  "chu_de": [
+   [
+    "Mạng wifi yếu, chập chờn",
+    120
+   ],
+   [
+    "Thủ tục hành chính chậm",
+    85
+   ],
+   [
+    "Giảng viên nhiệt tình",
+    95
+   ],
+   [
+    "Thiếu chỗ ngồi giờ cao điểm",
+    40
+   ]
+  ],
+  "trich_dan": [
+   "Wifi ở giảng đường B hay mất kết nối vào giờ cao điểm.",
+   "Thầy cô hướng dẫn rất tận tình."
+  ]
+ },
+ "ky_truoc": "học kỳ 1 năm học 2025–2026",
+ "nguoi_ky": {
+  "chuc_danh": "Trưởng phòng Khảo thí và Đảm bảo chất lượng",
+  "ho_ten": null
+ },
+ "noi_nhan": [
+  "Ban Giám hiệu",
+  "Các khoa, các đơn vị liên quan",
+  "Lưu: VT, KT&ĐBCL"
+ ]
+}
