@@ -134,7 +134,7 @@ Sản phẩm nghiệp vụ hoàn chỉnh theo [quy cách và cấu trúc](refere
 ## Căn cứ & lưu ý
 - Luật Thanh tra 2022 (Luật số 11/2022/QH15).
 - Nghị định 43/2023/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thanh tra.
-- Nghị định 42/2013/NĐ-CP về tổ chức và hoạt động thanh tra giáo dục.
+- ~~Nghị định 42/2013/NĐ-CP về tổ chức và hoạt động thanh tra giáo dục~~ — **[HẾT HIỆU LỰC]** Đã bị bãi bỏ toàn bộ bởi Nghị định 03/2024/NĐ-CP (quy định về cơ quan thực hiện chức năng thanh tra chuyên ngành); không dùng làm căn cứ. Về tổ chức bộ máy thanh tra chuyên ngành, đối chiếu NĐ 03/2024/NĐ-CP; về hoạt động thanh tra, áp dụng Luật Thanh tra 2022 và Nghị định 43/2023/NĐ-CP. [CẦN XÁC MINH: đối chiếu văn bản gốc tại ngày nghiệp vụ]
 - Điều lệ trường đại học (Quyết định 70/2014/QĐ-TTg); Quy chế tổ chức và hoạt động của trường.
 - Kế hoạch thanh tra năm phải được ban hành trước khi triển khai cuộc thanh tra đầu tiên
 trong năm; điều chỉnh kế hoạch giữa năm phải trình Hiệu trưởng phê duyệt lại.
