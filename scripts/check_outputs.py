@@ -196,21 +196,138 @@ def allowed_tokens(input_text):
     return dates, nums
 
 
-def pdf_pages(path):
-    """Chuyển Word sang PDF bằng LibreOffice; trả về danh sách văn bản từng trang (hoặc None nếu không có công cụ)."""
+_PDF_CACHE = {}
+
+
+def to_pdf(path):
+    """Word -> PDF bằng LibreOffice (có nhớ kết quả); trả về đường dẫn PDF hoặc None."""
+    key = (str(path), Path(path).stat().st_mtime)
+    if key in _PDF_CACHE:
+        return _PDF_CACHE[key]
     soffice = shutil.which("soffice") or shutil.which("libreoffice")
     if not soffice or not shutil.which("pdftotext"):
         return None
     tmp = Path(tempfile.mkdtemp())
-    src = tmp / path.name
+    src = tmp / Path(path).name
     shutil.copy(path, src)
     subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir", str(tmp), str(src)],
                    capture_output=True, timeout=240)
-    pdf = tmp / (path.stem + ".pdf")
-    if not pdf.exists():
+    pdf = tmp / (Path(path).stem + ".pdf")
+    _PDF_CACHE[key] = pdf if pdf.exists() else None
+    return _PDF_CACHE[key]
+
+
+def pdf_pages(path):
+    """Chuyển Word sang PDF bằng LibreOffice; trả về danh sách văn bản từng trang (hoặc None nếu không có công cụ)."""
+    pdf = to_pdf(path)
+    if not pdf:
         return None
     out = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True).stdout
     return out.split("\f")[:-1] if out.endswith("\f") else out.split("\f")
+
+
+def pdf_image_pages(path):
+    """Số trang chứa từng hình trong PDF (theo thứ tự xuất hiện), cần pdfimages."""
+    pdf = to_pdf(path)
+    if not pdf or not shutil.which("pdfimages"):
+        return None
+    out = subprocess.run(["pdfimages", "-list", str(pdf)], capture_output=True, text=True).stdout.splitlines()[2:]
+    return [int(ln.split()[0]) for ln in out if len(ln.split()) > 2 and ln.split()[2] == "image"]
+
+
+def _norm_num(x):
+    x = str(x).strip().replace("−", "-").replace("%", "")
+    if re.fullmatch(r"\d{1,3}(\.\d{3})+", x):
+        x = x.replace(".", "")
+    return x
+
+
+def figure_errors(path, lay, pages, log):
+    """Biểu đồ trong Word: hình thật, trong khổ chữ, đủ độ phân giải, có chú thích 'Hình n.' dưới hình và dòng 'Nguồn:',
+    văn bản thay thế ghi số liệu khớp bảng, hình và chú thích cùng một trang."""
+    from docx import Document
+    from docx.shared import Emu
+    d = Document(path)
+    errs = []
+    specs = lay.get("figures", [])
+    body = d.element.body
+    pics = []  # (đoạn chứa hình, thứ tự)
+    for p in d.paragraphs:
+        if p._p.xpath(".//pic:pic"):
+            pics.append(p)
+    if len(pics) != len(specs):
+        errs.append(f"có {len(pics)} hình, kỳ vọng {len(specs)}")
+    paras = d.paragraphs
+    for k, (p, spec) in enumerate(zip(pics, specs), 1):
+        no = spec.get("no", k)
+        if no != k:
+            errs.append(f"hình thứ {k} được kỳ vọng mang số {no}: số thứ tự hình phải liên tục từ 1")
+        inl = p._p.xpath(".//wp:inline")
+        w_cm = int(inl[0].xpath("./wp:extent/@cx")[0]) / 360000 if inl else 0
+        if w_cm > 16.0 or w_cm < 8.0:
+            errs.append(f"hình {no}: rộng {w_cm:.1f} cm, phải từ 8 đến 16 cm (vùng chữ 16 cm)")
+        blip = p._p.xpath(".//a:blip/@r:embed")
+        if blip:
+            from io import BytesIO
+
+            from PIL import Image
+            img = Image.open(BytesIO(d.part.related_parts[blip[0]].blob))
+            dpi = img.width / (w_cm / 2.54) if w_cm else 0
+            if dpi < 150:
+                errs.append(f"hình {no}: chỉ {dpi:.0f} dpi khi in, cần từ 150 dpi trở lên")
+        alt = (p._p.xpath(".//wp:docPr/@descr") or [""])[0]
+        if "Số liệu:" not in alt:
+            errs.append(f"hình {no}: văn bản thay thế không ghi số liệu")
+        pairs = [x.strip() for x in alt.split("Số liệu:", 1)[-1].split(". Đơn vị")[0].split(";") if "=" in x]
+        if len(pairs) < spec.get("min_points", 1):
+            errs.append(f"hình {no}: văn bản thay thế chỉ có {len(pairs)} điểm số liệu, kỳ vọng ít nhất {spec.get('min_points', 1)}")
+        i = [q._p for q in paras].index(p._p)
+        cap = paras[i + 1].text if i + 1 < len(paras) else ""
+        src = paras[i + 2].text if i + 2 < len(paras) else ""
+        if not cap.startswith(f"Hình {no}. "):
+            errs.append(f"hình {no}: dưới hình phải là chú thích 'Hình {no}. ...' (thấy {cap[:30]!r})")
+        if not src.startswith("Nguồn:"):
+            errs.append(f"hình {no}: thiếu dòng 'Nguồn:' dưới chú thích")
+        if not (p.paragraph_format.keep_with_next and paras[i + 1].paragraph_format.keep_with_next):
+            errs.append(f"hình {no}: hình, chú thích và nguồn chưa dính nhau nên có thể tách trang")
+        if p.alignment is None or int(p.alignment) != 1:
+            errs.append(f"hình {no}: chưa căn giữa")
+        if "table_index" in spec:
+            tb = d.tables[spec["table_index"]]
+            amap = {a.split("=", 1)[0].strip(): _norm_num(a.split("=", 1)[1]) for a in pairs}
+            n = 0
+            for r in tb.rows[1:]:
+                cells = [c.text.strip() for c in r.cells]
+                lab = cells[spec["label_col"]]
+                if not lab or not lab[0].isalnum() or any(lab.startswith(x) for x in spec.get("skip_labels", ["Cộng"])):
+                    continue
+                if "label_fmt" in spec:
+                    lab = spec["label_fmt"].format(lab)
+                if cells[spec["value_col"]] == "":
+                    continue
+                n += 1
+                if lab not in amap:
+                    errs.append(f"hình {no}: không thấy {lab!r} trong số liệu của hình")
+                elif amap[lab] != _norm_num(cells[spec["value_col"]]):
+                    errs.append(f"hình {no}: {lab!r} trong hình là {amap[lab]}, trong bảng là {cells[spec['value_col']]}")
+            if n == 0:
+                errs.append(f"hình {no}: không đối chiếu được dòng nào với bảng")
+    cap_nos = [int(m.group(1)) for q in paras for m in [re.match(r"Hình (\d+)\. ", q.text)] if m]
+    if cap_nos != list(range(1, len(cap_nos) + 1)):
+        errs.append(f"số thứ tự chú thích hình không liên tục: {cap_nos}")
+    if pages is not None:
+        ipg = pdf_image_pages(path)
+        if ipg is None:
+            log.append("  (bỏ qua kiểm hình cùng trang chú thích: thiếu pdfimages)")
+        else:
+            if len(ipg) < len(specs):
+                errs.append(f"PDF chỉ có {len(ipg)} hình, kỳ vọng {len(specs)}")
+            for k, pg in enumerate(ipg[:len(specs)], 1):
+                cp = [n for n, t in enumerate(pages, 1) if re.search(rf"^\s*Hình {k}\. ", t, flags=re.M)]
+                if cp and cp[0] != pg:
+                    errs.append(f"hình {k} ở trang {pg} nhưng chú thích ở trang {cp[0]}")
+            log.append(f"  hình ở các trang: {ipg}")
+    return errs
 
 
 def layout_errors(path, expect, text, log):
@@ -270,7 +387,7 @@ def layout_errors(path, expect, text, log):
     for tok in lay.get("absent_tokens", []):
         if tok in text:
             errs.append(f"{tok!r} không được có trong file")
-    need_pdf = lay.get("min_pages") or lay.get("same_page")
+    need_pdf = lay.get("min_pages") or lay.get("same_page") or lay.get("figures")
     if need_pdf:
         pages = pdf_pages(path)
         if pages is None:
@@ -300,6 +417,8 @@ def layout_errors(path, expect, text, log):
                 first1 = [ln.strip() for ln in pages[0].split("\n") if ln.strip()][:1]
                 if first1 and first1[0] == "1":
                     errs.append("trang 1 không được hiện số trang")
+    if lay.get("figures"):
+        errs.extend(figure_errors(path, lay, pages if need_pdf else None, log))
     return errs
 
 
@@ -343,7 +462,21 @@ def check_one(expect, samples, outputs, results, log):
         for s in expect.get("must_not_have_sheets", []):
             if s in sheets:
                 errs.append(f"không được có sheet {s}")
+        if "charts" in expect:  # biểu đồ gốc trong Excel và thiết lập in
+            ws0 = wb.worksheets[0]
+            if len(ws0._charts) != expect["charts"]:
+                errs.append(f"có {len(ws0._charts)} biểu đồ, kỳ vọng {expect['charts']}")
+            if expect.get("fit_to_width") and not (ws0.sheet_properties.pageSetUpPr and ws0.sheet_properties.pageSetUpPr.fitToPage and ws0.page_setup.fitToWidth == 1):
+                errs.append("chưa đặt vừa chiều rộng trang khi in: bảng và biểu đồ sẽ bị cắt giữa các trang")
+            if not ws0.print_title_rows:
+                errs.append("chưa đặt lặp dòng tiêu đề khi in")
         wb_values = recalc(path)
+        if wb_values is not None:
+            for sheet, cells in expect.get("computed_approx", {}).items():
+                for ref, want in cells.items():
+                    got = wb_values[sheet][ref].value
+                    if not isinstance(got, (int, float)) or abs(got - want) > 0.006:
+                        errs.append(f"{sheet}!{ref}: được {got!r}, kỳ vọng xấp xỉ {want!r}")
         if wb_values is None:
             log.append("  (bỏ qua kiểm công thức: không có LibreOffice)")
         else:
@@ -371,7 +504,7 @@ def check_one(expect, samples, outputs, results, log):
         if n not in nums_ok:
             errs.append(f"số không có trong đầu vào (nghi bịa): {n}")
     for v in nums:
-        val = v * 100 if 0 < v <= 1 else v  # ô phần trăm lưu dạng 0–1
+        val = v * 100 if 0 < v < 1 else v  # ô phần trăm lưu dạng 0–1
         if float(val).is_integer() and len(str(int(val))) >= 3:
             sv = str(int(val))
             if sv not in nums_ok and sv not in expect.get("allowed_derived", []):

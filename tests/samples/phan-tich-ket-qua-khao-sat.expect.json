@@ -1,0 +1,124 @@
+{
+ "skill": "phan-tich-ket-qua-khao-sat",
+ "output": "phan-tich-ket-qua-khao-sat.docx",
+ "kind": "docx",
+ "nd30_format": true,
+ "must_contain": [
+  "BÁO CÁO",
+  "I. THÔNG TIN CHUNG",
+  "II. KẾT QUẢ CHI TIẾT",
+  "III. NHẬN XÉT",
+  "IV. HẠN CHẾ CỦA SỐ LIỆU",
+  "V. ĐỀ XUẤT CẢI TIẾN",
+  "đã mã hóa ngược",
+  "dưới 30",
+  "TRƯỞNG PHÒNG KHẢO THÍ"
+ ],
+ "must_not_contain": [
+  "Khoa Luật 4,20",
+  "Luật 4,20"
+ ],
+ "blank_labels": [
+  "Số:",
+  "Hà Nội, ngày"
+ ],
+ "allowed_derived": [
+  "842",
+  "170",
+  "168",
+  "1.010",
+  "842",
+  "842",
+  "842",
+  "842",
+  "842",
+  "842",
+  "830",
+  "842",
+  "842",
+  "842",
+  "842",
+  "842"
+ ],
+ "layout": {
+  "page_number": true,
+  "min_pages": 4,
+  "tables": [
+   {
+    "index": 1,
+    "header_repeat": true,
+    "cant_split": true
+   },
+   {
+    "index": 2,
+    "header_repeat": true,
+    "cant_split": true,
+    "data_rows": 12,
+    "stt_continuous": true,
+    "total_row_prefix": "Điểm trung bình chung"
+   }
+  ],
+  "same_page": [
+   [
+    "V. ĐỀ XUẤT CẢI TIẾN",
+    "TRƯỞNG PHÒNG KHẢO THÍ"
+   ]
+  ],
+  "figures": [
+   {
+    "no": 1,
+    "table_index": 2,
+    "label_col": 0,
+    "value_col": 3,
+    "label_fmt": "Câu {}",
+    "min_points": 12
+   },
+   {
+    "no": 2,
+    "min_points": 12
+   },
+   {
+    "no": 3,
+    "min_points": 10
+   },
+   {
+    "no": 4,
+    "min_points": 4
+   }
+  ]
+ },
+ "traps": [
+  {
+   "id": "CAU_DAO",
+   "mo_ta": "Câu 9 là câu đảo: phải mã hóa ngược trước khi tính điểm"
+  },
+  {
+   "id": "TONG_PHIEU_LOAI_LECH",
+   "mo_ta": "Ba lý do loại cộng 170, thu về trừ hợp lệ là 168"
+  },
+  {
+   "id": "THIEU_TRA_LOI",
+   "mo_ta": "Câu 7 có 12 phiếu bỏ trống: tính trên 830, không điền hộ"
+  },
+  {
+   "id": "DIEM_TB_LECH",
+   "mo_ta": "Câu 3: điểm khai báo 4,05 khác điểm tính lại từ phân bố"
+  },
+  {
+   "id": "CAU_DOI_NOI_DUNG",
+   "mo_ta": "Câu 5 đổi nội dung so với kỳ trước: không so sánh"
+  },
+  {
+   "id": "NHOM_NHO",
+   "mo_ta": "Khoa Luật 24 phiếu (<30): không kết luận riêng, không vẽ"
+  },
+  {
+   "id": "KHOA_LECH_TB_CHUNG",
+   "mo_ta": "TB chung theo khoa gia quyền khác TB chung 12 câu"
+  },
+  {
+   "id": "BIEU_DO_KHOP_BANG",
+   "mo_ta": "Số liệu trong hình khớp bảng"
+  }
+ ]
+}

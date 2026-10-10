@@ -1,0 +1,92 @@
+{
+ "skill": "bao-cao-tien-do-de-tai",
+ "output": "bao-cao-tien-do-de-tai.docx",
+ "kind": "docx",
+ "nd30_format": true,
+ "must_contain": [
+  "I. NỘI DUNG ĐÃ THỰC HIỆN TRONG KỲ",
+  "II. TÌNH HÌNH SỬ DỤNG KINH PHÍ",
+  "III. KHÓ KHĂN, VƯỚNG MẮC",
+  "IV. ĐỀ XUẤT, KIẾN NGHỊ",
+  "V. KẾ HOẠCH KỲ TIẾP THEO",
+  "Chưa có minh chứng",
+  "cần giải trình nguồn bù",
+  "CHỦ NHIỆM ĐỀ TÀI"
+ ],
+ "must_not_contain": [
+  "150.000.000 đồng, nhưng cộng các khoản mục được 150"
+ ],
+ "blank_labels": [
+  "Số:",
+  "Hà Nội, ngày"
+ ],
+ "allowed_derived": [
+  "300.000.000",
+  "160.000.000",
+  "146.500.000",
+  "115,0"
+ ],
+ "layout": {
+  "page_number": true,
+  "min_pages": 3,
+  "tables": [
+   {
+    "index": 1,
+    "header_repeat": true,
+    "cant_split": true,
+    "data_rows": 5,
+    "stt_continuous": true
+   },
+   {
+    "index": 2,
+    "header_repeat": true,
+    "cant_split": true,
+    "data_rows": 5,
+    "stt_continuous": true,
+    "total_row_prefix": "Cộng"
+   }
+  ],
+  "same_page": [
+   [
+    "V. KẾ HOẠCH KỲ TIẾP THEO",
+    "CHỦ NHIỆM ĐỀ TÀI"
+   ]
+  ],
+  "figures": [
+   {
+    "no": 1,
+    "min_points": 5
+   },
+   {
+    "no": 2,
+    "min_points": 5
+   }
+  ]
+ },
+ "traps": [
+  {
+   "id": "DA_DUNG_VUOT_DA_CAP",
+   "mo_ta": "Thiết bị: dùng 46 triệu > cấp 40 triệu"
+  },
+  {
+   "id": "TONG_DA_CAP_LECH",
+   "mo_ta": "Tổng đã cấp 150 triệu, cộng khoản mục 160 triệu"
+  },
+  {
+   "id": "TY_LE_NGOAI_NGUONG",
+   "mo_ta": "Nguyên vật liệu 98,3%, Hội thảo 26,7%: cần giải trình"
+  },
+  {
+   "id": "THIEU_MINH_CHUNG",
+   "mo_ta": "Khảo sát thực nghiệm khai 100% nhưng không có minh chứng: để trống, không vẽ"
+  },
+  {
+   "id": "MUC_CHUA_CO_DU_LIEU",
+   "mo_ta": "Khó khăn, đề xuất, kế hoạch kỳ sau chưa có dữ liệu: chừa trống"
+  },
+  {
+   "id": "BIEU_DO_KHOP_BANG",
+   "mo_ta": "Hình 2 khớp bảng 2"
+  }
+ ]
+}

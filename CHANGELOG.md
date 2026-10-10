@@ -1,5 +1,11 @@
 # Nhật ký thay đổi
 
+## 1.3.3 — 2026-10-10
+
+- Thêm mục "Biểu đồ và hình trong báo cáo số liệu" vào quy cách đầu ra của 31 skill báo cáo/phân tích số liệu (danh sách: `scripts/chart_skills.txt`; script: `scripts/maintenance/add_chart_rules.py`). Cổng kiểm tra có thêm `co_quy_tac_bieu_do`.
+- Chạy thử 3 báo cáo có biểu đồ bằng dữ liệu giả có "bẫy": `phan-tich-ket-qua-khao-sat` (Word có 4 hình + Excel có biểu đồ gốc), `bao-cao-tien-do-de-tai`, `bao-cao-khcn-nam` (`tests/build_bao_cao_bieu_do.py`). Ghi nhận phát hiện trong `tests/results/*.findings.md`.
+- `scripts/check_outputs.py` kiểm biểu đồ: số hình, độ rộng, độ phân giải, chú thích "Hình n." và dòng Nguồn, hình dính chú thích, số trong hình khớp bảng, hình cùng trang với chú thích; Excel: có biểu đồ gốc, thiết lập in, công thức tính đúng. Sửa lỗi báo nhầm khi ô STT = 1.
+
 ## 1.3.2 (bổ sung) — 2026-10-10
 
 Rà soát toàn bộ 171 skill về quy trình, đầu vào, đầu ra và thể thức.
