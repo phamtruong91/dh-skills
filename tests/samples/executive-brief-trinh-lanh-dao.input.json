@@ -23,34 +23,34 @@
    "ten": "A. Nâng cấp toàn bộ một lần",
    "chi_phi": {
     "gia_tri": "1.200 triệu",
-    "nguon": "Báo giá NCC-01"
+    "nguon": "NCC-01"
    },
    "thoi_gian": {
     "gia_tri": "4 tháng",
-    "nguon": "Báo giá NCC-01"
+    "nguon": "NCC-01"
    },
    "rui_ro": {
     "gia_tri": "Gián đoạn lịch học",
-    "nguon": "Ý kiến phòng Đào tạo"
+    "nguon": "P. Đào tạo"
    },
    "chien_luoc": {
     "gia_tri": "Phù hợp kế hoạch CĐS",
-    "nguon": "Kế hoạch chuyển đổi số"
+    "nguon": "KH chuyển đổi số"
    }
   },
   {
    "ten": "B. Nâng cấp theo hai giai đoạn",
    "chi_phi": {
     "gia_tri": "700 triệu (giai đoạn 1)",
-    "nguon": "Báo giá NCC-01"
+    "nguon": "NCC-01"
    },
    "thoi_gian": {
     "gia_tri": "2 tháng + 3 tháng",
-    "nguon": "Báo giá NCC-01"
+    "nguon": "NCC-01"
    },
    "rui_ro": {
     "gia_tri": "Giai đoạn 2 chưa có vốn",
-    "nguon": "Phòng Tài chính"
+    "nguon": "P. Tài chính"
    },
    "chien_luoc": {
     "gia_tri": null,
@@ -69,7 +69,7 @@
    },
    "rui_ro": {
     "gia_tri": "Phụ thuộc nhà cung cấp",
-    "nguon": "Ý kiến phòng Quản trị"
+    "nguon": "P. Quản trị"
    },
    "chien_luoc": {
     "gia_tri": null,

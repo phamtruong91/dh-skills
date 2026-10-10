@@ -18,12 +18,12 @@
  "deck": {
   "min_slides": 6,
   "max_slides": 10,
+  "talk_minutes": 90,
   "min_title_pt": 28,
   "min_body_pt": 14,
   "min_caption_pt": 11,
   "max_words_per_slide": 85,
-  "notes_required": true,
-  "talk_minutes": 90
+  "notes_required": true
  },
  "traps": [
   {

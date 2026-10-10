@@ -19,11 +19,6 @@
  "deck": {
   "min_slides": 5,
   "max_slides": 8,
-  "min_title_pt": 28,
-  "min_body_pt": 14,
-  "min_caption_pt": 11,
-  "max_words_per_slide": 95,
-  "notes_required": true,
   "talk_minutes": 10,
   "tables": [
    {
@@ -33,7 +28,12 @@
     "blank_text": "Chưa có số liệu",
     "blank_cells": 3
    }
-  ]
+  ],
+  "min_title_pt": 28,
+  "min_body_pt": 14,
+  "min_caption_pt": 11,
+  "max_words_per_slide": 95,
+  "notes_required": true
  },
  "traps": [
   {
@@ -42,7 +42,7 @@
   },
   {
    "id": "O_THIEU_NGUON",
-   "mo_ta": "Phương án B chiến lược, C chi phí/thời gian/chiến lược không có nguồn: để trống"
+   "mo_ta": "Phương án B chiến lược, C chi phí/chiến lược không có nguồn: để trống"
   },
   {
    "id": "KHUYEN_NGHI_TRUNG_LAP",
