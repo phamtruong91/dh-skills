@@ -1,0 +1,29 @@
+{
+  "_ghi_chu": "Dữ liệu GIẢ để thử skill. Tên cơ quan, người, số hiệu đều là mẫu.",
+  "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+  "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+  "dia_danh": "Hà Nội",
+  "so_van_ban": null,
+  "don_vi_trinh": "Phòng Kế hoạch – Tài chính",
+  "kinh_gui": "Hiệu trưởng Trường Đại học Mẫu A",
+  "ten_to_trinh": "xin phê duyệt dự toán kinh phí tổ chức Hội nghị cán bộ, viên chức năm học 2026–2027",
+  "can_cu": [
+    "Kế hoạch số 08/KH-HCTH ngày 01/10/2026 của Trường Đại học Mẫu A"
+  ],
+  "noi_dung_de_xuat": [
+    "Thuê hội trường: 15.000.000 đồng",
+    "Ăn nhẹ giữa giờ: 20.000.000 đồng",
+    "In ấn tài liệu: 5.000.000 đồng",
+    "Tổng kinh phí dự kiến: 45.000.000 đồng"
+  ],
+  "kien_nghi": "Đề nghị Hiệu trưởng phê duyệt dự toán nêu trên",
+  "tai_lieu_kem_theo": null,
+  "noi_nhan": [
+    "Như trên",
+    "Lưu: VT, KHTC"
+  ],
+  "nguoi_ky": {
+    "chuc_danh": "Trưởng phòng",
+    "ho_ten": null
+  }
+}

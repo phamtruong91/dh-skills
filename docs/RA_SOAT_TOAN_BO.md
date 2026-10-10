@@ -10,7 +10,7 @@
 - 44 sơ đồ dựng lại dạng tuyến tính, mất nhánh quyết định.
 - Thời lượng ⏱ là ước tính.
 - Một số `quy-cach-dau-ra.md` còn cấu trúc sản phẩm cũ, cần người nghiệp vụ duyệt.
-- Mới chạy thử 4/171 skill bằng dữ liệu giả.
+- Mới chạy thử 8/171 skill bằng dữ liệu giả.
 
 ## Cần chuyên gia
 Pháp chế/thanh tra (căn cứ 2025–2026), phòng chuyên môn từng skill (biểu mẫu, mốc thời hạn).

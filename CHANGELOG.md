@@ -11,6 +11,7 @@ Rà soát toàn bộ 171 skill về quy trình, đầu vào, đầu ra và thể
 - **Sửa căn cứ cũ còn sót:** `de-an-mo-nganh`, `quyet-dinh-nang-luong`; viết lại bước của `bao-cao-3-cong-khai` theo hướng TT 09/2024 (không mặc định 3 biểu).
 - **Căn cứ mới từ nguồn thứ cấp:** học bổng khuyến khích → Nghị định 66/2026/NĐ-CP (`quyet-dinh-cap-hoc-bong`, `thong-bao-hoc-bong`); vị trí việc làm → Nghị định 232/2026/NĐ-CP thay viện dẫn NĐ 62/2017 (`de-an-vi-tri-viec-lam`, `quy-che-to-chuc-hoat-dong`). Chưa đọc toàn văn. Danh sách còn lại: `docs/CAN_CU_NGHI_LOI_THOI.md`.
 - **Tài liệu:** `docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md` (danh sách dòng cần chuyên gia pháp lý đối chiếu), cập nhật `legal-register.json`.
+- **Chạy thử thêm 4 skill văn bản phổ biến** (`soan-thong-bao`, `soan-bien-ban-hop`, `soan-to-trinh`, `soan-giay-moi`) bằng dữ liệu giả có cài lỗi (sai thứ–ngày, tổng tiền lệch, thiếu giờ kết thúc/địa điểm/họ tên người ký); 8/8 mẫu đạt kiểm tra file và thể thức NĐ 30/2020. Tổng cộng 8/171 skill đã chạy thử.
 - **Chưa làm:** chưa đối chiếu toàn văn/Công báo; sơ đồ dựng lại của 44 skill mất nhánh quyết định; thời lượng ⏱ là ước tính; một số quy-cach-dau-ra.md vẫn mang cấu trúc cũ; chưa chạy thử thêm skill ngoài 4 mẫu.
 
 ## 1.3.2 — 2026-10-10
