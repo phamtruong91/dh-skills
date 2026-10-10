@@ -1,0 +1,42 @@
+{
+  "skill": "soan-bien-ban-hop",
+  "output": "soan-bien-ban-hop.docx",
+  "kind": "docx",
+  "nd30_format": true,
+  "must_contain": [
+    "BIÊN BẢN",
+    "họp giao ban Phòng Hành chính – Tổng hợp tháng 10/2026",
+    "08 giờ 30 phút, ngày 12/10/2026",
+    "Phòng họp số 2",
+    "Ông Lê Văn Cường – Trưởng phòng",
+    "Bà Phạm Thu Hà – Chuyên viên",
+    "Thống nhất tiếp tục chuẩn bị theo kế hoạch",
+    "THƯ KÝ",
+    "CHỦ TRÌ"
+  ],
+  "must_not_contain": [
+    "đã thông qua",
+    "có mặt 4",
+    "vắng 2",
+    "thời hạn:"
+  ],
+  "blank_labels": [
+    "Số:",
+    "Hà Nội, ngày",
+    "Kết thúc lúc"
+  ],
+  "traps": [
+    {
+      "id": "THIEU_GIO_KET_THUC",
+      "mo_ta": "Không có giờ kết thúc: để dấu chấm"
+    },
+    {
+      "id": "SO_NGUOI_KHONG_KHOP",
+      "mo_ta": "Triệu tập 6 người nhưng chỉ liệt kê 4: không tự suy ra vắng/có mặt"
+    },
+    {
+      "id": "KET_LUAN_KHONG_NGUOI_PHU_TRACH",
+      "mo_ta": "Kết luận không có người phụ trách/thời hạn: không tự thêm"
+    }
+  ]
+}

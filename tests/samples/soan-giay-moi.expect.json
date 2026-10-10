@@ -1,0 +1,39 @@
+{
+  "skill": "soan-giay-moi",
+  "output": "soan-giay-moi.docx",
+  "kind": "docx",
+  "nd30_format": true,
+  "must_contain": [
+    "GIẤY MỜI",
+    "Lễ khai giảng năm học 2026–2027",
+    "07 giờ 30 phút, thứ Bảy, ngày 05/09/2026",
+    "Đại diện lãnh đạo các sở, ban, ngành",
+    "Phòng Hành chính – Tổng hợp",
+    "HIỆU TRƯỞNG",
+    "Trần Thị Bình"
+  ],
+  "must_not_contain": [
+    "Hội trường",
+    "Số: 1"
+  ],
+  "blank_labels": [
+    "Số:",
+    "Hà Nội, ngày",
+    "Kính mời:",
+    "Địa điểm:"
+  ],
+  "traps": [
+    {
+      "id": "THIEU_DIA_DIEM",
+      "mo_ta": "Đầu vào không có địa điểm: để dấu chấm"
+    },
+    {
+      "id": "THIEU_TEN_NGUOI_MOI",
+      "mo_ta": "Chỉ có thành phần chung, không có tên người được mời"
+    },
+    {
+      "id": "HAN_XAC_NHAN_THIEU",
+      "mo_ta": "Có đầu mối nhưng không có hạn xác nhận: không tự đặt hạn"
+    }
+  ]
+}

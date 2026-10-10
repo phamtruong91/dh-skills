@@ -1,0 +1,25 @@
+{
+  "_ghi_chu": "Dữ liệu GIẢ để thử skill. Tên cơ quan, người, số hiệu đều là mẫu.",
+  "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+  "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+  "dia_danh": "Hà Nội",
+  "so_van_ban": null,
+  "ten_cuoc_hop": "họp giao ban Phòng Hành chính – Tổng hợp tháng 10/2026",
+  "thoi_gian_bat_dau": "08 giờ 30 phút, ngày 12/10/2026",
+  "thoi_gian_ket_thuc": null,
+  "dia_diem": "Phòng họp số 2",
+  "chu_tri": "Ông Lê Văn Cường – Trưởng phòng",
+  "thu_ky": "Bà Phạm Thu Hà – Chuyên viên",
+  "thanh_phan": [
+    "Ông Lê Văn Cường",
+    "Bà Phạm Thu Hà",
+    "Ông Ngô Minh Đức",
+    "Bà Đỗ Lan Anh"
+  ],
+  "ghi_chu_thanh_phan": "Triệu tập 6 người; ghi nhận có mặt theo danh sách trên; không có thông tin người vắng",
+  "noi_dung": [
+    "Rà soát tiến độ chuẩn bị Hội nghị cán bộ, viên chức: đã gửi thông báo; chưa chốt hội trường",
+    "Đề xuất tăng thời gian nhận đăng ký tham dự"
+  ],
+  "ket_luan": "Thống nhất tiếp tục chuẩn bị theo kế hoạch."
+}

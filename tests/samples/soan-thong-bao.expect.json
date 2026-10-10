@@ -1,0 +1,40 @@
+{
+  "skill": "soan-thong-bao",
+  "output": "soan-thong-bao.docx",
+  "kind": "docx",
+  "nd30_format": true,
+  "must_contain": [
+    "THÔNG BÁO",
+    "Về việc tổ chức Hội nghị cán bộ, viên chức năm học 2026–2027",
+    "toàn thể cán bộ, viên chức",
+    "ngày 17/10/2026",
+    "Hội trường A",
+    "Nơi nhận:",
+    "- Lưu: VT, HCTH.",
+    "HIỆU TRƯỞNG",
+    "Trần Thị Bình",
+    "trước ngày 12/10/2026"
+  ],
+  "must_not_contain": [
+    "thứ Sáu",
+    "Số: 1"
+  ],
+  "blank_labels": [
+    "Số:",
+    "Hà Nội, ngày"
+  ],
+  "traps": [
+    {
+      "id": "NGAY_KHONG_KHOP_THU",
+      "mo_ta": "17/10/2026 là thứ Bảy nhưng đầu vào ghi thứ Sáu"
+    },
+    {
+      "id": "HAN_DANG_KY_PHAI_TRUOC_SU_KIEN",
+      "mo_ta": "Hạn đăng ký 12/10/2026 phải đứng trước ngày họp; kiểm tra thứ tự, không đảo"
+    },
+    {
+      "id": "SO_VAN_BAN_KHONG_TU_CAP",
+      "mo_ta": "Không có số văn bản: để dấu chấm"
+    }
+  ]
+}

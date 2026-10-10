@@ -1,0 +1,39 @@
+{
+  "skill": "soan-to-trinh",
+  "output": "soan-to-trinh.docx",
+  "kind": "docx",
+  "nd30_format": true,
+  "must_contain": [
+    "TỜ TRÌNH",
+    "Kính gửi: Hiệu trưởng Trường Đại học Mẫu A",
+    "Kế hoạch số 08/KH-HCTH ngày 01/10/2026",
+    "15.000.000",
+    "20.000.000",
+    "5.000.000",
+    "Nơi nhận:",
+    "TRƯỞNG PHÒNG"
+  ],
+  "must_not_contain": [
+    "45.000.000",
+    "40.000.000"
+  ],
+  "blank_labels": [
+    "Số:",
+    "Hà Nội, ngày",
+    "- Tổng kinh phí"
+  ],
+  "traps": [
+    {
+      "id": "TONG_KHONG_KHOP",
+      "mo_ta": "3 khoản cộng 40 triệu nhưng đầu vào ghi tổng 45 triệu"
+    },
+    {
+      "id": "THIEU_TEN_NGUOI_KY",
+      "mo_ta": "Không có họ tên người ký: để dấu chấm"
+    },
+    {
+      "id": "TAI_LIEU_KEM_THEO_TRONG",
+      "mo_ta": "Không có tài liệu kèm theo: không tự liệt kê dự toán chi tiết"
+    }
+  ]
+}
