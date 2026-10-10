@@ -1,350 +1,183 @@
-# 🎓 University AI Skills Framework
+# University AI Skills Framework
 
-## Hệ thống Skill AI cho phòng ban trường đại học Việt Nam
+**Bộ 171 skill AI phục vụ nghiệp vụ và quản trị trường đại học Việt Nam.**
 
-**171 skill giúp chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, nghiên cứu và tổng hợp báo cáo — với nhân sự nghiệp vụ kiểm tra và phê duyệt kết quả.**
+Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số liệu, điều phối công việc, nghiên cứu và giảng dạy. Mỗi skill xác định dữ liệu đầu vào, quy trình, sản phẩm cần giao, định dạng file và trách nhiệm kiểm duyệt.
 
-| Tổng số skill | Skill lõi dùng chung | Skill nghiệp vụ | Định dạng |
-| :---: | :---: | :---: | :---: |
-| **171** | **18** | **153** | **Markdown · SKILL.md** |
+[![Version](https://img.shields.io/badge/version-1.3.1-1f4e79)](CHANGELOG.md)
+[![Skills](https://img.shields.io/badge/skills-171-256D4A)](skills/README.md)
+[![License](https://img.shields.io/badge/license-CC_BY--SA_4.0-555555)](LICENSE)
 
-[📚 Danh mục 171 skill](skills/README.md) · [🧭 Khung phòng ban](khung-phong-ban-chuan.md) · [📐 Chuẩn đóng gói](khung-skill-tong-the.md) · [🗺️ Sơ đồ tương tác](so-do-case-phong-ban.html)
+[Danh mục skill](skills/README.md) · [Quy cách đầu ra](docs/QUY_CACH_DAU_RA.md) · [Manifest](skills-manifest.json) · [Nhật ký thay đổi](CHANGELOG.md)
 
-> **Skill là gì?** Một bộ hướng dẫn thực hiện công việc có thể tái sử dụng: nêu khi nào dùng, cần dữ liệu gì, thực hiện những bước nào, tạo sản phẩm gì và ai kiểm duyệt. Ví dụ: skill soạn công văn nhận yêu cầu và thông tin nơi nhận để tạo văn bản đúng mẫu, để trống dữ liệu thiếu và kiểm tra nội bộ.
+| Quy mô | Giá trị |
+| --- | ---: |
+| Phiên bản nội dung | **1.3.1** |
+| Ngày cập nhật bộ skill | **10/10/2026** |
+| Tổng số skill | **171** |
+| Skill lõi dùng chung | **18** |
+| Skill nghiệp vụ | **153** |
+| Định dạng đầu ra được khai báo | **15** |
 
-## Phiên bản 1.3.1 — cập nhật 10/10/2026
+## Những điểm chính của phiên bản 1.3.1
 
-Bản 1.3.1 cập nhật quy cách đầu ra của toàn bộ 171 skill: văn bản nghiệp vụ sạch, trường thiếu để trống, kiểm tra nội bộ không xuất kèm; bổ sung cấu trúc riêng và định dạng hành chính/chuyên ngành.
+- **Giao file thực tế:** khi được yêu cầu tạo sản phẩm nghiệp vụ, skill phải tạo file tải được và cung cấp liên kết ngay, không chờ yêu cầu xuất file lần nữa.
+- **Chọn định dạng theo sản phẩm:** phân biệt định dạng mặc định với định dạng bổ sung; ưu tiên yêu cầu trực tiếp của người dùng và biểu mẫu áp dụng.
+- **Giữ chỗ điền đúng mẫu:** thông tin chưa có được chừa bằng dòng dấu chấm, dấu gạch hoặc ô trống theo mẫu gốc. Không tự điền số 0, ngày chạy, số văn bản, chữ ký hoặc dữ liệu ví dụ.
+- **File giao chỉ chứa sản phẩm nghiệp vụ:** không tự kèm checklist nghiệm thu, phụ lục kiểm tra, nhật ký AI hoặc bảng truy nguyên nguồn. Phụ lục nghiệp vụ bắt buộc theo mẫu vẫn được giữ.
+- **Có kiểm soát chất lượng và thẩm quyền:** kiểm tra nguồn, cấu trúc, định dạng và khả năng mở file; người có thẩm quyền xác nhận nội dung trước khi ký, phát hành hoặc công bố.
 
-[Quy cách đầu ra và phạm vi đối chiếu mẫu biểu](docs/QUY_CACH_DAU_RA.md). Khi dùng từng skill, đọc tài liệu quy cách được liên kết ngay đầu SKILL.md. Bản xuất chỉ chứa sản phẩm yêu cầu; thông tin thiếu chừa chỗ theo mẫu gốc.
+Các thay đổi này áp dụng cho toàn bộ 171 skill. Xem [CHANGELOG](CHANGELOG.md) để đối chiếu các mốc cập nhật.
 
-| Hạng mục | Kết quả |
-| --- | --- |
-| Đóng gói | 171 skill có YAML hợp lệ, metadata giao diện và hồ sơ phiên bản |
-| Pháp lý | Giữ căn cứ/điều kiện của 58 skill từ đợt trước; bổ sung lựa chọn mẫu và phạm vi xác minh trong đợt này |
-| Kiểm duyệt | Mỗi skill có giới hạn, kiểm soát dữ liệu, người kiểm tra và trạng thái dự thảo |
-| Quản trị | 171 skill đồng bộ phiên bản nội dung 1.3.1; không phải thông tin về GitHub Release đã phát hành |
+## Phạm vi nghiệp vụ
 
-[Nhật ký thay đổi](CHANGELOG.md) · [Quản trị phiên bản](GOVERNANCE.md) · [Bảng đối chiếu pháp lý](docs/CAP_NHAT_PHAP_LY.md) · [Danh mục máy đọc](skills-manifest.json)
-
-Rà soát pháp lý có phạm vi: đã đối chiếu nguồn chính thức cho các thay đổi được liệt kê, chưa chứng nhận toàn bộ 171 skill tuân thủ mọi văn bản hiện hành. Cần kiểm tra toàn văn, chuyển tiếp và quy chế nội bộ trước thực thi. Các tài liệu khung/DOCX cũ là tư liệu thiết kế; ưu tiên SKILL.md phiên bản hiện tại và bảng đối chiếu khi có khác biệt. Skill hội đồng trường không dùng cho hoạt động mới của hội đồng trường công lập theo mô hình cũ từ 2026.
-
-## Mục lục
-
-- [1. Hệ thống giải quyết công việc gì?](#1-hệ-thống-giải-quyết-công-việc-gì)
-- [2. Kiến trúc hai tầng](#2-kiến-trúc-hai-tầng)
-- [3. Bản đồ skill theo phòng ban](#3-bản-đồ-skill-theo-phòng-ban)
-- [4. Một skill hoạt động như thế nào?](#4-một-skill-hoạt-động-như-thế-nào)
-- [5. Ví dụ kết hợp skill liên phòng ban](#5-ví-dụ-kết-hợp-skill-liên-phòng-ban)
-- [6. Bắt đầu sử dụng](#6-bắt-đầu-sử-dụng)
-- [7. Cấu trúc tài liệu trong repository](#7-cấu-trúc-tài-liệu-trong-repository)
-- [8. Gợi ý triển khai tại một trường](#8-gợi-ý-triển-khai-tại-một-trường)
-- [9. Mở rộng và đóng góp](#9-mở-rộng-và-đóng-góp)
-- [10. Giấy phép](#10-giấy-phép)
-
-## 1. Hệ thống giải quyết công việc gì?
-
-Bộ skill dành cho cán bộ phòng ban, giảng viên, lãnh đạo và nhóm triển khai AI trong trường đại học. Các trường có thể đối chiếu khung với cơ cấu tổ chức thực tế, rồi điều chỉnh biểu mẫu, thẩm quyền và quy trình nội bộ.
-
-| Nhóm công việc | AI hỗ trợ | Sản phẩm điển hình |
+| Nhóm công việc | Sản phẩm điển hình | Skill tham khảo |
 | --- | --- | --- |
-| Văn bản hành chính | Dự thảo, kiểm tra nội dung, chuẩn hóa cách trình bày | Công văn, tờ trình, thông báo, biên bản, phiếu trình ký |
-| Hồ sơ nghiệp vụ | Đối chiếu thành phần, phát hiện thiếu, lập danh sách bổ sung | Checklist hồ sơ, bảng đủ/thiếu, dự thảo hướng dẫn |
-| Kế hoạch và điều phối | Chia đầu việc, tổng hợp tiến độ, xác định người phụ trách | Kế hoạch, lịch công tác, bảng theo dõi công việc |
-| Báo cáo và phân tích | Hợp nhất nguồn, đối chiếu số liệu, tóm tắt vấn đề | Báo cáo đơn vị, báo cáo toàn trường, bản tóm tắt trình lãnh đạo |
-| Nghiên cứu và giảng dạy | Tổng quan tài liệu, so sánh nghiên cứu, chuẩn bị học liệu | Ma trận tài liệu, kế hoạch nghiên cứu, dự thảo bài giảng |
-| Truyền thông và hỗ trợ | Chuẩn bị nội dung, hỏi đáp theo nguồn, phân loại yêu cầu | Lịch nội dung, FAQ, kịch bản tư vấn, dự thảo phản hồi |
+| Hành chính và văn thư | Công văn, thông báo, biên bản, tờ trình, quyết định | [Soạn công văn](skills/soan-cong-van/SKILL.md), [Soạn biên bản](skills/soan-bien-ban-hop/SKILL.md) |
+| Nhân sự và tổ chức | Hồ sơ tuyển dụng, hợp đồng, đánh giá viên chức | [Tuyển dụng](skills/quy-trinh-tuyen-dung/SKILL.md), [Hợp đồng làm việc](skills/hop-dong-lam-viec/SKILL.md) |
+| Tuyển sinh và đào tạo | Thông báo tuyển sinh, đề cương, chương trình, lịch học | [Tuyển sinh sau đại học](skills/thong-bao-tuyen-sinh-sdh/SKILL.md), [Đề cương học phần](skills/de-cuong-chi-tiet-hoc-phan/SKILL.md) |
+| Sinh viên và đảm bảo chất lượng | Hồ sơ học bổng, kết quả rèn luyện, báo cáo tự đánh giá | [Thông báo học bổng](skills/thong-bao-hoc-bong/SKILL.md), [Tự đánh giá](skills/bao-cao-tu-danh-gia/SKILL.md) |
+| Tài chính, tài sản và mua sắm | Dự toán, báo cáo tài chính, kế hoạch mua sắm, kiểm kê | [Lập dự toán](skills/lap-du-toan-nam/SKILL.md), [Báo cáo tài chính](skills/bao-cao-tai-chinh/SKILL.md) |
+| Nghiên cứu và hợp tác | Thuyết minh đề tài, tổng quan tài liệu, hồ sơ chuyển giao | [Thuyết minh đề tài](skills/thuyet-minh-de-tai-nckh/SKILL.md), [Tổng quan tài liệu](skills/tong-quan-tai-lieu-khoa-hoc/SKILL.md) |
+| Truyền thông và điều phối | Bài viết, lịch nội dung, kịch bản, bảng theo dõi dự án | [Lịch nội dung](skills/content-calendar-truyen-thong/SKILL.md), [Quản trị dự án](skills/pmo-quan-tri-du-an/SKILL.md) |
 
-**Nhân sự nghiệp vụ chịu trách nhiệm về dữ liệu và quyết định; AI hỗ trợ chuẩn bị sản phẩm.** Repository cung cấp nội dung hướng dẫn. Việc tự động lấy dữ liệu, xuất file, gửi thông báo hoặc cập nhật phần mềm cần được triển khai riêng trên nền tảng sử dụng.
+Bộ skill gồm hai tầng: **18 skill lõi** hỗ trợ công việc dùng chung và **153 skill nghiệp vụ** gắn với chức năng phòng ban, khoa, viện, trung tâm. Đơn vị triển khai có thể điều chỉnh đầu mối theo cơ cấu thực tế của trường. Xem [danh mục theo phòng ban](skills/README.md) và [khung phòng ban](khung-phong-ban-chuan.md).
 
-## 2. Kiến trúc hai tầng
+## File đầu ra và lựa chọn định dạng
 
-### Sơ đồ kiến trúc
+### Định dạng mặc định
 
-```mermaid
-flowchart TD
-    SYS["Hệ thống 171 skill"] --> CORE["Tầng 1: 18 skill lõi"]
-    SYS --> JOB["Tầng 2: 153 skill nghiệp vụ"]
-    CORE --> COMMON["Rà soát · tổng hợp · nghiên cứu · hỗ trợ"]
-    JOB --> A["Khối A: Hội đồng"]
-    JOB --> B["Khối B: Phòng ban chức năng"]
-    JOB --> C["Khối C: Đơn vị trực thuộc"]
-    JOB --> D["Khối D: Khoa và bộ môn"]
-    JOB --> CROSS["Nghiệp vụ liên phòng ban"]
-    COMMON -. "Kết hợp theo nhu cầu" .-> JOB
-```
+| Định dạng | Công dụng | Số skill |
+| --- | --- | ---: |
+| `.docx` | Văn bản, báo cáo dạng văn bản, hồ sơ, phiếu và tài liệu nội dung | **150** |
+| `.xlsx` | Bảng tính, lịch dạng bảng, ma trận và bảng theo dõi | **20** |
+| `.zip` | Đóng gói skill cùng các file nguồn và tài nguyên liên quan | **1** |
 
-| Tầng | Vai trò | Ví dụ |
+Đây là mặc định khi người dùng chưa chỉ định định dạng. Mỗi skill có danh sách lựa chọn riêng; không phải mọi skill đều xuất tất cả các định dạng dưới đây.
+
+### Các định dạng được lựa chọn theo sản phẩm
+
+| Nhóm | Định dạng | Khi sử dụng |
 | --- | --- | --- |
-| **Tầng 1 — Lõi dùng chung** | Các năng lực có thể tái sử dụng ở nhiều đơn vị | Rà soát dự thảo, kiểm tra hồ sơ, hợp nhất báo cáo, dịch thuật, tổng quan tài liệu |
-| **Tầng 2 — Nghiệp vụ** | Hướng dẫn công việc cụ thể gắn với chức năng đơn vị | Tuyển dụng, tuyển sinh, đào tạo, học bổng, tài chính, mua sắm, kiểm định |
+| Văn bản | `.docx`, `.pdf` | Biên tập; đọc, in hoặc công bố theo yêu cầu |
+| Bảng tính và dữ liệu bảng | `.xlsx`, `.csv` | Giữ sheet, công thức; trao đổi dữ liệu bảng |
+| Trình chiếu | `.pptx` | Tạo bài trình chiếu khi yêu cầu cần slide thực tế |
+| Nội dung thuần và nội dung web | `.txt`, `.md`, `.html` | Giao nội dung văn bản, Markdown hoặc HTML dưới dạng file |
+| Dữ liệu và cấu hình | `.json`, `.yaml` | Giao dữ liệu có cấu trúc hoặc cấu hình gói skill |
+| Biểu đồ | `.png`, `.svg` | Xuất biểu đồ theo yêu cầu của nhóm phân tích |
+| Nguồn khoa học và trích dẫn | `.tex`, `.bib` | Giao nguồn LaTeX hoặc danh mục trích dẫn |
+| Đóng gói | `.zip` | Gom bộ hồ sơ hoặc gói skill |
 
-Ví dụ: Phòng Hành chính dùng **soạn công văn** để tạo dự thảo, sau đó kết hợp **rà soát dự thảo văn bản** để kiểm tra trước khi trình ký. Sơ đồ mô tả cách kết hợp nghiệp vụ; việc lựa chọn và chuyển kết quả giữa các skill do người dùng hoặc nền tảng triển khai điều phối.
+Các trường `default_output_format` và `available_output_formats` trong [manifest](skills-manifest.json) là nguồn đối chiếu theo từng skill. Định dạng bổ sung chỉ được tạo khi sản phẩm cần hoặc người dùng yêu cầu và có công cụ thực tế để xuất đúng định dạng.
 
-### Phân bố 153 skill nghiệp vụ
+**Quy tắc giao file:**
 
-```mermaid
-pie showData
-    title Phân bố skill nghiệp vụ theo khối
-    "A - Hội đồng" : 4
-    "B - Phòng ban chức năng" : 121
-    "C - Đơn vị trực thuộc" : 20
-    "D - Khoa và bộ môn" : 4
-    "Liên phòng ban" : 4
-```
+- File phải tồn tại, đọc được và có nội dung đúng định dạng; không đổi đuôi để giả lập kết quả.
+- Nội dung trong chat dùng để trao đổi hoặc giải thích; không thay file khi nhiệm vụ yêu cầu tạo sản phẩm. Yêu cầu rõ chỉ trả nội dung trong chat vẫn được tôn trọng.
+- Bộ hồ sơ gồm nhiều văn bản phải có đủ file thành phần; chỉ gom ZIP khi phù hợp.
+- Chỉ xác nhận các kiểm tra đã thực hiện. Nếu không xem trước được Word/PDF hoặc không tạo được định dạng yêu cầu, thông báo giới hạn trong tin nhắn giao kết quả.
+- Skill viết kịch bản video giao **kịch bản**. MP4 hoặc âm thanh cần yêu cầu sản xuất và công cụ thực sự tạo được media; HTML cũng không tự đồng nghĩa website đã được đăng.
 
-### 18 skill lõi theo mục đích sử dụng
+## Cách sử dụng
 
-| Mục đích | Skill |
-| --- | --- |
-| Chất lượng văn bản và hồ sơ | [Rà soát dự thảo](skills/ra-soat-du-thao-van-ban/SKILL.md) · [Kiểm tra hồ sơ](skills/kiem-tra-day-du-ho-so/SKILL.md) · [Dịch song ngữ](skills/dich-thuat-song-ngu-va-thuat-ngu/SKILL.md) · [Quản lý phiên bản](skills/quan-ly-phien-ban-tai-lieu/SKILL.md) |
-| Tổng hợp và điều hành | [Hợp nhất báo cáo](skills/hop-nhat-bao-cao-don-vi/SKILL.md) · [Tóm tắt trình lãnh đạo](skills/executive-brief-trinh-lanh-dao/SKILL.md) · [Chuẩn bị họp và theo dõi công việc](skills/chuan-bi-hop-va-action-tracker/SKILL.md) · [Tổ chức sự kiện](skills/ke-hoach-to-chuc-su-kien/SKILL.md) |
-| Chính sách và tuân thủ | [FAQ có trích nguồn](skills/faq-chinh-sach-co-trich-nguon/SKILL.md) · [Theo dõi thay đổi văn bản](skills/theo-doi-thay-doi-van-ban-phap-quy/SKILL.md) |
-| Sinh viên và giảng dạy | [Phân loại yêu cầu sinh viên](skills/triage-case-sinh-vien/SKILL.md) · [Rà soát tiến độ tốt nghiệp](skills/audit-tien-do-tot-nghiep/SKILL.md) · [Trợ lý giảng dạy](skills/tro-ly-giang-day/SKILL.md) |
-| Nghiên cứu | [Tổng quan tài liệu](skills/tong-quan-tai-lieu-khoa-hoc/SKILL.md) · [Theo dõi tài trợ nghiên cứu](skills/theo-doi-grant-nghien-cuu/SKILL.md) |
-| Tài chính, CNTT và mở rộng | [Phân tích chênh lệch ngân sách](skills/phan-tich-chenh-lech-ngan-sach/SKILL.md) · [Phân loại yêu cầu hỗ trợ CNTT](skills/helpdesk-cntt-triage/SKILL.md) · [Đóng gói skill từ quy trình](skills/dong-goi-skill-tu-quy-trinh/SKILL.md) |
+1. **Chọn skill:** tìm trong [danh mục](skills/README.md), đọc phạm vi, đầu vào và định dạng của `SKILL.md`.
+2. **Cung cấp nguồn:** gửi yêu cầu, dữ liệu, mẫu của trường và quy chế có liên quan. Thông tin chưa có được chừa chỗ đúng mẫu.
+3. **Thực hiện và xuất file:** nạp cả thư mục skill vào nền tảng hỗ trợ, hoặc cung cấp `SKILL.md` cùng các tài liệu được liên kết. Nền tảng cần có công cụ tạo định dạng yêu cầu.
+4. **Kiểm tra và trình ký:** đối chiếu nội dung với nguồn, hoàn thiện trường còn thiếu và thực hiện phê duyệt theo quy trình của đơn vị.
 
-Các nhóm trên giúp tìm nhanh theo nhu cầu; vẫn thuộc cùng Tầng 1.
-
-## 3. Bản đồ skill theo phòng ban
-
-Số lượng dưới đây được đối chiếu với chỉ mục hiện có. Mỗi hàng có một skill đại diện để mở xem ngay; toàn bộ skill của từng nhóm nằm trong [chỉ mục chi tiết](skills/README.md).
-
-| Đơn vị / nhóm nghiệp vụ | Số skill | Mở skill đại diện |
-| --- | :---: | --- |
-| A1. Văn phòng Hội đồng trường | 1 | [chuan-bi-hop-hoi-dong-truong](skills/chuan-bi-hop-hoi-dong-truong/SKILL.md) |
-| A3. Hội đồng Khoa học và Đào tạo | 3 | [bien-ban-hop-hoi-dong-khdt](skills/bien-ban-hop-hoi-dong-khdt/SKILL.md) |
-| B1. Phòng Hành chính – Tổng hợp | 12 | [soan-cong-van](skills/soan-cong-van/SKILL.md) |
-| B2. Phòng Tổ chức – Cán bộ | 16 | [quy-trinh-tuyen-dung](skills/quy-trinh-tuyen-dung/SKILL.md) |
-| B3. Phòng Đào tạo | 14 | [de-an-tuyen-sinh](skills/de-an-tuyen-sinh/SKILL.md) |
-| B4. Phòng Đào tạo Sau đại học | 5 | [thong-bao-tuyen-sinh-sdh](skills/thong-bao-tuyen-sinh-sdh/SKILL.md) |
-| B5. Phòng Khảo thí & Đảm bảo chất lượng | 12 | [quy-trinh-ngan-hang-de-thi](skills/quy-trinh-ngan-hang-de-thi/SKILL.md) |
-| B6. Phòng KHCN và Hợp tác quốc tế | 16 | [thong-bao-dang-ky-de-tai](skills/thong-bao-dang-ky-de-tai/SKILL.md) |
-| B7. Phòng Công tác sinh viên | 12 | [thong-bao-hoc-bong](skills/thong-bao-hoc-bong/SKILL.md) |
-| B8. Phòng Tài chính – Kế toán | 6 | [thong-bao-muc-thu-hoc-phi](skills/thong-bao-muc-thu-hoc-phi/SKILL.md) |
-| B9. Phòng Quản trị – Thiết bị | 6 | [ke-hoach-mua-sam](skills/ke-hoach-mua-sam/SKILL.md) |
-| B10. Phòng Thanh tra và Pháp chế (+ kiểm toán nội bộ) | 6 | [ke-hoach-thanh-tra-nam](skills/ke-hoach-thanh-tra-nam/SKILL.md) |
-| B11. Phòng Truyền thông và Tuyển sinh | 10 | [ke-hoach-truyen-thong-nam](skills/ke-hoach-truyen-thong-nam/SKILL.md) |
-| B12. Trung tâm CNTT / Chuyển đổi số | 3 | [ke-hoach-phat-trien-cntt](skills/ke-hoach-phat-trien-cntt/SKILL.md) |
-| B13. Ban Xúc tiến đầu tư và Phát triển hạ tầng | 3 | [ke-hoach-xuc-tien-dau-tu](skills/ke-hoach-xuc-tien-dau-tu/SKILL.md) |
-| C1. Viện ĐMST & Chuyển giao công nghệ | 6 | [pmo-quan-tri-du-an](skills/pmo-quan-tri-du-an/SKILL.md) |
-| C2. Thư viện – Trung tâm học liệu | 2 | [ke-hoach-bo-sung-hoc-lieu](skills/ke-hoach-bo-sung-hoc-lieu/SKILL.md) |
-| C3. Trung tâm thực hành nghề nghiệp | 1 | [ke-hoach-hoat-dong-trung-tam-thuc-hanh](skills/ke-hoach-hoat-dong-trung-tam-thuc-hanh/SKILL.md) |
-| C4. Trạm Y tế | 3 | [ke-hoach-y-te-hoc-duong](skills/ke-hoach-y-te-hoc-duong/SKILL.md) |
-| C5. Trung tâm Nội trú | 1 | [ke-hoach-tiep-nhan-quan-ly-noi-tru](skills/ke-hoach-tiep-nhan-quan-ly-noi-tru/SKILL.md) |
-| C6. Cơ quan báo chí – Xuất bản | 2 | [ke-hoach-hoat-dong-bao-chi](skills/ke-hoach-hoat-dong-bao-chi/SKILL.md) |
-| C7. Phân hiệu / Cơ sở đào tạo | 2 | [ke-hoach-hoat-dong-phan-hieu](skills/ke-hoach-hoat-dong-phan-hieu/SKILL.md) |
-| C9. Trung tâm Đào tạo liên tục / Trường bồi dưỡng | 3 | [ke-hoach-dao-tao-lien-tuc](skills/ke-hoach-dao-tao-lien-tuc/SKILL.md) |
-| D1. Khoa / Bộ môn | 4 | [phan-cong-giang-day](skills/phan-cong-giang-day/SKILL.md) |
-| Dùng chung liên phòng ban | 4 | [bao-cao-3-cong-khai](skills/bao-cao-3-cong-khai/SKILL.md) |
-| **Tổng Tầng 2** | **153** | |
-
-**Tên phòng ban có thể khác nhau giữa các trường.** Nếu trường gộp Đào tạo và Công tác sinh viên, một đầu mối có thể sử dụng skill của cả B3 và B7. Các mã A/B/C/D phục vụ đối chiếu chức năng. Khung tổ chức còn có những mã chưa có nhóm skill riêng trong chỉ mục này; xem [khung phòng ban chuẩn](khung-phong-ban-chuan.md) để xác định đơn vị phù hợp.
-
-## 4. Một skill hoạt động như thế nào?
-
-### Luồng thực hiện và kiểm duyệt
-
-```mermaid
-flowchart TD
-    REQ["Yêu cầu và tài liệu nguồn"] --> CHECK{"Đầu vào đầy đủ?"}
-    CHECK -->|Chưa đủ| ASK["Liệt kê thiếu và yêu cầu bổ sung"]
-    ASK --> CHECK
-    CHECK -->|Đầy đủ| DO["Thực hiện các bước của skill"]
-    DO --> DRAFT["Dự thảo và checklist"]
-    DRAFT --> REVIEW{"Nhân sự kiểm tra và duyệt"}
-    REVIEW -->|Cần sửa| FIX["Chỉnh sửa theo ý kiến"]
-    FIX --> DRAFT
-    REVIEW -->|Đạt| OUT["Kết quả được xác nhận"]
-```
-
-**Human gate** là điểm bắt buộc người có trách nhiệm kiểm tra hoặc phê duyệt. Ví dụ: AI chuẩn bị dự thảo công văn; chuyên viên kiểm tra, người có thẩm quyền duyệt trước khi phát hành.
-
-### Thành phần của một skill
-
-| Thành phần | Câu hỏi cần trả lời |
-| --- | --- |
-| Định danh: `name`, `description` | Skill tên gì và xử lý việc gì? |
-| Khi nào dùng | Tình huống nào phù hợp? |
-| Đầu vào — Input | Cần tài liệu và dữ liệu nào? Trường nào bắt buộc? |
-| Quy trình | Mỗi bước làm gì, dùng dữ liệu nào, ai phụ trách và AI hỗ trợ ra sao? |
-| Sơ đồ quy trình — Workflow | Các bước nối với nhau thế nào? Điểm kiểm tra ở đâu? |
-| Đầu ra — Output | Cần giao sản phẩm gì và theo bố cục nào? |
-| Checklist nghiệm thu | Tiêu chí nào xác định kết quả đạt yêu cầu? |
-| Ví dụ mô phỏng | Đầu vào và đầu ra mẫu trông như thế nào? |
-| Kiểm duyệt và giới hạn | Ai duyệt? AI được thực hiện đến đâu? |
-| Căn cứ và lưu ý | Cần đối chiếu văn bản, quy chế hoặc nguồn nào? |
-
-Cách đặt tiêu đề và vị trí phần kiểm duyệt có thể khác nhau giữa các file. Khi thực hiện, đọc đầy đủ file `SKILL.md` và kiểm tra yêu cầu của chính skill được chọn.
-
-### Nguyên tắc chất lượng
-
-- Dữ liệu, số liệu và trích dẫn phải truy được về tài liệu nguồn.
-- Thiếu thông tin thì ghi rõ phần thiếu và hỏi bổ sung.
-- Dự thảo và kết quả được duyệt phải được phân biệt rõ.
-- Nhân sự xác nhận thẩm quyền, căn cứ và quy chế áp dụng tại trường trước khi dùng chính thức.
-- Ví dụ trong bộ skill sử dụng dữ liệu giả lập như **Trường Đại học A**, **Nguyễn Văn A**; thay bằng dữ liệu đã được phép sử dụng khi triển khai.
-
-## 5. Ví dụ kết hợp skill liên phòng ban
-
-### Báo cáo tổng kết năm học toàn trường
-
-```mermaid
-flowchart TD
-    UNIT["Phòng ban và khoa"] --> REPORT["Báo cáo đơn vị"]
-    REPORT --> MERGE["Hợp nhất báo cáo"]
-    MERGE --> GAP{"Số liệu đủ và nhất quán?"}
-    GAP -->|Chưa| CONFIRM["Đơn vị xác nhận và bổ sung"]
-    CONFIRM --> MERGE
-    GAP -->|Đủ| SCHOOL["Dự thảo tổng kết toàn trường"]
-    SCHOOL --> BRIEF["Tóm tắt vấn đề trình lãnh đạo"]
-    BRIEF --> APPROVE["Lãnh đạo xem xét và duyệt"]
-```
-
-| Công đoạn | Skill có thể sử dụng | Kết quả |
-| --- | --- | --- |
-| Chuẩn bị báo cáo đơn vị | [Tổng kết khoa](skills/bao-cao-tong-ket-khoa/SKILL.md), [Tổng kết văn phòng](skills/bao-cao-tong-ket-vp/SKILL.md) và skill báo cáo tương ứng | Báo cáo từng đơn vị |
-| Gộp và kiểm tra nguồn | [Hợp nhất báo cáo đơn vị](skills/hop-nhat-bao-cao-don-vi/SKILL.md) | Bảng tổng hợp, danh sách dữ liệu cần xác nhận |
-| Soạn báo cáo toàn trường | [Tổng kết năm học toàn trường](skills/bao-cao-tong-ket-nam-truong/SKILL.md) | Dự thảo báo cáo theo các mảng công tác |
-| Chuẩn bị nội dung điều hành | [Tóm tắt trình lãnh đạo](skills/executive-brief-trinh-lanh-dao/SKILL.md) | Bản tóm tắt và vấn đề cần quyết định |
-
-### Một số chuỗi công việc khác
-
-| Tình huống | Cách kết hợp skill | Người xác nhận kết quả |
-| --- | --- | --- |
-| Chuẩn bị công văn trình ký | Soạn công văn → rà soát dự thảo → phiếu trình ký | Chuyên viên, đầu mối kiểm tra và người ký |
-| Tổ chức tuyển dụng | Quy trình tuyển dụng + thông báo tuyển dụng + kiểm tra hồ sơ | Phòng Tổ chức – Cán bộ và cấp có thẩm quyền |
-| Triển khai truyền thông tuyển sinh | Brief chiến dịch + lịch nội dung + bài viết + FAQ tuyển sinh | Đơn vị tuyển sinh và truyền thông |
-| Quản trị dự án chuyển giao | Quản trị dự án + báo cáo định kỳ + hồ sơ chuyển giao | Đầu mối dự án và cấp phê duyệt |
-
-Đây là **gợi ý phối hợp các skill hiện có**. Trình tự thực tế cần bám quy trình và phân công của từng trường.
-
-## 6. Bắt đầu sử dụng
-
-### Bước 1 — Chọn đúng skill
-
-Mở [danh mục skill](skills/README.md), chọn nhóm phòng ban hoặc công việc. Đọc phần **Khi nào dùng** và **Đầu vào** của skill trước khi bắt đầu.
-
-### Bước 2 — Chuẩn bị dữ liệu và biểu mẫu
-
-Cung cấp yêu cầu, tài liệu nguồn, mẫu của trường và quy định nội bộ liên quan. Xác định người thực hiện và người kiểm duyệt.
-
-### Bước 3 — Cung cấp hướng dẫn skill cho công cụ AI
-
-Đưa nội dung `SKILL.md` cùng dữ liệu vào công cụ AI đang sử dụng. Có thể dùng như hướng dẫn cho một tác vụ hoặc đóng gói vào nền tảng có hỗ trợ skill; cách nạp và cấu hình phụ thuộc nền tảng.
-
-**Mẫu yêu cầu chung:**
+### Ví dụ yêu cầu
 
 ```text
-Thực hiện công việc theo nội dung SKILL.md tôi cung cấp.
+Dùng skill thong-bao-tuyen-sinh-sdh để soạn thông báo
+tuyển sinh sau đại học cho Trường Đại học Quốc tế.
 
-Mục tiêu: [kết quả cần đạt]
-Đơn vị thực hiện: [tên đơn vị]
-Đầu vào: [dữ liệu và tài liệu đính kèm]
-Biểu mẫu/quy chế của trường: [nguồn áp dụng]
-Người kiểm duyệt: [vai trò hoặc chức danh]
-
-Trước khi soạn, kiểm tra các trường bắt buộc.
-Nếu thiếu, liệt kê và hỏi bổ sung.
-Thực hiện theo từng bước của skill.
-Trả kết quả theo cấu trúc đầu ra, kèm checklist và vấn đề cần xác nhận.
+Tổng chỉ tiêu: 03 người.
+Mẫu và kế hoạch tuyển sinh: tài liệu đính kèm, nếu có.
+Thông tin chưa cung cấp: giữ dấu chấm hoặc ô trống theo mẫu gốc.
+Đầu ra: file Word .docx có thể tải về và chỉnh sửa.
+Không kèm checklist hay phụ lục kiểm tra đầu ra.
 ```
 
-**Ví dụ với skill [soạn công văn](skills/soan-cong-van/SKILL.md):**
+Với ví dụ này, file Word phải được tạo ngay; ngành, trình độ, phân bổ chỉ tiêu, thời gian, căn cứ và người ký chưa có thì chừa chỗ. Không tự chọn ngành hoặc phân bổ tổng chỉ tiêu vào ngành chưa được xác nhận.
 
-```text
-Dữ liệu giả lập để thử nghiệm:
+### Tải bộ skill
 
-loai_cong_van: Đề nghị
-trich_yeu: phối hợp tổ chức hội thảo khoa học sinh viên
-noi_dung:
-- Đề nghị Học viện B phối hợp tổ chức hội thảo.
-- Đề nghị phản hồi trước 20/11/2026.
-noi_nhan: Học viện B; Lưu: VT, HCTH
-nguoi_ky: Hiệu trưởng, theo thẩm quyền được xác nhận trong tài liệu đính kèm
-do_khan: Thường
-
-Tài liệu kèm theo: mẫu công văn, thông tin cơ quan ban hành,
-địa danh, ngày dự kiến ban hành và quy chế phân cấp ký.
-
-Tạo dự thảo cùng checklist. Số văn bản chưa được cấp thì để
-[CHỜ VĂN THƯ CẤP SỐ]; không tự điền số hoặc ghi “đã ký”.
-```
-
-### Bước 4 — Kiểm tra và hoàn thiện
-
-Nhân sự đối chiếu kết quả với tài liệu nguồn, kiểm tra checklist, sửa các điểm chưa đạt và thực hiện bước phê duyệt theo quy trình.
-
-### Tải repository về máy
+Chọn **Code → Download ZIP** trên GitHub hoặc tải bằng Git:
 
 ```bash
 git clone https://github.com/phamtruong91/university-skills-framework.git
-cd dh-skills
+cd university-skills-framework
 ```
 
-Hoặc chọn **Code → Download ZIP** trên GitHub. Đây là bộ tài liệu Markdown; người đọc có thể mở trực tiếp từng file.
+Khi cài một skill, giữ nguyên thư mục và các tài nguyên được liên kết. Repository chứa hướng dẫn và tài nguyên nghiệp vụ; việc chạy công cụ, tạo file hoặc kết nối hệ thống phụ thuộc nền tảng sử dụng.
 
-## 7. Cấu trúc tài liệu trong repository
+## Quy trình thực hiện
 
-| Đường dẫn | Nội dung | Khi nên đọc |
-| --- | --- | --- |
-| [README.md](README.md) | Tổng quan, kiến trúc, cách sử dụng | Lần đầu tiếp cận |
-| [skills/README.md](skills/README.md) | Chỉ mục và mô tả 171 skill | Tìm skill theo phòng ban |
-| `skills/<ma-skill>/SKILL.md` | Hướng dẫn một công việc cụ thể | Khi thực hiện tác vụ |
-| [khung-skill-tong-the.md](khung-skill-tong-the.md) | Chuẩn đóng gói và khung thiết kế | Khi tùy chỉnh, xây thêm skill |
-| [khung-phong-ban-chuan.md](khung-phong-ban-chuan.md) | Mã đơn vị và đối chiếu mô hình tổ chức | Khi phân công đầu mối tại trường |
-| [danh-muc-skill-phong-ban-dh.md](danh-muc-skill-phong-ban-dh.md) | Danh mục tổng hợp nghiệp vụ ban đầu | Khi tham khảo quá trình xây dựng khung |
-| [so-do-case-phong-ban.html](so-do-case-phong-ban.html) | Sơ đồ tương tác các phòng ban | Khi xem quan hệ nghiệp vụ |
-| [Tài liệu Word](docs/Khung_Skill_AI_phong_ban_truong_dai_hoc.docx) | Tài liệu giới thiệu chi tiết | Khi trao đổi, trình bày nội bộ |
-| [LICENSE](LICENSE) | Điều khoản giấy phép | Khi sử dụng và phân phối lại |
+```mermaid
+flowchart LR
+    A["Yêu cầu và nguồn"] --> B["Chọn skill và mẫu áp dụng"]
+    B --> C["Soạn nội dung; chừa chỗ thông tin thiếu"]
+    C --> D["Tạo file theo định dạng yêu cầu"]
+    D --> E["Kiểm tra nội dung và file"]
+    E --> F["Giao file tải được"]
+    F --> G["Đơn vị hoàn thiện và phê duyệt"]
+```
 
-**Xem sơ đồ HTML:** tải file về rồi mở bằng trình duyệt. Liên kết trên GitHub mở mã nguồn của file. Các sơ đồ Mermaid trong README có thể xem ngay trên GitHub.
+Việc đối chiếu và kiểm tra diễn ra trong quá trình làm. File giao chỉ chứa sản phẩm được yêu cầu. Nếu nhiệm vụ trực tiếp là kiểm tra hồ sơ hoặc thẩm định, bảng kết quả nghiệp vụ là sản phẩm chính; không thêm một checklist tự kiểm tra sản phẩm đó.
 
-**Nguồn đối chiếu:** số lượng trong README này phản ánh 171 file skill hiện có và chỉ mục tương ứng. Một số tài liệu khung còn chứa số lượng hoặc trạng thái từ giai đoạn xây dựng trước; dùng chỉ mục và từng file skill để xác định nội dung hiện có.
+## Mẫu biểu, dữ liệu và phê duyệt
 
-## 8. Gợi ý triển khai tại một trường
+Văn bản hành chính được hướng dẫn theo Nghị định 30/2020/NĐ-CP; văn bản chuyên ngành dùng đúng mẫu, mã biểu và cấu trúc còn áp dụng. Văn bản Đảng, tài liệu khoa học, truyền thông và bảng theo dõi có quy cách riêng theo loại sản phẩm.
 
-Các bước sau là lộ trình đề xuất, có thể điều chỉnh theo nguồn lực của trường.
+- Chọn căn cứ theo đối tượng, thời điểm nghiệp vụ, loại hình trường và điều khoản chuyển tiếp.
+- Giữ dấu chấm, dấu gạch hoặc ô trống đúng mẫu gốc khi thiếu dữ liệu; không tự ghi mã “CHỜ KÝ”, “CHƯA CUNG CẤP” trong bản giao.
+- Chức vụ, họ tên và chữ ký được xử lý theo nguồn và thẩm quyền; không tạo chữ ký, dấu hay trạng thái đã duyệt.
+- Chỉ xử lý dữ liệu cá nhân trong phạm vi được phép và cần thiết cho nghiệp vụ.
 
-| Giai đoạn | Việc cần làm | Kết quả cần có |
-| --- | --- | --- |
-| 1. Khảo sát | Đối chiếu phòng ban, liệt kê công việc lặp lại, thu thập mẫu | Danh sách nghiệp vụ ưu tiên và đầu mối |
-| 2. Tùy chỉnh | Chọn skill, bổ sung mẫu, quy chế, nguồn dữ liệu và người duyệt | Bộ skill phù hợp với trường |
-| 3. Thử nghiệm | Dùng dữ liệu giả lập rồi thử trên hồ sơ được phép sử dụng | Kết quả được đánh giá theo checklist |
-| 4. Vận hành | Hướng dẫn cán bộ, phân công hỗ trợ, quản lý phiên bản | Quy trình sử dụng có người chịu trách nhiệm |
-| 5. Mở rộng | Đo kết quả, điều chỉnh, bổ sung nghiệp vụ | Bộ skill cải tiến theo phản hồi |
+**Phạm vi rà soát:** bộ skill có cập nhật căn cứ/điều kiện pháp lý cho 58 skill từ đợt trước, cùng quy cách đầu ra cho toàn bộ 171 skill. Việc kiểm tra đóng gói không chứng nhận tất cả căn cứ, ngưỡng, thời hạn hoặc mẫu chuyên ngành đều đã được xác minh toàn văn. Đơn vị phải đối chiếu quy chế, thẩm quyền và pháp luật tại thời điểm sử dụng.
 
-Có thể khởi đầu bằng công văn, biên bản họp, kiểm tra hồ sơ và báo cáo đơn vị. Đánh giá bằng **thời gian hoàn thành**, **mức độ phải chỉnh sửa**, **tỷ lệ đạt checklist** và **khả năng đối chiếu nguồn**, rồi lựa chọn các skill tiếp theo dựa trên kết quả thực tế.
+Xem [quy cách đầu ra](docs/QUY_CACH_DAU_RA.md), [đối chiếu pháp lý](docs/CAP_NHAT_PHAP_LY.md) và [quản trị phiên bản](GOVERNANCE.md). Các tài liệu thiết kế và quy trình lịch sử chỉ dùng tham khảo; khi có khác biệt, ưu tiên `SKILL.md`, quy cách đầu ra và manifest hiện hành. Skill hội đồng trường có giới hạn riêng theo loại hình trường và thời điểm áp dụng.
 
-## 9. Mở rộng và đóng góp
+## Cấu trúc repository
 
-1. Tìm trong [chỉ mục](skills/README.md) để tránh tạo skill trùng.
-2. Xác định Tầng 1 hoặc Tầng 2 và đơn vị chịu trách nhiệm.
-3. Tạo thư mục `skills/<ma-skill>/` với file `SKILL.md`.
-4. Bổ sung đầu vào, quy trình, đầu ra, ví dụ, checklist và điểm kiểm duyệt.
-5. Thử với dữ liệu đầy đủ, dữ liệu thiếu và dữ liệu mâu thuẫn.
-6. Cập nhật chỉ mục, số lượng và tài liệu khung liên quan.
-7. Gửi pull request mô tả công việc được hỗ trợ, thay đổi và kết quả kiểm tra.
+```text
+university-skills-framework/
+├── README.md
+├── skills-manifest.json
+├── skills/
+│   ├── README.md
+│   └── <ten-skill>/
+│       ├── SKILL.md
+│       ├── agents/openai.yaml
+│       └── references/
+│           ├── quy-cach-dau-ra.md
+│           ├── version.json
+│           └── phap-ly.md              # ở skill có tài liệu pháp lý riêng
+├── docs/
+│   ├── QUY_CACH_DAU_RA.md
+│   └── CAP_NHAT_PHAP_LY.md
+├── scripts/validate_skills.py
+├── CHANGELOG.md
+├── GOVERNANCE.md
+└── LICENSE
+```
 
-Có thể tham khảo [skill đóng gói từ quy trình](skills/dong-goi-skill-tu-quy-trinh/SKILL.md) để chuyển một quy trình thực tế thành hướng dẫn có thể tái sử dụng.
+Một số skill có thêm `assets/` hoặc tài liệu lịch sử phục vụ nghiệp vụ. Xem [khung đóng gói](khung-skill-tong-the.md) và [sơ đồ phòng ban](so-do-case-phong-ban.html) khi tùy chỉnh bộ skill.
 
-## 10. Giấy phép
+## Kiểm tra và đóng góp
 
-Theo [LICENSE](LICENSE), bộ tài liệu thuộc bản quyền **CES Global, 2026** và được phân phối theo giấy phép kép:
+Trước khi gửi thay đổi, đồng bộ `SKILL.md`, quy cách đầu ra, metadata giao diện, hồ sơ phiên bản và manifest; kiểm tra tình huống đủ dữ liệu, thiếu dữ liệu và dữ liệu mâu thuẫn.
 
-| Hình thức | Nội dung |
-| --- | --- |
-| **Cộng đồng — CC BY-SA 4.0** | Cho phép chia sẻ và chuyển thể, kể cả thương mại, với yêu cầu ghi công và chia sẻ bản chuyển thể theo cùng giấy phép |
-| **Thương mại** | CES Global có thể phân phối cùng nội dung theo điều khoản thương mại riêng, bao gồm đóng gói vào CES Agent Workspace |
+```bash
+python -X utf8 scripts/validate_skills.py
+```
 
-Xem [toàn văn giấy phép CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) và file LICENSE để biết điều khoản đầy đủ.
+Công cụ kiểm tra số lượng skill, cấu trúc YAML, metadata, phiên bản, liên kết tài nguyên và các yêu cầu đầu ra. Việc xác nhận chất lượng nội dung, mẫu biểu và bố cục file thực tế vẫn cần thực hiện theo nghiệp vụ.
 
-## File đầu ra bắt buộc
+Gửi pull request với mô tả sản phẩm được hỗ trợ, hành vi thay đổi và kết quả kiểm tra. Tham khảo [skill đóng gói từ quy trình](skills/dong-goi-skill-tu-quy-trinh/SKILL.md) để xây hoặc mở rộng skill.
 
-Khi tạo sản phẩm nghiệp vụ, phải tạo file thực tế và cung cấp liên kết tải ngay; không chờ yêu cầu xuất file bổ sung. Văn bản mặc định Word, bảng theo dõi mặc định Excel, gói skill mặc định ZIP; định dạng người dùng chỉ định được ưu tiên. Mỗi skill ghi định dạng tại đầu SKILL.md và manifest. Nội dung chat chỉ hỗ trợ trao đổi, không thay file giao.
+## Giấy phép và quản trị
 
-## Lựa chọn định dạng bổ sung
+Bản quyền **CES Global, 2026**. Bộ tài liệu được phân phối theo giấy phép kép được quy định trong [LICENSE](LICENSE): giấy phép cộng đồng **CC BY-SA 4.0** và điều khoản thương mại riêng.
 
-Không giới hạn đầu ra vào định dạng mặc định. Chọn định dạng theo sản phẩm người dùng yêu cầu và công cụ thực tế: DOCX để sửa văn bản; PDF để đọc/in/công bố; XLSX để giữ sheet/công thức; CSV để trao đổi dữ liệu bảng; TXT/MD để giao nội dung thuần; HTML để giao nội dung web; JSON/YAML để giao dữ liệu hoặc cấu hình; PPTX để giao bài trình chiếu; PNG/SVG để giao biểu đồ; TEX/BIB để giao nguồn bài viết khoa học/danh mục trích dẫn; ZIP để gom bộ hồ sơ hoặc gói skill. Chỉ tạo định dạng bổ sung khi sản phẩm cần hoặc người dùng yêu cầu; danh sách định dạng là cách lựa chọn đầu ra, không cam kết mọi công cụ chuyển đổi đều có sẵn.
-
-Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.
+Người duy trì: [phamtruong91](https://github.com/phamtruong91). Phiên bản **1.3.1** là phiên bản nội dung của bộ skill; xem [CHANGELOG](CHANGELOG.md) và lịch sử Git để theo dõi thay đổi. Số phiên bản này không tự đồng nghĩa đã phát hành GitHub Release.
