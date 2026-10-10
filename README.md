@@ -28,7 +28,7 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 | Cấu trúc, đầu vào, quy trình, đầu ra | **Đã kiểm tra bằng công cụ** cho cả 171 skill: đủ mục chuẩn, mọi đầu vào được một bước dùng, các bước đánh số liên tục, sơ đồ khớp số bước (`audit_structure.py`: 0 vấn đề; `validate_skills.py`: không lỗi) |
 | Quy trình đầy đủ | 58 skill từng bị rút gọn còn 4 bước chung chung đã được khôi phục nghiệp vụ gốc, kèm khối "Ràng buộc pháp lý khi thực hiện" |
 | Thể thức Nghị định 30/2020 | Có kiểm tra tự động trên file Word thật (khổ A4, lề, Times New Roman, cỡ chữ); chưa kiểm tra toàn bộ quy định về thể thức |
-| Chạy thử bằng dữ liệu giả | **8 trên 171 skill** (`soan-cong-van`, `soan-quyet-dinh-hc`, `soan-thong-bao`, `soan-bien-ban-hop`, `soan-to-trinh`, `soan-giay-moi`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 163 skill còn lại chưa chạy thử |
+| Chạy thử bằng dữ liệu giả | **10 trên 171 skill** (`quyet-dinh-cap-hoc-bong` và `soan-ke-hoach-ct` thử với file nhiều trang; `soan-cong-van`, `soan-quyet-dinh-hc`, `soan-thong-bao`, `soan-bien-ban-hop`, `soan-to-trinh`, `soan-giay-moi`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 161 skill còn lại chưa chạy thử |
 | Nội dung pháp lý | **Chưa đối chiếu toàn văn hoặc Công báo.** Căn cứ 2025–2026 được xác nhận qua nguồn thứ cấp. Con số, thời hạn, số điều trong các bước khôi phục là nghiệp vụ gốc, chỉ được gắn cờ |
 | Phê duyệt nghiệp vụ | Chưa có người phê duyệt cho từng skill |
 

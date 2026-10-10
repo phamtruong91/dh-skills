@@ -15,4 +15,6 @@ Chạy: `python -X utf8 scripts/check_outputs.py` (cần `python-docx`, `openpyx
 
 Giới hạn: bộ kiểm tra chứng minh file mở được, đúng quy tắc đầu ra và không bịa số liệu; không chứng minh nội dung pháp lý đúng.
 
+`build_tai_lon.py` sinh dữ liệu giả lớn (cố định, lặp lại được) rồi dựng 3 file nhiều trang, tên có hậu tố `--tai-lon`; `check_outputs.py` kiểm tra thêm số trang, số trang từ trang 2, tiêu đề bảng lặp lại, dòng không bị cắt, mã sinh viên không mất/không trùng, khối ký không tách khỏi nội dung cuối (cần LibreOffice và `pdftotext`).
+
 **Hạn chế cần biết:** các file mẫu do script này dựng theo SKILL.md, không phải do một mô hình AI độc lập làm theo skill rồi nộp bài; nên kết quả chứng minh chỉ rằng skill làm theo được và file đạt quy tắc, chưa phải bằng chứng một AI bất kỳ sẽ làm đúng. Muốn kiểm chứng thật, cho AI khác nhận cùng `.input.json`, tạo file vào `outputs/` và chạy `check_outputs.py`.
