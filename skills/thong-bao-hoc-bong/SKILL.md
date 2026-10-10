@@ -118,8 +118,7 @@ Tiêu chí đạt = tất cả các ô được đánh dấu.
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức thông báo).
-- Quyết định 44/2007/QĐ-BGDĐT về học bổng khuyến khích học tập đối với học sinh,
-  sinh viên trong các trường chuyên, trường năng khiếu, trường đại học, cao đẳng.
+- Học bổng khuyến khích học tập: Nghị định 66/2026/NĐ-CP (ban hành 02/03/2026, hiệu lực 15/03/2026, hướng dẫn Luật Giáo dục) có quy định học bổng khuyến khích học tập cho người học đại học (theo nguồn thứ cấp thuvienphapluat.vn, chưa đọc toàn văn); đối chiếu quy chế học bổng của trường và toàn văn nghị định trước khi dùng. Quyết định 44/2007/QĐ-BGDĐT chỉ dùng để đối chiếu hồ sơ cũ.
 - Đối với học bổng tài trợ: ghi đúng tên đơn vị tài trợ và nội dung theo văn bản
   thỏa thuận tài trợ; không tự ý sửa điều kiện của nhà tài trợ.
 - Đối với học bổng chính sách: viện dẫn đúng văn bản quy phạm của Nhà nước còn hiệu lực.

@@ -1,6 +1,6 @@
 ---
 name: "de-an-vi-tri-viec-lam"
-description: "Xây dựng đề án vị trí việc làm của trường đại học hoặc đơn vị trực thuộc theo Nghị định 62/2017/NĐ-CP: danh mục vị trí việc làm, bản mô tả công việc, khung năng lực và số lượng người làm việc. Dùng khi cần rà soát, sắp xếp tổ chức bộ máy hoặc làm căn cứ tuyển dụng, bổ nhiệm, đánh giá viên chức."
+description: "Xây dựng đề án vị trí việc làm của trường đại học hoặc đơn vị trực thuộc theo căn cứ vị trí việc làm hiện hành (đối chiếu Nghị định 232/2026/NĐ-CP): danh mục vị trí việc làm, bản mô tả công việc, khung năng lực và số lượng người làm việc. Dùng khi cần rà soát, sắp xếp tổ chức bộ máy hoặc làm căn cứ tuyển dụng, bổ nhiệm, đánh giá viên chức."
 ---
 
 # Xây dựng đề án vị trí việc làm
@@ -53,7 +53,7 @@ thừa; khi rà soát lại, đối chiếu với đề án cũ để xác đị
 
 **Bước 2. Xây dựng danh mục vị trí việc làm theo 3 nhóm**
 - Làm gì: từ danh sách nhiệm vụ ở Bước 1, xác định các vị trí việc làm cần thiết, phân thành
-3 nhóm theo Nghị định 62/2017/NĐ-CP: (a) lãnh đạo, quản lý; (b) chức danh nghề nghiệp chuyên
+3 nhóm theo văn bản về vị trí việc làm hiện hành (đối chiếu Nghị định 232/2026/NĐ-CP): (a) lãnh đạo, quản lý; (b) chức danh nghề nghiệp chuyên
 ngành; (c) chức danh nghề nghiệp chuyên môn dùng chung và hỗ trợ, phục vụ; đối chiếu với
 `danh_muc_vi_tri` dự kiến và `de_xuat_dieu_chinh` (bổ sung/sáp nhập/xóa bỏ).
 - Dùng input: `danh_muc_vi_tri`, `de_xuat_dieu_chinh` + kết quả Bước 1.
@@ -126,7 +126,7 @@ thừa/thiếu | phương án) + lộ trình thực hiện.
 **Bước 8. Tổng hợp thành đề án hoàn chỉnh**
 - Làm gì: hợp nhất kết quả các bước thành văn bản đề án với bố cục 5 phần: I. Sự cần thiết
 và căn cứ xây dựng đề án (1. sự cần thiết — nêu từ thực trạng và Bước 7; 2. căn cứ pháp lý:
-NĐ 62/2017, quy chế trường/đơn vị); II. Thực trạng tổ chức bộ máy và nhân sự (từ
+văn bản vị trí việc làm hiện hành, quy chế trường/đơn vị); II. Thực trạng tổ chức bộ máy và nhân sự (từ
 `hien_trang_nhan_su`); III. Danh mục vị trí việc làm, mô tả công việc, khung năng lực và số
 lượng (kết quả Bước 2, 4, 5, 6 — trình bày theo 3 nhóm); IV. Phương án sắp xếp, bố trí nhân
 sự và lộ trình thực hiện (kết quả Bước 7); V. Kiến nghị, đề xuất (trình `nguoi_ky` phê duyệt);
@@ -139,17 +139,17 @@ III, IV và phụ lục phải khớp nhau tuyệt đối.
 - → Kết quả bước: dự thảo đề án vị trí việc làm hoàn chỉnh (5 phần + phụ lục).
 
 **Bước 9. Kiểm tra và xuất bản**
-- Làm gì: soát toàn văn: đủ 3 nhóm vị trí theo NĐ 62/2017; nhất quán giữa chức năng –
+- Làm gì: soát toàn văn: đủ 3 nhóm vị trí theo văn bản vị trí việc làm hiện hành; nhất quán giữa chức năng –
 nhiệm vụ – vị trí – số lượng (đối chiếu lại ma trận Bước 3); căn cứ pháp lý đầy đủ; thể thức
 văn bản theo NĐ 30/2020 (đề án ban hành kèm quyết định phê duyệt của cấp có thẩm quyền);
 hoàn thiện file theo định dạng đầu ra của skill, sẵn sàng trình phê duyệt.
 - Dùng input: toàn bộ input (tổng soát).
 - Vai trò: Chuyên viên Phòng TCCB (Trưởng phòng kiểm tra lại) · AI hỗ trợ: quét lỗi theo checklist · ⏱ ~15–30 phút (ước tính)
-- Lưu ý nghiệp vụ: checklist NĐ 62/2017 là công cụ kiểm tra cuối cùng — mọi mục không đạt
+- Lưu ý nghiệp vụ: checklist văn bản vị trí việc làm hiện hành là công cụ kiểm tra cuối cùng — mọi mục không đạt
 phải quay lại bước tương ứng sửa trước khi trình; đề án chỉ có giá trị sau khi được cấp có
 thẩm quyền phê duyệt bằng quyết định.
 - → Kết quả bước: đề án vị trí việc làm hoàn chỉnh + bảng đối chiếu hiện trạng nhân sự +
-checklist theo NĐ 62/2017, sẵn sàng trình phê duyệt.
+checklist theo văn bản vị trí việc làm hiện hành, sẵn sàng trình phê duyệt.
 
 ## Luồng quy trình (Workflow)
 
@@ -181,7 +181,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Bố cục khớp mẫu áp dụng và cấu trúc tại references/quy-cach-dau-ra.md.
 - [ ] Nội dung và số liệu trong output khớp đúng với Input đã cho (không thêm, bớt hay suy diễn)
 - [ ] Không bịa đặt số liệu, minh chứng, trích dẫn hay căn cứ
-- [ ] Đúng thể thức theo Nghị định 62/2017/NĐ-CP và Nghị định 30/2020/NĐ-CP; đối chiếu hiệu lực của căn cứ tại ngày nghiệp vụ.
+- [ ] Đúng thể thức theo văn bản vị trí việc làm hiện hành và Nghị định 30/2020/NĐ-CP; đối chiếu hiệu lực của căn cứ tại ngày nghiệp vụ.
 - [ ] Căn cứ pháp lý được trích dẫn đầy đủ và còn hiệu lực
 - [ ] Không coi bản soạn là đã ký/đã duyệt; việc phê duyệt thuộc người có thẩm quyền trước phát hành
 - [ ] Mọi vị trí việc làm phải xuất phát từ nhiệm vụ được giao — nhiệm vụ nào
@@ -189,7 +189,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 - [ ] Nhiệm vụ trong bản mô tả phải là công việc cụ thể, đo đếm được (tránh
 
 ## Căn cứ & lưu ý
-- Nghị định 62/2017/NĐ-CP ngày 25/5/2017 của Chính phủ về vị trí việc làm
+- Căn cứ vị trí việc làm: Nghị định 232/2026/NĐ-CP về vị trí việc làm viên chức (theo nguồn thứ cấp, một công văn địa phương tháng 9/2026; chưa đọc toàn văn nên chưa biết nghị định này thay thế văn bản nào); cần Tổ chức cán bộ/pháp chế xác nhận
   trong đơn vị sự nghiệp công lập.
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức văn bản; đề án ban hành
   kèm quyết định phê duyệt của cấp có thẩm quyền).

@@ -132,9 +132,8 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức quyết định).
-- Quyết định 44/2007/QĐ-BGDĐT về học bổng khuyến khích học tập.
-- Đối với miễn, giảm học phí: căn cứ Nghị định 81/2021/NĐ-CP về cơ chế thu, quản lý
-  học phí và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập.
+- Học bổng khuyến khích học tập: Nghị định 66/2026/NĐ-CP (ban hành 02/03/2026, hiệu lực 15/03/2026, hướng dẫn Luật Giáo dục) có quy định học bổng khuyến khích học tập cho người học đại học (theo nguồn thứ cấp thuvienphapluat.vn, chưa đọc toàn văn); đối chiếu quy chế học bổng của trường và toàn văn nghị định trước khi dùng. Quyết định 44/2007/QĐ-BGDĐT chỉ dùng để đối chiếu hồ sơ cũ.
+- Đối với miễn, giảm học phí: căn cứ nêu tại [phap-ly.md](references/phap-ly.md) (Nghị định 238/2025/NĐ-CP); không dùng Nghị định 81/2021 làm mặc định.
 - Quyết định cấp học bổng tài trợ phải phù hợp với văn bản thỏa thuận tài trợ.
 - Không dùng tên thật của trường/cá nhân khi mô phỏng.
 

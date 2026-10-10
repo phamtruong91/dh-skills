@@ -174,7 +174,7 @@ Các tiêu chí sau dùng để tự đối chiếu; không sao chép vào file 
 
 ## Căn cứ & lưu ý
 - Nghị định 30/2020/NĐ-CP về công tác văn thư (thể thức quyết định và văn bản kèm theo).
-- Nghị định 62/2017/NĐ-CP về vị trí việc làm trong đơn vị sự nghiệp công lập
+- Căn cứ vị trí việc làm: Nghị định 232/2026/NĐ-CP về vị trí việc làm viên chức (theo nguồn thứ cấp, một công văn địa phương tháng 9/2026; chưa đọc toàn văn nên chưa biết nghị định này thay thế văn bản nào); cần Tổ chức cán bộ/pháp chế xác nhận
   (cơ cấu tổ chức phải gắn với danh mục vị trí việc làm).
 - Quy chế tổ chức và hoạt động của trường; quy định công tác cán bộ
   (thẩm quyền thành lập, chia tách, sáp nhập đơn vị; bổ nhiệm người đứng đầu).

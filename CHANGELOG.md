@@ -9,6 +9,7 @@ Rà soát toàn bộ 171 skill về quy trình, đầu vào, đầu ra và thể
 - **Thể thức NĐ 30/2020:** `scripts/check_outputs.py` kiểm tra khổ A4, lề, phông Times New Roman, cỡ chữ cho file có `nd30_format`; thêm mẫu thử `soan-quyet-dinh-hc` (4/4 mẫu đạt).
 - **Validator:** thêm kiểm tra không cắt cụt mục thể thức, sơ đồ khớp bước, kết quả bước không là báo cáo kiểm tra, ≥3 bước, có ràng buộc pháp lý. `audit_structure.py`: 0/171 vấn đề.
 - **Sửa căn cứ cũ còn sót:** `de-an-mo-nganh`, `quyet-dinh-nang-luong`; viết lại bước của `bao-cao-3-cong-khai` theo hướng TT 09/2024 (không mặc định 3 biểu).
+- **Căn cứ mới từ nguồn thứ cấp:** học bổng khuyến khích → Nghị định 66/2026/NĐ-CP (`quyet-dinh-cap-hoc-bong`, `thong-bao-hoc-bong`); vị trí việc làm → Nghị định 232/2026/NĐ-CP thay viện dẫn NĐ 62/2017 (`de-an-vi-tri-viec-lam`, `quy-che-to-chuc-hoat-dong`). Chưa đọc toàn văn. Danh sách còn lại: `docs/CAN_CU_NGHI_LOI_THOI.md`.
 - **Tài liệu:** `docs/DIEM_CAN_DOI_CHIEU_PHAP_LY.md` (danh sách dòng cần chuyên gia pháp lý đối chiếu), cập nhật `legal-register.json`.
 - **Chưa làm:** chưa đối chiếu toàn văn/Công báo; sơ đồ dựng lại của 44 skill mất nhánh quyết định; thời lượng ⏱ là ước tính; một số quy-cach-dau-ra.md vẫn mang cấu trúc cũ; chưa chạy thử thêm skill ngoài 4 mẫu.
 
