@@ -1,0 +1,137 @@
+{
+  "_ghi_chu": "Dữ liệu GIẢ để thử skill. Dự án, người, số tiền đều là mẫu. Đơn vị tiền: triệu đồng.",
+  "ten_du_an": "DA-MAU-01 – Nền tảng quản lý học liệu số (mẫu)",
+  "chu_du_an": "Phạm Văn Xuân (mẫu)",
+  "muc_tieu": "Xây dựng và đưa vào sử dụng thử nền tảng quản lý học liệu số cho 02 khoa.",
+  "ky_bao_cao": "Tháng 09/2026",
+  "den_moc_lon_hoac_ket_thuc": false,
+  "ngan_sach": {
+    "tong_duoc_duyet": 600,
+    "don_vi": "triệu đồng"
+  },
+  "nguong_trang_thai": {
+    "hoan_thanh": "thực tế = 100%",
+    "dung_tien_do": "chênh lệch >= -5 điểm %",
+    "co_nguy_co_cham": "-10 < chênh lệch < -5",
+    "cham": "chênh lệch <= -10"
+  },
+  "workplan": [
+    {
+      "ma": "WP1",
+      "ten": "Khảo sát nhu cầu và chốt yêu cầu",
+      "moc": "15/06/2026",
+      "phu_trach": "Nguyễn Thị Lan",
+      "deliverable": "Tài liệu yêu cầu được 2 khoa ký xác nhận",
+      "ngan_sach": 60,
+      "pct_ke_hoach": 100,
+      "pct_thuc_te": 100,
+      "minh_chung": "Biên bản nghiệm thu yêu cầu ngày 14/06/2026"
+    },
+    {
+      "ma": "WP2",
+      "ten": "Thiết kế kiến trúc và giao diện",
+      "moc": "31/07/2026",
+      "phu_trach": "Trần Văn Hải",
+      "deliverable": "Bản thiết kế được duyệt",
+      "ngan_sach": 120,
+      "pct_ke_hoach": 100,
+      "pct_thuc_te": 90,
+      "minh_chung": "Bản thiết kế v0.9 (file)"
+    },
+    {
+      "ma": "WP3",
+      "ten": "Phát triển module tải lên và phân loại học liệu",
+      "moc": "15/09/2026",
+      "phu_trach": "Trần Văn Hải",
+      "deliverable": "Module chạy được trên môi trường thử",
+      "ngan_sach": 150,
+      "pct_ke_hoach": 100,
+      "pct_thuc_te": 70,
+      "minh_chung": "Báo cáo kiểm thử nội bộ ngày 12/09/2026"
+    },
+    {
+      "ma": "WP4",
+      "ten": "Tích hợp đăng nhập một lần với hệ thống của trường",
+      "moc": "30/09/2026",
+      "phu_trach": "Lê Minh Khôi",
+      "deliverable": "Đăng nhập thử thành công với 20 tài khoản mẫu",
+      "ngan_sach": 100,
+      "pct_ke_hoach": 80,
+      "pct_thuc_te": 65,
+      "minh_chung": null
+    },
+    {
+      "ma": "WP5",
+      "ten": "Đào tạo người dùng và chạy thử",
+      "moc": "30/10/2026",
+      "phu_trach": "Nguyễn Thị Lan",
+      "deliverable": "Hoàn thành giai đoạn chạy thử",
+      "ngan_sach": 110,
+      "pct_ke_hoach": 20,
+      "pct_thuc_te": 20,
+      "minh_chung": "Kế hoạch đào tạo đã duyệt"
+    },
+    {
+      "ma": "WP6",
+      "ten": "Nghiệm thu và bàn giao",
+      "moc": "30/11/2026",
+      "phu_trach": "Phạm Văn Xuân (mẫu)",
+      "deliverable": "Biên bản nghiệm thu dự án",
+      "ngan_sach": 100,
+      "pct_ke_hoach": 0,
+      "pct_thuc_te": 0,
+      "minh_chung": "Chưa đến hạn"
+    }
+  ],
+  "issue_trong_ky": [
+    {
+      "ma": "IS-01",
+      "mo_ta": "Môi trường thử chưa cấp quyền kết nối hệ thống đăng nhập của trường",
+      "muc_do": "nghiêm trọng",
+      "nguoi_xu_ly": "Lê Minh Khôi",
+      "han_xu_ly": "15/10/2026",
+      "trang_thai": "đang xử lý",
+      "ngay_ghi_nhan": "28/09/2026"
+    },
+    {
+      "ma": "IS-02",
+      "mo_ta": "Giao diện tải lên chậm với tệp trên 500 MB",
+      "muc_do": "trung bình",
+      "nguoi_xu_ly": "Trần Văn Hải",
+      "han_xu_ly": "30/09/2026",
+      "trang_thai": "mở",
+      "ngay_ghi_nhan": "10/09/2026"
+    },
+    {
+      "ma": "IS-03",
+      "mo_ta": "Thiếu người dùng thử tại Khoa B (mẫu)",
+      "muc_do": "nhẹ",
+      "nguoi_xu_ly": null,
+      "han_xu_ly": null,
+      "trang_thai": "mở",
+      "ngay_ghi_nhan": "05/09/2026"
+    }
+  ],
+  "risk_hien_co": [
+    {
+      "ma": "RK-01",
+      "mo_ta": "Chậm cấp quyền kết nối làm trượt mốc WP4 và WP5",
+      "xac_suat": "cao",
+      "tac_dong": "cao",
+      "giam_thieu": "Họp với đơn vị quản lý hệ thống đăng nhập để chốt ngày cấp quyền",
+      "nguoi_theo_doi": "Lê Minh Khôi",
+      "han_ra_soat": "12/10/2026"
+    },
+    {
+      "ma": "RK-02",
+      "mo_ta": "Người dùng thử không đủ để đánh giá",
+      "xac_suat": "trung bình",
+      "tac_dong": "trung bình",
+      "giam_thieu": null,
+      "nguoi_theo_doi": "Nguyễn Thị Lan",
+      "han_ra_soat": null
+    }
+  ],
+  "quyet_dinh_can_lanh_dao": [],
+  "ngay_chay_thu": "10/10/2026"
+}

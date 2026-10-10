@@ -1,0 +1,46 @@
+{
+  "skill": "soan-cong-van",
+  "output": "soan-cong-van.docx",
+  "kind": "docx",
+  "must_contain": [
+    "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
+    "Độc lập – Tự do – Hạnh phúc",
+    "Kính gửi: Cơ quan A (mẫu)",
+    "Phúc đáp Công văn số 118/CQA-TS ngày 28/09/2026",
+    "V/v cử cán bộ tham gia tập huấn",
+    "TUQ. HIỆU TRƯỞNG",
+    "TRƯỞNG PHÒNG ĐÀO TẠO",
+    "Nguyễn Văn An",
+    "- Như trên;",
+    "- Lưu: VT, ĐT.",
+    "./."
+  ],
+  "must_not_contain": [
+    "CV",
+    "V/v về việc",
+    "Số: 1",
+    "năm 2026."
+  ],
+  "blank_labels": [
+    "Số:",
+    "Hà Nội, ngày"
+  ],
+  "traps": [
+    {
+      "id": "HAN_DA_QUA",
+      "mo_ta": "Mốc 'trước ngày 05/10/2026' đã qua so với ngày chạy thử 10/10/2026"
+    },
+    {
+      "id": "TUQ_THIEU_UY_QUYEN",
+      "mo_ta": "Ký TUQ. nhưng không có văn bản ủy quyền"
+    },
+    {
+      "id": "TRICH_YEU_THUA",
+      "mo_ta": "Trích yếu đầu vào có sẵn 'về việc' nên phải bỏ khi ghi sau 'V/v'"
+    },
+    {
+      "id": "SO_VAN_BAN_CHUA_CAP",
+      "mo_ta": "Số, ngày chưa có: phải chừa chỗ, không tự điền"
+    }
+  ]
+}

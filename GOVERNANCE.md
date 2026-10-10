@@ -2,7 +2,7 @@
 
 Kho nguồn: https://github.com/phamtruong91/university-skills-framework. Người duy trì ghi theo GitHub: `phamtruong91`, Phạm Văn Trường. Giấy phép và bản quyền theo LICENSE (CES Global); tài khoản duy trì không đồng nghĩa chủ sở hữu toàn bộ nội dung.
 
-Phiên bản gói hiện tại: **1.3.1**, ngày cập nhật **2026-10-10**. Baseline trước cập nhật: `78fd1d51b8acd1a724d9b9af6c488460bc7551ad`. Xác định commit thực tế bằng `git log -1` và `git log -1 -- skills/<ten-skill>`; không dùng baseline như commit của bản mới. Không có người phê duyệt nghiệp vụ đã được chỉ định trong kho; trường triển khai phải giao người chịu trách nhiệm.
+Phiên bản gói hiện tại: **1.3.2**, ngày cập nhật **2026-10-10**. Baseline trước cập nhật: `d2a835f00b0dbbafa13a66d56551a4f3102311ac`. Xác định commit thực tế bằng `git log -1` và `git log -1 -- skills/<ten-skill>`; không dùng baseline như commit của bản mới. Chưa có người phê duyệt nghiệp vụ trong kho. Khi chỉ định, ghi tên vào `approval_owner` của `references/version.json` và manifest; validator chấp nhận giá trị này. Trường triển khai phải giao người chịu trách nhiệm.
 
 ## Quy tắc thay đổi
 
@@ -25,3 +25,7 @@ Khi tạo sản phẩm nghiệp vụ, phải tạo file thực tế và cung c�
 Không giới hạn đầu ra vào định dạng mặc định. Chọn định dạng theo sản phẩm người dùng yêu cầu và công cụ thực tế: DOCX để sửa văn bản; PDF để đọc/in/công bố; XLSX để giữ sheet/công thức; CSV để trao đổi dữ liệu bảng; TXT/MD để giao nội dung thuần; HTML để giao nội dung web; JSON/YAML để giao dữ liệu hoặc cấu hình; PPTX để giao bài trình chiếu; PNG/SVG để giao biểu đồ; TEX/BIB để giao nguồn bài viết khoa học/danh mục trích dẫn; ZIP để gom bộ hồ sơ hoặc gói skill. Chỉ tạo định dạng bổ sung khi sản phẩm cần hoặc người dùng yêu cầu; danh sách định dạng là cách lựa chọn đầu ra, không cam kết mọi công cụ chuyển đổi đều có sẵn.
 
 Markdown phải là file .md thật khi được yêu cầu, không phải đoạn Markdown trong chat. CSV/JSON không thay XLSX khi cần công thức/định dạng. PPTX phải có slide thực; PNG/SVG phải là biểu đồ hoặc hình thật. HTML không đồng nghĩa website đã được đăng. Skill kịch bản video chỉ giao kịch bản; MP4/âm thanh chỉ có thể giao khi người dùng yêu cầu sản xuất và có công cụ thực sự tạo được. Không đổi đuôi file hoặc gọi file mô tả là media đã hoàn thành.
+
+## Kiểm tra trước khi hợp nhất
+
+Chạy `python -X utf8 scripts/validate_skills.py` (cấu trúc, mâu thuẫn nội bộ) và `python -X utf8 scripts/check_outputs.py` (file đầu ra mẫu). Thay đổi pháp lý ghi nguồn đã dùng; nguồn thứ cấp phải được đánh dấu là chưa đối chiếu Công báo.

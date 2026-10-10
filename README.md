@@ -4,7 +4,7 @@
 
 Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số liệu, điều phối công việc, nghiên cứu và giảng dạy. Mỗi skill xác định dữ liệu đầu vào, quy trình, sản phẩm cần giao, định dạng file và trách nhiệm kiểm duyệt.
 
-[![Version](https://img.shields.io/badge/version-1.3.1-1f4e79)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.2-1f4e79)](CHANGELOG.md)
 [![Skills](https://img.shields.io/badge/skills-171-256D4A)](skills/README.md)
 [![License](https://img.shields.io/badge/license-CC_BY--SA_4.0-555555)](LICENSE)
 
@@ -12,14 +12,20 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 
 | Quy mô | Giá trị |
 | --- | ---: |
-| Phiên bản nội dung | **1.3.1** |
+| Phiên bản nội dung | **1.3.2** |
 | Ngày cập nhật bộ skill | **10/10/2026** |
 | Tổng số skill | **171** |
 | Skill lõi dùng chung | **18** |
 | Skill nghiệp vụ | **153** |
 | Định dạng đầu ra được khai báo | **15** |
 
-## Những điểm chính của phiên bản 1.3.1
+## Những điểm chính của phiên bản 1.3.2
+
+- **Trạng thái thử nghiệm:** 3 trong 171 skill đã chạy thử bằng dữ liệu giả (`soan-cong-van`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 168 skill còn lại chưa chạy thử. Chưa có người phê duyệt nghiệp vụ.
+- **Sửa căn cứ thanh tra** sang Luật Thanh tra 84/2025/QH15 và NĐ 216/2025/NĐ-CP (nguồn thứ cấp, cần đối chiếu Công báo).
+- **Dùng với Claude:** chỉ `name` và `description` trong SKILL.md được dùng; `agents/openai.yaml` dành cho nền tảng khác và bị bỏ qua. Mô tả các skill dễ nhầm đã nêu rõ khi nào không dùng.
+
+Các điểm của phiên bản 1.3.1 (vẫn áp dụng):
 
 - **Giao file thực tế:** khi được yêu cầu tạo sản phẩm nghiệp vụ, skill phải tạo file tải được và cung cấp liên kết ngay, không chờ yêu cầu xuất file lần nữa.
 - **Chọn định dạng theo sản phẩm:** phân biệt định dạng mặc định với định dạng bổ sung; ưu tiên yêu cầu trực tiếp của người dùng và biểu mẫu áp dụng.
@@ -27,7 +33,7 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 - **File giao chỉ chứa sản phẩm nghiệp vụ:** không tự kèm checklist nghiệm thu, phụ lục kiểm tra, nhật ký AI hoặc bảng truy nguyên nguồn. Phụ lục nghiệp vụ bắt buộc theo mẫu vẫn được giữ.
 - **Có kiểm soát chất lượng và thẩm quyền:** kiểm tra nguồn, cấu trúc, định dạng và khả năng mở file; người có thẩm quyền xác nhận nội dung trước khi ký, phát hành hoặc công bố.
 
-Các thay đổi này áp dụng cho toàn bộ 171 skill. Xem [CHANGELOG](CHANGELOG.md) để đối chiếu các mốc cập nhật.
+Các thay đổi 1.3.1 áp dụng cho toàn bộ 171 skill. Xem [CHANGELOG](CHANGELOG.md) để đối chiếu các mốc cập nhật.
 
 ## Phạm vi nghiệp vụ
 
@@ -150,13 +156,17 @@ university-skills-framework/
 │       ├── SKILL.md
 │       ├── agents/openai.yaml
 │       └── references/
+│           ├── quy-tac-chung.md
 │           ├── quy-cach-dau-ra.md
 │           ├── version.json
 │           └── phap-ly.md              # ở skill có tài liệu pháp lý riêng
 ├── docs/
 │   ├── QUY_CACH_DAU_RA.md
 │   └── CAP_NHAT_PHAP_LY.md
-├── scripts/validate_skills.py
+├── scripts/
+│   ├── validate_skills.py
+│   └── check_outputs.py
+├── tests/                    # dữ liệu giả, file đầu ra mẫu, kết quả phát hiện
 ├── CHANGELOG.md
 ├── GOVERNANCE.md
 └── LICENSE
@@ -169,7 +179,8 @@ Một số skill có thêm `assets/` hoặc tài liệu lịch sử phục vụ 
 Trước khi gửi thay đổi, đồng bộ `SKILL.md`, quy cách đầu ra, metadata giao diện, hồ sơ phiên bản và manifest; kiểm tra tình huống đủ dữ liệu, thiếu dữ liệu và dữ liệu mâu thuẫn.
 
 ```bash
-python -X utf8 scripts/validate_skills.py
+python -X utf8 scripts/validate_skills.py   # cấu trúc và mâu thuẫn nội bộ
+python -X utf8 scripts/check_outputs.py     # kiểm tra file Word/Excel đầu ra mẫu
 ```
 
 Công cụ kiểm tra số lượng skill, cấu trúc YAML, metadata, phiên bản, liên kết tài nguyên và các yêu cầu đầu ra. Việc xác nhận chất lượng nội dung, mẫu biểu và bố cục file thực tế vẫn cần thực hiện theo nghiệp vụ.
@@ -180,4 +191,4 @@ Gửi pull request với mô tả sản phẩm được hỗ trợ, hành vi tha
 
 Bản quyền **CES Global, 2026**. Bộ tài liệu được phân phối theo giấy phép kép được quy định trong [LICENSE](LICENSE): giấy phép cộng đồng **CC BY-SA 4.0** và điều khoản thương mại riêng.
 
-Người duy trì: [phamtruong91](https://github.com/phamtruong91). Phiên bản **1.3.1** là phiên bản nội dung của bộ skill; xem [CHANGELOG](CHANGELOG.md) và lịch sử Git để theo dõi thay đổi. Số phiên bản này không tự đồng nghĩa đã phát hành GitHub Release.
+Người duy trì: [phamtruong91](https://github.com/phamtruong91). Phiên bản **1.3.2** là phiên bản nội dung của bộ skill; xem [CHANGELOG](CHANGELOG.md) và lịch sử Git để theo dõi thay đổi. Số phiên bản này không tự đồng nghĩa đã phát hành GitHub Release.

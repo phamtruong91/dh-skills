@@ -1,0 +1,69 @@
+{
+  "skill": "pmo-quan-tri-du-an",
+  "output": "pmo-quan-tri-du-an.xlsx",
+  "kind": "xlsx",
+  "sheets": [
+    "Dashboard",
+    "Tracker",
+    "Issue log",
+    "Risk log"
+  ],
+  "must_not_have_sheets": [
+    "Lessons learned"
+  ],
+  "must_contain": [
+    "Tracker tiến độ",
+    "Tổng ngân sách phân bổ theo gói việc",
+    "Quyết định cần lãnh đạo viện",
+    "Ngân sách được duyệt"
+  ],
+  "computed": {
+    "Tracker": {
+      "J4": "Hoàn thành",
+      "J5": "Chậm",
+      "J6": "Chậm",
+      "J7": "",
+      "J8": "Đúng tiến độ",
+      "J9": "Đúng tiến độ",
+      "F10": 640
+    },
+    "Dashboard": {
+      "B9": ""
+    },
+    "Issue log": {
+      "H5": "",
+      "H6": "Quá hạn",
+      "H7": ""
+    }
+  },
+  "traps": [
+    {
+      "id": "TONG_NGAN_SACH_LECH",
+      "mo_ta": "Tổng phân bổ 640 khác ngân sách được duyệt 600"
+    },
+    {
+      "id": "THIEU_MINH_CHUNG_WP4",
+      "mo_ta": "WP4 có 65% nhưng không minh chứng: không nhận, trạng thái và % tổng thể để trống"
+    },
+    {
+      "id": "DELIVERABLE_MO_HO_WP5",
+      "mo_ta": "WP5 'Hoàn thành giai đoạn chạy thử' không đo đếm được"
+    },
+    {
+      "id": "ISSUE_QUA_HAN",
+      "mo_ta": "IS-02 hạn 30/09/2026, còn mở, quá hạn so với 10/10/2026"
+    },
+    {
+      "id": "ISSUE_THIEU_NGUOI_XU_LY",
+      "mo_ta": "IS-03 chưa có người xử lý và hạn"
+    },
+    {
+      "id": "RISK_THIEU_GIAM_THIEU",
+      "mo_ta": "RK-02 chưa có biện pháp giảm thiểu"
+    },
+    {
+      "id": "QUYET_DINH_LANH_DAO_RONG",
+      "mo_ta": "Không tự bịa quyết định lãnh đạo; gợi ý trong trao đổi"
+    }
+  ]
+}

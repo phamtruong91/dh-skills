@@ -1,5 +1,18 @@
 # Nhật ký thay đổi
 
+## 1.3.2 — 2026-10-10
+
+Rà soát chất lượng sau khi đọc repo và chạy thử 3 skill bằng dữ liệu giả.
+
+- **Pháp lý thanh tra:** `ke-hoach-thanh-tra-nam` và `ket-luan-thanh-tra` đổi căn cứ từ Luật Thanh tra 2022 và NĐ 43/2023 sang Luật Thanh tra 84/2025/QH15 (hiệu lực 01/07/2025) và NĐ 216/2025/NĐ-CP. Dựa trên nguồn thứ cấp; còn phải đối chiếu Công báo (phạm vi thay thế, ngày hiệu lực, chuyển tiếp). Cập nhật `docs/legal-register.json` và `docs/CAP_NHAT_PHAP_LY.md`, sửa lỗi dính chữ và nhãn `nhan-su-0..4`.
+- **Sửa mâu thuẫn trong 171 skill:** bỏ kết quả bước "checklist đã đánh dấu" ở 3 skill (`soan-cong-van`, `soan-quyet-dinh-hc`, `thong-bao-hoc-bong`); bỏ nhắc "markdown" ở 16 skill có định dạng mặc định là Word/Excel.
+- **Gọn SKILL.md:** nén 3 mục lặp lại và mục "Quản trị phiên bản"; bản đầy đủ chuyển sang `references/quy-tac-chung.md` của từng skill (giữ phần đặc thù của `bao-cao-thi-dua`, `chuan-bi-hop-hoi-dong-truong`, `quyet-dinh-tot-nghiep`). Tổng dung lượng SKILL.md giảm khoảng 8%.
+- **Chống chọn nhầm skill:** thêm câu "Không dùng cho… (dùng skill X)" vào mô tả của 7 cặp skill dễ nhầm.
+- **Sửa spec từ kết quả chạy thử:** `ke-hoach-thanh-tra-nam` thêm ngoại lệ cho cuộc thanh tra thi/tuyển sinh và bỏ việc tự đổi thời gian; `pmo-quan-tri-du-an` thêm input `nguong_trang_thai` và bước đối chiếu tổng ngân sách.
+- **Validator viết lại:** báo rõ kiểm tra nào hỏng ở skill nào; cho phép gán `approval_owner` (trước đây bắt buộc `null`); bỏ số 171 cố định; thêm kiểm tra mâu thuẫn, dung lượng, tên skill dễ nhầm, căn cứ thanh tra, lỗi dính chữ trong tài liệu pháp lý.
+- **Thử nghiệm:** thêm `tests/` (dữ liệu giả, file đầu ra, kết quả phát hiện) và `scripts/check_outputs.py` kiểm tra file Word/Excel thật. Đây là thử nghiệm 3 trên 171 skill.
+- **Chưa làm:** chưa có người phê duyệt nghiệp vụ hay pháp chế duyệt; chưa đối chiếu Công báo; chưa chạy thử 168 skill còn lại.
+
 ## 1.3.1 — 2026-10-10
 
 - Phân biệt định dạng mặc định với định dạng được chọn theo sản phẩm/yêu cầu; thêm available_output_formats trong manifest và từng skill.
