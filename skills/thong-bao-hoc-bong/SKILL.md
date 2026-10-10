@@ -12,7 +12,7 @@ description: "Soạn thông báo học bổng của trường đại học đún
 **Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
 
 ## Quy cách đầu ra và thông tin thiếu
-Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
+Khi dựng file Word/Excel, áp dụng mục “Thể thức và bảng biểu khi dựng file” trong quy cách đầu ra (cỡ chữ từng thành phần, bảng nhiều trang, số trang, phụ lục). Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Kiểm soát áp dụng và phê duyệt
 Trước khi chạy, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu`, `nguoi_kiem_duyet`; chỉ hỏi thông tin liên quan nghiệp vụ, không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu căn cứ pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
@@ -40,6 +40,11 @@ của trường, học bổng tài trợ của doanh nghiệp/tổ chức/cá nh
 | `can_cu` | Căn cứ ban hành (quyết định phê duyệt, văn bản tài trợ, quy chế...) | Có |
 | `lien_he` | Đầu mối liên hệ giải đáp (họ tên, điện thoại, email) | Không |
 | `nguoi_ky` | Trưởng phòng Công tác sinh viên (thừa ủy quyền) / Phó Hiệu trưởng | Có |
+| `co_quan_chu_quan` | Tên cơ quan chủ quản trực tiếp (chỉ khi trường có cấp trên; trường tư thục thường không có) | Không |
+| `co_quan_ban_hanh` | Tên cơ quan ban hành văn bản (thường là trường), khác với đơn vị soạn thảo | Có |
+| `dia_danh` | Địa danh ghi ở dòng ngày tháng năm | Có |
+| `so_van_ban` | Số, ký hiệu văn bản đã được cấp (để trống nếu chưa cấp; không tự đặt) | Không |
+| `noi_nhan` | Danh sách nơi nhận, gồm cả nơi lưu (VT, đơn vị soạn) | Có |
 
 ## Quy trình
 
@@ -51,8 +56,8 @@ của trường, học bổng tài trợ của doanh nghiệp/tổ chức/cá nh
 - → Kết quả bước: định hướng nội dung theo loại học bổng (trọng tâm cần nhấn mạnh).
 
 **Bước 2. Dựng khung thể thức thông báo**
-- Làm gì: dựng khung theo Nghị định 30/2020/NĐ-CP: Quốc hiệu – Tiêu ngữ → tên cơ quan, đơn vị ban hành → số, ký hiệu → địa danh, ngày tháng năm → tiêu đề "THÔNG BÁO" → trích yếu ("V/v ...") → khung nơi nhận → khối chữ ký theo `nguoi_ky` (Trưởng phòng CTSV thừa ủy quyền / Phó Hiệu trưởng).
-- Dùng input: `can_cu`, `nguoi_ky`, `ten_hoc_bong`.
+- Làm gì: dựng khung theo Nghị định 30/2020/NĐ-CP: Quốc hiệu – Tiêu ngữ → tên cơ quan, đơn vị ban hành → số, ký hiệu → địa danh, ngày tháng năm → tiêu đề "THÔNG BÁO" → trích yếu ("V/v ...") → khung nơi nhận → khối chữ ký theo `nguoi_ky` (Trưởng phòng CTSV thừa ủy quyền / Phó Hiệu trưởng). Phần đầu văn bản lấy từ `co_quan_chu_quan` (nếu có), `co_quan_ban_hanh`, `dia_danh`, `so_van_ban` (để dòng dấu chấm nếu chưa cấp số). Nơi nhận lấy từ `noi_nhan`.
+- Dùng input: `can_cu`, `nguoi_ky`, `ten_hoc_bong`, `co_quan_chu_quan`, `co_quan_ban_hanh`, `dia_danh`, `so_van_ban`, `noi_nhan`.
 - Vai trò: Chuyên viên Phòng Công tác sinh viên · AI hỗ trợ: dựng khung thể thức thông báo theo Nghị định 30/2020 · ⏱ ~30 phút (ước tính)
 - Lưu ý nghiệp vụ: thẩm quyền ký phải khớp loại học bổng và phân cấp ủy quyền của trường; số, ký hiệu văn bản lấy theo sổ văn thư, không tự đặt.
 - → Kết quả bước: khung thể thức thông báo (đầy đủ các yếu tố hình thức, chưa có nội dung chi tiết).

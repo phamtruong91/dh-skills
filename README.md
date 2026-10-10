@@ -28,7 +28,7 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 | Cấu trúc, đầu vào, quy trình, đầu ra | **Đã kiểm tra bằng công cụ** cho cả 171 skill: đủ mục chuẩn, mọi đầu vào được một bước dùng, các bước đánh số liên tục, sơ đồ khớp số bước (`audit_structure.py`: 0 vấn đề; `validate_skills.py`: không lỗi) |
 | Quy trình đầy đủ | 58 skill từng bị rút gọn còn 4 bước chung chung đã được khôi phục nghiệp vụ gốc, kèm khối "Ràng buộc pháp lý khi thực hiện" |
 | Thể thức Nghị định 30/2020 | Có kiểm tra tự động trên file Word thật (khổ A4, lề, Times New Roman, cỡ chữ); chưa kiểm tra toàn bộ quy định về thể thức |
-| Chạy thử bằng dữ liệu giả | **8 trên 171 skill** (`soan-cong-van`, `soan-quyet-dinh-hc`, `soan-thong-bao`, `soan-bien-ban-hop`, `soan-to-trinh`, `soan-giay-moi`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 163 skill còn lại chưa chạy thử |
+| Chạy thử bằng dữ liệu giả | **10 trên 171 skill** (`quyet-dinh-cap-hoc-bong` và `soan-ke-hoach-ct` thử với file nhiều trang; `soan-cong-van`, `soan-quyet-dinh-hc`, `soan-thong-bao`, `soan-bien-ban-hop`, `soan-to-trinh`, `soan-giay-moi`, `ke-hoach-thanh-tra-nam`, `pmo-quan-tri-du-an`); xem [tests/README.md](tests/README.md). 161 skill còn lại chưa chạy thử |
 | Nội dung pháp lý | **Chưa đối chiếu toàn văn hoặc Công báo.** Căn cứ 2025–2026 được xác nhận qua nguồn thứ cấp. Con số, thời hạn, số điều trong các bước khôi phục là nghiệp vụ gốc, chỉ được gắn cờ |
 | Phê duyệt nghiệp vụ | Chưa có người phê duyệt cho từng skill |
 
@@ -40,6 +40,7 @@ Chuẩn hóa cách chuẩn bị văn bản, xử lý hồ sơ, tổng hợp số
 - **Chọn định dạng theo sản phẩm:** phân biệt định dạng mặc định với định dạng bổ sung; ưu tiên yêu cầu trực tiếp của người dùng và biểu mẫu áp dụng.
 - **Giữ chỗ điền đúng mẫu:** thông tin chưa có được chừa bằng dòng dấu chấm, dấu gạch hoặc ô trống. Không tự điền số 0, ngày, số văn bản, chữ ký hoặc dữ liệu ví dụ.
 - **File giao chỉ chứa sản phẩm nghiệp vụ:** không kèm checklist nghiệm thu, phụ lục kiểm tra hay nhật ký AI. Phụ lục bắt buộc theo mẫu vẫn được giữ.
+- **Thể thức chuẩn:** mọi skill xuất Word/Excel có mục "Thể thức và bảng biểu khi dựng file" trong quy cách đầu ra (cỡ chữ từng thành phần theo Phụ lục I NĐ 30/2020, bảng nhiều trang, số trang, phụ lục). Xem [THE_THUC_TRINH_BAY](docs/THE_THUC_TRINH_BAY.md).
 - **Con người duyệt:** người có thẩm quyền xác nhận nội dung trước khi ký, phát hành hoặc công bố.
 - **Dùng với Claude:** chỉ `name` và `description` trong `SKILL.md` được dùng khi chọn skill; `agents/openai.yaml` dành cho nền tảng khác. Mô tả các skill dễ nhầm đã nêu rõ khi nào không dùng.
 
@@ -176,6 +177,7 @@ university-skills-framework/
 │           └── phap-ly.md              # ở skill có tài liệu pháp lý riêng
 ├── docs/
 │   ├── QUY_CACH_DAU_RA.md
+│   ├── THE_THUC_TRINH_BAY.md            # cỡ chữ từng thành phần theo NĐ 30/2020, quy tắc bảng nhiều trang, Excel
 │   ├── CAP_NHAT_PHAP_LY.md              # căn cứ pháp lý đã cập nhật và điểm còn phải xác minh
 │   ├── DIEM_CAN_DOI_CHIEU_PHAP_LY.md    # dòng cần chuyên gia pháp lý đối chiếu
 │   ├── CAN_CU_NGHI_LOI_THOI.md          # căn cứ nghi lỗi thời ở skill chưa cập nhật

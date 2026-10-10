@@ -1,0 +1,66 @@
+{
+ "skill": "soan-ke-hoach-ct--tai-lon",
+ "output": "soan-ke-hoach-ct--tai-lon.docx",
+ "kind": "docx",
+ "nd30_format": true,
+ "must_contain": [
+  "KẾ HOẠCH CÔNG TÁC QUÝ IV NĂM 2026",
+  "I. MỤC ĐÍCH, YÊU CẦU",
+  "II. NHIỆM VỤ CỤ THỂ",
+  "III. KINH PHÍ",
+  "IV. TỔ CHỨC THỰC HIỆN",
+  "Từ 20/11/2026 đến 10/11/2026",
+  "Hội nghị: 120.000.000 đồng",
+  "TRƯỞNG PHÒNG"
+ ],
+ "must_not_contain": [
+  "350.000.000",
+  "300.000.000"
+ ],
+ "blank_labels": [
+  "Số:",
+  "Hà Nội, ngày",
+  "- Tổng dự toán"
+ ],
+ "layout": {
+  "page_number": true,
+  "min_pages": 3,
+  "same_page": [
+   [
+    "IV. TỔ CHỨC THỰC HIỆN",
+    "TRƯỞNG PHÒNG"
+   ]
+  ],
+  "tables": [
+   {
+    "index": 1,
+    "header_repeat": true,
+    "cant_split": true,
+    "data_rows": 45,
+    "stt_continuous": true
+   }
+  ]
+ },
+ "traps": [
+  {
+   "id": "THIEU_DON_VI",
+   "mo_ta": "2 nhiệm vụ không có đơn vị thực hiện: ô trống"
+  },
+  {
+   "id": "THOI_GIAN_NGUOC",
+   "mo_ta": "Nhiệm vụ 21 có ngày kết thúc trước ngày bắt đầu"
+  },
+  {
+   "id": "KINH_PHI_LECH",
+   "mo_ta": "Ba khoản cộng 300 triệu, đầu vào ghi tổng 350 triệu"
+  },
+  {
+   "id": "THIEU_NGUOI_KY",
+   "mo_ta": "Không có họ tên người ký"
+  },
+  {
+   "id": "NHIEU_TRANG",
+   "mo_ta": "Bảng 45 dòng trải nhiều trang"
+  }
+ ]
+}

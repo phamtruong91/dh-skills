@@ -17,10 +17,10 @@ DATE = "{}, ngày ..... tháng ..... năm ........"
 
 def head(d, i, ky_hieu, so_dong=True):
     left = ([i["co_quan_chu_quan"], i["co_quan_ban_hanh"], f"Số: {'.' * 6}/{ky_hieu}-{'.' * 6}"], [False, True, False])
-    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập – Tự do – Hạnh phúc", DATE.format(i["dia_danh"])], [True, True, False])
+    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập - Tự do - Hạnh phúc", DATE.format(i["dia_danh"])], [True, True, False])
     t = header_block(d, left, right)
     t.cell(0, 1).paragraphs[2].runs[0].italic = True
-    para(d, "", after=4)
+    para(d, "", after=6)
 
 
 def sign(d, noi_nhan, chuc_danh, ho_ten, left_title="Nơi nhận:"):
@@ -30,8 +30,12 @@ def sign(d, noi_nhan, chuc_danh, ho_ten, left_title="Nơi nhận:"):
     t.columns[0].width, t.columns[1].width = Cm(7.5), Cm(8.5)
     nn = [left_title] + [f"- {x};" for x in noi_nhan[:-1]] + [f"- {noi_nhan[-1]}."]
     cell_text(t.cell(0, 0), nn, size=12)
-    t.cell(0, 0).paragraphs[0].runs[0].bold = True
-    t.cell(0, 0).paragraphs[0].runs[0].italic = True
+    for r_ in t.cell(0, 0).paragraphs[0].runs:
+        r_.bold = True
+        r_.italic = True
+    for p_ in t.cell(0, 0).paragraphs[1:]:
+        for r_ in p_.runs:
+            r_.font.size = Pt(11)
     cell_text(t.cell(0, 1), [chuc_danh.upper(), "", "", "", ho_ten or DOT], size=13, bold=True, align=C)
 
 
@@ -62,12 +66,12 @@ def build_bien_ban():
     para(d, f"Cuộc {i['ten_cuoc_hop']}", bold=True, align=C, after=8)
     para(d, f"Thời gian bắt đầu: {i['thoi_gian_bat_dau']}", first_indent=1.0)
     para(d, f"Địa điểm: {i['dia_diem']}", first_indent=1.0)
-    para(d, "Thành phần tham dự:", first_indent=1.0, after=2)
+    para(d, "Thành phần tham dự:", first_indent=1.0, after=6)
     for n in i["thanh_phan"]:
-        para(d, f"- {n}", first_indent=1.5, after=2)
-    para(d, f"Chủ trì: {i['chu_tri']}", first_indent=1.0, after=2)
+        para(d, f"- {n}", first_indent=1.0, after=6)
+    para(d, f"Chủ trì: {i['chu_tri']}", first_indent=1.0, after=6)
     para(d, f"Thư ký: {i['thu_ky']}", first_indent=1.0)
-    para(d, "Nội dung cuộc họp:", bold=True, first_indent=1.0, after=2)
+    para(d, "Nội dung cuộc họp:", bold=True, first_indent=1.0, after=6)
     for k, n in enumerate(i["noi_dung"], 1):
         para(d, f"{k}. {n}.", first_indent=1.0, align=J)
     para(d, f"Kết luận: {i['ket_luan']}", first_indent=1.0, align=J)
@@ -90,11 +94,11 @@ def build_to_trinh():
     para(d, f"Kính gửi: {i['kinh_gui']}", first_indent=1.0, after=8)
     para(d, f"{i['don_vi_trinh']} kính trình {i['kinh_gui'].split(' Trường')[0]} nội dung như sau:", first_indent=1.0, align=J)
     para(d, f"Căn cứ {i['can_cu'][0]};", first_indent=1.0, align=J)
-    para(d, "1. Nội dung đề xuất:", bold=True, first_indent=1.0, after=2)
+    para(d, "1. Nội dung đề xuất:", bold=True, first_indent=1.0, after=6)
     for n in i["noi_dung_de_xuat"][:3]:
-        para(d, f"- {n};", first_indent=1.5, after=2, align=J)
-    para(d, f"- Tổng kinh phí dự kiến: {DOT}", first_indent=1.5, after=6)
-    para(d, "2. Kiến nghị:", bold=True, first_indent=1.0, after=2)
+        para(d, f"- {n};", first_indent=1.0, after=6, align=J)
+    para(d, f"- Tổng kinh phí dự kiến: {DOT}", first_indent=1.0, after=6)
+    para(d, "2. Kiến nghị:", bold=True, first_indent=1.0, after=6)
     para(d, f"{i['kien_nghi']}./.", first_indent=1.0, align=J, after=10)
     sign(d, i["noi_nhan"], i["nguoi_ky"]["chuc_danh"], i["nguoi_ky"]["ho_ten"])
     out = O / "soan-to-trinh.docx"
@@ -108,12 +112,12 @@ def build_giay_moi():
     head(d, i, "GM")
     para(d, "GIẤY MỜI", bold=True, size=14, align=C, after=0)
     para(d, f"Dự {i['su_kien']}", bold=True, align=C, after=8)
-    para(d, f"Kính mời: {DOT}", first_indent=1.0, after=2)
-    para(d, f"Thành phần mời: {i['thanh_phan']}", first_indent=1.0, align=J, after=2)
-    para(d, f"Tới dự {i['su_kien']}.", first_indent=1.0, align=J, after=2)
-    para(d, f"Thời gian: {i['thoi_gian']}", first_indent=1.0, after=2)
-    para(d, f"Địa điểm: {DOT}", first_indent=1.0, after=2)
-    para(d, f"{i['xac_nhan']}; hạn xác nhận {DOT}", first_indent=1.0, after=2)
+    para(d, f"Kính mời: {DOT}", first_indent=1.0, after=6)
+    para(d, f"Thành phần mời: {i['thanh_phan']}", first_indent=1.0, align=J, after=6)
+    para(d, f"Tới dự {i['su_kien']}.", first_indent=1.0, align=J, after=6)
+    para(d, f"Thời gian: {i['thoi_gian']}", first_indent=1.0, after=6)
+    para(d, f"Địa điểm: {DOT}", first_indent=1.0, after=6)
+    para(d, f"{i['xac_nhan']}; hạn xác nhận {DOT}", first_indent=1.0, after=6)
     para(d, "Trân trọng kính mời./.", first_indent=1.0, after=10)
     sign(d, i["noi_nhan"], i["don_vi_moi"]["chuc_danh"], i["don_vi_moi"]["ho_ten"])
     out = O / "soan-giay-moi.docx"

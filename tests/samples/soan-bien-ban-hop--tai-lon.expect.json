@@ -1,0 +1,64 @@
+{
+ "skill": "soan-bien-ban-hop--tai-lon",
+ "output": "soan-bien-ban-hop--tai-lon.docx",
+ "kind": "docx",
+ "nd30_format": true,
+ "must_contain": [
+  "BIÊN BẢN",
+  "họp giao ban toàn trường tháng 10/2026",
+  "14 giờ 00 phút, ngày 12/10/2026",
+  "Hội trường A",
+  "THƯ KÝ",
+  "CHỦ TRÌ",
+  "Giao Phòng Đào tạo hoàn thành báo cáo trước ngày 05/10/2026",
+  "Thành phần tham dự (40 người)"
+ ],
+ "must_not_contain": [
+  "đã thông qua",
+  "Thành phần tham dự (41 người)"
+ ],
+ "blank_labels": [
+  "Số:",
+  "Hà Nội, ngày",
+  "Cuộc họp kết thúc lúc"
+ ],
+ "allowed_derived": [
+  "40"
+ ],
+ "layout": {
+  "page_number": true,
+  "min_pages": 3,
+  "same_page": [
+   [
+    "Cuộc họp kết thúc lúc",
+    "THƯ KÝ"
+   ]
+  ],
+  "unique_tokens": [
+   "Bùi Quốc Quân – Chuyên viên Khoa Kinh tế"
+  ],
+  "absent_tokens": []
+ },
+ "traps": [
+  {
+   "id": "NGUOI_DU_TRUNG",
+   "mo_ta": "1 người liệt kê hai lần"
+  },
+  {
+   "id": "KHACH_NGOAI_DANH_SACH",
+   "mo_ta": "Người phát biểu không có trong danh sách triệu tập"
+  },
+  {
+   "id": "THOI_HAN_TRUOC_NGAY_HOP",
+   "mo_ta": "Kết luận có hạn 05/10/2026 trước ngày họp 12/10/2026"
+  },
+  {
+   "id": "THIEU_GIO_KET_THUC",
+   "mo_ta": "Không có giờ kết thúc"
+  },
+  {
+   "id": "NHIEU_TRANG",
+   "mo_ta": "Danh sách 40 người, 16 nội dung, 9 kết luận trải nhiều trang; khối ký không tách khỏi dòng kết thúc"
+  }
+ ]
+}

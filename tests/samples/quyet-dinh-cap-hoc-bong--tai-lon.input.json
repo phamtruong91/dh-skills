@@ -1,0 +1,1362 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử tải lớn. Tên cơ quan, người, mã số đều là mẫu.",
+ "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+ "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+ "dia_danh": "Hà Nội",
+ "so_van_ban": null,
+ "loai_quyet_dinh": "Cấp học bổng khuyến khích",
+ "ten_dot": "học kỳ 1 năm học 2026–2027",
+ "danh_sach": [
+  {
+   "ho_ten": "Nguyễn Văn An",
+   "ma_sv": "26CT0001",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Văn Bình",
+   "ma_sv": "26KT0002",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Văn Châu",
+   "ma_sv": "26NN0003",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Văn Dũng",
+   "ma_sv": "26LU0004",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Văn Giang",
+   "ma_sv": "26SP0005",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Văn Hà",
+   "ma_sv": "26CT0006",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Văn Hải",
+   "ma_sv": "26KT0007",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Văn Hiếu",
+   "ma_sv": "26NN0008",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Văn Hoa",
+   "ma_sv": "26LU0009",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Văn Hùng",
+   "ma_sv": "26SP0010",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Thị Huy",
+   "ma_sv": "26CT0011",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": "Chuyển ngành"
+  },
+  {
+   "ho_ten": "Trần Thị Khánh",
+   "ma_sv": "26KT0012",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Thị Lan",
+   "ma_sv": "26NN0013",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Thị Linh",
+   "ma_sv": "26LU0014",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Thị Long",
+   "ma_sv": "26SP0015",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Thị Mai",
+   "ma_sv": "26CT0016",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Thị Nam",
+   "ma_sv": "26KT0017",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Thị Nga",
+   "ma_sv": "26NN0018",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Thị Ngọc",
+   "ma_sv": "26LU0019",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Thị Phong",
+   "ma_sv": "26SP0020",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Minh Phúc",
+   "ma_sv": "26CT0021",
+   "lop": "",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Minh Quân",
+   "ma_sv": "26KT0022",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Minh Quỳnh",
+   "ma_sv": "26NN0023",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Minh Sơn",
+   "ma_sv": "26LU0024",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Minh Thảo",
+   "ma_sv": "26SP0025",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Minh Thắng",
+   "ma_sv": "26CT0026",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Minh Trang",
+   "ma_sv": "26KT0027",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Minh Tuấn",
+   "ma_sv": "26NN0028",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Minh Vân",
+   "ma_sv": "26LU0029",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Minh Việt",
+   "ma_sv": "26SP0030",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Thu Yến",
+   "ma_sv": "26CT0031",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Thu An",
+   "ma_sv": "26KT0032",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Thu Bình",
+   "ma_sv": "26NN0033",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Thu Châu",
+   "ma_sv": "26LU0034",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Thu Dũng",
+   "ma_sv": "26SP0035",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Thu Giang",
+   "ma_sv": "26CT0036",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Thu Hà",
+   "ma_sv": "26KT0037",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Thu Hải",
+   "ma_sv": "26NN0038",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Thu Hiếu",
+   "ma_sv": "26LU0039",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Thu Hoa",
+   "ma_sv": "26SP0040",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Quốc Hùng",
+   "ma_sv": "26CT0041",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Quốc Huy",
+   "ma_sv": "26KT0042",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Quốc Khánh",
+   "ma_sv": "26NN0043",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Quốc Lan",
+   "ma_sv": "26LU0044",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Quốc Linh",
+   "ma_sv": "26SP0045",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Quốc Long",
+   "ma_sv": "26CT0046",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Quốc Mai",
+   "ma_sv": "26KT0047",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Quốc Nam",
+   "ma_sv": "26NN0048",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Quốc Nga",
+   "ma_sv": "26LU0049",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Quốc Ngọc",
+   "ma_sv": "26SP0050",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Ngọc Phong",
+   "ma_sv": "26CT0051",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Ngọc Phúc",
+   "ma_sv": "26KT0052",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Ngọc Quân",
+   "ma_sv": "26NN0053",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Ngọc Quỳnh",
+   "ma_sv": "26LU0054",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Ngọc Sơn",
+   "ma_sv": "26SP0055",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Ngọc Thảo",
+   "ma_sv": "26CT0056",
+   "lop": "",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Ngọc Thắng",
+   "ma_sv": "26KT0057",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Ngọc Trang",
+   "ma_sv": "26NN0058",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Ngọc Tuấn",
+   "ma_sv": "26LU0059",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Ngọc Vân",
+   "ma_sv": "26SP0060",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Hữu Việt",
+   "ma_sv": "26CT0061",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Hữu Yến",
+   "ma_sv": "26KT0062",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Hữu An",
+   "ma_sv": "26NN0063",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Hữu Bình",
+   "ma_sv": "26LU0064",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Hữu Châu",
+   "ma_sv": "26SP0065",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Hữu Dũng",
+   "ma_sv": "26CT0066",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Hữu Giang",
+   "ma_sv": "26KT0067",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Hữu Hà",
+   "ma_sv": "26NN0068",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Hữu Hải",
+   "ma_sv": "26LU0069",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Hữu Hiếu",
+   "ma_sv": "26SP0070",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Thanh Hoa",
+   "ma_sv": "26CT0071",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Thanh Hùng",
+   "ma_sv": "26KT0072",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Thanh Huy",
+   "ma_sv": "26NN0073",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Thanh Khánh",
+   "ma_sv": "26LU0074",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Thanh Lan",
+   "ma_sv": "26SP0075",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Thanh Linh",
+   "ma_sv": "26CT0076",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Thanh Long",
+   "ma_sv": "26KT0077",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Thanh Mai",
+   "ma_sv": "26NN0078",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": "Đạt thủ khoa"
+  },
+  {
+   "ho_ten": "Đỗ Thanh Nam",
+   "ma_sv": "26LU0079",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Thanh Nga",
+   "ma_sv": "26SP0080",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Văn Ngọc",
+   "ma_sv": "26CT0081",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Văn Phong",
+   "ma_sv": "26KT0082",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Văn Phúc",
+   "ma_sv": "26NN0083",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Văn Quân",
+   "ma_sv": "26LU0084",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Văn Quỳnh",
+   "ma_sv": "26SP0085",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Văn Sơn",
+   "ma_sv": "26CT0086",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Văn Thảo",
+   "ma_sv": "26KT0087",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Văn Thắng",
+   "ma_sv": "26NN0088",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Văn Trang",
+   "ma_sv": "26LU0089",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Văn Tuấn",
+   "ma_sv": "26SP0090",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Thị Vân",
+   "ma_sv": "26CT0091",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Thị Việt",
+   "ma_sv": "26KT0092",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Thị Yến",
+   "ma_sv": "26NN0093",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Thị An",
+   "ma_sv": "26LU0094",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Thị Bình",
+   "ma_sv": "26SP0095",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Thị Châu",
+   "ma_sv": "26CT0096",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Thị Dũng",
+   "ma_sv": "26KT0097",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Thị Giang",
+   "ma_sv": "26NN0098",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Thị Hà",
+   "ma_sv": "26LU0099",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Thị Hải",
+   "ma_sv": "26SP0100",
+   "lop": "",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Minh Hiếu",
+   "ma_sv": "26CT0101",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Minh Hoa",
+   "ma_sv": "26KT0102",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Minh Hùng",
+   "ma_sv": "26NN0103",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Minh Huy",
+   "ma_sv": "26LU0104",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Minh Khánh",
+   "ma_sv": "26SP0105",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Minh Lan",
+   "ma_sv": "26CT0106",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Minh Linh",
+   "ma_sv": "26KT0107",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Minh Long",
+   "ma_sv": "26NN0108",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Minh Mai",
+   "ma_sv": "26LU0109",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Minh Nam",
+   "ma_sv": "26SP0110",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Thu Nga",
+   "ma_sv": "26CT0111",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Thu Ngọc",
+   "ma_sv": "26KT0112",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Thu Phong",
+   "ma_sv": "26NN0113",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Thu Phúc",
+   "ma_sv": "26LU0114",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Thu Quân",
+   "ma_sv": "26SP0115",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Thu Quỳnh",
+   "ma_sv": "26CT0116",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Thu Sơn",
+   "ma_sv": "26KT0117",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Thu Thảo",
+   "ma_sv": "26NN0118",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Thu Thắng",
+   "ma_sv": "26LU0119",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Thu Trang",
+   "ma_sv": "26SP0120",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Quốc Tuấn",
+   "ma_sv": "26CT0121",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Quốc Vân",
+   "ma_sv": "26KT0122",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Quốc Việt",
+   "ma_sv": "26NN0123",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Quốc Yến",
+   "ma_sv": "26LU0124",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Quốc An",
+   "ma_sv": "26SP0125",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Quốc Bình",
+   "ma_sv": "26CT0126",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Quốc Châu",
+   "ma_sv": "26KT0127",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Quốc Dũng",
+   "ma_sv": "26NN0128",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Quốc Giang",
+   "ma_sv": "26LU0129",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Quốc Hà",
+   "ma_sv": "26SP0130",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Ngọc Hải",
+   "ma_sv": "26CT0131",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Ngọc Hiếu",
+   "ma_sv": "26KT0132",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Ngọc Hoa",
+   "ma_sv": "26NN0133",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Ngọc Hùng",
+   "ma_sv": "26LU0134",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Ngọc Huy",
+   "ma_sv": "26SP0135",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Vũ Ngọc Khánh",
+   "ma_sv": "26CT0136",
+   "lop": "CT2-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đặng Ngọc Lan",
+   "ma_sv": "26KT0137",
+   "lop": "KT2-K26",
+   "khoa": "Kinh tế",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Bùi Ngọc Linh",
+   "ma_sv": "26NN0138",
+   "lop": "NN2-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Đỗ Ngọc Long",
+   "ma_sv": "26LU0139",
+   "lop": "LU2-K26",
+   "khoa": "Luật",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Ngô Ngọc Mai",
+   "ma_sv": "26SP0140",
+   "lop": "SP2-K26",
+   "khoa": "Sư phạm",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Hữu Nam",
+   "ma_sv": "26CT0141",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Trần Hữu Nga",
+   "ma_sv": "26KT0142",
+   "lop": "KT1-K26",
+   "khoa": "Kinh tế",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Hữu Ngọc",
+   "ma_sv": "26NN0143",
+   "lop": "NN1-K26",
+   "khoa": "Ngoại ngữ",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Phạm Hữu Phong",
+   "ma_sv": "26LU0144",
+   "lop": "LU1-K26",
+   "khoa": "Luật",
+   "muc": "5.000.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Hoàng Hữu Phúc",
+   "ma_sv": "26SP0145",
+   "lop": "SP1-K26",
+   "khoa": "Sư phạm",
+   "muc": "2.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Thu Yến",
+   "ma_sv": "26CT0031",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Nguyễn Quốc Tuấn",
+   "ma_sv": "26CT0121",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  },
+  {
+   "ho_ten": "Lê Văn Nhầm",
+   "ma_sv": "26CT0041",
+   "lop": "CT1-K26",
+   "khoa": "Công nghệ thông tin",
+   "muc": "3.500.000",
+   "ghi_chu": ""
+  }
+ ],
+ "ma_sv_hoi_dong_duyet": [
+  "26CT0001",
+  "26KT0002",
+  "26NN0003",
+  "26LU0004",
+  "26SP0005",
+  "26CT0006",
+  "26KT0007",
+  "26NN0008",
+  "26LU0009",
+  "26SP0010",
+  "26CT0011",
+  "26KT0012",
+  "26NN0013",
+  "26LU0014",
+  "26SP0015",
+  "26CT0016",
+  "26KT0017",
+  "26NN0018",
+  "26LU0019",
+  "26SP0020",
+  "26CT0021",
+  "26KT0022",
+  "26NN0023",
+  "26LU0024",
+  "26SP0025",
+  "26CT0026",
+  "26KT0027",
+  "26NN0028",
+  "26LU0029",
+  "26SP0030",
+  "26CT0031",
+  "26KT0032",
+  "26NN0033",
+  "26LU0034",
+  "26SP0035",
+  "26CT0036",
+  "26KT0037",
+  "26NN0038",
+  "26LU0039",
+  "26SP0040",
+  "26CT0041",
+  "26KT0042",
+  "26NN0043",
+  "26LU0044",
+  "26SP0045",
+  "26CT0046",
+  "26KT0047",
+  "26NN0048",
+  "26LU0049",
+  "26SP0050",
+  "26CT0051",
+  "26KT0052",
+  "26NN0053",
+  "26LU0054",
+  "26SP0055",
+  "26CT0056",
+  "26KT0057",
+  "26NN0058",
+  "26LU0059",
+  "26SP0060",
+  "26NN0063",
+  "26LU0064",
+  "26SP0065",
+  "26CT0066",
+  "26KT0067",
+  "26NN0068",
+  "26LU0069",
+  "26SP0070",
+  "26CT0071",
+  "26KT0072",
+  "26NN0073",
+  "26LU0074",
+  "26SP0075",
+  "26CT0076",
+  "26KT0077",
+  "26NN0078",
+  "26LU0079",
+  "26SP0080",
+  "26CT0081",
+  "26KT0082",
+  "26NN0083",
+  "26LU0084",
+  "26SP0085",
+  "26CT0086",
+  "26KT0087",
+  "26NN0088",
+  "26LU0089",
+  "26SP0090",
+  "26CT0091",
+  "26KT0092",
+  "26NN0093",
+  "26LU0094",
+  "26SP0095",
+  "26CT0096",
+  "26KT0097",
+  "26NN0098",
+  "26LU0099",
+  "26SP0100",
+  "26CT0101",
+  "26KT0102",
+  "26NN0103",
+  "26LU0104",
+  "26SP0105",
+  "26CT0106",
+  "26KT0107",
+  "26NN0108",
+  "26LU0109",
+  "26SP0110",
+  "26CT0111",
+  "26KT0112",
+  "26NN0113",
+  "26LU0114",
+  "26SP0115",
+  "26CT0116",
+  "26KT0117",
+  "26NN0118",
+  "26LU0119",
+  "26SP0120",
+  "26CT0121",
+  "26KT0122",
+  "26NN0123",
+  "26LU0124",
+  "26SP0125",
+  "26CT0126",
+  "26KT0127",
+  "26NN0128",
+  "26LU0129",
+  "26SP0130",
+  "26CT0131",
+  "26KT0132",
+  "26NN0133",
+  "26LU0134",
+  "26SP0135",
+  "26CT0136",
+  "26KT0137",
+  "26NN0138",
+  "26LU0139",
+  "26SP0140",
+  "26CT0141",
+  "26KT0142",
+  "26NN0143",
+  "26LU0144",
+  "26SP0145"
+ ],
+ "can_cu": [
+  "Quy chế học bổng của Trường Đại học Mẫu A",
+  "Biên bản họp Hội đồng xét học bổng ngày 02/10/2026",
+  "Tờ trình số 21/TTr-CTSV ngày 03/10/2026 của Phòng Công tác sinh viên"
+ ],
+ "tong_kinh_phi": "541.000.000 đồng",
+ "nguon_kinh_phi": "Ngân sách của Trường",
+ "thoi_gian_ap_dung": "học kỳ 1 năm học 2026–2027",
+ "don_vi_thuc_hien": [
+  "Phòng Công tác sinh viên",
+  "Phòng Kế hoạch – Tài chính",
+  "Các khoa có sinh viên được xét",
+  "Các sinh viên có tên trong danh sách"
+ ],
+ "noi_nhan": [
+  "Như Điều 4",
+  "Lưu: VT, CTSV"
+ ],
+ "nguoi_ky": {
+  "chuc_danh": "Hiệu trưởng",
+  "ho_ten": "Trần Thị Bình"
+ }
+}

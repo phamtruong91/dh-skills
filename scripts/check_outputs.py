@@ -41,6 +41,76 @@ def docx_text(path):
     return "\n".join(x for x in out if x.strip())
 
 
+def _all_paragraphs(d):
+    for p in d.paragraphs:
+        yield p, False
+    def walk(tables):
+        for t in tables:
+            for row in t.rows:
+                for c in row.cells:
+                    for p in c.paragraphs:
+                        yield p, True
+                    yield from walk(c.tables)
+    yield from walk(d.tables)
+
+
+def _para_size(p, d):
+    sizes = {r.font.size.pt if r.font.size else (d.styles["Normal"].font.size.pt if d.styles["Normal"].font.size else None)
+             for r in p.runs if r.text.strip()}
+    return sizes
+
+
+def _nd30_element_errors(d):
+    """Cỡ chữ, kiểu chữ, thụt đầu dòng, cách đoạn của từng thành phần theo Phụ lục I NĐ 30/2020/NĐ-CP."""
+    errs = []
+    in_noi_nhan = False
+    for p, in_table in _all_paragraphs(d):
+        txt = p.text.strip()
+        if not txt:
+            continue
+        sizes = _para_size(p, d)
+        bold = all(r.bold for r in p.runs if r.text.strip())
+        ital = all(r.italic for r in p.runs if r.text.strip())
+
+        def need(label, lo, hi, want_bold=None, want_italic=None):
+            if sizes and not all(lo <= s <= hi for s in sizes if s):
+                errs.append(f"{label}: cỡ chữ {sorted(s for s in sizes if s)} ngoài {lo}–{hi} pt")
+            if want_bold is True and not bold:
+                errs.append(f"{label}: phải in đậm")
+            if want_bold is False and bold:
+                errs.append(f"{label}: không được in đậm")
+            if want_italic is True and not ital:
+                errs.append(f"{label}: phải in nghiêng")
+        if txt == "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM":
+            need("Quốc hiệu", 12, 13, True)
+        elif txt.startswith("Độc lập"):
+            if txt != "Độc lập - Tự do - Hạnh phúc":
+                errs.append(f"Tiêu ngữ viết sai ({txt!r}); đúng: 'Độc lập - Tự do - Hạnh phúc'")
+            need("Tiêu ngữ", 13, 14, True)
+            if "w:pBdr" not in p._p.xml:
+                errs.append("Tiêu ngữ thiếu đường kẻ dưới")
+        elif re.match(r"^Số:", txt):
+            need("Số, ký hiệu", 13, 13)
+        elif re.search(r", ngày .* tháng .* năm", txt) and in_table:
+            need("Địa danh, ngày tháng", 13, 14, None, True)
+        elif txt == "Nơi nhận:":
+            need("Nhãn 'Nơi nhận'", 12, 12, True, True)
+            in_noi_nhan = True
+            continue
+        elif in_noi_nhan and txt.startswith("- "):
+            need("Danh sách nơi nhận", 11, 11)
+            continue
+        if not in_table and p.paragraph_format.first_line_indent is not None:  # đoạn nội dung
+            ind = p.paragraph_format.first_line_indent.cm
+            if not (0.99 <= ind <= 1.28):
+                errs.append(f"đoạn {txt[:30]!r}: thụt đầu dòng {ind:.2f} cm, phải 1–1,27 cm")
+            aft = p.paragraph_format.space_after.pt if p.paragraph_format.space_after is not None else 0
+            if aft < 6:
+                errs.append(f"đoạn {txt[:30]!r}: cách đoạn {aft:.0f} pt, tối thiểu 6 pt")
+            need("Nội dung", 13, 14, False if len(txt) > 80 else None)
+    return sorted(set(errs))
+
+
 def nd30_format_errors(path):
     """Kiểm tra thuộc tính trình bày thật của file Word theo Phụ lục I Nghị định 30/2020/NĐ-CP (văn bản hành chính)."""
     from docx import Document
@@ -72,6 +142,7 @@ def nd30_format_errors(path):
         fonts.add(r.font.name or normal.name)
         sz = r.font.size or normal.size
         sizes.add(sz.pt if sz else None)
+    errs.extend(_nd30_element_errors(d))
     if fonts - {"Times New Roman"}:
         errs.append(f"phông không phải Times New Roman: {sorted(f for f in fonts if f)}")
     bad = sorted(x for x in sizes if x is None or not (11 <= x <= 14))
@@ -125,6 +196,113 @@ def allowed_tokens(input_text):
     return dates, nums
 
 
+def pdf_pages(path):
+    """Chuyển Word sang PDF bằng LibreOffice; trả về danh sách văn bản từng trang (hoặc None nếu không có công cụ)."""
+    soffice = shutil.which("soffice") or shutil.which("libreoffice")
+    if not soffice or not shutil.which("pdftotext"):
+        return None
+    tmp = Path(tempfile.mkdtemp())
+    src = tmp / path.name
+    shutil.copy(path, src)
+    subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir", str(tmp), str(src)],
+                   capture_output=True, timeout=240)
+    pdf = tmp / (path.stem + ".pdf")
+    if not pdf.exists():
+        return None
+    out = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True).stdout
+    return out.split("\f")[:-1] if out.endswith("\f") else out.split("\f")
+
+
+def layout_errors(path, expect, text, log):
+    """Kiểm tra file nhiều dữ liệu/nhiều trang: số trang, số trang ở đầu trang, bảng, token duy nhất, ràng buộc cùng trang."""
+    from docx import Document
+    from docx.oxml.ns import qn
+    lay = expect.get("layout", {})
+    errs = []
+    d = Document(path)
+    if lay.get("page_number"):  # NĐ 30/2020: đánh số trang từ trang 2, đặt giữa lề trên
+        sect = d.sections[0]
+        xml = sect._sectPr.xml
+        hdr = "".join(p._p.xml for p in sect.header.paragraphs)
+        if "w:titlePg" not in xml:
+            errs.append("không bật 'trang đầu khác' nên số trang sẽ hiện cả ở trang 1")
+        if "PAGE" not in hdr:
+            errs.append("đầu trang không có trường số trang (PAGE)")
+        elif 'w:jc w:val="center"' not in hdr:
+            errs.append("số trang không căn giữa")
+    for spec in lay.get("tables", []):
+        if spec["index"] >= len(d.tables):
+            errs.append(f"không có bảng thứ {spec['index']}")
+            continue
+        tb = d.tables[spec["index"]]
+        rows = tb.rows
+        if spec.get("header_repeat") and "w:tblHeader" not in rows[0]._tr.xml:
+            errs.append(f"bảng {spec['index']}: dòng tiêu đề không lặp lại ở mỗi trang")
+        if spec.get("cant_split") and not all("w:cantSplit" in r._tr.xml for r in rows[1:]):
+            errs.append(f"bảng {spec['index']}: có dòng bị phép ngắt giữa hai trang")
+        grid_w = [int(g.get(qn("w:w"))) / 567 for g in tb._tbl.tblGrid.findall(qn("w:gridCol"))]
+        if "w:tblLayout" not in tb._tbl.tblPr.xml or 'w:type="fixed"' not in tb._tbl.tblPr.xml:
+            errs.append(f"bảng {spec['index']}: chưa đặt bố cục cố định nên Word có thể co giãn cột")
+        if sum(grid_w) > 16.1 or sum(grid_w) < 15.0:
+            errs.append(f"bảng {spec['index']}: tổng bề rộng {sum(grid_w):.1f} cm, không khớp vùng chữ 16 cm")
+        if grid_w and grid_w[0] < 1.4:
+            errs.append(f"bảng {spec['index']}: cột STT chỉ {grid_w[0]:.1f} cm, chữ 'STT' sẽ bị tách dòng")
+        if "w:shd" not in rows[0]._tr.xml:
+            errs.append(f"bảng {spec['index']}: dòng tiêu đề chưa có nền phân biệt")
+        body = [[c.text.strip() for c in r.cells] for r in rows[1:]]
+        if not body:
+            errs.append(f"bảng {spec['index']}: không có dòng dữ liệu")
+            continue
+        n_total = len(spec.get("total_row_prefix", "")) and 1 or 0
+        data = body[:-1] if n_total else body
+        if "data_rows" in spec and len(data) != spec["data_rows"]:
+            errs.append(f"bảng {spec['index']}: có {len(data)} dòng dữ liệu, kỳ vọng {spec['data_rows']}")
+        if spec.get("stt_continuous"):
+            stt = [r[0] for r in data]
+            if stt != [str(k) for k in range(1, len(data) + 1)]:
+                errs.append(f"bảng {spec['index']}: cột STT không liên tục từ 1")
+        if n_total and not body[-1][0].startswith(spec["total_row_prefix"]) and spec["total_row_prefix"] not in " ".join(body[-1]):
+            errs.append(f"bảng {spec['index']}: thiếu dòng tổng cộng")
+    for tok in lay.get("unique_tokens", []):
+        c = text.count(tok)
+        if c != 1:
+            errs.append(f"{tok!r} xuất hiện {c} lần, kỳ vọng đúng 1 lần")
+    for tok in lay.get("absent_tokens", []):
+        if tok in text:
+            errs.append(f"{tok!r} không được có trong file")
+    need_pdf = lay.get("min_pages") or lay.get("same_page")
+    if need_pdf:
+        pages = pdf_pages(path)
+        if pages is None:
+            log.append("  (bỏ qua kiểm số trang: không có LibreOffice/pdftotext)")
+        else:
+            if lay.get("min_pages") and len(pages) < lay["min_pages"]:
+                errs.append(f"chỉ {len(pages)} trang, kỳ vọng ít nhất {lay['min_pages']}")
+            log.append(f"  số trang thực tế: {len(pages)}")
+            for k, p in enumerate(pages, 1):
+                lines = [ln.strip() for ln in p.split("\n") if ln.strip()]
+                for a_, b_ in zip(lines, lines[1:]):  # tiêu đề IN HOA có một chữ mồ côi ở dòng cuối
+                    if len(a_) > 30 and a_ == a_.upper() and len(b_.split()) == 1 and b_ == b_.upper() and b_.isalpha() and len(b_) <= 6:
+                        errs.append(f"trang {k}: tiêu đề có một chữ rơi xuống dòng riêng: {b_!r}")
+                if re.search(r"^\s*STT?\s*$", p, flags=re.M) and re.search(r"^\s*T\s*$", p, flags=re.M):
+                    errs.append(f"trang {k}: chữ STT bị tách thành hai dòng")
+            for a, b in lay.get("same_page", []):
+                if not any(a in p and b in p for p in pages):
+                    errs.append(f"{a!r} và {b!r} không cùng một trang (khối ký bị tách khỏi nội dung)")
+            if lay.get("page_number") and len(pages) > 1:
+                app = lay.get("appendix_from_page")  # phụ lục đánh số trang riêng từ 1
+                for k, p in enumerate(pages[1:], 2):
+                    want = k if not app or k < app else k - app + 1
+                    first = [ln.strip() for ln in p.split("\n") if ln.strip()][:1]
+                    if not first or first[0] != str(want):
+                        errs.append(f"trang {k} phải có số trang {want} ở đầu trang (thấy {first})")
+                        break
+                first1 = [ln.strip() for ln in pages[0].split("\n") if ln.strip()][:1]
+                if first1 and first1[0] == "1":
+                    errs.append("trang 1 không được hiện số trang")
+    return errs
+
+
 def check_one(expect, samples, outputs, results, log):
     errs = []
     name = expect["skill"]
@@ -136,6 +314,10 @@ def check_one(expect, samples, outputs, results, log):
     if magic != b"PK\x03\x04":
         return ["không phải gói OOXML thật (đuôi file giả?)"]
     dates_ok, nums_ok = allowed_tokens(inp)
+    for spec in expect.get("layout", {}).get("tables", []):  # số thứ tự dòng (STT) là số do bảng tự sinh
+        nums_ok |= {str(k) for k in range(1, spec.get("data_rows", 0) + 1) if k >= 100}
+    for s in expect.get("allowed_derived", []):  # số suy ra bằng phép tính từ đầu vào (tổng cộng...)
+        nums_ok |= set(re.findall(r"\d{3,}", str(s)))
     wb_values = None
     try:
         if expect["kind"] == "docx":
@@ -149,6 +331,8 @@ def check_one(expect, samples, outputs, results, log):
         nums = []
         if expect.get("nd30_format"):
             errs.extend(nd30_format_errors(path))
+        if expect.get("layout"):
+            errs.extend(layout_errors(path, expect, text, log))
     else:
         wb = xlsx_load(path)
         text, nums = xlsx_text_and_numbers(wb)
@@ -234,6 +418,8 @@ def main():
         log = []
         errs = check_one(expect, samples, outputs, results, log)
         summary[expect["skill"]] = {"dat": not errs, "loi": errs}
+        if log:
+            summary[expect["skill"]]["ghi_chu"] = [x.strip() for x in log]
         failed += bool(errs)
     print(json.dumps(summary, ensure_ascii=False, indent=1))
     return 1 if failed else 0

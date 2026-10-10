@@ -89,20 +89,55 @@ def borders(table, on=True):
     pr.append(b)
 
 
+def _line_below(p, left_cm, right_cm):
+    """Đường kẻ dưới một dòng (đường viền dưới đoạn, thụt hai bên để chỉ dài bằng chữ)."""
+    pPr = p._p.get_or_add_pPr()
+    bd = OxmlElement("w:pBdr")
+    bt = OxmlElement("w:bottom")
+    bt.set(qn("w:val"), "single")
+    bt.set(qn("w:sz"), "4")
+    bt.set(qn("w:space"), "1")
+    bt.set(qn("w:color"), "000000")
+    bd.append(bt)
+    pPr.append(bd)
+    p.paragraph_format.left_indent = Cm(left_cm)
+    p.paragraph_format.right_indent = Cm(right_cm)
+
+
 def header_block(d, left_lines, right_lines):
+    """Phần đầu văn bản theo Phụ lục I NĐ 30/2020: quốc hiệu 12–13 đậm hoa; tiêu ngữ 13–14 đậm, có đường kẻ dưới;
+    cơ quan chủ quản 12–13 hoa thường; cơ quan ban hành 12–13 đậm hoa, có đường kẻ dưới; số ký hiệu 13; địa danh, ngày 13–14 nghiêng."""
     t = d.add_table(rows=1, cols=2)
     t.alignment = WD_TABLE_ALIGNMENT.CENTER
     borders(t, False)
     t.autofit = False
     t.columns[0].width, t.columns[1].width = Cm(6.6), Cm(9.4)
-    cell_text(t.cell(0, 0), left_lines[0], size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
+    t.cell(0, 0).width, t.cell(0, 1).width = Cm(6.6), Cm(9.4)
+    lt = list(left_lines[0])
+    if len(lt) == 4:  # công văn: [chủ quản, ban hành, số ký hiệu, trích yếu V/v]
+        lsizes, lbold = [12, 12, 13, 12], [False, True, False, False]
+    elif len(lt) == 3:  # [chủ quản, ban hành, số ký hiệu]
+        lsizes, lbold = [12, 12, 13], [False, True, False]
+    else:             # không có cơ quan chủ quản: [ban hành, số ký hiệu]
+        lsizes, lbold = [12, 13], [True, False]
+    cell_text(t.cell(0, 0), lt, size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
     for i, p in enumerate(t.cell(0, 0).paragraphs):
         for r in p.runs:
-            r.bold = left_lines[1][i] if i < len(left_lines[1]) else False
-    cell_text(t.cell(0, 1), right_lines[0], size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
+            r.bold = lbold[i]
+            r.font.size = Pt(lsizes[i])
+    qh = ["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập - Tự do - Hạnh phúc", right_lines[0][2]]
+    cell_text(t.cell(0, 1), qh, size=13, align=WD_ALIGN_PARAGRAPH.CENTER)
     for i, p in enumerate(t.cell(0, 1).paragraphs):
         for r in p.runs:
-            r.bold = right_lines[1][i] if i < len(right_lines[1]) else False
+            r.bold = i < 2
+            r.italic = i == 2
+            r.font.size = Pt(12 if i == 0 else 13)
+        if i == 1:
+            _line_below(p, 1.6, 1.6)
+        p.paragraph_format.space_after = Pt(4)
+    banhanh = t.cell(0, 0).paragraphs[1 if len(lt) >= 3 else 0]
+    _line_below(banhanh, 0.2, 0.2)
+    banhanh.paragraph_format.space_after = Pt(4)
     return t
 
 
@@ -124,7 +159,7 @@ def build_cong_van():
         vv = vv[len("về việc "):]
     left = ([i["co_quan_chu_quan"], i["co_quan_ban_hanh"], f"Số: {DOT}/{'.' * 6}-{i['ky_hieu_don_vi_soan']}", f"V/v {vv}"],
             [False, True, False, False])
-    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập – Tự do – Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
+    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập - Tự do - Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
              [True, True, False])
     t = header_block(d, left, right)
     t.cell(0, 1).paragraphs[2].runs[0].italic = True
@@ -143,8 +178,12 @@ def build_cong_van():
     t2.autofit = False
     t2.columns[0].width, t2.columns[1].width = Cm(7.5), Cm(8.5)
     cell_text(t2.cell(0, 0), ["Nơi nhận:", "- Như trên;", f"- {i['noi_nhan'][-1]}."], size=12)
-    t2.cell(0, 0).paragraphs[0].runs[0].bold = True
-    t2.cell(0, 0).paragraphs[0].runs[0].italic = True
+    for r_ in t2.cell(0, 0).paragraphs[0].runs:
+        r_.bold = True
+        r_.italic = True
+    for p_ in t2.cell(0, 0).paragraphs[1:]:  # danh sách nơi nhận cỡ 11
+        for r_ in p_.runs:
+            r_.font.size = Pt(11)
     cell_text(t2.cell(0, 1), [sg["hinh_thuc"], sg["chuc_danh"].upper(), "", "", "", sg["ho_ten"]], size=13,
               bold=True, align=WD_ALIGN_PARAGRAPH.CENTER)
     out = O / "soan-cong-van.docx"
@@ -165,7 +204,7 @@ def build_thanh_tra():
     i = load("ke-hoach-thanh-tra-nam.input.json")
     d = new_doc()
     left = ([i["co_quan_ban_hanh"], f"Số: {DOT}/KH-{'.' * 6}"], [True, False])
-    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập – Tự do – Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
+    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập - Tự do - Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
              [True, True, False])
     t = header_block(d, left, right)
     t.cell(0, 1).paragraphs[2].runs[0].italic = True
@@ -214,8 +253,12 @@ def build_thanh_tra():
     t2.autofit = False
     t2.columns[0].width, t2.columns[1].width = Cm(7.5), Cm(8.5)
     cell_text(t2.cell(0, 0), ["Nơi nhận:", "- Các đơn vị được thanh tra và đơn vị liên quan (để thực hiện);", f"- Lưu: VT, {'.' * 6}."], size=12)
-    t2.cell(0, 0).paragraphs[0].runs[0].bold = True
-    t2.cell(0, 0).paragraphs[0].runs[0].italic = True
+    for r_ in t2.cell(0, 0).paragraphs[0].runs:
+        r_.bold = True
+        r_.italic = True
+    for p_ in t2.cell(0, 0).paragraphs[1:]:  # danh sách nơi nhận cỡ 11
+        for r_ in p_.runs:
+            r_.font.size = Pt(11)
     sg = i["nguoi_ky"]
     cell_text(t2.cell(0, 1), [sg["chuc_danh"], "", "", "", sg["ho_ten"] or DOT], size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER)
     out = O / "ke-hoach-thanh-tra-nam.docx"
@@ -415,7 +458,7 @@ def build_quyet_dinh():
     i = load("soan-quyet-dinh-hc.input.json")
     d = new_doc()
     left = ([i["co_quan_chu_quan"], i["co_quan_ban_hanh"], f"Số: {DOT}/QĐ-{'.' * 6}"], [False, True, False])
-    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập – Tự do – Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
+    right = (["CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM", "Độc lập - Tự do - Hạnh phúc", f"{i['dia_danh']}, ngày ..... tháng ..... năm ........"],
              [True, True, False])
     t = header_block(d, left, right)
     t.cell(0, 1).paragraphs[2].runs[0].italic = True
@@ -440,8 +483,12 @@ def build_quyet_dinh():
     t2.columns[0].width, t2.columns[1].width = Cm(7.5), Cm(8.5)
     nn = ["Nơi nhận:"] + [f"- {x};" for x in i["noi_nhan"][:-1]] + [f"- {i['noi_nhan'][-1]}."]
     cell_text(t2.cell(0, 0), nn, size=12)
-    t2.cell(0, 0).paragraphs[0].runs[0].bold = True
-    t2.cell(0, 0).paragraphs[0].runs[0].italic = True
+    for r_ in t2.cell(0, 0).paragraphs[0].runs:
+        r_.bold = True
+        r_.italic = True
+    for p_ in t2.cell(0, 0).paragraphs[1:]:  # danh sách nơi nhận cỡ 11
+        for r_ in p_.runs:
+            r_.font.size = Pt(11)
     cell_text(t2.cell(0, 1), [sg["chuc_danh"].upper(), "", "", "", sg["ho_ten"]], size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER)
     out = O / "soan-quyet-dinh-hc.docx"
     d.save(out)

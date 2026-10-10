@@ -1,0 +1,299 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử tải lớn. Tên cơ quan, người, mã số đều là mẫu.",
+ "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+ "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+ "dia_danh": "Hà Nội",
+ "so_van_ban": null,
+ "don_vi": "Phòng Hành chính – Tổng hợp",
+ "thoi_gian": "quý IV năm 2026",
+ "muc_tieu": [
+  "Hoàn thành các hạng mục công tác trọng tâm của quý IV",
+  "Bảo đảm chất lượng, tiến độ và phối hợp giữa các đơn vị"
+ ],
+ "nhiem_vu": [
+  {
+   "noi_dung": "Nhiệm vụ 1: triển khai hạng mục công việc số 1 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 01/11/2026 đến 15/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 1"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 2: triển khai hạng mục công việc số 2 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 02/11/2026 đến 16/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 2"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 3: triển khai hạng mục công việc số 3 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 03/11/2026 đến 17/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 3"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 4: triển khai hạng mục công việc số 4 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 04/11/2026 đến 18/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 4"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 5: triển khai hạng mục công việc số 5 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 05/11/2026 đến 19/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 5"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 6: triển khai hạng mục công việc số 6 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 06/11/2026 đến 20/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 6"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 7: triển khai hạng mục công việc số 7 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 07/11/2026 đến 21/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 7"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 8: triển khai hạng mục công việc số 8 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 08/11/2026 đến 22/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 8"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 9: triển khai hạng mục công việc số 9 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 09/11/2026 đến 23/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 9"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 10: triển khai hạng mục công việc số 10 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 10/11/2026 đến 24/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 10"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 11: triển khai hạng mục công việc số 11 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 01/11/2026 đến 15/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 11"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 12: triển khai hạng mục công việc số 12 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 02/11/2026 đến 16/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 12"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 13: triển khai hạng mục công việc số 13 phục vụ năm học 2026–2027",
+   "don_vi": "",
+   "thoi_gian": "Từ 03/11/2026 đến 17/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 13"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 14: triển khai hạng mục công việc số 14 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 04/11/2026 đến 18/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 14"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 15: triển khai hạng mục công việc số 15 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 05/11/2026 đến 19/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 15"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 16: triển khai hạng mục công việc số 16 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 06/11/2026 đến 20/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 16"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 17: triển khai hạng mục công việc số 17 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 07/11/2026 đến 21/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 17"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 18: triển khai hạng mục công việc số 18 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 08/11/2026 đến 22/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 18"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 19: triển khai hạng mục công việc số 19 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 09/11/2026 đến 23/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 19"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 20: triển khai hạng mục công việc số 20 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 10/11/2026 đến 24/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 20"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 21: triển khai hạng mục công việc số 21 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 20/11/2026 đến 10/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 21"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 22: triển khai hạng mục công việc số 22 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 02/11/2026 đến 16/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 22"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 23: triển khai hạng mục công việc số 23 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 03/11/2026 đến 17/11/2026",
+   "ket_qua": "Hoàn thành hạng mục 23"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 24: triển khai hạng mục công việc số 24 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 04/12/2026 đến 18/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 24"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 25: triển khai hạng mục công việc số 25 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 05/12/2026 đến 19/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 25"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 26: triển khai hạng mục công việc số 26 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 06/12/2026 đến 20/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 26"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 27: triển khai hạng mục công việc số 27 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 07/12/2026 đến 21/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 27"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 28: triển khai hạng mục công việc số 28 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 08/12/2026 đến 22/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 28"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 29: triển khai hạng mục công việc số 29 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 09/12/2026 đến 23/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 29"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 30: triển khai hạng mục công việc số 30 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 10/12/2026 đến 24/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 30"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 31: triển khai hạng mục công việc số 31 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 01/12/2026 đến 15/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 31"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 32: triển khai hạng mục công việc số 32 phục vụ năm học 2026–2027",
+   "don_vi": "",
+   "thoi_gian": "Từ 02/12/2026 đến 16/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 32"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 33: triển khai hạng mục công việc số 33 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 03/12/2026 đến 17/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 33"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 34: triển khai hạng mục công việc số 34 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 04/12/2026 đến 18/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 34"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 35: triển khai hạng mục công việc số 35 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 05/12/2026 đến 19/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 35"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 36: triển khai hạng mục công việc số 36 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 06/12/2026 đến 20/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 36"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 37: triển khai hạng mục công việc số 37 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 07/12/2026 đến 21/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 37"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 38: triển khai hạng mục công việc số 38 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 08/12/2026 đến 22/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 38"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 39: triển khai hạng mục công việc số 39 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 09/12/2026 đến 23/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 39"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 40: triển khai hạng mục công việc số 40 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Hành chính – Tổng hợp",
+   "thoi_gian": "Từ 10/12/2026 đến 24/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 40"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 41: triển khai hạng mục công việc số 41 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Kinh tế",
+   "thoi_gian": "Từ 01/12/2026 đến 15/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 41"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 42: triển khai hạng mục công việc số 42 phục vụ năm học 2026–2027",
+   "don_vi": "Khoa Luật",
+   "thoi_gian": "Từ 02/12/2026 đến 16/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 42"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 43: triển khai hạng mục công việc số 43 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Đào tạo",
+   "thoi_gian": "Từ 03/12/2026 đến 17/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 43"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 44: triển khai hạng mục công việc số 44 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Công tác sinh viên",
+   "thoi_gian": "Từ 04/12/2026 đến 18/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 44"
+  },
+  {
+   "noi_dung": "Nhiệm vụ 45: triển khai hạng mục công việc số 45 phục vụ năm học 2026–2027",
+   "don_vi": "Phòng Kế hoạch – Tài chính",
+   "thoi_gian": "Từ 05/12/2026 đến 19/12/2026",
+   "ket_qua": "Hoàn thành hạng mục 45"
+  }
+ ],
+ "kinh_phi": [
+  "Hội nghị: 120.000.000 đồng",
+  "Truyền thông: 80.000.000 đồng",
+  "Khen thưởng: 100.000.000 đồng"
+ ],
+ "kinh_phi_tong_ghi": "350.000.000 đồng",
+ "noi_nhan": [
+  "Các đơn vị thuộc Trường",
+  "Lưu: VT, HCTH"
+ ],
+ "nguoi_ky": {
+  "chuc_danh": "Trưởng phòng",
+  "ho_ten": null
+ }
+}

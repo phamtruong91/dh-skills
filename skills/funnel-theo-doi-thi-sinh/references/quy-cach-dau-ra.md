@@ -66,3 +66,9 @@ Nguồn gốc để đối chiếu: [Nghị định 30/2020/NĐ-CP và phụ l�
 5. Nhận xét và đề xuất hành động (kênh cần tăng cường, nhóm cần đôn đốc, người phụ trách, thời hạn).
 
 Cấu trúc này là hướng dẫn nội dung; nếu có mẫu chuyên ngành được áp dụng thì giữ nguyên mẫu. Các bảng điểm, kết luận, yêu cầu chỉnh sửa và kết quả kiểm tra thực tế của nghiệp vụ được giữ trong văn bản; không nhầm chúng với checklist tự kiểm tra của AI.
+
+## Thể thức và bảng biểu khi dựng file
+
+- Dòng tiêu đề đậm, nền nhạt, cố định (freeze) khi bảng dài; bề rộng cột vừa chữ; số tiền có dấu phân cách hàng nghìn; ngày theo dd/mm/yyyy; giữ công thức, không dán giá trị thay công thức.
+- Đặt vùng in và lặp dòng tiêu đề khi in; dữ liệu khác bản chất để ở sheet riêng; ô thiếu dữ liệu để trống, không ghi 0.
+- Mở file kiểm tra công thức đã tính, không có lỗi `#`, định dạng hiển thị đúng trước khi giao.

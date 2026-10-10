@@ -12,7 +12,7 @@ description: "Soạn kế hoạch công tác tháng / quý / năm của đơn v�
 **Phải tạo file thực tế để tải xuống, không chỉ trả nội dung trong chat.** Định dạng mặc định của skill: **.docx**. Nếu có bảng số liệu nghiệp vụ yêu cầu file bảng tính riêng, tạo thêm Excel theo yêu cầu; không tự tạo file kiểm tra. Không chờ người dùng yêu cầu xuất file lần nữa. Ưu tiên định dạng người dùng chỉ định; đọc quy tắc xuất file tại references/quy-cach-dau-ra.md.
 
 ## Quy cách đầu ra và thông tin thiếu
-Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
+Khi dựng file Word/Excel, áp dụng mục “Thể thức và bảng biểu khi dựng file” trong quy cách đầu ra (cỡ chữ từng thành phần, bảng nhiều trang, số trang, phụ lục). Đọc [quy cách và cấu trúc sản phẩm](references/quy-cach-dau-ra.md) trước khi soạn/xuất. File giao chỉ gồm sản phẩm nghiệp vụ được yêu cầu; kiểm tra nội bộ không xuất kèm. Thiếu thông tin thì giữ nguyên trường/mục và chỗ điền theo mẫu gốc (dòng dấu chấm, dấu gạch hoặc ô trống); không tự điền dữ liệu mẫu, số 0, mã chờ xác minh hay dòng chờ ký. Mẫu chuyên ngành còn áp dụng được ưu tiên về cấu trúc, mã biểu và người ký. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
 
 ## Kiểm soát áp dụng và phê duyệt
 Trước khi chạy, xác định `ngay_ap_dung`, `loai_hinh_truong`, `quy_che_noi_bo`, `nguon_du_lieu`, `nguoi_kiem_duyet`; chỉ hỏi thông tin liên quan nghiệp vụ, không dùng giá trị giả định thay dữ liệu bắt buộc. Đối chiếu căn cứ pháp lý với văn bản gốc, hiệu lực, điều khoản áp dụng và chuyển tiếp. Bản đầy đủ: [quy tắc chung](references/quy-tac-chung.md).
@@ -33,6 +33,12 @@ một nhiệm vụ, đợt công tác cụ thể.
 | `muc_tieu` | Mục đích, yêu cầu của kế hoạch | Có |
 | `nhiem_vu` | Bảng nhiệm vụ: nội dung, đơn vị/cá nhân thực hiện, thời gian, kết quả mong đợi | Có |
 | `kinh_phi` | Dự toán kinh phí (nếu có) | Không |
+| `co_quan_chu_quan` | Tên cơ quan chủ quản trực tiếp (chỉ khi trường có cấp trên; trường tư thục thường không có) | Không |
+| `co_quan_ban_hanh` | Tên cơ quan ban hành văn bản (thường là trường), khác với đơn vị soạn thảo | Có |
+| `dia_danh` | Địa danh ghi ở dòng ngày tháng năm | Có |
+| `so_van_ban` | Số, ký hiệu văn bản đã được cấp (để trống nếu chưa cấp; không tự đặt) | Không |
+| `noi_nhan` | Danh sách nơi nhận, gồm cả nơi lưu (VT, đơn vị soạn) | Có |
+| `nguoi_ky` | Chức danh, họ tên người ký; hình thức TM./KT./TL./TUQ. chỉ khi có căn cứ | Có |
 
 ## Quy trình
 
@@ -79,8 +85,8 @@ một nhiệm vụ, đợt công tác cụ thể.
 - → Kết quả bước: Kết quả đối chiếu nội bộ (không xuất kèm file) + danh sách chỗ cần sửa (nếu có); sửa xong thì chuyển Bước 7.
 
 **Bước 7. Dựng thể thức và trình ký ban hành**
-- Làm gì: Lắp ráp phần đầu: tên trường + tên `don_vi` (in hoa), dòng "KẾ HOẠCH CÔNG TÁC [phạm vi thời gian]" (in hoa, căn giữa); sắp xếp các phần theo thứ tự: I. Mục đích, yêu cầu → II. Nhiệm vụ cụ thể → III. Kinh phí (nếu có) → IV. Tổ chức thực hiện; cuối văn bản: địa danh, ngày tháng năm + khối chữ ký thủ trưởng đơn vị (chức danh + họ tên); trình thủ trưởng đơn vị ký ban hành (human gate), hoặc trình cấp trên phê duyệt nếu vượt thẩm quyền.
-- Dùng input: `don_vi`, `thoi_gian`.
+- Làm gì: Lắp ráp phần đầu: tên trường + tên `don_vi` (in hoa), dòng "KẾ HOẠCH CÔNG TÁC [phạm vi thời gian]" (in hoa, căn giữa); sắp xếp các phần theo thứ tự: I. Mục đích, yêu cầu → II. Nhiệm vụ cụ thể → III. Kinh phí (nếu có) → IV. Tổ chức thực hiện; cuối văn bản: địa danh, ngày tháng năm + khối chữ ký thủ trưởng đơn vị (chức danh + họ tên); trình thủ trưởng đơn vị ký ban hành (human gate), hoặc trình cấp trên phê duyệt nếu vượt thẩm quyền. Phần đầu văn bản lấy từ `co_quan_chu_quan` (nếu có), `co_quan_ban_hanh`, `dia_danh`, `so_van_ban` (để dòng dấu chấm nếu chưa cấp số). Nơi nhận lấy từ `noi_nhan`. Khối ký lấy từ `nguoi_ky`.
+- Dùng input: `don_vi`, `thoi_gian`, `co_quan_chu_quan`, `co_quan_ban_hanh`, `dia_danh`, `so_van_ban`, `noi_nhan`, `nguoi_ky`.
 - Vai trò: Chuyên viên chuẩn bị, thủ trưởng đơn vị ký ban hành (hoặc cấp trên phê duyệt nếu vượt thẩm quyền) · AI hỗ trợ: tổng hợp hồ sơ, soạn phiếu trình/tờ trình đầy đủ · ⏱ ~15–30 phút chuẩn bị + chờ duyệt (ước tính)
 - Lưu ý nghiệp vụ: Người ký là thủ trưởng đơn vị lập kế hoạch; nếu kế hoạch trình cấp trên phê duyệt thì đơn vị chỉ ký phần đề xuất, không ghi "ban hành".
 - → Kết quả bước: Văn bản kế hoạch hoàn chỉnh về thể thức, sẵn sàng trình ký.

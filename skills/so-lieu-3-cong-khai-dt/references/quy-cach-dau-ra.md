@@ -76,3 +76,9 @@ Cấu trúc này là hướng dẫn nội dung; nếu có mẫu chuyên ngành �
 ## Yêu cầu mẫu chuyên ngành
 
 Nội dung đào tạo phục vụ công khai theo Thông tư 09/2024/TT-BGDĐT và Phụ lục II báo cáo thường niên đại học; giữ kỳ, đơn vị tính và phạm vi. Không dùng biểu Thông tư 36/2017 làm mẫu hiện hành.
+
+## Thể thức và bảng biểu khi dựng file
+
+- Dòng tiêu đề đậm, nền nhạt, cố định (freeze) khi bảng dài; bề rộng cột vừa chữ; số tiền có dấu phân cách hàng nghìn; ngày theo dd/mm/yyyy; giữ công thức, không dán giá trị thay công thức.
+- Đặt vùng in và lặp dòng tiêu đề khi in; dữ liệu khác bản chất để ở sheet riêng; ô thiếu dữ liệu để trống, không ghi 0.
+- Mở file kiểm tra công thức đã tính, không có lỗi `#`, định dạng hiển thị đúng trước khi giao.

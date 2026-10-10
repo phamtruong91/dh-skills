@@ -77,3 +77,9 @@ Nguồn gốc để đối chiếu: [Nghị định 30/2020/NĐ-CP và phụ l�
 Cấu trúc này là hướng dẫn nội dung; nếu có mẫu chuyên ngành được áp dụng thì giữ nguyên mẫu. Các bảng điểm, kết luận, yêu cầu chỉnh sửa và kết quả kiểm tra thực tế của nghiệp vụ được giữ trong văn bản; không nhầm chúng với checklist tự kiểm tra của AI.
 
 Phần đầu hành chính và phần ký phải đủ theo loại văn bản, kể cả khi cấu trúc nội dung trên viết tắt phần đó. Nếu đơn vị chỉ lập dự thảo cho trường, ghi cơ quan ban hành là trường; không mặc định đơn vị soạn là cơ quan ban hành. Văn bản ban hành kèm quyết định dùng đúng Mẫu 1.3 và cách ghi kèm theo, không tự thêm số riêng.
+
+## Thể thức và bảng biểu khi dựng file
+
+- Dòng tiêu đề đậm, nền nhạt, cố định (freeze) khi bảng dài; bề rộng cột vừa chữ; số tiền có dấu phân cách hàng nghìn; ngày theo dd/mm/yyyy; giữ công thức, không dán giá trị thay công thức.
+- Đặt vùng in và lặp dòng tiêu đề khi in; dữ liệu khác bản chất để ở sheet riêng; ô thiếu dữ liệu để trống, không ghi 0.
+- Mở file kiểm tra công thức đã tính, không có lỗi `#`, định dạng hiển thị đúng trước khi giao.
