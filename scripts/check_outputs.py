@@ -125,6 +125,94 @@ def allowed_tokens(input_text):
     return dates, nums
 
 
+def pdf_pages(path):
+    """Chuyển Word sang PDF bằng LibreOffice; trả về danh sách văn bản từng trang (hoặc None nếu không có công cụ)."""
+    soffice = shutil.which("soffice") or shutil.which("libreoffice")
+    if not soffice or not shutil.which("pdftotext"):
+        return None
+    tmp = Path(tempfile.mkdtemp())
+    src = tmp / path.name
+    shutil.copy(path, src)
+    subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir", str(tmp), str(src)],
+                   capture_output=True, timeout=240)
+    pdf = tmp / (path.stem + ".pdf")
+    if not pdf.exists():
+        return None
+    out = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True).stdout
+    return out.split("\f")[:-1] if out.endswith("\f") else out.split("\f")
+
+
+def layout_errors(path, expect, text, log):
+    """Kiểm tra file nhiều dữ liệu/nhiều trang: số trang, số trang ở đầu trang, bảng, token duy nhất, ràng buộc cùng trang."""
+    from docx import Document
+    lay = expect.get("layout", {})
+    errs = []
+    d = Document(path)
+    if lay.get("page_number"):  # NĐ 30/2020: đánh số trang từ trang 2, đặt giữa lề trên
+        sect = d.sections[0]
+        xml = sect._sectPr.xml
+        hdr = "".join(p._p.xml for p in sect.header.paragraphs)
+        if "w:titlePg" not in xml:
+            errs.append("không bật 'trang đầu khác' nên số trang sẽ hiện cả ở trang 1")
+        if "PAGE" not in hdr:
+            errs.append("đầu trang không có trường số trang (PAGE)")
+        elif 'w:jc w:val="center"' not in hdr:
+            errs.append("số trang không căn giữa")
+    for spec in lay.get("tables", []):
+        if spec["index"] >= len(d.tables):
+            errs.append(f"không có bảng thứ {spec['index']}")
+            continue
+        tb = d.tables[spec["index"]]
+        rows = tb.rows
+        if spec.get("header_repeat") and "w:tblHeader" not in rows[0]._tr.xml:
+            errs.append(f"bảng {spec['index']}: dòng tiêu đề không lặp lại ở mỗi trang")
+        if spec.get("cant_split") and not all("w:cantSplit" in r._tr.xml for r in rows[1:]):
+            errs.append(f"bảng {spec['index']}: có dòng bị phép ngắt giữa hai trang")
+        body = [[c.text.strip() for c in r.cells] for r in rows[1:]]
+        if not body:
+            errs.append(f"bảng {spec['index']}: không có dòng dữ liệu")
+            continue
+        n_total = len(spec.get("total_row_prefix", "")) and 1 or 0
+        data = body[:-1] if n_total else body
+        if "data_rows" in spec and len(data) != spec["data_rows"]:
+            errs.append(f"bảng {spec['index']}: có {len(data)} dòng dữ liệu, kỳ vọng {spec['data_rows']}")
+        if spec.get("stt_continuous"):
+            stt = [r[0] for r in data]
+            if stt != [str(k) for k in range(1, len(data) + 1)]:
+                errs.append(f"bảng {spec['index']}: cột STT không liên tục từ 1")
+        if n_total and not body[-1][0].startswith(spec["total_row_prefix"]) and spec["total_row_prefix"] not in " ".join(body[-1]):
+            errs.append(f"bảng {spec['index']}: thiếu dòng tổng cộng")
+    for tok in lay.get("unique_tokens", []):
+        c = text.count(tok)
+        if c != 1:
+            errs.append(f"{tok!r} xuất hiện {c} lần, kỳ vọng đúng 1 lần")
+    for tok in lay.get("absent_tokens", []):
+        if tok in text:
+            errs.append(f"{tok!r} không được có trong file")
+    need_pdf = lay.get("min_pages") or lay.get("same_page")
+    if need_pdf:
+        pages = pdf_pages(path)
+        if pages is None:
+            log.append("  (bỏ qua kiểm số trang: không có LibreOffice/pdftotext)")
+        else:
+            if lay.get("min_pages") and len(pages) < lay["min_pages"]:
+                errs.append(f"chỉ {len(pages)} trang, kỳ vọng ít nhất {lay['min_pages']}")
+            log.append(f"  số trang thực tế: {len(pages)}")
+            for a, b in lay.get("same_page", []):
+                if not any(a in p and b in p for p in pages):
+                    errs.append(f"{a!r} và {b!r} không cùng một trang (khối ký bị tách khỏi nội dung)")
+            if lay.get("page_number") and len(pages) > 1:
+                for k, p in enumerate(pages[1:], 2):
+                    first = [ln.strip() for ln in p.split("\n") if ln.strip()][:1]
+                    if not first or first[0] != str(k):
+                        errs.append(f"trang {k} không có số trang ở đầu trang (thấy {first})")
+                        break
+                first1 = [ln.strip() for ln in pages[0].split("\n") if ln.strip()][:1]
+                if first1 and first1[0] == "1":
+                    errs.append("trang 1 không được hiện số trang")
+    return errs
+
+
 def check_one(expect, samples, outputs, results, log):
     errs = []
     name = expect["skill"]
@@ -136,6 +224,10 @@ def check_one(expect, samples, outputs, results, log):
     if magic != b"PK\x03\x04":
         return ["không phải gói OOXML thật (đuôi file giả?)"]
     dates_ok, nums_ok = allowed_tokens(inp)
+    for spec in expect.get("layout", {}).get("tables", []):  # số thứ tự dòng (STT) là số do bảng tự sinh
+        nums_ok |= {str(k) for k in range(1, spec.get("data_rows", 0) + 1) if k >= 100}
+    for s in expect.get("allowed_derived", []):  # số suy ra bằng phép tính từ đầu vào (tổng cộng...)
+        nums_ok |= set(re.findall(r"\d{3,}", str(s)))
     wb_values = None
     try:
         if expect["kind"] == "docx":
@@ -149,6 +241,8 @@ def check_one(expect, samples, outputs, results, log):
         nums = []
         if expect.get("nd30_format"):
             errs.extend(nd30_format_errors(path))
+        if expect.get("layout"):
+            errs.extend(layout_errors(path, expect, text, log))
     else:
         wb = xlsx_load(path)
         text, nums = xlsx_text_and_numbers(wb)
@@ -234,6 +328,8 @@ def main():
         log = []
         errs = check_one(expect, samples, outputs, results, log)
         summary[expect["skill"]] = {"dat": not errs, "loi": errs}
+        if log:
+            summary[expect["skill"]]["ghi_chu"] = [x.strip() for x in log]
         failed += bool(errs)
     print(json.dumps(summary, ensure_ascii=False, indent=1))
     return 1 if failed else 0

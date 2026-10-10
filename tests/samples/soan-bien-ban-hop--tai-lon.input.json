@@ -1,0 +1,137 @@
+{
+ "_ghi_chu": "Dữ liệu GIẢ để thử tải lớn. Tên cơ quan, người, mã số đều là mẫu.",
+ "co_quan_chu_quan": "CƠ QUAN CHỦ QUẢN (MẪU)",
+ "co_quan_ban_hanh": "TRƯỜNG ĐẠI HỌC MẪU A",
+ "dia_danh": "Hà Nội",
+ "so_van_ban": null,
+ "ten_cuoc_hop": "họp giao ban toàn trường tháng 10/2026",
+ "thoi_gian_bat_dau": "14 giờ 00 phút, ngày 12/10/2026",
+ "thoi_gian_ket_thuc": null,
+ "dia_diem": "Hội trường A",
+ "chu_tri": "Bà Trần Thị Bình – Hiệu trưởng",
+ "thu_ky": "Ông Lê Văn Cường – Chánh Văn phòng",
+ "thanh_phan": [
+  "Nguyễn Quốc Long – Trưởng phòng Phòng Đào tạo",
+  "Trần Quốc Mai – Phó trưởng phòng Phòng Tài chính",
+  "Lê Quốc Nam – Chuyên viên Khoa Kinh tế",
+  "Phạm Quốc Nga – Giảng viên Khoa Luật",
+  "Hoàng Quốc Ngọc – Trưởng khoa Phòng Hành chính",
+  "Vũ Quốc Phong – Trưởng phòng Phòng Đào tạo",
+  "Đặng Quốc Phúc – Phó trưởng phòng Phòng Tài chính",
+  "Bùi Quốc Quân – Chuyên viên Khoa Kinh tế",
+  "Đỗ Quốc Quỳnh – Giảng viên Khoa Luật",
+  "Ngô Quốc Sơn – Trưởng khoa Phòng Hành chính",
+  "Nguyễn Ngọc Thảo – Trưởng phòng Phòng Đào tạo",
+  "Trần Ngọc Thắng – Phó trưởng phòng Phòng Tài chính",
+  "Lê Ngọc Trang – Chuyên viên Khoa Kinh tế",
+  "Phạm Ngọc Tuấn – Giảng viên Khoa Luật",
+  "Hoàng Ngọc Vân – Trưởng khoa Phòng Hành chính",
+  "Vũ Ngọc Việt – Trưởng phòng Phòng Đào tạo",
+  "Đặng Ngọc Yến – Phó trưởng phòng Phòng Tài chính",
+  "Bùi Ngọc An – Chuyên viên Khoa Kinh tế",
+  "Đỗ Ngọc Bình – Giảng viên Khoa Luật",
+  "Ngô Ngọc Châu – Trưởng khoa Phòng Hành chính",
+  "Nguyễn Hữu Dũng – Trưởng phòng Phòng Đào tạo",
+  "Trần Hữu Giang – Phó trưởng phòng Phòng Tài chính",
+  "Lê Hữu Hà – Chuyên viên Khoa Kinh tế",
+  "Phạm Hữu Hải – Giảng viên Khoa Luật",
+  "Hoàng Hữu Hiếu – Trưởng khoa Phòng Hành chính",
+  "Vũ Hữu Hoa – Trưởng phòng Phòng Đào tạo",
+  "Đặng Hữu Hùng – Phó trưởng phòng Phòng Tài chính",
+  "Bùi Hữu Huy – Chuyên viên Khoa Kinh tế",
+  "Đỗ Hữu Khánh – Giảng viên Khoa Luật",
+  "Ngô Hữu Lan – Trưởng khoa Phòng Hành chính",
+  "Nguyễn Thanh Linh – Trưởng phòng Phòng Đào tạo",
+  "Trần Thanh Long – Phó trưởng phòng Phòng Tài chính",
+  "Lê Thanh Mai – Chuyên viên Khoa Kinh tế",
+  "Phạm Thanh Nam – Giảng viên Khoa Luật",
+  "Hoàng Thanh Nga – Trưởng khoa Phòng Hành chính",
+  "Vũ Thanh Ngọc – Trưởng phòng Phòng Đào tạo",
+  "Đặng Thanh Phong – Phó trưởng phòng Phòng Tài chính",
+  "Bùi Thanh Phúc – Chuyên viên Khoa Kinh tế",
+  "Đỗ Thanh Quân – Giảng viên Khoa Luật",
+  "Ngô Thanh Quỳnh – Trưởng khoa Phòng Hành chính",
+  "Bùi Quốc Quân – Chuyên viên Khoa Kinh tế"
+ ],
+ "noi_dung": [
+  {
+   "van_de": "kế hoạch tuyển sinh",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ kế hoạch tuyển sinh; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai kế hoạch tuyển sinh theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "chương trình đào tạo",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ chương trình đào tạo; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai chương trình đào tạo theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "học bổng",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ học bổng; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai học bổng theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "cơ sở vật chất",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ cơ sở vật chất; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai cơ sở vật chất theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "nghiên cứu khoa học",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ nghiên cứu khoa học; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai nghiên cứu khoa học theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau. Ông Hoàng Quang Khải (khách mời, không có tên trong danh sách triệu tập) góp ý về hồ sơ đề tài."
+  },
+  {
+   "van_de": "hợp tác doanh nghiệp",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ hợp tác doanh nghiệp; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai hợp tác doanh nghiệp theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "đảm bảo chất lượng",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ đảm bảo chất lượng; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai đảm bảo chất lượng theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "tài chính",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ tài chính; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai tài chính theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "tuyển dụng giảng viên",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ tuyển dụng giảng viên; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai tuyển dụng giảng viên theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "chuyển đổi số",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ chuyển đổi số; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai chuyển đổi số theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "ký túc xá",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ ký túc xá; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai ký túc xá theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "hoạt động sinh viên",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ hoạt động sinh viên; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai hoạt động sinh viên theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "thư viện",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ thư viện; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai thư viện theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "kiểm định",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ kiểm định; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai kiểm định theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "truyền thông",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ truyền thông; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai truyền thông theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  },
+  {
+   "van_de": "an toàn thông tin",
+   "y_kien": "Phòng chuyên môn báo cáo tiến độ an toàn thông tin; các đại biểu thảo luận về khó khăn, đề xuất phương án và thời gian thực hiện. Ý kiến thống nhất: tiếp tục triển khai an toàn thông tin theo kế hoạch đã duyệt và báo cáo lại tại cuộc họp sau."
+  }
+ ],
+ "ket_luan": [
+  "Giao Phòng Đào tạo chủ trì nội dung số 1.",
+  "Giao Phòng Tài chính chủ trì nội dung số 2.",
+  "Giao Khoa Kinh tế chủ trì nội dung số 3.",
+  "Giao Phòng Hành chính chủ trì nội dung số 4.",
+  "Giao Phòng Đào tạo chủ trì nội dung số 5.",
+  "Giao Phòng Tài chính chủ trì nội dung số 6.",
+  "Giao Khoa Kinh tế chủ trì nội dung số 7.",
+  "Giao Phòng Hành chính chủ trì nội dung số 8.",
+  "Giao Phòng Đào tạo hoàn thành báo cáo trước ngày 05/10/2026."
+ ],
+ "noi_nhan": [
+  "Các đơn vị thuộc Trường",
+  "Lưu: VT, HCTH"
+ ]
+}
